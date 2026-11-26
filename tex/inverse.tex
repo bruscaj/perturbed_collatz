@@ -1,0 +1,444 @@
+\section{Inverse basins in every arithmetic progression}\label{sec:inverse}
+
+This section fixes the forcing $d=(1,0,-1)$, with phase zero immediately
+before $+1$. Write $F(n)=F_{d,0}^{(3)}(n)$ for its return map. A target
+$(v,i)$ is safe precisely when $v\ge0$ for $i=0$ and $v\ge1$ for $i=1,2$.
+All predecessors below refer to this fixed forcing, with phase included.
+
+\begin{theorem}[Inverse growth and arithmetic progressions]\label{thm:inverse-growth}
+There is a number $\delta$, with $0.535<\delta<0.536$, such that the following
+holds. For every safe target $(v,i)$, every modulus $M\ge1$, every residue
+$a\bmod M$, and every launch phase $j$, there are constants $c>0$ and $X_0$
+such that, for $X\ge X_0$, at least $cX^\delta$ positive integers $x\le X$
+satisfy $x\equiv a\pmod M$ and their trajectories from phase $j$ reach
+$(v,i)$. The constants may depend on the target, progression, and phase.
+The exponent is defined exactly by
+\begin{equation}\label{eq:inverse-exponent}
+ \sum_{o=0}^{8}m_o(2^{24}/3^o)^{-\delta}=1,
+ \qquad (m_0,\ldots,m_8)=(1,4,17,35,57,69,53,32,13).
+\end{equation}
+\end{theorem}
+
+The proof has two distinct parts: a finite exact arithmetic certificate
+gives a growing inverse tree, and an algebraic argument moves a positive
+proportion of its vertices, at bounded multiplicity and bounded size cost,
+into a prescribed progression. Progression coverage concerns predecessors;
+it does not say that every forward orbit visits every progression.
+
+Arithmetic-progression sufficiency is an established idea for ordinary
+Collatz. Monks proves that every arithmetic progression is sufficient:
+each positive orbit merges with an orbit starting in that progression
+\cite[Theorem~1.1]{monks-2006}. This permits different times along the two
+orbits and does not assert that either initial value is a predecessor of
+the other. Theorem~\ref{thm:inverse-growth} counts actual predecessors of a
+specified safe target for the forced map. Its constants are uniform in
+$X$ after fixing the target, progression, and launch phase; no uniformity
+over those parameters is asserted.
+
+\subsection{Elementary inverse branches and eligible targets}
+
+The full three-step return has eight affine pieces.  In the table below,
+the parity string is read in chronological order from the three inputs
+to the shortcut map; it is not the binary expansion of the residue $r$.
+Every row is valid for all integers $t\ge0$.
+\begin{center}
+\begin{tabular}{rrl|rrl}\toprule
+$r$&parities&$F(8t+r)$&$r$&parities&$F(8t+r)$\\\midrule
+0&010&$3t$&4&011&$9t+7$\\
+1&111&$27t+7$&5&110&$9t+6$\\
+2&001&$3t+1$&6&000&$t$\\
+3&101&$9t+4$&7&100&$3t+2$\\\bottomrule
+\end{tabular}
+\end{center}
+For example, the residue $r=3$ follows
+\[
+ 8t+3\ \longmapsto\ 12t+6\ \longmapsto\ 6t+3
+ \ \longmapsto\ 9t+4.
+\]
+The impulses are applied after the shortcut update at each arrow.
+The return graph therefore has several slopes, and its coarse visual
+appearance does not justify replacing it by one average affine map.
+
+Four convenient rows of the complete table give
+\begin{equation}\label{eq:inverse-four}
+ F(8t+6)=t,\quad F(8t)=3t,\quad
+ F(8t+2)=3t+1,\quad F(8t+7)=3t+2.
+\end{equation}
+Consequently the following are inverse branches:
+\[
+ A(y)=8y+6,\quad B_0(y)=\frac{8y}{3},\quad
+ B_1(y)=\frac{8y-2}{3},\quad B_2(y)=\frac{8y+5}{3}.
+\]
+Here $A$ is always applicable, and $B_r$ is applicable precisely when
+$y\equiv r\pmod3$. For $y\ge2$ every applicable branch strictly increases
+$y$ and its output $x$ satisfies $x+1\le8(y+1)$. Call a phase-zero value
+\emph{eligible} if $y\ge2$ and $3\nmid y$.
+
+Every phase-zero $u\ge0$ has an eligible predecessor two laps earlier.
+Explicitly, choose
+\begin{equation}\label{eq:eligible-attachment}
+ y=\begin{cases}
+ 64u+54,&3\nmid u,\\
+ 64t+6,&u=3t,\ 3\nmid t,\\
+ 64t+16,&u=3t,\ 3\mid t.
+ \end{cases}
+\end{equation}
+The formulas in \eqref{eq:inverse-four} prove $F^2(y)=u$ in each case;
+$y\ge2$ and $3\nmid y$ are immediate. For a target $(v,1)$ or $(v,2)$,
+the phase-zero values $2(v-1)$ and $4v-2$, respectively, reach that target
+after one or two updates. These values are nonnegative on the safe domain.
+Thus \eqref{eq:eligible-attachment} attaches every safe augmented target.
+
+For instance, phase-zero targets $0,1,3,9$ have the eligible two-lap
+predecessors $16,118,70,208$, respectively. Their exact returns are
+\[
+ 16\mapsto6\mapsto0,\quad118\mapsto14\mapsto1,\quad
+ 70\mapsto8\mapsto3,\quad208\mapsto78\mapsto9.
+\]
+Each arrow in this display is one whole three-update lap. The third
+case of \eqref{eq:eligible-attachment} matters even for target zero:
+simply using $A^2(0)=54$ would give a parent divisible by three,
+outside the eligible class used for the growing tree.
+
+This attachment is a substantive difference from the ordinary inverse
+graph. A positive ordinary target divisible by three has only the
+predecessors obtained by repeated doubling, and so need not have a
+predecessor in every progression. The ordinary backtracing theorem of
+Monks et al. therefore assumes a target coprime to three
+\cite[Theorem~4.1]{monks-et-al-2013}. Here
+\eqref{eq:eligible-attachment} and the phase lifts supply the required
+eligible ancestor for every safe target, including zero.
+
+\subsection{The finite 24-step certificate}
+
+Finite inverse-tree enumeration by depth, residue class, and number of
+odd steps is the method developed by Applegate and Lagarias for the
+ordinary map \cite[Sections~2--3]{applegate-lagarias-1995-i}.
+Residue-dependent difference inequalities provide a further quantitative
+refinement \cite[Theorems~2.2 and~6.1]{krasikov-lagarias}.
+The certificate below establishes its own branches, admissibility,
+and size estimates for the forced return. In particular, the enumeration
+must be accompanied by the distinctness and infinite counting arguments;
+the finite branch count alone is not an asymptotic lower bound.
+
+Put $S=2^{24}$. For an itinerary of 24 input parities with $o\le8$ odd
+inputs, Proposition~\ref{prop:affine-parity} gives a unique initial residue
+$r\bmod S$. Its inverse formula is
+\begin{equation}\label{eq:inverse-offset}
+ x=\frac{Sy+c}{3^o},\qquad c=3^or-SF^8(r).
+\end{equation}
+The row with no odd inputs is especially transparent: apply $A$ eight
+times to obtain
+\[
+ A^8(y)=8^8y+6(1+8+\cdots+8^7)
+       =2^{24}y+14{,}380{,}470.
+\]
+This verifies the first offset without an enumeration and explains why
+24 literal updates correspond to eight returns of $F$.
+Integrality restricts $y$ to one class modulo $3^o$. To count children
+coprime to three, inspect its three lifts modulo $3^{o+1}$, retain those
+with $3\nmid x$, and discard parents divisible by three. Distinct formulas
+have distinct residues $r$, so their integer children are distinct.
+
+\begin{lemma}[Certified branch minima]\label{lem:inverse-certificate}
+For each $y\ge34$ with $3\nmid y$, and each $0\le o\le8$, there are at
+least $m_o$ distinct children $x$ such that
+\[
+ F^8(x)=y,\qquad 3\nmid x,\qquad x>y,\qquad
+ x+1\le(S/3^o)(y+1).
+\]
+\end{lemma}
+\begin{proof}[Exact finite verification]
+The complete enumeration and its output are
+\path{certificates/inverse/certify_growth.py} and
+\path{certificates/inverse/growth_certificate.json}. The algorithm enumerates
+all $\sum_{o=0}^8\binom{24}{o}=1{,}271{,}626$ parity words with at most
+eight odd inputs by composing inverse updates. For every formula it
+recovers $r=c(3^o)^{-1}\bmod S$, rejects repeated $r$, independently replays
+all 24 forward updates at $r$, and checks the odd count and offset.
+It then counts the admissible children on every unit parent class modulo
+$3^{o+1}$. The minima and offset extremes are as follows.
+\begin{center}\small
+\begin{tabular}{rrrrr}\toprule
+$o$ & $m_o$ & Parity words & Minimum $c$ & Maximum $c$\\\midrule
+0&1&1&14380470&14380470\\
+1&4&24&1198370&15878434\\
+2&17&276&-25765018&16440166\\
+3&35&2024&-40594894&16650802\\
+4&57&10626&-70928746&16729750\\
+5&69&42504&-147774526&16759234\\
+6&53&134596&-197825722&16769926\\
+7&32&346104&-300203566&16772842\\
+8&13&735471&-559561354&16770655\\\bottomrule
+\end{tabular}
+\end{center}
+For each enumerated offset the checker verifies, using integers,
+\[
+ 34(S-3^o)+c>0,\qquad c+3^o\le S.
+\]
+These inequalities imply strict growth and the size bound for every
+$y\ge34$. A positive integral $x$ with residue $r\in[0,S)$ is $r+Sk$
+with $k\ge0$, so the forward affine identity applies. Admissibility of the
+forcing guarantees that its intermediate states are safe. The enumeration
+and residue grids are finite and exhaust the indicated cases. This is a
+computer-assisted finite lemma, not a Lean theorem in this release; the
+hash in the output is an integrity aid, not the proof of its arithmetic.
+\end{proof}
+
+Set $L_o=S/3^o>1$. The left side of \eqref{eq:inverse-exponent} decreases
+continuously from 281 to zero, establishing a unique positive root.
+At exponent $1/2$ its value is
+\[
+ \frac{3049+1594\sqrt3}{4096}>\frac{4643}{4096}>1,
+\]
+so $\delta>1/2$ without numerical approximation. The reported interval
+uses integer powers: with $G=10^9$, find $a_o$ such that
+\[
+ a_o^q S^p\le G^q3^{op}<(a_o+1)^q S^p.
+\]
+Then $a_o/G$ and $(a_o+1)/G$ bound $L_o^{-p/q}$ from below and strictly
+from above. Weighted sums certify mass greater than one at $p/q=107/200$
+and less than one at $67/125$. The value
+$0.535422959115049\ldots$ is an approximation, not the definition.
+
+Keeping the different size factors is essential to this exponent. If all
+281 selected children were charged the common worst factor $S$, the
+resulting exponent would be $\log(281)/\log(S)<1/2$, since
+$281<\sqrt S=4096$. The certified gains come from the many children
+with factors $S/3^o$ substantially smaller than $S$. Formula
+\eqref{eq:inverse-exponent} retains those gains while still giving a
+uniform argument at every eligible parent; it is not an estimate from
+an average sampled trajectory.
+
+\begin{lemma}[Weighted inverse counting]\label{lem:inverse-count}
+For every eligible root $y\ge34$, its phase-zero backward orbit contains
+at least $((X+1)/(S(y+1)))^\delta$ distinct values at most $X$, whenever
+$X+1\ge S(y+1)$.
+\end{lemma}
+\begin{proof}
+At every vertex retain exactly $m_o$ children of each type $o$, assigning
+each edge weight $L_o^{-\delta}$. The outgoing weights sum to one.
+Different paths of equal depth cannot collide, because $F^8$ determines
+the parent uniquely. A collision of depths $a<b$ would, on applying $a$
+forward blocks, identify the root with its own descendant of depth $b-a$.
+Strict increase along inverse edges rules this out as well.
+
+Write $W=(X+1)/(S(y+1))\ge1$. Stop a path when its product of edge factors
+first reaches $W$. Since the smallest factor exceeds one, the stopping
+tree has finite depth. Its stopped products lie between $W$ and $SW$;
+the corresponding integers satisfy $x+1\le SW(y+1)=X+1$.
+The weights of all stopped leaves sum to one, while each is at most
+$W^{-\delta}$. Hence there are at least $W^\delta$ distinct leaves.
+For $W=1$, stopping at the root gives the same assertion.
+\end{proof}
+
+\subsection{Ternary steering with uniform finite choices}
+
+The modular translation and admissible backtracing strategy has direct
+antecedents in Monks and Monks et al.
+\cite{monks-2006,monks-et-al-2013}. The latter's Theorem~4.1 bounds the
+number of \emph{odd inverse operations} needed to reach a progression,
+independently of the target. Its convention $l(s)$ counts those operations,
+whereas $\|s\|$ also counts the intervening even operations.
+For the counting transfer here we need a finite selector with bounded
+\emph{total physical length}, size cost, and multiplicity. The following
+proofs establish these properties directly, including the integral domains
+of the modular words; a bound on odd inverse count alone would not suffice.
+
+\begin{lemma}[Ternary steering]\label{lem:ternary-steering}
+For each $k\ge0$, every eligible target $q$ has an inverse predecessor
+in every class modulo $3^k$, using a uniformly bounded number of branches
+from $\{A,B_0,B_1,B_2\}$. The bound depends only on $k$.
+There are also arbitrarily large such predecessors, if the length is
+allowed to increase.
+\end{lemma}
+\begin{proof}
+For $k=0$, the identity is a bounded-length choice, and the iterates
+$A^h(q)$ supply arbitrarily large choices. Hence assume $k\ge1$.
+The identities
+\[
+ A^{2h}(q)=\frac{64^h(7q+6)-6}{7},\qquad
+ v_3(64^h-1)=2+v_3(h)\quad(h\ge1)
+\]
+show that the $A^2$ orbit of a unit $q$ modulo $3^k$ consists of all lifts
+of its residue modulo 9, with period $3^{k-2}$ for $k\ge2$.
+For completeness the valuation identity follows by writing $64=1+9\cdot7$:
+if $3\nmid h$, the first binomial term has valuation two and the later
+terms have larger valuation; replacing an exponent $h$ by $3h$ increases
+the valuation by one, since $a^2+a+1$ has valuation one when $a\equiv1\pmod9$.
+The differences of two orbit points therefore have valuation exactly
+$2+v_3(h_1-h_2)$. There are $3^{k-2}$ distinct points, exactly the number
+of lifts of one residue modulo 9.
+
+If $q\equiv5$ or $7\pmod9$, one application of $A$ moves it to residue
+$1$ or $8$, respectively. On residues $1,2,4,8\pmod9$, respectively use
+$B_1,B_2,B_1,B_2$; their outputs are units congruent to $2,1,1,2\pmod3$.
+Varying the input along its $A^2$ orbit modulo $3^{k+1}$ and then applying
+that $B$ branch supplies all lifts of one unit class modulo three at
+precision $3^k$. An optional $A$, which is invertible and swaps the two
+unit classes modulo three, supplies the other class. This proves steering
+to any unit residue at any precision, with a finite bound for fixed $k$.
+
+For any residue $a\bmod3^k$, first steer to the unit
+$z\equiv(3a+2)8^{-1}\pmod{3^{k+1}}$ and apply $B_1$.
+Its output is $a\bmod3^k$. All inputs can be kept at least two; applicable
+branches then increase them. To produce this $z$ at precision $3^{k+1}$,
+use the $A^2$ orbit at precision $3^{k+2}$; its period is $3^k$.
+An exponent $0\le h\le3^k-1$ therefore suffices. The initial adjustment
+by $A$, the selected $B$ branch, the optional $A$, and the final $B_1$
+cost at most four additional branches. Thus the total length is at most
+$2(3^k-1)+4=2\cdot3^k+2$. Taking additional full periods instead
+gives arbitrarily large outputs. This latter assertion does not have a
+bounded length requirement.
+\end{proof}
+
+\begin{lemma}[Exact domains of positive inverse words]\label{lem:inverse-domains}
+A word $w$ of $\ell$ branches from $\{B_0,B_1,B_2\}$ has affine form
+$B_w(y)=(8^\ell y+C_w)/3^\ell$. There is exactly one input residue modulo
+$3^\ell$ on which every intermediate branch is integral and applicable.
+Given any input residue $a\bmod3^k$, a word of $k$ letters can be chosen
+whose domain is exactly that residue.
+\end{lemma}
+\begin{proof}
+Composition proves the affine form. Final integrality gives a unique
+residue, since 8 is invertible modulo $3^\ell$. Reducing that congruence
+modulo $3^t$ gives the integrality condition for the first $t$ operations:
+in the remaining affine composition its prefix numerator is multiplied
+by a power of 8 and all later contributions have a factor $3^t$.
+Thus all prefixes are integral. At each step exactly one of the three
+formulas has integral value on a given residue modulo three; integrality
+therefore is the stated branch condition. To get a word for $a$, start
+with a sufficiently large positive representative of $a$ and choose its
+applicable branch successively $k$ times. The unique domain contains $a$.
+\end{proof}
+
+For a concrete instance of the domain lemma, apply $B_2$ and then $B_1$.
+The composed formula is
+\[
+ B_1(B_2(y))=\frac{64y+34}{9},\qquad y\equiv2\pmod9.
+\]
+Targets $y=2$ and $y=11$ give the legal inverse histories
+$2\mapsto7\mapsto18$ and $11\mapsto31\mapsto82$.
+Indeed $F^2(18)=2$ and $F^2(82)=11$. By contrast, $y=5$ permits
+the first branch, giving $B_2(5)=15$, but not the second: $15$ is
+not $1\pmod3$. The final fraction is also nonintegral. Thus a
+formal affine formula, or a permutation modulo an integer coprime
+to three, must still be supplied with its exact integral domain.
+The steering proof below supplies that domain before evaluating the
+word on actual integers.
+
+\begin{lemma}[Simultaneous odd-modulus steering]\label{lem:odd-steering}
+Let $k\ge0$, $m\ge1$, and $\gcd(m,6)=1$. Every eligible target has a
+predecessor in any specified class modulo $3^km$. For fixed $k,m$, the
+choice can be made from a finite list of inverse words of bounded length.
+Arbitrarily large choices also exist when length is unrestricted.
+\end{lemma}
+\begin{proof}
+For $m=1$ use Lemma~\ref{lem:ternary-steering}. Otherwise all $B_r$ act as
+permutations modulo $m$ with common linear coefficient $8/3$. Let $e$ be
+the multiplicative order of $8/3$ modulo $m$, and put $Q=me$. Raising a
+$B_r$ to power $e$ gives a translation, and raising a translation to power
+$m$ gives the identity. Hence $B_r^Q$ is the identity modulo $m$, and its
+inverse is represented by the positive word $B_r^{Q-1}$.
+
+Modulo $m$ one has $B_1^{-1}B_0(y)=y+1/4$. Four repetitions give
+translation by one. Replacing every inverse letter by $Q-1$ positive
+copies produces a positive word $P$ of length $4Q$ representing $y+1$.
+Let $w_0$ be the $k$-letter word from Lemma~\ref{lem:inverse-domains}
+whose domain is the prescribed class $a\bmod3^k$. In application order
+concatenate $w_0$, a positive representative of $w_0^{-1}$ modulo $m$,
+and $P$, obtaining a word $V$ of length $\ell=Q(k+4)$.
+It acts as translation by one modulo $m$, and every admissible use of it
+starts in class $a\bmod3^k$.
+
+The word $V^m$ has a unique admissibility class modulo $3^{m\ell}$.
+Use ternary steering to obtain a predecessor $z\ge2$ of the original
+target in that class. All letters of $V^m$ are then applicable.
+The block boundaries $z,V(z),\ldots,V^{m-1}(z)$ start admissible copies
+of $V$, so they all lie in class $a\bmod3^k$ and run through every
+residue modulo $m$. Select the required one. For fixed moduli, the finite
+ternary choice and at most $m-1$ copies of $V$ give a uniform length bound.
+Using arbitrarily large ternary choices proves the separate unbounded-size
+assertion. This domain argument is necessary: the modular permutation
+calculation alone does not license arbitrary integer applications of $B_r$.
+\end{proof}
+
+\subsection{Binary digits, phases, and preservation of the exponent}
+
+\begin{lemma}[Finite selector]\label{lem:finite-selector}
+Fix a progression $a\bmod M$ and a launch phase $j$. There are constants
+$D,C$ and finitely many rational affine formulas such that every eligible
+phase-zero $y$ has an integer predecessor $x>0$ in that progression, at
+phase $j$, given by one of these formulas on its exact admissibility
+domain, reaching $y$ within $D$ physical updates and satisfying
+$x+1\le C(y+1)$.
+\end{lemma}
+\begin{proof}
+Write $M=2^\alpha3^bm$ with $\gcd(m,6)=1$. Choose a positive
+representative $x_0$ of the progression. Choose $K\ge\alpha$ such that
+launch phase $j$ reaches phase
+zero in $K$ updates. Let its endpoint be $A_0$ and let $o$ count the odd
+inputs in these $K$ updates. By the finite parity formula, for $t\ge0$,
+\begin{equation}\label{eq:prefix-lift}
+ x_0+2^K3^bmt\ \longmapsto\ A_0+3^{o+b}mt.
+\end{equation}
+The difference at each odd step is multiplied by $3/2$, at each even
+step by $1/2$, and all impulses cancel from the difference. All sources
+in \eqref{eq:prefix-lift} lie in the requested progression.
+
+Choose a fixed $R$ such that $A^R(2)\ge\max(A_0,2)$, and first replace
+$y$ by $A^R(y)$, still an eligible predecessor of $y$.
+Lemma~\ref{lem:odd-steering} supplies a predecessor $z$ in class
+$A_0\bmod3^{o+b}m$ with uniformly bounded inverse length. Branches grow
+on inputs at least two, so $z\ge A_0$. Solving \eqref{eq:prefix-lift}
+for $t$ gives a nonnegative integer and a positive $x$ in the progression.
+The finite alphabet and length bound give finitely many affine formulas.
+Their positive slopes and constant offsets give a common size constant
+$C$ on $y\ge2$. The total physical length, including the fixed prefix
+and padding, has a common bound $D$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:inverse-growth}]
+Attach an eligible phase-zero predecessor to the target using
+\eqref{eq:eligible-attachment} and the phase lifts. If necessary, two
+applications of $A$ put it above 34, since $A^2(2)=182$. Apply
+Lemma~\ref{lem:inverse-count} to this root. Its at least $c_0Y^\delta$
+eligible tree vertices below $Y$ each admit a selector predecessor
+$x\le C(Y+1)-1$. A fixed output $x$ can be assigned to at most $D+1$
+different tree vertices: they must appear among its first $D+1$ augmented
+forward states. Thus there are at least $c_0Y^\delta/(D+1)$ distinct
+outputs. Replacing $Y$ by $(X+1)/C-1$ proves the required lower bound
+for all sufficiently large $X$.
+\end{proof}
+
+\begin{corollary}[A conditional route from exceptional-set bounds]
+\label{cor:exceptional-set}
+For this three-step forcing, fix a finite catalog of safe cycles and let
+$E_j$ be the positive seeds at phase $j$ whose orbits never enter the
+catalog. If one such exceptional safe trajectory exists, every progression
+at every launch phase contains at least $cX^\delta$ exceptional seeds
+below $X$ for all sufficiently large $X$. Consequently, a bound
+$\#(E_j\cap\{x\le X:x\equiv a\pmod M\})=o(X^\delta)$ in even one
+whole progression implies global capture. A bound $O(X^{1/2})$ suffices.
+\end{corollary}
+\begin{proof}
+Every predecessor of an exceptional target is exceptional, since entry
+into a cycle is forward invariant. Apply Theorem~\ref{thm:inverse-growth}
+to that target. The claimed upper bound would contradict the resulting
+lower bound. Since $\delta>1/2$, $O(X^{1/2})=o(X^\delta)$.
+\end{proof}
+
+No exceptional-set upper bound of this kind is proved here. Lower bounds
+for backward basins can hold simultaneously for disjoint basins and do not
+prove that their union exhausts all seeds. For the ordinary Collatz map,
+computer-assisted inverse-tree results such as Krasikov--Lagarias already
+give substantially stronger lower exponents than the numerical exponent
+above \cite{krasikov-lagarias}; the result here concerns a different forced
+map and includes its own phase and progression assertions.
+
+Tao's ordinary-map theorem concerns minima below any prescribed threshold
+tending to infinity, for a set of logarithmic density one
+\cite[Theorem~1.3 and Remark~1.4]{tao}. It supplies no exceptional-set upper
+bound of the form required by Corollary~\ref{cor:exceptional-set} for this
+forced map. Even natural-density-one capture would give only $o(X)$
+exceptions, which does not imply $o(X^\delta)$ when $\delta<1$.

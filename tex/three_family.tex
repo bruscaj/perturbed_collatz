@@ -1,0 +1,208 @@
+\subsection{A second section with three residual families}
+\label{sec:seven-three}
+
+The number of open families depends on the section as well as the rank.
+Adding early section hits can replace a long expanding return by several
+short comparisons.  We now give a second, independent reduction for the
+same seven-step forcing and destination cycle.  Its section and rank are
+\begin{equation}\label{eq:seven-new-section}
+\begin{gathered}
+ \mathcal S_* = \{(z,i):z=3m,\ m\ge1,\ i\in\{1,2,3,5\}\},
+ \\
+ W(m,i)=w_i m,\quad (w_1,w_2,w_3,w_5)=(4,7,4,5).
+\end{gathered}
+\end{equation}
+The physical launch is still $s(m,i)=(3m-1+h_i,i)$, now with the
+four indicated phases.  Write $P_*$ for the first strictly later visit
+to $\mathcal S_*$.  Neither the old return map $P$ nor the old rank
+$\rho$ is used in the proof of this second reduction.
+
+\begin{theorem}[Three-family conditional capture]\label{thm:seven-three}
+Every positive physical integer at every initial phase is captured by
+\eqref{eq:seven-cycle} if and only if all three following statements hold:
+\begin{align*}
+ \mathrm{B1}:&\quad \operatorname{Cap}(s(2t,1)) &&(t\ge1),\\
+ \mathrm{A3}:&\quad \operatorname{Cap}(s(4t+3,3)) &&(t\ge0),\\
+ \mathrm{N03}:&\quad \operatorname{Cap}(s(8t+2,5)) &&(t\ge0).
+\end{align*}
+Every safe orbit enters $\mathcal S_*$ within eleven updates, and all
+first returns from phases $1,2,3,5$ occur within $2,7,6,7$ updates,
+respectively.  Outside the three families and five explicitly captured
+states, $P_*$ strictly decreases the single natural-valued rank $W$.
+The theorem does not prove any of the three universal capture hypotheses.
+\end{theorem}
+
+\paragraph{Uniform entry and bounded return.}
+For entry, partition the phase-zero positive coordinate as
+$z=1536q+r$, $0\le r<1536$, with $q\ge1$ for $r=0$ and $q\ge0$
+otherwise.  The coefficient $1536=3\cdot2^9$ has more than enough
+powers of two for five exact updates and retains a factor of three
+throughout.  Consequently both parity and section membership are
+constant on every propagated affine domain.  Independent physical
+propagation gives the complete entry-time distribution
+\[
+ \begin{array}{c|rrrr}
+ \text{first entry time}&1&2&3&5\\\hline
+ \text{number of residue domains}&1024&384&64&64.
+ \end{array}
+\]
+The counts sum to 1536.  Alignment from an arbitrary launch phase to
+phase zero costs at most six updates, proving the stated bound of eleven.
+
+For first returns, start with the entire domain $z=3m$ at each marked
+phase.  Whenever the next parity is not fixed, split the free parameter
+into its even and odd cases.  A growing branch $G$ and a shrinking branch
+$S$ in the positive coordinate have the formulas
+\[
+ G_i(z)=\frac{3z+h_i}{2}\quad(z\equiv h_i\pmod2),\qquad
+ S_i(z)=\frac{z+1-h_i}{2}\quad(z\not\equiv h_i\pmod2).
+\]
+These formulas describe branches of the prescribed $T/U$ schedule;
+the branch is determined by the input parity. After $g$ growing updates,
+the free coefficient is $3^{g+1}$: each parity split supplies the factor
+of two consumed by that update. It is odd and divisible by three,
+justifying the next split and the constant test for section membership.
+Stop a domain at its
+first later marked phase with $3\mid z$.  This procedure terminates
+within the stated caps and produces the 43 domains in
+Table~\ref{tab:seven-three-cylinders}.  At each source phase the
+domains are pairwise disjoint and their dyadic widths sum to one.
+Since all moduli are powers of two and bounded by the corresponding
+$2^{L_i}$, this is an exhaustive finite partition of the positive
+integers, not a density-only coverage claim.
+
+As a separate reconstruction, partition $m$ modulo $2^{L_i}$ with
+$(L_1,L_2,L_3,L_5)=(2,7,6,7)$, and propagate the original physical
+recurrence, checking safety and the absence of an earlier section hit.
+There are $4+128+64+128=324$ full-modulus input domains.  Each reproduces
+the endpoint and time of its unique adaptive domain.  The two procedures
+share the forcing and the section definition, but use different
+coordinates and different partitions.  Both use exact integers rather
+than a sample of finite orbit representatives.
+
+\input{tex/three_family_rows}
+
+\paragraph{The finite exceptions and the induction.}
+On a row $(Mt+r,i)\mapsto(At+b,j)$, the rank change is
+\[
+ W_{\rm out}-W_{\rm in}=(w_jA-w_iM)t+w_jb-w_ir.
+\]
+Exactly three rows have positive leading coefficient.  They are
+\begin{center}
+\begin{tabular}{llll}\toprule
+Family&launch&first return&rank change\\\midrule
+B1&$(2t,1)$&$(3t,2)$&$13t$\\
+A3&$(4t+3,3)$&$(9t+7,5)$&$29t+23$\\
+N03&$(8t+2,5)$&$(27t+7,1)$&$68t+18$\\\bottomrule
+\end{tabular}
+\end{center}
+They grow on their whole legal domains.  Every other row has a negative
+leading coefficient.  Solving its affine inequality on the entire legal
+parameter ray leaves just
+\[
+ E=\{(1,1),(1,3),(1,5),(3,5),(5,3)\}
+\]
+as possible failures of strict descent.  Their capture times are
+$4,2,0,14,16$ updates, respectively.  The first three have the physical
+chains $(2,1)\to(1,2)\to(3,3)\to(4,4)\to(2,5)$ and its indicated
+suffixes; $(2,5)$ is already on the destination cycle.  The longer two
+chains, with phases advancing by one at each arrow, are
+\begin{align*}
+ (8,5):\quad&8,5,7,11,17,27,40,20,11,16,8,4,3,4,2,\\
+ (15,3):\quad&15,22,11,18,8,4,2,2,0,0,1,1,2,1,3,4,2.
+\end{align*}
+Both end at phase five with physical value two.  The second chain
+also illustrates why the convention at zero matters: it passes through
+zero and continues, exactly as the forcing requires.
+
+\begin{proof}[Proof of Theorem~\ref{thm:seven-three}]
+The three families consist of positive physical states, so universal
+capture implies their capture.  Conversely assume the three universal
+statements.  If a safe orbit failed capture, uniform entry would give
+a failed state in $\mathcal S_*$.  Choose such a state of least positive
+integer rank $W$.  It is not in $E$, whose exact capture chains were
+given above, and it is not in a residual family by hypothesis.
+Its first return therefore strictly decreases $W$.  The return state
+also fails capture, since its future is a suffix of the same orbit.
+This contradicts minimality.  Every safe state is consequently captured.
+\end{proof}
+
+\paragraph{What changed relative to the four-family reduction.}
+A3 is the old family S00.  At phase five, N03 is the subfamily
+$m\equiv2\pmod8$ of the old even family S01.  The new section also
+introduces B1 at phase one.  For the old S02 and S03 launches, it records
+earlier endpoints
+\[
+ (32t+3,5)\xrightarrow{3}(36t+4,1),\qquad
+ (128t+115,5)\xrightarrow{3}(144t+130,1).
+\]
+Their $W$-drops are $16t-1$ and $64t+55$.  The first is positive for
+$t\ge1$; its remaining input $(3,5)$ belongs to $E$.  This explains
+concretely how changing the section helps.  It does not prove capture
+of those old families without the new hypotheses: a rank decrease
+reduces an induction obligation but needs the common well-founded
+argument to finish it.  Combining individual drops from $\rho$ and
+$W$ without constructing one compatible order would not be valid.
+
+\begin{proposition}[Three growing domains are optimal for this section]
+\label{prop:seven-three-barrier}
+Among positive phase-affine ranks
+$R(m,i)=a_i m+b_i$ on $\mathcal S_*$, at least three of nine specified
+disjoint first-return domains have a positive leading rank change.
+The rank $W$ attains three growing domains in the complete 43-domain
+partition.  The optimality assertion concerns this section and these
+direct first-return comparisons.
+\end{proposition}
+\begin{proof}
+Use the following three cycles of constraints, taking each labeled
+edge from Table~\ref{tab:seven-three-cylinders}:
+\[
+ \begin{array}{c|c|c}
+ \text{phase cycle}&\text{successive branch traces}&
+       \text{product of slopes}\\\hline
+ 1\to2\to5\to1&G,\ SGG,\ GGS&243/128\\
+ 1\to3\to5\to1&SG,\ GS,\ GGG&243/128\\
+ 2\to3\to5\to2&G,\ GG,\ GSSG&243/128
+ \end{array}
+\]
+Each edge is a different row of the disjoint partition.  If all three
+leading rank changes in one cycle were nonpositive, multiplying
+$a_jA\le a_iM$ around it would imply that the product of its slopes
+$A/M$ is at most one.  Each displayed product is greater than one.
+Thus each cycle contributes a different row with positive leading
+coefficient; fixed offsets $b_i$ cannot cancel its growth for arbitrarily
+large parameters.  The exact rank-change column proves attainment by
+$W$.  These are cycles of inequalities on weights, not asserted
+periodic trajectories satisfying every successive guard.
+\end{proof}
+
+\paragraph{Reproduction and remaining work.}
+The standalone program \path{certificates/seven_step/three_family.py}
+regenerates every field of \path{three_family.json}: all 43 affine
+rows, all five finite chains, the independent physical reconstruction,
+the entry calculation, and the nine obstruction witnesses.  The written
+least-rank argument supplies the passage from these finite facts to
+the conditional universal statement.
+
+The positive-seed capture equivalence is also formalized in
+\path{lean/inverse/Collatz/ReleaseBridge.lean}, as
+\path{Collatz.ReleaseBridge.global_capture_iff_three}.
+This small release bridge supplies the immediate converse to the
+source theorem \path{Collatz.SevenStep.global_capture_of_three}.
+Lean writes states in the order $(i,n)$, while this manuscript writes
+$(n,i)$; its \texttt{site} has exactly the physical value
+$3m-1+h_i$. The signed update, destination cycle, three families,
+and positive-seed quantifiers are the same. The copied
+\path{SevenRows.lean} also checks all 43 affine rows, and an independent
+comparison verifies their agreement with the printed table, including
+the shifted parameter convention for zero-residue rows.
+
+The formal proof uses a separate direct entrance check modulo 192,
+proving entrance within six updates for positive physical seeds at
+every phase. The eleven-update bound above uses the simpler phase-zero
+calculation and covers the stated safe domain, including its zero
+states. The phase-affine optimality proof and the interpretation of
+the Python checker's auxiliary data are not thereby promoted to Lean
+theorems. Resolving B1, A3, and N03 under one
+compatible argument remains the mathematical task; a finite launch
+search or a picture of their basins does not discharge it.

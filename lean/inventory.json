@@ -1,0 +1,2293 @@
+{
+  "status": "passed",
+  "scope": "all released Lean projects",
+  "independent_kernel": "not run",
+  "projects": {
+    "inverse": {
+      "status": "passed",
+      "lean_version": "4.24.0",
+      "clean_build": true,
+      "theorem_count": 110,
+      "private_source_theorem_count": 37,
+      "module_audit": {
+        "modules": [
+          "Collatz.Admissibility",
+          "Collatz.BinaryZoom",
+          "Collatz.Branches",
+          "Collatz.Coverage",
+          "Collatz.CycleMultiplier",
+          "Collatz.Physical",
+          "Collatz.ReleaseBridge",
+          "Collatz.SevenFrontier",
+          "Collatz.SevenRows",
+          "Collatz.SevenStep",
+          "Collatz.Tree"
+        ],
+        "theorem_constants_including_private_and_generated": 556
+      },
+      "adversarial_files": [
+        "SevenAdversarial.lean"
+      ],
+      "sources_sha256": {
+        "Audit.lean": "7d268d3566ee27e86529f20aad3274bb9570bea82fc6a90dd8d3970cd6683846",
+        "Collatz/Admissibility.lean": "3a57cdf6e16952443788413c15a86c9c7652baeb160f0cf8d32b1adee8583de5",
+        "Collatz/BinaryZoom.lean": "b2557f3f7affaf7fff7e9ddd0c10d3dcc885ce5f11784eeef9adfd4f0f210f2d",
+        "Collatz/Branches.lean": "2388b657fa7e99d6c1d0f7c5a4e86ad04b9fcad9822611db72db8fef65861511",
+        "Collatz/Coverage.lean": "1481fdbf27bf835f51fa3603ff541ab33a0df7c9749c5701825d3ba4582b9630",
+        "Collatz/CycleMultiplier.lean": "d4033b39bf8988e53fd23bde43d6b55e8d8be77ddec57b33517cd545cd08c80e",
+        "Collatz/Physical.lean": "eec783e5f87f1ba8418ad85997cd44c6f6f92443fad36add61c6776c65f1b770",
+        "Collatz/ReleaseBridge.lean": "19ab43f0eaf78f50732956e8b9cc6051d67227833d3643ef31c4658375a7ab14",
+        "Collatz/SevenFrontier.lean": "4727cfb9e3d256f508e7b7c1de9379aa94ad11c60c7a6b54bb986db8199190ce",
+        "Collatz/SevenRows.lean": "f5e834161bbbce7db3406325f98631efbee59b5ee8a977cc6ad29f2719c5edb0",
+        "Collatz/SevenStep.lean": "f899f7d9b520704c32247af9706ac72240fa0a78f64703c6d243b835b7746164",
+        "Collatz/Tree.lean": "bdf7416235e7ba3171189876caffc74f6736a8145bc6ed0340f6eaf84ec275e4",
+        "Collatz.lean": "2a0155d23de4e4c6f949e1fac3e9ae479b3e9095acfc43a58e5935eecf8cb7fb",
+        "Inventory.lean": "7710eb6d6bc98e8422e40a961522d299f169840a76e53f851af337e76e471efb",
+        "SevenAdversarial.lean": "a821ff8f809d748fa81a2030b73220030d340b98850f93df7a2b1550a4f89d30"
+      },
+      "declarations": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.A_bound",
+          "statement": "\u2200 (y : Nat), Collatz.A y + 1 \u2264 64 * (y + 1)",
+          "source": "Collatz/Branches.lean",
+          "line": 153
+        },
+        {
+          "axioms": [
+            "Classical.choice",
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.A_good",
+          "statement": "\u2200 {y : Nat}, Collatz.Good y \u2192 Collatz.Good (Collatz.A y)",
+          "source": "Collatz/Branches.lean",
+          "line": 146
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.A_grow",
+          "statement": "\u2200 (y : Nat), y < Collatz.A y",
+          "source": "Collatz/Branches.lean",
+          "line": 151
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.A_parent",
+          "statement": "\u2200 (y : Nat), Collatz.twoLaps (Collatz.A y) = y",
+          "source": "Collatz/Branches.lean",
+          "line": 106
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.B_bound",
+          "statement": "\u2200 {y : Nat}, Collatz.Good y \u2192 3 * (Collatz.B y + 1) \u2264 64 * (y + 1)",
+          "source": "Collatz/Branches.lean",
+          "line": 163
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.B_good",
+          "statement": "\u2200 {y : Nat}, Collatz.Good y \u2192 Collatz.Good (Collatz.B y)",
+          "source": "Collatz/Branches.lean",
+          "line": 160
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.B_grow",
+          "statement": "\u2200 {y : Nat}, Collatz.Good y \u2192 y < Collatz.B y",
+          "source": "Collatz/Branches.lean",
+          "line": 161
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.B_lt_A",
+          "statement": "\u2200 {y : Nat}, Collatz.Good y \u2192 Collatz.B y < Collatz.A y",
+          "source": "Collatz/Branches.lean",
+          "line": 162
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.B_parent",
+          "statement": "\u2200 {y : Nat}, Collatz.Good y \u2192 Collatz.twoLaps (Collatz.B y) = y",
+          "source": "Collatz/Branches.lean",
+          "line": 142
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.BinaryZoom.even_lap_steps",
+          "statement": "\u2200 (n : Nat), Collatz.T (8 * n + 6) + 1 = 4 * n + 4 \u2227 Collatz.T (4 * n + 4) = 2 * n + 2 \u2227 Collatz.T (2 * n + 2) = n + 1",
+          "source": "Collatz/BinaryZoom.lean",
+          "line": 16
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.BinaryZoom.inverse_lap",
+          "statement": "\u2200 (n : Nat), Collatz.oneLap (8 * n + 6) = n",
+          "source": "Collatz/BinaryZoom.lean",
+          "line": 22
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.BinaryZoom.laps_lift",
+          "statement": "\u2200 (h n : Nat), Collatz.BinaryZoom.laps h (Collatz.BinaryZoom.lift h n) = n",
+          "source": "Collatz/BinaryZoom.lean",
+          "line": 26
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.BinaryZoom.lift_affine",
+          "statement": "\u2200 (h n : Nat), Collatz.BinaryZoom.lift h n = 8 ^ h * n + Collatz.BinaryZoom.lift h 0",
+          "source": "Collatz/BinaryZoom.lean",
+          "line": 33
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.BinaryZoom.lift_residue",
+          "statement": "\u2200 (h n : Nat), Collatz.BinaryZoom.lift h n % 8 ^ h = Collatz.BinaryZoom.lift h 0",
+          "source": "Collatz/BinaryZoom.lean",
+          "line": 52
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.BinaryZoom.residue_lt",
+          "statement": "\u2200 (h : Nat), Collatz.BinaryZoom.lift h 0 < 8 ^ h",
+          "source": "Collatz/BinaryZoom.lean",
+          "line": 44
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.BinaryZoom.residue_return",
+          "statement": "\u2200 (h n : Nat),\n  n % 8 ^ h = Collatz.BinaryZoom.lift h 0 \u2192\n    Collatz.run (Collatz.Phase.plus, n) (3 * h) = (Collatz.Phase.plus, n / 8 ^ h)",
+          "source": "Collatz/BinaryZoom.lean",
+          "line": 64
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.BinaryZoom.run_laps",
+          "statement": "\u2200 (h n : Nat), Collatz.run (Collatz.Phase.plus, n) (3 * h) = (Collatz.Phase.plus, Collatz.BinaryZoom.laps h n)",
+          "source": "Collatz/BinaryZoom.lean",
+          "line": 55
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.Coverage.all_phase_preimages",
+          "statement": "\u2200 (launch target : Collatz.Phase) (y : Nat),\n  Collatz.Safe target y \u2192\n    \u2200 (k : Nat),\n      \u2203 seed,\n        (\u2200 (i j : Fin (2 ^ k)), seed i = seed j \u2192 i = j) \u2227\n          \u2200 (i : Fin (2 ^ k)),\n            0 < seed i \u2227\n              seed i <\n                  Collatz.Coverage.startValue launch\n                    (64 ^ k * (Collatz.Coverage.stem (Collatz.Coverage.targetOrigin target y) + 1)) \u2227\n                Collatz.run (launch, seed i)\n                    (Collatz.Coverage.toZero launch + 6 * k + 6 + Collatz.Coverage.fromZero target) =\n                  (target, y)",
+          "source": "Collatz/Coverage.lean",
+          "line": 113
+        },
+        {
+          "axioms": [],
+          "declaration": "Collatz.Coverage.run_add",
+          "statement": "\u2200 (state : Collatz.Phase \u00d7 Nat) (a b : Nat), Collatz.run state (a + b) = Collatz.run (Collatz.run state a) b",
+          "source": "Collatz/Coverage.lean",
+          "line": 54
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Coverage.run_blocks",
+          "statement": "\u2200 (k n : Nat), Collatz.run (Collatz.Phase.plus, n) (6 * k) = (Collatz.Phase.plus, Collatz.Tree.advanceBlocks k n)",
+          "source": "Collatz/Coverage.lean",
+          "line": 61
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.Coverage.stem_at_least_two",
+          "statement": "\u2200 (y : Nat), 2 \u2264 Collatz.Coverage.stem y",
+          "source": "Collatz/Coverage.lean",
+          "line": 28
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.Coverage.stem_spec",
+          "statement": "\u2200 (y : Nat), Collatz.Good (Collatz.Coverage.stem y) \u2227 Collatz.twoLaps (Collatz.Coverage.stem y) = y",
+          "source": "Collatz/Coverage.lean",
+          "line": 34
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.admissible_conservative_iff_binary_height",
+          "statement": "\u2200 (w : Collatz.Physical.Word),\n  Collatz.Physical.Admissible w \u2227 Collatz.Physical.Conservative w \u2194\n    \u2203 h, Collatz.Physical.Binary h \u2227 Collatz.Physical.Gradient w h",
+          "source": "Collatz/Admissibility.lean",
+          "line": 134
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.admissible_iff_floor",
+          "statement": "\u2200 (w : Collatz.Physical.Word),\n  Collatz.Physical.Admissible w \u2194 \u2203 h, Collatz.Physical.Binary h \u2227 Collatz.Physical.Floor w h",
+          "source": "Collatz/Admissibility.lean",
+          "line": 68
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.admissible_of_floor",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\n  Collatz.Physical.Binary h \u2192 Collatz.Physical.Floor w h \u2192 Collatz.Physical.Admissible w",
+          "source": "Collatz/Admissibility.lean",
+          "line": 21
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.alternating_admissible",
+          "statement": "\u2200 (w : Collatz.Physical.Word),\n  Collatz.Physical.UnitAlphabet w \u2192 Collatz.Physical.Alternating w \u2192 Collatz.Physical.Admissible w",
+          "source": "Collatz/Admissibility.lean",
+          "line": 197
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.coalescence",
+          "statement": "\u2200 {\u03b1 : Type} {f : \u03b1 \u2192 \u03b1} {target : \u03b1 \u2192 Prop},\n  (\u2200 (x : \u03b1), target x \u2192 target (f x)) \u2192\n    \u2200 {x y : \u03b1} (a b : Nat),\n      Collatz.Physical.run f a x = Collatz.Physical.run f b y \u2192\n        Collatz.Physical.Reaches f target y \u2192 Collatz.Physical.Reaches f target x",
+          "source": "Collatz/Physical.lean",
+          "line": 77
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.conservative_admissible_iff_alternating",
+          "statement": "\u2200 (w : Collatz.Physical.Word),\n  Collatz.Physical.Conservative w \u2192\n    (Collatz.Physical.Admissible w \u2194 Collatz.Physical.UnitAlphabet w \u2227 Collatz.Physical.Alternating w)",
+          "source": "Collatz/Admissibility.lean",
+          "line": 215
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.coordinate_conjugacy",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\n  Collatz.Physical.Binary h \u2192\n    Collatz.Physical.Gradient w h \u2192\n      \u2200 (s : Collatz.Physical.State w),\n        Collatz.Physical.coordinate h (Collatz.Physical.step w s) =\n          if h s.fst = 1 then Collatz.Physical.shortcut (Collatz.Physical.coordinate h s)\n          else Collatz.Physical.shortcut (Collatz.Physical.coordinate h s - 1) + 1",
+          "source": "Collatz/Admissibility.lean",
+          "line": 226
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.coordinate_injective",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int) (s t : Collatz.Physical.State w),\n  Collatz.Physical.toCoordinate h s = Collatz.Physical.toCoordinate h t \u2192 s = t",
+          "source": "Collatz/Admissibility.lean",
+          "line": 298
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.coordinate_orbit",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\n  Collatz.Physical.Binary h \u2192\n    Collatz.Physical.Gradient w h \u2192\n      \u2200 (s : Collatz.Physical.State w) (k : Nat),\n        Collatz.Physical.toCoordinate h (Collatz.Physical.run (Collatz.Physical.step w) k s) =\n          Collatz.Physical.run (Collatz.Physical.zStep w h) k (Collatz.Physical.toCoordinate h s)",
+          "source": "Collatz/Admissibility.lean",
+          "line": 288
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.cycle_correspondence",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\n  Collatz.Physical.Binary h \u2192\n    Collatz.Physical.Gradient w h \u2192\n      \u2200 (s : Collatz.Physical.State w) (k : Nat),\n        Collatz.Physical.run (Collatz.Physical.step w) k s = s \u2194\n          Collatz.Physical.run (Collatz.Physical.zStep w h) k (Collatz.Physical.toCoordinate h s) =\n            Collatz.Physical.toCoordinate h s",
+          "source": "Collatz/Admissibility.lean",
+          "line": 307
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.cycle_multiplier_lt_one",
+          "statement": "\u2200 (w : Collatz.Physical.Word),\n  Collatz.Physical.Admissible w \u2192\n    Collatz.Physical.Conservative w \u2192\n      \u2200 (s : Collatz.Physical.State w),\n        Collatz.Physical.Safe w s \u2192\n          \u2200 (k : Nat),\n            0 < k \u2192 Collatz.Physical.run (Collatz.Physical.step w) k s = s \u2192 3 ^ Collatz.Physical.oddCount w s k < 2 ^ k",
+          "source": "Collatz/CycleMultiplier.lean",
+          "line": 61
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.doubled_coordinate",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\n  Collatz.Physical.Binary h \u2192\n    Collatz.Physical.Gradient w h \u2192\n      \u2200 (s : Collatz.Physical.State w),\n        2 * Collatz.Physical.coordinate h (Collatz.Physical.step w s) =\n          Collatz.Physical.parityFactor s.snd * Collatz.Physical.coordinate h s + Collatz.Physical.coordinate h s % 2",
+          "source": "Collatz/CycleMultiplier.lean",
+          "line": 12
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.floor_gradient",
+          "statement": "\u2200 (w : Collatz.Physical.Word),\n  Collatz.Physical.Conservative w \u2192\n    \u2200 (h : Collatz.Physical.Clock w \u2192 Int), Collatz.Physical.Floor w h \u2192 Collatz.Physical.Gradient w h",
+          "source": "Collatz/Admissibility.lean",
+          "line": 122
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.floor_invariant",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\n  Collatz.Physical.Binary h \u2192\n    Collatz.Physical.Floor w h \u2192\n      \u2200 (s : Collatz.Physical.State w),\n        h s.fst \u2264 s.snd \u2192 h (Collatz.Physical.step w s).fst \u2264 (Collatz.Physical.step w s).snd",
+          "source": "Collatz/Admissibility.lean",
+          "line": 13
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "declaration": "Collatz.Physical.gain_succ",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (s : Collatz.Physical.State w) (k : Nat),\n  3 ^ Collatz.Physical.oddCount w s (k + 1) =\n    3 ^ Collatz.Physical.oddCount w (Collatz.Physical.step w s) k * Collatz.Physical.parityFactor s.snd",
+          "source": "Collatz/CycleMultiplier.lean",
+          "line": 22
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.gradient_alternates",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\n  Collatz.Physical.Binary h \u2192 Collatz.Physical.Gradient w h \u2192 Collatz.Physical.Alternating w",
+          "source": "Collatz/Admissibility.lean",
+          "line": 171
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.gradient_conservative",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\n  Collatz.Physical.Gradient w h \u2192 Collatz.Physical.Conservative w",
+          "source": "Collatz/Admissibility.lean",
+          "line": 116
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.gradient_unit_alphabet",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\n  Collatz.Physical.Binary h \u2192 Collatz.Physical.Gradient w h \u2192 Collatz.Physical.UnitAlphabet w",
+          "source": "Collatz/Admissibility.lean",
+          "line": 156
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.height_across_zeros",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\n  Collatz.Physical.Gradient w h \u2192\n    \u2200 (i : Collatz.Physical.Clock w) (k : Nat),\n      (\u2200 (j : Nat), j < k \u2192 w.impulse (Collatz.Physical.advancePhase i j) = 0) \u2192\n        h (Collatz.Physical.advancePhase i k) = h i",
+          "source": "Collatz/Admissibility.lean",
+          "line": 160
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.height_unique",
+          "statement": "\u2200 (w : Collatz.Physical.Word),\n  (\u2203 i, w.impulse i \u2260 0) \u2192\n    \u2200 (h g : Collatz.Physical.Clock w \u2192 Int),\n      Collatz.Physical.Binary h \u2192\n        Collatz.Physical.Binary g \u2192 Collatz.Physical.Gradient w h \u2192 Collatz.Physical.Gradient w g \u2192 h = g",
+          "source": "Collatz/Admissibility.lean",
+          "line": 261
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.leastSafe_binary",
+          "statement": "\u2200 (w : Collatz.Physical.Word), Collatz.Physical.Binary (Collatz.Physical.leastSafe w)",
+          "source": "Collatz/Admissibility.lean",
+          "line": 39
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.leastSafe_floor",
+          "statement": "\u2200 (w : Collatz.Physical.Word), Collatz.Physical.Admissible w \u2192 Collatz.Physical.Floor w (Collatz.Physical.leastSafe w)",
+          "source": "Collatz/Admissibility.lean",
+          "line": 54
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.leastSafe_le",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (s : Collatz.Physical.State w),\n  Collatz.Physical.Safe w s \u2192 Collatz.Physical.leastSafe w s.fst \u2264 s.snd",
+          "source": "Collatz/Admissibility.lean",
+          "line": 42
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "declaration": "Collatz.Physical.reaches_prepend",
+          "statement": "\u2200 {\u03b1 : Type} {f : \u03b1 \u2192 \u03b1} {target : \u03b1 \u2192 Prop} {x : \u03b1} (a : Nat),\n  Collatz.Physical.Reaches f target (Collatz.Physical.run f a x) \u2192 Collatz.Physical.Reaches f target x",
+          "source": "Collatz/Physical.lean",
+          "line": 50
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.reaches_tail",
+          "statement": "\u2200 {\u03b1 : Type} {f : \u03b1 \u2192 \u03b1} {target : \u03b1 \u2192 Prop},\n  (\u2200 (x : \u03b1), target x \u2192 target (f x)) \u2192\n    \u2200 {x : \u03b1},\n      Collatz.Physical.Reaches f target x \u2192 \u2200 (a : Nat), Collatz.Physical.Reaches f target (Collatz.Physical.run f a x)",
+          "source": "Collatz/Physical.lean",
+          "line": 63
+        },
+        {
+          "axioms": [
+            "Classical.choice",
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.reduce_by_rank",
+          "statement": "\u2200 {\u03b1 : Type} (capture : \u03b1 \u2192 Prop) (rank : \u03b1 \u2192 Nat) (exception : \u03b1 \u2192 Prop),\n  (\u2200 (x : \u03b1), \u00acexception x \u2192 capture x \u2228 \u2203 y, rank y < rank x \u2227 (capture y \u2192 capture x)) \u2192\n    (\u2200 (x : \u03b1), exception x \u2192 capture x) \u2192 \u2200 (x : \u03b1), capture x",
+          "source": "Collatz/Physical.lean",
+          "line": 84
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.rotation_admissible",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (r : Collatz.Physical.Clock w),\n  Collatz.Physical.Admissible (Collatz.Physical.rotate w r) \u2194 Collatz.Physical.Admissible w",
+          "source": "Collatz/Admissibility.lean",
+          "line": 348
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.rotation_onto",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (r i : Collatz.Physical.Clock w), \u2203 j, j + r = i",
+          "source": "Collatz/Admissibility.lean",
+          "line": 337
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.rotation_orbit",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (r : Collatz.Physical.Clock w) (s : Collatz.Physical.State (Collatz.Physical.rotate w r))\n  (k : Nat),\n  Collatz.Physical.originalState w r (Collatz.Physical.run (Collatz.Physical.step (Collatz.Physical.rotate w r)) k s) =\n    Collatz.Physical.run (Collatz.Physical.step w) k (Collatz.Physical.originalState w r s)",
+          "source": "Collatz/Admissibility.lean",
+          "line": 329
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.rotation_step",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (r : Collatz.Physical.Clock w) (s : Collatz.Physical.State (Collatz.Physical.rotate w r)),\n  Collatz.Physical.originalState w r (Collatz.Physical.step (Collatz.Physical.rotate w r) s) =\n    Collatz.Physical.step w (Collatz.Physical.originalState w r s)",
+          "source": "Collatz/Admissibility.lean",
+          "line": 320
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "declaration": "Collatz.Physical.run_add",
+          "statement": "\u2200 {\u03b1 : Type} (f : \u03b1 \u2192 \u03b1) (a b : Nat) (x : \u03b1),\n  Collatz.Physical.run f (a + b) x = Collatz.Physical.run f b (Collatz.Physical.run f a x)",
+          "source": "Collatz/Physical.lean",
+          "line": 23
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.safe_iff_above_least",
+          "statement": "\u2200 (w : Collatz.Physical.Word),\n  Collatz.Physical.Admissible w \u2192\n    \u2200 (s : Collatz.Physical.State w), Collatz.Physical.Safe w s \u2194 Collatz.Physical.leastSafe w s.fst \u2264 s.snd",
+          "source": "Collatz/Admissibility.lean",
+          "line": 234
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.safe_iff_height",
+          "statement": "\u2200 (w : Collatz.Physical.Word),\n  (\u2203 i, w.impulse i \u2260 0) \u2192\n    \u2200 (h : Collatz.Physical.Clock w \u2192 Int),\n      Collatz.Physical.Binary h \u2192\n        Collatz.Physical.Gradient w h \u2192 \u2200 (s : Collatz.Physical.State w), Collatz.Physical.Safe w s \u2194 h s.fst \u2264 s.snd",
+          "source": "Collatz/Admissibility.lean",
+          "line": 276
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "declaration": "Collatz.Physical.safe_tail",
+          "statement": "\u2200 {w : Collatz.Physical.Word} {s : Collatz.Physical.State w},\n  Collatz.Physical.Safe w s \u2192 Collatz.Physical.Safe w (Collatz.Physical.step w s)",
+          "source": "Collatz/Admissibility.lean",
+          "line": 10
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.segment_multiplier_bound",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\n  Collatz.Physical.Binary h \u2192\n    Collatz.Physical.Gradient w h \u2192\n      \u2200 (s : Collatz.Physical.State w) (k : Nat),\n        3 ^ Collatz.Physical.oddCount w s k * Collatz.Physical.coordinate h s \u2264\n          2 ^ k * Collatz.Physical.coordinate h (Collatz.Physical.run (Collatz.Physical.step w) k s)",
+          "source": "Collatz/CycleMultiplier.lean",
+          "line": 27
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.shortcut_lift",
+          "statement": "\u2200 (n t : Int), Collatz.Physical.shortcut (n + 2 * t) = Collatz.Physical.shortcut n + Collatz.Physical.parityFactor n * t",
+          "source": "Collatz/Admissibility.lean",
+          "line": 366
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Physical.signed_parity_lift",
+          "statement": "\u2200 (w : Collatz.Physical.Word) (i : Collatz.Physical.Clock w) (n : Int) (k : Nat),\n  \u2203 c,\n    0 < c \u2227\n      c % 2 = 1 \u2227\n        \u2200 (q : Int),\n          Collatz.Physical.run (Collatz.Physical.step w) k (i, n + 2 ^ k * q) =\n            ((Collatz.Physical.run (Collatz.Physical.step w) k (i, n)).fst,\n              (Collatz.Physical.run (Collatz.Physical.step w) k (i, n)).snd + c * q)",
+          "source": "Collatz/Admissibility.lean",
+          "line": 373
+        },
+        {
+          "axioms": [],
+          "declaration": "Collatz.Physical.target_invariant",
+          "statement": "\u2200 {\u03b1 : Type} {f : \u03b1 \u2192 \u03b1} {target : \u03b1 \u2192 Prop},\n  (\u2200 (x : \u03b1), target x \u2192 target (f x)) \u2192 \u2200 (k : Nat) (x : \u03b1), target x \u2192 target (Collatz.Physical.run f k x)",
+          "source": "Collatz/Physical.lean",
+          "line": 55
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.ReleaseBridge.global_capture_iff_three",
+          "statement": "(\u2200 (i : Collatz.SevenStep.Phase) (n : Int), 0 < n \u2192 Collatz.SevenStep.Captured (i, n)) \u2194\n  (\u2200 (t : Nat), 0 < t \u2192 Collatz.SevenStep.Captured (Collatz.SevenStep.site 1 (2 * t))) \u2227\n    (\u2200 (t : Nat), Collatz.SevenStep.Captured (Collatz.SevenStep.site 3 (4 * t + 3))) \u2227\n      \u2200 (t : Nat), Collatz.SevenStep.Captured (Collatz.SevenStep.site 5 (8 * t + 2))",
+          "source": "Collatz/ReleaseBridge.lean",
+          "line": 10
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.SevenStep.Row.sound",
+          "statement": "\u2200 (r : Collatz.SevenStep.Row),\n  r.check = true \u2192\n    \u2200 (q : Nat),\n      have start := Collatz.SevenStep.site r.source (2 ^ r.ticks * q + r.base);\n      Collatz.SevenStep.orbit r.ticks start = Collatz.SevenStep.site r.target (r.slope * q + r.offset) \u2227\n        Collatz.SevenStep.Marked (Collatz.SevenStep.orbit r.ticks start) \u2227\n          \u2200 (d : Nat), 0 < d \u2192 d < r.ticks \u2192 \u00acCollatz.SevenStep.Marked (Collatz.SevenStep.orbit d start)",
+          "source": "Collatz/SevenRows.lean",
+          "line": 90
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.SevenStep.admissible_word",
+          "statement": "Collatz.Physical.Admissible Collatz.SevenStep.word",
+          "source": "Collatz/SevenStep.lean",
+          "line": 49
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.SevenStep.advance_sound",
+          "statement": "\u2200 (i : Collatz.SevenStep.Phase) (x : Collatz.SevenStep.Affine) (q : Nat),\n  x.a % 2 = 0 \u2192 Collatz.SevenStep.tick (i, x.val q) = (i + 1, (Collatz.SevenStep.Affine.advance i x).val q)",
+          "source": "Collatz/SevenStep.lean",
+          "line": 88
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.SevenStep.affine_mod3",
+          "statement": "\u2200 (i : Collatz.SevenStep.Phase) (x : Collatz.SevenStep.Affine) (q : Nat),\n  x.a % 3 = 0 \u2192 Collatz.SevenStep.z i (x.val q) % 3 = Collatz.SevenStep.z i x.b % 3",
+          "source": "Collatz/SevenStep.lean",
+          "line": 118
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.SevenStep.affine_z",
+          "statement": "\u2200 (i : Collatz.SevenStep.Phase) (x : Collatz.SevenStep.Affine) (q : Nat),\n  Collatz.SevenStep.z i (x.val q) = x.a * \u2191q + Collatz.SevenStep.z i x.b",
+          "source": "Collatz/SevenStep.lean",
+          "line": 115
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "declaration": "Collatz.SevenStep.binary_height",
+          "statement": "\u2200 (i : Collatz.SevenStep.Phase), Collatz.SevenStep.height i = 0 \u2228 Collatz.SevenStep.height i = 1",
+          "source": "Collatz/SevenStep.lean",
+          "line": 27
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.SevenStep.checkHit_sound",
+          "statement": "\u2200 (accept : Collatz.SevenStep.Phase \u2192 Collatz.SevenStep.Affine \u2192 Bool) (q : Nat) (P : Collatz.SevenStep.State \u2192 Prop),\n  (\u2200 (i : Collatz.SevenStep.Phase) (x : Collatz.SevenStep.Affine), accept i x = true \u2192 P (i, x.val q)) \u2192\n    \u2200 (fuel : Nat) (i : Collatz.SevenStep.Phase) (x : Collatz.SevenStep.Affine),\n      Collatz.SevenStep.checkHit accept fuel i x = true \u2192 Collatz.SevenStep.FirstHit P (i, x.val q) fuel",
+          "source": "Collatz/SevenStep.lean",
+          "line": 122
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "declaration": "Collatz.SevenStep.checked_rows",
+          "statement": "Collatz.SevenStep.rows.length = 43 \u2227 Collatz.SevenStep.rows.all Collatz.SevenStep.Row.check = true",
+          "source": "Collatz/SevenRows.lean",
+          "line": 83
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.SevenStep.finite_captures",
+          "statement": "\u2200 (i : Collatz.SevenStep.Phase) (m : Nat),\n  Collatz.SevenStep.boundary i m = true \u2192 Collatz.SevenStep.Captured (Collatz.SevenStep.site i m)",
+          "source": "Collatz/SevenRows.lean",
+          "line": 224
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.SevenStep.global_capture_of_three",
+          "statement": "(\u2200 (t : Nat), 0 < t \u2192 Collatz.SevenStep.Captured (Collatz.SevenStep.site 1 (2 * t))) \u2192\n  (\u2200 (t : Nat), Collatz.SevenStep.Captured (Collatz.SevenStep.site 3 (4 * t + 3))) \u2192\n    (\u2200 (t : Nat), Collatz.SevenStep.Captured (Collatz.SevenStep.site 5 (8 * t + 2))) \u2192\n      \u2200 (i : Collatz.SevenStep.Phase) (n : Int), 0 < n \u2192 Collatz.SevenStep.Captured (i, n)",
+          "source": "Collatz/SevenFrontier.lean",
+          "line": 166
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "declaration": "Collatz.SevenStep.height_difference",
+          "statement": "\u2200 (i : Collatz.SevenStep.Phase),\n  Collatz.SevenStep.impulse i = Collatz.SevenStep.height (i + 1) - Collatz.SevenStep.height i",
+          "source": "Collatz/SevenStep.lean",
+          "line": 28
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "declaration": "Collatz.SevenStep.impulse_primitive",
+          "statement": "Collatz.Physical.Primitive Collatz.SevenStep.word",
+          "source": "Collatz/SevenStep.lean",
+          "line": 30
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "declaration": "Collatz.SevenStep.increasing_rows",
+          "statement": "List.filter (fun r => decide (0 < r.gain)) Collatz.SevenStep.rows =\n  [{ source := 1, ticks := 1, base := 2, target := 2, slope := 3, offset := 3 },\n    { source := 3, ticks := 2, base := 3, target := 5, slope := 9, offset := 7 },\n    { source := 5, ticks := 3, base := 2, target := 1, slope := 27, offset := 7 }]",
+          "source": "Collatz/SevenRows.lean",
+          "line": 167
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.SevenStep.large_descent",
+          "statement": "\u2200 (i : Collatz.SevenStep.Phase) (m : Nat),\n  Collatz.SevenStep.active i = true \u2192\n    6 \u2264 m \u2192\n      Collatz.SevenStep.residual i m = false \u2192\n        Collatz.SevenStep.FirstHit\n          (fun s => Collatz.SevenStep.signedRank s < Collatz.SevenStep.signedRank (Collatz.SevenStep.site i m))\n          (Collatz.SevenStep.tick (Collatz.SevenStep.site i m)) (Collatz.SevenStep.cap i - 1)",
+          "source": "Collatz/SevenFrontier.lean",
+          "line": 87
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.SevenStep.launch_val",
+          "statement": "\u2200 (i : Collatz.SevenStep.Phase) (b q : Nat),\n  (i, (Collatz.SevenStep.launch i b).val q) = Collatz.SevenStep.site i (128 * q + b)",
+          "source": "Collatz/SevenFrontier.lean",
+          "line": 61
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.SevenStep.lower_sound",
+          "statement": "\u2200 (i : Collatz.SevenStep.Phase) (b q : Nat) (j : Collatz.SevenStep.Phase) (x : Collatz.SevenStep.Affine),\n  Collatz.SevenStep.lower i b j x = true \u2192\n    Collatz.SevenStep.signedRank (j, x.val q) < Collatz.SevenStep.signedRank (Collatz.SevenStep.site i (128 * q + b))",
+          "source": "Collatz/SevenFrontier.lean",
+          "line": 67
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.SevenStep.marked_site",
+          "statement": "\u2200 {s : Collatz.SevenStep.State}, Collatz.SevenStep.Marked s \u2192 \u2203 m, 0 < m \u2227 s = Collatz.SevenStep.site s.fst m",
+          "source": "Collatz/SevenStep.lean",
+          "line": 66
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "declaration": "Collatz.SevenStep.orbit_phase",
+          "statement": "\u2200 (k : Nat) (s : Collatz.SevenStep.State), (Collatz.SevenStep.orbit k s).fst = Collatz.SevenStep.clockAt s.fst k",
+          "source": "Collatz/SevenRows.lean",
+          "line": 85
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.SevenStep.parameter_of_applies",
+          "statement": "\u2200 (r : Collatz.SevenStep.Row) (i : Collatz.SevenStep.Phase) (m : Nat),\n  0 < m \u2192 Collatz.SevenStep.Row.applies i m r = true \u2192 r.source = i \u2227 \u2203 q, m = 2 ^ r.ticks * q + r.base",
+          "source": "Collatz/SevenRows.lean",
+          "line": 150
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.SevenStep.partition",
+          "statement": "\u2200 (i : Collatz.SevenStep.Phase) (m : Nat),\n  Collatz.SevenStep.active i = true \u2192\n    (List.filter (Collatz.SevenStep.Row.applies i m) Collatz.SevenStep.rows).length = 1",
+          "source": "Collatz/SevenRows.lean",
+          "line": 136
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.SevenStep.physical_conjugacy",
+          "statement": "\u2200 (i : Collatz.SevenStep.Phase) (n : Int),\n  Collatz.SevenStep.z (i + 1) (Collatz.SevenStep.tick (i, n)).snd =\n    if Collatz.SevenStep.height i = 1 then Collatz.Physical.shortcut (Collatz.SevenStep.z i n)\n    else Collatz.Physical.shortcut (Collatz.SevenStep.z i n - 1) + 1",
+          "source": "Collatz/SevenStep.lean",
+          "line": 33
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.SevenStep.rank_change",
+          "statement": "\u2200 (r : Collatz.SevenStep.Row) (q : Nat),\n  Collatz.SevenStep.signedRank (Collatz.SevenStep.site r.target (r.slope * q + r.offset)) -\n      Collatz.SevenStep.signedRank (Collatz.SevenStep.site r.source (2 ^ r.ticks * q + r.base)) =\n    3 * r.change q",
+          "source": "Collatz/SevenRows.lean",
+          "line": 211
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.SevenStep.rank_classification",
+          "statement": "\u2200 (r : Collatz.SevenStep.Row),\n  r \u2208 Collatz.SevenStep.rows \u2192\n    \u2200 (q : Nat),\n      (r.gain > 0 \u2192 0 < r.change q) \u2227\n        (r.gain \u2264 0 \u2192 (0 \u2264 r.change q \u2194 Collatz.SevenStep.boundary r.source (2 ^ r.ticks * q + r.base) = true))",
+          "source": "Collatz/SevenRows.lean",
+          "line": 178
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.SevenStep.residual_mod",
+          "statement": "\u2200 (i : Collatz.SevenStep.Phase) (b q : Nat), Collatz.SevenStep.residual i (128 * q + b) = Collatz.SevenStep.residual i b",
+          "source": "Collatz/SevenFrontier.lean",
+          "line": 79
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "declaration": "Collatz.SevenStep.root_cycle",
+          "statement": "\u2200 (i : Collatz.SevenStep.Phase),\n  Collatz.SevenStep.tick (i, Collatz.SevenStep.root i) = (i + 1, Collatz.SevenStep.root (i + 1))",
+          "source": "Collatz/SevenStep.lean",
+          "line": 25
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.SevenStep.safe_invariant",
+          "statement": "\u2200 (s : Collatz.SevenStep.State),\n  Collatz.SevenStep.height s.fst \u2264 s.snd \u2192\n    Collatz.SevenStep.height (Collatz.SevenStep.tick s).fst \u2264 (Collatz.SevenStep.tick s).snd",
+          "source": "Collatz/SevenStep.lean",
+          "line": 40
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.SevenStep.section_capture",
+          "statement": "(\u2200 (t : Nat), 0 < t \u2192 Collatz.SevenStep.Captured (Collatz.SevenStep.site 1 (2 * t))) \u2192\n  (\u2200 (t : Nat), Collatz.SevenStep.Captured (Collatz.SevenStep.site 3 (4 * t + 3))) \u2192\n    (\u2200 (t : Nat), Collatz.SevenStep.Captured (Collatz.SevenStep.site 5 (8 * t + 2))) \u2192\n      \u2200 (s : Collatz.SevenStep.Section), Collatz.SevenStep.Captured s.val",
+          "source": "Collatz/SevenFrontier.lean",
+          "line": 117
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.SevenStep.section_entry",
+          "statement": "\u2200 (i : Collatz.SevenStep.Phase) (n : Int), 0 < n \u2192 Collatz.SevenStep.FirstHit (fun x => True) (i, n) 6",
+          "source": "Collatz/SevenFrontier.lean",
+          "line": 14
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "declaration": "Collatz.SevenStep.sharp_entry",
+          "statement": "Collatz.SevenStep.Marked (Collatz.SevenStep.orbit 6 (3, 14)) \u2227\n  \u2200 (t : Fin 6), \u00acCollatz.SevenStep.Marked (Collatz.SevenStep.orbit \u2191t (3, 14))",
+          "source": "Collatz/SevenRows.lean",
+          "line": 232
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.SevenStep.smallHit_sound",
+          "statement": "\u2200 (s : Collatz.SevenStep.State) (k : Nat), Collatz.SevenStep.smallHit s k = true \u2192 Collatz.SevenStep.Captured s",
+          "source": "Collatz/SevenFrontier.lean",
+          "line": 49
+        },
+        {
+          "axioms": [
+            "propext"
+          ],
+          "declaration": "Collatz.SevenStep.zero_sum",
+          "statement": "Collatz.Physical.Conservative Collatz.SevenStep.word",
+          "source": "Collatz/SevenStep.lean",
+          "line": 29
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.T_pos",
+          "statement": "\u2200 {n : Nat}, 0 < n \u2192 0 < Collatz.T n",
+          "source": "Collatz/Branches.lean",
+          "line": 39
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Tree.bits_length",
+          "statement": "\u2200 (k : Nat) (i : Fin (2 ^ k)), (Collatz.Tree.bits k i).length = k",
+          "source": "Collatz/Tree.lean",
+          "line": 174
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.Tree.endpoint_bound",
+          "statement": "\u2200 {root : Nat}, Collatz.Good root \u2192 \u2200 (w : List Bool), Collatz.Tree.endpoint root w + 1 \u2264 64 ^ w.length * (root + 1)",
+          "source": "Collatz/Tree.lean",
+          "line": 118
+        },
+        {
+          "axioms": [
+            "Classical.choice",
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.Tree.endpoint_good",
+          "statement": "\u2200 {root : Nat}, Collatz.Good root \u2192 \u2200 (w : List Bool), Collatz.Good (Collatz.Tree.endpoint root w)",
+          "source": "Collatz/Tree.lean",
+          "line": 45
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.Tree.endpoint_injective",
+          "statement": "\u2200 {root : Nat},\n  Collatz.Good root \u2192 \u2200 (v w : List Bool), Collatz.Tree.endpoint root v = Collatz.Tree.endpoint root w \u2192 v = w",
+          "source": "Collatz/Tree.lean",
+          "line": 68
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.Tree.endpoint_returns",
+          "statement": "\u2200 {root : Nat},\n  Collatz.Good root \u2192 \u2200 (w : List Bool), Collatz.Tree.advanceBlocks w.length (Collatz.Tree.endpoint root w) = root",
+          "source": "Collatz/Tree.lean",
+          "line": 100
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.Tree.endpoint_weighted_bound",
+          "statement": "\u2200 {root : Nat},\n  Collatz.Good root \u2192\n    \u2200 (w : List Bool), 3 ^ Collatz.Tree.countB w * (Collatz.Tree.endpoint root w + 1) \u2264 64 ^ w.length * (root + 1)",
+          "source": "Collatz/Tree.lean",
+          "line": 145
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "Collatz.Tree.fixed_depth_lower_bound",
+          "statement": "\u2200 {root : Nat},\n  Collatz.Good root \u2192\n    \u2200 (k : Nat),\n      \u2203 seed,\n        (\u2200 (i j : Fin (2 ^ k)), seed i = seed j \u2192 i = j) \u2227\n          \u2200 (i : Fin (2 ^ k)),\n            Collatz.Good (seed i) \u2227 seed i < 64 ^ k * (root + 1) \u2227 Collatz.Tree.advanceBlocks k (seed i) = root",
+          "source": "Collatz/Tree.lean",
+          "line": 200
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.admissible",
+          "statement": "\u2200 (p : Collatz.Phase) {n : Nat},\n  0 < n \u2192\n    \u2200 (k : Nat),\n      \u2191(Collatz.run (p, n) (k + 1)).snd =\n        \u2191(Collatz.T (Collatz.run (p, n) k).snd) + Collatz.impulse (Collatz.run (p, n) k).fst",
+          "source": "Collatz/Branches.lean",
+          "line": 77
+        },
+        {
+          "axioms": [],
+          "declaration": "Collatz.conservative",
+          "statement": "Collatz.impulse Collatz.Phase.plus + Collatz.impulse Collatz.Phase.coast + Collatz.impulse Collatz.Phase.minus = 0",
+          "source": "Collatz/Branches.lean",
+          "line": 26
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.good_residues",
+          "statement": "\u2200 {y : Nat}, Collatz.Good y \u2192 y % 9 = 1 \u2228 y % 9 = 2 \u2228 y % 9 = 4 \u2228 y % 9 = 5 \u2228 y % 9 = 7 \u2228 y % 9 = 8",
+          "source": "Collatz/Branches.lean",
+          "line": 136
+        },
+        {
+          "axioms": [],
+          "declaration": "Collatz.positive_safe",
+          "statement": "\u2200 (p : Collatz.Phase) {n : Nat}, 0 < n \u2192 Collatz.Safe p n",
+          "source": "Collatz/Branches.lean",
+          "line": 43
+        },
+        {
+          "axioms": [],
+          "declaration": "Collatz.root_orbits",
+          "statement": "Collatz.oneLap 0 = 0 \u2227\n  Collatz.oneLap 1 = 7 \u2227 Collatz.oneLap 7 = 2 \u2227 Collatz.oneLap 2 = 1 \u2227 Collatz.oneLap 5 = 6 \u2227 Collatz.oneLap 6 = 0",
+          "source": "Collatz/Branches.lean",
+          "line": 86
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.run_safe",
+          "statement": "\u2200 {s : Collatz.Phase \u00d7 Nat},\n  Collatz.Safe s.fst s.snd \u2192 \u2200 (k : Nat), Collatz.Safe (Collatz.run s k).fst (Collatz.run s k).snd",
+          "source": "Collatz/Branches.lean",
+          "line": 70
+        },
+        {
+          "axioms": [],
+          "declaration": "Collatz.six_steps",
+          "statement": "\u2200 (n : Nat), Collatz.run (Collatz.Phase.plus, n) 6 = (Collatz.Phase.plus, Collatz.twoLaps n)",
+          "source": "Collatz/Branches.lean",
+          "line": 83
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.step_faithful",
+          "statement": "\u2200 (p : Collatz.Phase) (n : Nat), Collatz.Safe p n \u2192 \u2191(Collatz.step p n) = \u2191(Collatz.T n) + Collatz.impulse p",
+          "source": "Collatz/Branches.lean",
+          "line": 54
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "Collatz.step_safe",
+          "statement": "\u2200 (p : Collatz.Phase) (n : Nat), Collatz.Safe p n \u2192 Collatz.Safe p.next (Collatz.step p n)",
+          "source": "Collatz/Branches.lean",
+          "line": 46
+        },
+        {
+          "axioms": [],
+          "declaration": "Collatz.three_steps",
+          "statement": "\u2200 (n : Nat), Collatz.run (Collatz.Phase.plus, n) 3 = (Collatz.Phase.plus, Collatz.oneLap n)",
+          "source": "Collatz/Branches.lean",
+          "line": 82
+        }
+      ],
+      "steps": [
+        {
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--version"
+          ],
+          "exit_code": 0,
+          "seconds": 0.146,
+          "output": "Lean (version 4.24.0, x86_64-unknown-linux-gnu, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)\n"
+        },
+        {
+          "command": [
+            "lake",
+            "build"
+          ],
+          "exit_code": 0,
+          "seconds": 23.58,
+          "output": "\u2714 [2/13] Built Collatz.Physical (644ms)\n\u2714 [3/13] Built Collatz.SevenStep (3.1s)\n\u2714 [4/13] Built Collatz.Admissibility (3.4s)\n\u2714 [5/13] Built Collatz.CycleMultiplier (1.6s)\n\u2714 [6/13] Built Collatz.SevenFrontier (10s)\n\u2714 [7/13] Built Collatz.Branches (14s)\n\u2714 [8/13] Built Collatz.Tree (1.5s)\n\u2714 [9/13] Built Collatz.Coverage (3.2s)\n\u2714 [10/13] Built Collatz.BinaryZoom (1.2s)\n\u2714 [11/13] Built Collatz.SevenRows (8.6s)\n\u2714 [12/13] Built Collatz (734ms)\nBuild completed successfully (13 jobs).\n"
+        },
+        {
+          "command": [
+            "lake",
+            "build",
+            "Collatz.ReleaseBridge"
+          ],
+          "exit_code": 0,
+          "seconds": 1.035,
+          "output": "\u2714 [5/5] Built Collatz.ReleaseBridge (719ms)\nBuild completed successfully (5 jobs).\n"
+        },
+        {
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "-DwarningAsError=true",
+            "SevenAdversarial.lean"
+          ],
+          "exit_code": 0,
+          "seconds": 1.935,
+          "output": ""
+        },
+        {
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "-DwarningAsError=true",
+            "Audit.lean"
+          ],
+          "exit_code": 0,
+          "seconds": 8.129,
+          "output": "Axiom audit passed for 357 project theorems.\n"
+        },
+        {
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "-DwarningAsError=true",
+            "Inventory.lean"
+          ],
+          "exit_code": 0,
+          "seconds": 52.947,
+          "output": "RELEASE_THEOREM {\"axioms\":[\"propext\"],\"declaration\":\"Collatz.Physical.safe_tail\",\"statement\":\"\u2200 {w : Collatz.Physical.Word} {s : Collatz.Physical.State w},\\n  Collatz.Physical.Safe w s \u2192 Collatz.Physical.Safe w (Collatz.Physical.step w s)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.floor_invariant\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\\n  Collatz.Physical.Binary h \u2192\\n    Collatz.Physical.Floor w h \u2192\\n      \u2200 (s : Collatz.Physical.State w),\\n        h s.fst \u2264 s.snd \u2192 h (Collatz.Physical.step w s).fst \u2264 (Collatz.Physical.step w s).snd\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.admissible_of_floor\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\\n  Collatz.Physical.Binary h \u2192 Collatz.Physical.Floor w h \u2192 Collatz.Physical.Admissible w\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.leastSafe_binary\",\"statement\":\"\u2200 (w : Collatz.Physical.Word), Collatz.Physical.Binary (Collatz.Physical.leastSafe w)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.leastSafe_le\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (s : Collatz.Physical.State w),\\n  Collatz.Physical.Safe w s \u2192 Collatz.Physical.leastSafe w s.fst \u2264 s.snd\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.leastSafe_floor\",\"statement\":\"\u2200 (w : Collatz.Physical.Word), Collatz.Physical.Admissible w \u2192 Collatz.Physical.Floor w (Collatz.Physical.leastSafe w)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.admissible_iff_floor\",\"statement\":\"\u2200 (w : Collatz.Physical.Word),\\n  Collatz.Physical.Admissible w \u2194 \u2203 h, Collatz.Physical.Binary h \u2227 Collatz.Physical.Floor w h\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.gradient_conservative\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\\n  Collatz.Physical.Gradient w h \u2192 Collatz.Physical.Conservative w\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.floor_gradient\",\"statement\":\"\u2200 (w : Collatz.Physical.Word),\\n  Collatz.Physical.Conservative w \u2192\\n    \u2200 (h : Collatz.Physical.Clock w \u2192 Int), Collatz.Physical.Floor w h \u2192 Collatz.Physical.Gradient w h\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.admissible_conservative_iff_binary_height\",\"statement\":\"\u2200 (w : Collatz.Physical.Word),\\n  Collatz.Physical.Admissible w \u2227 Collatz.Physical.Conservative w \u2194\\n    \u2203 h, Collatz.Physical.Binary h \u2227 Collatz.Physical.Gradient w h\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.gradient_unit_alphabet\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\\n  Collatz.Physical.Binary h \u2192 Collatz.Physical.Gradient w h \u2192 Collatz.Physical.UnitAlphabet w\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.height_across_zeros\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\\n  Collatz.Physical.Gradient w h \u2192\\n    \u2200 (i : Collatz.Physical.Clock w) (k : Nat),\\n      (\u2200 (j : Nat), j < k \u2192 w.impulse (Collatz.Physical.advancePhase i j) = 0) \u2192\\n        h (Collatz.Physical.advancePhase i k) = h i\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.gradient_alternates\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\\n  Collatz.Physical.Binary h \u2192 Collatz.Physical.Gradient w h \u2192 Collatz.Physical.Alternating w\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.alternating_admissible\",\"statement\":\"\u2200 (w : Collatz.Physical.Word),\\n  Collatz.Physical.UnitAlphabet w \u2192 Collatz.Physical.Alternating w \u2192 Collatz.Physical.Admissible w\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.conservative_admissible_iff_alternating\",\"statement\":\"\u2200 (w : Collatz.Physical.Word),\\n  Collatz.Physical.Conservative w \u2192\\n    (Collatz.Physical.Admissible w \u2194 Collatz.Physical.UnitAlphabet w \u2227 Collatz.Physical.Alternating w)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.coordinate_conjugacy\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\\n  Collatz.Physical.Binary h \u2192\\n    Collatz.Physical.Gradient w h \u2192\\n      \u2200 (s : Collatz.Physical.State w),\\n        Collatz.Physical.coordinate h (Collatz.Physical.step w s) =\\n          if h s.fst = 1 then Collatz.Physical.shortcut (Collatz.Physical.coordinate h s)\\n          else Collatz.Physical.shortcut (Collatz.Physical.coordinate h s - 1) + 1\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.safe_iff_above_least\",\"statement\":\"\u2200 (w : Collatz.Physical.Word),\\n  Collatz.Physical.Admissible w \u2192\\n    \u2200 (s : Collatz.Physical.State w), Collatz.Physical.Safe w s \u2194 Collatz.Physical.leastSafe w s.fst \u2264 s.snd\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.height_unique\",\"statement\":\"\u2200 (w : Collatz.Physical.Word),\\n  (\u2203 i, w.impulse i \u2260 0) \u2192\\n    \u2200 (h g : Collatz.Physical.Clock w \u2192 Int),\\n      Collatz.Physical.Binary h \u2192\\n        Collatz.Physical.Binary g \u2192 Collatz.Physical.Gradient w h \u2192 Collatz.Physical.Gradient w g \u2192 h = g\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.safe_iff_height\",\"statement\":\"\u2200 (w : Collatz.Physical.Word),\\n  (\u2203 i, w.impulse i \u2260 0) \u2192\\n    \u2200 (h : Collatz.Physical.Clock w \u2192 Int),\\n      Collatz.Physical.Binary h \u2192\\n        Collatz.Physical.Gradient w h \u2192 \u2200 (s : Collatz.Physical.State w), Collatz.Physical.Safe w s \u2194 h s.fst \u2264 s.snd\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.coordinate_orbit\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\\n  Collatz.Physical.Binary h \u2192\\n    Collatz.Physical.Gradient w h \u2192\\n      \u2200 (s : Collatz.Physical.State w) (k : Nat),\\n        Collatz.Physical.toCoordinate h (Collatz.Physical.run (Collatz.Physical.step w) k s) =\\n          Collatz.Physical.run (Collatz.Physical.zStep w h) k (Collatz.Physical.toCoordinate h s)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.coordinate_injective\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int) (s t : Collatz.Physical.State w),\\n  Collatz.Physical.toCoordinate h s = Collatz.Physical.toCoordinate h t \u2192 s = t\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.cycle_correspondence\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\\n  Collatz.Physical.Binary h \u2192\\n    Collatz.Physical.Gradient w h \u2192\\n      \u2200 (s : Collatz.Physical.State w) (k : Nat),\\n        Collatz.Physical.run (Collatz.Physical.step w) k s = s \u2194\\n          Collatz.Physical.run (Collatz.Physical.zStep w h) k (Collatz.Physical.toCoordinate h s) =\\n            Collatz.Physical.toCoordinate h s\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.rotation_step\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (r : Collatz.Physical.Clock w) (s : Collatz.Physical.State (Collatz.Physical.rotate w r)),\\n  Collatz.Physical.originalState w r (Collatz.Physical.step (Collatz.Physical.rotate w r) s) =\\n    Collatz.Physical.step w (Collatz.Physical.originalState w r s)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.rotation_orbit\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (r : Collatz.Physical.Clock w) (s : Collatz.Physical.State (Collatz.Physical.rotate w r))\\n  (k : Nat),\\n  Collatz.Physical.originalState w r (Collatz.Physical.run (Collatz.Physical.step (Collatz.Physical.rotate w r)) k s) =\\n    Collatz.Physical.run (Collatz.Physical.step w) k (Collatz.Physical.originalState w r s)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.rotation_onto\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (r i : Collatz.Physical.Clock w), \u2203 j, j + r = i\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.rotation_admissible\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (r : Collatz.Physical.Clock w),\\n  Collatz.Physical.Admissible (Collatz.Physical.rotate w r) \u2194 Collatz.Physical.Admissible w\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.shortcut_lift\",\"statement\":\"\u2200 (n t : Int), Collatz.Physical.shortcut (n + 2 * t) = Collatz.Physical.shortcut n + Collatz.Physical.parityFactor n * t\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.signed_parity_lift\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (i : Collatz.Physical.Clock w) (n : Int) (k : Nat),\\n  \u2203 c,\\n    0 < c \u2227\\n      c % 2 = 1 \u2227\\n        \u2200 (q : Int),\\n          Collatz.Physical.run (Collatz.Physical.step w) k (i, n + 2 ^ k * q) =\\n            ((Collatz.Physical.run (Collatz.Physical.step w) k (i, n)).fst,\\n              (Collatz.Physical.run (Collatz.Physical.step w) k (i, n)).snd + c * q)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.BinaryZoom.even_lap_steps\",\"statement\":\"\u2200 (n : Nat), Collatz.T (8 * n + 6) + 1 = 4 * n + 4 \u2227 Collatz.T (4 * n + 4) = 2 * n + 2 \u2227 Collatz.T (2 * n + 2) = n + 1\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.BinaryZoom.inverse_lap\",\"statement\":\"\u2200 (n : Nat), Collatz.oneLap (8 * n + 6) = n\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.BinaryZoom.laps_lift\",\"statement\":\"\u2200 (h n : Nat), Collatz.BinaryZoom.laps h (Collatz.BinaryZoom.lift h n) = n\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.BinaryZoom.lift_affine\",\"statement\":\"\u2200 (h n : Nat), Collatz.BinaryZoom.lift h n = 8 ^ h * n + Collatz.BinaryZoom.lift h 0\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.BinaryZoom.residue_lt\",\"statement\":\"\u2200 (h : Nat), Collatz.BinaryZoom.lift h 0 < 8 ^ h\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.BinaryZoom.lift_residue\",\"statement\":\"\u2200 (h n : Nat), Collatz.BinaryZoom.lift h n % 8 ^ h = Collatz.BinaryZoom.lift h 0\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.BinaryZoom.run_laps\",\"statement\":\"\u2200 (h n : Nat), Collatz.run (Collatz.Phase.plus, n) (3 * h) = (Collatz.Phase.plus, Collatz.BinaryZoom.laps h n)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.BinaryZoom.residue_return\",\"statement\":\"\u2200 (h n : Nat),\\n  n % 8 ^ h = Collatz.BinaryZoom.lift h 0 \u2192\\n    Collatz.run (Collatz.Phase.plus, n) (3 * h) = (Collatz.Phase.plus, n / 8 ^ h)\"}\nRELEASE_THEOREM {\"axioms\":[],\"declaration\":\"Collatz.conservative\",\"statement\":\"Collatz.impulse Collatz.Phase.plus + Collatz.impulse Collatz.Phase.coast + Collatz.impulse Collatz.Phase.minus = 0\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.T_pos\",\"statement\":\"\u2200 {n : Nat}, 0 < n \u2192 0 < Collatz.T n\"}\nRELEASE_THEOREM {\"axioms\":[],\"declaration\":\"Collatz.positive_safe\",\"statement\":\"\u2200 (p : Collatz.Phase) {n : Nat}, 0 < n \u2192 Collatz.Safe p n\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.step_safe\",\"statement\":\"\u2200 (p : Collatz.Phase) (n : Nat), Collatz.Safe p n \u2192 Collatz.Safe p.next (Collatz.step p n)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.step_faithful\",\"statement\":\"\u2200 (p : Collatz.Phase) (n : Nat), Collatz.Safe p n \u2192 \u2191(Collatz.step p n) = \u2191(Collatz.T n) + Collatz.impulse p\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.run_safe\",\"statement\":\"\u2200 {s : Collatz.Phase \u00d7 Nat},\\n  Collatz.Safe s.fst s.snd \u2192 \u2200 (k : Nat), Collatz.Safe (Collatz.run s k).fst (Collatz.run s k).snd\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.admissible\",\"statement\":\"\u2200 (p : Collatz.Phase) {n : Nat},\\n  0 < n \u2192\\n    \u2200 (k : Nat),\\n      \u2191(Collatz.run (p, n) (k + 1)).snd =\\n        \u2191(Collatz.T (Collatz.run (p, n) k).snd) + Collatz.impulse (Collatz.run (p, n) k).fst\"}\nRELEASE_THEOREM {\"axioms\":[],\"declaration\":\"Collatz.three_steps\",\"statement\":\"\u2200 (n : Nat), Collatz.run (Collatz.Phase.plus, n) 3 = (Collatz.Phase.plus, Collatz.oneLap n)\"}\nRELEASE_THEOREM {\"axioms\":[],\"declaration\":\"Collatz.six_steps\",\"statement\":\"\u2200 (n : Nat), Collatz.run (Collatz.Phase.plus, n) 6 = (Collatz.Phase.plus, Collatz.twoLaps n)\"}\nRELEASE_THEOREM {\"axioms\":[],\"declaration\":\"Collatz.root_orbits\",\"statement\":\"Collatz.oneLap 0 = 0 \u2227\\n  Collatz.oneLap 1 = 7 \u2227 Collatz.oneLap 7 = 2 \u2227 Collatz.oneLap 2 = 1 \u2227 Collatz.oneLap 5 = 6 \u2227 Collatz.oneLap 6 = 0\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.A_parent\",\"statement\":\"\u2200 (y : Nat), Collatz.twoLaps (Collatz.A y) = y\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.good_residues\",\"statement\":\"\u2200 {y : Nat}, Collatz.Good y \u2192 y % 9 = 1 \u2228 y % 9 = 2 \u2228 y % 9 = 4 \u2228 y % 9 = 5 \u2228 y % 9 = 7 \u2228 y % 9 = 8\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.B_parent\",\"statement\":\"\u2200 {y : Nat}, Collatz.Good y \u2192 Collatz.twoLaps (Collatz.B y) = y\"}\nRELEASE_THEOREM {\"axioms\":[\"Classical.choice\",\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.A_good\",\"statement\":\"\u2200 {y : Nat}, Collatz.Good y \u2192 Collatz.Good (Collatz.A y)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.A_grow\",\"statement\":\"\u2200 (y : Nat), y < Collatz.A y\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.A_bound\",\"statement\":\"\u2200 (y : Nat), Collatz.A y + 1 \u2264 64 * (y + 1)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.B_good\",\"statement\":\"\u2200 {y : Nat}, Collatz.Good y \u2192 Collatz.Good (Collatz.B y)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.B_grow\",\"statement\":\"\u2200 {y : Nat}, Collatz.Good y \u2192 y < Collatz.B y\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.B_lt_A\",\"statement\":\"\u2200 {y : Nat}, Collatz.Good y \u2192 Collatz.B y < Collatz.A y\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.B_bound\",\"statement\":\"\u2200 {y : Nat}, Collatz.Good y \u2192 3 * (Collatz.B y + 1) \u2264 64 * (y + 1)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.Coverage.stem_at_least_two\",\"statement\":\"\u2200 (y : Nat), 2 \u2264 Collatz.Coverage.stem y\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.Coverage.stem_spec\",\"statement\":\"\u2200 (y : Nat), Collatz.Good (Collatz.Coverage.stem y) \u2227 Collatz.twoLaps (Collatz.Coverage.stem y) = y\"}\nRELEASE_THEOREM {\"axioms\":[],\"declaration\":\"Collatz.Coverage.run_add\",\"statement\":\"\u2200 (state : Collatz.Phase \u00d7 Nat) (a b : Nat), Collatz.run state (a + b) = Collatz.run (Collatz.run state a) b\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Coverage.run_blocks\",\"statement\":\"\u2200 (k n : Nat), Collatz.run (Collatz.Phase.plus, n) (6 * k) = (Collatz.Phase.plus, Collatz.Tree.advanceBlocks k n)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.Coverage.all_phase_preimages\",\"statement\":\"\u2200 (launch target : Collatz.Phase) (y : Nat),\\n  Collatz.Safe target y \u2192\\n    \u2200 (k : Nat),\\n      \u2203 seed,\\n        (\u2200 (i j : Fin (2 ^ k)), seed i = seed j \u2192 i = j) \u2227\\n          \u2200 (i : Fin (2 ^ k)),\\n            0 < seed i \u2227\\n              seed i <\\n                  Collatz.Coverage.startValue launch\\n                    (64 ^ k * (Collatz.Coverage.stem (Collatz.Coverage.targetOrigin target y) + 1)) \u2227\\n                Collatz.run (launch, seed i)\\n                    (Collatz.Coverage.toZero launch + 6 * k + 6 + Collatz.Coverage.fromZero target) =\\n                  (target, y)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.doubled_coordinate\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\\n  Collatz.Physical.Binary h \u2192\\n    Collatz.Physical.Gradient w h \u2192\\n      \u2200 (s : Collatz.Physical.State w),\\n        2 * Collatz.Physical.coordinate h (Collatz.Physical.step w s) =\\n          Collatz.Physical.parityFactor s.snd * Collatz.Physical.coordinate h s + Collatz.Physical.coordinate h s % 2\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\"],\"declaration\":\"Collatz.Physical.gain_succ\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (s : Collatz.Physical.State w) (k : Nat),\\n  3 ^ Collatz.Physical.oddCount w s (k + 1) =\\n    3 ^ Collatz.Physical.oddCount w (Collatz.Physical.step w s) k * Collatz.Physical.parityFactor s.snd\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.segment_multiplier_bound\",\"statement\":\"\u2200 (w : Collatz.Physical.Word) (h : Collatz.Physical.Clock w \u2192 Int),\\n  Collatz.Physical.Binary h \u2192\\n    Collatz.Physical.Gradient w h \u2192\\n      \u2200 (s : Collatz.Physical.State w) (k : Nat),\\n        3 ^ Collatz.Physical.oddCount w s k * Collatz.Physical.coordinate h s \u2264\\n          2 ^ k * Collatz.Physical.coordinate h (Collatz.Physical.run (Collatz.Physical.step w) k s)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.cycle_multiplier_lt_one\",\"statement\":\"\u2200 (w : Collatz.Physical.Word),\\n  Collatz.Physical.Admissible w \u2192\\n    Collatz.Physical.Conservative w \u2192\\n      \u2200 (s : Collatz.Physical.State w),\\n        Collatz.Physical.Safe w s \u2192\\n          \u2200 (k : Nat),\\n            0 < k \u2192 Collatz.Physical.run (Collatz.Physical.step w) k s = s \u2192 3 ^ Collatz.Physical.oddCount w s k < 2 ^ k\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\"],\"declaration\":\"Collatz.Physical.run_add\",\"statement\":\"\u2200 {\u03b1 : Type} (f : \u03b1 \u2192 \u03b1) (a b : Nat) (x : \u03b1),\\n  Collatz.Physical.run f (a + b) x = Collatz.Physical.run f b (Collatz.Physical.run f a x)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\"],\"declaration\":\"Collatz.Physical.reaches_prepend\",\"statement\":\"\u2200 {\u03b1 : Type} {f : \u03b1 \u2192 \u03b1} {target : \u03b1 \u2192 Prop} {x : \u03b1} (a : Nat),\\n  Collatz.Physical.Reaches f target (Collatz.Physical.run f a x) \u2192 Collatz.Physical.Reaches f target x\"}\nRELEASE_THEOREM {\"axioms\":[],\"declaration\":\"Collatz.Physical.target_invariant\",\"statement\":\"\u2200 {\u03b1 : Type} {f : \u03b1 \u2192 \u03b1} {target : \u03b1 \u2192 Prop},\\n  (\u2200 (x : \u03b1), target x \u2192 target (f x)) \u2192 \u2200 (k : Nat) (x : \u03b1), target x \u2192 target (Collatz.Physical.run f k x)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.reaches_tail\",\"statement\":\"\u2200 {\u03b1 : Type} {f : \u03b1 \u2192 \u03b1} {target : \u03b1 \u2192 Prop},\\n  (\u2200 (x : \u03b1), target x \u2192 target (f x)) \u2192\\n    \u2200 {x : \u03b1},\\n      Collatz.Physical.Reaches f target x \u2192 \u2200 (a : Nat), Collatz.Physical.Reaches f target (Collatz.Physical.run f a x)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.coalescence\",\"statement\":\"\u2200 {\u03b1 : Type} {f : \u03b1 \u2192 \u03b1} {target : \u03b1 \u2192 Prop},\\n  (\u2200 (x : \u03b1), target x \u2192 target (f x)) \u2192\\n    \u2200 {x y : \u03b1} (a b : Nat),\\n      Collatz.Physical.run f a x = Collatz.Physical.run f b y \u2192\\n        Collatz.Physical.Reaches f target y \u2192 Collatz.Physical.Reaches f target x\"}\nRELEASE_THEOREM {\"axioms\":[\"Classical.choice\",\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Physical.reduce_by_rank\",\"statement\":\"\u2200 {\u03b1 : Type} (capture : \u03b1 \u2192 Prop) (rank : \u03b1 \u2192 Nat) (exception : \u03b1 \u2192 Prop),\\n  (\u2200 (x : \u03b1), \u00acexception x \u2192 capture x \u2228 \u2203 y, rank y < rank x \u2227 (capture y \u2192 capture x)) \u2192\\n    (\u2200 (x : \u03b1), exception x \u2192 capture x) \u2192 \u2200 (x : \u03b1), capture x\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.ReleaseBridge.global_capture_iff_three\",\"statement\":\"(\u2200 (i : Collatz.SevenStep.Phase) (n : Int), 0 < n \u2192 Collatz.SevenStep.Captured (i, n)) \u2194\\n  (\u2200 (t : Nat), 0 < t \u2192 Collatz.SevenStep.Captured (Collatz.SevenStep.site 1 (2 * t))) \u2227\\n    (\u2200 (t : Nat), Collatz.SevenStep.Captured (Collatz.SevenStep.site 3 (4 * t + 3))) \u2227\\n      \u2200 (t : Nat), Collatz.SevenStep.Captured (Collatz.SevenStep.site 5 (8 * t + 2))\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.SevenStep.section_entry\",\"statement\":\"\u2200 (i : Collatz.SevenStep.Phase) (n : Int), 0 < n \u2192 Collatz.SevenStep.FirstHit (fun x => True) (i, n) 6\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.SevenStep.smallHit_sound\",\"statement\":\"\u2200 (s : Collatz.SevenStep.State) (k : Nat), Collatz.SevenStep.smallHit s k = true \u2192 Collatz.SevenStep.Captured s\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.SevenStep.launch_val\",\"statement\":\"\u2200 (i : Collatz.SevenStep.Phase) (b q : Nat),\\n  (i, (Collatz.SevenStep.launch i b).val q) = Collatz.SevenStep.site i (128 * q + b)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.SevenStep.lower_sound\",\"statement\":\"\u2200 (i : Collatz.SevenStep.Phase) (b q : Nat) (j : Collatz.SevenStep.Phase) (x : Collatz.SevenStep.Affine),\\n  Collatz.SevenStep.lower i b j x = true \u2192\\n    Collatz.SevenStep.signedRank (j, x.val q) < Collatz.SevenStep.signedRank (Collatz.SevenStep.site i (128 * q + b))\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.SevenStep.residual_mod\",\"statement\":\"\u2200 (i : Collatz.SevenStep.Phase) (b q : Nat), Collatz.SevenStep.residual i (128 * q + b) = Collatz.SevenStep.residual i b\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.SevenStep.large_descent\",\"statement\":\"\u2200 (i : Collatz.SevenStep.Phase) (m : Nat),\\n  Collatz.SevenStep.active i = true \u2192\\n    6 \u2264 m \u2192\\n      Collatz.SevenStep.residual i m = false \u2192\\n        Collatz.SevenStep.FirstHit\\n          (fun s => Collatz.SevenStep.signedRank s < Collatz.SevenStep.signedRank (Collatz.SevenStep.site i m))\\n          (Collatz.SevenStep.tick (Collatz.SevenStep.site i m)) (Collatz.SevenStep.cap i - 1)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"Collatz.SevenStep.section_capture\",\"statement\":\"(\u2200 (t : Nat), 0 < t \u2192 Collatz.SevenStep.Captured (Collatz.SevenStep.site 1 (2 * t))) \u2192\\n  (\u2200 (t : Nat), Collatz.SevenStep.Captured (Collatz.SevenStep.site 3 (4 * t + 3))) \u2192\\n    (\u2200 (t : Nat), Collatz.SevenStep.Captured (Collatz.SevenStep.site 5 (8 * t + 2))) \u2192\\n      \u2200 (s : Collatz.SevenStep.Section), Collatz.SevenStep.Captured s.val\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.SevenStep.global_capture_of_three\",\"statement\":\"(\u2200 (t : Nat), 0 < t \u2192 Collatz.SevenStep.Captured (Collatz.SevenStep.site 1 (2 * t))) \u2192\\n  (\u2200 (t : Nat), Collatz.SevenStep.Captured (Collatz.SevenStep.site 3 (4 * t + 3))) \u2192\\n    (\u2200 (t : Nat), Collatz.SevenStep.Captured (Collatz.SevenStep.site 5 (8 * t + 2))) \u2192\\n      \u2200 (i : Collatz.SevenStep.Phase) (n : Int), 0 < n \u2192 Collatz.SevenStep.Captured (i, n)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\"],\"declaration\":\"Collatz.SevenStep.checked_rows\",\"statement\":\"Collatz.SevenStep.rows.length = 43 \u2227 Collatz.SevenStep.rows.all Collatz.SevenStep.Row.check = true\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\"],\"declaration\":\"Collatz.SevenStep.orbit_phase\",\"statement\":\"\u2200 (k : Nat) (s : Collatz.SevenStep.State), (Collatz.SevenStep.orbit k s).fst = Collatz.SevenStep.clockAt s.fst k\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.SevenStep.Row.sound\",\"statement\":\"\u2200 (r : Collatz.SevenStep.Row),\\n  r.check = true \u2192\\n    \u2200 (q : Nat),\\n      have start := Collatz.SevenStep.site r.source (2 ^ r.ticks * q + r.base);\\n      Collatz.SevenStep.orbit r.ticks start = Collatz.SevenStep.site r.target (r.slope * q + r.offset) \u2227\\n        Collatz.SevenStep.Marked (Collatz.SevenStep.orbit r.ticks start) \u2227\\n          \u2200 (d : Nat), 0 < d \u2192 d < r.ticks \u2192 \u00acCollatz.SevenStep.Marked (Collatz.SevenStep.orbit d start)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.SevenStep.partition\",\"statement\":\"\u2200 (i : Collatz.SevenStep.Phase) (m : Nat),\\n  Collatz.SevenStep.active i = true \u2192\\n    (List.filter (Collatz.SevenStep.Row.applies i m) Collatz.SevenStep.rows).length = 1\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.SevenStep.parameter_of_applies\",\"statement\":\"\u2200 (r : Collatz.SevenStep.Row) (i : Collatz.SevenStep.Phase) (m : Nat),\\n  0 < m \u2192 Collatz.SevenStep.Row.applies i m r = true \u2192 r.source = i \u2227 \u2203 q, m = 2 ^ r.ticks * q + r.base\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\"],\"declaration\":\"Collatz.SevenStep.increasing_rows\",\"statement\":\"List.filter (fun r => decide (0 < r.gain)) Collatz.SevenStep.rows =\\n  [{ source := 1, ticks := 1, base := 2, target := 2, slope := 3, offset := 3 },\\n    { source := 3, ticks := 2, base := 3, target := 5, slope := 9, offset := 7 },\\n    { source := 5, ticks := 3, base := 2, target := 1, slope := 27, offset := 7 }]\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.SevenStep.rank_classification\",\"statement\":\"\u2200 (r : Collatz.SevenStep.Row),\\n  r \u2208 Collatz.SevenStep.rows \u2192\\n    \u2200 (q : Nat),\\n      (r.gain > 0 \u2192 0 < r.change q) \u2227\\n        (r.gain \u2264 0 \u2192 (0 \u2264 r.change q \u2194 Collatz.SevenStep.boundary r.source (2 ^ r.ticks * q + r.base) = true))\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.SevenStep.rank_change\",\"statement\":\"\u2200 (r : Collatz.SevenStep.Row) (q : Nat),\\n  Collatz.SevenStep.signedRank (Collatz.SevenStep.site r.target (r.slope * q + r.offset)) -\\n      Collatz.SevenStep.signedRank (Collatz.SevenStep.site r.source (2 ^ r.ticks * q + r.base)) =\\n    3 * r.change q\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.SevenStep.finite_captures\",\"statement\":\"\u2200 (i : Collatz.SevenStep.Phase) (m : Nat),\\n  Collatz.SevenStep.boundary i m = true \u2192 Collatz.SevenStep.Captured (Collatz.SevenStep.site i m)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\"],\"declaration\":\"Collatz.SevenStep.sharp_entry\",\"statement\":\"Collatz.SevenStep.Marked (Collatz.SevenStep.orbit 6 (3, 14)) \u2227\\n  \u2200 (t : Fin 6), \u00acCollatz.SevenStep.Marked (Collatz.SevenStep.orbit \u2191t (3, 14))\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\"],\"declaration\":\"Collatz.SevenStep.root_cycle\",\"statement\":\"\u2200 (i : Collatz.SevenStep.Phase),\\n  Collatz.SevenStep.tick (i, Collatz.SevenStep.root i) = (i + 1, Collatz.SevenStep.root (i + 1))\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\"],\"declaration\":\"Collatz.SevenStep.binary_height\",\"statement\":\"\u2200 (i : Collatz.SevenStep.Phase), Collatz.SevenStep.height i = 0 \u2228 Collatz.SevenStep.height i = 1\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\"],\"declaration\":\"Collatz.SevenStep.height_difference\",\"statement\":\"\u2200 (i : Collatz.SevenStep.Phase),\\n  Collatz.SevenStep.impulse i = Collatz.SevenStep.height (i + 1) - Collatz.SevenStep.height i\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\"],\"declaration\":\"Collatz.SevenStep.zero_sum\",\"statement\":\"Collatz.Physical.Conservative Collatz.SevenStep.word\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\"],\"declaration\":\"Collatz.SevenStep.impulse_primitive\",\"statement\":\"Collatz.Physical.Primitive Collatz.SevenStep.word\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.SevenStep.physical_conjugacy\",\"statement\":\"\u2200 (i : Collatz.SevenStep.Phase) (n : Int),\\n  Collatz.SevenStep.z (i + 1) (Collatz.SevenStep.tick (i, n)).snd =\\n    if Collatz.SevenStep.height i = 1 then Collatz.Physical.shortcut (Collatz.SevenStep.z i n)\\n    else Collatz.Physical.shortcut (Collatz.SevenStep.z i n - 1) + 1\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.SevenStep.safe_invariant\",\"statement\":\"\u2200 (s : Collatz.SevenStep.State),\\n  Collatz.SevenStep.height s.fst \u2264 s.snd \u2192\\n    Collatz.SevenStep.height (Collatz.SevenStep.tick s).fst \u2264 (Collatz.SevenStep.tick s).snd\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.SevenStep.admissible_word\",\"statement\":\"Collatz.Physical.Admissible Collatz.SevenStep.word\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.SevenStep.marked_site\",\"statement\":\"\u2200 {s : Collatz.SevenStep.State}, Collatz.SevenStep.Marked s \u2192 \u2203 m, 0 < m \u2227 s = Collatz.SevenStep.site s.fst m\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.SevenStep.advance_sound\",\"statement\":\"\u2200 (i : Collatz.SevenStep.Phase) (x : Collatz.SevenStep.Affine) (q : Nat),\\n  x.a % 2 = 0 \u2192 Collatz.SevenStep.tick (i, x.val q) = (i + 1, (Collatz.SevenStep.Affine.advance i x).val q)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.SevenStep.affine_z\",\"statement\":\"\u2200 (i : Collatz.SevenStep.Phase) (x : Collatz.SevenStep.Affine) (q : Nat),\\n  Collatz.SevenStep.z i (x.val q) = x.a * \u2191q + Collatz.SevenStep.z i x.b\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.SevenStep.affine_mod3\",\"statement\":\"\u2200 (i : Collatz.SevenStep.Phase) (x : Collatz.SevenStep.Affine) (q : Nat),\\n  x.a % 3 = 0 \u2192 Collatz.SevenStep.z i (x.val q) % 3 = Collatz.SevenStep.z i x.b % 3\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.SevenStep.checkHit_sound\",\"statement\":\"\u2200 (accept : Collatz.SevenStep.Phase \u2192 Collatz.SevenStep.Affine \u2192 Bool) (q : Nat) (P : Collatz.SevenStep.State \u2192 Prop),\\n  (\u2200 (i : Collatz.SevenStep.Phase) (x : Collatz.SevenStep.Affine), accept i x = true \u2192 P (i, x.val q)) \u2192\\n    \u2200 (fuel : Nat) (i : Collatz.SevenStep.Phase) (x : Collatz.SevenStep.Affine),\\n      Collatz.SevenStep.checkHit accept fuel i x = true \u2192 Collatz.SevenStep.FirstHit P (i, x.val q) fuel\"}\nRELEASE_THEOREM {\"axioms\":[\"Classical.choice\",\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Tree.endpoint_good\",\"statement\":\"\u2200 {root : Nat}, Collatz.Good root \u2192 \u2200 (w : List Bool), Collatz.Good (Collatz.Tree.endpoint root w)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.Tree.endpoint_injective\",\"statement\":\"\u2200 {root : Nat},\\n  Collatz.Good root \u2192 \u2200 (v w : List Bool), Collatz.Tree.endpoint root v = Collatz.Tree.endpoint root w \u2192 v = w\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.Tree.endpoint_returns\",\"statement\":\"\u2200 {root : Nat},\\n  Collatz.Good root \u2192 \u2200 (w : List Bool), Collatz.Tree.advanceBlocks w.length (Collatz.Tree.endpoint root w) = root\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.Tree.endpoint_bound\",\"statement\":\"\u2200 {root : Nat}, Collatz.Good root \u2192 \u2200 (w : List Bool), Collatz.Tree.endpoint root w + 1 \u2264 64 ^ w.length * (root + 1)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.Tree.endpoint_weighted_bound\",\"statement\":\"\u2200 {root : Nat},\\n  Collatz.Good root \u2192\\n    \u2200 (w : List Bool), 3 ^ Collatz.Tree.countB w * (Collatz.Tree.endpoint root w + 1) \u2264 64 ^ w.length * (root + 1)\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"Collatz.Tree.bits_length\",\"statement\":\"\u2200 (k : Nat) (i : Fin (2 ^ k)), (Collatz.Tree.bits k i).length = k\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"Collatz.Tree.fixed_depth_lower_bound\",\"statement\":\"\u2200 {root : Nat},\\n  Collatz.Good root \u2192\\n    \u2200 (k : Nat),\\n      \u2203 seed,\\n        (\u2200 (i j : Fin (2 ^ k)), seed i = seed j \u2192 i = j) \u2227\\n          \u2200 (i : Fin (2 ^ k)),\\n            Collatz.Good (seed i) \u2227 seed i < 64 ^ k * (root + 1) \u2227 Collatz.Tree.advanceBlocks k (seed i) = root\"}\nRELEASE_AUDIT {\"modules\":[\"Collatz.Admissibility\",\"Collatz.BinaryZoom\",\"Collatz.Branches\",\"Collatz.Coverage\",\"Collatz.CycleMultiplier\",\"Collatz.Physical\",\"Collatz.ReleaseBridge\",\"Collatz.SevenFrontier\",\"Collatz.SevenRows\",\"Collatz.SevenStep\",\"Collatz.Tree\"],\"theorem_constants_including_private_and_generated\":556}\n"
+        }
+      ]
+    },
+    "perturbed": {
+      "status": "passed",
+      "lean_version": "4.19.0",
+      "clean_build": true,
+      "theorem_count": 86,
+      "private_source_theorem_count": 43,
+      "module_audit": {
+        "theorem_constants_including_private_and_generated": 401,
+        "modules": [
+          "Collatz",
+          "BasinGrowth",
+          "InverseBranch",
+          "ResidueTrack",
+          "TernaryPump",
+          "ProgressionSteering"
+        ]
+      },
+      "adversarial_files": [],
+      "sources_sha256": {
+        "All.lean": "0dec98668affffd80e9514cf916a5fd959d8ae8d1ba9e80d94b1e10db4ccdc42",
+        "Audit.lean": "a91979c09ffbb91ad8bbd535f4f978adb2ae2439821a8591d4f29bde649ead73",
+        "BasinGrowth.lean": "03cf35384e1836eb990692d3ed63781416dae59d81a2e9ce28d6ac2c30ebb0ba",
+        "Collatz.lean": "26f8d5d235894fb247316b3f78db978824b540f05404702933a82f2c55acef6b",
+        "Inventory.lean": "98736bafc4319ac6f0e108a3cfec9312fa5d927a770104984757ffe7e6df8bb0",
+        "InverseBranch.lean": "93e2e24afabd9bb0844ef63ed233714f03eeeddf2e870b53c3e981e5f3bc98c1",
+        "ProgressionSteering.lean": "f73625146963bbe918493010d51eb85ccd46acc5b479e4893b892e4191e90098",
+        "ResidueTrack.lean": "5d983195c444ab0552c47ee16ee92f3b489ad306e9f3bb403477d17fafd48664",
+        "TernaryPump.lean": "4b30994c08b8078bc4cc1629c7cac7ab57b01869454d769bb307e7aa387f6c3f"
+      },
+      "declarations": [
+        {
+          "statement": "\u2200 (word : List Bool) (target : Int), 0 \u2264 target \u2192 0 \u2264 InverseBranch.evenChain word target",
+          "declaration": "InverseBranch.evenChain_nonneg",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "InverseBranch.lean",
+          "line": 153
+        },
+        {
+          "statement": "\u2200 (bit : Bool) (target : Int), 0 \u2264 target \u2192 0 \u2264 InverseBranch.evenParent bit target",
+          "declaration": "InverseBranch.even_nonneg",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "InverseBranch.lean",
+          "line": 24
+        },
+        {
+          "statement": "\u2200 (bit : Bool) (target : Int),\n  (InverseBranch.evenParent bit target + InverseBranch.height bit) % 2 = 0 \u2227\n    InverseBranch.forward bit (InverseBranch.evenParent bit target) = target",
+          "declaration": "InverseBranch.even_spec",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "InverseBranch.lean",
+          "line": 30
+        },
+        {
+          "statement": "\u2200 (bit : Bool) (value target : Int),\n  (value + InverseBranch.height bit) % 2 = 1 \u2192 InverseBranch.forward bit value = target \u2192 InverseBranch.Gate bit target",
+          "declaration": "InverseBranch.gate_of_odd_replay",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "InverseBranch.lean",
+          "line": 57
+        },
+        {
+          "statement": "\u2200 (word : List Bool),\n  InverseBranch.Mixed word \u2192\n    \u2200 (target : Int), InverseBranch.HitsGate word target \u2228 target % 3 < InverseBranch.evenChain word target % 3",
+          "declaration": "InverseBranch.gate_or_increase",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "InverseBranch.lean",
+          "line": 108
+        },
+        {
+          "statement": "\u2200 (bit : Bool) (target : Int),\n  0 \u2264 target \u2192\n    InverseBranch.Gate bit target \u2192\n      0 \u2264 InverseBranch.oddParent bit target \u2227\n        (InverseBranch.oddParent bit target + InverseBranch.height bit) % 2 = 1 \u2227\n          InverseBranch.forward bit (InverseBranch.oddParent bit target) = target",
+          "declaration": "InverseBranch.odd_spec",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "InverseBranch.lean",
+          "line": 39
+        },
+        {
+          "statement": "\u2200 (front : List Bool) (bit : Bool) (back : List Bool) (target : Int),\n  0 \u2264 target \u2192\n    InverseBranch.Gate bit (InverseBranch.evenChain front target) \u2192\n      let word := front ++ bit :: back;\n      let evenSeed := InverseBranch.evenChain word target;\n      let oddSeed := InverseBranch.evenChain back (InverseBranch.oddParent bit (InverseBranch.evenChain front target));\n      evenSeed \u2260 oddSeed \u2227 InverseBranch.Preimage word target evenSeed \u2227 InverseBranch.Preimage word target oddSeed",
+          "declaration": "InverseBranch.padded_preimages",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "InverseBranch.lean",
+          "line": 171
+        },
+        {
+          "statement": "\u2200 (word : List Bool) (target : Int), InverseBranch.replay word (InverseBranch.evenChain word target) = target",
+          "declaration": "InverseBranch.replay_even",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "InverseBranch.lean",
+          "line": 159
+        },
+        {
+          "statement": "\u2200 (word : List Bool),\n  InverseBranch.Mixed word \u2192 \u2200 (target : Int), InverseBranch.HitsGate (InverseBranch.threeLaps word) target",
+          "declaration": "InverseBranch.three_laps_gate",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "InverseBranch.lean",
+          "line": 129
+        },
+        {
+          "statement": "\u2200 (word : List Bool),\n  InverseBranch.Mixed word \u2192\n    \u2200 (target : Int),\n      0 \u2264 target \u2192\n        \u2203 front bit back,\n          InverseBranch.threeLaps word = front ++ bit :: back \u2227\n            front.length < 3 * word.length \u2227\n              InverseBranch.Gate bit (InverseBranch.evenChain front target) \u2227\n                let evenSeed := InverseBranch.evenChain (InverseBranch.threeLaps word) target;\n                let oddSeed :=\n                  InverseBranch.evenChain back (InverseBranch.oddParent bit (InverseBranch.evenChain front target));\n                evenSeed \u2260 oddSeed \u2227\n                  InverseBranch.Preimage (InverseBranch.threeLaps word) target evenSeed \u2227\n                    InverseBranch.Preimage (InverseBranch.threeLaps word) target oddSeed",
+          "declaration": "InverseBranch.three_laps_preimages",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "InverseBranch.lean",
+          "line": 193
+        },
+        {
+          "statement": "\u2200 (target : Int) (left right : Fin 4),\n  PeriodSevenBasin.child target left = PeriodSevenBasin.child target right \u2192 left = right",
+          "declaration": "PeriodSevenBasin.child_distinct",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "BasinGrowth.lean",
+          "line": 85
+        },
+        {
+          "statement": "\u2200 (target : Int),\n  0 < target \u2192\n    \u2200 (digit : Fin 4),\n      PeriodSevenBasin.run PeriodSevenBasin.word (PeriodSevenBasin.child target digit) = target \u2227\n        0 < PeriodSevenBasin.child target digit \u2227 PeriodSevenBasin.child target digit \u2264 128 * target - 14",
+          "declaration": "PeriodSevenBasin.child_returns",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "BasinGrowth.lean",
+          "line": 63
+        },
+        {
+          "statement": "PeriodSevenBasin.run PeriodSevenBasin.word 2 = 2 \u2227 PeriodSevenBasin.run PeriodSevenBasin.word 4 = 4",
+          "declaration": "PeriodSevenBasin.cycle_targets",
+          "axioms": [],
+          "source": "BasinGrowth.lean",
+          "line": 142
+        },
+        {
+          "statement": "\u2200 (depth : Nat) (target : Int),\n  0 < target \u2192\n    PeriodSevenBasin.Escapes target \u2192\n      \u2203 seeds,\n        (\u2200 (left right : Fin (4 ^ depth)), seeds left = seeds right \u2192 left = right) \u2227\n          \u2200 (index : Fin (4 ^ depth)),\n            PeriodSevenBasin.Escapes (seeds index) \u2227 0 < seeds index \u2227 seeds index \u2264 128 ^ depth * target",
+          "declaration": "PeriodSevenBasin.many_escaping",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "BasinGrowth.lean",
+          "line": 163
+        },
+        {
+          "statement": "\u2200 (depth : Nat) (target : Int),\n  0 < target \u2192\n    \u2203 seeds,\n      (\u2200 (left right : Fin (4 ^ depth)), seeds left = seeds right \u2192 left = right) \u2227\n        \u2200 (index : Fin (4 ^ depth)),\n          PeriodSevenBasin.periods depth (seeds index) = target \u2227 0 < seeds index \u2227 seeds index \u2264 128 ^ depth * target",
+          "declaration": "PeriodSevenBasin.many_preimages",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "BasinGrowth.lean",
+          "line": 134
+        },
+        {
+          "statement": "\u2200 (seed smaller : Int),\n  0 < smaller \u2192\n    smaller < seed \u2192\n      \u2200 (left right : Nat),\n        PeriodSevenBasin.periods left seed = PeriodSevenBasin.periods right smaller \u2192 \u00acPeriodSevenBasin.LeastEscape seed",
+          "declaration": "PeriodSevenBasin.not_least_of_meeting",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "BasinGrowth.lean",
+          "line": 176
+        },
+        {
+          "statement": "\u2200 (index : Nat),\n  let smaller := 373 + 16384 * \u2191index;\n  let seed := 709 + 31104 * \u2191index;\n  PeriodSevenBasin.run PeriodSevenBasin.word smaller = seed \u2227\n    PeriodSevenBasin.run PeriodSevenBasin.word seed = 12122 + 531441 * \u2191index \u2227 \u00acPeriodSevenBasin.LeastEscape seed",
+          "declaration": "PeriodSevenBasin.rising_class_reduction",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "BasinGrowth.lean",
+          "line": 189
+        },
+        {
+          "statement": "\u2200 (value : Nat) (owed : Bool),\n  value % 2 = 1 \u2192\n    3 \u2264 value \u2192\n      let next := PerturbedCollatz.step (PerturbedCollatz.adaptiveOffset value owed) value;\n      next % 2 = 1 \u2227 value + 1 \u2264 next",
+          "declaration": "PerturbedCollatz.adaptive_growth",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "Collatz.lean",
+          "line": 85
+        },
+        {
+          "statement": "\u2200 (period : Nat) (path : Nat \u2192 Nat \u00d7 Nat),\n  (\u2200 (tick : Nat), (path tick).snd < period) \u2192\n    (\u2200 (left right : Nat), path left = path right \u2192 path (left + 1) = path (right + 1)) \u2192\n      (\u2200 (start length : Nat),\n          0 < length \u2192 \u2203 tick, tick \u2265 start \u2227 (path tick).fst % 2 \u2260 (path (tick + length)).fst % 2) \u2192\n        \u2200 (bound : Nat), \u2203 cutoff, \u2200 (tick : Nat), tick \u2265 cutoff \u2192 bound < (path tick).fst",
+          "declaration": "PerturbedCollatz.nonperiodic_parity_escapes",
+          "axioms": [
+            "Quot.sound",
+            "propext",
+            "Classical.choice"
+          ],
+          "source": "Collatz.lean",
+          "line": 244
+        },
+        {
+          "statement": "\u2200 (offset : Nat \u2192 Option Bool) (seed ticks shift : Nat),\n  (\u2200 (index : Nat), index < ticks \u2192 0 < PerturbedCollatz.orbit offset seed index) \u2192\n    \u2203 scale,\n      scale % 2 = 1 \u2227\n        PerturbedCollatz.orbit offset (seed + 2 ^ ticks * shift) ticks =\n          PerturbedCollatz.orbit offset seed ticks + scale * shift",
+          "declaration": "PerturbedCollatz.orbit_seed_lift",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "Collatz.lean",
+          "line": 31
+        },
+        {
+          "statement": "\u2200 (offset : Nat \u2192 Option Bool) (seed start ticks : Nat),\n  PerturbedCollatz.orbit offset seed (start + ticks) =\n    PerturbedCollatz.orbit (fun phase => offset (start + phase)) (PerturbedCollatz.orbit offset seed start) ticks",
+          "declaration": "PerturbedCollatz.orbit_shift",
+          "axioms": [
+            "propext"
+          ],
+          "source": "Collatz.lean",
+          "line": 49
+        },
+        {
+          "statement": "\u2200 (index : Nat), PerturbedCollatz.reductionSeed index < PerturbedCollatz.reductionSeed (index + 1)",
+          "declaration": "PerturbedCollatz.reductionSeed_increases",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "Collatz.lean",
+          "line": 128
+        },
+        {
+          "statement": "PerturbedCollatz.block PerturbedCollatz.reductionLong 21 = 21 \u2227\n  PerturbedCollatz.block PerturbedCollatz.reductionShort 21 = 21",
+          "declaration": "PerturbedCollatz.reduction_cycle",
+          "axioms": [],
+          "source": "Collatz.lean",
+          "line": 133
+        },
+        {
+          "statement": "\u2200 (index : Nat),\n  PerturbedCollatz.block PerturbedCollatz.reductionLong (PerturbedCollatz.reductionSeed (index + 1)) =\n      PerturbedCollatz.reductionSeed index \u2227\n    PerturbedCollatz.block PerturbedCollatz.reductionShort (PerturbedCollatz.reductionSeed (index + 1)) =\n      PerturbedCollatz.reductionSeed index",
+          "declaration": "PerturbedCollatz.reduction_return",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "Collatz.lean",
+          "line": 136
+        },
+        {
+          "statement": "\u2200 (value boundary : Nat \u2192 Nat) (cap start : Nat),\n  boundary 0 = 0 \u2192\n    (\u2200 (index : Nat),\n        boundary index < boundary (index + 1) \u2227\n          boundary (index + 1) \u2264 boundary index + cap \u2227 value (boundary index) < value (boundary (index + 1))) \u2192\n      (\u2200 (left right : Nat), start \u2264 left \u2192 left \u2264 right \u2192 right \u2264 start + 2 * cap \u2192 value right \u2264 value left) \u2192 False",
+          "declaration": "PerturbedCollatz.shrinking_stretch_blocks_bounded_returns",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "Collatz.lean",
+          "line": 60
+        },
+        {
+          "statement": "\u2200 (offset : Option Bool) (value shift : Nat),\n  0 < value \u2192\n    PerturbedCollatz.step offset (value + 2 * shift) =\n      PerturbedCollatz.step offset value + if value % 2 = 0 then shift else 3 * shift",
+          "declaration": "PerturbedCollatz.step_lift",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "Collatz.lean",
+          "line": 15
+        },
+        {
+          "statement": "\u2200 (period : Nat) (path : Nat \u2192 Nat \u00d7 Nat),\n  (\u2200 (tick : Nat), (path tick).snd < period) \u2192\n    (\u2200 (left right : Nat), path left = path right \u2192 path (left + 1) = path (right + 1)) \u2192\n      ((\u2200 (bound : Nat), \u2203 tick, bound < (path tick).fst) \u2194\n        \u2200 (bound : Nat), \u2203 cutoff, \u2200 (tick : Nat), tick \u2265 cutoff \u2192 bound < (path tick).fst)",
+          "declaration": "PerturbedCollatz.unbounded_iff_escape",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "Collatz.lean",
+          "line": 223
+        },
+        {
+          "statement": "\u2200 {n : Nat} (pad word : List Bool) (unit : (n + 1).gcd 6 = 1) {target seed : Int},\n  ProgressionSteering.Admits pad word target seed \u2192\n    ProgressionSteering.replayLaps pad word.length seed = target \u2227\n      ProgressionSteering.steer (ProgressionSteering.lapMap pad unit) word (ProgressionSteering.reduce n target) =\n        ProgressionSteering.reduce n seed",
+          "declaration": "ProgressionSteering.admits_sound",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ProgressionSteering.lean",
+          "line": 314
+        },
+        {
+          "statement": "\u2200 {n a : Nat} (b : Int), (n + 1).gcd a = 1 \u2192 ProgressionSteering.Permutes (ProgressionSteering.affine a b)",
+          "declaration": "ProgressionSteering.affine_permutation",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ProgressionSteering.lean",
+          "line": 194
+        },
+        {
+          "statement": "\u2200 {n : Nat} (pad : List Bool) (unit : (n + 1).gcd 6 = 1) (x y : ProgressionSteering.Residue n),\n  \u2203 choices, choices.length = n \u2227 ProgressionSteering.steer (ProgressionSteering.lapMap pad unit) choices x = y",
+          "declaration": "ProgressionSteering.coprime_steering",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ProgressionSteering.lean",
+          "line": 255
+        },
+        {
+          "statement": "\u2200 {n m : Nat},\n  (n + 1).gcd m = 1 \u2192\n    \u2200 (base : Int) (x : ProgressionSteering.Residue n), \u2203 c, ProgressionSteering.reduce n c = x \u2227 \u2191m \u2223 c - base",
+          "declaration": "ProgressionSteering.crt_lift",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ProgressionSteering.lean",
+          "line": 205
+        },
+        {
+          "statement": "\u2200 (k : Int),\n  ProgressionSteering.Branch false false (6 * k + 4) (3 * k + 2) \u2227\n    ProgressionSteering.Branch true true (4 * k + 2) (6 * k + 4) \u2227\n      ProgressionSteering.Branch false true (2 * k + 1) (3 * k + 2) \u2227\n        ProgressionSteering.Branch true false (4 * k + 3) (2 * k + 1) \u2227 4 * k + 3 - (4 * k + 2) = 1",
+          "declaration": "ProgressionSteering.drop_branches",
+          "axioms": [
+            "Classical.choice",
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ProgressionSteering.lean",
+          "line": 21
+        },
+        {
+          "statement": "\u2200 (pad : List Bool) (value delta : Int),\n  ProgressionSteering.evenPrefix pad (value + delta) = ProgressionSteering.evenPrefix pad value + 2 ^ pad.length * delta",
+          "declaration": "ProgressionSteering.evenPrefix_affine",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ProgressionSteering.lean",
+          "line": 36
+        },
+        {
+          "statement": "\u2200 {n : Nat} (F : ProgressionSteering.Residue n \u2192 ProgressionSteering.Residue n),\n  (\u2200 (a b : ProgressionSteering.Residue n), F a = F b \u2192 a = b) \u2192\n    \u2200 (x y : ProgressionSteering.Residue n), \u2203 w, w.length = n \u2227 ProgressionSteering.steer F w x = y",
+          "declaration": "ProgressionSteering.exact_choices",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ProgressionSteering.lean",
+          "line": 125
+        },
+        {
+          "statement": "\u2200 {n : Nat} (C : ProgressionSteering.Residue n \u2192 Prop)\n  (F : ProgressionSteering.Residue n \u2192 ProgressionSteering.Residue n) (x : ProgressionSteering.Residue n),\n  C x \u2192\n    (\u2200 (y : ProgressionSteering.Residue n), C y \u2192 \u2203 z, C z \u2227 F z = y) \u2192\n      (\u2200 (z : ProgressionSteering.Residue n), C z \u2192 C (ProgressionSteering.shift (F z))) \u2192\n        \u2200 (y : ProgressionSteering.Residue n), C y",
+          "declaration": "ProgressionSteering.invariant_all",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ProgressionSteering.lean",
+          "line": 79
+        },
+        {
+          "statement": "\u2200 {n : Nat} (pad : List Bool) (unit : (n + 1).gcd 6 = 1),\n  ProgressionSteering.Permutes (ProgressionSteering.lapMap pad unit) \u2227\n    ProgressionSteering.Permutes fun x => ProgressionSteering.shift (ProgressionSteering.lapMap pad unit x)",
+          "declaration": "ProgressionSteering.lap_permutations",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ProgressionSteering.lean",
+          "line": 229
+        },
+        {
+          "statement": "\u2200 {n : Nat} (pad : List Bool) (unit : (n + 1).gcd 6 = 1) (value k : Int),\n  ProgressionSteering.evenPrefix pad value = 3 * k + 2 \u2192\n    ProgressionSteering.lapMap pad unit (ProgressionSteering.reduce n value) =\n        ProgressionSteering.reduce n (4 * k + 2) \u2227\n      ProgressionSteering.shift (ProgressionSteering.lapMap pad unit (ProgressionSteering.reduce n value)) =\n        ProgressionSteering.reduce n (4 * k + 3)",
+          "declaration": "ProgressionSteering.lap_projects",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ProgressionSteering.lean",
+          "line": 241
+        },
+        {
+          "statement": "\u2200 (pad : List Bool) (value k : Int),\n  ProgressionSteering.evenPrefix pad value = 3 * k + 2 \u2192\n    ProgressionSteering.replay (pad ++ [false, true]) (4 * k + 2) = value \u2227\n      ProgressionSteering.replay (pad ++ [false, true]) (4 * k + 3) = value",
+          "declaration": "ProgressionSteering.lap_replay",
+          "axioms": [
+            "Classical.choice",
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ProgressionSteering.lean",
+          "line": 59
+        },
+        {
+          "statement": "\u2200 {n : Nat} (pad : List Bool),\n  (n + 1).gcd 6 = 1 \u2192\n    \u2200 (x y : ProgressionSteering.Residue n),\n      \u2203 word c,\n        word.length = n \u2227\n          ProgressionSteering.reduce n c = x \u2227\n            \u2200 (z : Int),\n              ProgressionSteering.reduce n z = x \u2192\n                3 ^ n \u2223 z - c \u2192\n                  \u2203 seed,\n                    ProgressionSteering.Admits pad word z seed \u2227\n                      ProgressionSteering.reduce n seed = y \u2227 ProgressionSteering.replayLaps pad n seed = z",
+          "declaration": "ProgressionSteering.progression_steering",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ProgressionSteering.lean",
+          "line": 327
+        },
+        {
+          "statement": "\u2200 {pad word : List Bool} {target seed : Int},\n  0 \u2264 target \u2192 ProgressionSteering.Admits pad word target seed \u2192 target \u2264 seed",
+          "declaration": "ProgressionSteering.target_le_seed",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ProgressionSteering.lean",
+          "line": 277
+        },
+        {
+          "statement": "\u2200 (pad word : List Bool),\n  \u2203 target seed,\n    \u2200 (t : Int),\n      ProgressionSteering.Admits pad word (target + 3 ^ word.length * t)\n        (seed + 2 ^ ((pad.length + 2) * word.length) * t)",
+          "declaration": "ProgressionSteering.ternary_word_lift",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ProgressionSteering.lean",
+          "line": 294
+        },
+        {
+          "statement": "\u2200 {u : List Int} {r s : Int} {v : List Int} {t : Int},\n  ResidueTrack.Track u r s \u2192 ResidueTrack.Track v s t \u2192 ResidueTrack.Track (u ++ v) r t",
+          "declaration": "ResidueTrack.Track.append",
+          "axioms": [],
+          "source": "ResidueTrack.lean",
+          "line": 176
+        },
+        {
+          "statement": "\u2200 {w : List Int} {r s : Int}, ResidueTrack.Track w r s \u2192 ResidueTrack.Clear s",
+          "declaration": "ResidueTrack.Track.end_clear",
+          "axioms": [],
+          "source": "ResidueTrack.lean",
+          "line": 71
+        },
+        {
+          "statement": "\u2200 {w : List Int} {r s : Int},\n  ResidueTrack.Track w r s \u2192 \u2200 (z : Int), z % 3 = r \u2192 \u00acResidueTrack.HitsGate w z \u2227 ResidueTrack.chain w z % 3 = s",
+          "declaration": "ResidueTrack.Track.follow",
+          "axioms": [
+            "Classical.choice",
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 82
+        },
+        {
+          "statement": "\u2200 {w : List Int} {r : Int}, ResidueTrack.Track w r r \u2192 \u2200 {z : Int}, z % 3 = r \u2192 ResidueTrack.AvoidsForever w z",
+          "declaration": "ResidueTrack.Track.forever",
+          "axioms": [
+            "Classical.choice",
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 198
+        },
+        {
+          "statement": "\u2200 {w : List Int} {r : Int}, ResidueTrack.Track w r r \u2192 \u2200 (k : Nat), ResidueTrack.Track (ResidueTrack.laps w k) r r",
+          "declaration": "ResidueTrack.Track.repeat_laps",
+          "axioms": [],
+          "source": "ResidueTrack.lean",
+          "line": 193
+        },
+        {
+          "statement": "\u2200 {w : List Int} {r s : Int}, ResidueTrack.Track w r s \u2192 ResidueTrack.Track w.reverse s r",
+          "declaration": "ResidueTrack.Track.reverse",
+          "axioms": [
+            "propext"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 181
+        },
+        {
+          "statement": "\u2200 {w : List Int} {r s : Int}, ResidueTrack.Track w r s \u2192 ResidueTrack.Clear r",
+          "declaration": "ResidueTrack.Track.start_clear",
+          "axioms": [],
+          "source": "ResidueTrack.lean",
+          "line": 69
+        },
+        {
+          "statement": "\u2200 {w : List Int} {r : Int},\n  ResidueTrack.Track w r r \u2192\n    \u2200 {z : Int},\n      z % 3 = r \u2192\n        \u2200 (k : Nat) {front back : List Int},\n          ResidueTrack.laps w k = front ++ back \u2192\n            \u2200 (n : Int), ResidueTrack.replay front n = z \u2194 n = ResidueTrack.chain front z",
+          "declaration": "ResidueTrack.Track.unique_prefix",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 211
+        },
+        {
+          "statement": "\u2200 {w : List Int} {r : Int},\n  ResidueTrack.Track w r r \u2192\n    \u2200 {z : Int},\n      z % 3 = r \u2192\n        \u2200 (k : Nat) (n : Int),\n          ResidueTrack.replay (ResidueTrack.laps w k) n = z \u2194 n = ResidueTrack.chain (ResidueTrack.laps w k) z",
+          "declaration": "ResidueTrack.Track.unique_preimage",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 201
+        },
+        {
+          "statement": "\u2200 (v z n : Int),\n  ResidueTrack.forward v (ResidueTrack.forward (-1) n) = z \u2227 n % 2 \u2260 ResidueTrack.forward (-1) n % 2 \u2194\n    (z - v) % 3 = 2 \u2227 (n = (4 * (z - v) + 1) / 3 \u2228 n = (4 * (z - v) + 1) / 3 + 1)",
+          "declaration": "ResidueTrack.adjacent_one_odd",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 313
+        },
+        {
+          "statement": "\u2200 (v z k n : Int),\n  z - v = 3 * k + 2 \u2192\n    (ResidueTrack.forward v (ResidueTrack.forward (-1) n) = z \u2227 n % 2 \u2260 ResidueTrack.forward (-1) n % 2 \u2194\n      n = 4 * k + 3 \u2228 n = 4 * k + 4)",
+          "declaration": "ResidueTrack.adjacent_one_odd_at",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 318
+        },
+        {
+          "statement": "\u2200 (w : List Int), 1 \u2208 w \u2192 \u2200 (z : Int), ResidueTrack.AvoidsForever w z \u2194 ResidueTrack.Track w (z % 3) (z % 3)",
+          "declaration": "ResidueTrack.avoid_iff_track",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 251
+        },
+        {
+          "statement": "\u2200 {w : List Int}, (\u2200 (d : Int), d \u2208 w \u2192 d \u2264 1) \u2192 w.sum = 0 \u2192 (\u2203 d, d \u2208 w \u2227 d \u2260 0) \u2192 1 \u2208 w",
+          "declaration": "ResidueTrack.balanced_has_one",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 272
+        },
+        {
+          "statement": "\u2200 {w : List Int},\n  (\u2200 (d : Int), d \u2208 w \u2192 d \u2264 1) \u2192\n    w.sum = 0 \u2192\n      (\u2203 d, d \u2208 w \u2227 d \u2260 0) \u2192\n        (ResidueTrack.Circular w \u2194 \u2203 z, ResidueTrack.AvoidsForever w z) \u2227\n          (\u00acResidueTrack.Circular w \u2194 \u2200 (z : Int), ResidueTrack.HitsGate (ResidueTrack.laps w 3) z)",
+          "declaration": "ResidueTrack.balanced_obstruction",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 297
+        },
+        {
+          "statement": "ResidueTrack.Track [1, -1, -1, 1] 2 2",
+          "declaration": "ResidueTrack.balanced_track_example",
+          "axioms": [
+            "Classical.choice",
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 310
+        },
+        {
+          "statement": "\u2200 (rest : List Int) (d : Int),\n  ResidueTrack.chain (rest ++ [d]) 0 - 2 * (2 ^ (rest.length + 1) - 1) * d = 2 * ResidueTrack.chain (d :: rest) 0",
+          "declaration": "ResidueTrack.chain_bias_commutation",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 366
+        },
+        {
+          "statement": "\u2200 (word : List Int) (x y : Int), ResidueTrack.chain word x - ResidueTrack.chain word y = 2 ^ word.length * (x - y)",
+          "declaration": "ResidueTrack.chain_difference",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 358
+        },
+        {
+          "statement": "\u2200 (w : List Int) (x y : Int), ResidueTrack.chain w x % 3 = ResidueTrack.chain w y % 3 \u2194 x % 3 = y % 3",
+          "declaration": "ResidueTrack.chain_mod_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 233
+        },
+        {
+          "statement": "\u2200 (rest : List Int), ResidueTrack.Circular (1 :: rest) \u2194 ResidueTrack.Track (1 :: rest) 2 2",
+          "declaration": "ResidueTrack.circular_cons_one",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 157
+        },
+        {
+          "statement": "\u2200 (w : List Int), 1 \u2208 w \u2192 (ResidueTrack.Circular w \u2194 \u2203 z, ResidueTrack.AvoidsForever w z)",
+          "declaration": "ResidueTrack.circular_iff_forever",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 255
+        },
+        {
+          "statement": "\u2200 (w : List Int), ResidueTrack.Circular w.reverse \u2194 ResidueTrack.Circular w",
+          "declaration": "ResidueTrack.circular_reverse",
+          "axioms": [
+            "propext"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 188
+        },
+        {
+          "statement": "\u2200 (coeff bias nextBias d x : Int),\n  bias - 2 * coeff * d = 2 * nextBias \u2192\n    2 * ResidueTrack.displacement coeff nextBias (ResidueTrack.forward d x) =\n      (if x % 2 = 1 then 3 else 1) * ResidueTrack.displacement coeff bias x + if x % 2 = 1 then coeff - 2 * bias else 0",
+          "declaration": "ResidueTrack.displacement_forward",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 326
+        },
+        {
+          "statement": "\u2200 (d z : Int), ResidueTrack.forward d (ResidueTrack.even d z) = z",
+          "declaration": "ResidueTrack.even_forward",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 18
+        },
+        {
+          "statement": "\u2200 (w : List Int) (z : Int), ResidueTrack.HitsGate w z \u2194 \u2203 n, ResidueTrack.replay w n = z \u2227 n \u2260 ResidueTrack.chain w z",
+          "declaration": "ResidueTrack.gate_iff_other_preimage",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 123
+        },
+        {
+          "statement": "\u2200 (u v : List Int) (z : Int),\n  ResidueTrack.HitsGate (u ++ v) z \u2194 ResidueTrack.HitsGate u z \u2228 ResidueTrack.HitsGate v (ResidueTrack.chain u z)",
+          "declaration": "ResidueTrack.hits_append",
+          "axioms": [
+            "propext"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 205
+        },
+        {
+          "statement": "\u2200 (w : List Int) (k : Nat), (ResidueTrack.laps w k).length = k * w.length",
+          "declaration": "ResidueTrack.laps_length",
+          "axioms": [
+            "propext"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 169
+        },
+        {
+          "statement": "\u2200 (w : List Int),\n  1 \u2208 w \u2192 \u2200 (z : Int), \u00acResidueTrack.HitsGate (ResidueTrack.laps w 3) z \u2194 ResidueTrack.Track w (z % 3) (z % 3)",
+          "declaration": "ResidueTrack.miss_three_iff_track",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 239
+        },
+        {
+          "statement": "\u2200 (w : List Int), 1 \u2208 w \u2192 (\u00acResidueTrack.Circular w \u2194 \u2200 (z : Int), ResidueTrack.HitsGate (ResidueTrack.laps w 3) z)",
+          "declaration": "ResidueTrack.no_track_iff_three",
+          "axioms": [
+            "Classical.choice",
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 263
+        },
+        {
+          "statement": "\u2200 (d n z : Int), n % 2 = 1 \u2192 (ResidueTrack.forward d n = z \u2194 ResidueTrack.even d z = 3 * n + 1)",
+          "declaration": "ResidueTrack.odd_forward_iff",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 23
+        },
+        {
+          "statement": "\u2200 (d z : Int), (\u2203 n, n % 2 = 1 \u2227 ResidueTrack.forward d n = z) \u2194 ResidueTrack.Gate d z",
+          "declaration": "ResidueTrack.odd_preimage_iff_gate",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 35
+        },
+        {
+          "statement": "\u2200 (d z : Int), ResidueTrack.Gate d z \u2192 ResidueTrack.odd d z % 2 = 1 \u2227 ResidueTrack.forward d (ResidueTrack.odd d z) = z",
+          "declaration": "ResidueTrack.odd_spec",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 29
+        },
+        {
+          "statement": "\u2200 (h : Nat) (coeff bias nextBias d x : Int),\n  bias - 2 * coeff * d = 2 * nextBias \u2192\n    x % 2 = 1 \u2192\n      \u00ac3 ^ (h + 1) \u2223 coeff - 2 * bias \u2192\n        \u00ac3 ^ h \u2223 ResidueTrack.displacement coeff bias x \u2228\n          \u00ac3 ^ (h + 1) \u2223 ResidueTrack.displacement coeff nextBias (ResidueTrack.forward d x)",
+          "declaration": "ResidueTrack.odd_step_threshold",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 342
+        },
+        {
+          "statement": "\u2200 {w : List Int} {r s a b : Int}, 1 \u2208 w \u2192 ResidueTrack.Track w r a \u2192 ResidueTrack.Track w s b \u2192 a = b",
+          "declaration": "ResidueTrack.pinned_finish",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 143
+        },
+        {
+          "statement": "\u2200 {r s : Int}, ResidueTrack.Clear r \u2192 ResidueTrack.Clear s \u2192 (r + s) % 3 = 1 \u2192 r = 2 \u2227 s = 2",
+          "declaration": "ResidueTrack.plus_one_pin",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 46
+        },
+        {
+          "statement": "\u2200 (w : List Int) (z : Int), ResidueTrack.replay w (ResidueTrack.chain w z) = z",
+          "declaration": "ResidueTrack.replay_chain",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 101
+        },
+        {
+          "statement": "\u00acResidueTrack.Circular [1, -1] \u2227 \u00acResidueTrack.HitsGate (ResidueTrack.laps [1, -1] 2) 4",
+          "declaration": "ResidueTrack.three_laps_sharp",
+          "axioms": [
+            "Classical.choice",
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 303
+        },
+        {
+          "statement": "\u2200 (w : List Int) (z : Int),\n  ResidueTrack.Clear (z % 3) \u2192 \u00acResidueTrack.HitsGate w z \u2192 ResidueTrack.Track w (z % 3) (ResidueTrack.chain w z % 3)",
+          "declaration": "ResidueTrack.track_of_scan",
+          "axioms": [
+            "Classical.choice",
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 92
+        },
+        {
+          "statement": "\u2200 (w : List Int) (z n : Int), \u00acResidueTrack.HitsGate w z \u2192 (ResidueTrack.replay w n = z \u2194 n = ResidueTrack.chain w z)",
+          "declaration": "ResidueTrack.unique_of_miss",
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "source": "ResidueTrack.lean",
+          "line": 106
+        },
+        {
+          "statement": "\u2200 {A : Nat}, A % 3 = 1 \u2192 \u2200 (e u N : Nat), \u2203 t, t \u2265 N \u2227 TernaryPump.geomSum A t % 3 ^ e = u % 3 ^ e",
+          "declaration": "TernaryPump.exists_ge_geomSum_mod",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "TernaryPump.lean",
+          "line": 107
+        },
+        {
+          "statement": "\u2200 (A t h : Nat), TernaryPump.geomSum A (t + h) = TernaryPump.geomSum A t + A ^ t * TernaryPump.geomSum A h",
+          "declaration": "TernaryPump.geomSum_add",
+          "axioms": [
+            "propext"
+          ],
+          "source": "TernaryPump.lean",
+          "line": 9
+        },
+        {
+          "statement": "\u2200 {A : Nat},\n  A % 3 = 1 \u2192 \u2200 (t e : Nat), \u2203 c, TernaryPump.geomSum A (t + 3 ^ e) = TernaryPump.geomSum A t + 3 ^ e * (1 + 3 * c)",
+          "declaration": "TernaryPump.geomSum_add_pow_three",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "TernaryPump.lean",
+          "line": 59
+        },
+        {
+          "statement": "\u2200 {A : Nat},\n  A % 3 = 1 \u2192\n    \u2200 (e t u : Nat),\n      TernaryPump.geomSum A t % 3 ^ e = u % 3 ^ e \u2192\n        \u2203 digit, digit < 3 \u2227 TernaryPump.geomSum A (t + digit * 3 ^ e) % 3 ^ (e + 1) = u % 3 ^ (e + 1)",
+          "declaration": "TernaryPump.geomSum_lift",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "TernaryPump.lean",
+          "line": 73
+        },
+        {
+          "statement": "\u2200 {A : Nat}, A % 3 = 1 \u2192 \u2200 (e : Nat), \u2203 c, TernaryPump.geomSum A (3 ^ e) = 3 ^ e * (1 + 3 * c)",
+          "declaration": "TernaryPump.geomSum_pow_three",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "TernaryPump.lean",
+          "line": 46
+        },
+        {
+          "statement": "\u2200 {A : Nat},\n  A % 3 = 1 \u2192 \u2200 (t e : Nat), (TernaryPump.geomSum A (t + 3 ^ e) - TernaryPump.geomSum A t) % 3 ^ (e + 1) = 3 ^ e",
+          "declaration": "TernaryPump.geomSum_step_mod",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "TernaryPump.lean",
+          "line": 67
+        },
+        {
+          "statement": "\u2200 (A h : Nat), TernaryPump.geomSum A (h * 3) = TernaryPump.geomSum A h * (1 + A ^ h + A ^ h * A ^ h)",
+          "declaration": "TernaryPump.geomSum_triple",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "source": "TernaryPump.lean",
+          "line": 18
+        }
+      ],
+      "steps": [
+        {
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--version"
+          ],
+          "exit_code": 0,
+          "seconds": 0.24,
+          "output": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)\n"
+        },
+        {
+          "command": [
+            "lake",
+            "build"
+          ],
+          "exit_code": 0,
+          "seconds": 13.44,
+          "output": "\u2714 [2/9] Built TernaryPump\n\u2714 [3/9] Built InverseBranch\n\u2714 [4/9] Built ProgressionSteering\n\u2714 [5/9] Built BasinGrowth\n\u2714 [6/9] Built Collatz\n\u2714 [7/9] Built ResidueTrack\n\u2714 [8/9] Built All\nBuild completed successfully.\n"
+        },
+        {
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "-DwarningAsError=true",
+            "Audit.lean"
+          ],
+          "exit_code": 0,
+          "seconds": 13.369,
+          "output": "Axiom audit passed for 266 exported theorems.\n"
+        },
+        {
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "-DwarningAsError=true",
+            "Inventory.lean"
+          ],
+          "exit_code": 0,
+          "seconds": 20.064,
+          "output": "RELEASE_THEOREM {\"statement\":\"\u2200 (target : Int),\\n  0 < target \u2192\\n    \u2200 (digit : Fin 4),\\n      PeriodSevenBasin.run PeriodSevenBasin.word (PeriodSevenBasin.child target digit) = target \u2227\\n        0 < PeriodSevenBasin.child target digit \u2227 PeriodSevenBasin.child target digit \u2264 128 * target - 14\",\"declaration\":\"PeriodSevenBasin.child_returns\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (target : Int) (left right : Fin 4),\\n  PeriodSevenBasin.child target left = PeriodSevenBasin.child target right \u2192 left = right\",\"declaration\":\"PeriodSevenBasin.child_distinct\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (depth : Nat) (target : Int),\\n  0 < target \u2192\\n    \u2203 seeds,\\n      (\u2200 (left right : Fin (4 ^ depth)), seeds left = seeds right \u2192 left = right) \u2227\\n        \u2200 (index : Fin (4 ^ depth)),\\n          PeriodSevenBasin.periods depth (seeds index) = target \u2227 0 < seeds index \u2227 seeds index \u2264 128 ^ depth * target\",\"declaration\":\"PeriodSevenBasin.many_preimages\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"PeriodSevenBasin.run PeriodSevenBasin.word 2 = 2 \u2227 PeriodSevenBasin.run PeriodSevenBasin.word 4 = 4\",\"declaration\":\"PeriodSevenBasin.cycle_targets\",\"axioms\":[]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (depth : Nat) (target : Int),\\n  0 < target \u2192\\n    PeriodSevenBasin.Escapes target \u2192\\n      \u2203 seeds,\\n        (\u2200 (left right : Fin (4 ^ depth)), seeds left = seeds right \u2192 left = right) \u2227\\n          \u2200 (index : Fin (4 ^ depth)),\\n            PeriodSevenBasin.Escapes (seeds index) \u2227 0 < seeds index \u2227 seeds index \u2264 128 ^ depth * target\",\"declaration\":\"PeriodSevenBasin.many_escaping\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (seed smaller : Int),\\n  0 < smaller \u2192\\n    smaller < seed \u2192\\n      \u2200 (left right : Nat),\\n        PeriodSevenBasin.periods left seed = PeriodSevenBasin.periods right smaller \u2192 \u00acPeriodSevenBasin.LeastEscape seed\",\"declaration\":\"PeriodSevenBasin.not_least_of_meeting\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (index : Nat),\\n  let smaller := 373 + 16384 * \u2191index;\\n  let seed := 709 + 31104 * \u2191index;\\n  PeriodSevenBasin.run PeriodSevenBasin.word smaller = seed \u2227\\n    PeriodSevenBasin.run PeriodSevenBasin.word seed = 12122 + 531441 * \u2191index \u2227 \u00acPeriodSevenBasin.LeastEscape seed\",\"declaration\":\"PeriodSevenBasin.rising_class_reduction\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (offset : Option Bool) (value shift : Nat),\\n  0 < value \u2192\\n    PerturbedCollatz.step offset (value + 2 * shift) =\\n      PerturbedCollatz.step offset value + if value % 2 = 0 then shift else 3 * shift\",\"declaration\":\"PerturbedCollatz.step_lift\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (offset : Nat \u2192 Option Bool) (seed ticks shift : Nat),\\n  (\u2200 (index : Nat), index < ticks \u2192 0 < PerturbedCollatz.orbit offset seed index) \u2192\\n    \u2203 scale,\\n      scale % 2 = 1 \u2227\\n        PerturbedCollatz.orbit offset (seed + 2 ^ ticks * shift) ticks =\\n          PerturbedCollatz.orbit offset seed ticks + scale * shift\",\"declaration\":\"PerturbedCollatz.orbit_seed_lift\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (offset : Nat \u2192 Option Bool) (seed start ticks : Nat),\\n  PerturbedCollatz.orbit offset seed (start + ticks) =\\n    PerturbedCollatz.orbit (fun phase => offset (start + phase)) (PerturbedCollatz.orbit offset seed start) ticks\",\"declaration\":\"PerturbedCollatz.orbit_shift\",\"axioms\":[\"propext\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (value boundary : Nat \u2192 Nat) (cap start : Nat),\\n  boundary 0 = 0 \u2192\\n    (\u2200 (index : Nat),\\n        boundary index < boundary (index + 1) \u2227\\n          boundary (index + 1) \u2264 boundary index + cap \u2227 value (boundary index) < value (boundary (index + 1))) \u2192\\n      (\u2200 (left right : Nat), start \u2264 left \u2192 left \u2264 right \u2192 right \u2264 start + 2 * cap \u2192 value right \u2264 value left) \u2192 False\",\"declaration\":\"PerturbedCollatz.shrinking_stretch_blocks_bounded_returns\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (value : Nat) (owed : Bool),\\n  value % 2 = 1 \u2192\\n    3 \u2264 value \u2192\\n      let next := PerturbedCollatz.step (PerturbedCollatz.adaptiveOffset value owed) value;\\n      next % 2 = 1 \u2227 value + 1 \u2264 next\",\"declaration\":\"PerturbedCollatz.adaptive_growth\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (index : Nat), PerturbedCollatz.reductionSeed index < PerturbedCollatz.reductionSeed (index + 1)\",\"declaration\":\"PerturbedCollatz.reductionSeed_increases\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"PerturbedCollatz.block PerturbedCollatz.reductionLong 21 = 21 \u2227\\n  PerturbedCollatz.block PerturbedCollatz.reductionShort 21 = 21\",\"declaration\":\"PerturbedCollatz.reduction_cycle\",\"axioms\":[]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (index : Nat),\\n  PerturbedCollatz.block PerturbedCollatz.reductionLong (PerturbedCollatz.reductionSeed (index + 1)) =\\n      PerturbedCollatz.reductionSeed index \u2227\\n    PerturbedCollatz.block PerturbedCollatz.reductionShort (PerturbedCollatz.reductionSeed (index + 1)) =\\n      PerturbedCollatz.reductionSeed index\",\"declaration\":\"PerturbedCollatz.reduction_return\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (period : Nat) (path : Nat \u2192 Nat \u00d7 Nat),\\n  (\u2200 (tick : Nat), (path tick).snd < period) \u2192\\n    (\u2200 (left right : Nat), path left = path right \u2192 path (left + 1) = path (right + 1)) \u2192\\n      ((\u2200 (bound : Nat), \u2203 tick, bound < (path tick).fst) \u2194\\n        \u2200 (bound : Nat), \u2203 cutoff, \u2200 (tick : Nat), tick \u2265 cutoff \u2192 bound < (path tick).fst)\",\"declaration\":\"PerturbedCollatz.unbounded_iff_escape\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (period : Nat) (path : Nat \u2192 Nat \u00d7 Nat),\\n  (\u2200 (tick : Nat), (path tick).snd < period) \u2192\\n    (\u2200 (left right : Nat), path left = path right \u2192 path (left + 1) = path (right + 1)) \u2192\\n      (\u2200 (start length : Nat),\\n          0 < length \u2192 \u2203 tick, tick \u2265 start \u2227 (path tick).fst % 2 \u2260 (path (tick + length)).fst % 2) \u2192\\n        \u2200 (bound : Nat), \u2203 cutoff, \u2200 (tick : Nat), tick \u2265 cutoff \u2192 bound < (path tick).fst\",\"declaration\":\"PerturbedCollatz.nonperiodic_parity_escapes\",\"axioms\":[\"Quot.sound\",\"propext\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (bit : Bool) (target : Int), 0 \u2264 target \u2192 0 \u2264 InverseBranch.evenParent bit target\",\"declaration\":\"InverseBranch.even_nonneg\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (bit : Bool) (target : Int),\\n  (InverseBranch.evenParent bit target + InverseBranch.height bit) % 2 = 0 \u2227\\n    InverseBranch.forward bit (InverseBranch.evenParent bit target) = target\",\"declaration\":\"InverseBranch.even_spec\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (bit : Bool) (target : Int),\\n  0 \u2264 target \u2192\\n    InverseBranch.Gate bit target \u2192\\n      0 \u2264 InverseBranch.oddParent bit target \u2227\\n        (InverseBranch.oddParent bit target + InverseBranch.height bit) % 2 = 1 \u2227\\n          InverseBranch.forward bit (InverseBranch.oddParent bit target) = target\",\"declaration\":\"InverseBranch.odd_spec\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (bit : Bool) (value target : Int),\\n  (value + InverseBranch.height bit) % 2 = 1 \u2192 InverseBranch.forward bit value = target \u2192 InverseBranch.Gate bit target\",\"declaration\":\"InverseBranch.gate_of_odd_replay\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (word : List Bool),\\n  InverseBranch.Mixed word \u2192\\n    \u2200 (target : Int), InverseBranch.HitsGate word target \u2228 target % 3 < InverseBranch.evenChain word target % 3\",\"declaration\":\"InverseBranch.gate_or_increase\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (word : List Bool),\\n  InverseBranch.Mixed word \u2192 \u2200 (target : Int), InverseBranch.HitsGate (InverseBranch.threeLaps word) target\",\"declaration\":\"InverseBranch.three_laps_gate\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (word : List Bool) (target : Int), 0 \u2264 target \u2192 0 \u2264 InverseBranch.evenChain word target\",\"declaration\":\"InverseBranch.evenChain_nonneg\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (word : List Bool) (target : Int), InverseBranch.replay word (InverseBranch.evenChain word target) = target\",\"declaration\":\"InverseBranch.replay_even\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (front : List Bool) (bit : Bool) (back : List Bool) (target : Int),\\n  0 \u2264 target \u2192\\n    InverseBranch.Gate bit (InverseBranch.evenChain front target) \u2192\\n      let word := front ++ bit :: back;\\n      let evenSeed := InverseBranch.evenChain word target;\\n      let oddSeed := InverseBranch.evenChain back (InverseBranch.oddParent bit (InverseBranch.evenChain front target));\\n      evenSeed \u2260 oddSeed \u2227 InverseBranch.Preimage word target evenSeed \u2227 InverseBranch.Preimage word target oddSeed\",\"declaration\":\"InverseBranch.padded_preimages\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (word : List Bool),\\n  InverseBranch.Mixed word \u2192\\n    \u2200 (target : Int),\\n      0 \u2264 target \u2192\\n        \u2203 front bit back,\\n          InverseBranch.threeLaps word = front ++ bit :: back \u2227\\n            front.length < 3 * word.length \u2227\\n              InverseBranch.Gate bit (InverseBranch.evenChain front target) \u2227\\n                let evenSeed := InverseBranch.evenChain (InverseBranch.threeLaps word) target;\\n                let oddSeed :=\\n                  InverseBranch.evenChain back (InverseBranch.oddParent bit (InverseBranch.evenChain front target));\\n                evenSeed \u2260 oddSeed \u2227\\n                  InverseBranch.Preimage (InverseBranch.threeLaps word) target evenSeed \u2227\\n                    InverseBranch.Preimage (InverseBranch.threeLaps word) target oddSeed\",\"declaration\":\"InverseBranch.three_laps_preimages\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (k : Int),\\n  ProgressionSteering.Branch false false (6 * k + 4) (3 * k + 2) \u2227\\n    ProgressionSteering.Branch true true (4 * k + 2) (6 * k + 4) \u2227\\n      ProgressionSteering.Branch false true (2 * k + 1) (3 * k + 2) \u2227\\n        ProgressionSteering.Branch true false (4 * k + 3) (2 * k + 1) \u2227 4 * k + 3 - (4 * k + 2) = 1\",\"declaration\":\"ProgressionSteering.drop_branches\",\"axioms\":[\"Classical.choice\",\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (pad : List Bool) (value delta : Int),\\n  ProgressionSteering.evenPrefix pad (value + delta) = ProgressionSteering.evenPrefix pad value + 2 ^ pad.length * delta\",\"declaration\":\"ProgressionSteering.evenPrefix_affine\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (pad : List Bool) (value k : Int),\\n  ProgressionSteering.evenPrefix pad value = 3 * k + 2 \u2192\\n    ProgressionSteering.replay (pad ++ [false, true]) (4 * k + 2) = value \u2227\\n      ProgressionSteering.replay (pad ++ [false, true]) (4 * k + 3) = value\",\"declaration\":\"ProgressionSteering.lap_replay\",\"axioms\":[\"Classical.choice\",\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {n : Nat} (C : ProgressionSteering.Residue n \u2192 Prop)\\n  (F : ProgressionSteering.Residue n \u2192 ProgressionSteering.Residue n) (x : ProgressionSteering.Residue n),\\n  C x \u2192\\n    (\u2200 (y : ProgressionSteering.Residue n), C y \u2192 \u2203 z, C z \u2227 F z = y) \u2192\\n      (\u2200 (z : ProgressionSteering.Residue n), C z \u2192 C (ProgressionSteering.shift (F z))) \u2192\\n        \u2200 (y : ProgressionSteering.Residue n), C y\",\"declaration\":\"ProgressionSteering.invariant_all\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {n : Nat} (F : ProgressionSteering.Residue n \u2192 ProgressionSteering.Residue n),\\n  (\u2200 (a b : ProgressionSteering.Residue n), F a = F b \u2192 a = b) \u2192\\n    \u2200 (x y : ProgressionSteering.Residue n), \u2203 w, w.length = n \u2227 ProgressionSteering.steer F w x = y\",\"declaration\":\"ProgressionSteering.exact_choices\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {n a : Nat} (b : Int), (n + 1).gcd a = 1 \u2192 ProgressionSteering.Permutes (ProgressionSteering.affine a b)\",\"declaration\":\"ProgressionSteering.affine_permutation\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {n m : Nat},\\n  (n + 1).gcd m = 1 \u2192\\n    \u2200 (base : Int) (x : ProgressionSteering.Residue n), \u2203 c, ProgressionSteering.reduce n c = x \u2227 \u2191m \u2223 c - base\",\"declaration\":\"ProgressionSteering.crt_lift\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {n : Nat} (pad : List Bool) (unit : (n + 1).gcd 6 = 1),\\n  ProgressionSteering.Permutes (ProgressionSteering.lapMap pad unit) \u2227\\n    ProgressionSteering.Permutes fun x => ProgressionSteering.shift (ProgressionSteering.lapMap pad unit x)\",\"declaration\":\"ProgressionSteering.lap_permutations\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {n : Nat} (pad : List Bool) (unit : (n + 1).gcd 6 = 1) (value k : Int),\\n  ProgressionSteering.evenPrefix pad value = 3 * k + 2 \u2192\\n    ProgressionSteering.lapMap pad unit (ProgressionSteering.reduce n value) =\\n        ProgressionSteering.reduce n (4 * k + 2) \u2227\\n      ProgressionSteering.shift (ProgressionSteering.lapMap pad unit (ProgressionSteering.reduce n value)) =\\n        ProgressionSteering.reduce n (4 * k + 3)\",\"declaration\":\"ProgressionSteering.lap_projects\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {n : Nat} (pad : List Bool) (unit : (n + 1).gcd 6 = 1) (x y : ProgressionSteering.Residue n),\\n  \u2203 choices, choices.length = n \u2227 ProgressionSteering.steer (ProgressionSteering.lapMap pad unit) choices x = y\",\"declaration\":\"ProgressionSteering.coprime_steering\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {pad word : List Bool} {target seed : Int},\\n  0 \u2264 target \u2192 ProgressionSteering.Admits pad word target seed \u2192 target \u2264 seed\",\"declaration\":\"ProgressionSteering.target_le_seed\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (pad word : List Bool),\\n  \u2203 target seed,\\n    \u2200 (t : Int),\\n      ProgressionSteering.Admits pad word (target + 3 ^ word.length * t)\\n        (seed + 2 ^ ((pad.length + 2) * word.length) * t)\",\"declaration\":\"ProgressionSteering.ternary_word_lift\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {n : Nat} (pad word : List Bool) (unit : (n + 1).gcd 6 = 1) {target seed : Int},\\n  ProgressionSteering.Admits pad word target seed \u2192\\n    ProgressionSteering.replayLaps pad word.length seed = target \u2227\\n      ProgressionSteering.steer (ProgressionSteering.lapMap pad unit) word (ProgressionSteering.reduce n target) =\\n        ProgressionSteering.reduce n seed\",\"declaration\":\"ProgressionSteering.admits_sound\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {n : Nat} (pad : List Bool),\\n  (n + 1).gcd 6 = 1 \u2192\\n    \u2200 (x y : ProgressionSteering.Residue n),\\n      \u2203 word c,\\n        word.length = n \u2227\\n          ProgressionSteering.reduce n c = x \u2227\\n            \u2200 (z : Int),\\n              ProgressionSteering.reduce n z = x \u2192\\n                3 ^ n \u2223 z - c \u2192\\n                  \u2203 seed,\\n                    ProgressionSteering.Admits pad word z seed \u2227\\n                      ProgressionSteering.reduce n seed = y \u2227 ProgressionSteering.replayLaps pad n seed = z\",\"declaration\":\"ProgressionSteering.progression_steering\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (d z : Int), ResidueTrack.forward d (ResidueTrack.even d z) = z\",\"declaration\":\"ResidueTrack.even_forward\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (d n z : Int), n % 2 = 1 \u2192 (ResidueTrack.forward d n = z \u2194 ResidueTrack.even d z = 3 * n + 1)\",\"declaration\":\"ResidueTrack.odd_forward_iff\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (d z : Int), ResidueTrack.Gate d z \u2192 ResidueTrack.odd d z % 2 = 1 \u2227 ResidueTrack.forward d (ResidueTrack.odd d z) = z\",\"declaration\":\"ResidueTrack.odd_spec\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (d z : Int), (\u2203 n, n % 2 = 1 \u2227 ResidueTrack.forward d n = z) \u2194 ResidueTrack.Gate d z\",\"declaration\":\"ResidueTrack.odd_preimage_iff_gate\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {r s : Int}, ResidueTrack.Clear r \u2192 ResidueTrack.Clear s \u2192 (r + s) % 3 = 1 \u2192 r = 2 \u2227 s = 2\",\"declaration\":\"ResidueTrack.plus_one_pin\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {w : List Int} {r s : Int}, ResidueTrack.Track w r s \u2192 ResidueTrack.Clear r\",\"declaration\":\"ResidueTrack.Track.start_clear\",\"axioms\":[]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {w : List Int} {r s : Int}, ResidueTrack.Track w r s \u2192 ResidueTrack.Clear s\",\"declaration\":\"ResidueTrack.Track.end_clear\",\"axioms\":[]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {w : List Int} {r s : Int},\\n  ResidueTrack.Track w r s \u2192 \u2200 (z : Int), z % 3 = r \u2192 \u00acResidueTrack.HitsGate w z \u2227 ResidueTrack.chain w z % 3 = s\",\"declaration\":\"ResidueTrack.Track.follow\",\"axioms\":[\"Classical.choice\",\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (w : List Int) (z : Int),\\n  ResidueTrack.Clear (z % 3) \u2192 \u00acResidueTrack.HitsGate w z \u2192 ResidueTrack.Track w (z % 3) (ResidueTrack.chain w z % 3)\",\"declaration\":\"ResidueTrack.track_of_scan\",\"axioms\":[\"Classical.choice\",\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (w : List Int) (z : Int), ResidueTrack.replay w (ResidueTrack.chain w z) = z\",\"declaration\":\"ResidueTrack.replay_chain\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (w : List Int) (z n : Int), \u00acResidueTrack.HitsGate w z \u2192 (ResidueTrack.replay w n = z \u2194 n = ResidueTrack.chain w z)\",\"declaration\":\"ResidueTrack.unique_of_miss\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (w : List Int) (z : Int), ResidueTrack.HitsGate w z \u2194 \u2203 n, ResidueTrack.replay w n = z \u2227 n \u2260 ResidueTrack.chain w z\",\"declaration\":\"ResidueTrack.gate_iff_other_preimage\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {w : List Int} {r s a b : Int}, 1 \u2208 w \u2192 ResidueTrack.Track w r a \u2192 ResidueTrack.Track w s b \u2192 a = b\",\"declaration\":\"ResidueTrack.pinned_finish\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (rest : List Int), ResidueTrack.Circular (1 :: rest) \u2194 ResidueTrack.Track (1 :: rest) 2 2\",\"declaration\":\"ResidueTrack.circular_cons_one\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (w : List Int) (k : Nat), (ResidueTrack.laps w k).length = k * w.length\",\"declaration\":\"ResidueTrack.laps_length\",\"axioms\":[\"propext\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {u : List Int} {r s : Int} {v : List Int} {t : Int},\\n  ResidueTrack.Track u r s \u2192 ResidueTrack.Track v s t \u2192 ResidueTrack.Track (u ++ v) r t\",\"declaration\":\"ResidueTrack.Track.append\",\"axioms\":[]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {w : List Int} {r s : Int}, ResidueTrack.Track w r s \u2192 ResidueTrack.Track w.reverse s r\",\"declaration\":\"ResidueTrack.Track.reverse\",\"axioms\":[\"propext\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (w : List Int), ResidueTrack.Circular w.reverse \u2194 ResidueTrack.Circular w\",\"declaration\":\"ResidueTrack.circular_reverse\",\"axioms\":[\"propext\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {w : List Int} {r : Int}, ResidueTrack.Track w r r \u2192 \u2200 (k : Nat), ResidueTrack.Track (ResidueTrack.laps w k) r r\",\"declaration\":\"ResidueTrack.Track.repeat_laps\",\"axioms\":[]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {w : List Int} {r : Int}, ResidueTrack.Track w r r \u2192 \u2200 {z : Int}, z % 3 = r \u2192 ResidueTrack.AvoidsForever w z\",\"declaration\":\"ResidueTrack.Track.forever\",\"axioms\":[\"Classical.choice\",\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {w : List Int} {r : Int},\\n  ResidueTrack.Track w r r \u2192\\n    \u2200 {z : Int},\\n      z % 3 = r \u2192\\n        \u2200 (k : Nat) (n : Int),\\n          ResidueTrack.replay (ResidueTrack.laps w k) n = z \u2194 n = ResidueTrack.chain (ResidueTrack.laps w k) z\",\"declaration\":\"ResidueTrack.Track.unique_preimage\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (u v : List Int) (z : Int),\\n  ResidueTrack.HitsGate (u ++ v) z \u2194 ResidueTrack.HitsGate u z \u2228 ResidueTrack.HitsGate v (ResidueTrack.chain u z)\",\"declaration\":\"ResidueTrack.hits_append\",\"axioms\":[\"propext\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {w : List Int} {r : Int},\\n  ResidueTrack.Track w r r \u2192\\n    \u2200 {z : Int},\\n      z % 3 = r \u2192\\n        \u2200 (k : Nat) {front back : List Int},\\n          ResidueTrack.laps w k = front ++ back \u2192\\n            \u2200 (n : Int), ResidueTrack.replay front n = z \u2194 n = ResidueTrack.chain front z\",\"declaration\":\"ResidueTrack.Track.unique_prefix\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (w : List Int) (x y : Int), ResidueTrack.chain w x % 3 = ResidueTrack.chain w y % 3 \u2194 x % 3 = y % 3\",\"declaration\":\"ResidueTrack.chain_mod_iff\",\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (w : List Int),\\n  1 \u2208 w \u2192 \u2200 (z : Int), \u00acResidueTrack.HitsGate (ResidueTrack.laps w 3) z \u2194 ResidueTrack.Track w (z % 3) (z % 3)\",\"declaration\":\"ResidueTrack.miss_three_iff_track\",\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (w : List Int), 1 \u2208 w \u2192 \u2200 (z : Int), ResidueTrack.AvoidsForever w z \u2194 ResidueTrack.Track w (z % 3) (z % 3)\",\"declaration\":\"ResidueTrack.avoid_iff_track\",\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (w : List Int), 1 \u2208 w \u2192 (ResidueTrack.Circular w \u2194 \u2203 z, ResidueTrack.AvoidsForever w z)\",\"declaration\":\"ResidueTrack.circular_iff_forever\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (w : List Int), 1 \u2208 w \u2192 (\u00acResidueTrack.Circular w \u2194 \u2200 (z : Int), ResidueTrack.HitsGate (ResidueTrack.laps w 3) z)\",\"declaration\":\"ResidueTrack.no_track_iff_three\",\"axioms\":[\"Classical.choice\",\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {w : List Int}, (\u2200 (d : Int), d \u2208 w \u2192 d \u2264 1) \u2192 w.sum = 0 \u2192 (\u2203 d, d \u2208 w \u2227 d \u2260 0) \u2192 1 \u2208 w\",\"declaration\":\"ResidueTrack.balanced_has_one\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {w : List Int},\\n  (\u2200 (d : Int), d \u2208 w \u2192 d \u2264 1) \u2192\\n    w.sum = 0 \u2192\\n      (\u2203 d, d \u2208 w \u2227 d \u2260 0) \u2192\\n        (ResidueTrack.Circular w \u2194 \u2203 z, ResidueTrack.AvoidsForever w z) \u2227\\n          (\u00acResidueTrack.Circular w \u2194 \u2200 (z : Int), ResidueTrack.HitsGate (ResidueTrack.laps w 3) z)\",\"declaration\":\"ResidueTrack.balanced_obstruction\",\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"]}\nRELEASE_THEOREM {\"statement\":\"\u00acResidueTrack.Circular [1, -1] \u2227 \u00acResidueTrack.HitsGate (ResidueTrack.laps [1, -1] 2) 4\",\"declaration\":\"ResidueTrack.three_laps_sharp\",\"axioms\":[\"Classical.choice\",\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"ResidueTrack.Track [1, -1, -1, 1] 2 2\",\"declaration\":\"ResidueTrack.balanced_track_example\",\"axioms\":[\"Classical.choice\",\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (v z n : Int),\\n  ResidueTrack.forward v (ResidueTrack.forward (-1) n) = z \u2227 n % 2 \u2260 ResidueTrack.forward (-1) n % 2 \u2194\\n    (z - v) % 3 = 2 \u2227 (n = (4 * (z - v) + 1) / 3 \u2228 n = (4 * (z - v) + 1) / 3 + 1)\",\"declaration\":\"ResidueTrack.adjacent_one_odd\",\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (v z k n : Int),\\n  z - v = 3 * k + 2 \u2192\\n    (ResidueTrack.forward v (ResidueTrack.forward (-1) n) = z \u2227 n % 2 \u2260 ResidueTrack.forward (-1) n % 2 \u2194\\n      n = 4 * k + 3 \u2228 n = 4 * k + 4)\",\"declaration\":\"ResidueTrack.adjacent_one_odd_at\",\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (coeff bias nextBias d x : Int),\\n  bias - 2 * coeff * d = 2 * nextBias \u2192\\n    2 * ResidueTrack.displacement coeff nextBias (ResidueTrack.forward d x) =\\n      (if x % 2 = 1 then 3 else 1) * ResidueTrack.displacement coeff bias x + if x % 2 = 1 then coeff - 2 * bias else 0\",\"declaration\":\"ResidueTrack.displacement_forward\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (h : Nat) (coeff bias nextBias d x : Int),\\n  bias - 2 * coeff * d = 2 * nextBias \u2192\\n    x % 2 = 1 \u2192\\n      \u00ac3 ^ (h + 1) \u2223 coeff - 2 * bias \u2192\\n        \u00ac3 ^ h \u2223 ResidueTrack.displacement coeff bias x \u2228\\n          \u00ac3 ^ (h + 1) \u2223 ResidueTrack.displacement coeff nextBias (ResidueTrack.forward d x)\",\"declaration\":\"ResidueTrack.odd_step_threshold\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (word : List Int) (x y : Int), ResidueTrack.chain word x - ResidueTrack.chain word y = 2 ^ word.length * (x - y)\",\"declaration\":\"ResidueTrack.chain_difference\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (rest : List Int) (d : Int),\\n  ResidueTrack.chain (rest ++ [d]) 0 - 2 * (2 ^ (rest.length + 1) - 1) * d = 2 * ResidueTrack.chain (d :: rest) 0\",\"declaration\":\"ResidueTrack.chain_bias_commutation\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (A t h : Nat), TernaryPump.geomSum A (t + h) = TernaryPump.geomSum A t + A ^ t * TernaryPump.geomSum A h\",\"declaration\":\"TernaryPump.geomSum_add\",\"axioms\":[\"propext\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 (A h : Nat), TernaryPump.geomSum A (h * 3) = TernaryPump.geomSum A h * (1 + A ^ h + A ^ h * A ^ h)\",\"declaration\":\"TernaryPump.geomSum_triple\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {A : Nat}, A % 3 = 1 \u2192 \u2200 (e : Nat), \u2203 c, TernaryPump.geomSum A (3 ^ e) = 3 ^ e * (1 + 3 * c)\",\"declaration\":\"TernaryPump.geomSum_pow_three\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {A : Nat},\\n  A % 3 = 1 \u2192 \u2200 (t e : Nat), \u2203 c, TernaryPump.geomSum A (t + 3 ^ e) = TernaryPump.geomSum A t + 3 ^ e * (1 + 3 * c)\",\"declaration\":\"TernaryPump.geomSum_add_pow_three\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {A : Nat},\\n  A % 3 = 1 \u2192 \u2200 (t e : Nat), (TernaryPump.geomSum A (t + 3 ^ e) - TernaryPump.geomSum A t) % 3 ^ (e + 1) = 3 ^ e\",\"declaration\":\"TernaryPump.geomSum_step_mod\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {A : Nat},\\n  A % 3 = 1 \u2192\\n    \u2200 (e t u : Nat),\\n      TernaryPump.geomSum A t % 3 ^ e = u % 3 ^ e \u2192\\n        \u2203 digit, digit < 3 \u2227 TernaryPump.geomSum A (t + digit * 3 ^ e) % 3 ^ (e + 1) = u % 3 ^ (e + 1)\",\"declaration\":\"TernaryPump.geomSum_lift\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_THEOREM {\"statement\":\"\u2200 {A : Nat}, A % 3 = 1 \u2192 \u2200 (e u N : Nat), \u2203 t, t \u2265 N \u2227 TernaryPump.geomSum A t % 3 ^ e = u % 3 ^ e\",\"declaration\":\"TernaryPump.exists_ge_geomSum_mod\",\"axioms\":[\"propext\",\"Quot.sound\"]}\nRELEASE_AUDIT {\"theorem_constants_including_private_and_generated\":401,\"modules\":[\"Collatz\",\"BasinGrowth\",\"InverseBranch\",\"ResidueTrack\",\"TernaryPump\",\"ProgressionSteering\"]}\n"
+        }
+      ]
+    },
+    "sprint": {
+      "status": "passed",
+      "lean_version": "4.24.0",
+      "clean_build": true,
+      "theorem_count": 5,
+      "private_source_theorem_count": 0,
+      "module_audit": {
+        "modules": [
+          "RootInverseHeight",
+          "RootPacket"
+        ],
+        "theorem_constants_including_private_and_generated": 33
+      },
+      "adversarial_files": [],
+      "sources_sha256": {
+        "All.lean": "c9165a5f3669136595beb08e28e37fc6c831cb9b31d3974793a9af28e1184611",
+        "Audit.lean": "c395b3a016b43a70e86b63e6b61c4d6d3956c0c471f164e0e7589ef8c2ab0a5b",
+        "Inventory.lean": "8cc19de03c30508c5c0108db29cab4e51b80f273ad953db43f9d581fc267f177",
+        "RootInverseHeight.lean": "0e9a1efa84d13d52cc09d27579ee58d0ede1130778cc28b016a9f20d31c9f360",
+        "RootPacket.lean": "eb94f86ea927f9bd67183938e5503927e15bce4f57826b897fa3b1880d10d149"
+      },
+      "declarations": [
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "SevenStepSprint.inverse_word_bound",
+          "statement": "\u2200 (word : List (Bool \u00d7 Bool)) (z : Nat),\n  3 ^ SevenStepSprint.grows word * SevenStepSprint.replay word z \u2264 2 ^ word.length * z",
+          "source": "RootInverseHeight.lean",
+          "line": 48
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound",
+            "Classical.choice"
+          ],
+          "declaration": "SevenStepSprint.packet_guard_and_image",
+          "statement": "\u2200 (u : Nat),\n  have start := SevenStepSprint.packetStart u;\n  start % 128 = 51 \u2227\n    SevenStepSprint.c51 start % 128 = 33 \u2227\n      SevenStepSprint.c33 (SevenStepSprint.c51 start) % 128 = 33 \u2227\n        (128 * u + 96) % 128 = 96 \u2227\n          SevenStepSprint.c33 (SevenStepSprint.c33 (SevenStepSprint.c51 start)) = SevenStepSprint.v (128 * u + 96) \u2227\n            SevenStepSprint.v (128 * u + 96) = 729 * u + 547",
+          "source": "RootPacket.lean",
+          "line": 11
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "SevenStepSprint.predecessor_bound",
+          "statement": "\u2200 (isT grow : Bool) (z : Nat), (if grow = true then 3 else 1) * SevenStepSprint.predecessor isT grow z \u2264 2 * z",
+          "source": "RootInverseHeight.lean",
+          "line": 35
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "SevenStepSprint.predecessor_positive",
+          "statement": "\u2200 (isT grow : Bool) (z : Nat), 0 < z \u2192 SevenStepSprint.allowed isT grow z \u2192 0 < SevenStepSprint.predecessor isT grow z",
+          "source": "RootInverseHeight.lean",
+          "line": 24
+        },
+        {
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "declaration": "SevenStepSprint.predecessor_replays",
+          "statement": "\u2200 (isT grow : Bool) (z : Nat),\n  0 < z \u2192 SevenStepSprint.allowed isT grow z \u2192 SevenStepSprint.forward isT (SevenStepSprint.predecessor isT grow z) = z",
+          "source": "RootInverseHeight.lean",
+          "line": 29
+        }
+      ],
+      "steps": [
+        {
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "--version"
+          ],
+          "exit_code": 0,
+          "seconds": 0.206,
+          "output": "Lean (version 4.24.0, x86_64-unknown-linux-gnu, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)\n"
+        },
+        {
+          "command": [
+            "lake",
+            "build"
+          ],
+          "exit_code": 0,
+          "seconds": 3.587,
+          "output": "\u2139 [2/5] Built RootPacket (2.6s)\ninfo: RootPacket.lean:22:0: 'SevenStepSprint.packet_guard_and_image' depends on axioms: [propext, Classical.choice, Quot.sound]\n\u2139 [3/5] Built RootInverseHeight (2.8s)\ninfo: RootInverseHeight.lean:69:0: 'SevenStepSprint.predecessor_positive' depends on axioms: [propext, Quot.sound]\ninfo: RootInverseHeight.lean:70:0: 'SevenStepSprint.predecessor_replays' depends on axioms: [propext, Quot.sound]\ninfo: RootInverseHeight.lean:71:0: 'SevenStepSprint.inverse_word_bound' depends on axioms: [propext, Quot.sound]\n\u2714 [4/5] Built All (570ms)\nBuild completed successfully (5 jobs).\n"
+        },
+        {
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "-DwarningAsError=true",
+            "Audit.lean"
+          ],
+          "exit_code": 0,
+          "seconds": 2.04,
+          "output": "Axiom audit passed for 29 exported theorems.\n"
+        },
+        {
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "-DwarningAsError=true",
+            "Inventory.lean"
+          ],
+          "exit_code": 0,
+          "seconds": 8.336,
+          "output": "RELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"SevenStepSprint.predecessor_positive\",\"statement\":\"\u2200 (isT grow : Bool) (z : Nat), 0 < z \u2192 SevenStepSprint.allowed isT grow z \u2192 0 < SevenStepSprint.predecessor isT grow z\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"SevenStepSprint.predecessor_replays\",\"statement\":\"\u2200 (isT grow : Bool) (z : Nat),\\n  0 < z \u2192 SevenStepSprint.allowed isT grow z \u2192 SevenStepSprint.forward isT (SevenStepSprint.predecessor isT grow z) = z\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"SevenStepSprint.predecessor_bound\",\"statement\":\"\u2200 (isT grow : Bool) (z : Nat), (if grow = true then 3 else 1) * SevenStepSprint.predecessor isT grow z \u2264 2 * z\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"SevenStepSprint.inverse_word_bound\",\"statement\":\"\u2200 (word : List (Bool \u00d7 Bool)) (z : Nat),\\n  3 ^ SevenStepSprint.grows word * SevenStepSprint.replay word z \u2264 2 ^ word.length * z\"}\nRELEASE_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\",\"Classical.choice\"],\"declaration\":\"SevenStepSprint.packet_guard_and_image\",\"statement\":\"\u2200 (u : Nat),\\n  have start := SevenStepSprint.packetStart u;\\n  start % 128 = 51 \u2227\\n    SevenStepSprint.c51 start % 128 = 33 \u2227\\n      SevenStepSprint.c33 (SevenStepSprint.c51 start) % 128 = 33 \u2227\\n        (128 * u + 96) % 128 = 96 \u2227\\n          SevenStepSprint.c33 (SevenStepSprint.c33 (SevenStepSprint.c51 start)) = SevenStepSprint.v (128 * u + 96) \u2227\\n            SevenStepSprint.v (128 * u + 96) = 729 * u + 547\"}\nRELEASE_AUDIT {\"modules\":[\"RootInverseHeight\",\"RootPacket\"],\"theorem_constants_including_private_and_generated\":33}\n"
+        }
+      ]
+    }
+  }
+}

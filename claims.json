@@ -1,0 +1,518 @@
+{
+  "schema": 1,
+  "scope": "Selected manuscript results. Exact Lean types are in lean/inventory.json; supporting names do not certify the complete manuscript claim.",
+  "claims": [
+    {
+      "id": "REL-01",
+      "tex_label": "thm:admissibility",
+      "manuscript": "tex/foundations.tex",
+      "title": "General admissibility and conservative-word classification",
+      "evidence_status": "complete analytical proof",
+      "artifacts": [
+        "certificates/exposition/verify.py",
+        "certificates/exposition/examples.json",
+        "lean/inverse/Collatz/Physical.lean",
+        "lean/inverse/Collatz/Admissibility.lean"
+      ],
+      "lean_coverage": "conservative cyclic-alternation classification and general binary-floor criterion formalized; the exact separated-negative-impulse wording is supplied by the manuscript proof",
+      "lean_declarations": [
+        "Collatz.Physical.conservative_admissible_iff_alternating",
+        "Collatz.Physical.admissible_iff_floor"
+      ],
+      "limitations": "Nonnegativity for every positive seed and phase; capture not asserted.",
+      "literature": {
+        "citation_keys": [
+          "kionke-2017",
+          "matthews-watts-1984"
+        ],
+        "relationship": "model-specific classification; priority unresolved",
+        "transfer_limit": "The exact all-positive-seed/all-phase impulse classification is not supplied by the cited generalized-map definitions."
+      }
+    },
+    {
+      "id": "REL-02",
+      "tex_label": "prop:height-conjugacy",
+      "manuscript": "tex/foundations.tex",
+      "title": "Binary-height conjugacy and safe domain",
+      "evidence_status": "complete analytical proof",
+      "artifacts": [
+        "certificates/exposition/verify.py",
+        "certificates/exposition/examples.json",
+        "lean/inverse/Collatz/Admissibility.lean"
+      ],
+      "lean_coverage": "height existence/uniqueness, safe-domain characterization, and coordinate/orbit/cycle identities formalized; primitive-period comparison remains a written argument",
+      "lean_declarations": [
+        "Collatz.Physical.admissible_conservative_iff_binary_height",
+        "Collatz.Physical.height_unique",
+        "Collatz.Physical.safe_iff_height",
+        "Collatz.Physical.coordinate_conjugacy",
+        "Collatz.Physical.coordinate_orbit"
+      ],
+      "limitations": "Nonzero conservative admissible words; zero forcing treated separately.",
+      "literature": {
+        "citation_keys": [
+          "monks-et-al-2013",
+          "barina-2025"
+        ],
+        "relationship": "inherited generator with forcing-specific coordinate theorem",
+        "transfer_limit": "The translated map U=P T P^-1 is the earlier E (and later T_1); binary height, safe domain, and time schedule require the present proof."
+      }
+    },
+    {
+      "id": "REL-03",
+      "tex_label": "prop:affine-parity",
+      "manuscript": "tex/foundations.tex",
+      "title": "Finite parity branch identity",
+      "evidence_status": "complete analytical proof",
+      "artifacts": [
+        "certificates/exposition/verify.py",
+        "certificates/exposition/examples.json",
+        "lean/inverse/Collatz/Admissibility.lean"
+      ],
+      "lean_coverage": "supporting signed parity lift with a positive odd affine multiplier; full parity-word/residue bijection and identification of the multiplier as 3 raised to the number of odd inputs are not formalized",
+      "lean_declarations": [
+        "Collatz.Physical.signed_parity_lift"
+      ],
+      "limitations": "Finite binary words; no positive-integer realization claimed for arbitrary infinite parity words.",
+      "literature": {
+        "citation_keys": [
+          "terras-1976",
+          "bernstein-1994",
+          "bernstein-lagarias-1996"
+        ],
+        "relationship": "forced extension of classical parity-cylinder machinery",
+        "transfer_limit": "The time-dependent intercept is specific to the forcing. Infinite 2-adic coding does not establish positive-integer realization."
+      }
+    },
+    {
+      "id": "REL-04",
+      "tex_label": "thm:impulse-bounds",
+      "manuscript": "tex/impulses.tex",
+      "title": "Sharp base-launch support bounds",
+      "evidence_status": "analytical exhaustive reduction plus complete exact censuses",
+      "artifacts": [
+        "certificates/impulses/small.py",
+        "certificates/impulses/small.json",
+        "certificates/impulses/six_impulses/eight_frontier.py",
+        "certificates/impulses/six_impulses/eight_frontier.json",
+        "certificates/impulses/independent_six/verify.cpp",
+        "certificates/impulses/independent_six/census.json",
+        "certificates/impulses/full_excursions/census.cpp",
+        "certificates/impulses/full_excursions/run.py",
+        "certificates/impulses/full_excursions/partitions.json",
+        "certificates/impulses/full_excursions/results.json",
+        "certificates/impulses/independent_eight/scan.cpp",
+        "certificates/impulses/independent_eight/census.py",
+        "certificates/impulses/independent_eight/census.json",
+        "certificates/exposition/verify.py",
+        "certificates/exposition/examples.json"
+      ],
+      "lean_coverage": "not fully formalized; no full Lean theorem claimed",
+      "lean_declarations": [],
+      "limitations": "Base launches or future after safe base entry only; arbitrary gaps covered. Quick checks alone do not prove upper bounds.",
+      "literature": {
+        "citation_keys": [
+          "gonthier-2005"
+        ],
+        "relationship": "model-specific exhaustive bounds; formalization precedent",
+        "transfer_limit": "The cited reflection architecture motivates future checker soundness; it does not certify the present external censuses or close global entry."
+      }
+    },
+    {
+      "id": "REL-05",
+      "tex_label": "thm:all-phase-synchronization",
+      "manuscript": "tex/synchronization.tex",
+      "title": "Logarithmic all-phase finite-interval synchronization",
+      "evidence_status": "complete analytical proof",
+      "artifacts": [
+        "certificates/exposition/verify.py",
+        "certificates/exposition/examples.json"
+      ],
+      "lean_coverage": "not fully formalized; no full Lean theorem claimed",
+      "lean_declarations": [],
+      "limitations": "For each finite interval there exists a word; not one word for every positive seed.",
+      "literature": {
+        "citation_keys": [
+          "cerny-1964",
+          "vasilyev-2026",
+          "rosenthal-1995",
+          "yano-yasutomi-2011"
+        ],
+        "relationship": "classical control ingredients plus model-specific common-word theorem",
+        "transfer_limit": "Single-seed control, finite pair-merging, and finite-chain mixing do not supply the stated interval-dependent logarithmic word and all rotations."
+      }
+    },
+    {
+      "id": "REL-06",
+      "tex_label": "lem:inverse-certificate",
+      "manuscript": "tex/inverse.tex",
+      "title": "24-step inverse branch minima",
+      "evidence_status": "complete exact finite enumeration",
+      "artifacts": [
+        "certificates/inverse/certify_growth.py",
+        "certificates/inverse/growth_certificate.json"
+      ],
+      "lean_coverage": "not fully formalized; no full Lean theorem claimed",
+      "lean_declarations": [],
+      "limitations": "For forcing (1,0,-1), parent y >= 34 and 3 not dividing y.",
+      "literature": {
+        "citation_keys": [
+          "applegate-lagarias-1995-i"
+        ],
+        "relationship": "forced inverse-tree certificate with classical methodological antecedent",
+        "transfer_limit": "All branch legality, residue minima, target restrictions, and numerical counts are specific to this release."
+      }
+    },
+    {
+      "id": "REL-07",
+      "tex_label": "thm:inverse-growth",
+      "manuscript": "tex/inverse.tex",
+      "title": "Inverse growth in every progression",
+      "evidence_status": "analytical counting and steering proof plus REL-06",
+      "artifacts": [
+        "certificates/inverse/certify_ap.py",
+        "certificates/inverse/certificate.json",
+        "certificates/inverse/certify_translation.py",
+        "certificates/inverse/translation_examples.json",
+        "certificates/inverse/worked_examples.py",
+        "certificates/inverse/worked_examples.json"
+      ],
+      "lean_coverage": "supporting lemmas only",
+      "lean_declarations": [
+        "Collatz.A_parent",
+        "Collatz.Coverage.all_phase_preimages",
+        "Collatz.Tree.endpoint_injective"
+      ],
+      "limitations": "Named Lean statements are supporting components, not the full theorem. Translation examples do not establish universality; the manuscript supplies the all-modulus argument.",
+      "literature": {
+        "citation_keys": [
+          "applegate-lagarias-1995-i",
+          "krasikov-lagarias",
+          "monks-2006",
+          "monks-et-al-2013"
+        ],
+        "relationship": "forced counting and progression transfer with direct antecedents",
+        "transfer_limit": "Progression sufficiency is not forward visitation; bounded odd inverse count is not bounded physical length. The forced exponent is not an improvement of the ordinary-map exponent."
+      }
+    },
+    {
+      "id": "REL-08",
+      "tex_label": "cor:exceptional-set",
+      "manuscript": "tex/inverse.tex",
+      "title": "Exceptional-set upper bound would force capture",
+      "evidence_status": "proved conditional implication",
+      "artifacts": [],
+      "lean_coverage": "not fully formalized; no full Lean theorem claimed",
+      "lean_declarations": [],
+      "limitations": "The required upper bound is open and concerns the fixed three-step forced map, not ordinary Collatz.",
+      "literature": {
+        "citation_keys": [
+          "tao",
+          "goncalves-greenfeld-madrid-2025",
+          "korec-1994",
+          "inselmann-2024",
+          "venturini-1997",
+          "siegel-odwyer-2026",
+          "shaik-2026"
+        ],
+        "relationship": "conditional counting implication; required upper estimate open",
+        "transfer_limit": "Almost-all theorems for another map do not give the same-map o(X^delta) upper bound. Venturini supplies a fixed-factor density comparison under fitting stated algebraic hypotheses. Recent almost-boundedness/polylogarithmic preprints are acknowledged with version, proof, and artifact reservations; none supplies a checked exceptional bound for this forced map."
+      }
+    },
+    {
+      "id": "REL-09",
+      "tex_label": "thm:seven-four",
+      "manuscript": "tex/seven_step.tex",
+      "title": "Four-family conditional global capture equivalence",
+      "evidence_status": "analytical induction plus whole-domain exact reconstruction",
+      "artifacts": [
+        "certificates/seven_step/verify.py",
+        "certificates/seven_step/verify_relational.py",
+        "certificates/seven_step/independent.py",
+        "certificates/seven_step/frontier.json"
+      ],
+      "lean_coverage": "not fully formalized; no full Lean theorem claimed",
+      "lean_declarations": [],
+      "limitations": "Complete capture of S00-S03 remains as four universal hypotheses. This original four-family theorem is not formalized; the alternative three-family equivalence has a separate Lean proof under its own section and rank.",
+      "literature": {
+        "citation_keys": [
+          "benamram-2010-monotonicity",
+          "podelski-rybalchenko-2004",
+          "yolcu-aaronson-heule-2023",
+          "shaw-2006",
+          "nashida-2026"
+        ],
+        "relationship": "model-specific conditional reduction; related termination methods",
+        "transfer_limit": "No cited method discharges any residual whole-family hypothesis automatically. Shaw uses smaller predecessors for the unshortened ordinary map; the present shared-future merger uses augmented states and phase-dependent rank. Nashida is a reported certificate-framework comparison, not an adopted formal proof."
+      }
+    },
+    {
+      "id": "REL-10",
+      "tex_label": "prop:seven-six-barrier",
+      "manuscript": "tex/seven_step.tex",
+      "title": "Limitation of direct phase-affine first-return ranks",
+      "evidence_status": "finite slope contradiction plus exact affine branch checks",
+      "artifacts": [
+        "certificates/seven_step/verify_rank_obstruction.py",
+        "certificates/seven_step/rank_obstruction.json"
+      ],
+      "lean_coverage": "not fully formalized; no full Lean theorem claimed",
+      "lean_declarations": [],
+      "limitations": "Only the specified section, direct comparison, and rank ansatz; does not exclude other ranks, later meetings, or methods.",
+      "literature": {
+        "citation_keys": [
+          "ahmadi-et-al-2014",
+          "kohl-2008-conjugates",
+          "yolcu-aaronson-heule-2023",
+          "nashida-2026-part-ii"
+        ],
+        "relationship": "restricted obstruction; other restrictions are comparisons only",
+        "transfer_limit": "The source obstructions and this finite slope contradiction apply to different specified ansatzes; neither is a universal impossibility result. The recent matrix-barrier preprint has its own restricted methods and reported formal boundary; it is not a proof of the present rank obstruction."
+      }
+    },
+    {
+      "id": "REL-11",
+      "tex_label": "thm:seven-three",
+      "manuscript": "tex/three_family.tex",
+      "title": "Three-family conditional global capture equivalence",
+      "evidence_status": "analytical proof and independent exact reconstruction; conditional positive-seed capture equivalence also proved in Lean",
+      "artifacts": [
+        "certificates/seven_step/three_family.py",
+        "certificates/seven_step/three_family.json",
+        "certificates/seven_step/test_three_family.py",
+        "lean/inverse/Collatz/SevenStep.lean",
+        "lean/inverse/Collatz/SevenRows.lean",
+        "lean/inverse/Collatz/SevenFrontier.lean",
+        "lean/inverse/Collatz/ReleaseBridge.lean",
+        "lean/inverse/SevenAdversarial.lean"
+      ],
+      "lean_coverage": "positive physical seeds at every phase iff the three universal family hypotheses, through a separately authored one-theorem release bridge; all43 source Lean rows independently matched to the printed table",
+      "lean_declarations": [
+        "Collatz.SevenStep.global_capture_of_three",
+        "Collatz.ReleaseBridge.global_capture_iff_three",
+        "Collatz.SevenStep.checked_rows",
+        "Collatz.SevenStep.section_entry"
+      ],
+      "limitations": "Capture of B1,A3,N03 remains three universal hypotheses. Lean proves positive-seed entry within6; manuscript separately proves safe-state entry within11. The modulo27 tagged refinement and phase-affine optimality claim are not formalized here.",
+      "literature": {
+        "citation_keys": [
+          "benamram-2010-monotonicity",
+          "demoura-ullrich-2021",
+          "lean-axioms-424",
+          "lean-validating-proofs"
+        ],
+        "relationship": "model-specific conditional equivalence, with matching Lean bridge",
+        "transfer_limit": "Infrastructure and methodology citations do not remove the three universal assumptions or certify semantic alignment by themselves."
+      }
+    },
+    {
+      "id": "REL-12",
+      "tex_label": "prop:seven-three-barrier",
+      "manuscript": "tex/three_family.tex",
+      "title": "Three growing domains optimal for the second section",
+      "evidence_status": "three disjoint slope-cycle contradictions plus complete exact partition",
+      "artifacts": [
+        "certificates/seven_step/three_family.py",
+        "certificates/seven_step/three_family.json"
+      ],
+      "lean_coverage": "not fully formalized; no full Lean theorem claimed",
+      "lean_declarations": [],
+      "limitations": "Only positive phase-affine direct first-return ranks on this section; cycles of constraints are not asserted orbit cycles.",
+      "literature": {
+        "citation_keys": [
+          "ahmadi-et-al-2014",
+          "yolcu-aaronson-heule-2023"
+        ],
+        "relationship": "restricted first-return obstruction",
+        "transfer_limit": "Constraint cycles are not asserted actual orbit cycles; alternative ranks and later mergers remain possible."
+      }
+    },
+    {
+      "id": "REL-13",
+      "tex_label": "prop:geometry-cycles",
+      "manuscript": "tex/geometry.tex",
+      "title": "Two exact nonnegative three-step-word cycles",
+      "evidence_status": "literal integer replay and period argument",
+      "artifacts": [
+        "certificates/geometry/discrete.py",
+        "certificates/geometry/certificate.json"
+      ],
+      "lean_coverage": "not fully formalized; no full Lean theorem claimed",
+      "lean_declarations": [],
+      "limitations": "Does not assert that all safe integer orbits enter these two cycles.",
+      "literature": {
+        "citation_keys": [
+          "chamberland-1996"
+        ],
+        "relationship": "specific integer cycles of a forced map",
+        "transfer_limit": "Literal augmented-cycle replay is separate from real interpolation or a global cycle census."
+      }
+    },
+    {
+      "id": "REL-14",
+      "tex_label": "cor:geometry-interlacing",
+      "manuscript": "tex/geometry.tex",
+      "title": "Both integer basins in every arithmetic neighborhood",
+      "evidence_status": "consequence of REL-07 and the two exact cycles",
+      "artifacts": [],
+      "lean_coverage": "not fully formalized; no full Lean theorem claimed",
+      "lean_declarations": [],
+      "limitations": "No positive natural-density claim, complete basin partition, or basin dimension is inferred.",
+      "literature": {
+        "citation_keys": [
+          "monks-2006",
+          "monks-et-al-2013",
+          "bernstein-lagarias-1996"
+        ],
+        "relationship": "consequence of this paper's all-progression growth theorem",
+        "transfer_limit": "Classical sufficiency and coding provide context; neither alone supplies both forced basins in every progression or a natural-density conclusion."
+      }
+    },
+    {
+      "id": "REL-15",
+      "tex_label": "prop:binary-zoom",
+      "manuscript": "tex/geometry.tex",
+      "title": "Exact all-depth binary zoom",
+      "evidence_status": "analytical identity with directly supporting Lean lemmas",
+      "artifacts": [
+        "certificates/geometry/discrete.py",
+        "certificates/geometry/certificate.json"
+      ],
+      "lean_coverage": "direct supporting inverse-lap, iterated-lift, affine-lift, and residue-return identities; manuscript supplies the remaining closed-form and basin interpretation",
+      "lean_declarations": [
+        "Collatz.BinaryZoom.inverse_lap",
+        "Collatz.BinaryZoom.laps_lift",
+        "Collatz.BinaryZoom.lift_affine",
+        "Collatz.BinaryZoom.residue_return"
+      ],
+      "limitations": "Finite initial segments preserve destination; binary closeness differs from real closeness.",
+      "literature": {
+        "citation_keys": [
+          "bernstein-1994",
+          "bernstein-lagarias-1996",
+          "kingsbery-et-al-2011"
+        ],
+        "relationship": "explicit forced inverse identity within classical coding context",
+        "transfer_limit": "This exact tile formula is proved here; generic 2-adic symbolic coding is not new and has different size geometry."
+      }
+    },
+    {
+      "id": "REL-16",
+      "tex_label": "prop:integer-cycle-attraction",
+      "manuscript": "tex/geometry.tex",
+      "title": "Attraction of nonnegative admissible integer cycles in the cosine model",
+      "evidence_status": "complete analytic product and local contraction proof",
+      "artifacts": [
+        "lean/inverse/Collatz/CycleMultiplier.lean"
+      ],
+      "lean_coverage": "exact arithmetic inequality 3^oddCount<2^k formalized for a nonempty safe return; cosine derivatives and local complex contraction remain analytic",
+      "lean_declarations": [
+        "Collatz.Physical.cycle_multiplier_lt_one"
+      ],
+      "limitations": "Nonzero conservative admissible forcing and nonnegative integer cycles; no cycle census or noninteger result follows.",
+      "literature": {
+        "citation_keys": [
+          "chamberland-1996",
+          "sindee-2024",
+          "dumont-reiter-2003"
+        ],
+        "relationship": "application of existing generalized integer-cycle attraction theorem",
+        "transfer_limit": "The positive-coordinate period return meets Sindee et al. Theorem 3.3; integer values and first derivatives match its extension. Our direct proof and arithmetic Lean inequality are retained."
+      }
+    },
+    {
+      "id": "REL-17",
+      "tex_label": "prop:integer-capture-disks",
+      "manuscript": "tex/geometry.tex",
+      "title": "Explicit complex capture disks around three integer cycles",
+      "evidence_status": "analytic Taylor bound plus rational inequalities",
+      "artifacts": [
+        "certificates/geometry/integer_disks.py",
+        "certificates/geometry/certificate.json"
+      ],
+      "lean_coverage": "not fully formalized; no full Lean theorem claimed",
+      "lean_declarations": [],
+      "limitations": "Sufficient local disks; the negative cycle is outside the safe nonnegative integer state space.",
+      "literature": {
+        "citation_keys": [
+          "chamberland-1996",
+          "solovyev-hales-2013"
+        ],
+        "relationship": "specific rational capture neighborhoods",
+        "transfer_limit": "General integer attraction does not supply these numerical disks; the external interval checker is not yet a Lean analytic proof."
+      }
+    },
+    {
+      "id": "REL-18",
+      "tex_label": "prop:noninteger-traps",
+      "manuscript": "tex/geometry.tex",
+      "title": "Two noninteger attracting cycles",
+      "evidence_status": "rational disk inclusions and contraction proof",
+      "artifacts": [
+        "certificates/geometry/attracting_disks.py",
+        "certificates/geometry/rational.py",
+        "certificates/geometry/certificate.json"
+      ],
+      "lean_coverage": "not fully formalized; no full Lean theorem claimed",
+      "lean_declarations": [],
+      "limitations": "Only the stated cosine continuation; no exhaustive attractor census.",
+      "literature": {
+        "citation_keys": [
+          "dumont-reiter-2003",
+          "solovyev-hales-2013"
+        ],
+        "relationship": "specific noninteger cycles and trapping certificates",
+        "transfer_limit": "Agreement at integer values/derivatives does not transfer noninteger dynamics between interpolations."
+      }
+    },
+    {
+      "id": "REL-19",
+      "tex_label": "thm:real-separator",
+      "manuscript": "tex/geometry.tex",
+      "title": "Complete real basin partition on the interval [0,0.18]",
+      "evidence_status": "gap-free rational interval cover and monotonicity proof",
+      "artifacts": [
+        "certificates/geometry/separator.py",
+        "certificates/geometry/rational.py",
+        "certificates/geometry/certificate.json"
+      ],
+      "lean_coverage": "not fully formalized; no full Lean theorem claimed",
+      "lean_declarations": [],
+      "limitations": "Classifies this real interval and one common complex-boundary point, not the entire complex boundary.",
+      "literature": {
+        "citation_keys": [
+          "chamberland-1996",
+          "lygeros-rozier-2014",
+          "solovyev-hales-2013"
+        ],
+        "relationship": "specific real-segment separator certificate",
+        "transfer_limit": "Unforced real-interval results suggest future phase-dependent bounds but do not certify this forced segment."
+      }
+    },
+    {
+      "id": "REL-20",
+      "tex_label": "prop:complex-phase-dependence",
+      "manuscript": "tex/geometry.tex",
+      "title": "A certified complex point with phase-dependent destination",
+      "evidence_status": "exact rational complex-ball trace and certified target disks",
+      "artifacts": [
+        "certificates/geometry/phase_trace.py",
+        "certificates/geometry/rational.py",
+        "certificates/geometry/certificate.json"
+      ],
+      "lean_coverage": "not fully formalized; no full Lean theorem claimed",
+      "lean_declarations": [],
+      "limitations": "The marked point is certified; surrounding floating-point raster pixels remain numerical observations.",
+      "literature": {
+        "citation_keys": [
+          "dumont-reiter-2001",
+          "letherman-schleicher-wood-1999",
+          "solovyev-hales-2013"
+        ],
+        "relationship": "specific complex launch certificate; established visualization context",
+        "transfer_limit": "Numerical images are not global basin proofs; Fatou/wandering-domain conclusions for different interpolations are not imported."
+      }
+    }
+  ],
+  "literature_scope": "Citation keys resolve in tex/references.tex. Relationships identify attribution and limits, not a literature-wide priority certification."
+}

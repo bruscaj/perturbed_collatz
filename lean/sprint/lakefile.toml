@@ -1,0 +1,6 @@
+name = "collatz_sprint"
+defaultTargets = ["Sprint"]
+
+[[lean_lib]]
+name = "Sprint"
+roots = ["All", "RootInverseHeight", "RootPacket"]

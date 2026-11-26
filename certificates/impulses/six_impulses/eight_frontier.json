@@ -1,0 +1,87 @@
+{
+  "signed_closures": [
+    {
+      "sign": 1,
+      "size": 6,
+      "peak": 8
+    },
+    {
+      "sign": -1,
+      "size": 14,
+      "peak": 26
+    },
+    {
+      "sign": 1,
+      "size": 85,
+      "peak": 4616
+    },
+    {
+      "sign": -1,
+      "size": 317,
+      "peak": 15578
+    },
+    {
+      "sign": 1,
+      "size": 1218,
+      "peak": 125252
+    },
+    {
+      "sign": -1,
+      "size": 3279,
+      "peak": 642842
+    },
+    {
+      "sign": 1,
+      "size": 10193,
+      "peak": 18534824
+    },
+    {
+      "sign": -1,
+      "size": 27870,
+      "peak": 90272312
+    }
+  ],
+  "escaping_levels": [
+    {
+      "prefixes": 15,
+      "outside_values": 11,
+      "max_endpoint": 26
+    },
+    {
+      "prefixes": 2854,
+      "outside_values": 314,
+      "max_endpoint": 15578
+    },
+    {
+      "prefixes": 2416542,
+      "outside_values": 3276,
+      "max_endpoint": 642842
+    },
+    {
+      "prefixes": 2383451629,
+      "outside_values": 27867,
+      "max_endpoint": 90272312
+    }
+  ],
+  "one_pass_peak": 90272312,
+  "peak_seed": 1,
+  "witness_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      21,
+      13
+    ],
+    [
+      27,
+      6
+    ],
+    [
+      52,
+      5
+    ]
+  ],
+  "peak_step": 135
+}

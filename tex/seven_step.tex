@@ -1,0 +1,533 @@
+\section{A fixed seven-step forcing}
+\label{sec:seven-step}
+
+We now fix the physical impulse word
+\[
+ d=(0,0,1,-1,0,1,-1),\qquad
+ h=(0,0,0,1,0,0,1),
+\]
+with phases numbered from zero.  Thus $d_i=h_{i+1}-h_i$, with subscripts
+read modulo seven.  All statements in this section use the continued
+integer dynamics: zero is not an absorbing state.  Write
+$F(n,i)=(T(n)+d_i,i+1\bmod7)$ for the physical map on integer--phase
+pairs, where $T$ is the shortcut map displayed below.  All free
+parameters in arithmetic domains are integers.  The invariant domain
+\[
+ \mathcal D=\{(n,i):n\ge h_i\}
+\]
+contains every positive initial integer at every phase, together with
+zero at the five phases where $h_i=0$.
+
+Put $z=n+1-h_i$.  On $\mathcal D$ one has $z\ge1$, and the prescribed
+updates in this coordinate are the chronological word $UUUTUUT$, where
+\[
+ T(z)=\begin{cases}z/2&z\text{ even},\\(3z+1)/2&z\text{ odd},\end{cases}
+ \qquad
+ U(z)=\begin{cases}3z/2&z\text{ even},\\(z+1)/2&z\text{ odd}.\end{cases}
+\]
+Both maps preserve the positive integers.  This coordinate formula follows
+directly from
+\[
+ T(n)+d_i+1-h_{i+1}=T(z-1+h_i)+1-h_i.
+\]
+In particular, no choice between $T$ and $U$ is made during an orbit.
+
+The phase-indexed physical values
+\begin{equation}
+ (c_0,c_1,c_2,c_3,c_4,c_5,c_6)=(0,0,0,1,1,2,2)
+ \label{eq:seven-cycle}
+\end{equation}
+form a cycle: $T(c_i)+d_i=c_{i+1}$ at every phase.  In positive
+coordinates its successive states are
+\[
+ (1,0),(1,1),(1,2),(1,3),(2,4),(3,5),(2,6).
+\]
+We say that a state is \emph{captured} if its forward orbit visits one
+of the states $(c_i,i)$, and write $\operatorname{Cap}(n,i)$ for this
+property.  This definition specifies the destination cycle, as well as
+eventual periodicity.
+
+\subsection{Section states and the exact open obligations}
+
+Consider the section
+\[
+ \mathcal S=\{(z,i):z=3m,\ m\ge1,\ i\in\{3,5,6\}\}.
+\]
+For clarity, a pair $(m,i)$ in a section formula denotes the physical
+state
+\begin{equation}
+ s(m,i)=(3m-1+h_i,i).
+ \label{eq:seven-section-launch}
+\end{equation}
+Let $P$ denote the first \emph{strictly later} visit to $\mathcal S$.
+A visit after a shrinking step counts.  Return existence will be proved
+below, independently of capture.
+
+The relevant natural-valued ranks are
+\begin{align}
+ V(m,3)&=V(m,5)=m,& V(m,6)&=2m,\\
+ \rho(m,i)&=2V(m,i)+\mathbf1_{\{i=6\}}.
+ \label{eq:seven-rho}
+\end{align}
+The same rank is used for all section phases simultaneously.
+
+\begin{theorem}[Four-family conditional capture]
+\label{thm:seven-four}
+For the fixed forcing $d$, the following are equivalent.
+\begin{enumerate}
+\item Every positive physical integer, at every initial phase, is captured
+by \eqref{eq:seven-cycle}.
+\item Each of the following four statements holds:
+\begin{align*}
+ \mathrm{S00}:&\quad
+ \operatorname{Cap}(s(4t+3,3))\quad &&\text{for every }t\ge0,\\
+ \mathrm{S01}:&\quad
+ \operatorname{Cap}(s(2t,5)) &&\text{for every }t\ge1,\\
+ \mathrm{S02}:&\quad
+ \operatorname{Cap}(s(32t+3,5)) &&\text{for every }t\ge0,\\
+ \mathrm{S03}:&\quad
+ \operatorname{Cap}(s(128t+115,5)) &&\text{for every }t\ge0.
+\end{align*}
+\end{enumerate}
+In the second display, $\operatorname{Cap}(s(m,i))$ means capture of the
+physical state defined in \eqref{eq:seven-section-launch}.  Equivalently,
+every failure of capture would give a least-$\rho$ failure in this
+four-family union.  None of the four universal hypotheses is discharged
+by the theorem.
+\end{theorem}
+
+The proof combines finite exact affine checks with the integer descent
+and long-return arguments below.  The associated Python checks are
+included in \path{certificates/seven_step/}; they are not Lean proofs.
+The displayed families are infinite arithmetic domains, rather than
+four numerical starting values.
+
+\subsection{Why the finite affine checks cover infinite domains}
+
+Every computational check in the reduction uses an input of the form
+\[
+ z=Aq+B,\qquad q\ge q_0,
+\]
+and propagates the two coefficients exactly.  When $A$ is even, every
+input in this domain has the parity of $B$.  A physical shortcut step
+therefore acts on the entire domain by
+\[
+ (a,b)\longmapsto
+ \begin{cases}
+ (a/2,b/2+d_i),&b\text{ even},\\
+ (3a/2,(3b+1)/2+d_i),&b\text{ odd}.
+ \end{cases}
+\]
+Here $(a,b)$ are physical-coordinate coefficients; the checker first
+substitutes $n=z-1+h_i$ and converts back after each step.  At a candidate
+section phase, the free coefficient remains divisible by three.  Hence
+membership in the section is decided for the entire domain by the
+constant coefficient modulo three.  Safety is checked at $q_0$ together
+with positivity of the coefficient.
+
+For the entrance calculation we use $A=384=3\cdot2^7$ and at most
+seven updates.  For the short-return calculation from phase $i$ we use
+$A=3\cdot2^{L_i}$ and at most $L_i$ updates.  The factor $2^{L_i}$
+fixes every required parity; multiplying by an odd integer at a step
+does not consume any additional powers of two.  The factor of three
+fixes all section tests.  Thus these are symbolic computations on whole
+infinite rays, not numerical tests at one or two representatives.
+
+An affine inequality on $q\ge q_0$ follows by checking that its slope
+is nonnegative and its value at $q_0$ is nonnegative; strict inequalities
+are treated with the corresponding integer minimum.  A negative slope
+cannot be discarded by testing only small $q$.  The complete residue
+partitions below use $0\le B<A$, with $q_0=1$ when the initial positive
+coordinate would otherwise be zero.  This explicitly accounts for that
+boundary case.
+
+\subsection{Every orbit reaches the section}
+
+Start at phase zero, with $z=384q+r$, $0\le r<384$.  Propagate the
+physical recurrence until a section hit or the end of one period.
+Exactly 370 residue domains hit the section.  The fourteen remaining
+domains have the following full-period returns; the output is $aq+b$.
+All entries in this table have $q\ge0$.
+\begin{center}
+\begin{tabular}{rrr|rrr}
+\hline
+$r$&$a$&$b$&$r$&$a$&$b$\\ \hline
+3&27&2&195&9&5\\
+9&9&2&201&3&2\\
+44&81&11&236&27&17\\
+67&9&2&259&27&20\\
+108&27&8&300&81&65\\
+131&27&11&323&9&8\\
+172&81&38&364&27&26\\ \hline
+\end{tabular}
+\end{center}
+In each row $a<384$ and $1\le b<r$.  An avoiding period therefore
+strictly lowers the positive integer $z$.  Indefinite avoidance would
+produce an infinite strictly decreasing sequence of positive integers,
+which is impossible.  An arbitrary initial phase can be aligned to zero
+in at most six updates if no earlier section hit occurs.  This proves
+entry from every state in $\mathcal D$.  Applying entry after one
+further physical update proves that $P$ is total on $\mathcal S$.
+
+The fourteen returns also satisfy the common envelope
+\begin{equation}
+ z_{\mathrm{next}}\le f(z):=\frac{27z+220}{128},
+ \qquad f\left(\frac{220}{101}\right)=\frac{220}{101}.
+ \label{eq:seven-avoid-envelope}
+\end{equation}
+This follows row by row by comparing coefficients and constants.
+The 370 exiting domains satisfy
+\begin{equation}
+ w_j z_{\mathrm{exit}}\le\frac{27}{8}z,
+ \qquad (w_3,w_5,w_6)=(1,1,2),
+ \label{eq:seven-exit-envelope}
+\end{equation}
+where $j$ is the phase of the first section hit.  The check of
+\eqref{eq:seven-exit-envelope} includes its phase-six factor of two.
+It is not an unweighted estimate reused after a change of rank.
+
+\subsection{All sufficiently long returns strictly descend}
+
+From a phase-five section launch, either the section is hit during
+alignment or the phase-zero value is at most $(3z+5)/4$.  From phase
+six, its phase-zero value is at most $(3z+1)/2$.  These two bounds use
+respectively two and one updates and follow from the four and two
+fixed-parity domains.
+
+If there is then one complete avoiding period before the next section
+hit, composing these bounds with \eqref{eq:seven-avoid-envelope} and
+\eqref{eq:seven-exit-envelope} gives
+\begin{align}
+ w_jz_{\mathrm{exit}}
+ &\le\frac{2187z+27405}{4096}<z
+ &&\text{from phase five, if }z\ge15,\\
+ w_jz_{\mathrm{exit}}
+ &\le\frac{2187z+12609}{2048}<2z
+ &&\text{from phase six, if }z\ge9.
+ \label{eq:seven-long-bounds}
+\end{align}
+For example, the first strict inequality is equivalent to
+$1909z>27405$ and holds already at $z=15$.  Its left-hand side
+increases thereafter.  The second is equivalent to $1909z>12609$
+and holds at $z=9$.
+
+These estimates cover arbitrarily many avoiding periods.  Indeed,
+the initial alignment upper bound is above $220/101$ at the stated
+threshold.  Since $f$ is increasing and contracts towards that fixed
+point, $f^k(B)\le f(B)$ for every $k\ge1$ and every such initial
+bound $B$.  Applying the weighted exit estimate after the last avoiding
+period therefore gives the same upper bound for every possible wait.
+This is the infinite-time part of the reduction.
+
+The last update of a phase-zero period ends at phase zero, which is
+outside $\mathcal S$.  Consequently a return later than alignment
+plus six updates entails a full avoiding period.  At phase three all
+returns occur within three updates; the following complete table on
+$m=8q+r$ verifies this directly:
+\begin{center}
+\begin{tabular}{rrrr}
+\hline
+$r$&output parameter&output phase&updates\\ \hline
+0&$6q$&5&2\\
+1&$6q+1$&5&2\\
+2&$3q+1$&6&3\\
+3&$18q+7$&5&2\\
+4&$6q+3$&5&2\\
+5&$6q+4$&5&2\\
+6&$q+1$&6&3\\
+7&$18q+16$&5&2\\ \hline
+\end{tabular}
+\end{center}
+Here $q\ge1$ in the first row and $q\ge0$ in the others.
+Thus every first return failing to strictly decrease $V$, apart from
+the explicitly handled small inputs, occurs within the caps
+\begin{equation}
+ L_3=3,\qquad L_5=8,\qquad L_6=7.
+ \label{eq:seven-caps}
+\end{equation}
+The small inputs outside the thresholds in \eqref{eq:seven-long-bounds}
+have the exact returns
+\begin{center}
+\begin{tabular}{rrr}
+\hline
+launch $(m,i)$&return $(m',j)$&updates\\ \hline
+$(1,5)$&$(1,5)$&7\\
+$(2,5)$&$(3,6)$&1\\
+$(3,5)$&$(9,3)$&5\\
+$(4,5)$&$(6,6)$&1\\
+$(1,6)$&$(1,3)$&4\\
+$(2,6)$&$(1,3)$&11\\ \hline
+\end{tabular}
+\end{center}
+In particular, the eleven-update return is not omitted by the
+phase-six cap: its $V$-rank drops from $4$ to $1$.
+
+\subsection{A complete direct first-return classification}
+
+Use the residue partitions $m=2^{L_i}q+r$ at phases $i=3,5,6$.
+There are $8+256+128=392$ infinite input domains.  The exact propagation
+described above stops at the first later section visit.  Domains that
+have not returned by their cap are covered by the long-return proof.
+All other outputs are affine in $q$, so their rank differences can
+be classified on the entire legal ray.
+
+The six direct growing families are as follows.  Parameters are
+nonnegative except for S01, where $t\ge1$.
+\begin{center}
+\begin{tabular}{llllr}
+\hline
+ID&launch $(m,i)$&return $(m',j)$&$V_{\rm out}-V_{\rm in}$&updates\\ \hline
+S00&$(4t+3,3)$&$(9t+7,5)$&$5t+4$&2\\
+S01&$(2t,5)$&$(3t,6)$&$4t$&1\\
+S02&$(32t+3,5)$&$(81t+9,3)$&$49t+6$&5\\
+S03&$(128t+115,5)$&$(243t+220,5)$&$115t+105$&7\\
+S06&$(16t+7,6)$&$(81t+36,3)$&$49t+22$&4\\
+S08&$(64t+15,6)$&$(243t+58,5)$&$115t+28$&6\\ \hline
+\end{tabular}
+\end{center}
+The labels are retained to make the certificates stable; gaps in the
+label sequence do not denote missing cases.  The six families occupy
+respectively $2,128,8,2,8,2$ of the fixed-modulus input domains.
+Nine domains require the long-return argument.  On every other domain
+the first return strictly lowers $V$, except possibly at the three
+individual launches
+\begin{equation}
+ (m,i)=(1,3),(2,3),(1,5).
+ \label{eq:seven-finite-base}
+\end{equation}
+For a domain containing one of these launches, every larger parameter
+strictly descends.  Thus a finite exception is not an entire exceptional
+residue class.
+
+The exact chains
+\[
+ (1,3)\xrightarrow{2}(1,5),\qquad
+ (2,3)\xrightarrow{3}(1,6)\xrightarrow{4}(1,3)
+               \xrightarrow{2}(1,5)
+\]
+settle \eqref{eq:seven-finite-base}; the arrows count literal updates.
+The launch $(1,5)$ lies on the cycle \eqref{eq:seven-cycle} and
+returns to itself after seven updates.  No large finite basin census
+is needed for these base cases.
+
+For an illustration of a whole growing-parameter case that the rank
+already resolves, the first return
+\[
+ (64t+63,6)\longmapsto(81t+80,5),\qquad t\ge0,
+\]
+has an unweighted parameter increase but a strict $V$-decrease
+$47t+46$.  Calling that case reduced means that it cannot be a
+least-rank failure.  It does not independently prove capture of all
+its endpoints.
+
+\subsection{A merger closes the two phase-six induction cases}
+
+Suppose $m=4q+3$ and set $x=3m=12q+9$, so $x\equiv1\pmod4$.
+The positive-coordinate launch $(x,6)$ follows its prescribed two
+steps as
+\[
+ (x,6)\longmapsto\left(\frac{3x+1}{2},0\right)
+       \longmapsto\left(\frac{9x+3}{4},1\right).
+\]
+The alternative section launch $(2x,5)$ follows three prescribed
+steps as
+\[
+ (2x,5)\longmapsto(3x,6)
+       \longmapsto\left(\frac{9x+1}{2},0\right)
+       \longmapsto\left(\frac{9x+3}{4},1\right).
+\]
+The indicated parities follow from $x\equiv1\pmod4$.  Both histories
+are positive and meet at the same integer and the same phase.  In
+physical coordinates this common state is $(27q+20,1)$.  Their future
+orbits therefore agree, although their elapsed times differ.
+
+The old ranks of the launches tie, but the refined rank has
+\begin{equation}
+ \rho(m,6)-\rho(2m,5)=(4m+1)-4m=1.
+ \label{eq:seven-merger-gap}
+\end{equation}
+Both S06 and S08 satisfy $m\equiv3\pmod4$ throughout their domains.
+Their alternate section parameters are respectively $32t+14$ and
+$128t+30$, at phase five.  Their common positive-coordinate states
+are respectively $(108t+48,1)$ and $(432t+102,1)$.
+
+Every old strict $V$-decrease survives this refinement.  Indeed,
+$V(a)-V(b)\ge1$ implies
+\[
+ \rho(a)-\rho(b)
+ =2\bigl(V(a)-V(b)\bigr)+\mathbf1_{\{i_a=6\}}
+                         -\mathbf1_{\{i_b=6\}}\ge1.
+\]
+This argument covers all long returns as well as the short affine
+domains.  It does not cover equal-$V$ transitions automatically.  In
+particular, the finite step $(2,3)\to(1,6)$ increases $\rho$ from
+$4$ to $5$; it is valid because its explicit finite capture chain
+has already been proved, not because it decreases the rank.
+
+For completeness, the fixed-modulus classification after the merger
+has the following counts.  The column labelled ``finite'' counts
+domains with a single exceptional base input; the rest of such a
+domain strictly descends.
+\begin{center}
+\begin{tabular}{rrrrrrr}
+\hline
+phase&domains&forward&long&merger&residual&finite\\ \hline
+3&8&4&0&0&2&2\\
+5&256&113&4&0&138&1\\
+6&128&113&5&10&0&0\\ \hline
+\end{tabular}
+\end{center}
+Thus no least-$\rho$ failure can occur at phase six.  This does not
+remove S01 automatically: its phase-six return has greater rank
+than the original S01 launch.  Any composed rule must be compared
+against the original rank.
+
+\begin{proof}[Proof of Theorem~\ref{thm:seven-four}]
+Every launch in the four hypotheses is a positive physical state,
+so universal positive-seed capture implies the four hypotheses.
+For the converse, assume them.  If any state in $\mathcal D$ failed
+capture, section entry would provide a failed section state.  Choose
+one of least natural-valued rank $\rho$.  It is not one of
+\eqref{eq:seven-finite-base}, since those states are captured.
+It is not in S00--S03 by hypothesis.  Every other section state
+either has a strict rank-decreasing forward return, or belongs to
+S06 or S08 and has a phase-correct merger with the smaller-ranked
+alternative launch above.  In either case the smaller state has
+the same failed future.  This contradicts minimality.  Hence every
+state in $\mathcal D$, and in particular every positive physical
+seed at every phase, is captured.
+\end{proof}
+
+There is also an equivalent proof-obligation formulation useful for
+further work.  For every launch $a$ in the four remaining families,
+it is sufficient to prove either capture directly or the existence
+of a section launch $b$ with $\rho(b)<\rho(a)$ and nonnegative
+integers $u,v$ such that $F^u(a)=F^v(b)$.  The same least-rank
+argument then completes the proof.  Equality must be equality of
+augmented states.  Changing the forcing or using a different rank
+for different certificates would not establish these obligations.
+
+Elimination using a smaller predecessor already appears in Shaw's notion
+of an impure integer \cite[Definition~2.1 and Theorem~3.1]{shaw-2006}.
+His map uses the unshortened odd update $3n+1$, and impurity means that
+the integer itself is reached from a smaller positive input. Here we
+allow the two futures to merge, possibly after different numbers of
+updates, and compare their launches using the phase-dependent rank
+$\rho$. Equality at the merger must include the phase. Thus the
+predecessor strategy has a direct antecedent, while our guarded rules
+require their own forced arithmetic and rank inequalities.
+
+\subsection{A sharp limitation of direct phase-affine ranking}
+
+The four-family result uses alternative launches.  It does not
+contradict the following obstruction to a more restricted method.
+
+\begin{proposition}[Six direct growing domains are unavoidable]
+\label{prop:seven-six-barrier}
+There is an explicit set of eleven pairwise disjoint first-return
+affine domains of $P$ such that, for every choice of positive real
+weights $w_3,w_5,w_6$ and fixed real constants $c_3,c_5,c_6$, the
+rank $R(m,i)=w_i m+c_i$ strictly increases on an infinite tail of at
+least six of those domains.  For $V$, exactly the six S-domains in
+this witness set grow; the complete classifier above has no other
+growing tails.
+\end{proposition}
+
+\begin{proof}
+In addition to the six S-domains already listed, the following five
+domains are first returns.  All parameters are nonnegative except
+for D35, where $t\ge1$.
+\begin{center}
+\begin{tabular}{lllr}
+\hline
+ID&launch $(m,i)$&return $(m',j)$&updates\\ \hline
+D53&$(32t+31,5)$&$(27t+27,3)$&5\\
+D35&$(4t+1,3)$&$(3t+1,5)$&2\\
+D36&$(8t+2,3)$&$(3t+1,6)$&3\\
+D65&$(8192t+6239,6)$&$(6561t+4999,5)$&13\\
+D56&$(256t+147,5)$&$(81t+47,6)$&8\\ \hline
+\end{tabular}
+\end{center}
+These eleven domains are pairwise disjoint: at a common phase their
+residues disagree modulo the greatest common divisor of their input
+moduli.  The bundled checker verifies their exact parities, safety,
+endpoints, and absence of earlier section visits on every parameter.
+
+For a branch $(Mt+r,i)\to(At+b,j)$ the leading coefficient of
+$R_{\mathrm{out}}-R_{\mathrm{in}}$ is $w_jA-w_iM$.
+If every coefficient on a directed phase cycle were nonpositive,
+multiplying the inequalities would force the product of the
+unweighted slopes $A/M$ to be at most one.  The following six
+edge-disjoint cycles violate that bound:
+\begin{center}
+\begin{tabular}{lr}
+\hline
+cycle&product of slopes\\ \hline
+S03&$243/128$\\
+S00, D53&$243/128$\\
+S02, D35&$243/128$\\
+S06, D36&$243/128$\\
+S01, D65&$19683/16384$\\
+S08, D56&$19683/16384$\\ \hline
+\end{tabular}
+\end{center}
+Every product exceeds one.  Hence each cycle contains a domain
+with a strictly positive leading rank change.  The fixed offsets
+cannot remove growth on its infinite tail.  Disjointness gives six
+different input domains.  For $V$, the six S-domain leading changes
+are positive and the five D-domain leading changes are negative.
+The complete direct classification already excludes other growing
+tails.
+\end{proof}
+
+These are cycles of constraints on a proposed rank; the proof does
+not assert that their guards form periodic positive trajectories.
+The count refers to these specified witness domains: arbitrary
+subdivision of a residue domain is not a new obstruction.  The
+obstruction concerns this section and direct first-return
+comparisons only.  It does not exclude residue-dependent ranks,
+unbounded recursive rules, later meetings, or the alternative-launch
+merger used above.
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=0.93\linewidth]{figures/seven_step_merger.pdf}
+\caption{The phase-correct merger used by the four-family reduction.
+The two histories reach the same augmented state after different numbers
+of updates. Their launch ranks differ by exactly one in $\rho$.
+This figure concerns $\mathcal S$ and $\rho$; the alternative section
+and rank in Section~\ref{sec:seven-three} are separate constructions.}
+\label{fig:seven-merger}
+\end{figure}
+
+\subsection{Verification scope of the four-family reduction}
+
+Running
+\begin{verbatim}
+python3 certificates/seven_step/verify.py
+python3 certificates/seven_step/test_mutations.py
+\end{verbatim}
+reconstructs the physical-coordinate certificates, checks every
+stored field against the reconstructed result, and compares the
+frontier with an independently implemented $T/U$ reconstruction.
+The latter also checks the coordinate conjugacy on all fourteen
+phase--parity combinations.  The hostile checks alter coefficients,
+phases, times, parameter bounds, rank descriptions, scope claims,
+coverage lists, finite exceptions, and envelopes; malformed or
+empty certificate data are rejected.  The assertion-based entry
+points reject optimized Python, which would disable their checks.
+
+The finite procedure justifies the affine facts used in the proof.
+The universal conclusion also uses the written arguments for
+arbitrary waits and least-rank induction.  No result in this section
+is claimed to be kernel-checked in Lean.  Nor does the section
+establish actual capture for the four unresolved universal domains.
+
+For this reduction, the next mathematical requirement is an exhaustive treatment of
+S00--S03 under one compatible order, or another complete proof of
+their capture.  Proper subprogressions of these families can admit
+additional reductions without resolving their complements.  Counts
+of covered subprogressions, growth of inverse trees, and finite
+seed experiments do not replace that remaining universal statement.
+
+\input{tex/three_family}

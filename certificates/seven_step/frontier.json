@@ -1,0 +1,330 @@
+{
+  "status": "passed",
+  "rank": "rho(m,3)=rho(m,5)=2m; rho(m,6)=4m+1",
+  "physical_forcing": [
+    0,
+    0,
+    1,
+    -1,
+    0,
+    1,
+    -1
+  ],
+  "height": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1
+  ],
+  "section_phases": [
+    3,
+    5,
+    6
+  ],
+  "coordinate": "z=n+1-height[phase]; section parameter m=z/3",
+  "return_convention": "First strictly later section visit, including shrinking-step visits",
+  "merger": {
+    "general_domain": "phase6, m=4q+3, every integer q>=0",
+    "original_trace": [
+      {
+        "phase": 6,
+        "physical_n_a": 12,
+        "physical_n_b": 9
+      },
+      {
+        "phase": 0,
+        "physical_n_a": 18,
+        "physical_n_b": 13
+      },
+      {
+        "phase": 1,
+        "physical_n_a": 27,
+        "physical_n_b": 20
+      }
+    ],
+    "alternate_trace": [
+      {
+        "phase": 5,
+        "physical_n_a": 24,
+        "physical_n_b": 17
+      },
+      {
+        "phase": 6,
+        "physical_n_a": 36,
+        "physical_n_b": 27
+      },
+      {
+        "phase": 0,
+        "physical_n_a": 54,
+        "physical_n_b": 40
+      },
+      {
+        "phase": 1,
+        "physical_n_a": 27,
+        "physical_n_b": 20
+      }
+    ],
+    "refined_rank_gap": 1,
+    "minimum_preserved_old_strict_gap": 1,
+    "families": [
+      {
+        "id": "S06",
+        "original_m_a": 16,
+        "original_m_b": 7,
+        "alternate_phase": 5,
+        "alternate_m_a": 32,
+        "alternate_m_b": 14,
+        "original_trace": [
+          {
+            "phase": 6,
+            "physical_n_a": 48,
+            "physical_n_b": 21
+          },
+          {
+            "phase": 0,
+            "physical_n_a": 72,
+            "physical_n_b": 31
+          },
+          {
+            "phase": 1,
+            "physical_n_a": 108,
+            "physical_n_b": 47
+          }
+        ],
+        "alternate_trace": [
+          {
+            "phase": 5,
+            "physical_n_a": 96,
+            "physical_n_b": 41
+          },
+          {
+            "phase": 6,
+            "physical_n_a": 144,
+            "physical_n_b": 63
+          },
+          {
+            "phase": 0,
+            "physical_n_a": 216,
+            "physical_n_b": 94
+          },
+          {
+            "phase": 1,
+            "physical_n_a": 108,
+            "physical_n_b": 47
+          }
+        ],
+        "refined_rank_gap": 1
+      },
+      {
+        "id": "S08",
+        "original_m_a": 64,
+        "original_m_b": 15,
+        "alternate_phase": 5,
+        "alternate_m_a": 128,
+        "alternate_m_b": 30,
+        "original_trace": [
+          {
+            "phase": 6,
+            "physical_n_a": 192,
+            "physical_n_b": 45
+          },
+          {
+            "phase": 0,
+            "physical_n_a": 288,
+            "physical_n_b": 67
+          },
+          {
+            "phase": 1,
+            "physical_n_a": 432,
+            "physical_n_b": 101
+          }
+        ],
+        "alternate_trace": [
+          {
+            "phase": 5,
+            "physical_n_a": 384,
+            "physical_n_b": 89
+          },
+          {
+            "phase": 6,
+            "physical_n_a": 576,
+            "physical_n_b": 135
+          },
+          {
+            "phase": 0,
+            "physical_n_a": 864,
+            "physical_n_b": 202
+          },
+          {
+            "phase": 1,
+            "physical_n_a": 432,
+            "physical_n_b": 101
+          }
+        ],
+        "refined_rank_gap": 1
+      }
+    ]
+  },
+  "long_returns": {
+    "phase_zero_domains": 384,
+    "avoiding_domains": 14,
+    "exit_domains": 370,
+    "weighted_exit_envelope": "w_out*z_out <= 27z/8",
+    "avoiding_envelope": "z_next <= (27z+220)/128",
+    "long_cases": [
+      {
+        "phase": 5,
+        "z_threshold": 15,
+        "weighted_z_bound_a": "2187/4096",
+        "weighted_z_bound_b": "27405/4096",
+        "finite_checks": [
+          [
+            1,
+            1,
+            5,
+            7
+          ],
+          [
+            2,
+            3,
+            6,
+            1
+          ],
+          [
+            3,
+            9,
+            3,
+            5
+          ],
+          [
+            4,
+            6,
+            6,
+            1
+          ]
+        ]
+      },
+      {
+        "phase": 6,
+        "z_threshold": 9,
+        "weighted_z_bound_a": "2187/2048",
+        "weighted_z_bound_b": "12609/2048",
+        "finite_checks": [
+          [
+            1,
+            1,
+            3,
+            4
+          ],
+          [
+            2,
+            1,
+            3,
+            11
+          ]
+        ]
+      }
+    ]
+  },
+  "complete_frontier": {
+    "infinite_input_domains": 392,
+    "audit": [
+      {
+        "phase": 3,
+        "input_modulus": 8,
+        "strict_forward_rank_decrease": 4,
+        "finite_base_exception": 2,
+        "remaining_growing": 2
+      },
+      {
+        "phase": 5,
+        "input_modulus": 256,
+        "remaining_growing": 138,
+        "finite_base_exception": 1,
+        "strict_forward_rank_decrease": 113,
+        "long_return_rank_decrease": 4
+      },
+      {
+        "phase": 6,
+        "input_modulus": 128,
+        "strict_forward_rank_decrease": 113,
+        "long_return_rank_decrease": 5,
+        "strict_relational_reduction": 10
+      }
+    ],
+    "finite_base_exceptions": [
+      [
+        3,
+        1,
+        5,
+        1,
+        2
+      ],
+      [
+        3,
+        2,
+        6,
+        1,
+        3
+      ],
+      [
+        5,
+        1,
+        5,
+        1,
+        7
+      ]
+    ],
+    "remaining_families": [
+      {
+        "id": "S00",
+        "phase": 3,
+        "M": 4,
+        "residue": 3,
+        "A": 9,
+        "b": 7,
+        "out": 5,
+        "steps": 2,
+        "t_min": 0
+      },
+      {
+        "id": "S01",
+        "phase": 5,
+        "M": 2,
+        "residue": 0,
+        "A": 3,
+        "b": 0,
+        "out": 6,
+        "steps": 1,
+        "t_min": 1
+      },
+      {
+        "id": "S02",
+        "phase": 5,
+        "M": 32,
+        "residue": 3,
+        "A": 81,
+        "b": 9,
+        "out": 3,
+        "steps": 5,
+        "t_min": 0
+      },
+      {
+        "id": "S03",
+        "phase": 5,
+        "M": 128,
+        "residue": 115,
+        "A": 243,
+        "b": 220,
+        "out": 5,
+        "steps": 7,
+        "t_min": 0
+      }
+    ]
+  },
+  "scope": "S06 and S08 are whole-family induction reductions; four infinite obligations remain.",
+  "numeric_seed_census": false
+}

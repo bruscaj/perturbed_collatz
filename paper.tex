@@ -1,0 +1,119 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{mathtools,amssymb,amsthm}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage[section]{placeins}
+\usepackage{xcolor}
+\usepackage[breaklinks=true,colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\setlist{topsep=5pt,itemsep=3pt}
+\setlength{\emergencystretch}{2em}
+\hypersetup{pdftitle={Periodic forcing of the shortcut Collatz map},pdfauthor={Research draft; authorship pending confirmation}}
+\title{Periodic forcing of the shortcut Collatz map\\[4pt]
+\large Admissibility, synchronization, inverse basins, geometry, and conditional reductions}
+\author{Research draft --- authorship to be confirmed}
+\date{26 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study the shortcut Collatz map with a fixed periodic sequence of integer
+impulses, keeping the forcing phase as part of the state and continuing
+the dynamics through zero. We classify conservative words that preserve
+nonnegativity from every positive seed at every phase. For words with two,
+four, six, or eight nonzero impulses, exact finite computations combined
+with an exhaustive gap reduction give sharp bounds on trajectories launched
+from the base set. We prove that a word of logarithmic period can synchronize
+any prescribed finite interval from every launch phase. For the fixed word
+$(1,0,-1)$, an exact inverse-branch certificate and an arithmetic steering
+argument give backward-orbit growth of order at least $X^\delta$ in every
+progression, with $0.535<\delta<0.536$. For a separate fixed seven-step word,
+we give two conditional capture reductions: a four-family reduction using
+phase-correct mergers, and a three-family reduction using a different
+section and a single rank. The positive-seed three-family equivalence
+is also proved in Lean; its universal capture hypotheses remain open.
+We also describe exact integer basin interlacing and binary
+zooms, and distinguish them from the geometry of a chosen cosine
+continuation. Rational certificates establish five attracting cycles,
+a real basin separator, and one phase-dependent complex launch for that
+continuation. The accompanying repository includes all
+committed Lean modules from the pinned snapshots, a separately identified
+release bridge, toolchains, and an axiom inventory,
+and independently reproducible arithmetic certificates. The complete
+manuscript is not formalized in Lean, and no proof of the ordinary Collatz
+conjecture is claimed.
+\end{abstract}
+\tableofcontents
+\newpage
+
+\section{Purpose, evidence, and related work}
+
+A fixed periodic perturbation provides a concrete setting in which to study
+the roles of parity, phase, inverse branching, and return maps. The questions
+have different quantifiers. Designing a forcing word for each finite set
+does not produce one forcing word that captures every positive integer;
+controlling the future after entry into a small base does not prove entry;
+and many predecessors of a target do not establish forward convergence of
+every seed. We retain these distinctions in every statement.
+
+The principal results are the admissibility classification
+(Theorem~\ref{thm:admissibility}), the support-dependent base bounds
+(Theorem~\ref{thm:impulse-bounds}), logarithmic all-phase synchronization
+(Theorem~\ref{thm:all-phase-synchronization}), inverse growth in every
+progression (Theorem~\ref{thm:inverse-growth}), and the conditional
+seven-step reductions (Theorems~\ref{thm:seven-four} and
+\ref{thm:seven-three}). Section~\ref{sec:geometry} develops the integer
+and continuous geometries with eight reproducible figures across the
+manuscript. Each section supplies
+its definitions and proof, including the general arguments that turn a
+finite arithmetic certificate into a statement over an infinite domain.
+
+\paragraph{Three forms of evidence.}
+Analytical arguments appear in the text. Exact arithmetic checks are
+implemented in small Python or C++ programs and accompanied by the data
+they regenerate. Lean checks concern the explicitly listed declarations
+in \path{lean/inventory.json}; they are discussed in
+Section~\ref{sec:formal-scope}. These forms of evidence support different
+claims. A successful program run is not described as a Lean proof, and
+a Lean theorem about a related map is not substituted for the theorem
+stated here.
+
+\paragraph{Personal project; work in progress.}
+I am not an expert in this field. I am exploring these ideas for fun and
+to learn, and this is still a work in progress. Corrections,
+counterexamples, and suggestions are welcome.
+
+\paragraph{Release status.}
+This is a curated research draft for public review. Authorship and
+reuse terms remain to be confirmed.
+The open capture hypotheses are mathematical content, not placeholders
+that a build step can fill. The release does not claim a completed
+independent audit of the entire historical research archive, nor a
+literature-wide novelty or priority determination.
+
+\input{tex/related_work}
+
+\input{tex/foundations}
+\input{tex/impulses}
+\input{tex/synchronization}
+\input{tex/inverse}
+\input{tex/geometry}
+\input{tex/seven_step}
+\input{tex/scope}
+
+\input{tex/references}
+\end{document}

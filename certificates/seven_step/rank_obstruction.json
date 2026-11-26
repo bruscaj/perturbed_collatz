@@ -1,0 +1,627 @@
+{
+  "status": "PASS",
+  "input_model": "UUUTUUT, z=3m, section phases3,5,6; fixed prescribed dynamics",
+  "scope": "At least six disjoint direct first-return domains have increasing tails for every positive phase-affine rank; no claim about other certificate classes.",
+  "witness_rows": {
+    "S00": {
+      "input_phase": 3,
+      "modulus": 4,
+      "residue": 3,
+      "output_multiplier": 9,
+      "output_offset": 7,
+      "output_phase": 5,
+      "trace": "AA",
+      "t_min": 0,
+      "slope": "9/4",
+      "states": [
+        {
+          "phase": 3,
+          "a": 12,
+          "b": 9
+        },
+        {
+          "phase": 4,
+          "a": 18,
+          "b": 14
+        },
+        {
+          "phase": 5,
+          "a": 27,
+          "b": 21
+        }
+      ]
+    },
+    "S01": {
+      "input_phase": 5,
+      "modulus": 2,
+      "residue": 0,
+      "output_multiplier": 3,
+      "output_offset": 0,
+      "output_phase": 6,
+      "trace": "A",
+      "t_min": 1,
+      "slope": "3/2",
+      "states": [
+        {
+          "phase": 5,
+          "a": 6,
+          "b": 0
+        },
+        {
+          "phase": 6,
+          "a": 9,
+          "b": 0
+        }
+      ]
+    },
+    "S02": {
+      "input_phase": 5,
+      "modulus": 32,
+      "residue": 3,
+      "output_multiplier": 81,
+      "output_offset": 9,
+      "output_phase": 3,
+      "trace": "DAAAA",
+      "t_min": 0,
+      "slope": "81/32",
+      "states": [
+        {
+          "phase": 5,
+          "a": 96,
+          "b": 9
+        },
+        {
+          "phase": 6,
+          "a": 48,
+          "b": 5
+        },
+        {
+          "phase": 0,
+          "a": 72,
+          "b": 8
+        },
+        {
+          "phase": 1,
+          "a": 108,
+          "b": 12
+        },
+        {
+          "phase": 2,
+          "a": 162,
+          "b": 18
+        },
+        {
+          "phase": 3,
+          "a": 243,
+          "b": 27
+        }
+      ]
+    },
+    "S03": {
+      "input_phase": 5,
+      "modulus": 128,
+      "residue": 115,
+      "output_multiplier": 243,
+      "output_offset": 220,
+      "output_phase": 5,
+      "trace": "DAAADAA",
+      "t_min": 0,
+      "slope": "243/128",
+      "states": [
+        {
+          "phase": 5,
+          "a": 384,
+          "b": 345
+        },
+        {
+          "phase": 6,
+          "a": 192,
+          "b": 173
+        },
+        {
+          "phase": 0,
+          "a": 288,
+          "b": 260
+        },
+        {
+          "phase": 1,
+          "a": 432,
+          "b": 390
+        },
+        {
+          "phase": 2,
+          "a": 648,
+          "b": 585
+        },
+        {
+          "phase": 3,
+          "a": 324,
+          "b": 293
+        },
+        {
+          "phase": 4,
+          "a": 486,
+          "b": 440
+        },
+        {
+          "phase": 5,
+          "a": 729,
+          "b": 660
+        }
+      ]
+    },
+    "S06": {
+      "input_phase": 6,
+      "modulus": 16,
+      "residue": 7,
+      "output_multiplier": 81,
+      "output_offset": 36,
+      "output_phase": 3,
+      "trace": "AAAA",
+      "t_min": 0,
+      "slope": "81/16",
+      "states": [
+        {
+          "phase": 6,
+          "a": 48,
+          "b": 21
+        },
+        {
+          "phase": 0,
+          "a": 72,
+          "b": 32
+        },
+        {
+          "phase": 1,
+          "a": 108,
+          "b": 48
+        },
+        {
+          "phase": 2,
+          "a": 162,
+          "b": 72
+        },
+        {
+          "phase": 3,
+          "a": 243,
+          "b": 108
+        }
+      ]
+    },
+    "S08": {
+      "input_phase": 6,
+      "modulus": 64,
+      "residue": 15,
+      "output_multiplier": 243,
+      "output_offset": 58,
+      "output_phase": 5,
+      "trace": "AAADAA",
+      "t_min": 0,
+      "slope": "243/64",
+      "states": [
+        {
+          "phase": 6,
+          "a": 192,
+          "b": 45
+        },
+        {
+          "phase": 0,
+          "a": 288,
+          "b": 68
+        },
+        {
+          "phase": 1,
+          "a": 432,
+          "b": 102
+        },
+        {
+          "phase": 2,
+          "a": 648,
+          "b": 153
+        },
+        {
+          "phase": 3,
+          "a": 324,
+          "b": 77
+        },
+        {
+          "phase": 4,
+          "a": 486,
+          "b": 116
+        },
+        {
+          "phase": 5,
+          "a": 729,
+          "b": 174
+        }
+      ]
+    },
+    "D53": {
+      "input_phase": 5,
+      "modulus": 32,
+      "residue": 31,
+      "output_multiplier": 27,
+      "output_offset": 27,
+      "output_phase": 3,
+      "trace": "DADAA",
+      "t_min": 0,
+      "slope": "27/32",
+      "states": [
+        {
+          "phase": 5,
+          "a": 96,
+          "b": 93
+        },
+        {
+          "phase": 6,
+          "a": 48,
+          "b": 47
+        },
+        {
+          "phase": 0,
+          "a": 72,
+          "b": 71
+        },
+        {
+          "phase": 1,
+          "a": 36,
+          "b": 36
+        },
+        {
+          "phase": 2,
+          "a": 54,
+          "b": 54
+        },
+        {
+          "phase": 3,
+          "a": 81,
+          "b": 81
+        }
+      ]
+    },
+    "D35": {
+      "input_phase": 3,
+      "modulus": 4,
+      "residue": 1,
+      "output_multiplier": 3,
+      "output_offset": 1,
+      "output_phase": 5,
+      "trace": "AD",
+      "t_min": 1,
+      "slope": "3/4",
+      "states": [
+        {
+          "phase": 3,
+          "a": 12,
+          "b": 3
+        },
+        {
+          "phase": 4,
+          "a": 18,
+          "b": 5
+        },
+        {
+          "phase": 5,
+          "a": 9,
+          "b": 3
+        }
+      ]
+    },
+    "D36": {
+      "input_phase": 3,
+      "modulus": 8,
+      "residue": 2,
+      "output_multiplier": 3,
+      "output_offset": 1,
+      "output_phase": 6,
+      "trace": "DDA",
+      "t_min": 0,
+      "slope": "3/8",
+      "states": [
+        {
+          "phase": 3,
+          "a": 24,
+          "b": 6
+        },
+        {
+          "phase": 4,
+          "a": 12,
+          "b": 3
+        },
+        {
+          "phase": 5,
+          "a": 6,
+          "b": 2
+        },
+        {
+          "phase": 6,
+          "a": 9,
+          "b": 3
+        }
+      ]
+    },
+    "D65": {
+      "input_phase": 6,
+      "modulus": 8192,
+      "residue": 6239,
+      "output_multiplier": 6561,
+      "output_offset": 4999,
+      "output_phase": 5,
+      "trace": "AAADDDDAAADAA",
+      "t_min": 0,
+      "slope": "6561/8192",
+      "states": [
+        {
+          "phase": 6,
+          "a": 24576,
+          "b": 18717
+        },
+        {
+          "phase": 0,
+          "a": 36864,
+          "b": 28076
+        },
+        {
+          "phase": 1,
+          "a": 55296,
+          "b": 42114
+        },
+        {
+          "phase": 2,
+          "a": 82944,
+          "b": 63171
+        },
+        {
+          "phase": 3,
+          "a": 41472,
+          "b": 31586
+        },
+        {
+          "phase": 4,
+          "a": 20736,
+          "b": 15793
+        },
+        {
+          "phase": 5,
+          "a": 10368,
+          "b": 7897
+        },
+        {
+          "phase": 6,
+          "a": 5184,
+          "b": 3949
+        },
+        {
+          "phase": 0,
+          "a": 7776,
+          "b": 5924
+        },
+        {
+          "phase": 1,
+          "a": 11664,
+          "b": 8886
+        },
+        {
+          "phase": 2,
+          "a": 17496,
+          "b": 13329
+        },
+        {
+          "phase": 3,
+          "a": 8748,
+          "b": 6665
+        },
+        {
+          "phase": 4,
+          "a": 13122,
+          "b": 9998
+        },
+        {
+          "phase": 5,
+          "a": 19683,
+          "b": 14997
+        }
+      ]
+    },
+    "D56": {
+      "input_phase": 5,
+      "modulus": 256,
+      "residue": 147,
+      "output_multiplier": 81,
+      "output_offset": 47,
+      "output_phase": 6,
+      "trace": "DAAADDDA",
+      "t_min": 0,
+      "slope": "81/256",
+      "states": [
+        {
+          "phase": 5,
+          "a": 768,
+          "b": 441
+        },
+        {
+          "phase": 6,
+          "a": 384,
+          "b": 221
+        },
+        {
+          "phase": 0,
+          "a": 576,
+          "b": 332
+        },
+        {
+          "phase": 1,
+          "a": 864,
+          "b": 498
+        },
+        {
+          "phase": 2,
+          "a": 1296,
+          "b": 747
+        },
+        {
+          "phase": 3,
+          "a": 648,
+          "b": 374
+        },
+        {
+          "phase": 4,
+          "a": 324,
+          "b": 187
+        },
+        {
+          "phase": 5,
+          "a": 162,
+          "b": 94
+        },
+        {
+          "phase": 6,
+          "a": 243,
+          "b": 141
+        }
+      ]
+    }
+  },
+  "disjoint_starting_domains": 11,
+  "disjoint_inequality_cycles": [
+    {
+      "rows": [
+        "S03"
+      ],
+      "slope_product": "243/128"
+    },
+    {
+      "rows": [
+        "S00",
+        "D53"
+      ],
+      "slope_product": "243/128"
+    },
+    {
+      "rows": [
+        "S02",
+        "D35"
+      ],
+      "slope_product": "243/128"
+    },
+    {
+      "rows": [
+        "S06",
+        "D36"
+      ],
+      "slope_product": "243/128"
+    },
+    {
+      "rows": [
+        "S01",
+        "D65"
+      ],
+      "slope_product": "19683/16384"
+    },
+    {
+      "rows": [
+        "S08",
+        "D56"
+      ],
+      "slope_product": "19683/16384"
+    }
+  ],
+  "universal_lower_bound": 6,
+  "lower_bound_domain": "The eleven specified disjoint witness domains, without counting arbitrary residue refinements as new branches.",
+  "rank_class": "R(m,i)=w_i*m+c_i, with arbitrary positive real w_i and fixed real c_i",
+  "chosen_weights": {
+    "3": 1,
+    "5": 1,
+    "6": 2
+  },
+  "chosen_weight_slacks": {
+    "S00": {
+      "coefficient": -5,
+      "constant": -4
+    },
+    "S01": {
+      "coefficient": -4,
+      "constant": 0
+    },
+    "S02": {
+      "coefficient": -49,
+      "constant": -6
+    },
+    "S03": {
+      "coefficient": -115,
+      "constant": -105
+    },
+    "S06": {
+      "coefficient": -49,
+      "constant": -22
+    },
+    "S08": {
+      "coefficient": -115,
+      "constant": -28
+    },
+    "D53": {
+      "coefficient": 5,
+      "constant": 4
+    },
+    "D35": {
+      "coefficient": 1,
+      "constant": 0
+    },
+    "D36": {
+      "coefficient": 2,
+      "constant": 0
+    },
+    "D65": {
+      "coefficient": 9823,
+      "constant": 7479
+    },
+    "D56": {
+      "coefficient": 94,
+      "constant": 53
+    }
+  },
+  "s12_rank_drop": {
+    "coefficient": 47,
+    "constant": 46,
+    "trace": [
+      {
+        "phase": 6,
+        "a": 192,
+        "b": 189
+      },
+      {
+        "phase": 0,
+        "a": 288,
+        "b": 284
+      },
+      {
+        "phase": 1,
+        "a": 432,
+        "b": 426
+      },
+      {
+        "phase": 2,
+        "a": 648,
+        "b": 639
+      },
+      {
+        "phase": 3,
+        "a": 324,
+        "b": 320
+      },
+      {
+        "phase": 4,
+        "a": 162,
+        "b": 160
+      },
+      {
+        "phase": 5,
+        "a": 243,
+        "b": 240
+      }
+    ],
+    "conclusion": "S12 cannot be a smallest exceptional section state under rank(m,3)=m, rank(m,5)=m, rank(m,6)=2m."
+  },
+  "attainment_dependency": "Attainment uses the complete frontier reconstruction in verify_relational.py and independent.py, including long-return bounds and finite exceptions.",
+  "verification_kind": "Symbolic affine parity, positivity and first-return checks on entire progressions; exact rational products; no seed cutoff."
+}

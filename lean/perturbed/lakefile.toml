@@ -1,0 +1,6 @@
+name = "collatz_perturbed"
+defaultTargets = ["Perturbed"]
+
+[[lean_lib]]
+name = "Perturbed"
+roots = ["All", "Collatz", "BasinGrowth", "InverseBranch", "ResidueTrack", "TernaryPump", "ProgressionSteering"]

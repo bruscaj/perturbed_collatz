@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "exact_regeneration": true,
+  "saved_certificate_compared": true,
+  "integer_cycles": 3,
+  "noninteger_cycles": 2,
+  "real_interval_leaf_counts": [
+    6,
+    5,
+    8,
+    1,
+    4
+  ],
+  "phase_target_disk_entry_times": [
+    43,
+    91,
+    38
+  ],
+  "strict_json_comparison": true,
+  "mutation_rejection_count": 25,
+  "mutation_rejections": [
+    "enlarged_integer_capture_radius",
+    "false_integer_remainder_bound",
+    "altered_cycle_multiplier",
+    "omitted_attracting_disk",
+    "omitted_derivative_bound",
+    "omitted_interval_leaf",
+    "altered_root_bracket",
+    "omitted_trace_point",
+    "false_zero_trace_error",
+    "wrong_trace_phase",
+    "wrong_entry_time",
+    "wrong_model",
+    "omitted_section",
+    "empty_disk_list",
+    "boolean_for_integer",
+    "float_for_integer",
+    "wrong_integer_cycle_phase",
+    "altered_pi_enclosure",
+    "unexpected_field",
+    "empty_object",
+    "empty_list",
+    "duplicate_key",
+    "nonfinite_nan",
+    "nonfinite_infinity",
+    "overflowing_float"
+  ],
+  "optimization_rejections": [
+    "attracting_disks.py",
+    "discrete.py",
+    "integer_disks.py",
+    "phase_trace.py",
+    "rational.py",
+    "separator.py",
+    "verify.py"
+  ],
+  "formalized_in_lean": false,
+  "exhaustive_global_attractor_census": false
+}

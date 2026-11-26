@@ -1,0 +1,11 @@
+{
+  "signed_layers": [[6, 8], [14, 26], [85, 4616], [317, 15578], [1218, 125252], [3279, 642842]],
+  "escaping_prefixes": [15, 2854, 2416542],
+  "rooted_boundary_transitions": 32037568,
+  "max_states_per_rooted_word": 44,
+  "peak": {"value": 92779118, "pairs": [[1, 2], [23, 11], [6, 7]], "seed": 1, "before_pair": 0},
+  "response_ratio": {"value": 12, "pairs": [[1, 4], [2, 1], [6, 1]], "seed": 2, "before_pair": 0},
+  "recurrent_peak": {"value": 18534824, "pairs": [[1, 2], [21, 13], [42, 2]], "seed": 0, "before_pair": 0},
+  "rooted_cycles_by_ratio": {"1": 1928502, "2": 1139763, "3": 317651, "4": 30853, "5": 1987, "6": 254, "7": 52, "8": 12, "9": 6, "10": 1, "12": 2},
+  "rooted_words_by_max_ratio": {"1": 940393, "2": 1125341, "3": 317641, "4": 30853, "5": 1987, "6": 254, "7": 52, "8": 12, "9": 6, "10": 1, "12": 2}
+}

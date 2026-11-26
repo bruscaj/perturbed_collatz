@@ -1,0 +1,900 @@
+{
+  "schema_version": 1,
+  "scope": "Finite worked examples; universal conclusions use the written proofs",
+  "model": "Signed shortcut Collatz plus post-step impulse; zero continues",
+  "foundations": {
+    "impulses": [
+      1,
+      0,
+      -1
+    ],
+    "height": [
+      0,
+      1,
+      1
+    ],
+    "seed": 5,
+    "steps": 6,
+    "ordinary": [
+      5,
+      8,
+      4,
+      2,
+      1,
+      2,
+      1
+    ],
+    "phase_paths": [
+      {
+        "launch_phase": 0,
+        "physical": [
+          5,
+          9,
+          14,
+          6,
+          4,
+          2,
+          0
+        ],
+        "positive": [
+          6,
+          9,
+          14,
+          7,
+          4,
+          2,
+          1
+        ]
+      },
+      {
+        "launch_phase": 1,
+        "physical": [
+          5,
+          8,
+          3,
+          6,
+          3,
+          4,
+          3
+        ],
+        "positive": [
+          5,
+          8,
+          4,
+          6,
+          3,
+          5,
+          3
+        ]
+      },
+      {
+        "launch_phase": 2,
+        "physical": [
+          5,
+          7,
+          12,
+          6,
+          2,
+          2,
+          1
+        ],
+        "positive": [
+          5,
+          8,
+          12,
+          6,
+          3,
+          2,
+          1
+        ]
+      }
+    ],
+    "parity_example": {
+      "input_parities": [
+        1,
+        1,
+        0
+      ],
+      "modulus": 8,
+      "residue": 5,
+      "bias_sequence": [
+        0,
+        3,
+        11,
+        3
+      ],
+      "numerator_scale": 9,
+      "numerator_bias": 3,
+      "quotient_parameter_scale": 9,
+      "quotient_parameter_bias": 6,
+      "twice_repeated_prefix_modulus": 64,
+      "twice_repeated_prefix_residue": 61,
+      "worked_trajectories": [
+        {
+          "seed": 5,
+          "physical": [
+            5,
+            9,
+            14,
+            6
+          ]
+        },
+        {
+          "seed": 13,
+          "physical": [
+            13,
+            21,
+            32,
+            15
+          ]
+        },
+        {
+          "seed": 61,
+          "physical": [
+            61,
+            93,
+            140,
+            69,
+            105,
+            158,
+            78
+          ]
+        }
+      ],
+      "repeated_prefix_examples": [
+        {
+          "copies": 1,
+          "seed": 5,
+          "endpoint": 6,
+          "physical": [
+            5,
+            9,
+            14,
+            6
+          ]
+        },
+        {
+          "copies": 2,
+          "seed": 61,
+          "endpoint": 78,
+          "physical": [
+            61,
+            93,
+            140,
+            69,
+            105,
+            158,
+            78
+          ]
+        },
+        {
+          "copies": 3,
+          "seed": 509,
+          "endpoint": 726,
+          "physical": [
+            509,
+            765,
+            1148,
+            573,
+            861,
+            1292,
+            645,
+            969,
+            1454,
+            726
+          ]
+        },
+        {
+          "copies": 4,
+          "seed": 4093,
+          "endpoint": 6558,
+          "physical": [
+            4093,
+            6141,
+            9212,
+            4605,
+            6909,
+            10364,
+            5181,
+            7773,
+            11660,
+            5829,
+            8745,
+            13118,
+            6558
+          ]
+        }
+      ]
+    }
+  },
+  "impulse_pairs": {
+    "root_seed": 1,
+    "ordinary_tail_after_plus": [
+      3,
+      5,
+      8,
+      4,
+      2
+    ],
+    "negative_tails": [
+      {
+        "b": 0,
+        "before_minus": 3,
+        "after_minus": 4,
+        "ordinary_tail": [
+          4,
+          2
+        ]
+      },
+      {
+        "b": 1,
+        "before_minus": 5,
+        "after_minus": 7,
+        "ordinary_tail": [
+          7,
+          11,
+          17,
+          26,
+          13,
+          20,
+          10,
+          5,
+          8,
+          4,
+          2
+        ]
+      },
+      {
+        "b": 2,
+        "before_minus": 8,
+        "after_minus": 3,
+        "ordinary_tail": [
+          3,
+          5,
+          8,
+          4,
+          2
+        ]
+      },
+      {
+        "b": 3,
+        "before_minus": 4,
+        "after_minus": 1,
+        "ordinary_tail": [
+          1
+        ]
+      }
+    ],
+    "escaping_pairs": [
+      {
+        "b": 0,
+        "a": 0,
+        "endpoint": 4
+      },
+      {
+        "b": 1,
+        "a": 0,
+        "endpoint": 7
+      },
+      {
+        "b": 1,
+        "a": 1,
+        "endpoint": 11
+      },
+      {
+        "b": 1,
+        "a": 2,
+        "endpoint": 17
+      },
+      {
+        "b": 1,
+        "a": 3,
+        "endpoint": 26
+      },
+      {
+        "b": 1,
+        "a": 4,
+        "endpoint": 13
+      },
+      {
+        "b": 1,
+        "a": 5,
+        "endpoint": 20
+      },
+      {
+        "b": 1,
+        "a": 6,
+        "endpoint": 10
+      },
+      {
+        "b": 1,
+        "a": 7,
+        "endpoint": 5
+      },
+      {
+        "b": 1,
+        "a": 8,
+        "endpoint": 8
+      },
+      {
+        "b": 1,
+        "a": 9,
+        "endpoint": 4
+      },
+      {
+        "b": 2,
+        "a": 0,
+        "endpoint": 3
+      },
+      {
+        "b": 2,
+        "a": 1,
+        "endpoint": 5
+      },
+      {
+        "b": 2,
+        "a": 2,
+        "endpoint": 8
+      },
+      {
+        "b": 2,
+        "a": 3,
+        "endpoint": 4
+      }
+    ],
+    "signed_layers": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11,
+        13,
+        17,
+        20,
+        26
+      ]
+    ],
+    "witness": {
+      "pair": [
+        1,
+        4
+      ],
+      "impulses": [
+        1,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "primitive_forcing_period": 7,
+      "lap_rows": [
+        {
+          "start": 1,
+          "end": 13,
+          "peak": 26,
+          "physical": [
+            1,
+            3,
+            5,
+            7,
+            11,
+            17,
+            26,
+            13
+          ]
+        },
+        {
+          "start": 13,
+          "end": 80,
+          "peak": 80,
+          "physical": [
+            13,
+            21,
+            32,
+            15,
+            23,
+            35,
+            53,
+            80
+          ]
+        },
+        {
+          "start": 80,
+          "end": 53,
+          "peak": 80,
+          "physical": [
+            80,
+            41,
+            62,
+            30,
+            15,
+            23,
+            35,
+            53
+          ]
+        },
+        {
+          "start": 53,
+          "end": 35,
+          "peak": 122,
+          "physical": [
+            53,
+            81,
+            122,
+            60,
+            30,
+            15,
+            23,
+            35
+          ]
+        },
+        {
+          "start": 35,
+          "end": 8,
+          "peak": 54,
+          "physical": [
+            35,
+            54,
+            27,
+            40,
+            20,
+            10,
+            5,
+            8
+          ]
+        },
+        {
+          "start": 8,
+          "end": 2,
+          "peak": 8,
+          "physical": [
+            8,
+            5,
+            8,
+            3,
+            5,
+            8,
+            4,
+            2
+          ]
+        },
+        {
+          "start": 2,
+          "end": 1,
+          "peak": 2,
+          "physical": [
+            2,
+            2,
+            1,
+            1,
+            2,
+            1,
+            2,
+            1
+          ]
+        }
+      ],
+      "scalar_cycle": [
+        1,
+        3,
+        5,
+        7,
+        11,
+        17,
+        26,
+        13,
+        21,
+        32,
+        15,
+        23,
+        35,
+        53,
+        80,
+        41,
+        62,
+        30,
+        15,
+        23,
+        35,
+        53,
+        81,
+        122,
+        60,
+        30,
+        15,
+        23,
+        35,
+        54,
+        27,
+        40,
+        20,
+        10,
+        5,
+        8,
+        5,
+        8,
+        3,
+        5,
+        8,
+        4,
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "peak": 122,
+      "least_scalar_period": 49,
+      "augmented_period": 49,
+      "doubled_clock_augmented_period": 98
+    }
+  },
+  "synchronization": {
+    "word": "UTTUTUUUUT",
+    "initial_ensemble": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reference": [
+      1,
+      1,
+      2,
+      1,
+      1,
+      2,
+      3,
+      2,
+      3,
+      2,
+      1
+    ],
+    "tracks": {
+      "1": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        3,
+        2,
+        3,
+        2,
+        1
+      ],
+      "2": [
+        2,
+        3,
+        5,
+        8,
+        12,
+        6,
+        9,
+        5,
+        3,
+        2,
+        1
+      ],
+      "3": [
+        3,
+        2,
+        1,
+        2,
+        3,
+        5,
+        3,
+        2,
+        3,
+        2,
+        1
+      ],
+      "4": [
+        4,
+        6,
+        3,
+        5,
+        3,
+        5,
+        3,
+        2,
+        3,
+        2,
+        1
+      ],
+      "5": [
+        5,
+        3,
+        5,
+        8,
+        12,
+        6,
+        9,
+        5,
+        3,
+        2,
+        1
+      ],
+      "6": [
+        6,
+        9,
+        14,
+        7,
+        4,
+        2,
+        3,
+        2,
+        3,
+        2,
+        1
+      ]
+    },
+    "ensembles": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        1,
+        2,
+        3,
+        6,
+        9
+      ],
+      [
+        1,
+        2,
+        3,
+        5,
+        14
+      ],
+      [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      [
+        1,
+        3,
+        4,
+        12
+      ],
+      [
+        2,
+        5,
+        6
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3
+      ],
+      [
+        2
+      ],
+      [
+        1
+      ]
+    ],
+    "cardinalities": [
+      6,
+      5,
+      5,
+      5,
+      4,
+      3,
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "height": [
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "impulses": [
+      1,
+      0,
+      -1,
+      1,
+      -1,
+      0,
+      0,
+      0,
+      1,
+      -1
+    ],
+    "physical_response": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      1,
+      2,
+      1,
+      2,
+      2
+    ],
+    "primitive_forcing_period": 10,
+    "phase_zero_reset_paths": [
+      {
+        "seed": 0,
+        "physical": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          0
+        ]
+      },
+      {
+        "seed": 1,
+        "physical": [
+          1,
+          3,
+          5,
+          7,
+          12,
+          5,
+          8,
+          4,
+          2,
+          2,
+          0
+        ]
+      },
+      {
+        "seed": 2,
+        "physical": [
+          2,
+          2,
+          1,
+          1,
+          3,
+          4,
+          2,
+          1,
+          2,
+          2,
+          0
+        ]
+      },
+      {
+        "seed": 3,
+        "physical": [
+          3,
+          6,
+          3,
+          4,
+          3,
+          4,
+          2,
+          1,
+          2,
+          2,
+          0
+        ]
+      },
+      {
+        "seed": 4,
+        "physical": [
+          4,
+          3,
+          5,
+          7,
+          12,
+          5,
+          8,
+          4,
+          2,
+          2,
+          0
+        ]
+      },
+      {
+        "seed": 5,
+        "physical": [
+          5,
+          9,
+          14,
+          6,
+          4,
+          1,
+          2,
+          1,
+          2,
+          2,
+          0
+        ]
+      }
+    ],
+    "rotation_failure": {
+      "seed": 5,
+      "phase": 1,
+      "physical": [
+        5,
+        8,
+        3,
+        6,
+        2,
+        1,
+        2,
+        1,
+        3,
+        4,
+        3
+      ],
+      "response_at_phase": 1,
+      "endpoint": 3
+    },
+    "protected_merger_table_cases_checked": 12
+  },
+  "analytic_constants": {
+    "stationary_distribution": [
+      "4329/10048",
+      "1957/5024",
+      "1805/10048"
+    ],
+    "gain_upper_bounds": [
+      "974/975",
+      "1027083/1030000",
+      "369/370"
+    ],
+    "threshold": 16000,
+    "checks_use_exact_rational_or_integer_arithmetic": true
+  }
+}

@@ -1,0 +1,4 @@
+# Optional: regenerating the committed figures only.
+# Exact mathematical verification uses the Python standard library.
+matplotlib==3.10.8
+numpy==2.3.5

@@ -1,0 +1,689 @@
+{
+  "words": 2383451629,
+  "shards": [
+    {
+      "first_pair": [
+        0,
+        0
+      ],
+      "first_endpoint": 4,
+      "words": 2416542
+    },
+    {
+      "first_pair": [
+        1,
+        0
+      ],
+      "first_endpoint": 7,
+      "words": 2435082
+    },
+    {
+      "first_pair": [
+        1,
+        1
+      ],
+      "first_endpoint": 11,
+      "words": 10052174
+    },
+    {
+      "first_pair": [
+        1,
+        2
+      ],
+      "first_endpoint": 17,
+      "words": 2236418282
+    },
+    {
+      "first_pair": [
+        1,
+        3
+      ],
+      "first_endpoint": 26,
+      "words": 9934306
+    },
+    {
+      "first_pair": [
+        1,
+        4
+      ],
+      "first_endpoint": 13,
+      "words": 77717219
+    },
+    {
+      "first_pair": [
+        1,
+        5
+      ],
+      "first_endpoint": 20,
+      "words": 9891518
+    },
+    {
+      "first_pair": [
+        1,
+        6
+      ],
+      "first_endpoint": 10,
+      "words": 2416542
+    },
+    {
+      "first_pair": [
+        1,
+        7
+      ],
+      "first_endpoint": 5,
+      "words": 10046481
+    },
+    {
+      "first_pair": [
+        1,
+        8
+      ],
+      "first_endpoint": 8,
+      "words": 2413688
+    },
+    {
+      "first_pair": [
+        1,
+        9
+      ],
+      "first_endpoint": 4,
+      "words": 2416542
+    },
+    {
+      "first_pair": [
+        2,
+        0
+      ],
+      "first_endpoint": 3,
+      "words": 2416542
+    },
+    {
+      "first_pair": [
+        2,
+        1
+      ],
+      "first_endpoint": 5,
+      "words": 10046481
+    },
+    {
+      "first_pair": [
+        2,
+        2
+      ],
+      "first_endpoint": 8,
+      "words": 2413688
+    },
+    {
+      "first_pair": [
+        2,
+        3
+      ],
+      "first_endpoint": 4,
+      "words": 2416542
+    }
+  ],
+  "cycle_lengths_in_supplied_laps": {
+    "1": 1007353936,
+    "2": 1076623549,
+    "3": 291638310,
+    "4": 7619749,
+    "5": 202481,
+    "6": 12151,
+    "7": 1241,
+    "8": 169,
+    "9": 33,
+    "10": 6,
+    "11": 3,
+    "13": 1
+  },
+  "primitive_cycle_lengths_in_supplied_laps": {
+    "1": 1007353359,
+    "2": 1076623463,
+    "3": 291638148,
+    "4": 7619749,
+    "5": 202462,
+    "6": 12151,
+    "7": 1237,
+    "8": 169,
+    "9": 33,
+    "10": 6,
+    "11": 3,
+    "13": 1
+  },
+  "transient_lengths_in_supplied_laps": {
+    "0": 872724138,
+    "1": 154242595,
+    "2": 1320880633,
+    "3": 34488555,
+    "4": 1050594,
+    "5": 58782,
+    "6": 5533,
+    "7": 670,
+    "8": 100,
+    "9": 23,
+    "10": 4,
+    "11": 2
+  },
+  "peak": 54285893576,
+  "peak_witness": {
+    "pairs": [
+      [
+        1,
+        2
+      ],
+      [
+        23,
+        15
+      ],
+      [
+        14,
+        32
+      ],
+      [
+        12,
+        16
+      ]
+    ],
+    "primitive_forcing_period": 123,
+    "supplied_period": 123,
+    "first_lap_pair_endpoints": [
+      17,
+      10844,
+      71441,
+      6263963
+    ],
+    "cycle_laps": 4,
+    "cycle_updates": 492,
+    "scalar_period": 492,
+    "cycle_entry_update": 0,
+    "strobe_transient_laps": 0,
+    "peak": 54285893576,
+    "first_peak_update": 270,
+    "recurrent_peak": 54285893576,
+    "first_recurrent_peak_update": 270
+  },
+  "recurrent_peak": 54285893576,
+  "recurrent_peak_witness": {
+    "pairs": [
+      [
+        1,
+        2
+      ],
+      [
+        23,
+        15
+      ],
+      [
+        14,
+        32
+      ],
+      [
+        12,
+        16
+      ]
+    ],
+    "primitive_forcing_period": 123,
+    "supplied_period": 123,
+    "first_lap_pair_endpoints": [
+      17,
+      10844,
+      71441,
+      6263963
+    ],
+    "cycle_laps": 4,
+    "cycle_updates": 492,
+    "scalar_period": 492,
+    "cycle_entry_update": 0,
+    "strobe_transient_laps": 0,
+    "peak": 54285893576,
+    "first_peak_update": 270,
+    "recurrent_peak": 54285893576,
+    "first_recurrent_peak_update": 270
+  },
+  "primitive_examples": {
+    "1": {
+      "pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "primitive_forcing_period": 12,
+      "supplied_period": 12,
+      "first_lap_pair_endpoints": [
+        4,
+        4,
+        4,
+        26
+      ],
+      "cycle_laps": 1,
+      "cycle_updates": 12,
+      "scalar_period": 12,
+      "cycle_entry_update": 5,
+      "strobe_transient_laps": 1,
+      "peak": 26,
+      "first_peak_update": 12,
+      "recurrent_peak": 26,
+      "first_recurrent_peak_update": 12
+    },
+    "2": {
+      "pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "primitive_forcing_period": 10,
+      "supplied_period": 10,
+      "first_lap_pair_endpoints": [
+        4,
+        4,
+        4,
+        11
+      ],
+      "cycle_laps": 2,
+      "cycle_updates": 20,
+      "scalar_period": 20,
+      "cycle_entry_update": 7,
+      "strobe_transient_laps": 1,
+      "peak": 18,
+      "first_peak_update": 11,
+      "recurrent_peak": 18,
+      "first_recurrent_peak_update": 11
+    },
+    "3": {
+      "pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "primitive_forcing_period": 9,
+      "supplied_period": 9,
+      "first_lap_pair_endpoints": [
+        4,
+        4,
+        4,
+        7
+      ],
+      "cycle_laps": 3,
+      "cycle_updates": 27,
+      "scalar_period": 27,
+      "cycle_entry_update": 3,
+      "strobe_transient_laps": 1,
+      "peak": 48,
+      "first_peak_update": 16,
+      "recurrent_peak": 48,
+      "first_recurrent_peak_update": 16
+    },
+    "4": {
+      "pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "primitive_forcing_period": 11,
+      "supplied_period": 11,
+      "first_lap_pair_endpoints": [
+        4,
+        4,
+        4,
+        5
+      ],
+      "cycle_laps": 4,
+      "cycle_updates": 44,
+      "scalar_period": 44,
+      "cycle_entry_update": 11,
+      "strobe_transient_laps": 1,
+      "peak": 48,
+      "first_peak_update": 16,
+      "recurrent_peak": 48,
+      "first_recurrent_peak_update": 16
+    },
+    "5": {
+      "pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          6,
+          3
+        ]
+      ],
+      "primitive_forcing_period": 19,
+      "supplied_period": 19,
+      "first_lap_pair_endpoints": [
+        4,
+        4,
+        11,
+        5
+      ],
+      "cycle_laps": 5,
+      "cycle_updates": 95,
+      "scalar_period": 95,
+      "cycle_entry_update": 3,
+      "strobe_transient_laps": 1,
+      "peak": 160,
+      "first_peak_update": 35,
+      "recurrent_peak": 160,
+      "first_recurrent_peak_update": 35
+    },
+    "6": {
+      "pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "primitive_forcing_period": 23,
+      "supplied_period": 23,
+      "first_lap_pair_endpoints": [
+        4,
+        4,
+        17,
+        23
+      ],
+      "cycle_laps": 6,
+      "cycle_updates": 138,
+      "scalar_period": 138,
+      "cycle_entry_update": 3,
+      "strobe_transient_laps": 1,
+      "peak": 1700,
+      "first_peak_update": 63,
+      "recurrent_peak": 1700,
+      "first_recurrent_peak_update": 63
+    },
+    "7": {
+      "pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          10,
+          0
+        ]
+      ],
+      "primitive_forcing_period": 26,
+      "supplied_period": 26,
+      "first_lap_pair_endpoints": [
+        4,
+        17,
+        35,
+        181
+      ],
+      "cycle_laps": 7,
+      "cycle_updates": 182,
+      "scalar_period": 182,
+      "cycle_entry_update": 0,
+      "strobe_transient_laps": 0,
+      "peak": 13040,
+      "first_peak_update": 96,
+      "recurrent_peak": 13040,
+      "first_recurrent_peak_update": 96
+    },
+    "8": {
+      "pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          11,
+          13
+        ]
+      ],
+      "primitive_forcing_period": 45,
+      "supplied_period": 45,
+      "first_lap_pair_endpoints": [
+        4,
+        17,
+        272,
+        4819
+      ],
+      "cycle_laps": 8,
+      "cycle_updates": 360,
+      "scalar_period": 360,
+      "cycle_entry_update": 3,
+      "strobe_transient_laps": 1,
+      "peak": 70508,
+      "first_peak_update": 168,
+      "recurrent_peak": 70508,
+      "first_recurrent_peak_update": 168
+    },
+    "9": {
+      "pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "primitive_forcing_period": 18,
+      "supplied_period": 18,
+      "first_lap_pair_endpoints": [
+        4,
+        17,
+        92,
+        181
+      ],
+      "cycle_laps": 9,
+      "cycle_updates": 162,
+      "scalar_period": 162,
+      "cycle_entry_update": 0,
+      "strobe_transient_laps": 0,
+      "peak": 14884,
+      "first_peak_update": 64,
+      "recurrent_peak": 14884,
+      "first_recurrent_peak_update": 64
+    },
+    "10": {
+      "pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "primitive_forcing_period": 18,
+      "supplied_period": 18,
+      "first_lap_pair_endpoints": [
+        4,
+        4,
+        20,
+        29
+      ],
+      "cycle_laps": 10,
+      "cycle_updates": 180,
+      "scalar_period": 180,
+      "cycle_entry_update": 5,
+      "strobe_transient_laps": 1,
+      "peak": 8774,
+      "first_peak_update": 126,
+      "recurrent_peak": 8774,
+      "first_recurrent_peak_update": 126
+    },
+    "11": {
+      "pairs": [
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "primitive_forcing_period": 23,
+      "supplied_period": 23,
+      "first_lap_pair_endpoints": [
+        17,
+        80,
+        61,
+        13
+      ],
+      "cycle_laps": 11,
+      "cycle_updates": 253,
+      "scalar_period": 253,
+      "cycle_entry_update": 0,
+      "strobe_transient_laps": 0,
+      "peak": 86480,
+      "first_peak_update": 147,
+      "recurrent_peak": 86480,
+      "first_recurrent_peak_update": 147
+    },
+    "13": {
+      "pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "primitive_forcing_period": 25,
+      "supplied_period": 25,
+      "first_lap_pair_endpoints": [
+        20,
+        25,
+        512,
+        289
+      ],
+      "cycle_laps": 13,
+      "cycle_updates": 325,
+      "scalar_period": 325,
+      "cycle_entry_update": 0,
+      "strobe_transient_laps": 0,
+      "peak": 18758,
+      "first_peak_update": 149,
+      "recurrent_peak": 18758,
+      "first_recurrent_peak_update": 149
+    }
+  }
+}

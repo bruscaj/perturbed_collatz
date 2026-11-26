@@ -1,0 +1,891 @@
+{
+  "forcing": [
+    1,
+    0,
+    -1
+  ],
+  "eligible_parent": "y >= 2, y not divisible by 3, phase zero",
+  "block_length": 18,
+  "guarantee": "Every unit class modulo 9 has an inverse witness in 18 or 21 physical steps",
+  "inverse_formula": "x = (2^18 * y + offset) / 3^odd",
+  "branches": [
+    {
+      "odd": 0,
+      "offset": 224694,
+      "residue_mod_2_18": 224694
+    },
+    {
+      "odd": 1,
+      "offset": 18722,
+      "residue_mod_2_18": 93622
+    },
+    {
+      "odd": 1,
+      "offset": 84258,
+      "residue_mod_2_18": 28086
+    },
+    {
+      "odd": 1,
+      "offset": 248098,
+      "residue_mod_2_18": 257462
+    },
+    {
+      "odd": 1,
+      "offset": 198946,
+      "residue_mod_2_18": 241078
+    },
+    {
+      "odd": 1,
+      "offset": 207138,
+      "residue_mod_2_18": 69046
+    },
+    {
+      "odd": 1,
+      "offset": 227618,
+      "residue_mod_2_18": 163254
+    },
+    {
+      "odd": 1,
+      "offset": 221474,
+      "residue_mod_2_18": 161206
+    },
+    {
+      "odd": 1,
+      "offset": 222498,
+      "residue_mod_2_18": 74166
+    },
+    {
+      "odd": 1,
+      "offset": 225058,
+      "residue_mod_2_18": 249782
+    },
+    {
+      "odd": 1,
+      "offset": 224290,
+      "residue_mod_2_18": 249526
+    },
+    {
+      "odd": 1,
+      "offset": 224418,
+      "residue_mod_2_18": 74806
+    },
+    {
+      "odd": 1,
+      "offset": 224738,
+      "residue_mod_2_18": 162294
+    },
+    {
+      "odd": 1,
+      "offset": 224642,
+      "residue_mod_2_18": 162262
+    },
+    {
+      "odd": 1,
+      "offset": 224658,
+      "residue_mod_2_18": 74886
+    },
+    {
+      "odd": 1,
+      "offset": 224698,
+      "residue_mod_2_18": 249662
+    },
+    {
+      "odd": 1,
+      "offset": 224686,
+      "residue_mod_2_18": 249658
+    },
+    {
+      "odd": 1,
+      "offset": 224688,
+      "residue_mod_2_18": 74896
+    },
+    {
+      "odd": 1,
+      "offset": 224693,
+      "residue_mod_2_18": 162279
+    }
+  ],
+  "rows": [
+    {
+      "parent_mod27": 1,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 1,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 1,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 7,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 7,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        }
+      ]
+    },
+    {
+      "parent_mod27": 2,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 9,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 9,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 3,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 3,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        }
+      ]
+    },
+    {
+      "parent_mod27": 4,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 1,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 1,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 7,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 7,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        }
+      ]
+    },
+    {
+      "parent_mod27": 5,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 10,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 10,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 16,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 16,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        }
+      ]
+    },
+    {
+      "parent_mod27": 7,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 6,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 18,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 18,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 6,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        }
+      ]
+    },
+    {
+      "parent_mod27": 8,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 3,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 15,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 15,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 3,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        }
+      ]
+    },
+    {
+      "parent_mod27": 10,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 13,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 13,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 1,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 1,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        }
+      ]
+    },
+    {
+      "parent_mod27": 11,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 15,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 15,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 4,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 4,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        }
+      ]
+    },
+    {
+      "parent_mod27": 13,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 12,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 12,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 1,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 1,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        }
+      ]
+    },
+    {
+      "parent_mod27": 14,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 16,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 16,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 4,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 4,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        }
+      ]
+    },
+    {
+      "parent_mod27": 16,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 18,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 12,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 12,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 18,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        }
+      ]
+    },
+    {
+      "parent_mod27": 17,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 9,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 3,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 3,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 9,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        }
+      ]
+    },
+    {
+      "parent_mod27": 19,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 7,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 7,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 13,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 13,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        }
+      ]
+    },
+    {
+      "parent_mod27": 20,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 3,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 3,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 10,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 10,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        }
+      ]
+    },
+    {
+      "parent_mod27": 22,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 6,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 6,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 13,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 13,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        }
+      ]
+    },
+    {
+      "parent_mod27": 23,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 4,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 4,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 10,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 10,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        }
+      ]
+    },
+    {
+      "parent_mod27": 25,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 12,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 6,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 6,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 12,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        }
+      ]
+    },
+    {
+      "parent_mod27": 26,
+      "witnesses": [
+        {
+          "target_mod9": 1,
+          "branch_index": 15,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 2,
+          "branch_index": 9,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 4,
+          "branch_index": 9,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        },
+        {
+          "target_mod9": 5,
+          "branch_index": 15,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 7,
+          "branch_index": 0,
+          "extra_even_lap": 1,
+          "physical_steps": 21
+        },
+        {
+          "target_mod9": 8,
+          "branch_index": 0,
+          "extra_even_lap": 0,
+          "physical_steps": 18
+        }
+      ]
+    }
+  ],
+  "all_even_lap": "A(y) = 8*y+6",
+  "even_lap_pair": "A^(2*j)(y) = (64^j*(7*y+6)-6)/7",
+  "analytic_kernel": [
+    {
+      "parent_mod9": 1,
+      "apply_A_first": false,
+      "good_mod9": 1,
+      "one_odd_offset": -2
+    },
+    {
+      "parent_mod9": 2,
+      "apply_A_first": false,
+      "good_mod9": 2,
+      "one_odd_offset": 5
+    },
+    {
+      "parent_mod9": 4,
+      "apply_A_first": false,
+      "good_mod9": 4,
+      "one_odd_offset": -2
+    },
+    {
+      "parent_mod9": 5,
+      "apply_A_first": true,
+      "good_mod9": 1,
+      "one_odd_offset": -2
+    },
+    {
+      "parent_mod9": 7,
+      "apply_A_first": true,
+      "good_mod9": 8,
+      "one_odd_offset": 5
+    },
+    {
+      "parent_mod9": 8,
+      "apply_A_first": false,
+      "good_mod9": 8,
+      "one_odd_offset": 5
+    }
+  ],
+  "explicit_constructor_moduli": "2^a * 3^b * 7^c, for all a,b,c >= 0",
+  "full_theorem_moduli": "all positive moduli, after the positive modular-word completion lemma",
+  "claim_boundary": "Inverse accessibility and sufficient sets; no proof of global capture or divergence"
+}

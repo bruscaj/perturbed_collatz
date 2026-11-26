@@ -1,0 +1,332 @@
+\section{Sharp bounds with at most eight impulses}\label{sec:impulses}
+
+For a nonzero conservative admissible word, write a pair $(b,a)$ for
+the successive impulses
+\[
+ +1,\underbrace{0,\ldots,0}_{b},-1,\underbrace{0,\ldots,0}_{a},
+ \qquad b,a\in\N.
+\]
+A word of $q$ pairs has $2q$ nonzero impulses and displayed period
+$p=\sum_{j=0}^{q-1}(2+b_j+a_j)$. The gaps have no imposed upper bound.
+Write $B=\{0,1,2\}$. A \emph{base launch} is seed 1 or 2 at any phase,
+or seed zero at a safe phase.
+
+\subsection{From two gaps to one return map}
+
+The order of the two gap parameters matters. At a boundary immediately
+before the positive impulse, a complete pair acts by
+\begin{equation}\label{eq:pair-return-map}
+ Q_{b,a}(n)=T^a\bigl(T^{b+1}(T(n)+1)-1\bigr).
+\end{equation}
+There are $b$ zero impulses between the two nonzero impulses, but
+$b+1$ ordinary $T$ updates between the value just after $+1$ and
+the subtraction of one. The last of those updates belongs to the
+negative-impulse step. Similarly, the final $a$ iterations are ordinary
+$T$ updates after that subtraction. Formula~\eqref{eq:pair-return-map}
+therefore advances exactly $2+b+a$ physical steps.
+
+For the pair $(b,a)=(1,4)$ and seed $1$, the impulse word is
+\[
+ (+1,0,-1,0,0,0,0).
+\]
+One lap reads as follows, with each arrow labeled by the impulse
+applied \emph{after} its $T$ update:
+\begin{equation}\label{eq:pair14-first-lap}
+ 1\xrightarrow{+1}3\xrightarrow{0}5\xrightarrow{-1}7
+ \xrightarrow{0}11\xrightarrow{0}17\xrightarrow{0}26
+ \xrightarrow{0}13.
+\end{equation}
+Thus $Q_{1,4}(1)=13$. The value $26$ is an interior peak, so a
+calculation that stores only the boundary values would not yet give
+the maximum physical value. Both quantities will be recorded in the
+census: the boundary map identifies recurrence, while literal
+intermediate updates supply the peak.
+
+The restriction to base launches is what makes a uniform statement
+possible with only the number of nonzero impulses fixed. It asks
+what can happen after an orbit has reached a small reference set.
+The gaps may still be arbitrarily long, and a later periodic response
+can extend across several forcing laps. The following theorem controls
+both features.
+
+\begin{theorem}[Uniform bounds for base launches]\label{thm:impulse-bounds}
+For $1\le q\le4$, every base launch for every word of $q$ pairs has value
+at most the following bound and eventually enters a cycle of augmented
+period at most the displayed multiple of $p$:
+\begin{center}
+\begin{tabular}{rrrr}\toprule
+Nonzero impulses & $q$ & Maximum value & Maximum augmented period\\\midrule
+2&1&122&$7p$\\
+4&2&195020&$7p$\\
+6&3&92779118&$12p$\\
+8&4&54285893576&$13p$\\\bottomrule
+\end{tabular}
+\end{center}
+Every listed maximum is attained by a positive base seed. Every period
+bound is attained with primitive forcing and is then also the least
+scalar response period. The same upper bounds apply to the future of
+any trajectory after a safe visit to $B$; no claim about its earlier
+values or the existence of such a visit is implicit.
+\end{theorem}
+
+\subsection{An exhaustive reduction of arbitrarily large gaps}
+
+At a positive-impulse boundary, starting from $n$, set $u=T(n)+1$.
+After $b$ zeros the negative impulse gives $T(T^b(u))-1$; the following
+$a$ zeros complete the pair. Call the pair \emph{escaping} from $n$
+when its endpoint exceeds 2. List all such pairs by the following finite
+procedure whenever the encountered ordinary tails reach $B$:
+\begin{enumerate}
+\item For each $b\ge0$ while $T^b(u)>2$, put $v=T(T^b(u))-1$.
+\item List each $a\ge0$ while $T^a(v)>2$, recording that endpoint.
+\end{enumerate}
+Once either ordinary tail enters $B$, larger gaps of that type cannot
+produce an escaping pair: $T(B)\subseteq B$, and $T(w)-1\in B$ for
+$w\in\{1,2\}$. From a base input a pair can escape only from 1;
+inputs 0 and 2 give $u=1$ and $u=2$ and return to $B$.
+Moreover, after a pair's initial positive impulse, any intermediate
+visit to $B$ forces its endpoint to lie in $B$: the remaining zero
+updates preserve $B$, and the sole negative update sends a positive
+base value back into $B$. Thus a pair with endpoint outside $B$ has
+not silently returned to $B$ in its interior.
+
+\paragraph{All fifteen one-pair escaping choices.}
+The first level of the procedure can be written out completely.
+Starting from $1$, the value just after $+1$ is $u=3$, and its
+ordinary tail is
+\[
+ 3\longmapsto5\longmapsto8\longmapsto4\longmapsto2
+ \longmapsto1\longmapsto2\longmapsto\cdots.
+\]
+Consequently the possible values immediately before the negative
+impulse, and the remaining gap choices that escape, are
+\begin{center}
+\begin{tabular}{rlllr}\toprule
+$b$ & Before $-1$ & Just after $-1$ & Escaping $a$ & Count\\\midrule
+0&3&4&$a=0$&1\\
+1&5&7&$0\le a\le9$&10\\
+2&8&3&$0\le a\le3$&4\\
+3&4&1&none&0\\
+$b\ge4$&1 or 2&0 or 1&none&0\\\bottomrule
+\end{tabular}
+\end{center}
+For the longest row, the ordinary tail after the negative impulse is
+\[
+ 7,11,17,26,13,20,10,5,8,4,2,1,2,\ldots.
+\]
+Exactly its first ten entries exceed two. For $b=2$, the relevant
+tail is $3,5,8,4,2,1,\ldots$, with four such entries. This gives
+$1+10+4=15$ escaping pairs, including $(1,4)$ from
+\eqref{eq:pair14-first-lap}.
+
+The rows also settle infinite sets of omitted parameters. For example,
+every pair $(1,a)$ with $a\ge10$ has endpoint
+\[
+ Q_{1,a}(1)=
+ \begin{cases}2,&a\text{ even},\\1,&a\text{ odd}.\end{cases}
+\]
+There is no upper cutoff on $a$ in this assertion: reaching the exact
+ordinary cycle $1\leftrightarrow2$ proves the formula for all remaining
+gap lengths. The same principle is applied at every subsequent level
+of the escaping-prefix construction.
+
+To justify termination without assuming the ordinary Collatz conjecture,
+form signed layers. Start with $B$, apply the next sign $+1$ or $-1$
+after one $T$ step, and take its complete ordinary forward closure.
+Explicitly, with $\mathcal L_0=B$,
+\begin{equation}\label{eq:signed-layer-recurrence}
+ \mathcal L_j=
+ \bigcup_{x\in\mathcal L_{j-1}}
+ \{T^a(T(x)+(-1)^{j+1}):a\ge0\}.
+\end{equation}
+The word ``signed'' refers to the alternating impulse signs. The
+reachable values in these layers remain nonnegative. The first two
+layers are small enough to display:
+\begin{align*}
+ \mathcal L_1&=\{1,2,3,4,5,8\},\\
+ \mathcal L_2&=\{0,1,2,3,4,5,7,8,10,11,13,17,20,26\}.
+\end{align*}
+For instance, $T(B)+1=\{1,2,3\}$, and following its ordinary
+tails gives $\mathcal L_1$. Applying $T(x)-1$ to this set produces
+$\{0,1,3,4,7\}$; their ordinary tails give $\mathcal L_2$.
+Every tail in these finitely many layers is explicitly followed until
+it reaches $B$ or a previously verified tail; an unresolved tail or
+integer overflow is a failure. The successive sizes and maxima are
+\begin{center}\small
+\begin{tabular}{rrrrrrrrr}\toprule
+Signs applied&1&2&3&4&5&6&7&8\\\midrule
+Size&6&14&85&317&1218&3279&10193&27870\\
+Maximum&8&26&4616&15578&125252&642842&18534824&90272312\\\bottomrule
+\end{tabular}
+\end{center}
+Each layer allows an arbitrary number of subsequent zero impulses.
+Consequently these finite computations certify all ordinary tails
+needed to enumerate up to four successive escaping pairs, for every
+choice of gaps. They also bound the peaks during the corresponding
+finite excursions. The numbers of rooted escaping prefixes are
+\[
+ 15,\qquad 2854,\qquad 2416542,\qquad 2383451629.
+\]
+Here a rooted prefix starts from 1 immediately before its first positive
+impulse and has endpoint greater than 2 after every complete pair.
+These counts include rotations separately when their rootings qualify.
+They are not counts of distinct cyclic forcing words.
+
+Fix now any word of $q$ pairs and any base trajectory. Before the first
+positive boundary the orbit remains in $B$. If it ever makes $q$
+successive escaping pairs after departing $B$, that departure starts
+from 1. The next $q$ pairs specify a rotation of the entire fixed word
+and occur in the finite rooted-prefix list. Its entire future from
+that departure is therefore the rooted fixed-word trajectory checked
+in the core census. Before the first such excursion, each
+departure lasts fewer than $q$ pairs, so the signed layers bound all
+earlier peaks.
+
+If there is no such excursion, every departure from $B$ returns within
+$q$ pairs. At a fixed positive boundary, any state on the trajectory
+is either in $B$ or is $r$ pairs after its most recent departure,
+where $1\le r\le q-1$. For each $r$ the intervening pairs are fixed and
+the departure seed must be 1, so there is at most one such outside
+value. There are at most $3+(q-1)=q+2$ possibilities at that boundary.
+Sampling once per word yields a repeated state and a cycle of period
+at most $(q+2)p$. The peak is at most the largest signed-layer maximum
+through $2q$ impulses. Both bounds are below the corresponding entries
+of Theorem~\ref{thm:impulse-bounds}. This argument covers the entire
+infinite complementary family, including gaps longer than any listed
+escaping tail.
+
+For a concrete view of the complement argument, take $q=2$ and fix
+one of the word's two positive boundaries. Suppose that no departure
+has two consecutive escaping pairs. At the chosen boundary, the
+trajectory is either at one of $0,1,2$, or it is exactly one pair
+after its last departure from $1$. The preceding pair is fixed by the
+word, so the latter case contributes at most the single value
+$Q_{b,a}(1)$ for that particular pair. There are at most four
+boundary values, whatever the gap lengths. Sampling once per
+displayed period therefore gives an eventual cycle of at most four
+laps. The argument does not enumerate the infinitely many choices
+of those gaps; it bounds the number of states that one fixed word
+can present at the sampled boundary.
+
+Signed layers and the recurrent census answer different questions.
+The layers bound an excursion containing at most a prescribed number
+of impulses after departure from $B$. A core word can continue for
+many laps before returning to that base, so its recurrent peak can
+exceed the corresponding layer maximum. The one-pair witness below
+already exhibits this difference: $\max\mathcal L_2=26$, but its
+full recurring orbit reaches $122$.
+
+\subsection{Exact core censuses and their trust boundary}
+
+For each rooted $q$-pair prefix, fix that same word periodically, rather
+than allowing a new choice of gaps on later laps. Starting from its
+root seed 1, compute its successive values at a fixed boundary and
+record every intervening peak. The first repeated boundary value
+identifies the eventual cycle and its period in displayed laps.
+Any failure to close within the stated resource limit aborts the run;
+the resource limit is never interpreted as proof of capture. For
+$q\le3$, the included implementations additionally follow every seed
+in $B$ at every positive boundary, allowing walks to join already
+closed futures. This is redundant for the reduction but supplies an
+extra check on phase coverage.
+
+The one- and two-pair census is
+\path{certificates/impulses/small.py}. The six-impulse census in
+\path{certificates/impulses/independent_six/verify.cpp} closes all
+2,416,542 rooted words, visiting a total of 32,037,568 distinct
+positive-boundary states across the words and at most 44 for one word.
+It checks unsigned integer overflow before forming $3n+1$ and skips
+only the explicit ordinary cycles at 0 and $\{1,2\}$.
+
+The eight-impulse core has 2,383,451,629 rooted words. It is partitioned
+by the first escaping pair; the largest part is further split by a
+third-prefix ordinal. Every partition must occur exactly once.
+\path{certificates/impulses/full_excursions/census.cpp} closes every
+word, using exact tables of finite ordinary iterates to reduce repeated
+work. A second implementation,
+\path{certificates/impulses/independent_eight/scan.cpp}, uses a different
+partition and coast implementation. Both give maximum and recurrent
+maximum 54,285,893,576 and maximum cycle length 13 laps. The stored
+outputs and reproduction commands accompany the sources.
+
+The quick checker validates every local partition's population,
+histograms, excursion domains, witness ownership, and literal witness
+trajectories. A previous checker discarded some local fields during
+aggregation; this release incorporates the repaired validation.
+Even this repaired quick check does not prove an upper bound merely
+from counts and attaining witnesses. The upper bounds use the full
+recurrence census, the signed-layer exhaustion, and the infinite
+complement argument above. Full reproduction regenerates the partitions
+and compares their contents with the stored certificate.
+
+\subsection{A sharp witness in literal time}
+
+Continue the fixed word $(1,4)$ from
+\eqref{eq:pair14-first-lap}. The gaps are kept unchanged on every
+lap. Its complete boundary cycle and the peaks of the corresponding
+seven-step segments are
+\begin{center}
+\begin{tabular}{rrrr}\toprule
+Lap & Input boundary value & Next boundary value & Segment peak\\\midrule
+0&1&13&26\\
+1&13&80&80\\
+2&80&53&80\\
+3&53&35&122\\
+4&35&8&54\\
+5&8&2&8\\
+6&2&1&2\\\bottomrule
+\end{tabular}
+\end{center}
+In the fourth row, the literal segment is
+\[
+ 53,81,122,60,30,15,23,35.
+\]
+This supplies the peak $122$ without interpolation between sampled
+values. The seven boundary inputs are distinct and the next is again
+$1$, so this launch is already on an augmented cycle of $7\cdot7=49$
+steps. The forcing has primitive period seven. Any scalar period
+must be a multiple of that primitive forcing period, and a smaller
+multiple would repeat a boundary value earlier. Hence the least
+scalar response period is also $49$.
+
+If the same seven-impulse list is displayed twice, the physical
+recurrence and its scalar period stay unchanged. The displayed clock
+then has length $14$, so a state must wait
+$\operatorname{lcm}(49,14)=98$ steps to repeat both its scalar
+value and that enlarged clock label. This explains the distinction
+between a displayed augmented period and the scalar period attached
+to primitive forcing. The sharpness witnesses in the theorem are
+checked with their primitive clocks.
+
+\begin{proof}[Proof of Theorem~\ref{thm:impulse-bounds}]
+The signed-layer and complement arguments reduce every base launch to
+the finite core or to smaller bounds. The complete core runs give the
+displayed maxima and period bounds. For sharpness, the following
+witnesses are replayed in physical time, including the forcing's
+primitive period and the least scalar period of the eventual cycle.
+\begin{center}\small
+\begin{tabular}{rlll}\toprule
+$q$&Quantity&Pairs in time order&Seed\\\midrule
+1&peak and period&$(1,4)$&1\\
+2&peak&$(1,2),(43,0)$&1\\
+2&period&$(1,2),(10,2)$&1\\
+3&peak&$(1,2),(23,11),(6,7)$&1\\
+3&period&$(1,4),(2,1),(6,1)$&2\\
+4&peak&$(1,2),(23,15),(14,32),(12,16)$&1\\
+4&period&$(1,5),(1,0),(5,3),(0,2)$&1\\\bottomrule
+\end{tabular}
+\end{center}
+Every displayed witness is launched immediately before the positive
+impulse of its first listed pair. In general, if a scalar eventual cycle has
+least period $r$, the recovered impulses
+$d_k=n_{k+1}-T(n_k)$ have period $r$. For primitive forcing of period
+$p$, this implies $p\mid r$, so the scalar cycle already returns to the
+same forcing phase. Its least scalar and augmented periods agree.
+\end{proof}
+
+These are exact finite arithmetic computations with general reduction
+arguments. They are not Lean-verified censuses in this release. In
+particular, no enumeration of bounded gaps or bounded initial seeds is
+being substituted for an unrestricted quantifier: arbitrary gaps are
+covered by the explicit tail exhaustion and complement proof, while
+the restriction to base launches remains part of the theorem.

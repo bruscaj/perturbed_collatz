@@ -1,0 +1,225 @@
+\section{Formal coverage, open obligations, and ordinary Collatz}
+\label{sec:formal-scope}
+
+\subsection{What has actually been formalized}
+
+The release contains three independent projects for the Lean~4 theorem
+prover \cite{demoura-ullrich-2021}. It preserves the twelve
+mathematical source modules of the initial research snapshot and incorporates
+six additional signed-model modules from the subsequently merged audit. A
+separate release bridge states the positive-seed capture result as an
+if-and-only-if theorem. Thus there are nineteen mathematical modules:
+eighteen source-preserved modules and one explicitly identified release
+bridge. The original sources are unchanged. The source pins, byte comparisons,
+and packaging transformations are recorded outside the minimal export;
+\path{lean/README.md} explains the public layout.
+
+The inverse project now includes the general signed physical model,
+admissibility, height coordinates, cycle gain, and the three-family reduction,
+in addition to its original three-step inverse results. It uses Lean 4.24.0,
+as does the sprint project. The perturbed project uses Lean 4.19.0. None
+requires mathlib. A clean verification builds each project in a new temporary
+directory, checks the exact toolchain version, treats audit warnings as errors,
+and compares the regenerated theorem inventory with the committed one.
+
+\begin{center}\small
+\begin{tabular}{lrrrr}\toprule
+Project&Mathematical modules&Public&Private&Audited constants\\\midrule
+\texttt{inverse}&11&110&37&556\\
+\texttt{perturbed}&6&86&43&401\\
+\texttt{sprint}&2&5&0&33\\\midrule
+Total&19&201&80&990\\\bottomrule
+\end{tabular}
+\end{center}
+The public and private columns count named source theorem declarations.
+The last column also includes elaborator-generated theorem constants.
+Two hundred public declarations come from preserved research sources; the
+release bridge adds one. These counts are not independent-result counts
+or percentages of the manuscript completed. The separate
+\path{SevenAdversarial.lean} fixture checks twenty-one malformed-row or
+scope examples and is not counted as a mathematical module.
+
+The inventory in \path{lean/inventory.json} stores exact elaborated theorem
+types, source locations, and transitive axiom dependencies. Across all 990
+audited constants, the dependencies are drawn only from
+\texttt{propext}, \texttt{Quot.sound}, and \texttt{Classical.choice}; no
+\texttt{sorryAx} or custom axiom occurs. The complete audit includes unused
+private and generated theorem helpers. An external independent Lean kernel
+checker has not been run. The compile-and-audit result does not certify
+unconnected Python, C++, plotting code, or the entire written manuscript.
+
+The permitted axioms and transitive dependency inspection are documented
+in the versioned Lean reference \cite[Sections~8.4--8.5]{lean-axioms-424}.
+Axiom inspection does not decide whether the elaborated definitions and
+theorem statement express the intended mathematics. The official
+proof-validation guide treats that as a separate obligation and
+distinguishes dependency auditing from proof replay and independent
+kernel checking \cite{lean-validating-proofs}. The model comparisons
+below address the statement-matching obligation; no additional checker
+run is claimed here.
+
+\paragraph{Directly matching results.}
+The conservative cyclic-alternation assertion is proved in
+\path{Collatz.Physical.conservative_admissible_iff_alternating}.
+For arbitrary signed forcing, \texttt{admissible\_iff\_floor} gives the
+binary-floor formulation of admissibility; the particular separated-negative-
+impulse formulation in Theorem~\ref{thm:admissibility} is still presented
+with its written proof. The source also proves binary-height existence
+and uniqueness, the exact safe domain under the nonzero-word hypothesis,
+physical/positive-coordinate conjugacy, its orbit and cycle consequences,
+and admissibility under phase rotation. The primitive-period comparisons
+in the manuscript are not separately formalized.
+
+The all-depth inverse-lap and binary-zoom identities have direct Lean
+support. So does the arithmetic return inequality $3^o<2^L$ used in
+Proposition~\ref{prop:integer-cycle-attraction}. The latter theorem is
+about integer arithmetic and safe returns; complex differentiation and
+local analytic attraction are further written arguments.
+
+The main new formal conclusion is
+\path{Collatz.ReleaseBridge.global_capture_iff_three}:
+universal capture of positive physical integers at all phases is
+\emph{equivalent} to capture of the three complete B1, A3, N03 families.
+It uses the committed signed theorem
+\path{Collatz.SevenStep.global_capture_of_three} for the substantive
+implication and proves the converse from positivity of the family launches.
+The order of coordinates in Lean is phase then integer. Its physical word,
+continued-zero convention, target cycle, and family parameter domains match
+Section~\ref{sec:seven-three}. All 43 source Lean rows were independently
+compared with the printed and Python rows, including the parameter shift
+needed on zero-residue classes. The formal entry result is at most six
+updates for positive seeds; the separate eleven-update safe-domain bound
+and the scoped rank-optimality argument retain their stated evidence.
+
+The family assumptions are explicit hypotheses, not trusted axioms. A
+checked implication does not make those hypotheses true. The formal
+statement therefore remains conditional on the same open mathematics as
+the written theorem, while checking that particular implication in the signed physical model.
+
+\paragraph{Related models still require care.}
+The older perturbed project contains useful constituent lemmas with
+different conventions. In particular, \texttt{PerturbedCollatz.step}
+makes zero absorbing, and its orbit-lift theorem requires positivity
+along the original prefix. Its period-seven example uses
+$(-1,0,0,1,0,0,0)$, not the word in Section~\ref{sec:seven-step}.
+Its escaping-basin theorem assumes an escaping target instead of
+constructing one. The older progression-steering result uses a modulus
+$n+1$ coprime to six and also requires $3^n\mid z-c$. It is not the
+arbitrary-target all-progression theorem in this manuscript.
+
+The sprint project supplies root inverse-height and packet identities;
+those auxiliary declarations do not prove the residual-family hypotheses.
+Likewise, the new signed parity-lift theorem supplies a positive odd affine
+multiplier, but does not by itself formalize the entire parity-word/residue
+bijection or identify it as $3$ raised to the number of odd inputs. Read the exact types before
+transferring any statement. The claim-to-evidence map distinguishes a full
+matching conclusion from a supporting identity and a related model.
+
+\subsection{What remains to formalize and what requires new mathematics}
+
+The signed model and the conditional three-family conclusion are now
+available as formal foundations for further work. A next extension can
+reuse them rather than introducing another convention for zero, phase,
+or physical height. The remaining tasks have distinct sizes and proof
+requirements.
+
+For inverse growth, formalize the complete 24-step branch minima and
+eligibility inequalities, then prove cross-depth noncollision, the
+weighted stopping-frontier bound, and the finite selector's size and
+multiplicity estimates. Correct arithmetic on a finite list does not
+supply the list's exhaustive coverage or those universal counting
+arguments automatically.
+
+For the support bounds, a formal certificate interface must justify the
+arbitrary-gap reduction, the complete signed tail closure, the finite
+core/complement split, and every upper-bound enumeration. Replaying an
+attaining witness or importing a recorded maximum is insufficient. The
+current independent C++/Python replays remain computational evidence
+outside Lean. For synchronization, the unfinished formal work includes
+the protected drift, exponential tail, closed-reference conditioning,
+union bound over all rotations, and primitive-period argument.
+
+The continuous geometry would require real and complex analysis plus a
+sound rational interval and disk interpreter. The proof obligations are
+Taylor remainder bounds, outward rounding, complete interval coverage,
+contraction, and the relation between disk capture and basin membership.
+The numerical figure generator supplies none of these proof obligations.
+Solovyev and Hales \cite[Sections~2--3]{solovyev-hales-2013} give a
+relevant precedent: an external search produces Taylor/interval
+certificates, which theorem-producing procedures then verify in
+HOL~Light. For this release, a Lean interpreter would have to prove
+the meaning and soundness of the actual rational certificate records.
+The existing Python checker does not supply that formal interpreter.
+The four-family theorem also remains a separate formalization task: its
+control of returns beyond the short verification caps and its phase-correct
+alternative-launch mergers are not formalized by the separate three-family
+proof.
+
+\begin{center}\small
+\begin{tabular}{p{.25\textwidth}p{.33\textwidth}p{.31\textwidth}}\toprule
+Target&Current evidence&Remaining obligation\\\midrule
+Three-family global equivalence&Signed Lean proof and release iff bridge;
+independent affine reconstruction&Prove the three whole-family capture
+hypotheses to obtain unconditional capture\\[4pt]
+Full foundation statements&Conservative classification, height/safety,
+conjugacy and arithmetic cycle gain in Lean&Exact general separation
+formulation, full parity-cylinder bijection, primitive-period statements\\[4pt]
+Inverse growth in every progression&Written proof and exhaustive 24-step
+certificate&Formal coverage, noncollision, weighted counting,
+finite selectors and multiplicity\\[4pt]
+Support bounds and synchronization&Complete written arguments and exact
+support censuses&Formal upper-bound reduction/enumeration and the
+probabilistic all-phase proof\\[4pt]
+Continuous geometry&Rational disks, interval leaves and trace balls;
+written analytic proofs&Sound analytic interval/disk interpreter and
+formal contraction/basin arguments\\\bottomrule
+\end{tabular}
+\end{center}
+
+Each milestone should end with a theorem whose complete type is compared
+with the manuscript. Closing a formalization gap proves that a stated
+argument has been checked by Lean. Closing B1, A3, and N03 requires new
+mathematics about all parameters in those families; additional build logs
+or declaration counts cannot perform that step.
+
+\subsection{What would be needed for ordinary Collatz}
+
+Let $T$ be the unforced shortcut map on positive integers. Its conjecture
+asserts that every such orbit reaches 1. The results here concern either
+a designed forcing or one of two particular fixed forced maps. The
+coordinate change of Section~\ref{sec:foundations} gives a periodic
+schedule of $T$ and $U$; it does not remove that schedule to give ordinary
+$T$ iterations. No reduction from unforced capture to either set of
+seven-step obligations has been established in this manuscript.
+
+For example, a future transfer argument could specify an encoding $E$
+of every positive unforced seed, prove a simulation relation between
+unforced iterates and returns of a forced map, and show that forced
+capture of every encoded state implies unforced capture. Such an argument
+must prove the clock correspondence, guard coverage, safe domain,
+existence of all required returns, and transfer of the terminal cycle.
+Another possible route would prove a sufficiently strong exceptional-set
+upper bound for exactly the forced map of Corollary~\ref{cor:exceptional-set},
+then separately establish a sound transfer to the ordinary map. Neither
+route is supplied by empirical similarity, inverse-basin abundance,
+or a finite family of successful starting values.
+
+The logarithmic-density result of Tao \cite{tao} is an example of a
+powerful ordinary-Collatz theorem whose conclusion still differs from
+universal capture: almost all orbits, in logarithmic density, attain a
+bound given by any function tending to infinity. That statement is not
+the exceptional-set power bound required here, and it concerns another
+map. The distinction between an almost-everywhere conclusion and an
+all-seeds conclusion remains substantive.
+
+The three residual families in Theorem~\ref{thm:seven-three}, or
+alternatively the four in Theorem~\ref{thm:seven-four}, are explicit
+next targets within this research program. Progress would consist of an
+exhaustive compatible reduction of one complete set of families, a
+different complete invariant, or a
+proof of their capture. Additional reductions on proper subprogressions
+can be useful, but leave infinite complements unless an explicit coverage
+argument closes them. The current work supplies several independently
+checkable results and a concrete conditional reduction; it does not
+establish the classical conjecture or claim to solve another named open
+conjecture without a separate implication and literature check.

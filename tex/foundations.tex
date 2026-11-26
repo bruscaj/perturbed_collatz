@@ -1,0 +1,373 @@
+\section{The integer dynamics and admissible forcing}\label{sec:foundations}
+
+We use the shortcut Collatz map on the signed integers,
+\begin{equation}\label{eq:shortcut}
+ T(n)=\begin{cases}n/2,&n\equiv0\pmod2,\\
+ (3n+1)/2,&n\equiv1\pmod2.
+ \end{cases}
+\end{equation}
+The divisions in this formula are exact. A forcing word is a nonempty
+finite list $d=(d_0,\ldots,d_{p-1})$ of integers, repeated periodically.
+The augmented state and its update are
+\begin{equation}\label{eq:physical-forcing}
+ (n,i)\in\Z\times(\Z/p\Z),\qquad
+ F_d(n,i)=\bigl(T(n)+d_i,i+1\bmod p\bigr).
+\end{equation}
+Write $F_{d,i}^{(k)}(n)$ for the scalar value after $k$ such updates
+starting at phase $i$. The impulse is applied before the phase advances.
+Zero continues to evolve by this same rule; it is not an absorbing state.
+We allow a displayed period $p$ to be a multiple of the least, or
+\emph{primitive}, forcing period. When a bound is expressed relative to
+the primitive period, that qualification is explicit.
+
+\subsection{A trajectory includes its clock}
+
+The smallest nontrivial example used repeatedly below is
+\begin{equation}\label{eq:three-example-word}
+ d=(1,0,-1).
+\end{equation}
+Phase zero applies $T$ and then adds one; phase one applies $T$;
+phase two applies $T$ and then subtracts one. For example, a launch
+of seed $5$ at phase zero begins
+\[
+ (5,0)\longmapsto(9,1)\longmapsto(14,2)\longmapsto(6,0).
+\]
+The first update is $T(5)+1=8+1=9$. In particular, the impulse
+is not inserted into the argument of $T$: $T(5+1)=3$ would give
+a different recurrence.
+
+The following comparison keeps the seed fixed and changes only the
+clock position. Entries are scalar values; the forced phase at time
+$k$ is the launch phase plus $k$ modulo three.
+\begin{center}
+\begin{tabular}{rrrrr}\toprule
+$k$ & Ordinary $T^k(5)$ & Launch at $0$ & Launch at $1$ & Launch at $2$\\\midrule
+0&5&5&5&5\\
+1&8&9&8&7\\
+2&4&14&3&12\\
+3&2&6&6&6\\
+4&1&4&3&2\\
+5&2&2&4&2\\
+6&1&0&3&1\\\bottomrule
+\end{tabular}
+\end{center}
+At time three, all three forced scalar values happen to equal $6$.
+Their phases are different, so their next values are respectively
+$4$, $3$, and $2$. Thus scalar equality does not by itself give a
+merger. Equality of the augmented states does: the update is a
+function of precisely that pair. This distinction will be used in
+both the inverse constructions and the later rank reductions.
+
+The phase-zero launch also illustrates continuation through zero.
+Its next three updates after reaching $(0,0)$ are
+\[
+ (0,0)\longmapsto(1,1)\longmapsto(2,2)\longmapsto(0,0).
+\]
+By contrast, a launch from $(0,1)$ follows
+$(0,1)\mapsto(0,2)\mapsto(-1,0)$. A statement about every positive
+seed can therefore coexist with restrictions on which zero states
+are allowed. The complete cycle geometry for this word is displayed
+in Figure~\ref{fig:phase-cycles}; the present calculation explains
+why the phase labels in that figure are part of the mathematics.
+
+\begin{definition}\label{def:admissible}
+A forcing word is \emph{conservative} if $\sum_{i=0}^{p-1}d_i=0$.
+It is \emph{admissible} if, for every $n\ge1$, every launch phase $i$,
+and every $k\ge0$, one has $F_{d,i}^{(k)}(n)\ge0$.
+A nonnegative state is \emph{safe} if all of its subsequent scalar
+values are nonnegative.
+\end{definition}
+
+Conservation is a condition on the additive impulses. It is not a
+conservation law for the integer state. Admissibility quantifies over
+every positive seed at every phase; safety of one observed trajectory
+does not imply it.
+
+\begin{theorem}[Admissible integer words]\label{thm:admissibility}
+A periodic integer word is admissible if and only if every impulse is
+at least $-1$ and each pair of successive negative impulses in cyclic
+order has a positive impulse between them. For a word with a single
+negative impulse, the intervening arc means one full circuit back to
+that impulse. The separation requirement is vacuous if there are no
+negative impulses.
+
+Consequently, a conservative word is admissible if and only if it is
+identically zero or its nonzero entries alternate cyclically between
+$+1$ and $-1$.
+\end{theorem}
+\begin{proof}
+Launching seed $2$ at an impulse $d_i\le-2$ gives
+$T(2)+d_i=1+d_i<0$, so every negative impulse of an admissible word
+equals $-1$. If two successive negative impulses have only zeros
+between them, seed $2$ at the first follows $2\mapsto0$, stays zero
+until the second, and then becomes $-1$. This proves necessity,
+including a single negative impulse repeated on the next lap.
+
+Conversely, $T(n)\ge1$ when $n\ge1$. A negative impulse can therefore
+create zero but cannot create a negative state from a positive input.
+After such a zero, zero impulses leave it at zero and a positive
+impulse restores a positive value. The separation condition guarantees
+this restoration before the next negative impulse. Thus every
+positive launch at every phase stays nonnegative.
+
+Suppose now that the word is nonzero and conservative. It has both
+positive and negative entries. Let $a$ and $b$ count these entries,
+respectively. Separation gives $a\ge b$. Since every negative entry
+is $-1$, conservation gives
+$\sum_{d_i>0}d_i=b$, whereas integrality gives
+$\sum_{d_i>0}d_i\ge a$. Hence $a=b$, all positive entries are $1$,
+and exactly one positive entry separates successive negative entries.
+The converse follows from the first assertion.
+\end{proof}
+
+The second generator used below is the translated Collatz map
+$U=P\circ T\circ P^{-1}$, where $P(x)=x+1$. It is exactly the map
+$E$ of Monks et al.~\cite[\S~3]{monks-et-al-2013}.
+The forcing-specific assertions here identify the binary height, the
+safe domain, and the phase-dependent coordinate that selects between
+these two generators.
+
+\begin{proposition}[Binary height and positive coordinates]
+\label{prop:height-conjugacy}
+Let $d$ be a nonzero conservative admissible word. There is a unique
+periodic height word $h_i\in\{0,1\}$ such that
+\begin{equation}\label{eq:height-difference}
+ d_i=h_{i+1}-h_i.
+\end{equation}
+The height and impulse words have the same primitive period. Their
+safe nonnegative states are exactly
+\begin{equation}\label{eq:safe-domain}
+ \{(n,i):n\ge h_i\}.
+\end{equation}
+On this domain, $z=n+1-h_i$ is a positive integer and conjugates the
+physical dynamics to
+\begin{equation}\label{eq:positive-switch}
+ z'=\begin{cases}T(z),&h_i=1,\\ U(z),&h_i=0,
+ \end{cases}
+ \qquad
+ U(z)=T(z-1)+1=
+ \begin{cases}3z/2,&z\text{ even},\\(z+1)/2,&z\text{ odd}.
+ \end{cases}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Set the height to zero just before a positive impulse, increase it to
+one there, leave it constant at zero impulses, and decrease it to zero
+at the next negative impulse. Alternation makes this definition
+consistent around the clock. The value immediately before a positive
+impulse must be zero in any binary realization, which proves uniqueness.
+
+If the differences have period $q$, the quantity $h_{i+q}-h_i$ is
+independent of $i$. Repeating this translation around the finite
+clock shows that this constant is zero. Thus every period of the
+differences is a period of the height, and the reverse implication is
+immediate from \eqref{eq:height-difference}.
+
+When $n\ge h_i$, one has $T(n)\ge h_i$. Consequently
+$n'=T(n)+h_{i+1}-h_i\ge h_{i+1}$, proving invariance of
+\eqref{eq:safe-domain}. The only nonnegative states outside it have
+$n=0$ and $h_i=1$. From such a state the height remains one through
+zero impulses until the next negative impulse, which sends zero to
+$-1$. Such a negative impulse exists because the height is
+nonconstant. This proves the safe-state characterization. Finally,
+\[
+ z'=n'+1-h_{i+1}=T(n)+1-h_i.
+\]
+Substitution of $n=z-1+h_i$ gives both cases of
+\eqref{eq:positive-switch}.
+\end{proof}
+
+For zero forcing either constant height is possible, so the uniqueness
+assertion deliberately excludes that word. We use $h_i=0$ if a
+height is needed for zero forcing. In a nonzero conservative admissible word, zero
+is a safe initial value precisely at height-zero phases. Every
+positive initial value is safe at every phase.
+
+The alternative coordinate $u=n-h_i=z-1$ is nonnegative. Its two
+updates are $u'=T(u+h_i)-h_i$. We use $z$ in rank comparisons and
+$n$ in statements about physical seeds. A divisibility restriction on
+$z$ need not be the same restriction on $n$.
+
+\subsection{Calculating with the height coordinate}
+
+For \eqref{eq:three-example-word}, the unique binary height is
+$h=(0,1,1)$. Taking cyclic differences gives
+$(1-0,1-1,0-1)=(1,0,-1)$, and the dictionary between the two
+coordinate systems is
+\begin{center}
+\begin{tabular}{rrrrll}\toprule
+Phase $i$ & $d_i$ & $h_i$ & Safe physical values & Positive coordinate & Update\\\midrule
+0&$+1$&0&$n\ge0$&$z=n+1$&$U$\\
+1&0&1&$n\ge1$&$z=n$&$T$\\
+2&$-1$&1&$n\ge1$&$z=n$&$T$\\\bottomrule
+\end{tabular}
+\end{center}
+The chronological positive-coordinate word is consequently $UTT$.
+The phase-zero path just calculated becomes
+\begin{equation}\label{eq:height-worked-path}
+ 6\xrightarrow{U}9\xrightarrow{T}14\xrightarrow{T}7.
+\end{equation}
+The physical endpoint is $6$, while the positive-coordinate endpoint
+is $7$, because the return is to height zero. This is a useful check
+on a return-map calculation: comparison of a physical input with a
+normalized output would mix two different quantities.
+
+The formula for $U$ also explains the change in parity roles. If
+$z=2m$, then $z-1$ is odd and
+\[
+ U(2m)=T(2m-1)+1=(3(2m-1)+1)/2+1=3m.
+\]
+If $z=2m+1$, then $U(2m+1)=T(2m)+1=m+1$.
+For $T$, even inputs shrink and odd inputs grow; for $U$, those
+roles are reversed. A fixed height word prescribes which of these
+two maps is used at each time. It does not let an individual orbit
+select the shrinking branch whenever convenient.
+
+The safe-domain condition can now be read without subtraction at
+the boundary: $n\ge h_i$ is exactly $z\ge1$. In particular, the
+safe physical zero $(0,0)$ corresponds to $z=1$, whereas the unsafe
+zero states at heights one would correspond to $z=0$. Positivity
+of $z$ is preserved by both displayed formulas for $T$ and $U$.
+This supplies a second way to follow the invariant domain, while
+the identity in Proposition~\ref{prop:height-conjugacy} proves that
+it describes the original physical dynamics.
+
+There are therefore three compatible views of one admissible orbit:
+physical value $n$ with its clock, the height chart $h_i$, and positive
+value $z$. The first makes the forcing explicit, the second records
+where safe zero states occur, and the third makes every update a
+positive $T$ or $U$ step. We state the coordinate whenever a rank,
+congruence, or base set depends on it.
+
+\subsection{Affine branches and phase conventions}
+
+For ordinary Collatz, the affine iterate formula and the correspondence
+between finite parity words and residue classes are classical
+\cite[Theorems~1.1--1.2]{terras-1976}; their $2$-adic coding is developed
+in \cite[\S~1 and Appendix~B]{bernstein-lagarias-1996}.
+The following calculation retains the residue-lifting argument and
+includes the prescribed forcing in the affine intercept.
+
+\begin{proposition}[Finite parity words]\label{prop:affine-parity}
+Fix a forcing word, a launch phase $i$, and a finite binary word
+$s_0,\ldots,s_{L-1}$. There is exactly one residue class modulo $2^L$
+of integer seeds whose first $L$ physical input parities are this word.
+On that class,
+\begin{equation}\label{eq:affine-word}
+ F_{d,i}^{(L)}(n)=\frac{3^{s_0+\cdots+s_{L-1}}n+B_L}{2^L},
+ \qquad B_0=0,\quad
+ B_{j+1}=3^{s_j}B_j+2^j(s_j+2d_{i+j}).
+\end{equation}
+Indices of $d$ are read modulo $p$.
+\end{proposition}
+\begin{proof}
+For a step with input parity $s_j$,
+$2n_{j+1}=3^{s_j}n_j+s_j+2d_{i+j}$.
+Induction gives the displayed recurrence. For the residue assertion,
+suppose a parity prefix of length $j$ specifies one residue modulo
+$2^j$. Its two lifts modulo $2^{j+1}$ have seeds differing by $2^j$.
+Their first $j$ parities agree, and their values after $j$ steps
+differ by $3^{s_0+\cdots+s_{j-1}}$, which is odd. Exactly one lift
+has either prescribed next parity. Induction starting at $j=0$
+proves existence and uniqueness. Adding a multiple of $2^L$
+preserves the entire prefix, so the identity holds on the whole class.
+\end{proof}
+
+This proposition is a finite itinerary statement. It does not assert
+that an arbitrary infinite parity word has a positive integer seed.
+Bernstein's explicit inverse coding \cite{bernstein-1994}, expressed
+for the shortcut clock in \cite[\S~1]{bernstein-lagarias-1996}, takes
+values in $\Z_2$; this ambient space does not enforce positive integer
+realization.
+The affine formula also explains why $\sum d_i=0$ need not cancel the
+additive term $B_L$: later parity branches weight different impulses
+differently.
+
+\paragraph{An entire residue class from one parity calculation.}
+Take phase zero in \eqref{eq:three-example-word} and prescribe the
+three physical input parities $(1,1,0)$. The first odd input has
+the form $n=2a+1$, and its first image is $3a+3$. Requiring that
+image to be odd forces $a$ to be even, so $n=4b+1$. The next image
+is $9b+5$; requiring it to be even forces $b$ to be odd. Thus the
+successive parity constraints select
+\[
+ n\equiv1\pmod2,\qquad n\equiv1\pmod4,\qquad
+ n\equiv5\pmod8.
+\]
+Writing $n=8q+5$ now gives a literal calculation on the whole class:
+\begin{equation}\label{eq:worked-affine-cylinder}
+ (8q+5,0)\longmapsto(12q+9,1)
+ \longmapsto(18q+14,2)\longmapsto(9q+6,0).
+\end{equation}
+Every asserted parity is independent of $q$. For $q\ge0$ all
+intermediate values are positive. The affine recurrence gives
+$B_0=0$, $B_1=3$, $B_2=11$, $B_3=3$, so this branch of the
+three-step return is
+\[
+ M(n)=\frac{9n+3}{8},\qquad n\equiv5\pmod8.
+\]
+For example, $5\mapsto9\mapsto14\mapsto6$ and
+$13\mapsto21\mapsto32\mapsto15$. The formula describes infinitely
+many seeds because the parity conditions and arithmetic were checked
+with the free integer $q$, rather than inferred from those two seeds.
+The conservative impulse sum is zero, but the branch has multiplier
+$9/8$ and bias $3/8$.
+
+To use this branch a second time, its endpoint must satisfy the same
+guard. The condition $9q+6\equiv5\pmod8$ is $q\equiv7\pmod8$,
+so two consecutive copies of the itinerary require
+$n\equiv61\pmod{64}$. For instance,
+\[
+ 61\longmapsto93\longmapsto140\longmapsto69
+ \longmapsto105\longmapsto158\longmapsto78.
+\]
+More generally, induction on $k$ gives
+\begin{equation}\label{eq:repeated-parity-cylinder}
+ M^k(n)=\frac{9^k(n+3)}{8^k}-3,
+ \qquad n\equiv-3\pmod{8^k},
+\end{equation}
+for the itinerary $(1,1,0)$ repeated $k$ times. The congruence is
+both necessary and sufficient: the first guarded update sends
+$8^kq-3$ to $9\cdot8^{k-1}q-3$, and the same argument applies
+to the remaining copies. Every finite such itinerary has positive
+realizers, for example $n=8^k-3$. An integer satisfying the guard
+for every $k$ would have $8^k\mid n+3$ for all $k$, hence would
+equal $-3$. The finite positive realizers therefore cannot be
+replaced by one positive realizer of the infinite repeated word.
+This explicit example separates a finite parity cylinder from a
+claim about an infinite integer orbit.
+
+Rotation has an exact augmented-state interpretation. If
+$\widetilde d_j=d_{j+r}$, the map $(n,j)\mapsto(n,j+r)$ conjugates
+$F_{\widetilde d}$ to $F_d$. This does not say that the same scalar
+seed reaches the same cycle when launched at different phases of
+one word.
+
+An augmented cycle returns both the scalar value and the phase. Its
+length is a multiple of the displayed clock length. If the clock has
+primitive period $p$, any periodic scalar response has period a
+multiple of $p$ as well: a scalar period $q$ makes
+$d_k=n_{k+1}-T(n_k)$ periodic with period $q$, so $p$ divides $q$.
+Thus the least scalar and augmented response periods agree on the
+primitive clock. Repeating a shorter word to obtain a larger displayed
+clock changes the augmented labeling but not the scalar recurrence.
+
+\begin{proposition}[Nonnegative orbit dichotomy]
+\label{prop:nonnegative-dichotomy}
+For a fixed deterministic periodic forcing, a nonnegative orbit is
+either eventually periodic or tends to $+\infty$. In particular,
+boundedness, eventual periodicity, and failure of unboundedness are
+equivalent for such an orbit.
+\end{proposition}
+\begin{proof}
+A repeated augmented state forces a periodic future. If no state
+repeats, then for each $M\ge0$ the orbit visits the finite set
+$\{0,\ldots,M\}\times(\Z/p\Z)$ only finitely often. After its last
+such visit every scalar value exceeds $M$. This is precisely escape
+to $+\infty$. Conversely, every eventually periodic orbit is bounded.
+\end{proof}
+
+The proposition uses nonnegativity and a finite forcing clock. It
+does not turn a finite trajectory with large peaks into a proof of
+divergence, and it is not a statement about arbitrary signed or
+aperiodically controlled trajectories.

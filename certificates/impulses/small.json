@@ -1,0 +1,94 @@
+[
+  {
+    "pairs": 1,
+    "rooted_words": 15,
+    "peak": 122,
+    "max_cycle_laps": 7,
+    "peak_witness": {
+      "pairs": [
+        [
+          1,
+          4
+        ]
+      ],
+      "seed": 1,
+      "before_pair": 0,
+      "literal": {
+        "peak": 122,
+        "supplied_period": 7,
+        "fundamental_period": 7,
+        "cycle_updates": 49,
+        "scalar_period": 49,
+        "onset": 0
+      }
+    },
+    "period_witness": {
+      "pairs": [
+        [
+          1,
+          4
+        ]
+      ],
+      "seed": 1,
+      "before_pair": 0,
+      "literal": {
+        "peak": 122,
+        "supplied_period": 7,
+        "fundamental_period": 7,
+        "cycle_updates": 49,
+        "scalar_period": 49,
+        "onset": 0
+      }
+    }
+  },
+  {
+    "pairs": 2,
+    "rooted_words": 2854,
+    "peak": 195020,
+    "max_cycle_laps": 7,
+    "peak_witness": {
+      "pairs": [
+        [
+          1,
+          2
+        ],
+        [
+          43,
+          0
+        ]
+      ],
+      "seed": 1,
+      "before_pair": 0,
+      "literal": {
+        "peak": 195020,
+        "supplied_period": 50,
+        "fundamental_period": 50,
+        "cycle_updates": 50,
+        "scalar_period": 50,
+        "onset": 175
+      }
+    },
+    "period_witness": {
+      "pairs": [
+        [
+          1,
+          2
+        ],
+        [
+          10,
+          2
+        ]
+      ],
+      "seed": 1,
+      "before_pair": 0,
+      "literal": {
+        "peak": 1700,
+        "supplied_period": 19,
+        "fundamental_period": 19,
+        "cycle_updates": 133,
+        "scalar_period": 133,
+        "onset": 0
+      }
+    }
+  }
+]

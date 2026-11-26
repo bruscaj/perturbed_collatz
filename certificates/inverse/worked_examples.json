@@ -1,0 +1,334 @@
+{
+  "three_step_affine_branches": [
+    {
+      "residue": 0,
+      "parities": [
+        0,
+        1,
+        0
+      ],
+      "intermediate_affine": [
+        [
+          4,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "return_coefficient": 3,
+      "return_offset": 0
+    },
+    {
+      "residue": 1,
+      "parities": [
+        1,
+        1,
+        1
+      ],
+      "intermediate_affine": [
+        [
+          12,
+          3
+        ],
+        [
+          18,
+          5
+        ],
+        [
+          27,
+          7
+        ]
+      ],
+      "return_coefficient": 27,
+      "return_offset": 7
+    },
+    {
+      "residue": 2,
+      "parities": [
+        0,
+        0,
+        1
+      ],
+      "intermediate_affine": [
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "return_coefficient": 3,
+      "return_offset": 1
+    },
+    {
+      "residue": 3,
+      "parities": [
+        1,
+        0,
+        1
+      ],
+      "intermediate_affine": [
+        [
+          12,
+          6
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          9,
+          4
+        ]
+      ],
+      "return_coefficient": 9,
+      "return_offset": 4
+    },
+    {
+      "residue": 4,
+      "parities": [
+        0,
+        1,
+        1
+      ],
+      "intermediate_affine": [
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          9,
+          7
+        ]
+      ],
+      "return_coefficient": 9,
+      "return_offset": 7
+    },
+    {
+      "residue": 5,
+      "parities": [
+        1,
+        1,
+        0
+      ],
+      "intermediate_affine": [
+        [
+          12,
+          9
+        ],
+        [
+          18,
+          14
+        ],
+        [
+          9,
+          6
+        ]
+      ],
+      "return_coefficient": 9,
+      "return_offset": 6
+    },
+    {
+      "residue": 6,
+      "parities": [
+        0,
+        0,
+        0
+      ],
+      "intermediate_affine": [
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "return_coefficient": 1,
+      "return_offset": 0
+    },
+    {
+      "residue": 7,
+      "parities": [
+        1,
+        0,
+        0
+      ],
+      "intermediate_affine": [
+        [
+          12,
+          12
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "return_coefficient": 3,
+      "return_offset": 2
+    }
+  ],
+  "eligible_attachments": [
+    {
+      "target": 0,
+      "predecessor": 16,
+      "middle": 6,
+      "path": [
+        16,
+        9,
+        14,
+        6,
+        4,
+        2,
+        0
+      ]
+    },
+    {
+      "target": 1,
+      "predecessor": 118,
+      "middle": 14,
+      "path": [
+        118,
+        60,
+        30,
+        14,
+        8,
+        4,
+        1
+      ]
+    },
+    {
+      "target": 3,
+      "predecessor": 70,
+      "middle": 8,
+      "path": [
+        70,
+        36,
+        18,
+        8,
+        5,
+        8,
+        3
+      ]
+    },
+    {
+      "target": 9,
+      "predecessor": 208,
+      "middle": 78,
+      "path": [
+        208,
+        105,
+        158,
+        78,
+        40,
+        20,
+        9
+      ]
+    }
+  ],
+  "two_letter_word": {
+    "application_order": [
+      "B2",
+      "B1"
+    ],
+    "formula": "(64*y+34)/9",
+    "exact_domain": "y = 2 (mod 9)",
+    "examples": [
+      {
+        "target": 2,
+        "predecessor": 18,
+        "path": [
+          18,
+          10,
+          5,
+          7,
+          12,
+          6,
+          2
+        ]
+      },
+      {
+        "target": 11,
+        "predecessor": 82,
+        "path": [
+          82,
+          42,
+          21,
+          31,
+          48,
+          24,
+          11
+        ]
+      }
+    ],
+    "rejected_target": 5
+  },
+  "binary_copies": [
+    {
+      "target": 0,
+      "seed": 438,
+      "path": [
+        438,
+        220,
+        110,
+        54,
+        28,
+        14,
+        6,
+        4,
+        2,
+        0
+      ]
+    },
+    {
+      "target": 1,
+      "seed": 950,
+      "path": [
+        950,
+        476,
+        238,
+        118,
+        60,
+        30,
+        14,
+        8,
+        4,
+        1
+      ]
+    }
+  ],
+  "all_even_24_step": {
+    "coefficient": 16777216,
+    "offset": 14380470
+  },
+  "worst_factor_count": {
+    "children": 281,
+    "common_factor": 16777216,
+    "square_root_threshold": 4096
+  }
+}
