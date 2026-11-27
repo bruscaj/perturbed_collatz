@@ -15,8 +15,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 5979,
-      "sha256": "a5dd5e1121018a81de699b317d83d93d9f77dcd73282565be6eaa30e23535313"
+      "bytes": 6277,
+      "sha256": "425d326db8932139f32913153edbae3a40d85b0f50f6db438baf14fdac46a787"
     },
     {
       "path": "Makefile",
@@ -1090,13 +1090,13 @@
     },
     {
       "path": "paper.pdf",
-      "bytes": 936865,
-      "sha256": "e2a77367f1de1e0e063263e39020efdceb411d66d648deca3c83586ff01e8ba4"
+      "bytes": 886005,
+      "sha256": "067b2f2d430ce266a8761da9badf9f794de8e924e097a47b027a2878b70ecbb5"
     },
     {
       "path": "paper.tex",
-      "bytes": 6034,
-      "sha256": "d8a0e531dac5b4c819f4e26b94351746027a4c9c398d5560c274f8d41c6254bf"
+      "bytes": 4911,
+      "sha256": "ddcfb801b5a3c0e6d5dd30f9c02c3959ad348a2f22703e842483a394a6a0c8eb"
     },
     {
       "path": "requirements-figures.txt",
@@ -1120,58 +1120,58 @@
     },
     {
       "path": "tex/foundations.tex",
-      "bytes": 16801,
-      "sha256": "a7eb0a9e215f45c1a2eff19bf2fb764d626344849c427e3a2e02d069fe37d91e"
+      "bytes": 10741,
+      "sha256": "a0fea48cf3f85ccd376580e9979211692aef16c640a56a6989909ce1dd1cf5d5"
     },
     {
       "path": "tex/frontier.tex",
-      "bytes": 16594,
-      "sha256": "626bd0e1dbcaf11cf09b8162ea1a77ddb4a0d057495e43377ab83f5afa24ebb6"
+      "bytes": 15007,
+      "sha256": "9b731ec9338459ff9938a754288a6de1ce1ef95d2fbc3e943ecb2cf579c24e27"
     },
     {
       "path": "tex/geometry.tex",
-      "bytes": 32752,
-      "sha256": "91916aa809fe0ca7dd8fd78e41c19c29f70bc4696a75e77b334eadaec9472094"
+      "bytes": 28529,
+      "sha256": "ff2d9f85e4b7f86f4a632e8e374a9c6d3e0821d71d0026146c7774f68db9e986"
     },
     {
       "path": "tex/impulses.tex",
-      "bytes": 15596,
-      "sha256": "c3f7e6c3fe05622ba9e8c32997ac9322c6ae854a960cf0fc6e967ec503a8a215"
+      "bytes": 13770,
+      "sha256": "233945e7952fc9f47b29beeb31367aa9be67284a1b10f3879159abaffd7ae81a"
     },
     {
       "path": "tex/inverse.tex",
-      "bytes": 22495,
-      "sha256": "84f1bd1b8a4af5eccfa35bd974433c77754689b8ab2e384b83661eb16dad4947"
+      "bytes": 21037,
+      "sha256": "fa90af3efb6a4767365d4560dda989e47ed21f10ade9cfdbf7916a8da365068c"
     },
     {
       "path": "tex/references.tex",
-      "bytes": 13041,
-      "sha256": "796c5ea0e2a6037465cb0d87100beac334c651055c8a0097cbe09ced2994e0b1"
+      "bytes": 13133,
+      "sha256": "e41464f2a3c4c34a4502ef92b4431b9e092c7c014b8d8546112454dd5f9dfb6f"
     },
     {
       "path": "tex/related_work.tex",
-      "bytes": 18643,
-      "sha256": "43b0b24dfe7dee734dbcbe0c2b6394fa701c1e321b254a322ab75bf7f8c35dcd"
+      "bytes": 9349,
+      "sha256": "649cdb8e7b21819977ea628f92e2ba2585aa0ce4609fa2eac0f834727a7eb641"
     },
     {
       "path": "tex/scope.tex",
-      "bytes": 12579,
-      "sha256": "dd0e907bc4e3729d4277d11a65f4f1e574ace381412de449b190a97010628845"
+      "bytes": 5540,
+      "sha256": "35b334038bfc1fb04a724a8627a5a4e97662b4901f968a87c7bdb0e483288a3a"
     },
     {
       "path": "tex/seven_step.tex",
-      "bytes": 21625,
-      "sha256": "bbb74ad44bb978a35438db3b07ff2c9f76af1c113405a502da6971728057f3ca"
+      "bytes": 17870,
+      "sha256": "d4954e158fa248725a5089e47d8f1d0e274c88149861e79089cdf18e877d3ed0"
     },
     {
       "path": "tex/synchronization.tex",
-      "bytes": 25775,
-      "sha256": "c281eaa5b7bf5f34c8f48959b5e3a03f8bc72d9faa4ef2236221044225280485"
+      "bytes": 22900,
+      "sha256": "353ac1b1a6f08819c7a546f69cc4c5242420f3b17e94d6ebdab05b844035164e"
     },
     {
       "path": "tex/three_family.tex",
-      "bytes": 10231,
-      "sha256": "85ef0b2799252885215cd4d753ed65ae0711aba5defae9e01a6e45dc47c13e01"
+      "bytes": 8694,
+      "sha256": "bb1b2b2b87c07d36a1e16d70feecca836744947120f0f16cf405548f07607252"
     },
     {
       "path": "tex/three_family_rows.tex",

@@ -19,21 +19,15 @@ The exponent is defined exactly by
 \end{equation}
 \end{theorem}
 
-The proof has two distinct parts: a finite exact arithmetic certificate
-gives a growing inverse tree, and an algebraic argument moves a positive
-proportion of its vertices, at bounded multiplicity and bounded size cost,
-into a prescribed progression. Progression coverage concerns predecessors;
-it does not say that every forward orbit visits every progression.
+An exact finite certificate supplies the branches of a growing inverse
+tree. A bounded-length selector sends its vertices into the required
+progression with bounded size cost and multiplicity.
 
-Arithmetic-progression sufficiency is an established idea for ordinary
-Collatz. Monks proves that every arithmetic progression is sufficient:
-each positive orbit merges with an orbit starting in that progression
-\cite[Theorem~1.1]{monks-2006}. This permits different times along the two
-orbits and does not assert that either initial value is a predecessor of
-the other. Theorem~\ref{thm:inverse-growth} counts actual predecessors of a
-specified safe target for the forced map. Its constants are uniform in
-$X$ after fixing the target, progression, and launch phase; no uniformity
-over those parameters is asserted.
+For ordinary Collatz, Monks proved that every positive orbit merges
+with an orbit starting in any prescribed progression, possibly after
+different numbers of steps \cite[Theorem~1.1]{monks-2006}.
+Theorem~\ref{thm:inverse-growth} counts predecessors of a specified
+target at a specified phase for the forced map.
 
 \subsection{Elementary inverse branches and eligible targets}
 
@@ -56,8 +50,7 @@ For example, the residue $r=3$ follows
  \ \longmapsto\ 9t+4.
 \]
 The impulses are applied after the shortcut update at each arrow.
-The return graph therefore has several slopes, and its coarse visual
-appearance does not justify replacing it by one average affine map.
+The slopes in the table range from $1$ to $27$ as functions of $t$.
 
 Four convenient rows of the complete table give
 \begin{equation}\label{eq:inverse-four}
@@ -100,26 +93,21 @@ case of \eqref{eq:eligible-attachment} matters even for target zero:
 simply using $A^2(0)=54$ would give a parent divisible by three,
 outside the eligible class used for the growing tree.
 
-This attachment is a substantive difference from the ordinary inverse
-graph. A positive ordinary target divisible by three has only the
-predecessors obtained by repeated doubling, and so need not have a
-predecessor in every progression. The ordinary backtracing theorem of
-Monks et al. therefore assumes a target coprime to three
+In the ordinary inverse graph a positive multiple of three has only
+its iterated doublings as predecessors. The backtracing theorem of
+Monks et al. assumes a target coprime to three
 \cite[Theorem~4.1]{monks-et-al-2013}. Here
-\eqref{eq:eligible-attachment} and the phase lifts supply the required
-eligible ancestor for every safe target, including zero.
+\eqref{eq:eligible-attachment} and the phase lifts cover every safe
+target, including zero.
 
 \subsection{The finite 24-step certificate}
 
-Finite inverse-tree enumeration by depth, residue class, and number of
-odd steps is the method developed by Applegate and Lagarias for the
-ordinary map \cite[Sections~2--3]{applegate-lagarias-1995-i}.
-Residue-dependent difference inequalities provide a further quantitative
-refinement \cite[Theorems~2.2 and~6.1]{krasikov-lagarias}.
-The certificate below establishes its own branches, admissibility,
-and size estimates for the forced return. In particular, the enumeration
-must be accompanied by the distinctness and infinite counting arguments;
-the finite branch count alone is not an asymptotic lower bound.
+Applegate and Lagarias enumerate ordinary inverse trees by depth,
+residue class and odd-step count \cite[Sections~2--3]{applegate-lagarias-1995-i}.
+Krasikov and Lagarias refine the estimates by residue-dependent
+difference inequalities \cite[Theorems~2.2 and~6.1]{krasikov-lagarias}.
+Here we enumerate forced branches, bound their sizes, and prove that
+the branches counted in the inverse tree give distinct predecessors.
 
 Put $S=2^{24}$. For an itinerary of 24 input parities with $o\le8$ odd
 inputs, Proposition~\ref{prop:affine-parity} gives a unique initial residue
@@ -319,13 +307,9 @@ The composed formula is
 \]
 Targets $y=2$ and $y=11$ give the legal inverse histories
 $2\mapsto7\mapsto18$ and $11\mapsto31\mapsto82$.
-Indeed $F^2(18)=2$ and $F^2(82)=11$. By contrast, $y=5$ permits
-the first branch, giving $B_2(5)=15$, but not the second: $15$ is
-not $1\pmod3$. The final fraction is also nonintegral. Thus a
-formal affine formula, or a permutation modulo an integer coprime
-to three, must still be supplied with its exact integral domain.
-The steering proof below supplies that domain before evaluating the
-word on actual integers.
+Indeed $F^2(18)=2$ and $F^2(82)=11$. At $y=5$ the first branch gives
+$B_2(5)=15$. The second requires residue $1\pmod3$, and the composed fraction
+is nonintegral.
 
 \begin{lemma}[Simultaneous odd-modulus steering]\label{lem:odd-steering}
 Let $k\ge0$, $m\ge1$, and $\gcd(m,6)=1$. Every eligible target has a
@@ -428,13 +412,9 @@ to that target. The claimed upper bound would contradict the resulting
 lower bound. Since $\delta>1/2$, $O(X^{1/2})=o(X^\delta)$.
 \end{proof}
 
-No exceptional-set upper bound of this kind is proved here. Lower bounds
-for backward basins can hold simultaneously for disjoint basins and do not
-prove that their union exhausts all seeds. For the ordinary Collatz map,
-computer-assisted inverse-tree results such as Krasikov--Lagarias already
-give substantially stronger lower exponents than the numerical exponent
-above \cite{krasikov-lagarias}; the result here concerns a different forced
-map and includes its own phase and progression assertions.
+The required exceptional-set upper bound remains open. Disjoint basins
+can both have the stated inverse growth. Krasikov and Lagarias obtain
+larger lower exponents for ordinary Collatz \cite{krasikov-lagarias}.
 
 Tao's ordinary-map theorem concerns minima below any prescribed threshold
 tending to infinity, for a set of logarithmic density one

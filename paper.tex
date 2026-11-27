@@ -24,91 +24,101 @@
 \setlist{topsep=5pt,itemsep=3pt}
 \setlength{\emergencystretch}{2em}
 \hypersetup{pdftitle={Periodic forcing of the shortcut Collatz map},pdfauthor={Jake S. Brusca}}
-\title{Periodic forcing of the shortcut Collatz map\\[4pt]
-\large Admissibility, synchronization, inverse basins, geometry, and conditional reductions}
+\setcounter{tocdepth}{1}
+\hypersetup{bookmarksdepth=2}
+\makeatletter
+\renewcommand{\@maketitle}{%
+  \begin{center}
+    {\LARGE \@title\par}\vspace{.6em}
+    {\large \@author\par}\vspace{.2em}
+    \@date
+  \end{center}}
+\makeatother
+\title{Periodic forcing of the shortcut Collatz map}
 \author{Jake S. Brusca}
 \date{26 November 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
-We study the shortcut Collatz map with a fixed periodic sequence of integer
-impulses, keeping the forcing phase as part of the state and continuing
-the dynamics through zero. We classify conservative words that preserve
-nonnegativity from every positive seed at every phase. For words with two,
-four, six, or eight nonzero impulses, exact finite computations combined
-with an exhaustive gap reduction give sharp bounds on trajectories launched
-from the base set. We prove that a word of logarithmic period can synchronize
-any prescribed finite interval from every launch phase. For the fixed word
-$(1,0,-1)$, an exact inverse-branch certificate and an arithmetic steering
-argument give backward-orbit growth of order at least $X^\delta$ in every
-progression, with $0.535<\delta<0.536$. For a separate fixed seven-step word,
-we reduce capture at every safe state to one explicit obligation on
-phase-one launches $B(t)=(6t-1,1)$. The equivalence is proved in Lean.
-A written argument gives density-one coalescence with the neighboring
-launch $B(t-1)$, and a separate inverse construction puts ancestors of
-each target in every sufficiently large interval of fixed relative width.
-Universal capture for this word remains open.
-We also describe exact integer basin interlacing and binary
-zooms, and distinguish them from the geometry of a chosen cosine
-continuation. Rational certificates establish five attracting cycles,
-a real basin separator, and one phase-dependent complex launch for that
-continuation. The repository includes the selected Lean proofs, toolchain pins,
-arithmetic certificates, and written supplements. The complete
-manuscript is not formalized in Lean, and no proof of the ordinary Collatz
-conjecture is claimed.
+We apply the shortcut Collatz map, then add the next impulse in a
+fixed periodic sequence. For the word $(0,0,1,-1,0,1,-1)$, every safe phased state
+reaches the target cycle if and only if every launch $(6t-1,1)$ with
+$t\ge1$ outside five explicit conditions reaches it.
+Lean verifies this reduction. Capture on the remaining parameters is open.
+In every fixed progression of $t\ge2$, the phase-one launches at $6t-1$
+and $6t-7$ merge after the same number of steps for a set of relative
+natural density one. For each safe target and each fixed $\eta>0$, all sufficiently large
+intervals $(X,(1+\eta)X)$ contain a parameter $t$ whose launch reaches
+the target.
+
+For $(1,0,-1)$, fix a safe target, a progression, and a launch phase.
+For all sufficiently large $X$, at least $cX^\delta$ positive seeds up
+to $X$ in that progression reach the target from that phase, for some
+$c>0$. The common exponent satisfies $0.535<\delta<0.536$. For the cosine continuation we
+certify five attracting cycles and a real separator between two basins.
+
+We classify the words that keep all positive launches nonnegative. For
+conservative admissible words of period $p$, safe starts in
+$\{0,1,2\}$ reach cycles of period at most $7p$, $7p$, $12p$, and
+$13p$ for two, four, six, and eight nonzero impulses, respectively.
+Each bound is sharp. For every $N\ge1$, a word of period $O(\log(N+2))$
+synchronizes $1,\ldots,N$ in one period from every launch phase.
+
 \end{abstract}
+
+\noindent\textit{Author's note.} This draft is a personal project. I am exploring these
+questions for fun and learning. I am not an expert in the field and
+welcome corrections, counterexamples, and suggestions.
+OpenAI's ChatGPT assisted with proof ideas, writing and revision, code,
+Lean proofs, and review.
+
 \tableofcontents
 \newpage
 
-\section{Purpose, evidence, and related work}
+\section{The forced map}
 
-A fixed periodic perturbation provides a concrete setting in which to study
-the roles of parity, phase, inverse branching, and return maps. The questions
-have different quantifiers. Designing a forcing word for each finite set
-does not produce one forcing word that captures every positive integer;
-controlling the future after entry into a small base does not prove entry;
-and many predecessors of a target do not establish forward convergence of
-every seed. We retain these distinctions in every statement.
+We use the shortcut Collatz map on the signed integers,
+\begin{equation}\label{eq:shortcut}
+ T(n)=\begin{cases}n/2,&n\equiv0\pmod2,\\
+ (3n+1)/2,&n\equiv1\pmod2.
+ \end{cases}
+\end{equation}
+A forcing word is a nonempty
+finite list $d=(d_0,\ldots,d_{p-1})$ of integers, repeated periodically.
+The augmented state and its update are
+\begin{equation}\label{eq:physical-forcing}
+ (n,i)\in\Z\times(\Z/p\Z),\qquad
+ F_d(n,i)=\bigl(T(n)+d_i,i+1\bmod p\bigr).
+\end{equation}
+Write $F_{d,i}^{(k)}(n)$ for the scalar value after $k$ updates from
+phase $i$. At zero the same rule gives $n'=d_i$. The displayed period
+$p$ may be a multiple of the least (primitive) forcing period.
 
-The principal results are the admissibility classification
-(Theorem~\ref{thm:admissibility}), the support-dependent base bounds
-(Theorem~\ref{thm:impulse-bounds}), logarithmic all-phase synchronization
-(Theorem~\ref{thm:all-phase-synchronization}), inverse growth in every
-progression (Theorem~\ref{thm:inverse-growth}), and the conditional
-seven-step reductions (Theorems~\ref{thm:seven-four} and
-\ref{thm:seven-three}). Section~\ref{sec:frontier-update} gives the B1 complement, proportional-interval theorem and affine-root criterion. Section~\ref{sec:geometry} develops the integer
-and continuous geometries with eight reproducible figures across the
-manuscript. Each section supplies
-its definitions and proof, including the general arguments that turn a
-finite arithmetic certificate into a statement over an infinite domain.
-
-\paragraph{Three forms of evidence.}
-Analytical arguments appear in the text. Exact arithmetic checks are
-implemented in small Python or C++ programs and accompanied by the data
-they regenerate. Lean checks concern the explicitly listed declarations
-in \path{lean/inventory.json}; they are discussed in
-Section~\ref{sec:formal-scope}. These forms of evidence support different
-claims. A successful program run is not described as a Lean proof, and
-a Lean theorem about a related map is not substituted for the theorem
-stated here.
-
-\paragraph{Personal project; work in progress.}
-I am not an expert in this field. I am exploring these ideas for fun and
-to learn, and this is still a work in progress. Corrections,
-counterexamples, and suggestions are welcome.
-
-\paragraph{Authorship and assistance.}
-Jake S. Brusca is the author of this personal research project.
-OpenAI's ChatGPT assisted with exploring proof ideas, drafting and revising
-the manuscript, preparing code and Lean proofs, and reviewing the release.
-The project welcomes corrections through its public repository.
-Reuse terms remain pending.
-The open capture hypotheses are mathematical content, not placeholders
-that a build step can fill. The release does not claim a completed
-independent audit of the entire historical research archive, nor a
-literature-wide novelty or priority determination.
-
-\input{tex/related_work}
+\paragraph{Example.} Take
+\begin{equation}\label{eq:three-example-word}
+ d=(1,0,-1).
+\end{equation}
+The table follows seed $5$ from each launch phase. At time $k$ the
+phase is the launch phase plus $k$ modulo three.
+\begin{center}
+\begin{tabular}{rrrrr}\toprule
+$k$ & Ordinary $T^k(5)$ & Launch at $0$ & Launch at $1$ & Launch at $2$\\\midrule
+0&5&5&5&5\\
+1&8&9&8&7\\
+2&4&14&3&12\\
+3&2&6&6&6\\
+4&1&4&3&2\\
+5&2&2&4&2\\
+6&1&0&3&1\\\bottomrule
+\end{tabular}
+\end{center}
+After three updates the scalar values all equal $6$, but the next
+values are $4$, $3$, and $2$. A merger requires equality of both value
+and phase. The phase-zero launch eventually reaches
+\[
+ (0,0)\longmapsto(1,1)\longmapsto(2,2)\longmapsto(0,0).
+\]
+Starting at $(0,1)$ instead gives $(0,1)\mapsto(0,2)\mapsto(-1,0)$.
 
 \input{tex/foundations}
 \input{tex/impulses}
@@ -117,6 +127,7 @@ literature-wide novelty or priority determination.
 \input{tex/geometry}
 \input{tex/seven_step}
 \input{tex/frontier}
+\input{tex/related_work}
 \input{tex/scope}
 
 \input{tex/references}

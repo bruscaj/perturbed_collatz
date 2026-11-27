@@ -13,17 +13,13 @@ or seed zero at a safe phase.
 
 \subsection{From two gaps to one return map}
 
-The order of the two gap parameters matters. At a boundary immediately
-before the positive impulse, a complete pair acts by
+At the boundary immediately before $+1$, one pair acts by
 \begin{equation}\label{eq:pair-return-map}
  Q_{b,a}(n)=T^a\bigl(T^{b+1}(T(n)+1)-1\bigr).
 \end{equation}
-There are $b$ zero impulses between the two nonzero impulses, but
-$b+1$ ordinary $T$ updates between the value just after $+1$ and
-the subtraction of one. The last of those updates belongs to the
-negative-impulse step. Similarly, the final $a$ iterations are ordinary
-$T$ updates after that subtraction. Formula~\eqref{eq:pair-return-map}
-therefore advances exactly $2+b+a$ physical steps.
+After $+1$, the $b$ zero impulses and the negative-impulse step give
+$b+1$ ordinary updates before the subtraction. The last $a$ updates
+give a total of $2+b+a$ physical steps.
 
 For the pair $(b,a)=(1,4)$ and seed $1$, the impulse word is
 \[
@@ -36,18 +32,11 @@ applied \emph{after} its $T$ update:
  \xrightarrow{0}11\xrightarrow{0}17\xrightarrow{0}26
  \xrightarrow{0}13.
 \end{equation}
-Thus $Q_{1,4}(1)=13$. The value $26$ is an interior peak, so a
-calculation that stores only the boundary values would not yet give
-the maximum physical value. Both quantities will be recorded in the
-census: the boundary map identifies recurrence, while literal
-intermediate updates supply the peak.
+Thus $Q_{1,4}(1)=13$, but the peak within the lap is $26$.
+The census records both the boundary state and the interior peak.
 
-The restriction to base launches is what makes a uniform statement
-possible with only the number of nonzero impulses fixed. It asks
-what can happen after an orbit has reached a small reference set.
-The gaps may still be arbitrarily long, and a later periodic response
-can extend across several forcing laps. The following theorem controls
-both features.
+The following bounds apply from a safe visit to $B$, even when the
+gaps are arbitrarily long and the response spans several laps.
 
 \begin{theorem}[Uniform bounds for base launches]\label{thm:impulse-bounds}
 For $1\le q\le4$, every base launch for every word of $q$ pairs has value
@@ -195,28 +184,18 @@ of Theorem~\ref{thm:impulse-bounds}. This argument covers the entire
 infinite complementary family, including gaps longer than any listed
 escaping tail.
 
-For a concrete view of the complement argument, take $q=2$ and fix
-one of the word's two positive boundaries. Suppose that no departure
-has two consecutive escaping pairs. At the chosen boundary, the
-trajectory is either at one of $0,1,2$, or it is exactly one pair
-after its last departure from $1$. The preceding pair is fixed by the
-word, so the latter case contributes at most the single value
-$Q_{b,a}(1)$ for that particular pair. There are at most four
-boundary values, whatever the gap lengths. Sampling once per
-displayed period therefore gives an eventual cycle of at most four
-laps. The argument does not enumerate the infinitely many choices
-of those gaps; it bounds the number of states that one fixed word
-can present at the sampled boundary.
+For example, take $q=2$ and suppose no departure from $1$ has two
+consecutive escaping pairs. At a fixed positive boundary the orbit lies
+in $B$ or is one pair past its last departure. That preceding pair is
+fixed, so it contributes at most one more value, $Q_{b,a}(1)$. At most
+four boundary values occur, giving an eventual period of at most four
+laps for any gap lengths.
 
-Signed layers and the recurrent census answer different questions.
-The layers bound an excursion containing at most a prescribed number
-of impulses after departure from $B$. A core word can continue for
-many laps before returning to that base, so its recurrent peak can
-exceed the corresponding layer maximum. The one-pair witness below
-already exhibits this difference: $\max\mathcal L_2=26$, but its
-full recurring orbit reaches $122$.
+A signed layer bounds an excursion through a specified number of impulses.
+A core word can run for several laps between base visits. The one-pair
+example below has $\max\mathcal L_2=26$ and recurrent peak $122$.
 
-\subsection{Exact core censuses and their trust boundary}
+\subsection{Exact core censuses}
 
 For each rooted $q$-pair prefix, fix that same word periodically, rather
 than allowing a new choice of gaps on later laps. Starting from its
@@ -249,15 +228,11 @@ partition and coast implementation. Both give maximum and recurrent
 maximum 54,285,893,576 and maximum cycle length 13 laps. The stored
 outputs and reproduction commands accompany the sources.
 
-The quick checker validates every local partition's population,
-histograms, excursion domains, witness ownership, and literal witness
-trajectories. A previous checker discarded some local fields during
-aggregation; this release incorporates the repaired validation.
-Even this repaired quick check does not prove an upper bound merely
-from counts and attaining witnesses. The upper bounds use the full
-recurrence census, the signed-layer exhaustion, and the infinite
-complement argument above. Full reproduction regenerates the partitions
-and compares their contents with the stored certificate.
+The quick checker validates partition sizes, histograms, excursion domains,
+witness ownership and literal witness trajectories. Full reproduction
+regenerates each partition and compares it with the stored certificate.
+The upper bounds use the complete recurrence census together with the
+signed layers and the proof for the infinite complement.
 
 \subsection{A sharp witness in literal time}
 
@@ -324,9 +299,5 @@ $p$, this implies $p\mid r$, so the scalar cycle already returns to the
 same forcing phase. Its least scalar and augmented periods agree.
 \end{proof}
 
-These are exact finite arithmetic computations with general reduction
-arguments. They are not Lean-verified censuses in this release. In
-particular, no enumeration of bounded gaps or bounded initial seeds is
-being substituted for an unrestricted quantifier: arbitrary gaps are
-covered by the explicit tail exhaustion and complement proof, while
-the restriction to base launches remains part of the theorem.
+The census uses exact integer arithmetic. The tail exhaustion and
+complement argument extend its bounds to arbitrary gaps for base launches.

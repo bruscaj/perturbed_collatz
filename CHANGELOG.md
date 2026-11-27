@@ -1,5 +1,10 @@
 # Release history
 
+## Manuscript revision — 26 November 2026
+
+- Rewrote the abstract around the results, moved related work behind the proofs, and consolidated reproduction and formal coverage in the final section.
+- Tightened the mathematical exposition and made the launch-phase condition for a merger explicit.
+
 ## B1, affine pairs, and interval ancestors — 26 November 2026
 
 - Added the single-family B1 equivalence and its open complement, exact A3 and repayment certificates, a constructive selector, pair coalescence and obstruction proofs, inverse interval steering, the phase-two affine-root criterion, regular-domain entry, and signed phase comparisons through the #32 research cutoff.

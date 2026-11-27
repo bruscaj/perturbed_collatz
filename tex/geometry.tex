@@ -1,17 +1,11 @@
 \section{Integer basins and a cosine continuation}
 \label{sec:geometry}
 
-The word $(1,0,-1)$ has two elementary nonnegative cycles whose basins
-can be studied in several different spaces. On the integers, a point is
-a height together with a forcing phase, and a basin means eventual
-\emph{exact entry} into a cycle. In the topology defined by low binary
-digits, the two basins occur in every neighborhood. A chosen analytic
-interpolation supplies a third picture: complex points can converge to
-integer or noninteger attracting cycles without ever hitting them.
-This section proves the connections that justify these pictures and
-keeps their distinct notions of closeness and evidence explicit.
+For $(1,0,-1)$, integer capture means eventual entry into a phased
+cycle. For its cosine continuation, a complex start belongs to the basin
+if its iterates converge to the cycle at matching phases.
 
-\subsection{The clock, the return map, and two exact integer cycles}
+\subsection{Integer cycles and the phase-zero return}
 
 Fix $d=(1,0,-1)$ and let
 \[
@@ -45,11 +39,6 @@ scalar cycle must already have period divisible by three. The three
 different phase-zero values on $\Gamma_9$ rule out scalar period three.
 \end{proof}
 
-The repeated scalar value $2$ in $\Gamma_9$ does not close a loop:
-$(2,0)$ and $(2,1)$ have different next impulses. This is why a phase
-portrait uses three columns or sheets. Drawing only a graph on integer
-heights would identify states with different futures.
-
 \begin{figure}[htbp]
  \centering
  \includegraphics[width=.94\linewidth]{figures/phase_cycles.pdf}
@@ -60,8 +49,9 @@ heights would identify states with different futures.
  \label{fig:phase-cycles}
 \end{figure}
 
-For the geometric view of one lap, recall the complete affine return
-table from Section~\ref{sec:inverse}. In compact form, for $q\ge0$,
+At phase zero the eight return branches of Section~\ref{sec:inverse}
+are, for $q\ge0$,
+
 \begin{equation}\label{eq:geometry-return-table}
  F(8q+r)=3^{o_r}q+c_r,
  \qquad
@@ -71,13 +61,10 @@ table from Section~\ref{sec:inverse}. In compact form, for $q\ge0$,
  c_r&0&7&1&4&7&6&0&2
  \end{array}
 \end{equation}
-This is an identity on whole arithmetic progressions. Starting with
-$8q+r$, the coefficient of $q$ is even before each of the three
-updates. The constant coefficient therefore determines that update's
-parity for every $q$. Propagating the two coefficients gives the table;
-the coefficient after three divisions by two is $3^{o_r}$.
-The program \path{certificates/geometry/discrete.py} performs these
-symbolic integer operations, as well as replaying the cycles.
+At each of the three updates the coefficient of $q$ is even, so the
+constant term fixes the parity on the entire ray.
+\path{certificates/geometry/discrete.py} propagates both coefficients
+and checks the cycles.
 
 \begin{figure}[htbp]
  \centering
@@ -91,13 +78,10 @@ symbolic integer operations, as well as replaying the cycles.
 
 Let $\mathcal B_{3,i}$ and $\mathcal B_{9,i}$ denote the safe integer
 seeds at phase $i$ eventually entering $\Gamma_3$ and $\Gamma_9$.
-These sets are disjoint: once an orbit enters either cycle, determinism
-keeps it there. The existence of these two basins is unconditional.
-No assertion here identifies their union with the entire safe state
-space. An additional cycle or an unbounded safe orbit has not been
-excluded.
+The basins are disjoint by determinism. Other cycles and unbounded safe
+orbits remain possible.
 
-\subsection{What the binary basin picture proves}
+\subsection{Basin interlacing and binary zooms}
 
 \begin{corollary}[Both basins in every arithmetic neighborhood]
 \label{cor:geometry-interlacing}
@@ -128,17 +112,10 @@ return orbits reach different cycles. The first follows
  9\to34\to13\to15\to5\to6\to0,
 \]
 whereas the second eventually reaches $1\to7\to2\to1$.
-The distinction is checked by exact integer replay.
-
-A useful way to draw this arithmetic geometry is to interleave the
-binary digits of a seed into two screen coordinates. Fixing a quadrant
-then fixes two more low bits; a deeper tile represents a narrower
-residue class and generally includes larger integers. This is a
-layout of integers, not a Euclidean region filled with all real
-starting points. A displayed color is an exact basin label when the
-corresponding integer trajectory has actually reached the indicated
-cycle. A trajectory that exhausts the rendering budget stays
-unclassified.
+The atlas interleaves the binary digits of each seed into two screen
+coordinates. Each successive quadrant fixes two more low bits. A seed
+receives a basin color when its integer trajectory reaches the cycle.
+The remaining seeds stay unclassified at the iteration limit.
 
 \begin{figure}[htbp]
  \centering
@@ -181,8 +158,8 @@ cycle nor its failure to enter a specified cycle.
 \end{proof}
 
 Appending the three low bits $110$ is precisely the operation $E$.
-For instance, $E^3(0)=438$ and $E^3(1)=950$ have the same nine low
-bits and nine even input updates, yet they arrive at different cycles.
+For instance, $E^3(0)=438$ and $E^3(1)=950$ share nine low bits and
+nine even inputs before reaching different cycles.
 The all-depth identity is also certified by
 \path{lean/inverse/Collatz/BinaryZoom.lean}; the figure is only a finite
 view of that identity.
@@ -195,35 +172,28 @@ The zoom identity gives the concrete common accumulation point
  E^k(y)+\frac67=8^k\left(y+\frac67\right),
  \qquad E^k(y)\longrightarrow-\frac67\quad\text{in }\mathbb Z_2.
 \]
-For fixed $y\ge0$ the same seeds grow without bound in the ordinary
-real metric. These are two different notions of closeness. Neither
-binary density nor the power lower count proves that a basin has
-positive natural density, and neither assigns a Hausdorff dimension
-to a rendered image. As another exact consequence, either basin's
-membership sequence fails to be ultimately periodic: any proposed
-eventual period would make each of its residue classes eventually
-monochromatic, contrary to the corollary.
+For fixed $y\ge0$, these seeds tend to $+\infty$ in the real metric.
+Membership in either basin fails to be ultimately periodic because
+every residue class of any proposed period contains arbitrarily large
+seeds from both basins. Their natural densities remain undetermined.
 
-\subsection{Choosing a continuous geometry}
+\subsection{The cosine continuation}
 
-To discuss a small displacement in a real or complex direction,
-we must specify a new function between the integers. We use the entire
-function
+Between integer inputs we use the entire function
+
 \begin{equation}\label{eq:cosine-extension}
  C(w)=w+\frac14-\left(\frac w2+\frac14\right)\cos(\pi w),
  \qquad w\in\mathbb C.
 \end{equation}
-Its restriction to real arguments is Chamberland's interpolation of
-the shortcut map \cite{chamberland-1996,chamberland-survey}.
-For an integer $n$, $\cos(\pi n)=(-1)^n$, so $C(n)=T(n)$.
-Apply the same impulses after this update. The complex phase map is
-$\Phi_C(w,i)=(C(w)+d_i,i+1\bmod3)$, and its phase-zero return is
+On the real line this is Chamberland's interpolation
+\cite{chamberland-1996,chamberland-survey}. At integers,
+$\cos(\pi n)=(-1)^n$ gives $C(n)=T(n)$. The phased update is
+$\Phi_C(w,i)=(C(w)+d_i,i+1\bmod3)$, with phase-zero return
+
 \begin{equation}\label{eq:complex-return}
  R(w)=C\bigl(C(C(w)+1)\bigr)-1.
 \end{equation}
-On integers, $R$ agrees with $F$. On a complex sheet, the basin of
-an attracting cycle consists of points whose phase-matched iterates
-converge to that cycle; exact finite entry is not required.
+Thus $R(n)=F(n)$ at every integer.
 
 This interpolation is part of the model. For example,
 $C(w)+\lambda\sin^2(\pi w)$ has the same values and first derivatives
@@ -329,9 +299,6 @@ The arithmetic return inequality is also formalized as
 \path{Collatz.Physical.cycle_multiplier_lt_one} in
 \path{lean/inverse/Collatz/CycleMultiplier.lean}. The subsequent
 complex derivative and contraction arguments remain analytical.
-The proposition does not count integer cycles or establish the
-existence or attraction of a noninteger periodic cycle; those
-cycles need their own certificates.
 
 \subsection{Uniform capture disks around the integer cycles}
 
@@ -379,11 +346,6 @@ cycle the error is smaller, so the argument repeats and tends
 geometrically to zero. The impulse cancels when the perturbed point
 and its cycle center are compared.
 \end{proof}
-
-These disks establish local attraction in every complex direction.
-They are sufficient capture neighborhoods, not claimed maximal basins.
-Their sizes do not estimate how often positive integer seeds reach
-the corresponding cycles.
 
 \subsection{Two certified noninteger attractors}
 
@@ -463,12 +425,11 @@ $[-M(c_i,r_i)r_i,M(c_i,r_i)r_i]$. Multiplying these signed intervals,
 with outward rounding, gives the stated multiplier enclosures.
 \end{proof}
 
-For completeness, all trigonometric evaluations in this certificate
-have rational error bounds. Machin's identity
+The checker bounds $\pi$ using Machin's identity
 \[
  \pi=16\arctan(1/5)-4\arctan(1/239)
 \]
-and 24 terms of each alternating arctangent series give
+and 24 terms of each alternating arctangent series, giving
 \[
  3.14159265358979323846<\pi<3.14159265358979323847.
 \]
@@ -480,12 +441,9 @@ and derivatives. All signs, endpoint products, radius inclusions,
 and outward roundings use integer fractions. The displayed decimal
 roundings are therefore part of exact rational comparisons.
 
-Escape-time, stopping-time, and basin-of-attraction images for
-complex Collatz interpolations were developed by Dumont and Reiter
-\cite{dumont-reiter-2001}. Figure~\ref{fig:complex-basins} uses the
-specific forced return defined here. Its capture disks have the
-preceding rational certificates; the sampled trajectories have
-the separate numerical status stated in the caption.
+Dumont and Reiter plot escape times, stopping times, and basins for
+complex Collatz interpolations \cite{dumont-reiter-2001}. Here the
+numerical plot uses the forced return \eqref{eq:complex-return}.
 
 \begin{figure}[htbp]
  \centering
@@ -500,10 +458,9 @@ the separate numerical status stated in the caption.
 \end{figure}
 
 \FloatBarrier
-\subsection{An entire real segment with a proved basin separator}
+\subsection{A real basin separator}
 
-The basin picture contains one region where every real starting
-point, not just a finite sample, can be classified. Put
+Put
 $g(x)=R(x)-x$ for the return in \eqref{eq:complex-return}.
 
 \begin{theorem}[Real separator]\label{thm:real-separator}
@@ -591,10 +548,7 @@ zone, so untested gaps cannot be hidden between sample points.
 \FloatBarrier
 \subsection{The same complex point on three phase sheets}
 
-The phase is not a cosmetic label in the complex model either.
-Consider the exact initial coordinate
-$w_*=71/100+\mathrm i/50$. Rational complex-ball propagation gives
-the following three outcomes.
+Fix the complex starting point $w_*=71/100+\mathrm i/50$.
 
 \begin{proposition}[Certified phase dependence]
 \label{prop:complex-phase-dependence}
@@ -659,8 +613,6 @@ destinations in the table.
 All three terminal balls are near scalar height one. The first and
 third are on phase one, where that integer belongs to $\Gamma_3$;
 the second is on phase two, where it belongs to $\Gamma_9$.
-Ignoring phase at the final proximity test would erase the very
-distinction being demonstrated.
 
 \begin{figure}[htbp]
  \centering
@@ -675,32 +627,17 @@ distinction being demonstrated.
  \label{fig:phase-sheets}
 \end{figure}
 
-\subsection{What the certificates and figures establish}
+\subsection{Reproducing the geometry certificates}
 
-The exact bundle is regenerated from the release root by
+Run
 \begin{verbatim}
 python3 -B certificates/geometry/verify.py
 \end{verbatim}
-It checks the complete affine integer-return table, the three integer
-cycle disks, both noninteger disk cycles, the real interval cover,
-and all three complex-ball trajectories against
-\path{certificates/geometry/certificate.json}. It uses only the Python
-standard library and rejects optimized execution that disables
-assertions. The numerical rendering is a separate computation: its
-iteration budget, magnitude guard, and unresolved pixels remain
-visible and do not become mathematical escape criteria.
-
-The resulting picture contains several exact structures: disjoint
-integer cycles; predecessors of both cycles in every arithmetic
-neighborhood; a nested binary copy identity; five rigorous complex
-attractors; a completely classified real segment; and a certified
-change of destination caused only by launch phase. Their scopes are
-different. No exhaustive attractor count, global smooth basin
-boundary, natural basin density, or all-seed integer capture theorem
-follows. A larger real classification would require a new invariant
-interval and complete critical-point and orbit analysis. An integer
-capture proof would still need to control every safe integer orbit,
-including those absent from all finite plots.
+with Python assertions enabled. The checker compares the eight integer
+branches, three integer and two noninteger disk cycles, real interval
+cover, and three complex-ball trajectories with
+\path{certificates/geometry/certificate.json}. The figures sample a
+finite grid. The total number of attractors remains open.
 
 For the unforced cosine map, Lygeros and Rozier
 \cite[Lemma~2.2]{lygeros-rozier-2014} provide a concrete link between
@@ -712,5 +649,3 @@ $a=7/2$. A forced analogue would require intervals whose widths
 depend on the phase. Translating the image by an impulse preserves
 its width but changes the next center and denominator; those
 inclusions and the small or zero centers would need new proofs.
-This is a possible extension of the present local geometry, not a
-capture conclusion already supplied by the unforced result.

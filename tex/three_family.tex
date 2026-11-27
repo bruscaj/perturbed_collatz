@@ -1,10 +1,8 @@
 \subsection{A second section with three residual families}
 \label{sec:seven-three}
 
-The number of open families depends on the section as well as the rank.
-Adding early section hits can replace a long expanding return by several
-short comparisons.  We now give a second, independent reduction for the
-same seven-step forcing and destination cycle.  Its section and rank are
+For the same forcing word and destination cycle take
+
 \begin{equation}\label{eq:seven-new-section}
 \begin{gathered}
  \mathcal S_* = \{(z,i):z=3m,\ m\ge1,\ i\in\{1,2,3,5\}\},
@@ -14,8 +12,7 @@ same seven-step forcing and destination cycle.  Its section and rank are
 \end{equation}
 The physical launch is still $s(m,i)=(3m-1+h_i,i)$, now with the
 four indicated phases.  Write $P_*$ for the first strictly later visit
-to $\mathcal S_*$.  Neither the old return map $P$ nor the old rank
-$\rho$ is used in the proof of this second reduction.
+to $\mathcal S_*$.
 
 \begin{theorem}[Three-family conditional capture]\label{thm:seven-three}
 Every positive physical integer at every initial phase is captured by
@@ -77,8 +74,7 @@ recurrence, checking safety and the absence of an earlier section hit.
 There are $4+128+64+128=324$ full-modulus input domains.  Each reproduces
 the endpoint and time of its unique adaptive domain.  The two procedures
 share the forcing and the section definition, but use different
-coordinates and different partitions.  Both use exact integers rather
-than a sample of finite orbit representatives.
+coordinates and different partitions.
 
 \input{tex/three_family_rows}
 
@@ -176,33 +172,14 @@ $W$.  These are cycles of inequalities on weights, not asserted
 periodic trajectories satisfying every successive guard.
 \end{proof}
 
-\paragraph{Reproduction and remaining work.}
-The standalone program \path{certificates/seven_step/three_family.py}
-regenerates every field of \path{three_family.json}: all 43 affine
-rows, all five finite chains, the independent physical reconstruction,
-the entry calculation, and the nine obstruction witnesses.  The written
-least-rank argument supplies the passage from these finite facts to
-the conditional universal statement.
+\paragraph{Reproduction.}
+\path{certificates/seven_step/three_family.py} regenerates
+\path{three_family.json}, including the 43 affine rows, five finite
+chains, independent physical reconstruction, entry times, and nine
+obstruction witnesses. All 43 rows in \path{SevenRows.lean} agree with
+the printed table after the parameter shift on zero-residue rows.
 
-The positive-seed capture equivalence is also formalized in
-\path{lean/inverse/Collatz/ReleaseBridge.lean}, as
-\path{Collatz.ReleaseBridge.global_capture_iff_three}.
-This small release bridge supplies the immediate converse to the
-source theorem \path{Collatz.SevenStep.global_capture_of_three}.
-Lean writes states in the order $(i,n)$, while this manuscript writes
-$(n,i)$; its \texttt{site} has exactly the physical value
-$3m-1+h_i$. The signed update, destination cycle, three families,
-and positive-seed quantifiers are the same. The copied
-\path{SevenRows.lean} also checks all 43 affine rows, and an independent
-comparison verifies their agreement with the printed table, including
-the shifted parameter convention for zero-residue rows.
-
-The formal proof uses a separate direct entrance check modulo 192,
-proving entrance within six updates for positive physical seeds at
-every phase. The eleven-update bound above uses the simpler phase-zero
-calculation and covers the stated safe domain, including its zero
-states. The phase-affine optimality proof and the interpretation of
-the Python checker's auxiliary data are not thereby promoted to Lean
-theorems. Resolving B1, A3, and N03 under one
-compatible argument remains the mathematical task; a finite launch
-search or a picture of their basins does not discharge it.
+The Lean proof checks entry modulo 192 in at most six updates for
+positive physical seeds at every phase. The eleven-update proof above
+also covers safe zero states. Section~\ref{sec:formal-scope} gives the
+formal three-family equivalence. The optimality proof above is written.

@@ -1,36 +1,23 @@
 \section{A fixed seven-step forcing}
 \label{sec:seven-step}
 
-We now fix the physical impulse word
+Fix the impulse and height words
 \[
  d=(0,0,1,-1,0,1,-1),\qquad
  h=(0,0,0,1,0,0,1),
 \]
-with phases numbered from zero.  Thus $d_i=h_{i+1}-h_i$, with subscripts
-read modulo seven.  All statements in this section use the continued
-integer dynamics: zero is not an absorbing state.  Write
-$F(n,i)=(T(n)+d_i,i+1\bmod7)$ for the physical map on integer--phase
-pairs, where $T$ is the shortcut map displayed below.  All free
-parameters in arithmetic domains are integers.  The invariant domain
+with $d_i=h_{i+1}-h_i$ and phase indices read modulo seven.
+Write $F=F_d$ for the physical update in \eqref{eq:physical-forcing}, including at zero.
+The safe domain
+
 \[
  \mathcal D=\{(n,i):n\ge h_i\}
 \]
 contains every positive initial integer at every phase, together with
 zero at the five phases where $h_i=0$.
 
-Put $z=n+1-h_i$.  On $\mathcal D$ one has $z\ge1$, and the prescribed
-updates in this coordinate are the chronological word $UUUTUUT$, where
-\[
- T(z)=\begin{cases}z/2&z\text{ even},\\(3z+1)/2&z\text{ odd},\end{cases}
- \qquad
- U(z)=\begin{cases}3z/2&z\text{ even},\\(z+1)/2&z\text{ odd}.\end{cases}
-\]
-Both maps preserve the positive integers.  This coordinate formula follows
-directly from
-\[
- T(n)+d_i+1-h_{i+1}=T(z-1+h_i)+1-h_i.
-\]
-In particular, no choice between $T$ and $U$ is made during an orbit.
+By Proposition~\ref{prop:height-conjugacy}, $z=n+1-h_i$ evolves on
+the positive integers under the repeated word $UUUTUUT$.
 
 The phase-indexed physical values
 \begin{equation}
@@ -44,8 +31,7 @@ coordinates its successive states are
 \]
 We say that a state is \emph{captured} if its forward orbit visits one
 of the states $(c_i,i)$, and write $\operatorname{Cap}(n,i)$ for this
-property.  This definition specifies the destination cycle, as well as
-eventual periodicity.
+property.
 
 \subsection{Section states and the exact open obligations}
 
@@ -96,13 +82,7 @@ four-family union.  None of the four universal hypotheses is discharged
 by the theorem.
 \end{theorem}
 
-The proof combines finite exact affine checks with the integer descent
-and long-return arguments below.  The associated Python checks are
-included in \path{certificates/seven_step/}; they are not Lean proofs.
-The displayed families are infinite arithmetic domains, rather than
-four numerical starting values.
-
-\subsection{Why the finite affine checks cover infinite domains}
+\subsection{Affine certificates on residue classes}
 
 Every computational check in the reduction uses an input of the form
 \[
@@ -130,16 +110,14 @@ seven updates.  For the short-return calculation from phase $i$ we use
 $A=3\cdot2^{L_i}$ and at most $L_i$ updates.  The factor $2^{L_i}$
 fixes every required parity; multiplying by an odd integer at a step
 does not consume any additional powers of two.  The factor of three
-fixes all section tests.  Thus these are symbolic computations on whole
-infinite rays, not numerical tests at one or two representatives.
+fixes all section tests.  Each computation therefore covers the full ray.
 
 An affine inequality on $q\ge q_0$ follows by checking that its slope
 is nonnegative and its value at $q_0$ is nonnegative; strict inequalities
 are treated with the corresponding integer minimum.  A negative slope
 cannot be discarded by testing only small $q$.  The complete residue
 partitions below use $0\le B<A$, with $q_0=1$ when the initial positive
-coordinate would otherwise be zero.  This explicitly accounts for that
-boundary case.
+coordinate would otherwise be zero.
 
 \subsection{Every orbit reaches the section}
 
@@ -182,9 +160,7 @@ The 370 exiting domains satisfy
  \qquad (w_3,w_5,w_6)=(1,1,2),
  \label{eq:seven-exit-envelope}
 \end{equation}
-where $j$ is the phase of the first section hit.  The check of
-\eqref{eq:seven-exit-envelope} includes its phase-six factor of two.
-It is not an unweighted estimate reused after a change of rank.
+where $j$ is the phase of the first section hit.  The factor at phase six is two.
 
 \subsection{All sufficiently long returns strictly descend}
 
@@ -217,7 +193,6 @@ threshold.  Since $f$ is increasing and contracts towards that fixed
 point, $f^k(B)\le f(B)$ for every $k\ge1$ and every such initial
 bound $B$.  Applying the weighted exit estimate after the last avoiding
 period therefore gives the same upper bound for every possible wait.
-This is the infinite-time part of the reduction.
 
 The last update of a phase-zero period ends at phase zero, which is
 outside $\mathcal S$.  Consequently a return later than alignment
@@ -259,8 +234,7 @@ $(1,6)$&$(1,3)$&4\\
 $(2,6)$&$(1,3)$&11\\ \hline
 \end{tabular}
 \end{center}
-In particular, the eleven-update return is not omitted by the
-phase-six cap: its $V$-rank drops from $4$ to $1$.
+The eleven-update return from $(2,6)$ lowers $V$ from $4$ to $1$.
 
 \subsection{A complete direct first-return classification}
 
@@ -285,8 +259,7 @@ S06&$(16t+7,6)$&$(81t+36,3)$&$49t+22$&4\\
 S08&$(64t+15,6)$&$(243t+58,5)$&$115t+28$&6\\ \hline
 \end{tabular}
 \end{center}
-The labels are retained to make the certificates stable; gaps in the
-label sequence do not denote missing cases.  The six families occupy
+These labels match the certificate files. The six families occupy
 respectively $2,128,8,2,8,2$ of the fixed-modulus input domains.
 Nine domains require the long-return argument.  On every other domain
 the first return strictly lowers $V$, except possibly at the three
@@ -296,8 +269,7 @@ individual launches
  \label{eq:seven-finite-base}
 \end{equation}
 For a domain containing one of these launches, every larger parameter
-strictly descends.  Thus a finite exception is not an entire exceptional
-residue class.
+strictly descends.
 
 The exact chains
 \[
@@ -307,8 +279,7 @@ The exact chains
 \]
 settle \eqref{eq:seven-finite-base}; the arrows count literal updates.
 The launch $(1,5)$ lies on the cycle \eqref{eq:seven-cycle} and
-returns to itself after seven updates.  No large finite basin census
-is needed for these base cases.
+returns to itself after seven updates.
 
 For an illustration of a whole growing-parameter case that the rank
 already resolves, the first return
@@ -316,9 +287,7 @@ already resolves, the first return
  (64t+63,6)\longmapsto(81t+80,5),\qquad t\ge0,
 \]
 has an unweighted parameter increase but a strict $V$-decrease
-$47t+46$.  Calling that case reduced means that it cannot be a
-least-rank failure.  It does not independently prove capture of all
-its endpoints.
+$47t+46$, so this launch cannot minimize the rank of an uncaptured state.
 
 \subsection{A merger closes the two phase-six induction cases}
 
@@ -364,8 +333,7 @@ particular, the finite step $(2,3)\to(1,6)$ increases $\rho$ from
 $4$ to $5$; it is valid because its explicit finite capture chain
 has already been proved, not because it decreases the rank.
 
-For completeness, the fixed-modulus classification after the merger
-has the following counts.  The column labelled ``finite'' counts
+The table counts fixed-modulus domains after the merger. The column labelled ``finite'' counts
 domains with a single exceptional base input; the rest of such a
 domain strictly descends.
 \begin{center}
@@ -398,29 +366,15 @@ state in $\mathcal D$, and in particular every positive physical
 seed at every phase, is captured.
 \end{proof}
 
-There is also an equivalent proof-obligation formulation useful for
-further work.  For every launch $a$ in the four remaining families,
-it is sufficient to prove either capture directly or the existence
-of a section launch $b$ with $\rho(b)<\rho(a)$ and nonnegative
-integers $u,v$ such that $F^u(a)=F^v(b)$.  The same least-rank
-argument then completes the proof.  Equality must be equality of
-augmented states.  Changing the forcing or using a different rank
-for different certificates would not establish these obligations.
+For each remaining launch $a$, it suffices to show capture or exhibit a
+section launch $b$ with $\rho(b)<\rho(a)$ and $F^u(a)=F^v(b)$ for
+some $u,v\ge0$. Equality includes the phase. Shaw's impure integers
+have a smaller positive predecessor under the unshortened odd update
+$3n+1$ \cite[Definition~2.1 and Theorem~3.1]{shaw-2006}. Here the two
+orbits may meet later, at different update counts, and $\rho$ compares
+their initial states.
 
-Elimination using a smaller predecessor already appears in Shaw's notion
-of an impure integer \cite[Definition~2.1 and Theorem~3.1]{shaw-2006}.
-His map uses the unshortened odd update $3n+1$, and impurity means that
-the integer itself is reached from a smaller positive input. Here we
-allow the two futures to merge, possibly after different numbers of
-updates, and compare their launches using the phase-dependent rank
-$\rho$. Equality at the merger must include the phase. Thus the
-predecessor strategy has a direct antecedent, while our guarded rules
-require their own forced arithmetic and rank inequalities.
-
-\subsection{A sharp limitation of direct phase-affine ranking}
-
-The four-family result uses alternative launches.  It does not
-contradict the following obstruction to a more restricted method.
+\subsection{Optimality of direct phase-affine ranks}
 
 \begin{proposition}[Six direct growing domains are unavoidable]
 \label{prop:seven-six-barrier}
@@ -480,14 +434,10 @@ The complete direct classification already excludes other growing
 tails.
 \end{proof}
 
-These are cycles of constraints on a proposed rank; the proof does
-not assert that their guards form periodic positive trajectories.
-The count refers to these specified witness domains: arbitrary
-subdivision of a residue domain is not a new obstruction.  The
-obstruction concerns this section and direct first-return
-comparisons only.  It does not exclude residue-dependent ranks,
-unbounded recursive rules, later meetings, or the alternative-launch
-merger used above.
+The cycles constrain the rank weights. Their guards need not form
+periodic trajectories. The count concerns the specified disjoint
+domains on this section and leaves residue-dependent ranks, later
+returns, and mergers available.
 
 \begin{figure}[tbp]
 \centering
@@ -500,34 +450,16 @@ and rank in Section~\ref{sec:seven-three} are separate constructions.}
 \label{fig:seven-merger}
 \end{figure}
 
-\subsection{Verification scope of the four-family reduction}
-
-Running
+\paragraph{Reproduction.} Run
 \begin{verbatim}
 python3 certificates/seven_step/verify.py
 python3 certificates/seven_step/test_mutations.py
 \end{verbatim}
-reconstructs the physical-coordinate certificates, checks every
-stored field against the reconstructed result, and compares the
-frontier with an independently implemented $T/U$ reconstruction.
-The latter also checks the coordinate conjugacy on all fourteen
-phase--parity combinations.  The hostile checks alter coefficients,
-phases, times, parameter bounds, rank descriptions, scope claims,
-coverage lists, finite exceptions, and envelopes; malformed or
-empty certificate data are rejected.  The assertion-based entry
-points reject optimized Python, which would disable their checks.
-
-The finite procedure justifies the affine facts used in the proof.
-The universal conclusion also uses the written arguments for
-arbitrary waits and least-rank induction.  No result in this section
-is claimed to be kernel-checked in Lean.  Nor does the section
-establish actual capture for the four unresolved universal domains.
-
-For this reduction, the next mathematical requirement is an exhaustive treatment of
-S00--S03 under one compatible order, or another complete proof of
-their capture.  Proper subprogressions of these families can admit
-additional reductions without resolving their complements.  Counts
-of covered subprogressions, growth of inverse trees, and finite
-seed experiments do not replace that remaining universal statement.
+The first command reconstructs the physical certificates, compares
+every field with the stored data, and checks an independent $T/U$
+reconstruction on all fourteen phase--parity combinations. The second
+tests rejection of defective and empty certificates. Both require
+assertions enabled. The arbitrary-wait bound and least-rank induction
+are written proofs.
 
 \input{tex/three_family}

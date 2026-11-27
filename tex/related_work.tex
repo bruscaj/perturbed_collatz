@@ -1,323 +1,166 @@
-\subsection{Classical coding and the precise forced model}
+\section{Related work}
 \label{sec:related-work}
 
-The literature supplies several of the mechanisms used here. Write
-$T(2k)=k$ and $T(2k+1)=3k+2$ for the shortcut map. Lagarias's
-survey \cite{lagarias-1985} places parity coding, stopping times, inverse
-trees, and generalized maps in their historical setting. For the ordinary
-shortcut map, Terras \cite{terras-1976} proves the affine dependence of an
-iterate on its initial value and the correspondence between finite parity
-words and residue classes. Bernstein's explicit inverse coding
-\cite{bernstein-1994} and the conjugacy developed by Bernstein and
-Lagarias \cite{bernstein-lagarias-1996} describe the associated $2$-adic
-dynamics. Proposition~\ref{prop:affine-parity} uses this classical
-mechanism with a time-dependent intercept. Its contribution is the
-explicit forced formula and its role in the subsequent certificates.
+\subsection{Parity coding and generalized maps}
 
-The companion generator in our height coordinate also has an exact
-precedent. With $P(x)=x+1$, the map $U=PTP^{-1}$ is the map $E$ of
-Monks et al.\ \cite[Section~3]{monks-et-al-2013}. Barina uses the same
-translated map in an ordinary-trajectory batching algorithm
-\cite[Section~3.1]{barina-2025}. The height proposition here establishes
-which externally prescribed impulse words admit a binary height,
-identifies their safe domain, and produces the resulting periodic
-schedule of $T$ and $U$. The translated generator itself is inherited.
+For ordinary Collatz, Terras proves that a finite parity word determines
+one residue class and that the iterate is affine on that class
+\cite{terras-1976}. Bernstein's inverse coding and the conjugacy of
+Bernstein and Lagarias describe the corresponding dynamics on
+$\mathbb Z_2$ \cite{bernstein-1994,bernstein-lagarias-1996}. Lagarias
+surveys these results and their relation to stopping times and inverse
+trees \cite{lagarias-1985}. Proposition~\ref{prop:affine-parity} gives
+the time-dependent intercept for a prescribed forcing word.
 
-There are two distinct uses of periodicity in this subject. A map may
-have coefficients periodic in the residue of its \emph{input}; our
-impulses are periodic in \emph{time}, so the state includes the phase.
-For a word of period $p$, a full return at a fixed phase is
-residue-affine:
-\[
- G(n)=\frac{3^{o_r}n+b_r}{2^p},\qquad n\equiv r\pmod{2^p}.
-\]
-This fits the independent-offset generalized class stated by Kionke
-\cite[Section~1]{kionke-2017}. It should not automatically be identified
-with every earlier definition of a generalized Syracuse map. In
-particular, the original definition of Matthews and Watts
-\cite[p.~167, equation~(1.3)]{matthews-watts-1984} uses a common system
-of residue representatives, an additional restriction that need not
-hold for a forced return. We use that source only for this checked
-definition, rather than invoking a theorem from an uninspected portion
-of its text.
+Our translated map $U=PTP^{-1}$, with $P(x)=x+1$, is the map $E$ of
+Monks et al.\ \cite[Section~3]{monks-et-al-2013}. Barina uses it to
+batch ordinary Collatz steps \cite[Section~3.1]{barina-2025}.
+Proposition~\ref{prop:height-conjugacy} identifies the safe domain and
+the forcing phases that select $T$ or $U$.
 
-The locally scaling shift theorem of Kingsbery et al.
-\cite[Theorem~4.8 of the preprint]{kingsbery-et-al-2011} supplies a
-further $2$-adic framework for these returns. Such coding concerns the
-$2$-adic space, where a valid infinite itinerary need not represent a
-positive integer. Akin's analysis of exceptional rational points
-\cite{akin-2004} makes this distinction particularly relevant. Neither
-a symbolic conjugacy nor the existence of every finite parity prefix
-provides the real-size descent needed for integer capture.
+Forcing is periodic in time. After one period $p$, the return at a fixed
+phase is affine on each input class $r\bmod 2^p$, with
+$G(n)=(3^{o_r}n+b_r)/2^p$. Kionke's class allows independent offsets
+\cite[Section~1]{kionke-2017}. The definition of Matthews and Watts
+requires a common system of residue representatives, a further
+restriction on the offsets \cite[p.~167, equation~(1.3)]{matthews-watts-1984}.
+Locally scaling maps provide a $2$-adic shift model for such returns
+\cite[Theorem~4.8 of the preprint]{kingsbery-et-al-2011}. Akin studies
+exceptional rational points in this coding \cite{akin-2004}. An infinite
+itinerary in $\mathbb Z_2$ can lack a positive integer representative,
+as the calculation in \eqref{eq:repeated-parity-cylinder} illustrates.
 
-\subsection{Stopping-time results and universal capture}
+\subsection{Descent and exceptional sets}
 \label{sec:density-literature}
 
-The natural-density first-descent theorem in Terras
-\cite{terras-1976} and the logarithmic-density almost-bounded-orbit
-theorem of Tao \cite[Theorem~1.3]{tao} have different conclusions from
-capture of every seed. Tao allows any prescribed bound tending to
-infinity and proves that the orbit minimum is below that bound outside
-a set of logarithmic density zero. The possible exceptional set remains
-material here: our conditional counting argument requires an upper
-bound $o(X^\delta)$ for the exceptional set of the \emph{same forced
-map}. Even a natural-density-one capture result would give only $o(X)$
-exceptions, which does not supply that stronger comparison.
+For ordinary Collatz, Terras proves first descent on a set of natural
+density one \cite{terras-1976}. Korec obtains descent below $n^c$ for
+each fixed $c>\log_4 3$ \cite[Theorem~1]{korec-1994}. Inselmann gives
+$T^{\lfloor 2\log n/\log(4/3)\rfloor}(n)\le n^\varepsilon$ for each
+fixed $\varepsilon>0$ on a set of natural density one
+\cite[Corollary~1.4, arXiv v3]{inselmann-2024}. Tao proves that the
+orbit minimum lies below any prescribed function tending to infinity,
+outside a set of logarithmic density zero \cite[Theorem~1.3]{tao}.
+Shaik reports natural-density-one descent to a polylogarithmic target
+with an arbitrary divergent multiplier, time and height bounds, and a
+Lean proof. The author distinguishes the printed normalization of some
+corollaries from their registered versions. We have not rebuilt the
+artifact \cite[Theorem~1.1 and Section~8]{shaik-2026}.
+Corollary~\ref{cor:exceptional-set} requires an exceptional count
+$o(X^\delta)$ for the same forced map. Natural density zero alone
+gives only $o(X)$.
 
-The intermediate thresholds also matter. Korec
-\cite[Theorem~1]{korec-1994} obtains natural-density-one descent below
-$n^c$ for each fixed $c>\log_4 3$. Inselmann's preprint
-\cite[Corollary~1.4, arXiv v3]{inselmann-2024} gives, for every fixed
-$\varepsilon>0$, the bound
-$T^{\lfloor 2\log n/\log(4/3)\rfloor}(n)\leq n^\varepsilon$
-on a set of natural density one. These ordinary-map statements distinguish
-the size of the target, the density notion, and the iteration horizon.
-Their transfer to our forced map would require an additional argument.
-Shaik's recent preprint \cite[Theorem~1.1 and Section~8]{shaik-2026}
-reports natural-density descent to a polylogarithmic target with an
-arbitrary divergent multiplier, together with time and orbit-height
-bounds. Its author reports a Lean proof of the main theorem and explicitly
-distinguishes some registered corollary normalizations from the printed
-ones. We have not independently rebuilt or axiom-audited that artifact;
-these reported ordinary-map results are comparisons, not proof inputs.
+Venturini's published abstract gives fixed-factor descent in absolute
+value, on a set of natural density one on each signed half-line, for
+positive coprime branch numerators and geometric mean slope below one
+\cite{venturini-1997}. The bounded alternative in the abstract also
+satisfies the fixed-factor bound for large inputs. For a forced
+period-$p$ return, parity coding gives slope product
+$(3/4)^{p2^{p-1}}<1$. This comparison uses the abstract only.
 
-For independent residue slopes, Venturini's published abstract
-\cite{venturini-1997} states natural-density-one fixed-factor descent
-in absolute value on each signed half-line, under positive coprime
-branch numerators and geometric mean slope below one. Our period-$p$
-return satisfies these stated algebraic conditions: the parity bijection
-gives the slope product $(3/4)^{p2^{p-1}}<1$. The abstract allows a fixed
-bounded alternative, which is absorbed by any fixed-factor bound for
-sufficiently large inputs. The full proof was not recovered in this
-review. This is a direct model comparison, but its conclusion supplies
-neither capture nor descent below every prescribed divergent threshold.
+Gon\c{c}alves, Greenfeld and Madrid treat maps with one multiplier $q$
+on the nonzero classes modulo $p$. Their hypotheses include positivity,
+integrality, coprimality and $q<p^{p/(p-1)}$, with additional offset
+conditions for the natural-density power bound
+\cite[Definition~1.2 and Theorems~1.3 and~1.8, arXiv v2]{goncalves-greenfeld-madrid-2025}.
+Our return has multipliers $3^{o_r}$ that vary with $r$.
 
-Gon\c{c}alves, Greenfeld and Madrid
-\cite[Definition~1.2 and Theorems~1.3 and~1.8 of arXiv v2]{goncalves-greenfeld-madrid-2025}
-extend almost-bounded results to a
-specified family of generalized Collatz maps. Their principal family
-uses a fixed multiplier $q$ on the nonzero residue classes modulo a
-fixed $p$, with positivity, integrality, coprimality, and the inequality
-$q<p^{p/(p-1)}$; their natural-density power conclusion has additional
-positive-offset hypotheses. Our full return generally has the different
-multipliers $3^{o_r}$. Checking an average slope is therefore insufficient
-to invoke their theorem. Applying it to this forced family would require
-a proved reduction to their exact model.
+Siegel and O'Dwyer report an almost-boundedness theorem for varying
+slopes on number rings \cite[Theorem~5 and Definitions~16, 19, arXiv v1]{siegel-odwyer-2026}.
+The seven-step return satisfies their intended scalar bounds
+$\rho_H=(3/4)^{448}$ and $127^2\rho_H<1$. Application remains uncertain.
+Definitions~16 and~19 impose integrality globally and on a coset,
+respectively, and the passage-probability argument at the end of
+Section~7.2 needs justification. Kionke's one-dimensional
+eventual-periodicity conjecture for coprime residue-affine maps under
+a slope-product bound concerns all signed inputs
+\cite[Section~1]{kionke-2017}. Our capture question concerns safe inputs.
 
-Siegel and O'Dwyer's recent preprint
-\cite[Theorem~5 and Definition~19, arXiv v1]{siegel-odwyer-2026}
-reports an almost-boundedness theorem on number rings with varying
-slopes. Its intended scalar conditions are compatible with our seven-step
-return: $\rho_H=(3/4)^{448}$ and $127^2\rho_H<1$. This makes it a close
-comparison, but we do not invoke its claimed theorem. The literal
-global branch-integrality requirement in Definition~16 conflicts with
-the coset-only condition in Definition~19, and the passage-probability
-argument at the end of Section~7.2 requires further justification.
-These are unresolved concerns about the inspected version, not a
-counterexample to its intended conclusion. None of our capture
-hypotheses is discharged by that preprint.
+\subsection{Inverse counts and synchronization}
 
-Kionke also states a one-dimensional eventual-periodicity conjecture for
-coprime residue-affine maps whose product of absolute slope numerators
-is smaller than the appropriate power of their denominator
-\cite[Section~1]{kionke-2017}. That statement is a conjecture, not a
-capture theorem available to close our residual families. It quantifies
-over all signed integers. Even a future proof for every positive seed
-of our fixed word would require a separate negative-domain analysis
-before it could settle an instance in that form. The higher-dimensional
-counterexamples in the same paper do not settle our one-dimensional
-problem either.
+Applegate and Lagarias use inverse trees and difference inequalities
+to derive lower bounds for ordinary Collatz
+\cite{applegate-lagarias-1995-i,applegate-lagarias-1995-ii}. Krasikov and
+Lagarias obtain exponent $0.84$ for positive targets coprime to three
+\cite[Theorems~2.2 and~6.1]{krasikov-lagarias}. For $(1,0,-1)$,
+Theorem~\ref{thm:inverse-growth} derives its exponent from the eligible
+24-step branches, rules out collisions across depths, and bounds the
+size and multiplicity cost of imposing a progression.
 
-\subsection{Inverse growth and arithmetic progressions}
+Monks proves that for every ordinary Collatz orbit and every arithmetic
+progression, an orbit from that progression eventually merges with the
+given orbit \cite{monks-2006}. Monks et al.\ develop this sufficiency
+property by admissible backtracing and bound the number of odd inverse
+steps for targets coprime to three \cite{monks-et-al-2013}. The forced
+count also requires a bound on the total number of updates in each
+selector (Section~\ref{sec:inverse}).
 
-Applegate and Lagarias \cite{applegate-lagarias-1995-i} develop finite
-inverse-tree enumeration, including odd-step and congruence information,
-as a way to obtain infinite lower counting bounds. Their second paper
-\cite{applegate-lagarias-1995-ii} develops the difference-inequality
-approach further. Krasikov and Lagarias
-\cite[Theorems~2.2 and~6.1]{krasikov-lagarias} provide a soundness
-framework and an ordinary-map lower exponent $0.84$ for positive targets
-coprime to three. Our exponent between $0.535$ and $0.536$ concerns a
-different, forced map and is not a numerical improvement to that result.
-The model-specific work is the complete eligible branch census,
-the forced affine offsets, distinctness across depths, the stopping
-frontier, and the transfer to all safe targets and progressions.
+Vasilyev studies state-dependent steering with the same available
+upward and downward integer edges, using a different convention for $U$
+\cite[Section~4]{vasilyev-2026}. Here one word acts on the whole
+interval. \v{C}ern\'y's pair-merging criterion concerns finite automata
+\cite[Theorem~2]{cerny-1964}. We use pair merging with a bounded
+reference in an infinite state space. The probability estimate uses
+drift and minorization \cite{rosenthal-1995}. Other uses of shared
+random maps include exact sampling by coupling from the past
+\cite{propp-wilson-1996} and synchronizing realizations of finite
+ergodic chains \cite{yano-yasutomi-2011}. For our prescribed pair of
+maps, the proof must close the reference cycle and control every rotation.
 
-The progression comparison is especially close. Monks
-\cite{monks-2006} proves that every arithmetic progression is
-sufficient for ordinary Collatz, in the sense of eventual merger with
-an orbit from the progression. Monks et al.\ \cite{monks-et-al-2013}
-develop admissible backtracing and stronger sufficiency statements.
-These are direct antecedents of the affine residue steering used here.
-Sufficiency does not assert that every forward orbit visits a given
-progression. Their bounded odd-inverse count for targets coprime to
-three also differs from the literal selector length needed here;
-Section~\ref{sec:inverse} proves the size, multiplicity, and attachment
-estimates required by our counting transfer.
+\subsection{Continuous extensions}
 
-A possible quantitative improvement is to retain more phase and residue
-information in a system of forced inverse inequalities. The classical
-inequality method suggests this experiment, but its soundness proof
-would need the actual shifted arguments, eligibility guards, and
-coverage of our return. Importing an ordinary-map recurrence or optimizing
-unverified numerical weights would not establish a new exponent.
+We use Chamberland's cosine interpolation
+\cite{chamberland-1996,chamberland-survey}. Dumont and Reiter compare real
+and complex basin images for distinct continuations
+\cite{dumont-reiter-2001,dumont-reiter-2003}. Letherman, Schleicher and
+Wood study another family of entire extensions
+\cite{letherman-schleicher-wood-1999}. For the unforced cosine map,
+Lygeros and Rozier prove inclusions of short intervals around integer
+orbits \cite{lygeros-rozier-2014}.
 
-\subsection{Common control and synchronization}
+Our integer-cycle attraction result applies Theorem~3.3 of Sindee, Sa
+Ngiamsunthorn and Sriwongsa \cite{sindee-2024}. Section~\ref{sec:geometry}
+checks the coordinate change and equality of first derivatives at every
+integer and gives a direct multiplier proof. The trapping disks,
+noninteger cycles, real separator and phase-dependent complex launch
+use certificates for the chosen forced continuation.
 
-Single-state steering, a common word for a finite ensemble, and periodic
-capture from every phase are separate levels of control. Vasilyev's
-recent preprint \cite[Section~4]{vasilyev-2026} studies the same available
-upward and downward integer edges and gives closely related
-single-state steering. A state-dependent choice of an edge does not
-produce one temporal word that moves several states simultaneously.
-We use a different notation for the translated companion $U$, so the
-symbol $U$ in that preprint must not be identified with ours.
+\subsection{Termination and certificates}
 
-The pair-merging induction is classical in finite automata:
-\v{C}ern\'y's criterion \cite[Theorem~2]{cerny-1964} reduces
-synchronization to merging every pair. The arithmetic merger and
-protected reference make that induction useful in our infinite state
-space. The logarithmic dependence on the interval endpoint, with a word
-chosen for that interval, and success of every cyclic rotation are
-additional conclusions proved here, not consequences of the
-finite-state criterion alone.
+Size-change termination requires a well-founded descending thread along
+every infinite execution \cite{lee-jones-benamram-2001,benamram-2010-monotonicity}.
+Transition invariants cover the transitive closure by a finite union of
+well-founded relations \cite{podelski-rybalchenko-2004}. Path-complete
+Lyapunov graphs require coverage of all allowed matrix products
+\cite{ahmadi-et-al-2014}. For the seven-step return, any such proof must
+cover every guarded affine branch, including its offset.
 
-The probabilistic proof has the structure of drift and minorization
-arguments used for geometric convergence \cite{rosenthal-1995}.
-Shared random maps also occur in coupling from the past
-\cite{propp-wilson-1996}, although our objective is word existence,
-not exact sampling from a stationary distribution. Yano and Yasutomi
-\cite{yano-yasutomi-2011} construct synchronizing random-map
-realizations for finite ergodic chains. Here the maps and their common
-coupling are prescribed, and the ensemble is not a finite reference
-chain. We therefore prove the required ensemble estimates, reference
-closure, and all-rotation union bound rather than infer them from
-finite-chain mixing.
+Yolcu, Aaronson and Heule encode ordinary Collatz as a mixed-base
+rewriting system and give obstructions for specified interpretations
+\cite[Section~3.2]{yolcu-aaronson-heule-2023}. A forced encoding would
+also need to simulate the clock and prove progress between physical
+steps. Carelli's connection with reachability in one-variable
+linear-constraint loops assumes a conjecture for a particular
+generalized map \cite{carelli-2026}. Kohl's obstructions concern iterates
+of surjective noninjective residue-affine maps and a restricted class
+of monotonizing conjugacies
+\cite{kohl-2007,kohl-2008-conjugates}. These results leave open
+variable-time returns and mergers with a smaller launch.
 
-\subsection{Continuous geometry and inherited attraction}
+Nashida's revision-r3 repositories report Lean proofs of certificate
+soundness and five examples in Part~I and seven residue-avoidance
+weakenings in Part~II \cite{nashida-2026,nashida-2026-part-ii}.
+The reported formalization omits the general dichotomy, nonexistence,
+matrix barriers and maximality. We consulted the scope statements
+without rebuilding the artifacts. Gonthier describes proving a checker's
+soundness and applying it to finite data \cite{gonthier-2005}. Solovyev
+and Hales carry this out for Taylor interval certificates
+\cite{solovyev-hales-2013}. Section~\ref{sec:formal-scope} lists which
+results in this paper have Lean proofs.
 
-The cosine continuation is Chamberland's function
-\cite{chamberland-1996,chamberland-survey}; its interpolation is an
-explicit modeling choice. Dumont and Reiter
-\cite{dumont-reiter-2001,dumont-reiter-2003} already study real and
-complex visualizations and alternative continuations. Agreement on
-integer inputs leaves substantial freedom between them. In particular,
-results about a chosen holomorphic extension, such as those of
-Letherman, Schleicher and Wood \cite{letherman-schleicher-wood-1999},
-cannot be transferred solely from their common integer values.
-
-The general integer-cycle attraction proposition has a stronger prior
-relationship than analogy. After the positive-height coordinate change,
-the full-period return satisfies the hypotheses of Sindee, Sa
-Ngiamsunthorn and Sriwongsa \cite[Theorem~3.3]{sindee-2024}.
-Their extension and the positive-coordinate conjugate of our composed
-cosine return have the same values and first derivatives at integers.
-Section~\ref{sec:geometry} gives the
-reduction and retains a direct multiplier proof. The general attraction
-mechanism is therefore attributed as an application of existing work.
-The particular trapping disks, noninteger cycles, real separator, and
-phase-dependent complex trajectory still require the separate
-certificates supplied here.
-
-Lygeros and Rozier \cite{lygeros-rozier-2014} give shrinking real
-intervals around integers for the unforced cosine map. A forced analogue
-would be a useful next geometric theorem: specify interval widths at
-each phase, prove inclusion under the actual translated update, and
-handle the finitely many small centers. The original unforced
-inequalities do not provide that inclusion after adding impulses.
-
-\subsection{Finite certificates, termination, and formal proof}
-
-The unresolved seven-step families can be viewed as a termination
-problem on exact arithmetic domains. The size-change principle of
-Lee, Jones and Ben-Amram \cite{lee-jones-benamram-2001}, and the
-corrected development of monotonicity constraints by Ben-Amram
-\cite[Section~3]{benamram-2010-monotonicity}, suggest finite graphs
-whose edges certify comparisons of well-founded counters. To use this
-method, each edge must hold on its entire guarded domain, every possible
-execution must be covered, and the composed graph must force an infinite
-descending thread along any putative infinite execution. Finding a
-cycle in a residue graph, or checking only sampled parameters, does not
-establish these conditions.
-
-Transition invariants \cite{podelski-rybalchenko-2004} provide another
-relevant design principle: a finite union of well-founded relations can
-cover the transitive closure of the transition relation. Coverage of
-execution segments is the substantive obligation. Path-complete graph
-Lyapunov functions \cite{ahmadi-et-al-2014} similarly clarify why all
-allowed products must be represented. Their matrix-system hypotheses
-do not automatically cover guarded affine integer returns. An affine
-lift must also account for offsets and the extra constant coordinate;
-unconstrained matrix contraction is not supplied by a list of favorable
-branch slopes.
-
-Yolcu, Aaronson and Heule \cite[Section~3.2]{yolcu-aaronson-heule-2023}
-give a mixed-base string-rewriting encoding whose termination is
-equivalent to ordinary Collatz. Their negative results concern specified
-classes of interpretations, not all termination methods. A forced
-encoding would need its own phase representation, forward and backward
-simulation, and proof that administrative rewriting cannot continue
-forever without physical progress. Carelli's connection between
-one-variable linear-constraint loops and weak generalized Collatz
-reachability \cite{carelli-2026} is also conditional on an explicit
-conjecture and an exact model. It is not an automatic decision procedure
-for our guarded, multi-branch return.
-
-Nashida's recent companion preprints
-\cite{nashida-2026,nashida-2026-part-ii} address staged valuation
-certificates and limitations of finite abstractions and matrix
-interpretations. Their revision-r3 repositories report Lean coverage
-of certificate soundness and five examples in Part~I, and seven
-residue-avoidance weakenings in Part~II. The general dichotomy,
-nonexistence results, matrix barriers, and maximality are outside the
-reported formalization. We inspected those scope statements without
-independently rebuilding or axiom-auditing the artifacts. A use for our
-forced system would need its own faithful encoding and certificate
-verification; the reported barriers concern their specified methods.
-
-For certificate formalization, Gonthier's computational-reflection
-architecture \cite{gonthier-2005} illustrates the essential separation:
-prove a checker's semantic correctness, then use its accepted finite
-data to obtain the mathematical statement. Solovyev and Hales
-\cite{solovyev-hales-2013} provide an analytic example using Taylor
-interval certificates. Our next Lean milestones are the corresponding
-coverage and soundness theorems, not merely imports of recorded maxima
-or successful external runs. The Lean infrastructure and its axiom and
-validation guidance \cite{demoura-ullrich-2021,lean-axioms-424,
-lean-validating-proofs} help describe that trust boundary; the exact
-coverage of this repository is listed in Section~\ref{sec:formal-scope}.
-
-Finally, the residue-affine literature gives useful limits on overly
-simple descriptions. Kohl proves wildness of iterates for surjective
-noninjective residue-class-wise affine maps \cite{kohl-2007}, and a
-separate obstruction for a restricted class of monotonizing conjugacies
-\cite{kohl-2008-conjugates}. These statements do not rule out
-variable-time returns, relational mergers, residue-dependent ranks, or
-finite certificates of entry. They support specifying the exact scope
-of an obstruction before using it to discard a proof strategy.
-
-\subsection{Contribution and review boundaries}
-\label{sec:literature-boundaries}
-
-The release combines a model-specific admissibility classification,
-exact support bounds, an all-phase synchronization theorem, forced
-inverse growth and progression transfer, explicit geometric
-certificates, and conditional seven-step reductions. Their classical
-coding, control, counting, interpolation, and verification ingredients
-are attributed above and beside their uses. No general novelty claim
-is made for those ingredients or for the inherited integer-attraction
-principle. Priority for the precise forced statements remains a separate
-review question.
-
-The bibliography is selective, rather than a claim to enumerate every
-Collatz paper. The accompanying staging audit accounts for all 88 entries
-in the pre-existing source register, records additional sources, and
-distinguishes inspected primary text from metadata or abstract-only
-checks. In particular, the Matthews--Watts comparison above uses the
-recovered definition; the Letherman--Schleicher--Wood comparison uses
-the publisher abstract and the explicit distinction in Dumont--Reiter;
-the Lee--Jones--Ben-Amram and Podelski--Rybalchenko references supply
-historical and methodological context whose exact formal use would
-require further source review. Full-text gaps and version discrepancies
-remain visible in that audit. None is silently treated as a theorem
-that closes the remaining capture hypotheses.
+\paragraph{Source coverage.}\label{sec:literature-boundaries}
+The bibliography is selective. The Matthews--Watts comparison uses
+their definition on p.~167. For Letherman, Schleicher and Wood we used
+the publisher's abstract and Dumont and Reiter's explicit comparison.
+The termination literature supplies the criteria discussed above
+\cite{lee-jones-benamram-2001,podelski-rybalchenko-2004}. Priority for the forced results remains open.

@@ -1,29 +1,22 @@
 \section{One periodic word synchronizes a finite interval}
 \label{sec:synchronization}
 
-In this section the forcing is designed for a specified finite set.
-It is then fixed and repeated; there is no feedback from the individual
-trajectory during its execution. The positive-coordinate maps from
+Fix a finite set of seeds. We seek a periodic word that applies the same
+letter to every seed at each step. The positive-coordinate maps from
 \eqref{eq:positive-switch} satisfy
 \[
  \{T(z),U(z)\}
  =\left\{\left\lceil\frac z2\right\rceil,
           \left\lceil\frac{3z}2\right\rceil\right\}.
 \]
-Denote these two branch values by $D(z)$ and $A(z)$, respectively.
-A common letter $T$ or $U$ acts on every seed. Which letter gives
-$D$ depends on that seed's parity; it is not chosen separately for
-different members of the ensemble.
+Write $D(z)$ and $A(z)$ for the two values in the displayed order.
+The letter that gives $D(z)$ depends on the parity of $z$.
 
-Single-state steering using these two branch values is treated directly
-in Vasilyev's recent preprint: its Theorem~4.1(a) gives single-state
-steering with upward and downward edges, and Proposition~4.3
-allows an edge policy depending on the current integer
-\cite{vasilyev-2026}. Such choices can be translated into temporal letters
-along one known trajectory. For several seeds, a common letter acts
-simultaneously at different parities, so a separate common-word argument
-is required. The bounded reference and cyclic-phase requirements below
-are additional conditions on that argument.
+For a single trajectory, Vasilyev's Theorem~4.1(a) gives steering by
+upward and downward edges, and Proposition~4.3 allows a policy depending
+on the current integer \cite{vasilyev-2026}. For an ensemble, one letter
+must serve all current parities. We also require a bounded reference
+trajectory and synchronization from every launch phase.
 
 \subsection{A bounded reference and a common reset word}
 
@@ -36,13 +29,10 @@ following allowed transitions:
 \end{equation}
 In particular, $T$ is forbidden at reference value $3$.
 
-The induction from pair mergers to a reset of a finite set is classical
-in deterministic automata \cite[Theorem~2]{cerny-1964}. Here the ambient
-state space is infinite and the initial interval is not invariant.
-The arithmetic lemma therefore supplies mergers for every comparison
-value that can arise while preserving the allowed reference transitions.
-Its finite-set induction supplies existence; the quantitative period
-bound requires the later drift and rotation arguments.
+Pairwise merger implies a finite-set reset in a deterministic automaton
+\cite[Theorem~2]{cerny-1964}. Here a comparison value can leave the
+initial interval. We prove a merger for every such value while the
+reference stays in $\{1,2,3\}$.
 
 \begin{lemma}[Protected merger]\label{lem:protected-merger}
 For every finite set $S$ of positive integers containing a reference
@@ -90,7 +80,6 @@ or $UT$ from reference $3$, brings the common value to $1$.
 
 \subsection{A ten-step reset worked in full}
 
-An explicit example makes the common-control requirement visible.
 Start with reference $r_0=1$ and the positive-coordinate ensemble
 $S_0=\{1,2,3,4,5,6\}$. Apply the same chronological word
 \begin{equation}\label{eq:small-reset-word}
@@ -113,14 +102,10 @@ Time $k$ & Next letter & Reference $r_k$ & Distinct image set $S_k$\\\midrule
 10&--&1&$\{1\}$\\\bottomrule
 \end{tabular}
 \end{center}
-Every reference transition is allowed. At the first step,
-$U(2)=U(5)=3$ merges two states, even though $U(6)=9$ increases
-the largest input. At time eight, $U(2)=U(5)=3$ makes the remaining
-ensemble a singleton. The last two letters carry this common value
-back to reference $1$, closing the reference path. This example
-shows both effects that a synchronization argument must accommodate:
-some individual values can increase, while collisions reduce the
-number of values whose futures still need to be brought together.
+The first $U$ merges $2$ and $5$ at $3$ while sending $6$ to $9$.
+At time eight the same collision leaves a singleton. The last two
+letters return its value to $1$. Every transition respects the reference
+rule.
 
 \begin{figure}[t]
 \centering
@@ -308,23 +293,12 @@ $P=16000$ and is preserved as $P$ increases.
 
 \subsection{A uniform tail for synchronization}
 
-The drift becomes a finite-word existence estimate in two stages.
-First it makes a high-potential ensemble return to a fixed finite
-collection of small ensembles, with a quantitative bound on the
-waiting time. Inside that collection, the protected-merger lemma
-provides a uniformly positive chance of finishing in a bounded
-number of steps. A failed attempt can temporarily leave the small
-collection; the same drift controls the time needed to try again.
-This is why a one-step expectation estimate is supplemented by the
-return-time argument in the next proof.
-
-This combination of Lyapunov drift and a uniformly positive trial on a
-small set follows the general drift/minorization method; Rosenthal gives
-an explicit geometric-convergence theorem under such hypotheses
-\cite[Theorem~12]{rosenthal-1995}. We prove the needed synchronization
-tail directly for the reference--ensemble process. In particular, the
-small-set trial below is a common-letter merger, rather than an inference
-from the marginal behavior of one seed.
+The drift bounds the waiting time until the ensemble has small potential.
+There Lemma~\ref{lem:protected-merger} gives a positive probability of
+a reset in bounded time. After a failed trial the same drift bounds the
+time to the next trial. This applies the drift and minorization method
+\cite[Theorem~12]{rosenthal-1995} to the whole ensemble under a common
+sequence of letters.
 
 \begin{lemma}[Exponential synchronization tail]\label{lem:sync-tail}
 Let $\tau$ be the first time the ensemble is the singleton containing
@@ -408,25 +382,13 @@ phase is at most $\varepsilon$ whenever
  t\ge\left\lceil\frac1c\left(\frac54\log(N+2)
                     +\log\frac1\varepsilon+C_4\right)\right\rceil
 \]
-for an absolute constant $C_4$. The constants obtained from the
-small-set argument are finite rather than optimized, but the
-dependence on the interval size is already logarithmic. To cover
-every launch phase we must additionally close the reference path
-and control all rotations of the same word. The next proof does
-both without choosing a separate word for each phase.
+for an absolute constant $C_4$.
 
 \subsection{Closing the clock and treating every launch phase}
 
-The ten-step example distinguishes the two requirements. Closing
-the reference makes a valid periodic response $b_i$ at every phase;
-it does not ensure that the rotated control word resets the desired
-initial ensemble at that phase. We therefore consider closed
-reference paths for which \emph{every} rotation synchronizes a
-common interval of positive-coordinate values. That interval is
-chosen large enough to contain the transforms of every required
-physical seed at both heights. Once those two properties hold,
-the conversion back to physical coordinates is a direct application
-of the height conjugacy.
+A closed reference path gives a periodic response. To reset the seeds
+from every phase, each rotation of its label word must synchronize the
+transformed seeds at that phase.
 
 \begin{theorem}[Logarithmic all-phase synchronization]
 \label{thm:all-phase-synchronization}
@@ -581,17 +543,7 @@ a rotation class contains at most $p$ rooted words. Dividing by
 $p$ proves the claim.
 \end{proof}
 
-\subsection{Scope of the conclusion}
-
-The quantifiers in Theorem~\ref{thm:all-phase-synchronization} are
-\begin{quote}
-For every finite interval, there exists one word working
-for every seed and every phase in that interval.
-\end{quote}
-They do not assert that one periodic word works for every positive
-integer. The word, its period, and the response may depend on the
-interval. In particular, this theorem neither establishes capture
-for the fixed seven-step word studied below nor proves ordinary
-Collatz convergence. The proofs in this section are analytical;
-the probabilistic existence and logarithmic-period arguments are
-not part of the released Lean formalizations.
+The word and response in Theorem~\ref{thm:all-phase-synchronization}
+may depend on the prescribed interval. Capture for the fixed seven-step
+word and ordinary Collatz convergence remain separate questions.
+The logarithmic-period bound is an analytical result.
