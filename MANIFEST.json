@@ -1198,9 +1198,14 @@
       "sha256": "ddcfb801b5a3c0e6d5dd30f9c02c3959ad348a2f22703e842483a394a6a0c8eb"
     },
     {
+      "path": "papers/README.md",
+      "bytes": 1970,
+      "sha256": "53ad7f194219e2322d8daec5fb682c202ca82c879ec28ec4d39837b3e2bf2f4e"
+    },
+    {
       "path": "papers/arithmetic_bridge_pressure/README.md",
-      "bytes": 16295,
-      "sha256": "43a77adff8087ee0cde9d66cdc5ee5b6c6c6c262daacd08204f6c9c98710bc92"
+      "bytes": 16257,
+      "sha256": "d20270660982da2070b2b2608c735b42f9a9332e5a91fb360a94a06e40e4f59f"
     },
     {
       "path": "papers/external_problems/README.md",
