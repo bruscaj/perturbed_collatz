@@ -259,3 +259,15 @@ intended informal claims remains a mathematical review task, especially at the
 zero boundary, phase changes, normalized coordinates, branch guards, and
 conditional statements described above. A passing build is not a proof of a
 stronger sentence in the manuscript.
+
+## External problem supporting project
+
+`external_problems/` is a separate Lean 4.35.0, Std-only project with five
+abstract integer prefix/depth statements and 29 generated theorem helpers.
+It proves no M4/R8/R9/O3′ headline result. Its separately frozen specifications,
+raw elaborated types and helper axiom closures are in
+[`external_problems/inventory.json`](external_problems/inventory.json).
+The [supporting verification protocol](external_problems/VERIFICATION.md)
+requires the separate mandatory CI `external-support` job in addition to the
+legacy verification above. Challenge holes are isolated specification inputs,
+never accepted proof imports. Local clean build alone is partial assurance.
