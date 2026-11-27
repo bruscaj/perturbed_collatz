@@ -50,3 +50,16 @@
 - Incorporated repaired validation of every local eight-impulse shard and witness; saved mathematical census data are unchanged.
 - Kept the current four-family conclusion separate from newer unmerged and uncommitted formalization reports.
 - Made remaining mathematical obligations and formalization gaps explicit. Authorship and licensing remain pending for public release.
+# External research audit foundation — 27 November 2026
+
+- Added source-matched candidate records for M4, R8, R9 and O3′, including the
+  M4 rung/unrestricted interpretation split. No solved-problem claim is made.
+- Added the written depth-one Syracuse proof candidate, exact finite word/depth
+  and valuation oracles, and a rational series enclosure with explicit scope.
+- Proved five abstract integer prefix/depth supporting statements in a separate
+  pinned Lean 4.35.0 project, with frozen specs and all 29 generated theorem
+  helpers included in the axiom audit. No external headline is formalized.
+- Added mandatory separate Linux checker/comparator and hostile-fixture CI,
+  preserving every legacy release check. Local build-only mode is partial.
+- Extended public manifest coverage checks in both directions.
+

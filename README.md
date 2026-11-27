@@ -14,6 +14,16 @@ Almost every B1 parameter in each fixed progression merges with its smaller neig
 
 ## Results and limits
 
+The [external-problem research register](papers/external_problems/README.md)
+now includes candidate answers to Polson–Sokolov **M4, R8, R9 and O3′**.
+They remain draft candidates, with no complete headline Lean proofs or human
+expert refereeing. Exact finite source-model checks and five abstract integer
+supporting lemmas are included. M4's unrestricted and rung formulations are
+tracked separately; none is advertised here as a solved open problem.
+The [depth-one Syracuse proof draft](papers/finite_information_lyapunov/README.md)
+includes its density argument, exact infimum formula and nonattainment argument,
+with its incomplete formal coverage stated explicitly.
+
 | Result | Evidence here | What remains outside the claim |
 | --- | --- | --- |
 | Classification of admissible conservative impulse words and binary-height coordinates | Complete analytical proof and direct Lean support for the conservative classification, height/safety, and conjugacy | Does not prove capture for every admissible word; primitive-period comparisons remain written arguments |
@@ -36,7 +46,7 @@ Every entry in [claims.json](claims.json) includes its literature relationship a
 
 ## Lean coverage
 
-Four Lean projects contain 51 mathematical modules. Their clean builds compare 825 named public theorem declarations and the module-wide axiom audits against the committed inventory. The frontier project includes the single-B1 equivalence, guarded exits, repayment, and a counterexample to coverage by the five guards. [Lean coverage](lean/README.md) · [Exact theorem inventory](lean/inventory.json)
+The four legacy Lean projects contain 51 mathematical modules. Their clean builds compare 825 named public theorem declarations and the module-wide axiom audits against the committed inventory. The frontier project includes the single-B1 equivalence, guarded exits, repayment, and a counterexample to coverage by the five guards. A separate Lean 4.35.0 project proves five abstract integer prefix/depth supporting statements; it proves none of the external headline claims. [Lean coverage](lean/README.md) · [Exact theorem inventory](lean/inventory.json)
 
 The pinned versions are Lean **4.24.0** for `frontier`, `inverse`, and `sprint`, and **4.19.0** for `perturbed`. No mathlib dependency is needed. The audited theorem dependencies use only `propext`, `Quot.sound`, and `Classical.choice`; no `sorryAx` or custom axiom occurs. An external independent Lean kernel checker has not been run.
 

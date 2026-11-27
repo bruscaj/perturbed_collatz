@@ -10,6 +10,7 @@ import subprocess
 import sys
 import tempfile
 import time
+from refresh_manifest import payload_paths
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -34,6 +35,9 @@ def check_manifest():
             raise ValueError(f"Manifest mismatch: {relative}")
     if not seen:
         raise ValueError("Empty manifest")
+    actual = {p.relative_to(ROOT).as_posix() for p in payload_paths()}
+    if actual != seen:
+        raise ValueError(f"Manifest coverage differs: missing {sorted(actual-seen)}, unexpected {sorted(seen-actual)}")
     return len(seen)
 
 
@@ -85,6 +89,8 @@ def main():
         try:
             report["manifest_files"] = check_manifest()
             print(f"PASS manifest ({report['manifest_files']} files)", flush=True)
+            run("external candidate register and exact finite foundations",
+                [py, "certificates/external_problems/verify.py"])
             run("one/two-pair exhaustive census", [py, imp / "small.py"], imp / "small.json")
             run("eight signed layers and endpoint populations",
                 [py, imp / "six_impulses/eight_frontier.py"], imp / "six_impulses/eight_frontier.json")

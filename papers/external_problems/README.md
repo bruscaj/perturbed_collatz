@@ -85,6 +85,10 @@ along one fixed integer's infinite orbit.
 
 ## Evidence and remaining work
 
+The [depth-one Syracuse written draft](../finite_information_lyapunov/README.md)
+provides the proposed proof of density existence, the infimum formula and
+nonattainment. It remains a written candidate rather than a formal theorem.
+
 Run `python3 certificates/external_problems/verify.py` from the repository
 root. Its JSON output states the finite domains and exact rational results.
 It checks literal words, depth paths, small valuation cylinders, block

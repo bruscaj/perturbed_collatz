@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "scope": "all released Lean projects",
+  "scope": "four legacy Lean projects; supporting external project has separate inventory and mandatory checker job",
   "independent_kernel": "not run",
   "projects": {
     "inverse": {
@@ -8630,5 +8630,12 @@
         }
       ]
     }
+  },
+  "external_supporting_project": {
+    "path": "lean/external_problems",
+    "inventory": "lean/external_problems/inventory.json",
+    "scope": "five abstract integer supporting statements only; no headline external theorem",
+    "toolchain": "4.35.0",
+    "verification": "python3 lean/external_problems/verify.py --mode full"
   }
 }

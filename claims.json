@@ -678,6 +678,138 @@
         "relationship": "Development for this fixed periodic word.",
         "transfer_limit": "Other forcing words require their own entry or phase certificates."
       }
+    },
+    {
+      "id": "REL-EXT-M4",
+      "title": "M4 external research candidate",
+      "evidence_status": "draft candidate; finite foundations only",
+      "artifacts": [
+        "papers/external_problems/README.md",
+        "papers/external_problems/status.json",
+        "certificates/external_problems/verify.py"
+      ],
+      "lean_coverage": "five abstract integer prefix/depth lemmas for the bridge model; no O3′ formal coverage",
+      "lean_declarations": [],
+      "limitations": "Unrestricted versus rung interpretation unresolved; certified entropy table pending. No headline formal theorem, independent checker receipt, human expert refereeing or accepted external resolution.",
+      "literature": {
+        "citation_keys": [],
+        "relationship": "Candidate response to Polson–Sokolov edition 1 v1.4.0; no priority assertion.",
+        "source_commit": "5840497a23fc0d64127b850aea68862d7c93f2b7",
+        "transfer_limit": "No implication to ordinary Collatz convergence or all-seed forced capture."
+      },
+      "status_fields": {
+        "problem": "M4",
+        "id": "EXT-M4",
+        "status": "draft candidate",
+        "target": "rung entropy limit and computable characterization",
+        "written_proof": "reconstructed in internal AI audit; no headline acceptance gate passed",
+        "finite_computation": "fresh exact finite model checks only; see certificates/external_problems",
+        "headline_formal_declarations": [],
+        "formal_support": "five abstract integer prefix/depth lemmas for the bridge model; no O3′ formal coverage",
+        "headline_checker_coverage": "none",
+        "review": "separate AI reconstruction, source and adversarial contexts; no human expert refereeing",
+        "literature_priority": "source matched with M4 interpretation split; targeted search only; no novelty or acceptance assertion",
+        "limitations": "Unrestricted versus rung interpretation unresolved; certified entropy table pending."
+      }
+    },
+    {
+      "id": "REL-EXT-R8",
+      "title": "R8 external research candidate",
+      "evidence_status": "draft candidate; finite foundations only",
+      "artifacts": [
+        "papers/external_problems/README.md",
+        "papers/external_problems/status.json",
+        "certificates/external_problems/verify.py"
+      ],
+      "lean_coverage": "five abstract integer prefix/depth lemmas for the bridge model; no O3′ formal coverage",
+      "lean_declarations": [],
+      "limitations": "Full critical stationary Gibbs-law argument and all analytic prerequisites require full formalization. No headline formal theorem, independent checker receipt, human expert refereeing or accepted external resolution.",
+      "literature": {
+        "citation_keys": [],
+        "relationship": "Candidate response to Polson–Sokolov edition 1 v1.4.0; no priority assertion.",
+        "source_commit": "5840497a23fc0d64127b850aea68862d7c93f2b7",
+        "transfer_limit": "No implication to ordinary Collatz convergence or all-seed forced capture."
+      },
+      "status_fields": {
+        "problem": "R8",
+        "id": "EXT-R8",
+        "status": "draft candidate",
+        "target": "rung pressure convergence and differentiability for every nonnegative tilt",
+        "written_proof": "reconstructed in internal AI audit; no headline acceptance gate passed",
+        "finite_computation": "fresh exact finite model checks only; see certificates/external_problems",
+        "headline_formal_declarations": [],
+        "formal_support": "five abstract integer prefix/depth lemmas for the bridge model; no O3′ formal coverage",
+        "headline_checker_coverage": "none",
+        "review": "separate AI reconstruction, source and adversarial contexts; no human expert refereeing",
+        "literature_priority": "source matched with M4 interpretation split; targeted search only; no novelty or acceptance assertion",
+        "limitations": "Full critical stationary Gibbs-law argument and all analytic prerequisites require full formalization."
+      }
+    },
+    {
+      "id": "REL-EXT-R9",
+      "title": "R9 external research candidate",
+      "evidence_status": "draft candidate; finite foundations only",
+      "artifacts": [
+        "papers/external_problems/README.md",
+        "papers/external_problems/status.json",
+        "certificates/external_problems/verify.py"
+      ],
+      "lean_coverage": "five abstract integer prefix/depth lemmas for the bridge model; no O3′ formal coverage",
+      "lean_declarations": [],
+      "limitations": "Existence, matching microcanonical lower bound, uniform large-tilt estimates and ordered limits require full proof assurance. No headline formal theorem, independent checker receipt, human expert refereeing or accepted external resolution.",
+      "literature": {
+        "citation_keys": [],
+        "relationship": "Candidate response to Polson–Sokolov edition 1 v1.4.0; no priority assertion.",
+        "source_commit": "5840497a23fc0d64127b850aea68862d7c93f2b7",
+        "transfer_limit": "No implication to ordinary Collatz convergence or all-seed forced capture."
+      },
+      "status_fields": {
+        "problem": "R9",
+        "id": "EXT-R9",
+        "status": "draft candidate",
+        "target": "near-maximal rung entropy asymptotic",
+        "written_proof": "reconstructed in internal AI audit; no headline acceptance gate passed",
+        "finite_computation": "fresh exact finite model checks only; see certificates/external_problems",
+        "headline_formal_declarations": [],
+        "formal_support": "five abstract integer prefix/depth lemmas for the bridge model; no O3′ formal coverage",
+        "headline_checker_coverage": "none",
+        "review": "separate AI reconstruction, source and adversarial contexts; no human expert refereeing",
+        "literature_priority": "source matched with M4 interpretation split; targeted search only; no novelty or acceptance assertion",
+        "limitations": "Existence, matching microcanonical lower bound, uniform large-tilt estimates and ordered limits require full proof assurance."
+      }
+    },
+    {
+      "id": "REL-EXT-O3PRIME",
+      "title": "O3′ external research candidate",
+      "evidence_status": "draft candidate; finite foundations only",
+      "artifacts": [
+        "papers/external_problems/README.md",
+        "papers/external_problems/status.json",
+        "certificates/external_problems/verify.py"
+      ],
+      "lean_coverage": "five abstract integer prefix/depth lemmas for the bridge model; no O3′ formal coverage",
+      "lean_declarations": [],
+      "limitations": "Density for every unbounded correction, rate, infimum characterization and nonattainment require full formalization. No headline formal theorem, independent checker receipt, human expert refereeing or accepted external resolution.",
+      "literature": {
+        "citation_keys": [],
+        "relationship": "Candidate response to Polson–Sokolov edition 1 v1.4.0; no priority assertion.",
+        "source_commit": "5840497a23fc0d64127b850aea68862d7c93f2b7",
+        "transfer_limit": "No implication to ordinary Collatz convergence or all-seed forced capture."
+      },
+      "status_fields": {
+        "problem": "O3′",
+        "id": "EXT-O3PRIME",
+        "status": "draft candidate",
+        "target": "arbitrary finite-window correction failure infimum and depth rate",
+        "written_proof": "reconstructed in internal AI audit; no headline acceptance gate passed",
+        "finite_computation": "fresh exact finite model checks only; see certificates/external_problems",
+        "headline_formal_declarations": [],
+        "formal_support": "five abstract integer prefix/depth lemmas for the bridge model; no O3′ formal coverage",
+        "headline_checker_coverage": "none",
+        "review": "separate AI reconstruction, source and adversarial contexts; no human expert refereeing",
+        "literature_priority": "source matched with M4 interpretation split; targeted search only; no novelty or acceptance assertion",
+        "limitations": "Density for every unbounded correction, rate, infimum characterization and nonattainment require full formalization."
+      }
     }
   ],
   "literature_scope": "Citation keys resolve in tex/references.tex. Relationships identify attribution and limits, not a literature-wide priority certification."

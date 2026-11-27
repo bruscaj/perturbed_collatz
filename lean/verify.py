@@ -126,7 +126,7 @@ def main() -> None:
     parser.add_argument("--check-inventory", type=Path,
                         help="Also compare source hashes, types, and axioms against a saved inventory")
     args = parser.parse_args()
-    report = {"status": "running", "scope": "all released Lean projects",
+    report = {"status": "running", "scope": "four legacy released Lean projects; external support checked separately",
               "independent_kernel": "not run", "projects": {}}
     try:
         for project, expected in PROJECTS.items():
