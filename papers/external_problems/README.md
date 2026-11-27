@@ -88,6 +88,9 @@ along one fixed integer's infinite orbit.
 The [depth-one Syracuse written draft](../finite_information_lyapunov/README.md)
 provides the proposed proof of density existence, the infimum formula and
 nonattainment. It remains a written candidate rather than a formal theorem.
+The [near-extremal entropy written draft](../arithmetic_bridge_pressure/README.md)
+develops the rung/depth correspondence, large-tilt pressure, finite-block
+matching lower bound and proposed R9 expansion. It also remains unformalized.
 
 Run `python3 certificates/external_problems/verify.py` from the repository
 root. Its JSON output states the finite domains and exact rational results.

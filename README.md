@@ -23,6 +23,9 @@ tracked separately; none is advertised here as a solved open problem.
 The [depth-one Syracuse proof draft](papers/finite_information_lyapunov/README.md)
 includes its density argument, exact infimum formula and nonattainment argument,
 with its incomplete formal coverage stated explicitly.
+The [near-extremal entropy draft](papers/arithmetic_bridge_pressure/README.md)
+gives the proposed rung pressure and entropy argument behind R9; it remains
+unformalized and covers only part of M4 and R8.
 
 | Result | Evidence here | What remains outside the claim |
 | --- | --- | --- |

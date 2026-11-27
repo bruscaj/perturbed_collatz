@@ -4,8 +4,8 @@
   "files": [
     {
       "path": ".github/workflows/verify.yml",
-      "bytes": 1594,
-      "sha256": "0bdf4041d003c683407f0755cee70f050443388370282e9b8c4a77ef69a73aad"
+      "bytes": 2095,
+      "sha256": "eeb848e0a764b7f6d3f7deadcb8498006a58575e1b6166e9b7468d89ef4b102c"
     },
     {
       "path": ".gitignore",
@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12975,
-      "sha256": "3b658feadf04f2fec90e047e2605e3570dc18a47794bc55877c2d80e8bc483ff"
+      "bytes": 13178,
+      "sha256": "2c659aff95ed5aba8f1981e362c219db76f34ad69300302eacbe203752cbbf21"
     },
     {
       "path": "certificates/exposition/examples.json",
@@ -1198,9 +1198,14 @@
       "sha256": "ddcfb801b5a3c0e6d5dd30f9c02c3959ad348a2f22703e842483a394a6a0c8eb"
     },
     {
+      "path": "papers/arithmetic_bridge_pressure/README.md",
+      "bytes": 16295,
+      "sha256": "43a77adff8087ee0cde9d66cdc5ee5b6c6c6c262daacd08204f6c9c98710bc92"
+    },
+    {
       "path": "papers/external_problems/README.md",
-      "bytes": 7024,
-      "sha256": "7bd83cb20b18f53d911af584048c1350ee3b9dcb536e85226596ae51691c0f02"
+      "bytes": 7259,
+      "sha256": "a91637d09b1b9ecce6efbe4a17ceae974cd18960014b75bfc1119ad4e328e527"
     },
     {
       "path": "papers/external_problems/status.json",
