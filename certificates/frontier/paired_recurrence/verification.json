@@ -1,0 +1,275 @@
+{
+  "all_growing_prefixes": [
+    {
+      "laps": 1,
+      "t_modulus": "64",
+      "t_residue": "46",
+      "whole_ray_checked": true
+    },
+    {
+      "laps": 2,
+      "t_modulus": "8192",
+      "t_residue": "366",
+      "whole_ray_checked": true
+    },
+    {
+      "laps": 3,
+      "t_modulus": "1048576",
+      "t_residue": "885102",
+      "whole_ray_checked": true
+    },
+    {
+      "laps": 8,
+      "t_modulus": "36028797018963968",
+      "t_residue": "32896618939122030",
+      "whole_ray_checked": true
+    },
+    {
+      "laps": 20,
+      "t_modulus": "696898287454081973172991196020261297061888",
+      "t_residue": "47385021973565554271111591764369393680750",
+      "whole_ray_checked": true
+    }
+  ],
+  "all_seed_capture_proved": false,
+  "exact_transition_rays": 12166,
+  "finite_merger_bounds": {
+    "A3": [
+      {
+        "discarded_mass": "0",
+        "lower_bound": "4207/16384",
+        "retained_states": 525,
+        "ticks": 14
+      },
+      {
+        "discarded_mass": "144806743/4294967296",
+        "lower_bound": "1434185055/4294967296",
+        "retained_states": 12000,
+        "ticks": 32
+      },
+      {
+        "discarded_mass": "927602881507230787/4611686018427387904",
+        "lower_bound": "7270272786571909549/18446744073709551616",
+        "retained_states": 12000,
+        "ticks": 64
+      },
+      {
+        "discarded_mass": "135191862809452451137882269528054257653/340282366920938463463374607431768211456",
+        "lower_bound": "152745162459453747301336431350379820139/340282366920938463463374607431768211456",
+        "retained_states": 12000,
+        "ticks": 128
+      }
+    ],
+    "B1_19_mod128": [
+      {
+        "discarded_mass": "0",
+        "lower_bound": "1149/8192",
+        "retained_states": 683,
+        "ticks": 14
+      },
+      {
+        "discarded_mass": "91121971/2147483648",
+        "lower_bound": "960852519/4294967296",
+        "retained_states": 12000,
+        "ticks": 32
+      },
+      {
+        "discarded_mass": "550019512266131787/2305843009213693952",
+        "lower_bound": "5403779560828199459/18446744073709551616",
+        "retained_states": 12000,
+        "ticks": 64
+      },
+      {
+        "discarded_mass": "158448802876638675907098992469857240287/340282366920938463463374607431768211456",
+        "lower_bound": "1894440090174384423080621483155304103/5316911983139663491615228241121378304",
+        "retained_states": 12000,
+        "ticks": 128
+      }
+    ],
+    "B1_neighbor": [
+      {
+        "discarded_mass": "0",
+        "lower_bound": "681/8192",
+        "retained_states": 780,
+        "ticks": 14
+      },
+      {
+        "discarded_mass": "87130217/2147483648",
+        "lower_bound": "768428993/4294967296",
+        "retained_states": 12000,
+        "ticks": 32
+      },
+      {
+        "discarded_mass": "140632471083985285/576460752303423488",
+        "lower_bound": "1172397404248902549/4611686018427387904",
+        "retained_states": 12000,
+        "ticks": 64
+      },
+      {
+        "discarded_mass": "41431733961131052893094992839311595339/85070591730234615865843651857942052864",
+        "lower_bound": "109629947258748038496500814411686288831/340282366920938463463374607431768211456",
+        "retained_states": 12000,
+        "ticks": 128
+      }
+    ]
+  },
+  "lean_run": false,
+  "pointwise_pair_merger_proved": false,
+  "prefix_representatives": [
+    {
+      "19_mod128": {
+        "accepted": 0,
+        "total": 1,
+        "unresolved_maxima": 1
+      },
+      "after_initial_ticks": 7,
+      "fraction_smaller_partner": "3/128",
+      "independent_physical_source_rays": 128,
+      "maximum_representatives": 125,
+      "smaller_partner_rays": 3,
+      "source_rays": 128
+    },
+    {
+      "17_mod256": {
+        "accepted": 0,
+        "total": 4,
+        "unresolved_maxima": 4
+      },
+      "19_mod128": {
+        "accepted": 0,
+        "total": 8,
+        "unresolved_maxima": 8
+      },
+      "after_initial_ticks": 10,
+      "fraction_smaller_partner": "39/512",
+      "independent_physical_source_rays": 1024,
+      "maximum_representatives": 946,
+      "smaller_partner_rays": 78,
+      "source_rays": 1024
+    },
+    {
+      "17_mod256": {
+        "accepted": 0,
+        "total": 64,
+        "unresolved_maxima": 64
+      },
+      "19_mod128": {
+        "accepted": 24,
+        "total": 128,
+        "unresolved_maxima": 104
+      },
+      "after_initial_ticks": 14,
+      "fraction_smaller_partner": "2905/16384",
+      "independent_physical_source_rays": 16384,
+      "maximum_representatives": 13479,
+      "smaller_partner_rays": 2905,
+      "source_rays": 16384
+    },
+    {
+      "17_mod256": {
+        "accepted": 15,
+        "total": 1024,
+        "unresolved_maxima": 1009
+      },
+      "19_mod128": {
+        "accepted": 703,
+        "total": 2048,
+        "unresolved_maxima": 1345
+      },
+      "after_initial_ticks": 18,
+      "fraction_smaller_partner": "82209/262144",
+      "independent_physical_source_rays": 0,
+      "maximum_representatives": 179935,
+      "smaller_partner_rays": 82209,
+      "source_rays": 262144
+    },
+    {
+      "17_mod256": {
+        "accepted": 134,
+        "total": 4096,
+        "unresolved_maxima": 3962
+      },
+      "19_mod128": {
+        "accepted": 3393,
+        "total": 8192,
+        "unresolved_maxima": 4799
+      },
+      "after_initial_ticks": 20,
+      "fraction_smaller_partner": "98121/262144",
+      "independent_physical_source_rays": 0,
+      "maximum_representatives": 656092,
+      "smaller_partner_rays": 392484,
+      "source_rays": 1048576
+    }
+  ],
+  "rational_inequalities": {
+    "compact_offset_exclusive_bound": "1152921504606846976",
+    "embedded_drift_at_large_positive_level": "<= -1/(32*(e+257)^(3/2))",
+    "finite_rational_checks": true,
+    "fixed_prefix_candidate_exponent": "29/30",
+    "small_exponent_LTE_examples": 128,
+    "square_root_drift_rho": "97/100",
+    "stopped_prefix_tail_exponent": "1/64"
+  },
+  "scope": "finite arithmetic and physical replay only; written probability proof is separate",
+  "status": "PASS",
+  "terminals": {
+    "constructive_whole_ray_examples": 121,
+    "max_example_clock": 145,
+    "small_whole_ray_terminals": 55
+  },
+  "two_cycle_negative_control": [
+    [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    [
+      [
+        1,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        7,
+        0
+      ],
+      [
+        12,
+        1
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  ]
+}

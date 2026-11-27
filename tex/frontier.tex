@@ -1,0 +1,313 @@
+\section{A single remaining family and two approaches to its complement}
+\label{sec:frontier-update}
+
+Fix the seven-step word of Theorem~\ref{thm:seven-three}. In this section
+$B(t)$ denotes the physical state $(6t-1,1)$, or equivalently the
+normalized state $(6t,1)$, with $t\ge1$. Write $F$ for a physical
+update. Heights at a meeting are compared at the same phase. The
+two clocks that reach that phase may differ by a multiple of seven.
+The \href{https://github.com/bruscaj/perturbed_collatz/tree/main/certificates/frontier}{public proof supplements}
+give the full recurrence and interval arguments, exact certificates and
+instructions for reproducing each computation.
+
+\subsection{Entry and induction on the original B1 parameter}
+\label{sec:b1-complement}
+
+\begin{theorem}\label{thm:b1-complement}
+Every safe phased state is captured by the distinguished cycle if and only
+if $B(t)$ is captured for each positive $t$ outside the five guards below.
+\end{theorem}
+
+To see why a single family suffices, write the normalized height of an
+arbitrary target as $27v+r$, $1\le r\le27$. For each phase and each $r$ the
+entry certificate supplies $A,B>0$ and $k\le30$ such that the launch with
+parameter $Av+B$ reaches that exact target after $k$ updates for every
+$v\ge0$. The checker substitutes the affine ray into each signed update,
+checking its parity, phase, safety and endpoint. These $7\cdot27$ identities
+cover every positive normalized height. An ancestor can be larger than
+its target. Its relevance is that once its trajectory enters the cycle,
+the target on that trajectory also reaches the cycle. The Lean proof uses
+a smaller table: first advance to phase one in at most six updates, then
+use one of the 27 phase-one inverse rays to that aligned state.
+
+Define $J(t)$ by the following disjunction. All variables in these
+conditions are nonnegative integers. Put
+\[
+\begin{split}
+ E={}&\{(1,1),(2,3),(4,1),(5,3),(6,1),(8,3),(9,1),(11,3),(12,1),(13,3)\},\\
+ R={}&\{9,11,12,13,25,27,28,31,36,45,47,51,52,55,\\
+     &\hspace{1em}61,66,69,71,82,83,85,99,104,107,108,120,123,127\}.
+\end{split}
+\]
+\begin{enumerate}
+\item $3\mid t$, $t=2^kq$, and $(k\bmod14,q\bmod4)\in E$.
+\item $3\mid t$, $t=2^{14h+6}q$, and $59049^hq\equiv15\pmod{32}$.
+\item $t=2^{24}v+1$.
+\item $t\bmod128\in R$.
+\item For some $h,r>0$ and $q\ge0$,
+\[
+ 601t+151=128^h q,\qquad 729^h q=601(1+131072\,128^h r)+151.
+\]
+\end{enumerate}
+
+\begin{proof}
+Assume capture outside $J$. Induct strongly on $t$. The first two guards
+give a merger with $B(t/3)$, using respectively $k+3$ and $14h+12$
+ticks on both clocks. Exact divisibility is essential here. The third
+gives capture at $t=1$ in 18 ticks and otherwise a merger with
+$B(1179648v+1)$ at clocks 25 and 18. The fourth gives a direct seven-tick
+return to a smaller positive parameter. The fifth gives a merger with
+$B(1+131072\,9^h r)$ at clocks $14h+18$ and 18. The strict comparison
+with the initial $t$ follows from the two counter equations and is proved
+in the repayment arithmetic module. These are precisely the progress
+lemmas used by \texttt{global\_capture\_iff\_final\_obligation} in the
+frontier Lean project. Determinism transfers capture across each merger.
+The ancestor cover now gives capture for the full safe domain.
+Conversely, every B1 launch outside $J$ is a safe state.
+\end{proof}
+
+The entire ray $t=128v+19$ lies outside $J$. This gives a concrete test
+of the theorem's remaining hypothesis. It is a statement about this
+five-guard predicate. For example, $t=2^{28}v+19$ on that very ray has
+a smaller partner under the two-clock rule below. The older three-family
+result classifies minimum counterexamples using $W$. Its reductions may
+change phase and use a different family as the smaller launch. Induction
+on $t$ within B1 requires a positive smaller B1 parameter.
+
+\subsection{A legal exit, repayment, and a partial selector}
+\label{sec:legal-exits}
+
+The 88-row cover uses five phases. Its rank, in phase order
+$(1,2,3,5,6)$, is
+\[ Q=(4m,8m,6m,6m,12m+3). \]
+Its five growing labels are
+N00, N01, N02, S00, and N03. Its stopping rule uses phases $1,2,5$ for
+launches in those phases and the full five-phase set for the other
+launches. The separate first-return calculation using all five marks
+throughout has 32 rows. The physical checker replays both partitions.
+The 43-row three-family classifier uses another section and the rank $W$.
+
+As a concrete $W$ reduction in A3, take $t=16u+4$ and suppose
+\[
+ 115u+36=2^{7h+5}q,\qquad 3^h q\equiv7\pmod 8 .
+\]
+The original section state $(4t+3,3)$ and the alternate $(3t+2,5)$
+meet after $7h+14$ and $7h+12$ ticks. Their initial rank difference is
+$4(4t+3)-5(3t+2)=t+2$. The proof factors the paired trajectories
+through a component of seven modes with one positive affine counter.
+The congruence selects its terminal merger. At $h=0$, $u=84$ gives a
+meeting, while $u=20$ has the required valuation but misses the terminal
+residue. A bound on time spent inside this component leaves reentry and
+the other exits to be accounted for.
+
+A different construction composes B1 returns. If a positive parameter
+admits $k\ge1$ legal growing macros followed by $\lceil k/4\rceil$
+legal contracting macros of the certified G/H pair, the resulting
+parameter is positive and strictly smaller. Each macro spans seven
+physical ticks. The theorem \texttt{certified\_ceil\_repayment} checks
+the resulting clock, safety and comparison against the original rank.
+The public selector combines a wider set of arithmetic rules and
+returns a capture certificate, a smaller-parameter certificate, or an
+unhandled outcome. A separate recurrent pair grammar permits arbitrarily
+many successful packets with an outer decreasing parameter. Its renewal
+calculation assigns density about $19.254724\%$ to successful neighbor
+mergers on $t=128v+19$ within that grammar. This percentage describes
+its acceptance language on that progression. Universal availability of
+successful certificates remains open.
+
+\subsection{Coalescence for almost every neighbor and its obstruction}
+\label{sec:pair-coalescence}
+
+Garner and Gao studied heights and consecutive starts for the ordinary
+map \cite{garner-heights,gao-heights}. The paired-recurrence supplement
+also credits Duran and Leen for ordinary-map synchronization work and
+Lyapunov Weaver for the stopped-prefix argument adapted to phased B1.
+For a fixed arithmetic progression of $t\ge2$, the set of $t$ for which
+$B(t)$ and $B(t-1)$ meet at the same clock has relative natural density
+one. The written argument tracks a pair at common phase as
+$(x,3^e x+b)$, ordering the two slopes. Each next parity of the free
+coordinate selects one of two dyadic subrays with equal conditional
+weight. On the resulting countable chain of pair types, an offset estimate
+and an excursion estimate for the exponent give almost-sure return to a
+finite set. Each member has a finite merging word with positive
+conditional probability. Repeated visits therefore yield absorption
+with probability one. Finite successful words give entire integer rays.
+Finite unions of these rays have their cylinder densities, which increase
+arbitrarily close to one. The proof of the drift, finite-set hitting and
+the passage to arithmetic progressions is supplied in the paired
+recurrence supplement. The proof uses a distribution on rays, without a
+randomness hypothesis about an individual orbit.
+
+A separate equal-grow-count selector leaves $O(X^{29/30})$ possible
+minimum representatives through $X$. This bound counts parameters for
+which that selector fails to find a smaller partner by its specified
+clock. Even within the known basin, infinitely many parameters have
+no smaller equal-count, equal-clock partner at any clock. For a
+captured parameter the excess-grow index
+$I(t)=\lim_{m\to\infty}(g_{7m}(B(t))-2m)$ stabilizes because the cycle
+has two growing steps per lap. Explicit embeddings send $I$ to
+$I-12j$ for arbitrary $j\ge0$. Taking the least captured parameter in
+each of these distinct classes gives the obstruction, since an
+equal-count synchronous merger preserves $I$.
+
+Allowing unequal clocks yields, for every $v\ge0$, the following two
+identities. Endpoints below are in normalized coordinates $(z,p)$.
+\[
+\begin{array}{c|c|c|c}
+t&\text{smaller }u&\text{clocks from }B(t),B(u)&\text{endpoint}\\\hline
+2^{39}v+17&16\cdot3^{20}v+2&(39,4)&(564859072962v+21,5)\\
+2^{28}v+19&204073344v+16&(28,7)&(2324522934v+183,1)
+\end{array}
+\]
+Direct signed replay on each entire affine ray checks both clocks and
+all intermediate parities. The search is exhaustive within its two clock
+budgets and its requirement that the partner stride be at most the source
+stride. These examples illustrate how a sparse set of unresolved
+representatives can require a different proof for its individual members.
+
+\subsection{Ancestors in intervals and the boundary of the basin}
+\label{sec:inverse-intervals}
+
+\begin{theorem}\label{thm:inverse-interval}
+For each fixed $\delta>0$ there is an effective $M_\delta$ such that every
+phased target of normalized height $z>0$ has an ancestor $B(t)$ with
+$X<t<(1+\delta)X$ whenever $X\ge M_\delta z$.
+\end{theorem}
+\begin{proof}
+Align the target to phase one by at most six inverse shrinking steps.
+Writing $a=91/127$, a seven-shrink lap multiplies $z-a$ by 128. For
+each residue modulo three an available one-grow inverse lap multiplies
+$z-a$ by $L=128/3$ with additive error of absolute value below 30.
+A 28-tick connector with three grows then reaches a B1 state. Its 81
+ternary residue cases are checked as whole physical rays. With $C$
+equal to the aligned positive height minus $a$ and $K=2^{27}/81$,
+$j$ shrinking laps and $g$ one-grow laps give
+\[
+ t=K L^g(128^j C+e),\qquad |e|<1.
+\]
+Indeed the normalized lap error is at most $30/(L-1)=18/25$ and the
+connector contributes at most $1/10$. As $\log_{128}3$ is irrational,
+finitely many $3^{-g}$ modulo powers of 128 form a multiplicative
+net of any fixed fineness. For $0<\delta\le1$, choose maximum successive
+ratio at most $1+\delta/4$, then place the leading term between
+$(1+\delta/4)X$ and $(1+\delta/4)^2X$. Since $C\ge36/127$, choosing
+$X/z$ sufficiently large ensures $j\ge0$ and relative error below
+$\delta/16$. The resulting parameter is strictly inside the required
+interval. For larger widths use $\delta=1$. The interval supplement
+gives the explicit threshold and the finite connector.
+\end{proof}
+
+\begin{corollary}\label{cor:cone}
+Global capture is equivalent to the existence of a fixed $\delta>0$
+and an unbounded sequence of intervals $[X,(1+\delta)X]$ on each of
+which all B1 parameters have the same capture label.
+\end{corollary}
+\begin{proof}
+Global capture makes every label one. Otherwise apply
+Theorem~\ref{thm:inverse-interval} to a captured target and an uncaptured
+target. Each sufficiently large interval of that width contains B1
+ancestors of both. They inherit different labels from their targets.
+\end{proof}
+
+The interval construction can be combined with a positive inverse-tree
+potential at exponent $17/20$. A prefix-free cut in the inverse tree of
+a nonperiodic target gives disjoint branches. Applying the interval
+constructor below each cut leaf gives at least
+$c_\delta(X/z)^{17/20}$ distinct parameters for sufficiently large $X/z$.
+For a periodic target, first pass to an off-cycle ancestor of bounded
+height. This count requires the precision-14 potential inequalities;
+the single-ancestor theorem and the corollary do not. Both labels
+would inherit these abundance estimates if an exceptional basin exists.
+Proving that the known label occurs throughout intervals of a fixed
+relative width along an unbounded sequence remains an open problem.
+
+
+\subsection{An alternative criterion at phase two}
+\label{sec:affine-root}
+Let $P(n)$ mean capture of normalized height $n>0$ at phase two. There is
+a second conditional equivalence: global capture holds exactly when
+$P(n)\Leftrightarrow P(27n-22)$ for every $n\ge1$. The right-hand
+argument is larger even at $n=1$. Equality here concerns capture labels;
+it permits distinct trajectories with the same final label.
+
+Seven ticks take the phase-two pair $(128v+17,128v+19)$ to
+$(27v+5,v+1)$ at phase two. Substituting $n=v+1$ identifies the assumed
+label equality with the missing adjacent-odd link. Under this hypothesis
+the odd-pair certificate connects whole congruence
+classes of odd neighbors at phase two. Cutting the ordered odds at the
+remaining edges produces an initial singleton and 33 periodic block
+types. Split by parameter parity. Of the 66 types, 37 admit a direct
+descent, 19 split into 2,432 affine rays in total, and ten use chains
+of previously certified equalities. Each successful block comparison
+ends below the original block minimum or at a checked finite base.
+Induction gives capture on the odd blocks. The signed path identities
+and the reduction of the remaining phased states are detailed in the
+affine-root supplement. Conversely, global capture makes both labels
+true for every $n$. The proof uses written induction and exact affine
+checks. Establishing the displayed label equality for all $n$ remains
+a distinct open problem.
+
+
+\subsection{Which subsets and which phase comparisons suffice?}
+\label{sec:phase-balance}
+
+The ancestor theorem also admits a restriction on the launch parameter.
+Let $S$ be a set of positive integers recognized by a finite automaton in
+a fixed integer base, with positive upper natural density. Every target
+has a B1 ancestor with parameter in $S$. The regular-domain supplement
+constructs synchronized blocks and places them by inverse steering in
+digit intervals where the automaton guarantees an accepting member.
+As an explicit example, take $S$ to be the integers whose binary digit
+sum is even. The arithmetic checker covers all 137,781 phase and residue
+cases; one of the selected launches reaches the target in at most 30
+updates. Consequently, proving capture on this one digit language would
+suffice. Entry is certified; capture on the language remains open.
+
+There is also a criterion that compares the same normalized height
+across phases. Write $P_i(z)\in\{0,1\}$ for the actual capture
+indicator of $(z,i)$. For each fixed pair $i\ne j$, global capture is
+equivalent to $P_i(z)=P_j(z)$ at every positive height. Under the
+assumed equality, a proof may substitute one of those labels for the
+other. The phase-quotient supplement then uses transport of equal
+labels and, where necessary, a complete dyadic partition, finite bases
+and induction on height. A substitution in this argument is a logical
+step; it adds no available update to the original fixed dynamics.
+
+For $i<j$ set $e_{ij}(x)=P_i(x+1)-P_j(x+1)$, $x\ge0$. Exact affine
+paths give identities of the form
+\[
+ e_{ij}(x)+\sum_{\ell}e_{ij}(a_\ell x+b_\ell)=0,
+ \qquad a_\ell\ge2,\quad 0\le b_\ell<a_\ell.
+\]
+Each identity telescopes signed differences after the two ends of
+each common affine ray are advanced through their forced updates.
+The checker verifies all 21 pairs, using 294 edges. A nonzero
+difference at $x\ge1$ therefore forces an opposite sign at some
+strictly larger argument. All phases at $x=0$ are captured. Repeating
+the argument shows that eventual absence of either sign for one full
+phase pair would suffice for global capture. The argument does not
+establish that either sign is scarce.
+
+For a more restricted comparison, define
+$A(t)=\mathbf{1}\{P_2(3t+3)>P_6(3t+3)\}$. If
+$P_1(18v+2)\ne P_1(18v+3)$ then one of 35 affine arguments gives
+a positive error of this restricted kind. The two directed paths have
+14 and 21 edges. Both directions matter since either adjacent label can
+be the positive one. For integer $X\ge1$ this gives
+$N_J(X)\le35N_A(8192X)$, where $N_J(X)$ counts those disagreements
+for $0\le v<X$ and $N_A(X)=\sum_{0\le t<X}A(t)$. This pointwise
+transfer supplies a counting inequality even while both supports are
+unknown.
+
+
+The extra implication from $J$ to global capture needs its own evidence.
+A 63-state ternary machine gives three checked transitions per state and
+literal capture paths for all 63 base heights. The correction terms on
+each transition are sums modulo two of adjacent errors $J$. If $A(t)=0$
+for all $t\ge0$, the two directed paths above force $J(v)=0$ for every
+$v\ge0$. All transition corrections then vanish. Induction on ternary
+digits gives capture at phase two, and every other phase advances to
+phase two in finitely many steps. Conversely, global capture makes
+$A$ identically zero. This yields the restricted one-sided criterion
+with its exact progression and sign; universal absence of that error
+remains open.

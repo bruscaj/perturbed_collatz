@@ -1,0 +1,1001 @@
+{
+  "scope": "partial forced-map research; all_seed_capture_proved=false",
+  "deterministic_blocks": [
+    {
+      "width": 2,
+      "modulus_bits": 8,
+      "residue": 115,
+      "clock": 9,
+      "phase": 3,
+      "endpoint_coefficient": 243,
+      "endpoint_intercept": 111
+    },
+    {
+      "width": 3,
+      "modulus_bits": 13,
+      "residue": 371,
+      "clock": 14,
+      "phase": 1,
+      "endpoint_coefficient": 2187,
+      "endpoint_intercept": 102
+    },
+    {
+      "width": 4,
+      "modulus_bits": 24,
+      "residue": 377203,
+      "clock": 25,
+      "phase": 5,
+      "endpoint_coefficient": 1594323,
+      "endpoint_intercept": 35847
+    },
+    {
+      "width": 8,
+      "modulus_bits": 48,
+      "residue": 99088737878387,
+      "clock": 49,
+      "phase": 1,
+      "endpoint_coefficient": 7625597484987,
+      "endpoint_intercept": 2684468932857
+    },
+    {
+      "width": 16,
+      "modulus_bits": 153,
+      "residue": 5879361797196077958859036744464992780769673587,
+      "clock": 154,
+      "phase": 1,
+      "endpoint_coefficient": 443426488243037769948249630619149892803,
+      "endpoint_intercept": 228329739834622113788535153122136202020
+    },
+    {
+      "width": 32,
+      "modulus_bits": 188,
+      "residue": 269016026473613363574571986062294299753932048331440505203,
+      "clock": 189,
+      "phase": 1,
+      "endpoint_coefficient": 171792506910670443678820376588540424234035840667,
+      "endpoint_intercept": 117799429189471063330735245883114821961250867340
+    },
+    {
+      "width": 64,
+      "modulus_bits": 248,
+      "residue": 152815031517999514319778687702114039549674219952662674859024821278522851699,
+      "clock": 249,
+      "phase": 5,
+      "endpoint_coefficient": 318334983598941745631063567258138003973311712991447709945617947,
+      "endpoint_intercept": 107550273454146236754451771395653641920436703873004319426863888
+    }
+  ],
+  "fixed_block_inverse_cover": {
+    "block": {
+      "width": 2,
+      "modulus_bits": 8,
+      "residue": 252,
+      "clock": 9,
+      "phase": 3,
+      "endpoint_coefficient": 81,
+      "endpoint_intercept": 81
+    },
+    "modulus": 6561,
+    "selected_rows": 2649,
+    "max_inverse_clock": 35,
+    "all_phase_entry_clock": 50
+  },
+  "tm_cover": {
+    "target_modulus": 19683,
+    "phase_residue_classes": 137781,
+    "distinct_selected_pair_rows": 55008,
+    "unequal_clock_rows": 4407,
+    "maximum_entry_clock": 30,
+    "max_t_over_target_height": "4194304/81"
+  },
+  "tm_coverage_history": [
+    {
+      "clock": 1,
+      "coverage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "live_types": 1
+    },
+    {
+      "clock": 2,
+      "coverage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "live_types": 2
+    },
+    {
+      "clock": 3,
+      "coverage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "live_types": 4
+    },
+    {
+      "clock": 4,
+      "coverage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "live_types": 8
+    },
+    {
+      "clock": 5,
+      "coverage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "live_types": 16
+    },
+    {
+      "clock": 6,
+      "coverage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "live_types": 32
+    },
+    {
+      "clock": 7,
+      "coverage": [
+        0,
+        243,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "live_types": 64
+    },
+    {
+      "clock": 8,
+      "coverage": [
+        0,
+        243,
+        1053,
+        0,
+        0,
+        0,
+        0
+      ],
+      "live_types": 128
+    },
+    {
+      "clock": 9,
+      "coverage": [
+        0,
+        243,
+        1053,
+        1647,
+        0,
+        0,
+        0
+      ],
+      "live_types": 253
+    },
+    {
+      "clock": 10,
+      "coverage": [
+        0,
+        243,
+        1053,
+        1647,
+        2196,
+        0,
+        0
+      ],
+      "live_types": 496
+    },
+    {
+      "clock": 11,
+      "coverage": [
+        0,
+        243,
+        1053,
+        1647,
+        2196,
+        3636,
+        0
+      ],
+      "live_types": 938
+    },
+    {
+      "clock": 12,
+      "coverage": [
+        0,
+        243,
+        1053,
+        1647,
+        2196,
+        3636,
+        6117
+      ],
+      "live_types": 1729
+    },
+    {
+      "clock": 13,
+      "coverage": [
+        8219,
+        243,
+        1053,
+        1647,
+        2196,
+        3636,
+        6117
+      ],
+      "live_types": 3109
+    },
+    {
+      "clock": 14,
+      "coverage": [
+        8219,
+        10376,
+        1053,
+        1647,
+        2196,
+        3636,
+        6117
+      ],
+      "live_types": 5190
+    },
+    {
+      "clock": 15,
+      "coverage": [
+        8219,
+        10376,
+        12726,
+        1647,
+        2196,
+        3636,
+        6117
+      ],
+      "live_types": 8499
+    },
+    {
+      "clock": 16,
+      "coverage": [
+        8219,
+        10376,
+        12726,
+        14201,
+        2196,
+        3636,
+        6117
+      ],
+      "live_types": 12830
+    },
+    {
+      "clock": 17,
+      "coverage": [
+        8219,
+        10376,
+        12726,
+        14201,
+        18006,
+        3636,
+        6117
+      ],
+      "live_types": 19559
+    },
+    {
+      "clock": 18,
+      "coverage": [
+        8219,
+        10376,
+        12726,
+        14201,
+        18006,
+        18751,
+        6117
+      ],
+      "live_types": 25559
+    },
+    {
+      "clock": 19,
+      "coverage": [
+        8219,
+        10376,
+        12726,
+        14201,
+        18006,
+        18751,
+        18768
+      ],
+      "live_types": 32292
+    },
+    {
+      "clock": 20,
+      "coverage": [
+        19648,
+        10376,
+        12726,
+        14201,
+        18006,
+        18751,
+        18768
+      ],
+      "live_types": 42447
+    },
+    {
+      "clock": 21,
+      "coverage": [
+        19648,
+        19661,
+        12726,
+        14201,
+        18006,
+        18751,
+        18768
+      ],
+      "live_types": 46943
+    },
+    {
+      "clock": 22,
+      "coverage": [
+        19648,
+        19661,
+        19661,
+        14201,
+        18006,
+        18751,
+        18768
+      ],
+      "live_types": 51279
+    },
+    {
+      "clock": 23,
+      "coverage": [
+        19648,
+        19661,
+        19661,
+        19661,
+        18006,
+        18751,
+        18768
+      ],
+      "live_types": 51999
+    },
+    {
+      "clock": 24,
+      "coverage": [
+        19648,
+        19661,
+        19661,
+        19661,
+        19683,
+        18751,
+        18768
+      ],
+      "live_types": 57823
+    },
+    {
+      "clock": 25,
+      "coverage": [
+        19648,
+        19661,
+        19661,
+        19661,
+        19683,
+        19683,
+        18768
+      ],
+      "live_types": 58232
+    },
+    {
+      "clock": 26,
+      "coverage": [
+        19648,
+        19661,
+        19661,
+        19661,
+        19683,
+        19683,
+        19683
+      ],
+      "live_types": 58248
+    },
+    {
+      "clock": 27,
+      "coverage": [
+        19683,
+        19661,
+        19661,
+        19661,
+        19683,
+        19683,
+        19683
+      ],
+      "live_types": 58971
+    },
+    {
+      "clock": 28,
+      "coverage": [
+        19683,
+        19683,
+        19661,
+        19661,
+        19683,
+        19683,
+        19683
+      ],
+      "live_types": 58976
+    },
+    {
+      "clock": 29,
+      "coverage": [
+        19683,
+        19683,
+        19683,
+        19661,
+        19683,
+        19683,
+        19683
+      ],
+      "live_types": 58978
+    },
+    {
+      "clock": 30,
+      "coverage": [
+        19683,
+        19683,
+        19683,
+        19683,
+        19683,
+        19683,
+        19683
+      ],
+      "live_types": 58981
+    }
+  ],
+  "centered_checks": {
+    "Q": [
+      2619,
+      2899,
+      3319,
+      -169,
+      2835,
+      3223,
+      -313
+    ],
+    "valuations": [
+      3,
+      0,
+      0,
+      0,
+      4,
+      0,
+      0
+    ],
+    "max_shifted_difference_valuations": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4
+    },
+    "sufficient_grows_between_shrinks": 5
+  },
+  "sparse_replays": [
+    {
+      "length": 14,
+      "shrinks": 1,
+      "phase": 3,
+      "distinct_endpoints": 9
+    },
+    {
+      "length": 28,
+      "shrinks": 2,
+      "phase": 3,
+      "distinct_endpoints": 153
+    },
+    {
+      "length": 42,
+      "shrinks": 3,
+      "phase": 3,
+      "distinct_endpoints": 2925
+    }
+  ],
+  "phase3_adapter": {
+    "one_grow_slot_by_mod9": [
+      0,
+      6,
+      1,
+      0,
+      5,
+      1,
+      2,
+      5,
+      4
+    ],
+    "lap_numerators": [
+      162,
+      130,
+      114,
+      138,
+      118,
+      116,
+      119
+    ],
+    "literal_checks": 60,
+    "examples": [
+      {
+        "modulus": 3,
+        "target": 1,
+        "requested_residue": 0,
+        "clock": 56,
+        "output_bits": 49
+      },
+      {
+        "modulus": 3,
+        "target": 1,
+        "requested_residue": 1,
+        "clock": 56,
+        "output_bits": 49
+      },
+      {
+        "modulus": 3,
+        "target": 1,
+        "requested_residue": 2,
+        "clock": 56,
+        "output_bits": 49
+      },
+      {
+        "modulus": 3,
+        "target": 2,
+        "requested_residue": 0,
+        "clock": 56,
+        "output_bits": 53
+      },
+      {
+        "modulus": 3,
+        "target": 2,
+        "requested_residue": 1,
+        "clock": 56,
+        "output_bits": 53
+      },
+      {
+        "modulus": 3,
+        "target": 2,
+        "requested_residue": 2,
+        "clock": 56,
+        "output_bits": 53
+      },
+      {
+        "modulus": 3,
+        "target": 3,
+        "requested_residue": 0,
+        "clock": 56,
+        "output_bits": 54
+      },
+      {
+        "modulus": 3,
+        "target": 3,
+        "requested_residue": 1,
+        "clock": 56,
+        "output_bits": 54
+      },
+      {
+        "modulus": 3,
+        "target": 3,
+        "requested_residue": 2,
+        "clock": 56,
+        "output_bits": 54
+      },
+      {
+        "modulus": 3,
+        "target": 17,
+        "requested_residue": 0,
+        "clock": 56,
+        "output_bits": 57
+      },
+      {
+        "modulus": 3,
+        "target": 17,
+        "requested_residue": 1,
+        "clock": 56,
+        "output_bits": 57
+      },
+      {
+        "modulus": 3,
+        "target": 17,
+        "requested_residue": 2,
+        "clock": 56,
+        "output_bits": 57
+      },
+      {
+        "modulus": 3,
+        "target": 128,
+        "requested_residue": 0,
+        "clock": 56,
+        "output_bits": 60
+      },
+      {
+        "modulus": 3,
+        "target": 128,
+        "requested_residue": 1,
+        "clock": 56,
+        "output_bits": 60
+      },
+      {
+        "modulus": 3,
+        "target": 128,
+        "requested_residue": 2,
+        "clock": 56,
+        "output_bits": 60
+      },
+      {
+        "modulus": 9,
+        "target": 1,
+        "requested_residue": 0,
+        "clock": 140,
+        "output_bits": 133
+      },
+      {
+        "modulus": 9,
+        "target": 1,
+        "requested_residue": 1,
+        "clock": 140,
+        "output_bits": 133
+      },
+      {
+        "modulus": 9,
+        "target": 1,
+        "requested_residue": 8,
+        "clock": 140,
+        "output_bits": 133
+      },
+      {
+        "modulus": 9,
+        "target": 2,
+        "requested_residue": 0,
+        "clock": 140,
+        "output_bits": 137
+      },
+      {
+        "modulus": 9,
+        "target": 2,
+        "requested_residue": 1,
+        "clock": 140,
+        "output_bits": 137
+      },
+      {
+        "modulus": 9,
+        "target": 2,
+        "requested_residue": 8,
+        "clock": 140,
+        "output_bits": 137
+      },
+      {
+        "modulus": 9,
+        "target": 3,
+        "requested_residue": 0,
+        "clock": 140,
+        "output_bits": 138
+      },
+      {
+        "modulus": 9,
+        "target": 3,
+        "requested_residue": 1,
+        "clock": 140,
+        "output_bits": 138
+      },
+      {
+        "modulus": 9,
+        "target": 3,
+        "requested_residue": 8,
+        "clock": 140,
+        "output_bits": 138
+      },
+      {
+        "modulus": 9,
+        "target": 17,
+        "requested_residue": 0,
+        "clock": 140,
+        "output_bits": 141
+      },
+      {
+        "modulus": 9,
+        "target": 17,
+        "requested_residue": 1,
+        "clock": 140,
+        "output_bits": 141
+      },
+      {
+        "modulus": 9,
+        "target": 17,
+        "requested_residue": 8,
+        "clock": 140,
+        "output_bits": 141
+      },
+      {
+        "modulus": 9,
+        "target": 128,
+        "requested_residue": 0,
+        "clock": 140,
+        "output_bits": 144
+      },
+      {
+        "modulus": 9,
+        "target": 128,
+        "requested_residue": 1,
+        "clock": 140,
+        "output_bits": 144
+      },
+      {
+        "modulus": 9,
+        "target": 128,
+        "requested_residue": 8,
+        "clock": 140,
+        "output_bits": 144
+      },
+      {
+        "modulus": 27,
+        "target": 1,
+        "requested_residue": 0,
+        "clock": 392,
+        "output_bits": 385
+      },
+      {
+        "modulus": 27,
+        "target": 1,
+        "requested_residue": 1,
+        "clock": 392,
+        "output_bits": 385
+      },
+      {
+        "modulus": 27,
+        "target": 1,
+        "requested_residue": 26,
+        "clock": 392,
+        "output_bits": 385
+      },
+      {
+        "modulus": 27,
+        "target": 2,
+        "requested_residue": 0,
+        "clock": 392,
+        "output_bits": 389
+      },
+      {
+        "modulus": 27,
+        "target": 2,
+        "requested_residue": 1,
+        "clock": 392,
+        "output_bits": 389
+      },
+      {
+        "modulus": 27,
+        "target": 2,
+        "requested_residue": 26,
+        "clock": 392,
+        "output_bits": 389
+      },
+      {
+        "modulus": 27,
+        "target": 3,
+        "requested_residue": 0,
+        "clock": 392,
+        "output_bits": 390
+      },
+      {
+        "modulus": 27,
+        "target": 3,
+        "requested_residue": 1,
+        "clock": 392,
+        "output_bits": 390
+      },
+      {
+        "modulus": 27,
+        "target": 3,
+        "requested_residue": 26,
+        "clock": 392,
+        "output_bits": 390
+      },
+      {
+        "modulus": 27,
+        "target": 17,
+        "requested_residue": 0,
+        "clock": 392,
+        "output_bits": 393
+      },
+      {
+        "modulus": 27,
+        "target": 17,
+        "requested_residue": 1,
+        "clock": 392,
+        "output_bits": 393
+      },
+      {
+        "modulus": 27,
+        "target": 17,
+        "requested_residue": 26,
+        "clock": 392,
+        "output_bits": 393
+      },
+      {
+        "modulus": 27,
+        "target": 128,
+        "requested_residue": 0,
+        "clock": 392,
+        "output_bits": 396
+      },
+      {
+        "modulus": 27,
+        "target": 128,
+        "requested_residue": 1,
+        "clock": 392,
+        "output_bits": 396
+      },
+      {
+        "modulus": 27,
+        "target": 128,
+        "requested_residue": 26,
+        "clock": 392,
+        "output_bits": 396
+      },
+      {
+        "modulus": 81,
+        "target": 1,
+        "requested_residue": 0,
+        "clock": 1148,
+        "output_bits": 1141
+      },
+      {
+        "modulus": 81,
+        "target": 1,
+        "requested_residue": 1,
+        "clock": 1148,
+        "output_bits": 1141
+      },
+      {
+        "modulus": 81,
+        "target": 1,
+        "requested_residue": 80,
+        "clock": 1148,
+        "output_bits": 1141
+      },
+      {
+        "modulus": 81,
+        "target": 2,
+        "requested_residue": 0,
+        "clock": 1148,
+        "output_bits": 1145
+      },
+      {
+        "modulus": 81,
+        "target": 2,
+        "requested_residue": 1,
+        "clock": 1148,
+        "output_bits": 1145
+      },
+      {
+        "modulus": 81,
+        "target": 2,
+        "requested_residue": 80,
+        "clock": 1148,
+        "output_bits": 1145
+      },
+      {
+        "modulus": 81,
+        "target": 3,
+        "requested_residue": 0,
+        "clock": 1148,
+        "output_bits": 1146
+      },
+      {
+        "modulus": 81,
+        "target": 3,
+        "requested_residue": 1,
+        "clock": 1148,
+        "output_bits": 1146
+      },
+      {
+        "modulus": 81,
+        "target": 3,
+        "requested_residue": 80,
+        "clock": 1148,
+        "output_bits": 1146
+      },
+      {
+        "modulus": 81,
+        "target": 17,
+        "requested_residue": 0,
+        "clock": 1148,
+        "output_bits": 1149
+      },
+      {
+        "modulus": 81,
+        "target": 17,
+        "requested_residue": 1,
+        "clock": 1148,
+        "output_bits": 1149
+      },
+      {
+        "modulus": 81,
+        "target": 17,
+        "requested_residue": 80,
+        "clock": 1148,
+        "output_bits": 1149
+      },
+      {
+        "modulus": 81,
+        "target": 128,
+        "requested_residue": 0,
+        "clock": 1148,
+        "output_bits": 1152
+      },
+      {
+        "modulus": 81,
+        "target": 128,
+        "requested_residue": 1,
+        "clock": 1148,
+        "output_bits": 1152
+      },
+      {
+        "modulus": 81,
+        "target": 128,
+        "requested_residue": 80,
+        "clock": 1148,
+        "output_bits": 1152
+      }
+    ],
+    "compressed_modular_checks": [
+      {
+        "exponent": 10,
+        "split_index": 26220,
+        "clock": 826700,
+        "literal_replay": false
+      },
+      {
+        "exponent": 25,
+        "split_index": 449263654851,
+        "clock": 11862040532216,
+        "literal_replay": false
+      },
+      {
+        "exponent": 50,
+        "split_index": 165277454688382710572697,
+        "clock": 10050571827685936242783500,
+        "literal_replay": false
+      },
+      {
+        "exponent": 100,
+        "split_index": 264555737125370812620490440953156288513369472777,
+        "clock": 7215285290248158634510455816718697817829505308028,
+        "literal_replay": false
+      }
+    ]
+  }
+}

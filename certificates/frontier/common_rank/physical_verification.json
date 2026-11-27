@@ -1,0 +1,146 @@
+{
+  "status": "PASS",
+  "reports": [
+    {
+      "status": "PASS",
+      "certificate": "three_family",
+      "certificate_sha256": "4614bb8e360df40d4e06fc89ba8db912baa391ae7953e740da0ebc1bfd87107d",
+      "whole_affine_rows_replayed": 43,
+      "fixed_modulus_classes_replayed": 324,
+      "complete_phase_zero_entry_classes": 96,
+      "phase_zero_entry_bound": 5,
+      "all_phase_entry_bound": 11,
+      "first_return_caps": {
+        "1": 2,
+        "2": 7,
+        "3": 6,
+        "5": 7
+      },
+      "growing_domains": 3,
+      "finite_capture_paths": [
+        {
+          "m": 1,
+          "phase": 1,
+          "steps": 4
+        },
+        {
+          "m": 1,
+          "phase": 3,
+          "steps": 2
+        },
+        {
+          "m": 5,
+          "phase": 3,
+          "steps": 16
+        },
+        {
+          "m": 3,
+          "phase": 5,
+          "steps": 14
+        },
+        {
+          "m": 1,
+          "phase": 5,
+          "steps": 0
+        }
+      ],
+      "fixed_section_phase_affine_lower_bound": 3,
+      "no_sample_interpolation": true,
+      "signed_physical_dynamics": true,
+      "all_seed_capture_proved": false
+    },
+    {
+      "status": "PASS",
+      "certificate": "common_Q_first_return",
+      "certificate_sha256": "b97bcb46c4a2cf4e8a81c3f0d36eb447d2190082de564c094b4e5637542b63eb",
+      "whole_affine_rows_replayed": 32,
+      "fixed_modulus_classes_replayed": 212,
+      "complete_phase_zero_entry_classes": 96,
+      "phase_zero_entry_bound": 5,
+      "all_phase_entry_bound": 11,
+      "first_return_caps": {
+        "1": 2,
+        "2": 6,
+        "3": 3,
+        "5": 7,
+        "6": 3
+      },
+      "growing_domains": 5,
+      "finite_capture_paths": [
+        {
+          "m": 3,
+          "phase": 2,
+          "steps": 17
+        },
+        {
+          "m": 1,
+          "phase": 3,
+          "steps": 2
+        },
+        {
+          "m": 2,
+          "phase": 3,
+          "steps": 9
+        },
+        {
+          "m": 1,
+          "phase": 5,
+          "steps": 0
+        }
+      ],
+      "fixed_section_phase_affine_lower_bound": null,
+      "no_sample_interpolation": true,
+      "signed_physical_dynamics": true,
+      "all_seed_capture_proved": false
+    },
+    {
+      "status": "PASS",
+      "certificate": "common_Q_cover",
+      "certificate_sha256": "d9989da142526f0fda7e79e4bb345f89daa4e2d06a023d397195f5b59da5ec7e",
+      "whole_affine_rows_replayed": 88,
+      "fixed_modulus_classes_replayed": 2448,
+      "complete_phase_zero_entry_classes": 96,
+      "phase_zero_entry_bound": 5,
+      "all_phase_entry_bound": 11,
+      "first_return_caps": {
+        "1": 8,
+        "2": 7,
+        "3": 3,
+        "5": 11,
+        "6": 3
+      },
+      "growing_domains": 5,
+      "finite_capture_paths": [
+        {
+          "m": 1,
+          "phase": 1,
+          "steps": 4
+        },
+        {
+          "m": 3,
+          "phase": 2,
+          "steps": 17
+        },
+        {
+          "m": 1,
+          "phase": 3,
+          "steps": 2
+        },
+        {
+          "m": 2,
+          "phase": 3,
+          "steps": 9
+        },
+        {
+          "m": 1,
+          "phase": 5,
+          "steps": 0
+        }
+      ],
+      "fixed_section_phase_affine_lower_bound": null,
+      "no_sample_interpolation": true,
+      "signed_physical_dynamics": true,
+      "all_seed_capture_proved": false
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "schema": 1,
+  "word": "UUUTUUT",
+  "physical_impulses": [
+    0,
+    0,
+    1,
+    -1,
+    0,
+    1,
+    -1
+  ],
+  "safe_shifts": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1
+  ],
+  "source_parent": "eac53ea4746ca4f02571bf9d6da1b4c6ce42ca25",
+  "rank_weights": {
+    "1": 4,
+    "2": 7,
+    "3": 4,
+    "5": 5
+  },
+  "growing_B1_lap": {
+    "parameter_t": [
+      128,
+      17
+    ],
+    "source_z": [
+      768,
+      102
+    ],
+    "phase": 1,
+    "steps": 7,
+    "target_t": [
+      729,
+      98
+    ],
+    "target_z": [
+      4374,
+      588
+    ],
+    "target_phase": 1,
+    "counter_coefficient": 601,
+    "counter_offset": 151,
+    "counter_multiplier": [
+      729,
+      128
+    ],
+    "section_visits": [
+      [
+        0,
+        1,
+        256,
+        34
+      ],
+      [
+        1,
+        2,
+        384,
+        51
+      ],
+      [
+        4,
+        5,
+        432,
+        58
+      ],
+      [
+        7,
+        1,
+        1458,
+        196
+      ]
+    ],
+    "original_W_gains": [
+      [
+        1664,
+        221
+      ],
+      [
+        1136,
+        154
+      ],
+      [
+        4808,
+        648
+      ]
+    ]
+  },
+  "inherited_shadow_merger": {
+    "source_t": [
+      16777216,
+      1
+    ],
+    "source_z": [
+      100663296,
+      6
+    ],
+    "alternate_t": [
+      1179648,
+      1
+    ],
+    "alternate_z": [
+      7077888,
+      6
+    ],
+    "source_phase": 1,
+    "alternate_phase": 1,
+    "source_steps": 25,
+    "alternate_steps": 18,
+    "common_z": [
+      177147,
+      3
+    ],
+    "common_phase": 5,
+    "parameter_map": "S(a)=(9*a+119)/128",
+    "strict_rank_gap_for_v_positive": [
+      124780544,
+      0
+    ]
+  },
+  "eighteen_step_bridge": {
+    "source_t": [
+      131072,
+      1
+    ],
+    "source_z": [
+      786432,
+      6
+    ],
+    "source_phase": 1,
+    "steps": 18,
+    "target_z": [
+      19683,
+      3
+    ],
+    "target_phase": 5
+  },
+  "contracting_phase_five_lap": {
+    "source_z": [
+      128,
+      3
+    ],
+    "source_phase": 5,
+    "steps": 7,
+    "target_z": [
+      9,
+      3
+    ],
+    "target_phase": 5,
+    "counter": "z-3",
+    "counter_multiplier": [
+      9,
+      128
+    ]
+  },
+  "all_parameter_construction": {
+    "h_minimum": 1,
+    "v_minimum": 0,
+    "M": "729^h",
+    "r0": "least positive residue of -752*(601*2^(7*h+17))^(-1) modulo M",
+    "r": "r0+M*v",
+    "T": "1+2^(7*h+17)*r",
+    "q": "(601*T+151)/M",
+    "t": "(128^h*q-151)/601",
+    "U": "1+2^17*9^h*r",
+    "source_t_mod128": 17,
+    "source_counter_valuation": "7*h+4",
+    "source_free_parameter_stride": "2^(14*h+17)",
+    "alternate_free_parameter_stride": "2^17*6561^h"
+  },
+  "unbounded_shadow_history": {
+    "source_t": "1+2^(7*h+17)*r",
+    "alternate_t": "1+9^h*2^17*r",
+    "source_clock": "18+7*h",
+    "alternate_clock": 18,
+    "intermediate_shadow_parameter": "v_j=9^j*2^(7*(h-j-1))*r, 0<=j<h",
+    "scope": "An exact composition of unequal-clock common-future identities, with each original shadow guard preserved."
+  },
+  "unbounded_repayment": {
+    "source_section": "(2*t,1)",
+    "alternate_section": "(2*U,1)",
+    "source_clock": "14*h+18",
+    "alternate_clock": 18,
+    "common_z": "3^(2*h+9)*r+3",
+    "common_phase": 5,
+    "direct_target_section_m": "3^(2*h+8)*r+1",
+    "strict_parameter_drop": "U<t",
+    "original_W_merger_gap": "8*(t-U)",
+    "strict_direct_target_rank": "5*(3^(2*h+8)*r+1)<8*U<8*t",
+    "scope": "A proper unbounded subfamily of B1 parameters t=17 mod128; no whole arithmetic progression capture."
+  },
+  "strict_drop_identity": "601*729^h*(t-U)=601*2^17*r*(16384^h-6561^h)-752*(729^h-128^h)",
+  "density_scope": "No new captured-seed density or net coverage percentage is claimed.",
+  "global_capture_proved": false,
+  "whole_B1_capture_proved": false
+}

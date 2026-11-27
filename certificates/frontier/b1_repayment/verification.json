@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "source_parent": "eac53ea4746ca4f02571bf9d6da1b4c6ce42ca25",
+  "certificate_sha256": "dbde1beedd5bf08dd531be990a3d43446139c030dd62204af72c8068c5b520a1",
+  "physical_primitive_review": {
+    "whole_affine_physical_primitives": 5,
+    "growing_lap_multiplier": "729/128",
+    "growing_counter": "601*t+151",
+    "contracting_lap_multiplier": "9/128",
+    "original_W_growing_gains": [
+      [
+        1664,
+        221
+      ],
+      [
+        1136,
+        154
+      ],
+      [
+        4808,
+        648
+      ]
+    ],
+    "unequal_clock_shadow_identity": [
+      25,
+      18
+    ],
+    "unbounded_total_clocks": [
+      "14*h+18",
+      18
+    ],
+    "direct_forward_endpoint": "(3^(2*h+9)*r+3,phase5)"
+  },
+  "all_parameter_constructor_review": {
+    "constructor_examples": [
+      {
+        "h": "1",
+        "r0": "520",
+        "T": "8724152321",
+        "q": "7192339568",
+        "t": "1531812753",
+        "U": "613416961",
+        "source_clock": 32,
+        "alternate_clock": 18,
+        "whole_affine_free_parameter_checked": true
+      },
+      {
+        "h": "2",
+        "r0": "1052",
+        "T": "2259152797697",
+        "q": "2554847728",
+        "t": "69648294801",
+        "U": "11168907265",
+        "source_clock": 46,
+        "alternate_clock": 18,
+        "whole_affine_free_parameter_checked": true
+      },
+      {
+        "h": "3",
+        "r0": "135135490",
+        "T": "37145760645051842561",
+        "q": "57623700298608",
+        "t": "201074306703205265",
+        "U": "12912397151109121",
+        "source_clock": 60,
+        "alternate_clock": 18,
+        "whole_affine_free_parameter_checked": true
+      },
+      {
+        "h": "5",
+        "r0": "47281020794326",
+        "T": "212934787631023246396616605697",
+        "q": "621560560011952752",
+        "t": "35535205028083626475037585",
+        "U": "365939523175600091824129",
+        "source_clock": 88,
+        "alternate_clock": 18,
+        "whole_affine_free_parameter_checked": true
+      },
+      {
+        "h": "8",
+        "r0": "28165479071061524316659",
+        "T": "266015428678294825316843861415124832855523329",
+        "q": "2004292362410847448932080",
+        "t": "240306964033145389547239570656204989329",
+        "U": "158915824111232563425304330258219009",
+        "source_clock": 130,
+        "alternate_clock": 18,
+        "whole_affine_free_parameter_checked": true
+      }
+    ],
+    "constructor_example_scope": "These fixed-h whole-affine examples check the implementation; arbitrary h is justified by finite primitive induction and the CRT/power argument, not by this list.",
+    "invalid_constructor_inputs_rejected": [
+      "h zero",
+      "negative free parameter",
+      "boolean depth",
+      "h=1,r=521 fails required ternary divisibility"
+    ]
+  },
+  "rejected_corruption_types": [
+    "boolean schema",
+    "boolean phase",
+    "boolean affine coefficient",
+    "floating numeric field",
+    "wrong growing multiplier",
+    "wrong growing offset",
+    "wrong growing phase",
+    "wrong source convention",
+    "wrong shadow alternate",
+    "wrong shadow clock",
+    "wrong bridge endpoint",
+    "wrong contracting factor",
+    "missing positive depth",
+    "removed CRT guard",
+    "wrong composition clock",
+    "wrong total clock",
+    "nonstrict rank claim",
+    "wrong direct target phase",
+    "global capture overclaim"
+  ],
+  "rejected_corruption_count": 19,
+  "disjointness_scope": "Every constructed t is 17 mod 128, so it is outside the previously certified odd/even B1 guards explicitly identified in the accompanying formal frontier; this is not a comparison to every repository certificate.",
+  "infinite_proof_scope": "The finite exact physical identities, growing-counter induction, guarded shadow/contracting induction and CRT plus power inequalities prove the arbitrary-h statement. Lean evidence is separately reported.",
+  "global_capture_proved": false,
+  "whole_B1_capture_proved": false,
+  "whole_t_17_mod128_capture_proved": false
+}

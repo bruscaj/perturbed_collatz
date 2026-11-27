@@ -1,0 +1,278 @@
+{
+  "scope": "Search then exact whole-ray proof outside named precision10/forward22/inverse40/floor64 W screen; not comparison against every prior family.",
+  "baseline": {
+    "research/attack_sprint_2026_11_25_continuation/root_weighted_screen.py": "37d46f05a701976d830f76204d4085af1bfe5f7f39af32cb27e38ed8f9f666ab",
+    "research/attack_sprint_2026_11_25_continuation/root_weighted_screen_three_d22.jsonl": "6fdecdf099aacaae49ea4f00a56a424b63723d513b2d4263a03b9e782b4ed983",
+    "research/attack_sprint_2026_11_25/arithmetic_inverse_game.py": "34063e5153e0318b2df991e45572fa3c7bb6a3acd834071ed1876063a4f3ffbd",
+    "research/attack_sprint_2026_11_25/root_quotient_probe.py": "b27e817690941a1da857c2eaa61a1679eee2f42d2efa2b8714be9b5556956aa2",
+    "research/attack_sprint_2026_11_25/root_compact_frontier.py": "c798f60ba8c9b22782ea3ba2724285a26609a3ae13edb65c6bb907bd1cd87c18",
+    "research/attack_sprint_2026_11_25_continuation/root_three_family.py": "e6c7bda8198e0f0a159cacceb4dde3dbb11ba9ff90b243204cbb684b36a5dd22"
+  },
+  "counts": {
+    "composed_rays_considered": 14,
+    "missed": 10,
+    "covered": 4
+  },
+  "rays": [
+    {
+      "M": 268435456,
+      "r": 89557508,
+      "A": 129140163,
+      "B": 43084738,
+      "path": [
+        4,
+        4,
+        4,
+        11
+      ],
+      "parameter_subprogression": [
+        19683,
+        0
+      ],
+      "source_t": [
+        5283615080448,
+        89557508
+      ],
+      "target_t": [
+        2541865828329,
+        43084738
+      ],
+      "steps": 28,
+      "baseline_first_hit": null
+    },
+    {
+      "M": 268435456,
+      "r": 257329668,
+      "A": 43046721,
+      "B": 41265780,
+      "path": [
+        4,
+        4,
+        4,
+        123
+      ],
+      "parameter_subprogression": [
+        19683,
+        0
+      ],
+      "source_t": [
+        5283615080448,
+        257329668
+      ],
+      "target_t": [
+        847288609443,
+        41265780
+      ],
+      "steps": 28,
+      "baseline_first_hit": null
+    },
+    {
+      "M": 268435456,
+      "r": 248891908,
+      "A": 43046721,
+      "B": 39912688,
+      "path": [
+        4,
+        4,
+        9,
+        11
+      ],
+      "parameter_subprogression": [
+        19683,
+        0
+      ],
+      "source_t": [
+        5283615080448,
+        248891908
+      ],
+      "target_t": [
+        847288609443,
+        39912688
+      ],
+      "steps": 28,
+      "baseline_first_hit": null
+    },
+    {
+      "M": 268435456,
+      "r": 18205188,
+      "A": 129140163,
+      "B": 8758236,
+      "path": [
+        4,
+        4,
+        9,
+        13
+      ],
+      "parameter_subprogression": [
+        19683,
+        0
+      ],
+      "source_t": [
+        5283615080448,
+        18205188
+      ],
+      "target_t": [
+        2541865828329,
+        8758236
+      ],
+      "steps": 28,
+      "baseline_first_hit": null
+    },
+    {
+      "M": 268435456,
+      "r": 167102980,
+      "A": 129140163,
+      "B": 80390670,
+      "path": [
+        4,
+        4,
+        9,
+        28
+      ],
+      "parameter_subprogression": [
+        19683,
+        0
+      ],
+      "source_t": [
+        5283615080448,
+        167102980
+      ],
+      "target_t": [
+        2541865828329,
+        80390670
+      ],
+      "steps": 28,
+      "baseline_first_hit": null
+    },
+    {
+      "M": 268435456,
+      "r": 123062788,
+      "A": 129140163,
+      "B": 59203612,
+      "path": [
+        4,
+        4,
+        9,
+        47
+      ],
+      "parameter_subprogression": [
+        19683,
+        0
+      ],
+      "source_t": [
+        5283615080448,
+        123062788
+      ],
+      "target_t": [
+        2541865828329,
+        59203612
+      ],
+      "steps": 28,
+      "baseline_first_hit": null
+    },
+    {
+      "M": 268435456,
+      "r": 198560260,
+      "A": 129140163,
+      "B": 95524283,
+      "path": [
+        4,
+        4,
+        9,
+        51
+      ],
+      "parameter_subprogression": [
+        19683,
+        0
+      ],
+      "source_t": [
+        5283615080448,
+        198560260
+      ],
+      "target_t": [
+        2541865828329,
+        95524283
+      ],
+      "steps": 28,
+      "baseline_first_hit": null
+    },
+    {
+      "M": 268435456,
+      "r": 118868484,
+      "A": 129140163,
+      "B": 57185797,
+      "path": [
+        4,
+        4,
+        9,
+        61
+      ],
+      "parameter_subprogression": [
+        19683,
+        0
+      ],
+      "source_t": [
+        5283615080448,
+        118868484
+      ],
+      "target_t": [
+        2541865828329,
+        57185797
+      ],
+      "steps": 28,
+      "baseline_first_hit": null
+    },
+    {
+      "M": 268435456,
+      "r": 66439684,
+      "A": 129140163,
+      "B": 31963109,
+      "path": [
+        4,
+        4,
+        9,
+        108
+      ],
+      "parameter_subprogression": [
+        19683,
+        0
+      ],
+      "source_t": [
+        5283615080448,
+        66439684
+      ],
+      "target_t": [
+        2541865828329,
+        31963109
+      ],
+      "steps": 28,
+      "baseline_first_hit": null
+    },
+    {
+      "M": 268435456,
+      "r": 215337476,
+      "A": 14348907,
+      "B": 11510616,
+      "path": [
+        4,
+        4,
+        9,
+        123
+      ],
+      "parameter_subprogression": [
+        19683,
+        0
+      ],
+      "source_t": [
+        5283615080448,
+        215337476
+      ],
+      "target_t": [
+        282429536481,
+        11510616
+      ],
+      "steps": 28,
+      "baseline_first_hit": null
+    }
+  ]
+}

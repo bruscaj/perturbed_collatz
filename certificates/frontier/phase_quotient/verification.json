@@ -1,0 +1,2898 @@
+{
+  "base_checks": 41,
+  "binary_parent": {
+    "binary_argument_point_checks": 512,
+    "directed_bases": [
+      0,
+      9,
+      2
+    ],
+    "directed_order": [
+      3,
+      6,
+      2,
+      5,
+      1,
+      4,
+      0
+    ],
+    "max_sample_argument_ratio": "4605/512",
+    "phase0_lap_rows": [
+      [
+        9,
+        3,
+        2
+      ],
+      [
+        17,
+        3,
+        1
+      ],
+      [
+        25,
+        3,
+        1
+      ],
+      [
+        67,
+        3,
+        2
+      ],
+      [
+        73,
+        1,
+        1
+      ],
+      [
+        105,
+        3,
+        3
+      ],
+      [
+        109,
+        3,
+        3
+      ],
+      [
+        110,
+        3,
+        3
+      ]
+    ],
+    "truncated_label_checks": [
+      {
+        "height_cap": 4608,
+        "identities": 512,
+        "nonzero_parent_defects": 14
+      },
+      {
+        "height_cap": 10000,
+        "identities": 512,
+        "nonzero_parent_defects": 6
+      },
+      {
+        "height_cap": 100000,
+        "identities": 512,
+        "nonzero_parent_defects": 0
+      }
+    ]
+  },
+  "controls": {
+    "TTUUUUU": [
+      {
+        "depth": 8,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          1
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 13,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          2
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 9,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          3
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 10,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          4
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 3,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          5
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 2,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          6
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 8,
+        "full_phase_collapse": false,
+        "pair": [
+          1,
+          2
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 5,
+        "full_phase_collapse": false,
+        "pair": [
+          1,
+          3
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 15,
+        "full_phase_collapse": false,
+        "pair": [
+          1,
+          4
+        ],
+        "residual": 1
+      },
+      {
+        "depth": 15,
+        "full_phase_collapse": false,
+        "pair": [
+          1,
+          5
+        ],
+        "residual": 2
+      },
+      {
+        "depth": 5,
+        "full_phase_collapse": false,
+        "pair": [
+          1,
+          6
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 2,
+        "full_phase_collapse": false,
+        "pair": [
+          2,
+          3
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 5,
+        "full_phase_collapse": false,
+        "pair": [
+          2,
+          4
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 15,
+        "full_phase_collapse": false,
+        "pair": [
+          2,
+          5
+        ],
+        "residual": 2
+      },
+      {
+        "depth": 13,
+        "full_phase_collapse": false,
+        "pair": [
+          2,
+          6
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 2,
+        "full_phase_collapse": false,
+        "pair": [
+          3,
+          4
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 3,
+        "full_phase_collapse": false,
+        "pair": [
+          3,
+          5
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 14,
+        "full_phase_collapse": false,
+        "pair": [
+          3,
+          6
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 2,
+        "full_phase_collapse": false,
+        "pair": [
+          4,
+          5
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 5,
+        "full_phase_collapse": false,
+        "pair": [
+          4,
+          6
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 2,
+        "full_phase_collapse": false,
+        "pair": [
+          5,
+          6
+        ],
+        "residual": 0
+      }
+    ],
+    "TUTUTUU": [
+      {
+        "depth": 6,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          1
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 0,
+        "full_phase_collapse": true,
+        "pair": [
+          0,
+          2
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 8,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          3
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 7,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          4
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 7,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          5
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 5,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          6
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 7,
+        "full_phase_collapse": false,
+        "pair": [
+          1,
+          2
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 0,
+        "full_phase_collapse": true,
+        "pair": [
+          1,
+          3
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 8,
+        "full_phase_collapse": false,
+        "pair": [
+          1,
+          4
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 6,
+        "full_phase_collapse": false,
+        "pair": [
+          1,
+          5
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 0,
+        "full_phase_collapse": true,
+        "pair": [
+          1,
+          6
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 7,
+        "full_phase_collapse": false,
+        "pair": [
+          2,
+          3
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 0,
+        "full_phase_collapse": true,
+        "pair": [
+          2,
+          4
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 10,
+        "full_phase_collapse": false,
+        "pair": [
+          2,
+          5
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 3,
+        "full_phase_collapse": false,
+        "pair": [
+          2,
+          6
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 8,
+        "full_phase_collapse": false,
+        "pair": [
+          3,
+          4
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 0,
+        "full_phase_collapse": true,
+        "pair": [
+          3,
+          5
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 3,
+        "full_phase_collapse": false,
+        "pair": [
+          3,
+          6
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 7,
+        "full_phase_collapse": false,
+        "pair": [
+          4,
+          5
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 0,
+        "full_phase_collapse": true,
+        "pair": [
+          4,
+          6
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 5,
+        "full_phase_collapse": false,
+        "pair": [
+          5,
+          6
+        ],
+        "residual": 0
+      }
+    ],
+    "TUTUUUU": [
+      {
+        "depth": 7,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          1
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 3,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          2
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 7,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          3
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 8,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          4
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 5,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          5
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 4,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          6
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 15,
+        "full_phase_collapse": false,
+        "pair": [
+          1,
+          2
+        ],
+        "residual": 3
+      },
+      {
+        "depth": 5,
+        "full_phase_collapse": false,
+        "pair": [
+          1,
+          3
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 15,
+        "full_phase_collapse": false,
+        "pair": [
+          1,
+          4
+        ],
+        "residual": 3
+      },
+      {
+        "depth": 15,
+        "full_phase_collapse": false,
+        "pair": [
+          1,
+          5
+        ],
+        "residual": 2
+      },
+      {
+        "depth": 5,
+        "full_phase_collapse": false,
+        "pair": [
+          1,
+          6
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 8,
+        "full_phase_collapse": false,
+        "pair": [
+          2,
+          3
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 3,
+        "full_phase_collapse": false,
+        "pair": [
+          2,
+          4
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 15,
+        "full_phase_collapse": false,
+        "pair": [
+          2,
+          5
+        ],
+        "residual": 1
+      },
+      {
+        "depth": 15,
+        "full_phase_collapse": false,
+        "pair": [
+          2,
+          6
+        ],
+        "residual": 2
+      },
+      {
+        "depth": 4,
+        "full_phase_collapse": false,
+        "pair": [
+          3,
+          4
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 5,
+        "full_phase_collapse": false,
+        "pair": [
+          3,
+          5
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 8,
+        "full_phase_collapse": false,
+        "pair": [
+          3,
+          6
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 4,
+        "full_phase_collapse": false,
+        "pair": [
+          4,
+          5
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 8,
+        "full_phase_collapse": false,
+        "pair": [
+          4,
+          6
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 4,
+        "full_phase_collapse": false,
+        "pair": [
+          5,
+          6
+        ],
+        "residual": 0
+      }
+    ],
+    "UTT": [
+      {
+        "depth": 2,
+        "full_phase_collapse": false,
+        "pair": [
+          0,
+          1
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 0,
+        "full_phase_collapse": true,
+        "pair": [
+          0,
+          2
+        ],
+        "residual": 0
+      },
+      {
+        "depth": 0,
+        "full_phase_collapse": true,
+        "pair": [
+          1,
+          2
+        ],
+        "residual": 0
+      }
+    ]
+  },
+  "main": {
+    "0,1": {
+      "base_clocks": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          8,
+          12
+        ]
+      ],
+      "certificate": [
+        [
+          2,
+          1,
+          "U",
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          "UU",
+          3,
+          2,
+          1
+        ],
+        [
+          16,
+          4,
+          "UUUU",
+          9,
+          3,
+          0
+        ],
+        [
+          16,
+          12,
+          "TUUT",
+          9,
+          8,
+          0
+        ],
+        [
+          16,
+          16,
+          "TUUT",
+          9,
+          9,
+          0
+        ],
+        [
+          32,
+          24,
+          "UUUUU",
+          27,
+          21,
+          0
+        ],
+        [
+          32,
+          8,
+          "UTUUT",
+          27,
+          8,
+          1
+        ]
+      ],
+      "classes": 4,
+      "depth": 5,
+      "exceptions": [
+        1,
+        2,
+        8
+      ],
+      "full_phase_collapse": false,
+      "rays": 7,
+      "residual": 0
+    },
+    "0,2": {
+      "base_clocks": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          8,
+          12
+        ]
+      ],
+      "certificate": [
+        [
+          4,
+          1,
+          "UU",
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          "UU",
+          3,
+          2,
+          1
+        ],
+        [
+          4,
+          3,
+          "UU",
+          3,
+          3,
+          1
+        ],
+        [
+          16,
+          4,
+          "UUUU",
+          9,
+          3,
+          0
+        ],
+        [
+          32,
+          8,
+          "UTUUT",
+          27,
+          8,
+          1
+        ],
+        [
+          32,
+          12,
+          "UTUUT",
+          9,
+          5,
+          0
+        ],
+        [
+          32,
+          24,
+          "UTUUT",
+          9,
+          7,
+          0
+        ],
+        [
+          32,
+          28,
+          "UTUUT",
+          3,
+          3,
+          0
+        ],
+        [
+          32,
+          32,
+          "UTUUT",
+          27,
+          27,
+          0
+        ],
+        [
+          128,
+          48,
+          "UUUTUUT",
+          81,
+          32,
+          0
+        ],
+        [
+          128,
+          80,
+          "UUUTUUT",
+          81,
+          51,
+          0
+        ],
+        [
+          128,
+          112,
+          "UUUTUUT",
+          27,
+          24,
+          0
+        ],
+        [
+          128,
+          16,
+          "UTUUTUU",
+          81,
+          11,
+          0
+        ]
+      ],
+      "classes": 5,
+      "depth": 7,
+      "exceptions": [
+        1,
+        2,
+        3,
+        8
+      ],
+      "full_phase_collapse": false,
+      "rays": 13,
+      "residual": 0
+    },
+    "0,3": {
+      "base_clocks": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "certificate": [
+        [
+          8,
+          1,
+          "UUU",
+          1,
+          1,
+          1
+        ],
+        [
+          8,
+          3,
+          "UUU",
+          3,
+          2,
+          0
+        ],
+        [
+          8,
+          5,
+          "UUU",
+          3,
+          3,
+          0
+        ],
+        [
+          8,
+          6,
+          "UUU",
+          3,
+          3,
+          0
+        ],
+        [
+          16,
+          2,
+          "TUUT",
+          3,
+          2,
+          1
+        ],
+        [
+          16,
+          4,
+          "TUUT",
+          3,
+          1,
+          0
+        ],
+        [
+          16,
+          10,
+          "TUUT",
+          1,
+          1,
+          0
+        ],
+        [
+          16,
+          12,
+          "TUUT",
+          9,
+          8,
+          0
+        ],
+        [
+          16,
+          15,
+          "TUUT",
+          9,
+          9,
+          0
+        ],
+        [
+          16,
+          16,
+          "TUUT",
+          9,
+          9,
+          0
+        ],
+        [
+          64,
+          7,
+          "UUUUUU",
+          9,
+          2,
+          0
+        ],
+        [
+          64,
+          23,
+          "UUUUUU",
+          27,
+          11,
+          0
+        ],
+        [
+          64,
+          24,
+          "UUUUUU",
+          27,
+          11,
+          0
+        ],
+        [
+          64,
+          39,
+          "UUUUUU",
+          27,
+          18,
+          0
+        ],
+        [
+          128,
+          55,
+          "UUUTUUT",
+          81,
+          36,
+          0
+        ],
+        [
+          128,
+          72,
+          "UUUTUUT",
+          81,
+          46,
+          0
+        ],
+        [
+          128,
+          8,
+          "TUUTUUU",
+          81,
+          6,
+          0
+        ],
+        [
+          128,
+          119,
+          "TUUTUUU",
+          81,
+          77,
+          0
+        ],
+        [
+          128,
+          120,
+          "TUUTUUU",
+          81,
+          77,
+          0
+        ],
+        [
+          256,
+          40,
+          "TUUTTUUT",
+          81,
+          13,
+          0
+        ],
+        [
+          256,
+          56,
+          "TUUTTUUT",
+          243,
+          54,
+          0
+        ],
+        [
+          256,
+          104,
+          "TUUTTUUT",
+          243,
+          99,
+          0
+        ],
+        [
+          256,
+          168,
+          "TUUTTUUT",
+          243,
+          161,
+          0
+        ],
+        [
+          512,
+          440,
+          "UUUUUUUUU",
+          243,
+          210,
+          0
+        ],
+        [
+          1024,
+          184,
+          "UUUUUUTUUT",
+          81,
+          15,
+          0
+        ],
+        [
+          1024,
+          232,
+          "UUUUUUTUUT",
+          729,
+          167,
+          0
+        ],
+        [
+          1024,
+          488,
+          "UUUUUUTUUT",
+          729,
+          348,
+          0
+        ],
+        [
+          1024,
+          696,
+          "UUUUUUTUUT",
+          243,
+          167,
+          0
+        ],
+        [
+          1024,
+          744,
+          "UUUUUUTUUT",
+          243,
+          177,
+          0
+        ],
+        [
+          1024,
+          1000,
+          "UUUTUUTUUU",
+          729,
+          713,
+          0
+        ]
+      ],
+      "classes": 6,
+      "depth": 10,
+      "exceptions": [
+        1,
+        2
+      ],
+      "full_phase_collapse": false,
+      "rays": 30,
+      "residual": 0
+    },
+    "0,4": {
+      "classes": 1,
+      "full_phase_collapse": true
+    },
+    "0,5": {
+      "base_clocks": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "certificate": [
+        [
+          4,
+          1,
+          "UT",
+          3,
+          2,
+          2
+        ],
+        [
+          4,
+          3,
+          "UT",
+          1,
+          1,
+          0
+        ],
+        [
+          4,
+          4,
+          "UT",
+          3,
+          3,
+          0
+        ],
+        [
+          16,
+          10,
+          "UTUT",
+          9,
+          6,
+          0
+        ],
+        [
+          32,
+          2,
+          "UUUTU",
+          27,
+          3,
+          1
+        ],
+        [
+          32,
+          6,
+          "UUUTU",
+          9,
+          3,
+          0
+        ],
+        [
+          32,
+          14,
+          "UUUTU",
+          3,
+          2,
+          0
+        ],
+        [
+          32,
+          22,
+          "UUUTU",
+          27,
+          21,
+          0
+        ],
+        [
+          32,
+          30,
+          "UUUTU",
+          9,
+          9,
+          0
+        ],
+        [
+          128,
+          114,
+          "UUUTUUT",
+          81,
+          73,
+          0
+        ],
+        [
+          128,
+          18,
+          "UTUUUTU",
+          9,
+          2,
+          0
+        ],
+        [
+          128,
+          50,
+          "UTUUUTU",
+          27,
+          12,
+          0
+        ],
+        [
+          128,
+          82,
+          "UTUUUTU",
+          27,
+          18,
+          0
+        ]
+      ],
+      "classes": 5,
+      "depth": 7,
+      "exceptions": [
+        1,
+        2,
+        5
+      ],
+      "full_phase_collapse": false,
+      "rays": 13,
+      "residual": 0
+    },
+    "0,6": {
+      "base_clocks": [
+        [
+          1,
+          0
+        ]
+      ],
+      "certificate": [
+        [
+          2,
+          2,
+          "T",
+          1,
+          1,
+          0
+        ],
+        [
+          4,
+          1,
+          "TT",
+          3,
+          1,
+          1
+        ],
+        [
+          16,
+          3,
+          "TTTT",
+          9,
+          2,
+          0
+        ],
+        [
+          32,
+          11,
+          "TTTTT",
+          27,
+          10,
+          0
+        ],
+        [
+          32,
+          23,
+          "TTTTT",
+          27,
+          20,
+          0
+        ],
+        [
+          64,
+          15,
+          "UUUTUU",
+          9,
+          3,
+          0
+        ],
+        [
+          64,
+          27,
+          "UUUTUU",
+          9,
+          5,
+          0
+        ],
+        [
+          64,
+          31,
+          "UUUTUU",
+          27,
+          14,
+          0
+        ],
+        [
+          64,
+          47,
+          "UUUTUU",
+          27,
+          21,
+          0
+        ],
+        [
+          64,
+          59,
+          "UUUTUU",
+          27,
+          27,
+          0
+        ],
+        [
+          128,
+          71,
+          "UUUTUUT",
+          81,
+          46,
+          0
+        ],
+        [
+          128,
+          127,
+          "UUUTUUT",
+          81,
+          81,
+          0
+        ],
+        [
+          128,
+          39,
+          "TUUUTUU",
+          81,
+          27,
+          0
+        ],
+        [
+          128,
+          63,
+          "TUUUTUU",
+          81,
+          41,
+          0
+        ],
+        [
+          128,
+          103,
+          "TUUUTUU",
+          27,
+          23,
+          0
+        ],
+        [
+          128,
+          7,
+          "TTTTTTT",
+          81,
+          5,
+          0
+        ]
+      ],
+      "classes": 6,
+      "depth": 7,
+      "exceptions": [
+        1
+      ],
+      "full_phase_collapse": false,
+      "rays": 16,
+      "residual": 0
+    },
+    "1,2": {
+      "base_clocks": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          8,
+          11
+        ]
+      ],
+      "certificate": [
+        [
+          2,
+          1,
+          "U",
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          "UU",
+          3,
+          2,
+          1
+        ],
+        [
+          16,
+          4,
+          "UUUU",
+          9,
+          3,
+          0
+        ],
+        [
+          16,
+          12,
+          "TUUT",
+          9,
+          8,
+          0
+        ],
+        [
+          16,
+          16,
+          "TUUT",
+          9,
+          9,
+          0
+        ],
+        [
+          32,
+          24,
+          "UUUUU",
+          27,
+          21,
+          0
+        ],
+        [
+          32,
+          8,
+          "UTUUT",
+          27,
+          8,
+          1
+        ]
+      ],
+      "classes": 4,
+      "depth": 5,
+      "exceptions": [
+        1,
+        2,
+        8
+      ],
+      "full_phase_collapse": false,
+      "rays": 7,
+      "residual": 0
+    },
+    "1,3": {
+      "base_clocks": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          12,
+          11
+        ]
+      ],
+      "certificate": [
+        [
+          4,
+          1,
+          "UU",
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          "UU",
+          3,
+          2,
+          1
+        ],
+        [
+          4,
+          3,
+          "UU",
+          3,
+          3,
+          1
+        ],
+        [
+          16,
+          4,
+          "UUUU",
+          9,
+          3,
+          0
+        ],
+        [
+          32,
+          12,
+          "TUUTU",
+          27,
+          12,
+          1
+        ],
+        [
+          32,
+          16,
+          "TUUTU",
+          9,
+          5,
+          0
+        ],
+        [
+          32,
+          24,
+          "TUUTU",
+          27,
+          21,
+          0
+        ],
+        [
+          32,
+          28,
+          "TUUTU",
+          9,
+          9,
+          0
+        ],
+        [
+          32,
+          32,
+          "TUUTU",
+          27,
+          27,
+          0
+        ],
+        [
+          128,
+          8,
+          "UUTUUTU",
+          27,
+          3,
+          0
+        ],
+        [
+          128,
+          40,
+          "UUTUUTU",
+          27,
+          9,
+          0
+        ],
+        [
+          128,
+          72,
+          "UUTUUTU",
+          81,
+          48,
+          0
+        ],
+        [
+          128,
+          104,
+          "UUTUUTU",
+          9,
+          8,
+          0
+        ]
+      ],
+      "classes": 5,
+      "depth": 7,
+      "exceptions": [
+        1,
+        2,
+        3,
+        12
+      ],
+      "full_phase_collapse": false,
+      "rays": 13,
+      "residual": 0
+    },
+    "1,4": {
+      "classes": 1,
+      "full_phase_collapse": true
+    },
+    "1,5": {
+      "classes": 1,
+      "full_phase_collapse": true
+    },
+    "1,6": {
+      "base_clocks": [
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "certificate": [
+        [
+          4,
+          2,
+          "TU",
+          1,
+          1,
+          0
+        ],
+        [
+          4,
+          3,
+          "TU",
+          3,
+          3,
+          1
+        ],
+        [
+          4,
+          4,
+          "TU",
+          3,
+          3,
+          0
+        ],
+        [
+          16,
+          13,
+          "TUTU",
+          9,
+          8,
+          0
+        ],
+        [
+          32,
+          1,
+          "UUTUU",
+          9,
+          2,
+          1
+        ],
+        [
+          32,
+          5,
+          "UUTUU",
+          1,
+          1,
+          0
+        ],
+        [
+          32,
+          9,
+          "UUTUU",
+          3,
+          2,
+          0
+        ],
+        [
+          32,
+          17,
+          "UUTUU",
+          27,
+          18,
+          1
+        ],
+        [
+          32,
+          21,
+          "UUTUU",
+          3,
+          3,
+          0
+        ],
+        [
+          32,
+          25,
+          "UUTUU",
+          9,
+          9,
+          0
+        ]
+      ],
+      "classes": 5,
+      "depth": 5,
+      "exceptions": [
+        1,
+        3,
+        17
+      ],
+      "full_phase_collapse": false,
+      "rays": 10,
+      "residual": 0
+    },
+    "2,3": {
+      "base_clocks": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          8,
+          17
+        ]
+      ],
+      "certificate": [
+        [
+          2,
+          1,
+          "U",
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          "UU",
+          3,
+          2,
+          1
+        ],
+        [
+          16,
+          4,
+          "UUUU",
+          9,
+          3,
+          0
+        ],
+        [
+          16,
+          12,
+          "TUUT",
+          9,
+          8,
+          0
+        ],
+        [
+          16,
+          16,
+          "TUUT",
+          9,
+          9,
+          0
+        ],
+        [
+          32,
+          24,
+          "UUUUU",
+          27,
+          21,
+          0
+        ],
+        [
+          32,
+          8,
+          "UTUUT",
+          27,
+          8,
+          1
+        ]
+      ],
+      "classes": 4,
+      "depth": 5,
+      "exceptions": [
+        1,
+        2,
+        8
+      ],
+      "full_phase_collapse": false,
+      "rays": 7,
+      "residual": 0
+    },
+    "2,4": {
+      "base_clocks": [
+        [
+          1,
+          0
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "certificate": [
+        [
+          4,
+          1,
+          "UT",
+          3,
+          2,
+          2
+        ],
+        [
+          4,
+          3,
+          "UT",
+          1,
+          1,
+          0
+        ],
+        [
+          4,
+          4,
+          "UT",
+          3,
+          3,
+          0
+        ],
+        [
+          16,
+          10,
+          "UTUT",
+          9,
+          6,
+          0
+        ],
+        [
+          32,
+          2,
+          "UUTUU",
+          3,
+          1,
+          0
+        ],
+        [
+          32,
+          14,
+          "UUTUU",
+          9,
+          5,
+          0
+        ],
+        [
+          32,
+          18,
+          "UUTUU",
+          9,
+          6,
+          0
+        ],
+        [
+          32,
+          22,
+          "UUTUU",
+          27,
+          20,
+          0
+        ],
+        [
+          32,
+          30,
+          "UUTUU",
+          27,
+          27,
+          0
+        ],
+        [
+          128,
+          38,
+          "UUTUUUT",
+          81,
+          25,
+          0
+        ],
+        [
+          128,
+          6,
+          "UTUUTUU",
+          81,
+          5,
+          0
+        ],
+        [
+          256,
+          70,
+          "UTUTUTUT",
+          243,
+          67,
+          0
+        ],
+        [
+          512,
+          358,
+          "UUTUUUTUT",
+          243,
+          171,
+          0
+        ],
+        [
+          1024,
+          102,
+          "UUTUUUUTUU",
+          81,
+          9,
+          0
+        ],
+        [
+          1024,
+          230,
+          "UUTUUUUTUU",
+          243,
+          56,
+          0
+        ],
+        [
+          1024,
+          614,
+          "UUTUUUUTUU",
+          243,
+          147,
+          0
+        ],
+        [
+          1024,
+          710,
+          "UUTUUUUTUU",
+          729,
+          507,
+          0
+        ],
+        [
+          1024,
+          742,
+          "UUTUUUUTUU",
+          729,
+          531,
+          0
+        ],
+        [
+          1024,
+          998,
+          "UUTUUUUTUU",
+          729,
+          713,
+          0
+        ],
+        [
+          1024,
+          454,
+          "UTUTUTUTUT",
+          729,
+          324,
+          0
+        ],
+        [
+          2048,
+          1990,
+          "UUTUUUTUTUT",
+          729,
+          709,
+          0
+        ],
+        [
+          2048,
+          966,
+          "UTUTUTUUTUU",
+          729,
+          345,
+          0
+        ],
+        [
+          4096,
+          1510,
+          "UUTUUUUTUUUT",
+          2187,
+          808,
+          0
+        ],
+        [
+          4096,
+          3270,
+          "UUTUUUUTUUUT",
+          2187,
+          1747,
+          0
+        ],
+        [
+          4096,
+          198,
+          "UUTUUUTUUTUU",
+          2187,
+          107,
+          0
+        ],
+        [
+          4096,
+          1222,
+          "UUTUUUTUUTUU",
+          2187,
+          654,
+          0
+        ],
+        [
+          4096,
+          2534,
+          "UUTUUUTUUTUU",
+          2187,
+          1355,
+          0
+        ],
+        [
+          4096,
+          486,
+          "UTUTUTUTUTUT",
+          2187,
+          260,
+          0
+        ],
+        [
+          8192,
+          2246,
+          "UUTUUUTUTUTUT",
+          6561,
+          1800,
+          0
+        ],
+        [
+          8192,
+          6342,
+          "UTUTUUTUUUTUT",
+          6561,
+          5080,
+          0
+        ],
+        [
+          16384,
+          11750,
+          "UUTUUUUTUUUTUT",
+          6561,
+          4707,
+          0
+        ],
+        [
+          16384,
+          15846,
+          "UTUUTUUUTUUTUU",
+          6561,
+          6347,
+          0
+        ],
+        [
+          32768,
+          3558,
+          "UUTUUUUTUUUUTUU",
+          6561,
+          714,
+          0
+        ],
+        [
+          32768,
+          7654,
+          "UUTUUUUTUUUUTUU",
+          19683,
+          4601,
+          0
+        ],
+        [
+          32768,
+          19942,
+          "UUTUUUUTUUUUTUU",
+          2187,
+          1332,
+          0
+        ],
+        [
+          32768,
+          24038,
+          "UTUUTUUUTUTUTUT",
+          19683,
+          14440,
+          0
+        ]
+      ],
+      "classes": 5,
+      "depth": 15,
+      "exceptions": [
+        1,
+        5
+      ],
+      "full_phase_collapse": false,
+      "rays": 36,
+      "residual": 0
+    },
+    "2,5": {
+      "classes": 1,
+      "full_phase_collapse": true
+    },
+    "2,6": {
+      "classes": 1,
+      "full_phase_collapse": true
+    },
+    "3,4": {
+      "base_clocks": [
+        [
+          1,
+          0
+        ]
+      ],
+      "certificate": [
+        [
+          2,
+          2,
+          "T",
+          1,
+          1,
+          0
+        ],
+        [
+          4,
+          1,
+          "TT",
+          3,
+          1,
+          1
+        ],
+        [
+          16,
+          3,
+          "TTTT",
+          9,
+          2,
+          0
+        ],
+        [
+          32,
+          11,
+          "TTTTT",
+          27,
+          10,
+          0
+        ],
+        [
+          32,
+          23,
+          "TTTTT",
+          27,
+          20,
+          0
+        ],
+        [
+          64,
+          7,
+          "UUTUUU",
+          9,
+          2,
+          0
+        ],
+        [
+          64,
+          15,
+          "UUTUUU",
+          9,
+          3,
+          0
+        ],
+        [
+          64,
+          31,
+          "UUTUUU",
+          27,
+          14,
+          0
+        ],
+        [
+          64,
+          39,
+          "UUTUUU",
+          27,
+          18,
+          0
+        ],
+        [
+          64,
+          47,
+          "UUTUUU",
+          27,
+          21,
+          0
+        ],
+        [
+          128,
+          123,
+          "UUTUUUT",
+          81,
+          79,
+          0
+        ],
+        [
+          128,
+          127,
+          "UUTUUUT",
+          81,
+          81,
+          0
+        ],
+        [
+          128,
+          27,
+          "TUUTUUU",
+          9,
+          3,
+          0
+        ],
+        [
+          128,
+          59,
+          "TUUTUUU",
+          27,
+          14,
+          0
+        ],
+        [
+          128,
+          63,
+          "TUUTUUU",
+          81,
+          41,
+          0
+        ],
+        [
+          128,
+          91,
+          "TUUTUUU",
+          27,
+          21,
+          0
+        ]
+      ],
+      "classes": 6,
+      "depth": 7,
+      "exceptions": [
+        1
+      ],
+      "full_phase_collapse": false,
+      "rays": 16,
+      "residual": 0
+    },
+    "3,5": {
+      "base_clocks": [
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "certificate": [
+        [
+          4,
+          2,
+          "TU",
+          1,
+          1,
+          0
+        ],
+        [
+          4,
+          3,
+          "TU",
+          3,
+          3,
+          1
+        ],
+        [
+          4,
+          4,
+          "TU",
+          3,
+          3,
+          0
+        ],
+        [
+          16,
+          13,
+          "TUTU",
+          9,
+          8,
+          0
+        ],
+        [
+          32,
+          1,
+          "UTUUU",
+          27,
+          3,
+          1
+        ],
+        [
+          32,
+          5,
+          "UTUUU",
+          9,
+          3,
+          0
+        ],
+        [
+          32,
+          17,
+          "UTUUU",
+          9,
+          6,
+          0
+        ],
+        [
+          32,
+          21,
+          "UTUUU",
+          3,
+          3,
+          0
+        ],
+        [
+          32,
+          25,
+          "UTUUU",
+          27,
+          23,
+          0
+        ],
+        [
+          128,
+          105,
+          "UTUUUTU",
+          81,
+          68,
+          0
+        ],
+        [
+          128,
+          9,
+          "TUUTUUU",
+          27,
+          3,
+          0
+        ],
+        [
+          128,
+          73,
+          "TUUTUUU",
+          81,
+          48,
+          0
+        ],
+        [
+          256,
+          169,
+          "TUTUTUTU",
+          243,
+          162,
+          0
+        ],
+        [
+          1024,
+          41,
+          "UTUUUUTUUU",
+          243,
+          11,
+          0
+        ],
+        [
+          1024,
+          553,
+          "UTUUUUTUUU",
+          729,
+          396,
+          0
+        ],
+        [
+          1024,
+          809,
+          "UTUUUUTUUU",
+          729,
+          578,
+          0
+        ],
+        [
+          2048,
+          297,
+          "UTUUUTUTUTU",
+          729,
+          107,
+          0
+        ],
+        [
+          4096,
+          1321,
+          "UTUUUUTUUUTU",
+          2187,
+          707,
+          0
+        ],
+        [
+          8192,
+          3369,
+          "UTUUUTUTUTUTU",
+          6561,
+          2700,
+          0
+        ],
+        [
+          8192,
+          7465,
+          "UTUUUTUTUTUTU",
+          2187,
+          1994,
+          0
+        ]
+      ],
+      "classes": 5,
+      "depth": 13,
+      "exceptions": [
+        1,
+        3
+      ],
+      "full_phase_collapse": false,
+      "rays": 20,
+      "residual": 0
+    },
+    "3,6": {
+      "classes": 1,
+      "full_phase_collapse": true
+    },
+    "4,5": {
+      "base_clocks": [
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          8,
+          15
+        ]
+      ],
+      "certificate": [
+        [
+          2,
+          1,
+          "U",
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          "UU",
+          3,
+          2,
+          1
+        ],
+        [
+          16,
+          4,
+          "UUUU",
+          9,
+          3,
+          0
+        ],
+        [
+          32,
+          12,
+          "UUUUU",
+          27,
+          11,
+          0
+        ],
+        [
+          32,
+          24,
+          "UUUUU",
+          27,
+          21,
+          0
+        ],
+        [
+          32,
+          8,
+          "TUUUT",
+          27,
+          8,
+          1
+        ],
+        [
+          32,
+          28,
+          "TUUUT",
+          3,
+          3,
+          0
+        ],
+        [
+          32,
+          32,
+          "TUUUT",
+          27,
+          27,
+          0
+        ],
+        [
+          64,
+          16,
+          "UTUUUT",
+          27,
+          7,
+          0
+        ],
+        [
+          128,
+          48,
+          "UUTUUUT",
+          81,
+          32,
+          0
+        ],
+        [
+          128,
+          112,
+          "UUTUUUT",
+          27,
+          24,
+          0
+        ]
+      ],
+      "classes": 5,
+      "depth": 7,
+      "exceptions": [
+        1,
+        2,
+        8
+      ],
+      "full_phase_collapse": false,
+      "rays": 11,
+      "residual": 0
+    },
+    "4,6": {
+      "base_clocks": [
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          8,
+          15
+        ]
+      ],
+      "certificate": [
+        [
+          4,
+          1,
+          "UU",
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          "UU",
+          3,
+          2,
+          1
+        ],
+        [
+          4,
+          3,
+          "UU",
+          3,
+          3,
+          1
+        ],
+        [
+          16,
+          4,
+          "UUUU",
+          9,
+          3,
+          0
+        ],
+        [
+          32,
+          8,
+          "TUUUT",
+          27,
+          8,
+          1
+        ],
+        [
+          32,
+          12,
+          "TUUUT",
+          9,
+          5,
+          0
+        ],
+        [
+          32,
+          24,
+          "TUUUT",
+          9,
+          7,
+          0
+        ],
+        [
+          32,
+          28,
+          "TUUUT",
+          3,
+          3,
+          0
+        ],
+        [
+          32,
+          32,
+          "TUUUT",
+          27,
+          27,
+          0
+        ],
+        [
+          128,
+          48,
+          "UUTUUUT",
+          81,
+          32,
+          0
+        ],
+        [
+          128,
+          80,
+          "UUTUUUT",
+          81,
+          51,
+          0
+        ],
+        [
+          128,
+          112,
+          "UUTUUUT",
+          27,
+          24,
+          0
+        ],
+        [
+          128,
+          16,
+          "TUUUTUU",
+          81,
+          11,
+          0
+        ]
+      ],
+      "classes": 6,
+      "depth": 7,
+      "exceptions": [
+        1,
+        2,
+        3,
+        8
+      ],
+      "full_phase_collapse": false,
+      "rays": 13,
+      "residual": 0
+    },
+    "5,6": {
+      "base_clocks": [
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "certificate": [
+        [
+          2,
+          1,
+          "U",
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          "UU",
+          3,
+          2,
+          1
+        ],
+        [
+          16,
+          4,
+          "UUUU",
+          9,
+          3,
+          0
+        ],
+        [
+          32,
+          12,
+          "UUUUU",
+          27,
+          11,
+          0
+        ],
+        [
+          32,
+          24,
+          "UUUUU",
+          27,
+          21,
+          0
+        ],
+        [
+          32,
+          8,
+          "TUUUT",
+          27,
+          8,
+          1
+        ],
+        [
+          32,
+          28,
+          "TUUUT",
+          3,
+          3,
+          0
+        ],
+        [
+          32,
+          32,
+          "TUUUT",
+          27,
+          27,
+          0
+        ],
+        [
+          64,
+          16,
+          "UTUUUT",
+          27,
+          7,
+          0
+        ],
+        [
+          128,
+          48,
+          "UUTUUUT",
+          81,
+          32,
+          0
+        ],
+        [
+          128,
+          112,
+          "UUTUUUT",
+          27,
+          24,
+          0
+        ]
+      ],
+      "classes": 5,
+      "depth": 7,
+      "exceptions": [
+        1,
+        2,
+        8
+      ],
+      "full_phase_collapse": false,
+      "rays": 11,
+      "residual": 0
+    }
+  },
+  "max_depth": 15,
+  "scope": "conditional phase equality and dominance only; no all-seed theorem",
+  "status": "PASS",
+  "total_rays": 223
+}

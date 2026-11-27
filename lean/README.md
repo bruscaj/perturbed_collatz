@@ -5,7 +5,7 @@ snapshot `b8c9d31dac329b296d25042cc0b3300fd2b615f4`: eighteen mathematical modul
 the upstream import and audit files, and the adversarial examples. All are
 copied without changes. The original twelve mathematical modules still match
 the earlier `4d14cd975006fad4e172b1522cd81bdec4d81773` snapshot byte for byte.
-Three independent Lake projects preserve their original Lean versions and
+The initial three independent Lake projects preserve their original Lean versions and
 keep the two unrelated modules named `Collatz.lean` separate.
 
 The new signed seven-step formalization proves that three explicit universal
@@ -17,6 +17,8 @@ neither unconditional seven-step capture nor the ordinary Collatz conjecture
 is proved. The inverse-tree results retain their separate existential-seed
 scope.
 
+The fourth project, [frontier](frontier/), proves the single-B1 equivalence, the explicit five-guard complement theorem, unbounded guarded reductions and legal repayment. Its 32 source modules are audited alongside the original three projects. The original snapshot description above applies to those three projects.
+
 ## Reproduce the checks
 
 Install [elan](https://github.com/leanprover/elan) and Python 3.10 or later. The
@@ -27,11 +29,11 @@ Mathlib or third-party Lake packages. From the release root, run:
 python3 lean/verify.py --check-inventory lean/inventory.json --output lean-verification.json
 ```
 
-The runner builds clean temporary copies of all three projects. It discards
+The runner builds clean temporary copies of all four projects. It discards
 ambient Lean search paths, checks the version, runs the namespace axiom audit,
 and extracts every named public source theorem's elaborated type and transitive
 axiom dependencies. It additionally audits **every theorem declaration in each of the
-nineteen mathematical modules**, including the release bridge, unused private theorems and
+51 mathematical modules**, including the release bridge, unused private theorems and
 generated theorem helpers. The runner rejects an omitted source module, a mismatch
 between named source theorems and the Lean inventory, unexpected axioms, and a
 mismatch with the saved inventory. A Python text scan enforces the simple
@@ -83,12 +85,13 @@ quantifiers and hypotheses; the summaries below are a reading guide.
 | `inverse/` | 4.24.0 | 10 upstream + 1 release bridge | 110 | 37 |
 | `perturbed/` | 4.19.0 | 6 | 86 | 43 |
 | `sprint/` | 4.24.0 | 2 | 5 | 0 |
-| **Total** | two pinned versions | **18 upstream + 1 release bridge** | **201** | **80** |
+| `frontier/` | 4.24.0 | 32 | 624 | 8 |
+| **Total** | two pinned versions | **51** | **825** | **88** |
 
 The source counts count explicit `theorem` declarations. Generated equations,
 induction helpers, and private declarations are audited too, but they are not
 counted as additional named public results. `inventory.json` records the exact
-statements, source locations, hashes, and axiom closures for the 201 named public
+statements, source locations, hashes, and axiom closures for the 825 named public
 theorems, together with the complete-module audit counts.
 
 ### General signed physical foundations
@@ -239,9 +242,9 @@ sprint packet identity into a proved whole-domain merger rule.
 
 ## Verification record and trust boundary
 
-On 2026-11-26, fresh temporary builds of all three projects succeeded with their
+On 2026-11-26, fresh temporary builds of all four projects succeeded with their
 pinned official Lean toolchains. The normal Lean checker accepted all included
-proofs and all 21 adversarial examples. The full audits covered 990 theorem
+proofs and the original 21 adversarial examples and the frontier fixtures. The full audits covered 6273 theorem
 constants, including private declarations and generated helpers; this diagnostic
 count is not a count of distinct mathematical results. The complete-module
 theorem dependency audits accepted only `propext`,

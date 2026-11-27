@@ -2,9 +2,15 @@
 
 > **Personal project · work in progress.** I am not an expert in this field. I am exploring these ideas for fun and to learn, and this is still a work in progress. Corrections, counterexamples, and suggestions are welcome.
 
-**Public research draft, 26 November 2026.** Read [the paper (PDF)](paper.pdf), [its TeX source](paper.tex), or the compact [claim-to-evidence map](claims.json). Authorship and reuse terms are pending.
+**Public research draft, 26 November 2026.** Read [the paper (PDF)](paper.pdf), [its TeX source](paper.tex), or the compact [claim-to-evidence map](claims.json). **Author: Jake S. Brusca** ([bruscaj](https://github.com/bruscaj)). OpenAI’s ChatGPT assisted with exploring proof ideas, writing and revising the manuscript, preparing code and Lean proofs, and reviewing this release. Reuse terms remain pending.
 
-This repository studies the shortcut Collatz map with fixed periodic integer impulses and an explicit forcing phase. The dynamics continue through zero. It contains a self-contained manuscript, all committed Lean mathematical modules from the selected research snapshot, and exact arithmetic certificates with their reproduction programs.
+This repository studies the shortcut Collatz map with fixed periodic integer impulses and an explicit forcing phase. The dynamics continue through zero. It contains a self-contained manuscript, the selected Lean proof projects, and exact arithmetic certificates with their reproduction programs.
+
+## The current seven-step result
+
+Every safe phased state is captured **if and only if** each positive B1 launch outside five explicit guards is captured. Here B1 means starting at physical height `6t−1` in phase one. The Lean proof verifies the equivalence, including a whole progression outside the guards. Proving capture on that complement remains open. [The exact Lean theorem](lean/frontier/Collatz/SevenStepCertificate/B1FinalObligation.lean) · [Manuscript section](tex/frontier.tex)
+
+Almost every B1 parameter in each fixed progression merges with its smaller neighbor. The parameters for which the argument gives no merger still matter for universal capture. A separate theorem puts an ancestor of each target inside every sufficiently large interval of fixed relative width. The release also includes regular-domain entry, signed phase comparisons, an alternative phase-two criterion, complete two-clock examples, and the independently replayable proof supplements. [Research update and evidence](certificates/frontier/README.md)
 
 ## Results and limits
 
@@ -24,15 +30,15 @@ This repository studies the shortcut Collatz map with fixed periodic integer imp
 
 ## Relation to earlier work
 
-The paper now includes **49 cited references** and a detailed related-work discussion, with attribution beside the relevant results. Classical parity coding, the translated companion map `U = P T P⁻¹`, arithmetic-progression sufficiency, inverse counting, synchronization, and continuous Collatz extensions are distinguished from the specific forced statements proved here. The general integer-cycle attraction result is explicitly presented as an application of an earlier generalized-map theorem after a checked coordinate and derivative comparison.
+The paper now includes **51 cited references** and a detailed related-work discussion, with attribution beside the relevant results. Classical parity coding, the translated companion map `U = P T P⁻¹`, arithmetic-progression sufficiency, inverse counting, synchronization, and continuous Collatz extensions are distinguished from the specific forced statements proved here. The general integer-cycle attraction result is explicitly presented as an application of an earlier generalized-map theorem after a checked coordinate and derivative comparison.
 
 Every entry in [claims.json](claims.json) includes its literature relationship and the limit of any proposed transfer. Almost-all results, single-state control, and results for a different analytic interpolation do not remove the paper's open hypotheses. Source versions and limited-access comparisons are identified in the manuscript; precise priority for the forced results remains under review. The bibliography is selective and makes no claim to exhaust the Collatz literature.
 
 ## Lean coverage
 
-The [Lean README](lean/README.md) explains the three independent projects and their map conventions. They contain **19 mathematical modules: 18 preserved from the research sources and one release-specific bridge**. There are **201 named public theorem declarations**, including the bridge, and 80 private source declarations. Clean builds and full-module transitive axiom audits cover **990 theorem constants**, including generated helpers. The separate 21-example adversarial fixture is also replayed. These counts are not a percentage of the paper formalized. The [inventory](lean/inventory.json) contains exact types and dependencies.
+Four Lean projects contain 51 mathematical modules. Their clean builds compare 825 named public theorem declarations and the module-wide axiom audits against the committed inventory. The frontier project includes the single-B1 equivalence, guarded exits, repayment, and a counterexample to coverage by the five guards. [Lean coverage](lean/README.md) · [Exact theorem inventory](lean/inventory.json)
 
-The pinned versions are Lean **4.24.0** for `inverse` and `sprint`, and **4.19.0** for `perturbed`. No mathlib dependency is needed. The audited theorem dependencies use only `propext`, `Quot.sound`, and `Classical.choice`; no `sorryAx` or custom axiom occurs. An external independent Lean kernel checker has not been run.
+The pinned versions are Lean **4.24.0** for `frontier`, `inverse`, and `sprint`, and **4.19.0** for `perturbed`. No mathlib dependency is needed. The audited theorem dependencies use only `propext`, `Quot.sound`, and `Classical.choice`; no `sorryAx` or custom axiom occurs. An external independent Lean kernel checker has not been run.
 
 The new signed physical modules prove the conservative classification, height/safety identities, arithmetic cycle gain, and conditional three-family capture implication. [ReleaseBridge.lean](lean/inverse/Collatz/ReleaseBridge.lean) proves the matching equivalence for every positive physical seed at every phase. **Its three universal family hypotheses remain open.** The original four-family theorem, complete inverse-growth/progression theorem, synchronization, support censuses, and analytic geometry are not thereby formalized.
 
@@ -40,7 +46,7 @@ Read the scope table before reusing an older theorem: one older module makes zer
 
 ## Reproduce
 
-Run commands from this repository's root. Requirements are Python 3.10 or later, a C++17 compiler for the exhaustive impulse censuses, Lean via elan with both pinned versions for formal checks, and a working TeX installation with `latexmk`, Latin Modern, AMS, geometry, microtype, graphicx, placeins, hyperref, cleveref, booktabs, and enumitem for the paper. Mathematical verification uses the Python standard library and does not download mathematical data. Building the paper uses the committed figure PDFs.
+Run commands from this repository's root. Requirements are Python 3.10 or later, Node.js 18 or later for the rational-shadow checker, a C++17 compiler for the exhaustive impulse censuses, Lean via elan with both pinned versions for formal checks, and a working TeX installation with `latexmk`, Latin Modern, AMS, geometry, microtype, graphicx, placeins, hyperref, cleveref, booktabs, and enumitem for the paper. Mathematical verification uses the Python standard library and does not download mathematical data. Building the paper uses the committed figure PDFs.
 
 ```sh
 # Exact small and worked-example checks, stored-shard validation,
@@ -82,4 +88,4 @@ Integer samples are labeled by exact finite replay. Complex raster colors are fl
 
 `paper.tex` and `tex/` form the complete manuscript. `paper.pdf` is compiled from those sources. `lean/` contains pinned projects and the theorem inventory. `certificates/` contains exact data, checkers, and independent replays. `scripts/` supplies the unified entry points. `MANIFEST.json` lists every released file except itself with its size and SHA-256 hash. Hashes detect mismatches; they do not establish mathematical correctness.
 
-The workflow in `.github/workflows/verify.yml` runs the all-mode command when this payload is placed at a GitHub repository root. Each result is traceable through [claims.json](claims.json), and material release changes belong in [CHANGELOG.md](CHANGELOG.md). No author attribution, license grant, DOI, or peer-review endorsement should be inferred from this draft.
+The workflow in `.github/workflows/verify.yml` runs the all-mode command when this payload is placed at a GitHub repository root. Each result is traceable through [claims.json](claims.json), and material release changes belong in [CHANGELOG.md](CHANGELOG.md). The README and manuscript identify the author and describe ChatGPT’s assistance.

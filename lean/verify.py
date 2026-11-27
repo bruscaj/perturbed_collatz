@@ -20,8 +20,42 @@ import time
 
 
 HERE = Path(__file__).resolve().parent
-PROJECTS = {"inverse": "4.24.0", "perturbed": "4.19.0", "sprint": "4.24.0"}
+PROJECTS = {"frontier": "4.24.0", "inverse": "4.24.0", "perturbed": "4.19.0", "sprint": "4.24.0"}
 SOURCE_FILES = {
+    "frontier": [
+        "Collatz/SevenStepCertificate.lean",
+        "Collatz/SevenStepCertificate/A3Recursive.lean",
+        "Collatz/SevenStepCertificate/A3TwoStage.lean",
+        "Collatz/SevenStepCertificate/B1AllGuards.lean",
+        "Collatz/SevenStepCertificate/B1ComplementWitness.lean",
+        "Collatz/SevenStepCertificate/B1Entry.lean",
+        "Collatz/SevenStepCertificate/B1FinalObligation.lean",
+        "Collatz/SevenStepCertificate/B1Primitives.lean",
+        "Collatz/SevenStepCertificate/B1Recursive.lean",
+        "Collatz/SevenStepCertificate/B1Repayment.lean",
+        "Collatz/SevenStepCertificate/B1RepaymentArithmetic.lean",
+        "Collatz/SevenStepCertificate/B1RepaymentPrimitive.lean",
+        "Collatz/SevenStepCertificate/B1SelfReturns.lean",
+        "Collatz/SevenStepCertificate/B1Terminals.lean",
+        "Collatz/SevenStepCertificate/Basic.lean",
+        "Collatz/SevenStepCertificate/Certificates.lean",
+        "Collatz/SevenStepCertificate/FrontierIdentities.lean",
+        "Collatz/SevenStepCertificate/N03Recursive.lean",
+        "Collatz/SevenStepCertificate/N03TwoStage.lean",
+        "Collatz/SevenStepCertificate/RefinedFrontier.lean",
+        "Collatz/SevenStepCertificate/Relational.lean",
+        "Collatz/SevenStepCertificate/ResidualInduction.lean",
+        "A3SharedComponent.lean",
+        "AffineCounterTermination.lean",
+        "ResidualVerification.lean",
+        "B1GuardComplement.lean",
+        "CoverAlgebra.lean",
+        "FamilyCoverTheory.lean",
+        "GeneralRepaymentBound.lean",
+        "PeriodComposition.lean",
+        "RepaymentBound.lean",
+        "RepaymentPhysical.lean",
+    ],
     "inverse": ["Collatz/Admissibility.lean", "Collatz/BinaryZoom.lean",
                 "Collatz/Branches.lean", "Collatz/Coverage.lean",
                 "Collatz/CycleMultiplier.lean", "Collatz/Physical.lean",
@@ -32,8 +66,8 @@ SOURCE_FILES = {
     "sprint": ["RootInverseHeight.lean", "RootPacket.lean"],
 }
 
-EXTRA_BUILD_TARGETS = {"inverse": ["Collatz.ReleaseBridge"], "perturbed": [], "sprint": []}
-ADVERSARIAL_FILES = {"inverse": ["SevenAdversarial.lean"], "perturbed": [], "sprint": []}
+EXTRA_BUILD_TARGETS = {"frontier": [], "inverse": ["Collatz.ReleaseBridge"], "perturbed": [], "sprint": []}
+ADVERSARIAL_FILES = {"frontier": ["FrontierAdversarial.lean"], "inverse": ["SevenAdversarial.lean"], "perturbed": [], "sprint": []}
 
 
 def source_inventory(project: str) -> tuple[dict, int]:

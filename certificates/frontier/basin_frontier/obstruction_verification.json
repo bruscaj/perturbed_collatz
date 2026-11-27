@@ -1,0 +1,105 @@
+{
+  "center_checks": 1400,
+  "inverse_ceiling": {
+    "all_finite_bank_upper": "63/250",
+    "partial_sum_upper_millionths": 251437,
+    "short_clock_counts": [
+      {
+        "B1_target_compatible_words": 21,
+        "clock": 7,
+        "expanding_words": 22
+      },
+      {
+        "B1_target_compatible_words": 2148,
+        "clock": 14,
+        "expanding_words": 2380
+      },
+      {
+        "B1_target_compatible_words": 125378,
+        "clock": 21,
+        "expanding_words": 137980
+      }
+    ],
+    "short_clock_union_density": "40028177/387420489",
+    "tail_upper_millionths": 51,
+    "whole_ray_replays_through_14": 2169
+  },
+  "one_shrink": {
+    "all_grow_partner_shrink_positions": [
+      2
+    ],
+    "exception": "t=24v+18, u=8v+6, both clock 4"
+  },
+  "scope": "exact supporting arithmetic for written obstruction proofs, not kernel verification or global capture",
+  "sparse": {
+    "constructed_sparse_rays": [
+      {
+        "minimum_grow_gap": 23,
+        "post_initial_ticks": 46,
+        "shrinks": 1,
+        "source_bits": 47
+      },
+      {
+        "minimum_grow_gap": 57,
+        "post_initial_ticks": 172,
+        "shrinks": 2,
+        "source_bits": 173
+      },
+      {
+        "minimum_grow_gap": 103,
+        "post_initial_ticks": 414,
+        "shrinks": 3,
+        "source_bits": 415
+      },
+      {
+        "minimum_grow_gap": 161,
+        "post_initial_ticks": 808,
+        "shrinks": 4,
+        "source_bits": 809
+      },
+      {
+        "minimum_grow_gap": 231,
+        "post_initial_ticks": 1390,
+        "shrinks": 5,
+        "source_bits": 1391
+      },
+      {
+        "minimum_grow_gap": 313,
+        "post_initial_ticks": 2196,
+        "shrinks": 6,
+        "source_bits": 2197
+      },
+      {
+        "minimum_grow_gap": 407,
+        "post_initial_ticks": 3262,
+        "shrinks": 7,
+        "source_bits": 3263
+      },
+      {
+        "minimum_grow_gap": 513,
+        "post_initial_ticks": 4624,
+        "shrinks": 8,
+        "source_bits": 4625
+      }
+    ],
+    "one_shrink_words_checked": 210
+  },
+  "status": "PASS",
+  "uniform_embeddings": [
+    {
+      "j": 1,
+      "partner_clock": 43,
+      "source_clock": 1
+    },
+    {
+      "j": 2,
+      "partner_clock": 85,
+      "source_clock": 1
+    },
+    {
+      "j": 3,
+      "partner_clock": 127,
+      "source_clock": 1
+    }
+  ]
+}

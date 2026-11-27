@@ -1,0 +1,46 @@
+{
+  "period_composition.json": {
+    "sha256": "1d17744f41f576505ee7e46c321457d3f98a49da566c6eb9b6c47ad3c4cdcdce",
+    "scope": "Local cover_composition working snapshot"
+  },
+  "beyond_screen_candidates.json": {
+    "sha256": "91354c5b1023c998f48a5469915e143de4eb05ae7de0a89825b3ca14ad2597d1",
+    "scope": "Local cover_composition working snapshot"
+  },
+  "unbounded_excursions.json": {
+    "sha256": "851aed3a8ec166a6ceb77c320dd7510ae178354894e46219aa2f27b2ec3cddf4",
+    "scope": "Local cover_composition working snapshot"
+  },
+  "B1FinalObligation.lean": {
+    "sha256": "e40fe5103c108f3c8ef0e760e13338d2715b604a78184c81f38ee3c69f638eed",
+    "scope": "Concurrent certification working-tree source; no merged or committed status asserted"
+  },
+  "B1Repayment.lean": {
+    "sha256": "12e2ae3333ad17aa7cf8233f0222da79c97489080ee76e0e2fcb32ead8980d58",
+    "scope": "Concurrent certification working-tree source; no merged or committed status asserted"
+  },
+  "B1RepaymentArithmetic.lean": {
+    "sha256": "271c0ee5e47b2264910ea0235ab69430edc6712147893d7191e931aec96a6648",
+    "scope": "Concurrent certification working-tree source; no merged or committed status asserted"
+  },
+  "B1SelfReturns.lean": {
+    "sha256": "47115ea5e975aa2b72ad369f4e4a111726ab5b7cf0240e1f42f99aac582a011c",
+    "scope": "Concurrent certification working-tree source; no merged or committed status asserted"
+  },
+  "B1AllGuards.lean": {
+    "sha256": "2ddfeac0270a71c7e77ccab59ec98ac51aa274a756be8b9df530320da5e6695f",
+    "scope": "Concurrent certification working-tree source; no merged or committed status asserted"
+  },
+  "B1Terminals.lean": {
+    "sha256": "99d7dd7defbbbde9e31cf39ddadce0dfd1fd807921be180b5e5fd48119daecfb",
+    "scope": "Concurrent certification working-tree source; no merged or committed status asserted"
+  },
+  "B1RepaymentPrimitive.lean": {
+    "sha256": "8ce43de2a99e3fdd0adb0b08a65d7a000163db8cefdba87af06e8f9516b67176",
+    "scope": "Concurrent certification working-tree source; no merged or committed status asserted"
+  },
+  "b1_selector_before_extensions.py": {
+    "sha256": "1c10f36181385b423eb749b1a56b5e3a8cde0b669908e1bd30e88a39166b66df",
+    "scope": "Exact pre-extension combined selector for regression provenance; instantiate with the frozen selector_inputs directory explicitly."
+  }
+}

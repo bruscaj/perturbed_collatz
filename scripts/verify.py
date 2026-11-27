@@ -101,6 +101,54 @@ def main():
             run("three-family complete affine reconstruction", [py, "certificates/seven_step/three_family.py"])
             run("three-family hostile mutations", [py, "certificates/seven_step/test_three_family.py"])
             if args.mode in ("full", "all"):
+                run("rational shadow certificates for the pinned error recursion",
+                    ["node", "certificates/frontier/error_shadows/rational_shadows.mjs"],
+                    "certificates/frontier/error_shadows/rational_shadows.json")
+                run("regular-domain and bounded Thue-Morse entry certificates",
+                    [py, "certificates/frontier/regular_domain/verify.py"],
+                    "certificates/frontier/regular_domain/verification.json")
+                run("phase quotient and finite descent certificates",
+                    [py, "certificates/frontier/phase_quotient/verify.py"],
+                    "certificates/frontier/phase_quotient/verification.json")
+                run("adjacent-error digit machine and hostile certificates",
+                    [py, "certificates/frontier/adjacent/verify_machine.py"],
+                    "certificates/frontier/adjacent/machine_verification.json")
+                run("signed balance and restricted one-sided comparison paths",
+                    [py, "certificates/frontier/phase_balance/verify_phase_balance.py"],
+                    "certificates/frontier/phase_balance/verification.json")
+                run("phase-two affine-root equivalence and block certificates",
+                    [py, "certificates/frontier/affine_root/verify.py"],
+                    "certificates/frontier/affine_root/verification.json")
+                run("B1 all-phase ancestor cover and hostile inputs",
+                    [py, "certificates/frontier/b1_entry/verify_b1_entry.py"],
+                    "certificates/frontier/b1_entry/b1_entry_verification.json")
+                run("unbounded B1 repayment and hostile inputs",
+                    [py, "certificates/frontier/b1_repayment/verify.py"],
+                    "certificates/frontier/b1_repayment/verification.json")
+                selector = Path("certificates/frontier/selector")
+                receipt = tmp / "selector.json"
+                run("composed B1 selector and physical replays",
+                    [py, selector / "verify_b1_selector.py", "--output", receipt])
+                observed = json.loads(receipt.read_text())
+                recorded = json.loads((ROOT / selector / "b1_selector_verification.json").read_text())
+                for result in (observed, recorded):
+                    result.pop("elapsed_seconds")
+                if observed != recorded:
+                    raise ValueError("Composed B1 selector receipt differs")
+                run("common-rank physical certificates", [py, "certificates/frontier/common_rank/verify_certificates.py"],
+                    "certificates/frontier/common_rank/physical_verification.json")
+                run("renewal grammar", [py, "certificates/frontier/paired_switching/verify.py"],
+                    "certificates/frontier/paired_switching/verification.json")
+                run("affine-pair recurrence", [py, "certificates/frontier/paired_recurrence/verify.py"],
+                    "certificates/frontier/paired_recurrence/verification.json")
+                run("maximum-prefix selector", [py, "certificates/frontier/paired_recurrence/prefix_selector.py"],
+                    "certificates/frontier/paired_recurrence/prefix_selector_verification.json")
+                run("equal-count obstructions", [py, "certificates/frontier/basin_frontier/obstructions.py"],
+                    "certificates/frontier/basin_frontier/obstruction_verification.json")
+                run("two-clock selector", [py, "certificates/frontier/basin_frontier/two_clock.py"],
+                    "certificates/frontier/basin_frontier/two_clock_verification.json")
+                run("inverse interval steering", [py, "certificates/frontier/intervals/verify.py"],
+                    "certificates/frontier/intervals/verification.json")
                 run("all 24-step inverse formulas", [py, inv / "certify_growth.py"], inv / "growth_certificate.json")
                 six = tmp / "six"
                 run("compile independent six census", ["c++", "-O3", "-std=c++17", "-Wall", "-Wextra", "-Wpedantic",
@@ -119,6 +167,15 @@ def main():
                 run("independent complete eight census", [py, imp / "independent_eight/census.py", eight, "--workers", args.workers],
                     imp / "independent_eight/census.json")
             if args.mode == "all":
+                potential = Path("certificates/frontier/potential")
+                generator = tmp / "potential-generator"
+                vector = tmp / "potential.bin"
+                run("compile seven-step inverse potential generator",
+                    ["c++", "-O3", "-std=c++17", potential / "root_inverse_potential.cpp", "-o", generator])
+                run("regenerate precision-14 inverse potential",
+                    [generator, 14, 554549, 1410889, 800, vector])
+                run("verify positive 17/20 potential on every ternary type",
+                    [py, potential / "root_inverse_exponent.py", "--pruned", "--exponent", "17/20", "--file", vector])
                 cmd = [py, "lean/verify.py", "--check-inventory", "lean/inventory.json", "--output", tmp / "lean.json"]
                 for option, value in (("--toolchain-419",args.toolchain_419),("--toolchain-424",args.toolchain_424)):
                     if value:

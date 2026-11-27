@@ -1,5 +1,12 @@
 # Release history
 
+## B1, affine pairs, and interval ancestors — 26 November 2026
+
+- Added the single-family B1 equivalence and its open complement, exact A3 and repayment certificates, a constructive selector, pair coalescence and obstruction proofs, inverse interval steering, the phase-two affine-root criterion, regular-domain entry, and signed phase comparisons through the #32 research cutoff.
+- Expanded the Lean inventory to four projects and added replayable arithmetic checks for the new results. Corrected the rank-change column in the three-family table.
+- Credited Jake S. Brusca as author and described ChatGPT’s assistance in the README and manuscript.
+
+
 ## First public snapshot — 26 November 2026
 
 - Published the reviewed research draft with its manuscript, Lean projects, certificates, and reproduction workflow. Authorship and reuse terms are pending.

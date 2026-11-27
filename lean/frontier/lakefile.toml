@@ -1,0 +1,38 @@
+name = "frontier"
+defaultTargets = ["All"]
+
+[[lean_lib]]
+name = "Collatz"
+
+[[lean_lib]]
+name = "A3SharedComponent"
+
+[[lean_lib]]
+name = "AffineCounterTermination"
+
+[[lean_lib]]
+name = "ResidualVerification"
+
+[[lean_lib]]
+name = "B1GuardComplement"
+
+[[lean_lib]]
+name = "CoverAlgebra"
+
+[[lean_lib]]
+name = "FamilyCoverTheory"
+
+[[lean_lib]]
+name = "GeneralRepaymentBound"
+
+[[lean_lib]]
+name = "PeriodComposition"
+
+[[lean_lib]]
+name = "RepaymentBound"
+
+[[lean_lib]]
+name = "RepaymentPhysical"
+
+[[lean_lib]]
+name = "All"

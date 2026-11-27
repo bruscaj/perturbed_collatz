@@ -512,6 +512,172 @@
         "relationship": "specific complex launch certificate; established visualization context",
         "transfer_limit": "Numerical images are not global basin proofs; Fatou/wandering-domain conclusions for different interpolations are not imported."
       }
+    },
+    {
+      "id": "REL-21",
+      "tex_label": "thm:b1-complement",
+      "manuscript": "tex/frontier.tex",
+      "title": "B1-only global capture equivalence with five explicit guards",
+      "evidence_status": "whole-ray arithmetic certificate, induction and Lean proof",
+      "artifacts": [
+        "certificates/frontier/b1_entry/verify_b1_entry.py",
+        "certificates/frontier/b1_repayment/verify.py"
+      ],
+      "lean_coverage": "Named Lean theorems cover the stated formal component.",
+      "lean_declarations": [
+        "Collatz.SevenStepCertificate.global_capture_iff_final_obligation",
+        "Collatz.SevenStepCertificate.b1_complement_witness_19"
+      ],
+      "limitations": "The complement includes every t congruent to 19 modulo 128. Its universal capture remains open.",
+      "literature": {
+        "citation_keys": [],
+        "relationship": "Internal development of the specified fixed forced system.",
+        "transfer_limit": "No transfer to ordinary Collatz is established."
+      }
+    },
+    {
+      "id": "REL-22",
+      "tex_label": "sec:legal-exits",
+      "manuscript": "tex/frontier.tex",
+      "title": "Compatible-Q classifiers, guarded A3 exit and legal B1 repayment",
+      "evidence_status": "independent signed physical replay and named Lean lemmas",
+      "artifacts": [
+        "certificates/frontier/common_rank/verify_certificates.py",
+        "certificates/frontier/selector/verify_b1_selector.py"
+      ],
+      "lean_coverage": "Named Lean theorems cover the stated formal component.",
+      "lean_declarations": [
+        "Collatz.SevenStepCertificate.SharedA3.a3_unbounded_merger",
+        "FamilyCoverRepayment.certified_ceil_repayment"
+      ],
+      "limitations": "The 88-row Q classifier and 43-row W classifier use different sections and stopping rules. Legal packet availability remains open.",
+      "literature": {
+        "citation_keys": [],
+        "relationship": "Internal development of the specified fixed forced system.",
+        "transfer_limit": "No transfer to ordinary Collatz is established."
+      }
+    },
+    {
+      "id": "REL-23",
+      "tex_label": "sec:pair-coalescence",
+      "manuscript": "tex/frontier.tex",
+      "title": "Density-one neighbor merger, sparse candidates and two-clock reductions",
+      "evidence_status": "written proofs with exact finite arithmetic and physical replay",
+      "artifacts": [
+        "certificates/frontier/paired_switching/PROOF.md",
+        "certificates/frontier/paired_recurrence/PROOF.md",
+        "certificates/frontier/basin_frontier/PROOF.md",
+        "certificates/frontier/basin_frontier/two_clock.py"
+      ],
+      "lean_coverage": "Written proof and supporting arithmetic.",
+      "lean_declarations": [],
+      "limitations": "Density one applies to mergers within each fixed progression. The power bound counts failure of a particular selector, including captured parameters.",
+      "literature": {
+        "citation_keys": [
+          "garner-heights",
+          "gao-heights"
+        ],
+        "relationship": "Earlier ordinary-map pair methods; the supplement gives attributions for the phased adaptation.",
+        "transfer_limit": "No transfer to ordinary Collatz is established."
+      }
+    },
+    {
+      "id": "REL-24",
+      "tex_label": "thm:inverse-interval",
+      "manuscript": "tex/frontier.tex",
+      "title": "Uniform proportional-interval B1 ancestry",
+      "evidence_status": "written inverse construction with whole-ray adapter checks",
+      "artifacts": [
+        "certificates/frontier/intervals/PROOF.md",
+        "certificates/frontier/intervals/verify.py",
+        "certificates/frontier/potential/root_inverse_exponent.py"
+      ],
+      "lean_coverage": "Written proof and supporting arithmetic.",
+      "lean_declarations": [],
+      "limitations": "The width is fixed and the threshold scales with target height. The local 17/20 count also requires the positive potential.",
+      "literature": {
+        "citation_keys": [],
+        "relationship": "Internal development of the specified fixed forced system.",
+        "transfer_limit": "No transfer to ordinary Collatz is established."
+      }
+    },
+    {
+      "id": "REL-25",
+      "tex_label": "cor:cone",
+      "manuscript": "tex/frontier.tex",
+      "title": "Global capture iff there are unbounded homogeneous proportional intervals",
+      "evidence_status": "written corollary of interval hitting",
+      "artifacts": [
+        "certificates/frontier/intervals/PROOF.md"
+      ],
+      "lean_coverage": "Written proof and supporting arithmetic.",
+      "lean_declarations": [],
+      "limitations": "The existence of such intervals for one fixed positive relative width remains open.",
+      "literature": {
+        "citation_keys": [],
+        "relationship": "Internal development of the specified fixed forced system.",
+        "transfer_limit": "No transfer to ordinary Collatz is established."
+      }
+    },
+    {
+      "id": "REL-26",
+      "tex_label": "sec:affine-root",
+      "manuscript": "tex/frontier.tex",
+      "title": "Phase-two affine-root equivalence",
+      "evidence_status": "written block induction with exhaustive whole-ray checks",
+      "artifacts": [
+        "certificates/frontier/affine_root/PROOF.md",
+        "certificates/frontier/affine_root/verify.py"
+      ],
+      "lean_coverage": "Written proof and supporting arithmetic.",
+      "lean_declarations": [],
+      "limitations": "Equality of the two capture labels at every positive input remains open.",
+      "literature": {
+        "citation_keys": [],
+        "relationship": "Internal development of the specified fixed forced system.",
+        "transfer_limit": "No transfer to ordinary Collatz is established."
+      }
+    },
+    {
+      "id": "REL-27",
+      "title": "Regular sufficient domains and bounded even-digit-sum entry",
+      "tex_label": "sec:phase-balance",
+      "manuscript": "tex/frontier.tex",
+      "artifacts": [
+        "certificates/frontier/regular_domain/PROOF.md",
+        "certificates/frontier/regular_domain/verify.py"
+      ],
+      "lean_declarations": [],
+      "lean_coverage": "Written arguments and exact arithmetic.",
+      "evidence_status": "Constructive proof and exhaustive affine certificates.",
+      "limitations": "Capture of all parameters in the selected regular language remains an assumption.",
+      "literature": {
+        "citation_keys": [],
+        "relationship": "Development for this fixed periodic word.",
+        "transfer_limit": "Other forcing words require their own entry or phase certificates."
+      }
+    },
+    {
+      "id": "REL-28",
+      "title": "Phase-quotient equivalences and signed phase-label transfer",
+      "tex_label": "sec:phase-balance",
+      "manuscript": "tex/frontier.tex",
+      "artifacts": [
+        "certificates/frontier/phase_quotient/PROOF.md",
+        "certificates/frontier/phase_balance/PROOF.md",
+        "certificates/frontier/phase_balance/verify_phase_balance.py",
+        "certificates/frontier/adjacent/PROOF.md",
+        "certificates/frontier/adjacent/verify_machine.py"
+      ],
+      "lean_declarations": [],
+      "lean_coverage": "Written arguments and exact arithmetic.",
+      "evidence_status": "Constructive proof and exhaustive affine certificates.",
+      "limitations": "The restricted one-sided equivalence uses the adjacent digit machine. Universal absence of the restricted positive error remains open.",
+      "literature": {
+        "citation_keys": [],
+        "relationship": "Development for this fixed periodic word.",
+        "transfer_limit": "Other forcing words require their own entry or phase certificates."
+      }
     }
   ],
   "literature_scope": "Citation keys resolve in tex/references.tex. Relationships identify attribution and limits, not a literature-wide priority certification."

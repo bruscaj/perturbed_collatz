@@ -1,0 +1,118 @@
+{
+  "all_seed_capture_proved": false,
+  "enumerated_group_maxima_matched": 7425,
+  "examples": [
+    {
+      "both_clocks": 18,
+      "common_normalized_affine": [
+        177147,
+        201045,
+        5
+      ],
+      "drop": "1",
+      "partner": "148752",
+      "queried_nodes": 233,
+      "status": "smaller_partner",
+      "t": "148753",
+      "whole_ray_stride": "131072"
+    },
+    {
+      "both_clocks": 18,
+      "common_normalized_affine": [
+        531441,
+        938397,
+        5
+      ],
+      "drop": "6",
+      "partner": "231435",
+      "queried_nodes": 302,
+      "status": "smaller_partner",
+      "t": "231441",
+      "whole_ray_stride": "131072"
+    },
+    {
+      "both_clocks": 18,
+      "common_normalized_affine": [
+        177147,
+        316605,
+        5
+      ],
+      "drop": "1",
+      "partner": "234256",
+      "queried_nodes": 222,
+      "status": "smaller_partner",
+      "t": "234257",
+      "whole_ray_stride": "131072"
+    },
+    {
+      "both_clocks": 18,
+      "common_normalized_affine": [
+        59049,
+        111648,
+        5
+      ],
+      "drop": "5",
+      "partner": "247820",
+      "queried_nodes": 257,
+      "status": "smaller_partner",
+      "t": "247825",
+      "whole_ray_stride": "131072"
+    },
+    {
+      "both_clocks": 46,
+      "common_normalized_affine": [
+        282429536481,
+        2731490870989381886871718856384053251,
+        5
+      ],
+      "drop": "12",
+      "partner": "340282366920938463463374607431768211463",
+      "queried_nodes": 92596,
+      "status": "smaller_partner",
+      "t": "340282366920938463463374607431768211475",
+      "whole_ray_stride": "35184372088832"
+    },
+    {
+      "completed_depth": 51,
+      "queried_nodes": 250001,
+      "status": "unresolved_resource_cap",
+      "t": "340282366920938463463374607431768211473"
+    },
+    {
+      "both_clocks": 46,
+      "common_normalized_affine": [
+        282429536481,
+        929478178803202635035448985201023946643450742876292516388485934328827609091,
+        5
+      ],
+      "drop": "12",
+      "partner": "115792089237316195423570985008687907853269984665640564039457584007913129639943",
+      "queried_nodes": 92596,
+      "status": "smaller_partner",
+      "t": "115792089237316195423570985008687907853269984665640564039457584007913129639955",
+      "whole_ray_stride": "35184372088832"
+    },
+    {
+      "completed_depth": 51,
+      "queried_nodes": 250001,
+      "status": "unresolved_resource_cap",
+      "t": "115792089237316195423570985008687907853269984665640564039457584007913129639953"
+    },
+    {
+      "both_clocks": 18,
+      "common_normalized_affine": [
+        2187,
+        5677776614807834011798097736002175183,
+        5
+      ],
+      "drop": "54",
+      "partner": "340282366920938463463374607431768223747",
+      "queried_nodes": 384,
+      "status": "smaller_partner",
+      "t": "340282366920938463463374607431768223801",
+      "whole_ray_stride": "131072"
+    }
+  ],
+  "scope": "exact reverse maximum recurrence; finite queries and independent physical witness replay; not a total progress proof",
+  "status": "PASS"
+}

@@ -3,21 +3,18 @@
 
 \subsection{What has actually been formalized}
 
-The release contains three independent projects for the Lean~4 theorem
-prover \cite{demoura-ullrich-2021}. It preserves the twelve
-mathematical source modules of the initial research snapshot and incorporates
-six additional signed-model modules from the subsequently merged audit. A
-separate release bridge states the positive-seed capture result as an
-if-and-only-if theorem. Thus there are nineteen mathematical modules:
-eighteen source-preserved modules and one explicitly identified release
-bridge. The original sources are unchanged. The source pins, byte comparisons,
-and packaging transformations are recorded outside the minimal export;
-\path{lean/README.md} explains the public layout.
+The release contains four projects for the Lean~4 theorem prover
+\cite{demoura-ullrich-2021}. The original three projects preserve eighteen
+research modules and add a release bridge for the signed positive-seed
+equivalence. The frontier project adds 32 mathematical modules covering an
+independent classifier, B1 entry and repayment, the phase-three component,
+and cover composition. The inventory identifies the project, source file,
+and elaborated statement of each named theorem.
 
 The inverse project now includes the general signed physical model,
 admissibility, height coordinates, cycle gain, and the three-family reduction,
 in addition to its original three-step inverse results. It uses Lean 4.24.0,
-as does the sprint project. The perturbed project uses Lean 4.19.0. None
+as do the sprint and frontier projects. The perturbed project uses Lean 4.19.0. None
 requires mathlib. A clean verification builds each project in a new temporary
 directory, checks the exact toolchain version, treats audit warnings as errors,
 and compares the regenerated theorem inventory with the committed one.
@@ -28,19 +25,20 @@ Project&Mathematical modules&Public&Private&Audited constants\\\midrule
 \texttt{inverse}&11&110&37&556\\
 \texttt{perturbed}&6&86&43&401\\
 \texttt{sprint}&2&5&0&33\\\midrule
-Total&19&201&80&990\\\bottomrule
+\texttt{frontier}&32&624&8&5283\\\midrule
+Total&51&825&88&6273\\\bottomrule
 \end{tabular}
 \end{center}
 The public and private columns count named source theorem declarations.
 The last column also includes elaborator-generated theorem constants.
-Two hundred public declarations come from preserved research sources; the
+Eight hundred twenty-four public declarations come from preserved research sources; the
 release bridge adds one. These counts are not independent-result counts
 or percentages of the manuscript completed. The separate
 \path{SevenAdversarial.lean} fixture checks twenty-one malformed-row or
 scope examples and is not counted as a mathematical module.
 
 The inventory in \path{lean/inventory.json} stores exact elaborated theorem
-types, source locations, and transitive axiom dependencies. Across all 990
+types, source locations, and transitive axiom dependencies. Across all 6273
 audited constants, the dependencies are drawn only from
 \texttt{propext}, \texttt{Quot.sound}, and \texttt{Classical.choice}; no
 \texttt{sorryAx} or custom axiom occurs. The complete audit includes unused
@@ -212,14 +210,9 @@ the exceptional-set power bound required here, and it concerns another
 map. The distinction between an almost-everywhere conclusion and an
 all-seeds conclusion remains substantive.
 
-The three residual families in Theorem~\ref{thm:seven-three}, or
-alternatively the four in Theorem~\ref{thm:seven-four}, are explicit
-next targets within this research program. Progress would consist of an
-exhaustive compatible reduction of one complete set of families, a
-different complete invariant, or a
-proof of their capture. Additional reductions on proper subprogressions
-can be useful, but leave infinite complements unless an explicit coverage
-argument closes them. The current work supplies several independently
-checkable results and a concrete conditional reduction; it does not
-establish the classical conjecture or claim to solve another named open
-conjecture without a separate implication and literature check.
+The B1 complement in Theorem~\ref{thm:b1-complement} and the
+phase-two criterion in Section~\ref{sec:affine-root} give distinct
+universal targets. A proof of either would settle capture for the
+fixed word. A bridge to the ordinary Collatz map would require a
+separate mathematical argument. The present results concern this forced
+system and establish no resolution of another conjecture without a separate implication and literature check.

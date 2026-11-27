@@ -1,0 +1,579 @@
+{
+  "scope": "Constructive selector for explicitly combined B1 library, containing the frozen B1SelfCertified bank and preserving the frozen pre-extension selector. Includes maximal G/H and all21 homogeneous balanced families. No all-repository coverage or global capture.",
+  "source_pins": {
+    "period_composition.json": {
+      "sha256": "1d17744f41f576505ee7e46c321457d3f98a49da566c6eb9b6c47ad3c4cdcdce",
+      "scope": "Local cover_composition working snapshot"
+    },
+    "beyond_screen_candidates.json": {
+      "sha256": "91354c5b1023c998f48a5469915e143de4eb05ae7de0a89825b3ca14ad2597d1",
+      "scope": "Local cover_composition working snapshot"
+    },
+    "unbounded_excursions.json": {
+      "sha256": "851aed3a8ec166a6ceb77c320dd7510ae178354894e46219aa2f27b2ec3cddf4",
+      "scope": "Local cover_composition working snapshot"
+    },
+    "B1FinalObligation.lean": {
+      "sha256": "e40fe5103c108f3c8ef0e760e13338d2715b604a78184c81f38ee3c69f638eed",
+      "scope": "Concurrent certification working-tree source; no merged or committed status asserted"
+    },
+    "B1Repayment.lean": {
+      "sha256": "12e2ae3333ad17aa7cf8233f0222da79c97489080ee76e0e2fcb32ead8980d58",
+      "scope": "Concurrent certification working-tree source; no merged or committed status asserted"
+    },
+    "B1RepaymentArithmetic.lean": {
+      "sha256": "271c0ee5e47b2264910ea0235ab69430edc6712147893d7191e931aec96a6648",
+      "scope": "Concurrent certification working-tree source; no merged or committed status asserted"
+    },
+    "B1SelfReturns.lean": {
+      "sha256": "47115ea5e975aa2b72ad369f4e4a111726ab5b7cf0240e1f42f99aac582a011c",
+      "scope": "Concurrent certification working-tree source; no merged or committed status asserted"
+    },
+    "B1AllGuards.lean": {
+      "sha256": "2ddfeac0270a71c7e77ccab59ec98ac51aa274a756be8b9df530320da5e6695f",
+      "scope": "Concurrent certification working-tree source; no merged or committed status asserted"
+    },
+    "B1Terminals.lean": {
+      "sha256": "99d7dd7defbbbde9e31cf39ddadce0dfd1fd807921be180b5e5fd48119daecfb",
+      "scope": "Concurrent certification working-tree source; no merged or committed status asserted"
+    },
+    "B1RepaymentPrimitive.lean": {
+      "sha256": "8ce43de2a99e3fdd0adb0b08a65d7a000163db8cefdba87af06e8f9516b67176",
+      "scope": "Concurrent certification working-tree source; no merged or committed status asserted"
+    },
+    "b1_selector_before_extensions.py": {
+      "sha256": "1c10f36181385b423eb749b1a56b5e3a8cde0b669908e1bd30e88a39166b66df",
+      "scope": "Exact pre-extension combined selector for regression provenance; instantiate with the frozen selector_inputs directory explicitly."
+    }
+  },
+  "bank_inclusion": {
+    "bank_scope": "Pinned concurrent working-tree B1SelfCertified, including its inherited repayment clause; no commit/merge status claimed.",
+    "elementary_clauses_contained_by_full_ratio3": 10,
+    "tripling_clause_contained_by_ratio3_phase1_residue29_mod32": true,
+    "direct_residues_contained": 28,
+    "shadow_and_base_included": true,
+    "inherited_repayment_included_with_exact_unique_depth_selector": true,
+    "proof": "See B1_SELECTOR.md; finite residue checks establish complete terminal classes, and valuation identities cover arbitrary pump depths."
+  },
+  "unbounded_proof_audit": {
+    "G_H_budget_multiplier": "31381059609/34359738368",
+    "positive_rank_floor_gap_at_t8": "4332506554387/117553254891520",
+    "G_H_exact_source_density": "2113665/34359738367",
+    "G_H_density_scope": "This disjoint guarded-word family only; no overall selected-union density claim.",
+    "maximal_G_depth": "floor(v2(115t+52)/7)",
+    "H_suffix_equivalent_guard": "128^ceil(k/4) divides 119*G^k(t)-29",
+    "inherited_repayment_depth": "v2(601t+151)=7h+4, h>=1",
+    "new_G_sources_excluded_from_inherited_repayment": "t=4mod128 is even, so601t+151 is odd.",
+    "physical_primitives_verified": 5,
+    "model": "Finite-state guard selector plus explicit accelerated natural counters; not a DFA theorem for the full unbounded relation."
+  },
+  "whole_finite_rays_verified": 12293,
+  "composed_depth3_rays": 12283,
+  "additional28_step_rays": 10,
+  "bounded_diagnostic": {
+    "through_parameter": 100000,
+    "selector_label_counts": {
+      "B1_anchor_capture": 1,
+      "unhandled": 66467,
+      "full_ratio3_B1_self_merger": 12431,
+      "composed_seven_step_self_return": 20541,
+      "full_ratio9_B1_self_merger": 318,
+      "known_seven_even_step_pump": 242
+    },
+    "returned_witnesses_physically_replayed": 33533,
+    "pinned_old_bank_inputs_checked": 27808,
+    "old_bank_misses": 0,
+    "pre_extension_witnesses_preserved_exactly": 33533,
+    "newly_selected_vs_pre_extension": 0,
+    "first_unhandled_parameters": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      14,
+      16,
+      17,
+      19,
+      20,
+      22,
+      23,
+      26,
+      29,
+      30,
+      32,
+      33,
+      34,
+      35,
+      38,
+      39,
+      40,
+      41,
+      43,
+      44,
+      46,
+      48,
+      49
+    ],
+    "interpretation": "Diagnostic on these finite parameters only, not an asymptotic density or noncapture list."
+  },
+  "representative_constructive_witnesses": {
+    "B1_anchor_capture": {
+      "status": "capture",
+      "source_t": 1,
+      "proof_rule": "B1_anchor_capture",
+      "source_steps": 18,
+      "cycle_phase": 5,
+      "cycle_physical_value": 2
+    },
+    "full_ratio3_B1_self_merger": {
+      "status": "reduction",
+      "source_t": 3,
+      "target_t": 1,
+      "proof_rule": "full_ratio3_B1_self_merger",
+      "source_steps": 8,
+      "target_steps": 8,
+      "meeting_phase": 2,
+      "original_source_W": 24,
+      "alternate_W": 8,
+      "original_W_drop": 16,
+      "pair": {
+        "ratio": 3,
+        "pair_initial_phase": 2,
+        "even_prefix_steps": 0,
+        "terminal_phase": 2,
+        "terminal_steps": 7,
+        "pair_steps": 7,
+        "terminal_kind": "uniform_terminal",
+        "terminal_odd_residue_mod16384": 9
+      }
+    },
+    "composed_seven_step_self_return": {
+      "status": "reduction",
+      "source_t": 9,
+      "target_t": 6,
+      "proof_rule": "composed_seven_step_self_return",
+      "source_steps": 7,
+      "target_steps": 0,
+      "meeting_phase": 1,
+      "original_source_W": 72,
+      "alternate_W": 48,
+      "original_W_drop": 24,
+      "periods": 1,
+      "ray_modulus": 128,
+      "ray_residue": 9,
+      "path": [
+        9
+      ]
+    },
+    "full_ratio9_B1_self_merger": {
+      "status": "reduction",
+      "source_t": 225,
+      "target_t": 25,
+      "proof_rule": "full_ratio9_B1_self_merger",
+      "source_steps": 14,
+      "target_steps": 14,
+      "meeting_phase": 1,
+      "original_source_W": 1800,
+      "alternate_W": 200,
+      "original_W_drop": 1600,
+      "pair": {
+        "ratio": 9,
+        "pair_initial_phase": 2,
+        "even_prefix_steps": 0,
+        "terminal_phase": 2,
+        "terminal_steps": 13,
+        "pair_steps": 13,
+        "terminal_kind": "uniform_terminal",
+        "terminal_odd_residue_mod16384": 225
+      }
+    },
+    "known_seven_even_step_pump": {
+      "status": "reduction",
+      "source_t": 243,
+      "target_t": 128,
+      "proof_rule": "known_seven_even_step_pump",
+      "source_steps": 0,
+      "target_steps": 7,
+      "meeting_phase": 1,
+      "original_source_W": 1944,
+      "alternate_W": 1024,
+      "original_W_drop": 920
+    },
+    "unbounded_G4_H11_repayment": {
+      "status": "reduction",
+      "source_t": 209824364530180,
+      "target_t": 191634488604676,
+      "proof_rule": "unbounded_G4_H11_repayment",
+      "source_steps": 35,
+      "target_steps": 0,
+      "meeting_phase": 1,
+      "original_source_W": 1678594916241440,
+      "alternate_W": 1533075908837408,
+      "original_W_drop": 145519007404032,
+      "growing_periods": 4,
+      "contracting_periods": 1,
+      "maximal_growing_run": true,
+      "guard_semantics": "G=(243t+52)/128 on4mod128; H=(9t+29)/128 on11mod128"
+    },
+    "four_period_whole_ray": {
+      "status": "reduction",
+      "source_t": 89557508,
+      "target_t": 43084738,
+      "proof_rule": "four_period_whole_ray",
+      "source_steps": 28,
+      "target_steps": 0,
+      "meeting_phase": 1,
+      "original_source_W": 716460064,
+      "alternate_W": 344677904,
+      "original_W_drop": 371782160,
+      "periods": 4,
+      "ray_modulus": 268435456,
+      "ray_residue": 89557508,
+      "path": [
+        4,
+        4,
+        4,
+        11
+      ],
+      "scope": "Whole dyadic ray valid; named-screen escape was proved only on the recorded CRT subprogression"
+    },
+    "known_cycle_shadow": {
+      "status": "reduction",
+      "source_t": 16777217,
+      "target_t": 1179649,
+      "proof_rule": "known_cycle_shadow",
+      "source_steps": 25,
+      "target_steps": 18,
+      "meeting_phase": 5,
+      "original_source_W": 134217736,
+      "alternate_W": 9437192,
+      "original_W_drop": 124780544,
+      "shadow_parameter": 1
+    },
+    "maximal_G4_H11_repayment": {
+      "status": "reduction",
+      "source_t": 290228181101905455429149770669732486697791429148535780557987145766041466588094010919428,
+      "target_t": 266733724216753975648940279257874003691205661139703951014248931681012655524307061431870,
+      "proof_rule": "maximal_G4_H11_repayment",
+      "source_steps": 287,
+      "target_steps": 0,
+      "meeting_phase": 1,
+      "original_source_W": 2321825448815243643433198165357859893582331433188286244463897166128331732704752087355424,
+      "alternate_W": 2133869793734031805191522234062992029529645289117631608113991453448101244194456491454960,
+      "original_W_drop": 187955655081211838241675931294867864052686144070654636349905712680230488510295595900464,
+      "growing_periods": 33,
+      "contracting_periods": 8,
+      "maximal_growing_run": true,
+      "maximal_contracting_run": true,
+      "guard_semantics": "Exact legal G^k H^j union with positive endpoint below original t"
+    },
+    "homogeneous_growth_J123_balanced_repayment": {
+      "status": "reduction",
+      "source_t": 217760110,
+      "target_t": 34920345,
+      "proof_rule": "homogeneous_growth_J123_balanced_repayment",
+      "source_steps": 28,
+      "target_steps": 0,
+      "meeting_phase": 1,
+      "original_source_W": 1742080880,
+      "alternate_W": 279362760,
+      "original_W_drop": 1462718120,
+      "growing_periods": 2,
+      "contracting_periods": 2,
+      "repayment_residue": 123,
+      "growing_residue": 110,
+      "growing_slope": 2187,
+      "growing_numerator_constant": 70,
+      "switch_t": 63570547835,
+      "transformed_source_valuation": 14,
+      "switch_valuation": 0,
+      "maximal_growing_run": true,
+      "scope": "Exact union of 21 homogeneous balanced families"
+    }
+  },
+  "unbounded_G_H_whole_ray_checks": [
+    {
+      "k": 1,
+      "source_bit_length": 13,
+      "steps": 14,
+      "whole_ray_checked": true,
+      "sampled_parameters": 3
+    },
+    {
+      "k": 2,
+      "source_bit_length": 18,
+      "steps": 21,
+      "whole_ray_checked": true,
+      "sampled_parameters": 3
+    },
+    {
+      "k": 3,
+      "source_bit_length": 27,
+      "steps": 28,
+      "whole_ray_checked": true,
+      "sampled_parameters": 3
+    },
+    {
+      "k": 4,
+      "source_bit_length": 35,
+      "steps": 35,
+      "whole_ray_checked": true,
+      "sampled_parameters": 3
+    },
+    {
+      "k": 5,
+      "source_bit_length": 47,
+      "steps": 49,
+      "whole_ray_checked": true,
+      "sampled_parameters": 3
+    },
+    {
+      "k": 8,
+      "source_bit_length": 70,
+      "steps": 70,
+      "whole_ray_checked": true,
+      "sampled_parameters": 3
+    },
+    {
+      "k": 12,
+      "source_bit_length": 104,
+      "steps": 105,
+      "whole_ray_checked": true,
+      "sampled_parameters": 3
+    },
+    {
+      "k": 20,
+      "source_bit_length": 175,
+      "steps": 175,
+      "whole_ray_checked": true,
+      "sampled_parameters": 3
+    },
+    {
+      "k": 40,
+      "source_bit_length": 350,
+      "steps": 350,
+      "whole_ray_checked": true,
+      "sampled_parameters": 3
+    },
+    {
+      "k": 100,
+      "source_bit_length": 875,
+      "steps": 875,
+      "whole_ray_checked": true,
+      "sampled_parameters": 3
+    },
+    {
+      "k": 1000,
+      "source_bit_length": 8749,
+      "steps": 8750,
+      "whole_ray_checked": true,
+      "sampled_parameters": 3
+    }
+  ],
+  "inherited_repayment_checks": [
+    {
+      "h": 1,
+      "examples": 2
+    },
+    {
+      "h": 2,
+      "examples": 2
+    },
+    {
+      "h": 3,
+      "examples": 2
+    },
+    {
+      "h": 4,
+      "examples": 2
+    },
+    {
+      "h": 8,
+      "examples": 2
+    },
+    {
+      "h": 20,
+      "examples": 2
+    },
+    {
+      "h": 40,
+      "examples": 2
+    },
+    {
+      "h": 100,
+      "examples": 2
+    }
+  ],
+  "combined_selector_unbounded_CRT_examples": [
+    {
+      "k": 4,
+      "source_t": 209824364530180,
+      "target_t": 191634488604676,
+      "source_steps": 35,
+      "target_steps": 0
+    },
+    {
+      "k": 5,
+      "source_t": 71575613256141316,
+      "target_t": 8725929042249271,
+      "source_steps": 49,
+      "target_steps": 0
+    },
+    {
+      "k": 8,
+      "source_t": 16522998823844870775802372,
+      "target_t": 13782385181294800118684128,
+      "source_steps": 70,
+      "target_steps": 0
+    },
+    {
+      "k": 12,
+      "source_t": 564557120325180941443049094682937860,
+      "target_t": 430091793533310152773234695274273285,
+      "source_steps": 105,
+      "target_steps": 0
+    },
+    {
+      "k": 20,
+      "source_t": 503162345733866277721120742122446488320653659937300711940,
+      "target_t": 319739956172781933460921113300479457096402081766543825063,
+      "source_steps": 175,
+      "target_steps": 0
+    },
+    {
+      "k": 40,
+      "source_t": 8370907257997097038996777595754849422891547462523792007195852069532115674933174260131615695054781415930890756,
+      "target_t": 3380259844653276485408521193803147667355556082022789516293599960650492882246729328599299438434437760503161116,
+      "source_steps": 350,
+      "target_steps": 0
+    },
+    {
+      "k": 100,
+      "source_t": 3707844903850039761786687016071040299051863562993705262311934757700413035163903902069103019782660194871014225640372027535353771675203720142020038050509386293392277671690117541943900132387958680488565286762404708346073721066597258229864351602105415869238944435212290564,
+      "target_t": 384207156000656068392172229074114691372608428488692168455142249911581316685179106385199590477741553980087455663115146728965516960688374595165569924596262410546220779170347451307106217628360698215152422576874418177845198735804053524585076707453434012673000606302730230,
+      "source_steps": 875,
+      "target_steps": 0
+    }
+  ],
+  "other_unbounded_old_bank_replays": 55,
+  "extension_integration": {
+    "homogeneous_generated_sources_checked": 168,
+    "maximal_G33_H8_sources_checked": 3,
+    "new_branch_examples": [
+      {
+        "status": "reduction",
+        "source_t": 290228181101905455429149770669732486697791429148535780557987145766041466588094010919428,
+        "target_t": 266733724216753975648940279257874003691205661139703951014248931681012655524307061431870,
+        "proof_rule": "maximal_G4_H11_repayment",
+        "source_steps": 287,
+        "target_steps": 0,
+        "meeting_phase": 1,
+        "original_source_W": 2321825448815243643433198165357859893582331433188286244463897166128331732704752087355424,
+        "alternate_W": 2133869793734031805191522234062992029529645289117631608113991453448101244194456491454960,
+        "original_W_drop": 187955655081211838241675931294867864052686144070654636349905712680230488510295595900464,
+        "growing_periods": 33,
+        "contracting_periods": 8,
+        "maximal_growing_run": true,
+        "maximal_contracting_run": true,
+        "guard_semantics": "Exact legal G^k H^j union with positive endpoint below original t"
+      },
+      {
+        "status": "reduction",
+        "source_t": 32118915311328250553373613652066266253126985080178789696747681666928249275390230045035012,
+        "target_t": 29518835373829448633936195723974249715854329399659459493030850177744553395248993660958654,
+        "proof_rule": "maximal_G4_H11_repayment",
+        "source_steps": 287,
+        "target_steps": 0,
+        "meeting_phase": 1,
+        "original_source_W": 256951322490626004426988909216530130025015880641430317573981453335425994203121840360280096,
+        "alternate_W": 236150682990635589071489565791793997726834635197275675944246801421956427161991949287669232,
+        "original_W_drop": 20800639499990415355499343424736132298181245444154641629734651913469567041129891072610864,
+        "growing_periods": 33,
+        "contracting_periods": 8,
+        "maximal_growing_run": true,
+        "maximal_contracting_run": true,
+        "guard_semantics": "Exact legal G^k H^j union with positive endpoint below original t"
+      },
+      {
+        "status": "reduction",
+        "source_t": 63947602441554595651318077533462800019556178731209043612937376188090457084192366079150596,
+        "target_t": 58770937023442143292223451168690625428017453138179215035047451423808094134973680260485438,
+        "proof_rule": "maximal_G4_H11_repayment",
+        "source_steps": 287,
+        "target_steps": 0,
+        "meeting_phase": 1,
+        "original_source_W": 511580819532436765210544620267702400156449429849672348903499009504723656673538928633204768,
+        "alternate_W": 470167496187537146337787609349525003424139625105433720280379611390464753079789442083883504,
+        "original_W_drop": 41413323344899618872757010918177396732309804744238628623119398114258903593749486549321264,
+        "growing_periods": 33,
+        "contracting_periods": 8,
+        "maximal_growing_run": true,
+        "maximal_contracting_run": true,
+        "guard_semantics": "Exact legal G^k H^j union with positive endpoint below original t"
+      },
+      {
+        "status": "reduction",
+        "source_t": 217760110,
+        "target_t": 34920345,
+        "proof_rule": "homogeneous_growth_J123_balanced_repayment",
+        "source_steps": 28,
+        "target_steps": 0,
+        "meeting_phase": 1,
+        "original_source_W": 1742080880,
+        "alternate_W": 279362760,
+        "original_W_drop": 1462718120,
+        "growing_periods": 2,
+        "contracting_periods": 2,
+        "repayment_residue": 123,
+        "growing_residue": 110,
+        "growing_slope": 2187,
+        "growing_numerator_constant": 70,
+        "switch_t": 63570547835,
+        "transformed_source_valuation": 14,
+        "switch_valuation": 0,
+        "maximal_growing_run": true,
+        "scope": "Exact union of 21 homogeneous balanced families"
+      }
+    ],
+    "mixed_supplied_word_witness": {
+      "status": "reduction",
+      "source_t": 604492656900,
+      "target_t": 159747861,
+      "proof_rule": "mixed_growth_J123_balanced_repayment",
+      "source_steps": 42,
+      "target_steps": 0,
+      "meeting_phase": 1,
+      "original_source_W": 4835941255200,
+      "alternate_W": 1277982888,
+      "original_W_drop": 4834663272312,
+      "growing_periods": 3,
+      "contracting_periods": 3,
+      "repayment_residue": 123,
+      "growing_word": [
+        4,
+        14,
+        23
+      ],
+      "switch_t": 12407983182971,
+      "scope": "Certificate for the supplied finite mixed word"
+    },
+    "mixed_wrong_word_rejected": true,
+    "original_quota_rule_and_labels_preserved": true,
+    "source_language_nonregularity_scope": "Any nonregularity theorem in the surrounding research concerns only the original fixed-quota language D, not the enlarged selector, maximal domain, homogeneous language or mixed language."
+  },
+  "all_passed": true,
+  "elapsed_seconds": 0.644,
+  "source_hashes": {
+    "b1_selector.py": "29332076bcaa969565e8c61f4059dd200393e32661485b4eb6eed5e7b88180c6",
+    "verify_b1_selector.py": "149ef7387adb814f0ed4cd4a5c109b4f2d2306f815755742591be1356617d536",
+    "full_menu.py": "f57f8b79d4bc9c4e37a59cac430be8ff87ee35b8dc62ea57c372f62960c8d584",
+    "balanced_repayment.py": "685ce7300f04f636ec4196e7b31b4a1bcba061c2cd477df3459a60398247b554",
+    "maximal_two_run.py": "a7df8f7981a459f1ad0a5a2b41677c1ee75e34a9acd01e1e29d8c30025ebb2e0",
+    "verify_balanced_repayment.py": "fce17c5abddaf8ae70adbc1e52424981815aee33da90ac0b696a429855ea3bf9",
+    "selector_inputs/b1_selector_before_extensions.py": "1c10f36181385b423eb749b1a56b5e3a8cde0b669908e1bd30e88a39166b66df"
+  },
+  "formalization_boundary": "Pinned old-bank Lean source is preserved for provenance; this verifier does not perform a new Lean build. The parent formal package supplies a generic repayment-envelope bound; concrete J123/21-branch adaptation and the combined selector are checked here by exact arithmetic and physical replay."
+}
