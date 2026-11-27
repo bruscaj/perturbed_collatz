@@ -1,0 +1,207 @@
+{
+  "negative_controls_rejected": [
+    "normalization",
+    "missing_word",
+    "endpoint"
+  ],
+  "scope": "exact finite source/depth equality; no infinite theorem",
+  "checked_lengths": 14,
+  "rows": [
+    {
+      "n": 1,
+      "rung": true,
+      "source_words": 1,
+      "source_max": [
+        1,
+        1
+      ],
+      "phase_zero_max": [
+        1,
+        1
+      ],
+      "counts_at_fixed_phase_zero_max": 1
+    },
+    {
+      "n": 2,
+      "rung": false,
+      "source_words": 2,
+      "source_max": [
+        7,
+        3
+      ],
+      "phase_zero_max": [
+        5,
+        3
+      ],
+      "counts_at_fixed_phase_zero_max": 2
+    },
+    {
+      "n": 3,
+      "rung": true,
+      "source_words": 2,
+      "source_max": [
+        23,
+        9
+      ],
+      "phase_zero_max": [
+        23,
+        9
+      ],
+      "counts_at_fixed_phase_zero_max": 1
+    },
+    {
+      "n": 4,
+      "rung": false,
+      "source_words": 7,
+      "source_max": [
+        119,
+        27
+      ],
+      "phase_zero_max": [
+        85,
+        27
+      ],
+      "counts_at_fixed_phase_zero_max": 5
+    },
+    {
+      "n": 5,
+      "rung": true,
+      "source_words": 7,
+      "source_max": [
+        319,
+        81
+      ],
+      "phase_zero_max": [
+        319,
+        81
+      ],
+      "counts_at_fixed_phase_zero_max": 1
+    },
+    {
+      "n": 6,
+      "rung": false,
+      "source_words": 30,
+      "source_max": [
+        1519,
+        243
+      ],
+      "phase_zero_max": [
+        1085,
+        243
+      ],
+      "counts_at_fixed_phase_zero_max": 15
+    },
+    {
+      "n": 7,
+      "rung": false,
+      "source_words": 113,
+      "source_max": [
+        6805,
+        729
+      ],
+      "phase_zero_max": [
+        3767,
+        729
+      ],
+      "counts_at_fixed_phase_zero_max": 67
+    },
+    {
+      "n": 8,
+      "rung": false,
+      "source_words": 113,
+      "source_max": [
+        15797,
+        2187
+      ],
+      "phase_zero_max": [
+        13349,
+        2187
+      ],
+      "counts_at_fixed_phase_zero_max": 13
+    },
+    {
+      "n": 9,
+      "rung": false,
+      "source_words": 525,
+      "source_max": [
+        69749,
+        6561
+      ],
+      "phase_zero_max": [
+        44143,
+        6561
+      ],
+      "counts_at_fixed_phase_zero_max": 180
+    },
+    {
+      "n": 10,
+      "rung": false,
+      "source_words": 525,
+      "source_max": [
+        159181,
+        19683
+      ],
+      "phase_zero_max": [
+        148813,
+        19683
+      ],
+      "counts_at_fixed_phase_zero_max": 6
+    },
+    {
+      "n": 11,
+      "rung": false,
+      "source_words": 2652,
+      "source_max": [
+        695773,
+        59049
+      ],
+      "phase_zero_max": [
+        479207,
+        59049
+      ],
+      "counts_at_fixed_phase_zero_max": 454
+    },
+    {
+      "n": 12,
+      "rung": false,
+      "source_words": 11433,
+      "source_max": [
+        2960239,
+        177147
+      ],
+      "phase_zero_max": [
+        1568693,
+        177147
+      ],
+      "counts_at_fixed_phase_zero_max": 4201
+    },
+    {
+      "n": 13,
+      "rung": false,
+      "source_words": 11433,
+      "source_max": [
+        6451919,
+        531441
+      ],
+      "phase_zero_max": [
+        5230367,
+        531441
+      ],
+      "counts_at_fixed_phase_zero_max": 241
+    },
+    {
+      "n": 14,
+      "rung": false,
+      "source_words": 58040,
+      "source_max": [
+        27401999,
+        1594323
+      ],
+      "phase_zero_max": [
+        16739677,
+        1594323
+      ],
+      "counts_at_fixed_phase_zero_max": 9695
+    }
+  ]
+}

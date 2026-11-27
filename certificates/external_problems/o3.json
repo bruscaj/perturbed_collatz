@@ -1,0 +1,28 @@
+{
+  "scope": "finite arithmetic only; not a proof of density or an infimum",
+  "valuation_patterns": {
+    "lengths": [
+      1,
+      4
+    ],
+    "letters": [
+      1,
+      2,
+      3
+    ]
+  },
+  "exhausted_cylinders": 120,
+  "odd_seeds": {
+    "first": 1,
+    "last": 19999,
+    "count": 10000
+  },
+  "series_terms": 80,
+  "series_lower": "24353541309990355464286619961554936997/170141183460469231731687303715884105728",
+  "series_upper": "24353541309990355464286690330299114661/170141183460469231731687303715884105728",
+  "series_interval_width": "1/2417851639229258349412352",
+  "equality_failure_ratio": "10/9",
+  "negative_controls_rejected": [
+    "zero symbolic gain declared successful"
+  ]
+}
