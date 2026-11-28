@@ -59,8 +59,8 @@
     },
     {
       "path": "certificates/external_problems/verify.py",
-      "bytes": 2044,
-      "sha256": "097b658f9b88fffc9c24af35005b361a64e9e376ef3a8e2399a76a5b4154f9ec"
+      "bytes": 2076,
+      "sha256": "510d2601dbeaf736a237cff097c1dda0632d7d2944b0b929dbe20c103f4ac72d"
     },
     {
       "path": "certificates/frontier/README.md",
@@ -794,8 +794,8 @@
     },
     {
       "path": "lean/external_problems/verify.py",
-      "bytes": 4366,
-      "sha256": "ff613deb1a80b5447dd6683053eb5f350de1cd8356b56091dd257ac1f54b736b"
+      "bytes": 4921,
+      "sha256": "e4e3f76f66d1a7521610579b283cd4bec0b9ef3cb44858d5f66b8f8928aa7f85"
     },
     {
       "path": "lean/frontier/A3SharedComponent.lean",

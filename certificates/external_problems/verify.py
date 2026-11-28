@@ -31,7 +31,7 @@ def main():
         if len(data) != pin["bytes"] or hashlib.sha256(data).hexdigest() != pin["sha256"]:
             raise ValueError(f"frozen supporting statement changed: {name}")
     register = json.loads((ROOT / "papers/external_problems/status.json").read_text())
-    if {c["problem"] for c in register["claims"]} != {"M4", "R8", "R9", "O3′"}:
+    if len(register["claims"]) != 4 or {c["problem"] for c in register["claims"]} != {"M4", "R8", "R9", "O3′"}:
         raise ValueError("incomplete four-problem register")
     for claim in register["claims"]:
         if claim["headline_formal_declarations"] or claim["status"] != "draft candidate":

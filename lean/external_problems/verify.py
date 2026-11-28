@@ -7,6 +7,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import tempfile
+import time
 
 HERE = Path(__file__).resolve().parent
 
@@ -33,12 +34,21 @@ def main():
             shutil.copytree(HERE, root, ignore=shutil.ignore_patterns(".lake", "*.olean", "*.ilean", "__pycache__"))
 
             def run(label, command):
+                started = time.monotonic()
+                row = {"label": label, "command": command, "status": "running"}
+                report["steps"].append(row)
+                if args.report:
+                    args.report.write_text(json.dumps(report, indent=2)+"\n")
+                print(f"RUN {label}", flush=True)
                 result = subprocess.run(command, cwd=root, env=env, capture_output=True, text=True)
-                report["steps"].append({"label": label, "command": command,
-                                        "exit_code": result.returncode,
-                                        "stdout": result.stdout, "stderr": result.stderr})
+                row.update({"exit_code": result.returncode, "seconds": round(time.monotonic()-started, 3),
+                            "status": "passed" if result.returncode == 0 else "failed",
+                            "stdout": result.stdout, "stderr": result.stderr})
+                if args.report:
+                    args.report.write_text(json.dumps(report, indent=2)+"\n")
                 if result.returncode:
                     raise RuntimeError(f"{label} failed: {result.stdout}\n{result.stderr}")
+                print(f"PASS {label} ({row['seconds']}s)", flush=True)
                 return result.stdout
 
             version = run("version", [lake, "env", "lean", "--version"])
