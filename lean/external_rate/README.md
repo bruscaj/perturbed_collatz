@@ -7,11 +7,12 @@ over every real correction of the h-length window, the statements include
     127/(32768 h) ≤ p_h ≤ 5/(2 h),  h≥1,
     p_h → 0.
 
-**Gate pending:** package preparation and build mode provide ordinary compilation
-and transitive axiom checks only. Full source-bound replay, frozen-statement
-comparison, six bundled checker modes, independent checker coverage and hostile
-controls require successful project-specific Linux full-mode receipts. Results
-from the separate depth-one, population or prefix projects do not substitute.
+**Verified source snapshot:** all 11 targets, 765 theorem/helper closures, fresh
+source-bound replay, frozen comparison, all six checker modes and 10 hostile
+controls passed at commit `1406f1a` in run `46101939355`. The [exact receipts](../../verification/external_rate/README.md)
+record the checked source/tree and all project hashes. Historical pending text
+in the frozen specification metadata and manuscript describes the pre-CI
+snapshot. Later documentation/metadata heads require their own regression.
 
 The scope is the precise run-length-only information model. The window is the
 current remaining block length followed by h−1 complete future block lengths

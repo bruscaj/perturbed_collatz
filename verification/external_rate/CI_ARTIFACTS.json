@@ -1,0 +1,143 @@
+{
+  "run_id": 46101939355,
+  "source_commit": "1406f1a5afe211d69f03238e1444bc6a14b9b407",
+  "source_tree": "bdc83507ad610043a097716e4077c88a4dd48c12",
+  "all_five_jobs": "passed",
+  "rate_targets": 11,
+  "rate_own_theorem_closures": 765,
+  "rate_source_files": 58,
+  "checker_coverage": {
+    "complete proof closure": [
+      "Lean default",
+      "Lean paranoid",
+      "lean4lean",
+      "nanoda",
+      "con-leche",
+      "con-ron"
+    ],
+    "frozen statement comparison": [
+      "Lean default",
+      "Lean paranoid",
+      "lean4lean",
+      "nanoda",
+      "con-leche",
+      "con-ron"
+    ]
+  },
+  "negative_controls": 10,
+  "export_bytes": 97940365,
+  "export_sha256": "2a3f8fb539863d1afe9593cbb08764ec64efbd6cb75cc43aa6a598783b9e9d27",
+  "public_project_all58_files_match_successful_snapshot_before_documentation_update": true,
+  "artifact_name_note": "Artifact suffix1b801b84 is GitHub PR event SHA; actual checked source/tree recorded separately above and in source-tree receipts.",
+  "source_pins": {
+    "Arithmetic.lean": "8ad07971f3dd9b211aa99c36f6ed9c645e9dbb158b7ba33e81b72d5ca2c6f76e",
+    "Audit.lean": "e551c69758ece5300dc514d15562783a1cf47889f2b069d6a7ff335a4c0459d5",
+    "CountablePartition.lean": "1d1d1f699b9abe0de3eb9c03bb3306359395629d3b33739a948915a3e09f9d7d",
+    "Cylinders.lean": "22ef4309c927190e4c004ce8fe2cd0761a59ef6ce81ef0a230b7d83515288a17",
+    "Definitions.lean": "cf29376721942a78328491cd910690497f95d381711f0d2e758998fbba9374bc",
+    "DensityBounds.lean": "1c0efec93aeb9f3024ef9b3cfcb7868504b6d819fdef578865903ce267a47e3d",
+    "ExitCylinders.lean": "178d20f9f84013d8c4e942542948c3acff31c8bac17efde06f22ec4e60afe611",
+    "ExpectedTypes.lean": "5ce898eb70690f6f77e26a95cbafb5ef268fa93617ab7418a0b25f6878c34968",
+    "Gains.lean": "1471ce4e6e2e5c3db4824616be2c1dd9f99d6c959ee8e809b109cfdd1ed54b03",
+    "GeneralArithmetic.lean": "06cbcb0af62e33e9f631750277b7e5e6d8044115b554ddaf323d3a112bddfe30",
+    "GeneralBlockWords.lean": "b3a8b53c5fe4fb1db185671a2f349f57e251d09b14d5ed76c04e17633f3ef4c0",
+    "GeneralCompatibility.lean": "bde003b9d0e546dccc9a086637e86dc03ae031c8797a739091b04c309023b62f",
+    "GeneralCylinderDensity.lean": "43c77d1a8062a836f60f86d148175e8353488cc71cf605e5cf45a23b7973fdb7",
+    "GeneralDefinitions.lean": "9d3f21078449309feb93e42b2d2b5fc8c5f0c48c4ff42ac7b62fc5d911c2decc",
+    "GeneralDensity.lean": "2180aea59aded9c0fd910ec19e81c8ef073d8486cf01b62209d21add10776e59",
+    "GeneralExpectedTypes.lean": "65087d9a25b910c2875c128d9c477cab9b5e506629d446f5db193450dad3b8fa",
+    "GeneralGains.lean": "0c17a1a320f733f9aab1cad379a4101fbd382550ffa63330cd7dd166ad59cf82",
+    "GeneralMarginal.lean": "d69a06493a61fd43b5ab901aec79e289d30028d79338b6c025d8f7e996227bae",
+    "GeneralPreimage.lean": "42fdc76715211e50b1b79da036ed3b65a94be2226c90296021723886e8942c25",
+    "GeneralProjection.lean": "b45485e3a49d40ad02239541efbb6c1cb18f256a8877e7f53b4d56eeeed810e8",
+    "GeneralRefinementLabels.lean": "87a8dafc9256bdd1245b3662df2cda8cd98ca6fb3fd7b07ca90d8bee53b2f314",
+    "GeneralSolution.lean": "59dfb6be602190bcdafbb12a639b07a08ae26fa9eb5b953ed638cc5cab4fb523",
+    "GeneralSourceDensity.lean": "d21d8bdfb3181f59f1ca23b98696dd99d8a54d58ce674f061eccd739e1d11dd9",
+    "GeneralStrideWords.lean": "c513dd033ff334a4a40ba068ec60e8c715176e30f507247a680891269106a352",
+    "GeneralWeights.lean": "b0a23ff1e40cc0588f96bf0ebb8e9ea95c588fa539c79fe853d93c033a6520b6",
+    "PartitionGeneral.lean": "0e50e035d0456cb71b6d7238957f219133a4eaecfda96fb9ab74b5fcb723ed3b",
+    "PopulationWeights.lean": "8affb6d578e9891f306df4b54cc621c33d110227eaec7912d8dcf826f9697190",
+    "Progressions.lean": "69262afd5c9229bda3c0ffab6f53d78f3afef9ea6101b918232dce4f6b13fb18",
+    "RATE_PROOF.md": "503d79a97151b223627844d3e7fde1ae55cf3497990051ffb7d18f4c58fb63f5",
+    "README.md": "60062479d8807db88dc91179a9bcf804d77da1469522c7046b1c7ba0d3340dd3",
+    "RateBounds.lean": "1f1230cca0a576f529c0ebfee6717756977cfe5d825662db2fed9da7a268f4dd",
+    "RateCantelli.lean": "c1449566affb1cd689fbd259d58534f50d9634c68f05aa8a96a5e55d53f40278",
+    "RateChallenge.lean": "acc8333501a8086658785e4ebe478a33745d19558f4ecb7d47df46e1df38993e",
+    "RateCycles.lean": "b8b796d6d684f0b18fb8adfbbb9082dd7d781c2da46053fc4cc1351f823ff9f1",
+    "RateDefinitions.lean": "c377f507d249658b9b53b04c6b2c0906ec95dbdeb1f37291d104b7c07f73eb8d",
+    "RateExpectedTypes.lean": "d0089dc07e0599ad8d128291c58518a3a704b20571f735924364ea1b9a3032cc",
+    "RateInfimum.lean": "e3f25c44065d0b49bc7ac37bc8c80eb7adc18e036c87b77dc838bd261bac871b",
+    "RateLower.lean": "f637a9c7fdacf430131f034adec4464b708abcf3295cff63a658fd509cec58bc",
+    "RateMain.lean": "94e5e5b19e6c83ac2418f35e5e1856d5cdd1e84e8977c60d51eb7c421b0e13fd",
+    "RateMarker.lean": "4f989d20b5c0b3f36c230409546768dc1fe27fd38bb73be5c6f43c67fec7e0aa",
+    "RateMarkerEvents.lean": "66d1408e1782c332bbd03b86f0159f15a4ad6e21fa460a9b6bd52a410bb5f5ea",
+    "RateMarkerUpper.lean": "823e5738f373cffe96fc50a1f4d284f433e84a745a6150ae43fa34befc9e567c",
+    "RateMaxMass.lean": "4b83f8123bb706da756d38ae1c28583fbfd8494df473c4d306ef62c3f1207e6d",
+    "RateMoments.lean": "296ddb551fccd64907b50c32b2e6fab43037aae2abafaa5a488b7a8f7b3dba10",
+    "RateNormalization.lean": "33ed32df6b5466048e6d98a5d9bfb0b623b780a7c1b04fa533e0fbad26215213",
+    "RateProductMoments.lean": "2f348ac79774115f8d48296121fd019a2d851b358d4db9ec270c2d72fd06f224",
+    "RateSolution.lean": "5680d2b707de82f67b40c77e7ffbb1933f4e0f7fb4d124e2ef5d0452bbfc3361",
+    "RateSymmetry.lean": "d8b8a6440201b9393ff34c037e851c826822b2142b2b41a9c16a81cc29e125c5",
+    "SourceDensity.lean": "0a9b01fcef47bc2684c2688055feff86747b453abe15ca295bf6a7cbd44205f3",
+    "cache-imports.txt": "44712d38aaa21fba6e3ce50464aed63068a4ecc8fd8d99d2904a8327133ce67a",
+    "comparator.json": "ea14a7f7e9607e89d7dc4f28d2f6e2e4d7b46081f125e199ffa567f95deea2c5",
+    "lake-manifest.json": "d9af70d9d11a4b210ada044862a0df762c9f375140547d0e3cda35a5d910d96e",
+    "lakefile.toml": "f083ffc941cb268e4d935d3497b2c867f06320af2e16498817cdcba39ebcbf8e",
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+    "owned_modules.json": "fbf72a78437552fc3fc6a88f759bbf702f5781f5bb6143478a228f5d9ed4b329",
+    "specification.json": "0a6752245bfca8e1bca819c5c8e9d8e78abb99335555610ddd8ee097eac38fb7",
+    "test_mutations.py": "2af785bf62347f95715d3b7302cf1d82cb262cac52725bc39ea1c6982765f8d1",
+    "verify.py": "25dfcbde117a7534f819f4b30992039047caabf41733482484344fbccba45796"
+  },
+  "public_artifacts": {
+    "external-rate-mutations.json": {
+      "public_path": "external-rate-mutations.json",
+      "sha256": "aad36995ac2e34add27f0cc10df6624c99e1e115f030c505b80938df0fa4ffe5"
+    },
+    "external-rate-source-tree.txt": {
+      "public_path": "external-rate-source-tree.txt",
+      "sha256": "e959f936ab54c969a7f1d2b295b7e64802c042eb3d932a8ee90b39d290fbb14b"
+    },
+    "external-rate.json": {
+      "public_path": "external-rate.json",
+      "sha256": "cd3d01b98006297f84a461655512c8b775715eb32bfe881834b53d69baec3052"
+    },
+    "external-rate-mutations-logs/005-numeric-log-gap-prerequisites.log": {
+      "public_path": "negative_logs/005-numeric-log-gap-prerequisites.txt",
+      "sha256": "f5cf90d77737c76bc630432bbf7f1e7f38d460c9db34f5df54b72fd8fa3517e1"
+    },
+    "external-rate-mutations-logs/002-wrong-statement-rejected-by-actual-comparator.log": {
+      "public_path": "negative_logs/002-wrong-statement-rejected-by-actual-comparator.txt",
+      "sha256": "4a29c6a3c2a0c559ea80041c941f0a1531f194f8952a0537444391c0149eb9d3"
+    },
+    "external-rate-mutations-logs/positive-full.json": {
+      "public_path": "negative_logs/positive-full.json",
+      "sha256": "61410e829a2c0aa3f0b7beaadc25364e025ae4b94e41b54d0130ecea4b01b358"
+    },
+    "external-rate-mutations-logs/007-corrupt-integer-gap-rejected-by-actual-production-lean-proof.log": {
+      "public_path": "negative_logs/007-corrupt-integer-gap-rejected-by-actual-production-lean-proof.txt",
+      "sha256": "d3b229d3c246989f94a1988c432c352b75967ab8e10c34c30aff9451efe810c1"
+    },
+    "external-rate-mutations-logs/004-hidden-imported-custom-axiom-rejected-by-all-closure-audit.log": {
+      "public_path": "negative_logs/004-hidden-imported-custom-axiom-rejected-by-all-closure-audit.txt",
+      "sha256": "807c03ea1e5d98fb023ff46526ffc9aea0b3c2378547866c3761460178855d8c"
+    },
+    "external-rate-mutations-logs/006-positive-production-log-gap-proof.log": {
+      "public_path": "negative_logs/006-positive-production-log-gap-proof.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "external-rate-mutations-logs/001-wrong-statement-positive-compilation.log": {
+      "public_path": "negative_logs/001-wrong-statement-positive-compilation.txt",
+      "sha256": "62f935831b506de53366fc9a01d12f002e8232d61012aef54a71af786bf01ab6"
+    },
+    "external-rate-mutations-logs/003-custom-axiom-positive-compilation.log": {
+      "public_path": "negative_logs/003-custom-axiom-positive-compilation.txt",
+      "sha256": "6a785c302e6784b0309623f1dd57b6a0a87ee07fb68f4d88074a7ebab734e1a0"
+    },
+    "external-rate-mutations-logs/000-positive-full-eleven-target-pipeline.log": {
+      "public_path": "negative_logs/000-positive-full-eleven-target-pipeline.txt",
+      "sha256": "902d9f0f2fae20e13f69a9f41eb2c486fc080cac3fedb81528e17c7215c8c41a"
+    }
+  },
+  "limits": "Exact source-pinned checker assurance, not novelty, human expert review, ordinary Collatz convergence or a proof of optimization/M4/R8/R9."
+}

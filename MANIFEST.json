@@ -4,8 +4,8 @@
   "files": [
     {
       "path": ".github/workflows/verify.yml",
-      "bytes": 10040,
-      "sha256": "10d252c25ead40e9a70b558f9ae2ef04a7e16dc7672d30b94a54295c4e76b983"
+      "bytes": 12286,
+      "sha256": "791251e3977a98902d15f53f72160d5befb2c0e71e4fa73186977e24df4a0001"
     },
     {
       "path": ".gitignore",
@@ -14,8 +14,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 9044,
-      "sha256": "1fb7ddb0211fe2eb10895c95ccf9fd6b4811dc85ec88df216e83ef844a174d69"
+      "bytes": 9621,
+      "sha256": "1c4058747ac963cb0c08e746b9b9dad6d66ea3b902dbe2d0e7d36ed50f287d2b"
     },
     {
       "path": "Makefile",
@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 15788,
-      "sha256": "acab876624ae4ea9ca3ccb385581dafb43212104ed587d8f575d078b4826adb4"
+      "bytes": 16728,
+      "sha256": "d44a67fee8d9d20e82236908a82ed7d3536e580804b749e7375800d27dfe43aa"
     },
     {
       "path": "certificates/exposition/examples.json",
@@ -664,8 +664,8 @@
     },
     {
       "path": "claims.json",
-      "bytes": 47085,
-      "sha256": "99178db076416f97c232346818f289db2708868447b1d19138d1efeb9d6d9f09"
+      "bytes": 51845,
+      "sha256": "1381f402deed45a8df18d6f51ca3de884bbc5f35217f75d1188c8c8339df8b6a"
     },
     {
       "path": "figures/README.md",
@@ -911,6 +911,191 @@
       "path": "lean/external_analysis/verify.py",
       "bytes": 13547,
       "sha256": "9a71a88fe334b54d5b892c7f68bdeb6395ffa51f0710c99dc19db9247bef70d0"
+    },
+    {
+      "path": "lean/external_bridge/Arithmetic.lean",
+      "bytes": 5377,
+      "sha256": "8ad07971f3dd9b211aa99c36f6ed9c645e9dbb158b7ba33e81b72d5ca2c6f76e"
+    },
+    {
+      "path": "lean/external_bridge/Audit.lean",
+      "bytes": 5312,
+      "sha256": "91e235afa2f6748bfe2900150a0e2d2377fa8a75eb0841ea1a278a1ca26b9ca7"
+    },
+    {
+      "path": "lean/external_bridge/BridgeArithmetic.lean",
+      "bytes": 1780,
+      "sha256": "645d446755a140470ee402fdd0596e9fd8c55496d1de6515ff1e756538546f57"
+    },
+    {
+      "path": "lean/external_bridge/BridgeBoundary.lean",
+      "bytes": 3707,
+      "sha256": "983d077ab6edb13c99adb6d2fcb9000c4b633a672e807bdc30c5e4dd7daf4a8d"
+    },
+    {
+      "path": "lean/external_bridge/BridgeChallenge.lean",
+      "bytes": 1853,
+      "sha256": "844ac679b7b645ee05e8f4d094abb8ae345373f901799e733a4164d51d75b164"
+    },
+    {
+      "path": "lean/external_bridge/BridgeDefinitions.lean",
+      "bytes": 4708,
+      "sha256": "7a36ebc1e9ff89fcec7ad1fdae1c2d5ae9ee011b06ae110fd4f34999e7df19a7"
+    },
+    {
+      "path": "lean/external_bridge/BridgeEncoding.lean",
+      "bytes": 5895,
+      "sha256": "f7f6f59daca369a1347219540cfbc15312af9592b65f123c041418939c480816"
+    },
+    {
+      "path": "lean/external_bridge/BridgeExpectedTypes.lean",
+      "bytes": 4767,
+      "sha256": "850dcdd0d75479edaeab1c8d6d336b9099f56511e0b6f5a5125bedfca05838aa"
+    },
+    {
+      "path": "lean/external_bridge/BridgeExtremal.lean",
+      "bytes": 5260,
+      "sha256": "f3119551454044ae27651938be9449891ece860b37fd4d781d4129048d17c04c"
+    },
+    {
+      "path": "lean/external_bridge/BridgeFinite.lean",
+      "bytes": 9099,
+      "sha256": "c761ec629811aeaeaf51bf7dad4e3f612cbdb20c77a3fcc1cca3d8fa8f5a548e"
+    },
+    {
+      "path": "lean/external_bridge/BridgeRewards.lean",
+      "bytes": 3425,
+      "sha256": "53da32ac28f519ad0e63bfad402139c91f6856e43d13134bcfa6430807c3e673"
+    },
+    {
+      "path": "lean/external_bridge/BridgeRungs.lean",
+      "bytes": 2461,
+      "sha256": "df4d32953097dd24a6479aae99fbd93a5dd9ece47eb98d59347055db2209872d"
+    },
+    {
+      "path": "lean/external_bridge/BridgeSolution.lean",
+      "bytes": 3033,
+      "sha256": "9fd6a08b8a3c302f44afbe44f940fdee45ae566780bbebd69c2f9ee725f24ccf"
+    },
+    {
+      "path": "lean/external_bridge/BridgeTransport.lean",
+      "bytes": 6410,
+      "sha256": "35a0565a222c677fd59249de39599d526d982dc97453c60ed1a1261b321612cb"
+    },
+    {
+      "path": "lean/external_bridge/Definitions.lean",
+      "bytes": 3873,
+      "sha256": "cf29376721942a78328491cd910690497f95d381711f0d2e758998fbba9374bc"
+    },
+    {
+      "path": "lean/external_bridge/DepthOneSeries.lean",
+      "bytes": 9797,
+      "sha256": "b0852b07d1f7105c61464d1642c998ece3563cb81e658cfe4a995f0e6b7e2562"
+    },
+    {
+      "path": "lean/external_bridge/ExpectedTypes.lean",
+      "bytes": 2611,
+      "sha256": "5ce898eb70690f6f77e26a95cbafb5ef268fa93617ab7418a0b25f6878c34968"
+    },
+    {
+      "path": "lean/external_bridge/FINITE_BRIDGE_PROOF.md",
+      "bytes": 18898,
+      "sha256": "794b2c592c55ed7c67dc009ae1f012ebac881453a31434e48123251ce0a23093"
+    },
+    {
+      "path": "lean/external_bridge/LogRatioIrrational.lean",
+      "bytes": 1811,
+      "sha256": "2a2950ef39be685654ab7c3d3c4c734cf6103a74fa622d450ee0675e0240a89e"
+    },
+    {
+      "path": "lean/external_bridge/PopulationWeights.lean",
+      "bytes": 6242,
+      "sha256": "8affb6d578e9891f306df4b54cc621c33d110227eaec7912d8dcf826f9697190"
+    },
+    {
+      "path": "lean/external_bridge/PositiveCeilReturns.lean",
+      "bytes": 4850,
+      "sha256": "98e1852aaa8baa5ecabcc70424b24d8871f7178fb7768b31c8278a579f0e8a37"
+    },
+    {
+      "path": "lean/external_bridge/PrefixDefinitions.lean",
+      "bytes": 1373,
+      "sha256": "d7b5cd8b624dae007e3c3dc7f3620260dbfcf2169d0211b0859e18ed58180069"
+    },
+    {
+      "path": "lean/external_bridge/README.md",
+      "bytes": 5535,
+      "sha256": "73b442b3cedb125520fe84832047067b51de2ebd1471721d5652d9afcf7e7a58"
+    },
+    {
+      "path": "lean/external_bridge/RungDefinitions.lean",
+      "bytes": 756,
+      "sha256": "8c1996d5e2a11f726324f8f0fd282c061ed1b3819ccb734ecbccf49a8ccb17b5"
+    },
+    {
+      "path": "lean/external_bridge/RungTransfer.lean",
+      "bytes": 2093,
+      "sha256": "e61650b3d2f90f3431c2bd861c57448aa86d54be769d554ab437808d7d612dde"
+    },
+    {
+      "path": "lean/external_bridge/SyracuseSlope.lean",
+      "bytes": 1170,
+      "sha256": "7909ad410f4b2e1ac7cf13d6f476679aa1d608c92f95ca2c3514a696a3cd5395"
+    },
+    {
+      "path": "lean/external_bridge/cache-imports.txt",
+      "bytes": 581,
+      "sha256": "1101a2c687488c1e9b041dfbeea67dc229bde462d322d78c24ace0ee172139ab"
+    },
+    {
+      "path": "lean/external_bridge/comparator.json",
+      "bytes": 1723,
+      "sha256": "d9cfb493f16a391ee73da2e924dc2c7f4dee82925b77ef96058ee72d820ee734"
+    },
+    {
+      "path": "lean/external_bridge/frozen_propositions.json",
+      "bytes": 177692,
+      "sha256": "3ebd38414d2c39b56178874742869df8768d0495b848341d1cdf3f587de7dd59"
+    },
+    {
+      "path": "lean/external_bridge/inventory.json",
+      "bytes": 1900154,
+      "sha256": "ae9ba5fa1272e35fb4f9f31f0882ef763f1c435210c5b6ef44876cec75055aa4"
+    },
+    {
+      "path": "lean/external_bridge/lake-manifest.json",
+      "bytes": 3186,
+      "sha256": "3c008413bc7624bf190649eca3d6d55bc03ffc8cbbb06ac94fa8ff42b91735f5"
+    },
+    {
+      "path": "lean/external_bridge/lakefile.toml",
+      "bytes": 2118,
+      "sha256": "9f160d4874b7609c37c7260dbb4ede1dc7c8d72ebb312894c2cdf9cd1bb306d0"
+    },
+    {
+      "path": "lean/external_bridge/lean-toolchain",
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+    },
+    {
+      "path": "lean/external_bridge/owned_modules.json",
+      "bytes": 453,
+      "sha256": "c7c905413664f3d0e7054c30881802b75c164a5644a7e1bf31764bcab3f70a21"
+    },
+    {
+      "path": "lean/external_bridge/specification.json",
+      "bytes": 3729,
+      "sha256": "ca356926ecab623345eebd648c99ae88eaafbcbf54aa8156590b12b3b1ff0d6d"
+    },
+    {
+      "path": "lean/external_bridge/test_mutations.py",
+      "bytes": 28296,
+      "sha256": "6fbac30a9072fe2a7f08b302e420d8118c870b60cd8a04fc8a76a930eafa61ad"
+    },
+    {
+      "path": "lean/external_bridge/verify.py",
+      "bytes": 16273,
+      "sha256": "843980e975a42fe88fb58c6dfa89b5c1267a40fc2576d65e6561c42ee31ba22a"
     },
     {
       "path": "lean/external_population/.gitignore",
@@ -1349,8 +1534,8 @@
     },
     {
       "path": "lean/external_rate/README.md",
-      "bytes": 5320,
-      "sha256": "60062479d8807db88dc91179a9bcf804d77da1469522c7046b1c7ba0d3340dd3"
+      "bytes": 5432,
+      "sha256": "76558e8e571ba3e319253cf399b92ab9c5e7e0a942494d69c1ff9236e2f5555d"
     },
     {
       "path": "lean/external_rate/RateBounds.lean",
@@ -1460,7 +1645,7 @@
     {
       "path": "lean/external_rate/inventory.json",
       "bytes": 7270560,
-      "sha256": "77ef32e3bfe62573c502e8d44787441f0e4b4b278adb0ae6f0029d1051d8c242"
+      "sha256": "9ef177802d157ad5c5889c0aa6e0829e99ade8cb309a3508273521d103c632af"
     },
     {
       "path": "lean/external_rate/lake-manifest.json",
@@ -1899,13 +2084,13 @@
     },
     {
       "path": "papers/README.md",
-      "bytes": 3016,
-      "sha256": "3494cbb118850b7f2ec1c5858a1f32a2ec98bd33927909255b33b1868d933a4a"
+      "bytes": 3263,
+      "sha256": "05df0792a224bc3efc0036a59e41ef3d9253a27c299240237d6c8732b9ad49fa"
     },
     {
       "path": "papers/arithmetic_bridge_pressure/README.md",
-      "bytes": 17772,
-      "sha256": "8602aa0c2a37f68f461b6d53024eb183291d5902d847c054afc0a755173c7bc3"
+      "bytes": 18267,
+      "sha256": "9f622ac76a7f95052cf10f9c463fdcb5d00263628aa4d51d61dabe70bc6867ce"
     },
     {
       "path": "papers/arithmetic_bridge_pressure/paper.pdf",
@@ -1924,18 +2109,18 @@
     },
     {
       "path": "papers/external_problems/README.md",
-      "bytes": 8892,
-      "sha256": "baa8a482b21eb0b882e40b044ac2e83954745a0ab48c637852f30fc47079d998"
+      "bytes": 8921,
+      "sha256": "d6633d5533f81e4e309032bc0154b351f15d9920addefa5f776bab510cbb4619"
     },
     {
       "path": "papers/external_problems/status.json",
-      "bytes": 7548,
-      "sha256": "30b9803aa3fc7503f3ecae965a0027f32beeb712fee1b612341b0788b317aa29"
+      "bytes": 9225,
+      "sha256": "2edfa18b5e6fdeed91960a80217e720f98182011b2629d08ef058387b0d9759d"
     },
     {
       "path": "papers/finite_information_lyapunov/README.md",
-      "bytes": 9250,
-      "sha256": "d3c65da34c9794d7ebb500b71278615297bca213ae82d33f1c02d3906b212ad5"
+      "bytes": 9376,
+      "sha256": "ad637450718868ea89619c62473f14ea08eda3ca2a788253db1f9462c6135562"
     },
     {
       "path": "papers/finite_information_lyapunov/paper.pdf",
@@ -2096,6 +2281,76 @@
       "path": "verification/external_prefix/external-support.json",
       "bytes": 16117,
       "sha256": "d37c4f78414bb72d62b6f531094411668afe72d4462962427b0d50b554706003"
+    },
+    {
+      "path": "verification/external_rate/CI_ARTIFACTS.json",
+      "bytes": 9527,
+      "sha256": "c635f8ace2a57936687fad1a944a54dedb2d64ea15f39c30eb17861e1b225131"
+    },
+    {
+      "path": "verification/external_rate/README.md",
+      "bytes": 1925,
+      "sha256": "bd8ab23df0851cd11bcf279bb09e3457fc7d1f4374348227f8aa71f7a0e1d2db"
+    },
+    {
+      "path": "verification/external_rate/external-rate-mutations.json",
+      "bytes": 7225,
+      "sha256": "aad36995ac2e34add27f0cc10df6624c99e1e115f030c505b80938df0fa4ffe5"
+    },
+    {
+      "path": "verification/external_rate/external-rate-source-tree.txt",
+      "bytes": 82,
+      "sha256": "e959f936ab54c969a7f1d2b295b7e64802c042eb3d932a8ee90b39d290fbb14b"
+    },
+    {
+      "path": "verification/external_rate/external-rate.json",
+      "bytes": 14733075,
+      "sha256": "cd3d01b98006297f84a461655512c8b775715eb32bfe881834b53d69baec3052"
+    },
+    {
+      "path": "verification/external_rate/negative_logs/000-positive-full-eleven-target-pipeline.txt",
+      "bytes": 541,
+      "sha256": "902d9f0f2fae20e13f69a9f41eb2c486fc080cac3fedb81528e17c7215c8c41a"
+    },
+    {
+      "path": "verification/external_rate/negative_logs/001-wrong-statement-positive-compilation.txt",
+      "bytes": 2032,
+      "sha256": "62f935831b506de53366fc9a01d12f002e8232d61012aef54a71af786bf01ab6"
+    },
+    {
+      "path": "verification/external_rate/negative_logs/002-wrong-statement-rejected-by-actual-comparator.txt",
+      "bytes": 2671,
+      "sha256": "4a29c6a3c2a0c559ea80041c941f0a1531f194f8952a0537444391c0149eb9d3"
+    },
+    {
+      "path": "verification/external_rate/negative_logs/003-custom-axiom-positive-compilation.txt",
+      "bytes": 2072,
+      "sha256": "6a785c302e6784b0309623f1dd57b6a0a87ee07fb68f4d88074a7ebab734e1a0"
+    },
+    {
+      "path": "verification/external_rate/negative_logs/004-hidden-imported-custom-axiom-rejected-by-all-closure-audit.txt",
+      "bytes": 1879843,
+      "sha256": "807c03ea1e5d98fb023ff46526ffc9aea0b3c2378547866c3761460178855d8c"
+    },
+    {
+      "path": "verification/external_rate/negative_logs/005-numeric-log-gap-prerequisites.txt",
+      "bytes": 406,
+      "sha256": "f5cf90d77737c76bc630432bbf7f1e7f38d460c9db34f5df54b72fd8fa3517e1"
+    },
+    {
+      "path": "verification/external_rate/negative_logs/006-positive-production-log-gap-proof.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "verification/external_rate/negative_logs/007-corrupt-integer-gap-rejected-by-actual-production-lean-proof.txt",
+      "bytes": 351,
+      "sha256": "d3b229d3c246989f94a1988c432c352b75967ab8e10c34c30aff9451efe810c1"
+    },
+    {
+      "path": "verification/external_rate/negative_logs/positive-full.json",
+      "bytes": 14733075,
+      "sha256": "61410e829a2c0aa3f0b7beaadc25364e025ae4b94e41b54d0130ecea4b01b358"
     }
   ]
 }

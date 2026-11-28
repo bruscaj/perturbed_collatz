@@ -1,0 +1,7 @@
+/tmp/rate-negative-controls-1zupgvqc/corrupted-log-gap/LogGapCorrupt.lean:11:37: error: unsolved goals
+⊢ False
+/tmp/rate-negative-controls-1zupgvqc/corrupted-log-gap/LogGapCorrupt.lean:14:2: error: linarith failed to find a contradiction
+hh : 12 * Real.log 2 < 7 * Real.log 3
+a✝ : 7 * (Real.log 3 - Real.log 2) ≤ 4 * Real.log 2
+⊢ False
+failed

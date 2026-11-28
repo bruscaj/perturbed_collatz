@@ -1,5 +1,11 @@
 # Release history
 
+## Finite source-word bridge and rate receipts — 28 November 2026
+
+- Added all 25 frozen finite bridge source proofs, exact finite population and reward-preserving count bijections, actual unbounded rungs, and unique finite extremizer; ordinary audits cover357 theorem/helper closures. Added the sixth mandatory independent-assurance job; its results remain pending.
+- Preserved exact five-job passing receipts for1406f1a, including all11 rate targets, all765 closures, six checker modes and ten hostile controls. These do not prove M4/R8/R9 limits or finite optimization.
+
+
 ## Inverse-depth rate source proofs — 28 November 2026
 
 - Added all eleven pre-proof-frozen required rate implementations for the literal finite-run-window infimum, with explicit inverse-depth bounds and a vanishing limit. The fresh source/type/axiom audit covers 765 theorem/helper closures.

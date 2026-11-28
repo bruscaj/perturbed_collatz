@@ -1,0 +1,11 @@
+RUN pinned toolchain
+PASS pinned toolchain (1.891s)
+RUN all own source clean build
+PASS all own source clean build (57.415s)
+RUN all own theorem closures and raw frozen target types
+PASS all own theorem closures and raw frozen target types (45.209s)
+RUN fresh complete proof-closure replay and all bundled checkers
+PASS fresh complete proof-closure replay and all bundled checkers (68.378s)
+RUN all 11 frozen statements and independent checker
+PASS all 11 frozen statements and independent checker (87.967s)
+passed rate full assurance gates

@@ -419,3 +419,5 @@ statements against the pinned source, full analytic formalization and transitive
 axiom audit, fresh proof replay and independently implemented checker coverage
 of these actual headline claims. Supporting-theorem checks must remain labeled
 as such. Closed review gates for supporting arithmetic do not close these gaps.
+
+The PDF retains its earlier evidence snapshot. The new [finite source bridge](../../lean/external_bridge/README.md) proves all 25 finite word/rung/reward/count targets with a fresh 357-closure source/type/axiom audit; its [complete companion](../../lean/external_bridge/FINITE_BRIDGE_PROOF.md) explains the exact literal model. Project-specific independent bridge gates remain pending. This adds no pressure limit, entropy theorem or critical differentiability proof to the analytic candidate.
