@@ -1,9 +1,14 @@
-# O3′ depth-one infimum: written proof candidate
+# Finite-information Syracuse potentials: density, rate and depth-one infimum
 
 [Read the TeX/PDF manuscript](paper.pdf) · [TeX source](paper.tex). Rebuild both papers with `python3 papers/build.py` from the repository root; `--check` compares deterministic clean rebuilds on the recorded TeX toolchain.
 Jake S. Brusca, 27 November 2026. ChatGPT assisted with the ideas, proof, writing and review. **Status: written draft. The public `lean/external_analysis/` package proves all14 frozen depth-one targets using pinned mathlib; at source commit `8524770`, its clean build, exhaustive axiom audit, sandbox replay, frozen comparison, all six bundled checker modes and nine hostile fixtures passed ([receipts](../../verification/external_analysis/README.md)). Later manuscript changes require final-tree regression CI. No human expert refereeing is claimed.** Separate AI contexts reconstructed the argument and checked the source model; this is not external acceptance.
 
-This studies the depth-one subquestion of Polson–Sokolov O3′, not the full arbitrary-depth problem. See the [source and status register](../external_problems/README.md). Finite arithmetic for the series is reproduced by `python3 certificates/external_problems/verify.py` from the repository root. No ordinary Collatz convergence follows.
+The manuscript develops literal arbitrary finite-depth densities, explicit inverse-depth bounds, and the exact depth-one infimum/nonattainment theorem for the run-length-only O3′ information class. See the [source and status register](../external_problems/README.md). Finite arithmetic for the series is reproduced by `python3 certificates/external_problems/verify.py` from the repository root. No ordinary Collatz convergence follows.
+
+
+The [finite-depth density library](../../lean/external_population/README.md) passed full independent gates at8746e08. The [rate library](../../lean/external_rate/README.md) implements all eleven required frozen source proofs, with fresh type/axiom checks of765 theorem/helper closures. Its full replay/comparator/six-checker and hostile-control gates remain pending. The expanded [rate reconstruction](../../lean/external_rate/RATE_PROOF.md) provides the full arithmetic population, marker and Cantelli arguments. Exact higher-depth optimization, the optional stronger liminf and sharp constants remain open.
+
+The depth-one derivation below retains its own exact scope.
 
 ## Related work and attribution
 

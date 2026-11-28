@@ -7,7 +7,7 @@ solved. The existing [core paper](../paper.pdf) retains its separate scope.
 
 | Draft | Mathematical development | Limit |
 | --- | --- | --- |
-| [Finite-information Syracuse potentials](finite_information_lyapunov/README.md) | Literal odd-seed density for arbitrary depth-one corrections; exact infimum and nonattainment proof | All 14 depth-one frozen targets have Lean proofs; full checker CI passed at8524770; not the full arbitrary-depth O3′ problem |
+| [Finite-information Syracuse potentials](finite_information_lyapunov/README.md) | Literal odd-seed density at every fixed finite depth, inverse-depth rate, and exact depth-one infimum/nonattainment | Depth-one14 and density22 targets passed full gates; rate11 source proofs complete, independent rate gates pending; exact higher-depth optimization remains open |
 | [Near-extremal word entropy](arithmetic_bridge_pressure/README.md) | Source/depth correspondence, large-tilt pressure, matching entropy lower bound and proposed R9 expansion | Near-one rung M4 and large-tilt convergence only; not full M4 or R8 |
 
 The [four-problem source/status register](external_problems/README.md) gives the
@@ -27,4 +27,4 @@ priority claim. The owner's final merge and release decisions remain pending.
 
 The separate [depth-one analytic package](../lean/external_analysis/README.md) proves the literal Syracuse model for h=1. Its dedicated `external-analysis-h1` CI job passed full replay, comparison and hostile fixtures at8524770; source-pinned receipts are in `verification/external_analysis/`. Later final-head regressions remain required.
 
-A [complete finite-depth density reconstruction](../lean/external_population/GENERAL_DENSITY_PROOF.md) now accompanies the depth-one paper. Its separate formal library proves all22frozen source/density targets with ordinary clean-build/axiom checks; independent full checker CI passed at8746e08 ([receipts](../verification/external_population/README.md)). The rate and higher-depth optimization remain separate unfinished parts.
+A [complete finite-depth density reconstruction](../lean/external_population/GENERAL_DENSITY_PROOF.md) now accompanies the depth-one paper. Its separate formal library proves all22frozen source/density targets with ordinary clean-build/axiom checks; independent full checker CI passed at8746e08 ([receipts](../verification/external_population/README.md)). All eleven required rate source proofs now have a separate standalone package; independent rate assurance and higher-depth optimization remain pending.

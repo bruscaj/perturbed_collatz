@@ -29,7 +29,7 @@ redistribute its chapters.
 | [M4, `prob:ch20:band`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10f_missed.tex), and [detailed `rrt:sec:m4`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex) | Rung entropy limit, variational characterization and computability | The short statement asks for an unrestricted length limit; the detailed discussion uses ladder rungs. These must be treated separately. A certified entropy table is still required. | Draft candidate; unresolved source interpretation and assurance gates |
 | [R8, `rrt:prob:r8`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex) | Pressure convergence and differentiability for every nonnegative tilt along rungs | Critical differentiability is part of the problem. Convergence and finite-depth computations do not settle it. | Draft candidate; full critical argument and formal assurance pending |
 | [R9, `rrt:prob:r9`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex) | Near-maximal entropy asymptotic, with proposed leading coefficient `3/(2 ln 2 ln 10)` | First take the length limit along rungs at fixed threshold, then let the threshold tend to one. Finite counts do not certify either limit. | Draft candidate; analytic proof and full formalization pending |
-| [O3′, `prob:ch11:o3p`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch11_open.tex) | Arbitrary-correction density, inverse-depth rate, depth-one infimum/nonattainment and convergent finite optimization | Corrections may be unbounded real functions of the current remaining block and the next `h−1` complete blocks. Rate, algorithmic determination and closed forms are distinct claims. | All 14 h=1 targets formalized; full checker CI passed at8524770. Arbitrary-depth and rate claims remain candidates |
+| [O3′, `prob:ch11:o3p`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch11_open.tex) | Arbitrary-correction density, inverse-depth rate, depth-one infimum/nonattainment and convergent finite optimization | Corrections may be unbounded real functions of the current remaining block and the next `h−1` complete blocks. Rate, algorithmic determination and closed forms are distinct claims. | All 14 h=1 targets formalized; full checker CI passed at8524770. All22 arbitrary finite-depth density targets passed full gates at8746e08; all11 required rate source proofs passed fresh checks, with independent rate gates pending |
 
 ## The literal word model
 
@@ -88,7 +88,7 @@ The [depth-one Syracuse written draft](../finite_information_lyapunov/README.md)
 provides proofs of density existence, the infimum formula and nonattainment.
 All 14 frozen h=1 targets passed the dedicated full analytic assurance job at
 `8524770` ([exact receipts](../../verification/external_analysis/README.md)).
-The full arbitrary-depth target remains a candidate.
+The arbitrary finite-depth density foundation passed full independent gates. Required rate source proofs are complete; their independent assurance and the finite-optimization claims remain pending.
 The [near-extremal entropy written draft](../arithmetic_bridge_pressure/README.md)
 develops the rung/depth correspondence, large-tilt pressure, finite-block
 matching lower bound and proposed R9 expansion. It also remains unformalized.
@@ -108,3 +108,5 @@ contexts has occurred; no qualified human review or author acknowledgment
 is claimed. The [status register](status.json) keeps these fields separate.
 
 The [population-density foundation](../../lean/external_population/README.md) now has complete source proofs for every fixed positive finite h and arbitrary real window corrections, including exact source binding and both finite-tail transfers. This22target package passed source build, all517closure audits, full source-bound replay/comparison, six checker modes and nine hostile controls at8746e08 ([receipts](../../verification/external_population/README.md)). Its companion written proof is self-contained in the public tree. No rate, optimum or full O3′ resolution follows from this foundation alone.
+
+The [rate companion](../../lean/external_rate/RATE_PROOF.md) proves the explicit inverse-depth bounds and vanishing infimum, with all eleven required frozen statements implemented. Its current assurance is fresh source build, exact types and all765 axiom closures; the dedicated full independent rate job remains pending. The optional stronger liminf and exact higher-depth optima are not claimed.

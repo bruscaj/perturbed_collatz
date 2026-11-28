@@ -5,7 +5,7 @@
 \usepackage{amsmath,amssymb,amsthm,mathtools,microtype}
 \usepackage{booktabs,array,enumitem,xurl,xcolor}
 \usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
-\hypersetup{pdftitle={Finite-information Lyapunov potentials: the depth-one infimum},pdfauthor={Jake S. Brusca}}
+\hypersetup{pdftitle={Finite-information Lyapunov potentials: exact depth-one and inverse-depth bounds},pdfauthor={Jake S. Brusca}}
 \pdfinfoomitdate=1
 \pdftrailerid{}
 \pdfsuppressptexinfo=15
@@ -16,21 +16,24 @@
 \newcommand{\ind}{\mathbf{1}}
 \newcommand{\NN}{\mathbb{N}}
 \newcommand{\RR}{\mathbb{R}}
-\title{Finite-information Lyapunov potentials for the Syracuse map\\[0.3em]\large The exact depth-one infimum: a written research draft}
+\title{Finite-information Lyapunov potentials for the Syracuse map\\[0.3em]\large Exact depth-one infimum and inverse-depth failure bounds}
 \author{Jake S. Brusca}
-\date{27 November 2026}
+\date{28 November 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
-For the odd-only Syracuse map, consider potentials of the form
-$\log x+f(v_2(x+1))$, with $f$ an arbitrary real-valued function on positive
-integers. We give a complete written argument for existence of each potential's
-relative odd-seed failure density, an exact series for its infimum, and
-nonattainment. The argument partitions initial seeds into valuation cylinders;
-it assumes neither Collatz convergence nor independence along an integer orbit.
-An exact rational enclosure has width $2^{-81}$. This addresses only the
-depth-one subquestion of Polson--Sokolov O3$'$, not its arbitrary-depth part.
-The manuscript remains a research draft with assurance limits stated below.
+For the odd-only Syracuse map, we study potentials $\log x+\varphi(W_h(x))$
+reading the current remaining block length and the next $h-1$ complete block
+lengths, with an arbitrary real correction. Every such potential has a literal
+relative odd-seed failure density. At depth one we obtain its exact infimum,
+nonattainment and a rational enclosure of width $2^{-81}$. At every positive
+finite depth, the optimized failure density $p_h$ satisfies
+$1/[4(h+33)]\le p_h\le5/(2h)$, so it tends to zero at order $1/h$.
+The upper bound uses an explicit first-maximum marker; the lower bound uses
+finite cyclic information contexts and exact geometric moments. The proof
+assumes neither Collatz convergence nor independence along an integer orbit.
+Exact higher-depth optima and optimal constants remain undetermined.
+The manuscript is a research draft with separate assurance limits below.
 \end{abstract}
 
 \begin{quote}\small
@@ -48,18 +51,22 @@ version~1.4.0, label \texttt{prob:ch11:o3p}. Its exact source commit is
 \href{https://github.com/VadimSokolov/collatz/commit/5840497a23fc0d64127b850aea68862d7c93f2b7}{\nolinkurl{5840497a23fc0d64127b850aea68862d7c93f2b7}}.
 The block convention is in the same version's
 \href{https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch05c_mmcollatz.tex}{block-majorization chapter}.
-The public \path{lean/external_analysis/} package contains proofs of all
-fourteen frozen depth-one targets, using the Lean mathematical library
-\cite{mathlib}. The historical mathlib paper describes the library; the
-release lockfile pins the actual contemporary dependency revision.
-At source commit \texttt{8524770}, the dedicated analytic CI job passed a
-clean build, exhaustive axiom audit, source-bound sandbox replay, frozen-target
-comparison, all six bundled checker modes and all nine hostile fixtures.
-Exact source hashes and receipts are in \path{verification/external_analysis/}.
-Later manuscript changes still require final-tree regression checks. Ordinary compilation
-is not independent kernel replay or human review. Consult the release's
-per-declaration coverage register; this paper does not claim those pending
-assurance gates have passed.
+The public packages use the Lean mathematical library~\cite{mathlib}; their
+lockfiles pin the actual dependency revision. Recorded source-bound CI receipts
+at commits \texttt{8524770} and \texttt{8746e08} respectively passed the fourteen
+depth-one targets and twenty-two arbitrary finite-depth density targets:
+clean builds, exhaustive axiom audits, sandboxed proof replay, frozen-statement
+comparison, all six checker modes and hostile fixtures. Their exact source
+hashes are in \path{verification/external_analysis/} and
+\path{verification/external_population/}. These are specific recorded snapshots;
+later source changes require their own checks.
+The separate \path{lean/external_rate/} package records the eleven required
+rate targets. Its independent replay, frozen-statement comparator and
+six-checker gates are \textbf{pending at this manuscript snapshot}. The written
+proof below does not certify those pending gates. Ordinary compilation and
+independent kernel checking remain distinct from human review or acceptance.
+An expanded, source-linked derivation is supplied in the
+\href{../../lean/external_rate/RATE_PROOF.md}{rate proof companion}.
 
 \section{Related work and scope of attribution}
 Finite parity data for Collatz iteration have classical residue-class
@@ -82,11 +89,11 @@ nonattainment therefore require the separate arguments in this paper.
 The Diophantine step uses Dirichlet approximation~\cite{dirichlet}.
 A two-sided small fractional error alone is insufficient for our positive
 return indices: the nonattainment proof below explicitly converts a negative
-error into a positive near-integer return. The exact formula here is a
-candidate contribution to the depth-one question of Polson and Sokolov,
-not a claim that parity coding, cycle obstructions or irrational approximation
-are new. The references are a scoped comparison, not a completed novelty
-review.
+error into a positive near-integer return. The exact formula and finite-depth bounds here address
+the corresponding questions of Polson and Sokolov. The cited sources ground
+the established parity coding, finite-cycle and approximation methods.
+These references provide a scoped comparison; a comprehensive novelty review
+remains open.
 
 \section{The precise depth-one question}
 On positive odd integers define
@@ -109,7 +116,7 @@ Write $d(f)$ for the limit, when it exists, of the number of failures at
 positive odd $x\le X$ divided by the number of positive odd $x\le X$.
 Equivalently, count $x=2n+1$ for $0\le n<N$ and divide by $N$.
 
-\begin{theorem}[Depth-one claim proved in the written argument]
+\begin{theorem}[Exact depth-one infimum]\label{thm:depth-one}
 For every such $f$, the failure density $d(f)$ exists. Set
 $a=\log(3/2)$, $b=\log2$, and
 \[
@@ -126,8 +133,9 @@ No correction attains $p_1$. For every integer $M\ge0$,
 \end{equation}
 \end{theorem}
 
-This does not determine $p_h$ for every depth $h$, prove an inverse-depth
-rate, or give higher-depth closed forms. These are separate parts of O3$'$.
+Theorem~\ref{thm:depth-one} gives the exact depth-one value. The later
+finite-depth sections prove universal rate bounds, while exact higher-depth
+values remain undetermined.
 
 \section{An exact partition of initial populations}
 If $r(x)=r\ge2$, write $x=2^ru-1$ with $u$ positive odd. Then
@@ -329,15 +337,332 @@ certify the enclosure. A corrupted floor entry is rejected by the checker.
 The finite sum certificate alone encloses a series; identifying that series
 with the infimum requires the preceding universal proof and its source model.
 
+
+\section{Arbitrary finite information depth}\label{sec:general-depth}
+Let $B(x)=S^{r(x)}(x)$ be the next block seed, including the exit. At a fixed
+positive integer depth $h$, set
+\[
+ W_h(x)=\bigl(r(x),r(Bx),\ldots,r(B^{h-1}x)\bigr),\qquad
+ V_\varphi(x)=\log x+\varphi(W_h(x)).
+\]
+The first entry is the current remaining length; the other $h-1$ entries are
+complete future blocks. The correction is an arbitrary function
+$\varphi:\NN_{\ge1}^{h}\to\RR$, with no boundedness, regularity, finite-support,
+additivity or integrability assumption. Write $d_h(\varphi)$ for its actual
+relative odd-seed failure density, and let $p_h$ be the infimum of all these
+achieved densities. At $h=1$ this is exactly the whole class of
+Theorem~\ref{thm:depth-one}.
+
+\begin{theorem}[Finite-depth density and inverse-depth bounds]\label{thm:rate}
+Every $d_h(\varphi)$ exists. Its infimum is a genuine real infimum of a nonempty
+set in $[0,1]$. For every positive integer $h$,
+\begin{equation}\label{eq:strong-rate}
+ \frac1{4(h+33)}\le p_h\le\frac5{2h}.
+\end{equation}
+For $h\ge2$ an explicit marker correction achieves a density at most
+\begin{equation}\label{eq:marker-cap}
+ \min\left(\frac12,\frac1{h-1}+\frac1{2h}\right).
+\end{equation}
+Consequently $p_h$ tends to zero at order $1/h$. No exact higher-depth formula,
+nonattainment theorem at $h\ge2$, or optimal constant is asserted.
+\end{theorem}
+
+The formal correction domain is all natural-valued windows. Every correction
+on positive windows extends arbitrarily to zero-containing windows; proved
+window positivity makes those extra values immaterial. The literal map
+continues at one, where every window is all ones and equality is failure.
+Neither this totalization nor the subsequent limit uses a termination
+assumption. The rest of the paper proves Theorem~\ref{thm:rate}.
+
+\section{Finite cylinders and two finite-tail transfers}\label{sec:general-density}
+The finite parity coding background is classical~\cite{terras,bernstein-lagarias};
+we give the exact grouped-block normalization needed here. For $k\ge1$, $e\ge0$
+and $0\le d<2^e$, in the parameter $x=2n+1$,
+\begin{align*}
+ &\exists m\ge0:\ K(2n+1)=k,\quad S(2n+1)=2m+1,
+                       \quad m\equiv d\pmod{2^e}\\
+ &\hspace{2em}\Longleftrightarrow\quad
+ 3n+2\equiv2^{k-1}(2d+1)\pmod{2^{k+e}}.
+\end{align*}
+Forward, substitute $3n+2=2^{k-1}(2m+1)$. Reverse, the quotient/remainder
+identity constructs $m=d+2^e q$ and gives
+$3(2n+1)+1=2^k(2m+1)$, hence the exact valuation and literal stride.
+Multiplication by three is invertible modulo powers of two. The terminal
+condition $r(2n+1)=\ell\ge1$ is the class
+$n\equiv2^{\ell-1}-1\pmod{2^\ell}$. Pulling it back through any finite
+positive valuation word therefore gives one unique normalized residue class.
+This includes valuation one, an empty word and terminal length one.
+
+In particular, prescribe $m$ completed blocks with positive lengths
+$\ell_0,\ldots,\ell_{m-1}$, exits $\kappa_0,\ldots,\kappa_{m-1}\ge2$, and
+terminal remaining length $\ell_m\ge1$. Their chronological word consists
+of $\ell_i-1$ ones followed by $\kappa_i$ in each block. The exact cylinder
+exponent and its relative odd density are
+\[
+ E=\sum_{i<m}(\ell_i-1+\kappa_i)+\ell_m,\qquad 2^{-E}.
+\]
+The converse is exact: a prefix of $\ell_i-1$ ones and its first valuation
+at least two force the actual remaining length $\ell_i$, and the state
+after its exit is $B(x)$. The class density follows directly from the
+residue count used in Section~3. The refined weights normalize because
+\[
+ 2^{-E}=\prod_{i=0}^{m}2^{-\ell_i}
+             \prod_{i=0}^{m-1}2^{-(\kappa_i-1)},
+\]
+and each one-coordinate geometric family sums to one.
+
+For clarity, the required density-transfer principle uses only finite unions.
+For a total label function, event $P$, and any finite label set $F$, direct
+counting gives
+\begin{align*}
+ \sum_{i\in F}\operatorname{freq}_N(i\cap P)
+ &\le\operatorname{freq}_N(P)\\
+ &\le\sum_{i\in F}\operatorname{freq}_N(i\cap P)
+                    +1-\sum_{i\in F}\operatorname{freq}_N(i).
+\end{align*}
+If coordinate masses are summable with total one, and $P$ eventually has a
+fixed decision on each coordinate, first take the limits for finite $F$,
+then make the omitted mass arbitrarily small. The event density is the sum
+of selected masses. No common cutoff or countable-additivity rule for
+natural density is used.
+
+Apply this first to $m=h$ refinements and their coarse projection. Summing
+hidden exits and unused terminal lengths gives
+\begin{align*}
+ w_A(r,s_2,\ldots,s_h)&=2^{-(r+s_2+\cdots+s_h)},\qquad r\ge2,\\
+ w_E(k,s_1,\ldots,s_h)&=2^{-(k+s_1+\cdots+s_h)},\qquad k\ge2.
+\end{align*}
+The second line fixes the old length one and immediate exit $k$; its factor
+is $2^{-1}2^{-(k-1)}=2^{-k}$. Each branch totals $1/2$.
+The old and new windows give gains
+\begin{align*}
+ g_A&=a+\varphi(r-1,s_2,\ldots,s_h)-\varphi(r,s_2,\ldots,s_h),\\
+ g_E&=\log3-kb+\varphi(s_1,\ldots,s_h)
+                    -\varphi(1,s_1,\ldots,s_{h-1}).
+\end{align*}
+The exact increment adds the same strictly positive $\varepsilon(x)$ as in
+Section~4. Thus zero limiting gain is still failure; a negative gain is a
+success eventually on its fixed cell. The threshold may depend on the whole
+cell and on the unrestricted correction. A second finite-tail transfer yields
+\begin{equation}\label{eq:general-density}
+ d_h(\varphi)=A(\varphi)+\sum_{k\ge2}E_k(\varphi),
+\end{equation}
+where $A$ and $E_k$ select the corresponding weights when their gains are
+$\ge0$. This proves existence, uniqueness and bounds $[0,1]$ for every
+correction. The zero correction makes the achieved set nonempty; zero bounds
+it below. The odd-$\le X$ convention is exactly the first-$N$-odds convention
+at $N=\lfloor(X+1)/2\rfloor$, with the converse obtained at $X=2N$.
+The \href{../../lean/external_population/GENERAL_DENSITY_PROOF.md}{finite-depth density companion}
+expands the finite-word compiler and both transfers.
+
+\section{The explicit first-maximum marker}\label{sec:marker}
+For $h\ge2$, let $j(w)$ be the first index attaining the maximum among
+future entries $w_1,\ldots,w_{h-1}$, excluding the current head. Equivalently,
+\[
+ 1\le j<h,\quad w_i\le w_j\ (1\le i<h),\quad
+ w_i<w_j\ (1\le i<j).
+\]
+Scanning these ordered indices and updating only on a strict improvement
+gives precisely this first-tie selector. Define
+\[
+ D_h(w)=\sum_{i<j(w)}w_i,\qquad \varphi_h(w)=bD_h(w).
+\]
+An ascending step changes only the head by minus one. Its marker is unchanged,
+so $D_h$ drops by one and $g_A=a-b=\log(3/4)<0$. Formula~\eqref{eq:general-density}
+already gives an achieved marker density at most the total exit mass $1/2$.
+
+At an exit write old and successor windows as
+\[
+ (1,s_1,\ldots,s_{h-1})\longmapsto(s_1,\ldots,s_h).
+\]
+If the old marker is at $j\ge2$ and the incoming $s_h$ is no greater than
+its value, the retained first maximum moves to index $j-1$. An incoming
+equal maximum does not displace the earlier marker. Consequently
+$D_h(\mathrm{old})=1+D_h(\mathrm{new})$, giving
+\[
+ g_E=\log3-kb-b\le\log(3/8)<0\qquad(k\ge2).
+\]
+A symbolically failed exit therefore lies in the union of two events:
+\begin{enumerate}[nosep]
+\item The old marker is at index one: $s_1$ is a weak maximum of
+$s_1,\ldots,s_{h-1}$. The incoming last entry is free.
+\item The incoming $s_h$ strictly exceeds the old maximum: it is the strict
+maximum among all $h$ successor entries.
+\end{enumerate}
+The first-tie rule is essential. For successor $(1,2,2)$ and old window
+$(1,1,2)$, the correct $k=2$ multiplicative symbolic gain is $3/8$; choosing
+the last tie instead gives $3/2$ despite neither stated exception occurring.
+
+\section{Discrete maximum masses and the achieved upper bound}
+All masses in this section are the finite product weights in
+Section~\ref{sec:general-density}. Strict-maximum events at the $h$ coordinates
+are exchangeable and disjoint. A tie for the maximum belongs to none of
+these events. Thus the incoming strict-maximum mass is at most $1/h$.
+
+For a head offset competing weakly against $m$ others, put
+$t_\ell=2^{-\ell-1}$. The exact geometric CDF is
+$\Pr(\mathrm{offset}\le\ell)=1-t_\ell$, so its mass is
+\[
+ S_m=\sum_{\ell\ge0}t_\ell(1-t_\ell)^m\le\frac2{m+1}.
+\]
+Here is a discrete proof of the bound. For $0\le x\le y$,
+\[
+ y^{m+1}-x^{m+1}
+ =(y-x)\sum_{j=0}^{m}y^{m-j}x^j\ge(m+1)x^m(y-x).
+\]
+Set $x=1-t$, $y=1-t/2$ for $0\le t\le1$. Then
+\[
+ t(1-t)^m\le\frac2{m+1}
+ \big((1-t/2)^{m+1}-(1-t)^{m+1}\big).
+\]
+Since $t_{\ell+1}=t_\ell/2$, finite partial sums telescope and are at most
+$2/(m+1)$. The terms are nonnegative and bounded by $t_\ell$, so the same
+holds for the convergent series. For departure, $m=h-2$: only the $h-1$
+old future entries compete, and the new last entry sums out with mass one.
+Its probability is at most $2/(h-1)$.
+
+The two exceptions need not be disjoint. They depend only on the successor
+window, so the full exit sum contributes
+$\sum_{k\ge2}2^{-k}=1/2$. The union bound and the literal density identity give
+\[
+ d_h(\varphi_h)\le\frac12\left(\frac2{h-1}+\frac1h\right)
+ =\frac1{h-1}+\frac1{2h}.
+\]
+Together with the half cap this proves~\eqref{eq:marker-cap}. The factor here
+is $1/2$ for all exits; it must not be confused with the $1/4$ of the fixed
+$k=2$ slice in the lower proof. Since this density is actually achieved,
+$p_h\le d_h(\varphi_h)$. For $h\ge2$, $1/(h-1)\le2/h$ yields $5/(2h)$.
+The case $h=1$ uses $p_1\le1\le5/2$ and makes no future-marker assertion.
+
+\section{Cyclic information contexts and exact failure normalization}
+Fix any correction $\varphi$ and put $n=h+1$. Take $n$ positive lengths
+$R_0,\ldots,R_{n-1}$ with normalized weight $w(R)=\prod_i2^{-R_i}$.
+Use indices modulo $n$ and write
+\[
+ W_i(s)=(s,R_{i+1},\ldots,R_{i+h-1}).
+\]
+Each auxiliary block has
+$R_i-1$ ascending edges and a fixed $k=2$ exit. This is a cycle in the
+information graph, not a periodicity assertion about an integer orbit.
+The cancellation of vertex-potential differences is the familiar finite
+cycle mechanism~\cite{karp}; its exact normalization to source densities is
+established here.
+
+Within block $i$, the gain telescopes to
+\[
+ R_i a-b+\varphi(W_{i+1}(R_{i+1}))-\varphi(W_i(R_i)).
+\]
+The full $h$-entry window closes after $n$ positions. Summing gives the
+correction-independent cycle gain
+\begin{equation}\label{eq:rate-cycle}
+ G(R)=a\sum_i R_i-nb.
+\end{equation}
+Let $B_i$ count failed symbolic edges in block $i$, and $C_\varphi=\sum_iB_i$.
+Pointwise, $0\le B_i\le R_i$ and $G>0$ forces $C_\varphi\ge1$.
+This telescoping is finite and takes no expectation of the possibly
+nonintegrable correction.
+
+Write $A=A(\varphi)$ and $E_2=E_2(\varphi)$ from
+\eqref{eq:general-density}. The exact block normalization is
+\begin{equation}\label{eq:two-four}
+ \mathbb E B_0=2A+4E_2.
+\end{equation}
+For ascents, fix the $h-1$ future offsets and let $q_j$ be the failure bit
+at remaining head $j+2$. If the current offset is $t=R_0-1$, its ascent count
+is $\sum_{j<t}q_j$. With $\alpha_t=2^{-t-1}$,
+\[
+ \sum_{t\ge0}\alpha_t\sum_{j<t}q_j
+ =\sum_{j\ge0}\alpha_jq_j,\qquad \sum_{t>j}\alpha_t=\alpha_j.
+\]
+The source ascending mass has the extra factor $1/2$, and the final unused
+history coordinate sums to one. Its expected count is therefore $2A$.
+For the fixed $k=2$ exit, the gain reads the $h$ successor entries and is
+independent of $R_0$; their source weight has factor $2^{-2}=1/4$, giving
+expected exit count $4E_2$. All sums are justified by nonnegative counts
+bounded by a geometric length of finite mean. No correction moment is used.
+
+Finite-coordinate rotation preserves the product weight and the full windows,
+so each block has the same expectation. Let $P_h=\Pr(G>0)$ in this explicit
+finite product. Then
+\[
+ P_h\le\mathbb E C_\varphi=n(2A+4E_2)\le4n\,d_h(\varphi).
+\]
+The last inequality uses $A+E_2\le d_h(\varphi)$ and $A\ge0$.
+Here $d_h$ is the actual literal density by uniqueness and
+\eqref{eq:general-density}. This proves
+\begin{equation}\label{eq:cycle-density-lower}
+ \frac{P_h}{4(h+1)}\le d_h(\varphi)
+\end{equation}
+for the entire unrestricted correction class, without an attainment premise.
+
+\section{Exact moments and a one-sided square bound}
+For a positive geometric length, $\mathbb E R=2$ and $\mathbb E R^2=6$.
+For example, $\Pr(R\ge j)=2^{-(j-1)}$ gives the first moment by its tail sum,
+and the second by summing $(2j-1)2^{-(j-1)}$. Finite-product factorization
+therefore gives, for $L=\sum_iR_i$ and $Z=L-2n$,
+\[
+ \mathbb E L=2n,\qquad \mathbb E L^2=4n^2+2n,\qquad
+ \mathbb E Z=0,\quad\mathbb E Z^2=2n.
+\]
+These moments concern only the declared finite product. The source proof
+first derives the nonnegative raw moments and then centers algebraically.
+
+The exact integer comparison $3^7=2187>2048=2^{11}$ gives $7a>4b$.
+If $Z\ge-n/4$, then $L\ge7n/4$ and~\eqref{eq:rate-cycle} is strictly positive.
+Thus $G\le0$ implies $Z<-n/4$. Put $D=8+n/4>0$. On that complement,
+$8-Z>D$, so the pointwise one-sided bound is
+\[
+ 1\le\ind_{\{G>0\}}+\frac{(8-Z)^2}{D^2}.
+\]
+Taking the justified second moment gives
+\[
+ 1\le P_h+\frac{64+2n}{(8+n/4)^2}
+   =P_h+\frac{32}{n+32},\qquad
+ P_h\ge\frac{n}{n+32}=\frac{h+1}{h+33}.
+\]
+This is the elementary one-sided second-moment estimate in the required
+Cantelli route; every denominator is positive. Combining it with
+\eqref{eq:cycle-density-lower} proves
+\[
+ d_h(\varphi)\ge\frac1{4(h+33)}.
+\]
+
+\section{Infima, rate assembly and remaining scope}
+The last lower bound holds for every member of the nonempty achieved-density
+set. It therefore passes to its real infimum without a minimizer. This proves
+the strong lower side of~\eqref{eq:strong-rate}; the explicit marker and $h=1$
+case proved the upper side. For comparison with the frozen rational rate,
+\[
+ \frac{127}{32768h}\le\frac1{136h}\le\frac1{4(h+33)}\qquad(h\ge1),
+\]
+since $127\cdot136=17272\le32768$ and $h+33\le34h$. Finally
+$0\le p_h\le5/(2h)$ proves $p_h\to0$ along positive integer depths.
+Each density was established at a fixed $h$ before this scalar limit; no
+interchange with the population limit or uniform stabilization is asserted.
+
+The \href{../../lean/external_rate/RATE_PROOF.md}{expanded rate companion}
+maps the complete argument to all eleven required frozen targets: infimum
+well-posedness, first-tie selector, achieved marker upper bound, history
+normalization, cyclic normalization and telescoping, forcing, literal density
+lower bound, positive-cycle mass, explicit rate and limit. The separate
+optional stronger liminf constant remains unproved. Neither these rate bounds
+nor the exact depth-one result determines all higher-depth values or proves
+ordinary Collatz convergence.
+
 \paragraph{Reproduction and remaining assurance.}
 The release's \path{certificates/external_problems/verify.py} replays finite
-arithmetic. The accompanying analysis proof register must distinguish actual
-literal density existence, the infimum identity and nonattainment from
-supporting finite certificates. Ordinary Lean builds, transitive axiom audits,
-trusted statement comparisons, fresh replay and independent checker coverage
-are different gates; final receipts, rather than theorem counts, govern their
-status. None supplies human expert refereeing or acceptance by the literature.
+arithmetic. The three separate proof packages are
+\path{lean/external_analysis/}, \path{lean/external_population/} and
+\path{lean/external_rate/}. Their exact source-bound receipts distinguish the
+depth-one optimum, general literal density representation and rate theorem.
+The eleven-target rate replay/comparator/six-checker gates remain pending at
+this draft's snapshot. Earlier successful depth-one or density receipts do
+not certify the new rate proof. Ordinary builds, axiom audits, trusted
+statement comparisons, fresh replay and independent checker coverage are
+different checks; exact final receipts govern their status. None supplies
+human expert refereeing, priority certification or external acceptance.
 
+\clearpage
 \begin{thebibliography}{9}
 \bibitem{polson}
 N.~Polson and V.~Sokolov.

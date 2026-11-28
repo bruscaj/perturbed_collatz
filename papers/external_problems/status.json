@@ -50,14 +50,14 @@
       "id": "EXT-O3PRIME",
       "status": "draft candidate",
       "target": "arbitrary finite-window correction failure infimum and depth rate",
-      "written_proof": "Depth-one argument is formalized and passed the full dedicated analytic assurance job; full arbitrary-depth target remains a candidate.",
+      "written_proof": "Self-contained public companions cover arbitrary fixed-depth densities and all eleven required rate statements; exact h=1 infimum and nonattainment retain their separate proved scope.",
       "finite_computation": "fresh exact finite model checks only; see certificates/external_problems",
       "headline_formal_declarations": [],
-      "formal_support": "Separate h=1 source-faithful project; abstract prefix lemmas concern the unrelated bridge foundation.",
-      "headline_checker_coverage": "none",
+      "formal_support": "Source-faithful h=1 and arbitrary finite-depth density projects passed full independent gates; all eleven frozen rate targets passed fresh source/type/axiom checks.",
+      "headline_checker_coverage": "h=1 and finite-depth density fully checked at source-pinned commits; rate independent replay/comparator/checkers pending",
       "review": "separate AI reconstruction, source and adversarial contexts; no human expert refereeing",
       "literature_priority": "source matched with M4 interpretation split; targeted search only; no novelty or acceptance assertion",
-      "limitations": "Full h>=2 density, rate and finite-optimization formalization remain outstanding. Exact higher-depth optima and sharp rate constant unresolved; no novelty or human review claimed.",
+      "limitations": "Independent rate assurance and finite optimization/truncation soundness remain pending. Exact higher-depth optima, sharp constant and optional stronger liminf remain unresolved; no novelty or human expert refereeing claimed.",
       "proved_subquestion": {
         "scope": "h=1 only, every arbitrary real correction of current remaining block length",
         "declarations": [
@@ -85,8 +85,28 @@
         "formal_project": "lean/external_population",
         "target_count": 22,
         "assurance": "full source-bound replay/comparator/six checker modes/nine hostile controls passed at8746e08; verification/external_population/README.md",
-        "remaining": "infimum rate and general optimization are separate unfinished claims"
-      }
+        "remaining": "Rate source proofs now complete; rate independent gates and general optimization remain pending."
+      },
+      "rate_source_proofs": {
+        "scope": "all eleven required pre-proof-frozen rate targets, actual literal infimum and unconditional vanishing limit",
+        "formal_project": "lean/external_rate",
+        "declarations": [
+          "ExternalO3RateChallenge.infimumWellPosed",
+          "ExternalO3RateChallenge.markerSelectorLaw",
+          "ExternalO3RateChallenge.markerUpperBound",
+          "ExternalO3RateChallenge.historyWeightLaw",
+          "ExternalO3RateChallenge.cyclicNormalization",
+          "ExternalO3RateChallenge.cyclicTelescoping",
+          "ExternalO3RateChallenge.cyclicForcing",
+          "ExternalO3RateChallenge.cyclicDensityLowerBound",
+          "ExternalO3RateChallenge.positiveCycleMassLowerBound",
+          "ExternalO3RateChallenge.explicitInverseDepthRate",
+          "ExternalO3RateChallenge.infimumTendsToZero"
+        ],
+        "assurance": "Fresh Lean source build, exact frozen type/raw proposition comparisons and 765 own/reused transitive axiom closures passed; independent rate gates pending.",
+        "optional_stronger_liminf": "unproved and excluded from required eleven-target claim"
+      },
+      "status_note": "The full external O3\u2032 contribution remains a candidate: h1 and arbitrary-depth density have independent receipts; all11 required rate source proofs exist but rate independent gates and finite optimization remain pending."
     }
   ]
 }

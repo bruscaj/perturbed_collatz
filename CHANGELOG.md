@@ -1,5 +1,13 @@
 # Release history
 
+## Inverse-depth rate source proofs — 28 November 2026
+
+- Added all eleven pre-proof-frozen required rate implementations for the literal finite-run-window infimum, with explicit inverse-depth bounds and a vanishing limit. The fresh source/type/axiom audit covers 765 theorem/helper closures.
+- Added a standalone public rate project, full written reconstruction, and fifth mandatory CI job requiring fresh proof replay, frozen comparison, six checker modes and positive/negative fixtures. Independent rate assurance remains pending until its own receipts pass.
+- Expanded the Syracuse manuscript while preserving the exact depth-one formula and nonattainment theorem. Higher-depth optimization, the optional stronger liminf, sharp constants and the M4/R8/R9 candidates remain unfinished.
+- Preserved the passing four-job regression at5775d77/run46100033792 separately from this new source tree.
+
+
 ## Finite-depth source density — 28 November 2026
 
 - Added a standalone public library and full written reconstruction for all22frozen finite-depth density/source-model statements, preserving unrestricted real corrections, literal future blocks and both finite-tail transfers.
