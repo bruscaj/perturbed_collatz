@@ -11,7 +11,7 @@
       "written_proof": "reconstructed in internal AI audit; no headline acceptance gate passed",
       "finite_computation": "fresh exact finite model checks only; see certificates/external_problems",
       "headline_formal_declarations": [],
-      "formal_support": "five abstract integer prefix/depth lemmas for the bridge model; no O3′ formal coverage",
+      "formal_support": "five abstract integer prefix/depth lemmas for this bridge model; no accepted analytic formalization for this full problem",
       "headline_checker_coverage": "none",
       "review": "separate AI reconstruction, source and adversarial contexts; no human expert refereeing",
       "literature_priority": "source matched with M4 interpretation split; targeted search only; no novelty or acceptance assertion",
@@ -25,7 +25,7 @@
       "written_proof": "reconstructed in internal AI audit; no headline acceptance gate passed",
       "finite_computation": "fresh exact finite model checks only; see certificates/external_problems",
       "headline_formal_declarations": [],
-      "formal_support": "five abstract integer prefix/depth lemmas for the bridge model; no O3′ formal coverage",
+      "formal_support": "five abstract integer prefix/depth lemmas for this bridge model; no accepted analytic formalization for this full problem",
       "headline_checker_coverage": "none",
       "review": "separate AI reconstruction, source and adversarial contexts; no human expert refereeing",
       "literature_priority": "source matched with M4 interpretation split; targeted search only; no novelty or acceptance assertion",
@@ -39,25 +39,47 @@
       "written_proof": "reconstructed in internal AI audit; no headline acceptance gate passed",
       "finite_computation": "fresh exact finite model checks only; see certificates/external_problems",
       "headline_formal_declarations": [],
-      "formal_support": "five abstract integer prefix/depth lemmas for the bridge model; no O3′ formal coverage",
+      "formal_support": "five abstract integer prefix/depth lemmas for this bridge model; no accepted analytic formalization for this full problem",
       "headline_checker_coverage": "none",
       "review": "separate AI reconstruction, source and adversarial contexts; no human expert refereeing",
       "literature_priority": "source matched with M4 interpretation split; targeted search only; no novelty or acceptance assertion",
       "limitations": "Existence, matching microcanonical lower bound, uniform large-tilt estimates and ordered limits require full proof assurance."
     },
     {
-      "problem": "O3′",
+      "problem": "O3\u2032",
       "id": "EXT-O3PRIME",
       "status": "draft candidate",
       "target": "arbitrary finite-window correction failure infimum and depth rate",
-      "written_proof": "reconstructed in internal AI audit; no headline acceptance gate passed",
+      "written_proof": "Depth-one argument is formalized and passed the full dedicated analytic assurance job; full arbitrary-depth target remains a candidate.",
       "finite_computation": "fresh exact finite model checks only; see certificates/external_problems",
       "headline_formal_declarations": [],
-      "formal_support": "five abstract integer prefix/depth lemmas for the bridge model; no O3′ formal coverage",
+      "formal_support": "Separate h=1 source-faithful project; abstract prefix lemmas concern the unrelated bridge foundation.",
       "headline_checker_coverage": "none",
       "review": "separate AI reconstruction, source and adversarial contexts; no human expert refereeing",
       "literature_priority": "source matched with M4 interpretation split; targeted search only; no novelty or acceptance assertion",
-      "limitations": "Density for every unbounded correction, rate, infimum characterization and nonattainment require full formalization."
+      "limitations": "Full h>=2 density, rate and finite-optimization formalization remain outstanding. Exact higher-depth optima and sharp rate constant unresolved; no novelty or human review claimed.",
+      "proved_subquestion": {
+        "scope": "h=1 only, every arbitrary real correction of current remaining block length",
+        "declarations": [
+          "ExternalO3Challenge.blockLengthLaw",
+          "ExternalO3Challenge.correctionZeroIrrelevant",
+          "ExternalO3Challenge.densityEqualsSymbolic",
+          "ExternalO3Challenge.densityExists",
+          "ExternalO3Challenge.densityUnique",
+          "ExternalO3Challenge.depthOneFormula",
+          "ExternalO3Challenge.depthOneNotAttained",
+          "ExternalO3Challenge.depthOneSeriesSummable",
+          "ExternalO3Challenge.depthOneTail",
+          "ExternalO3Challenge.fixedPointConvention",
+          "ExternalO3Challenge.infimumWellPosed",
+          "ExternalO3Challenge.sourceDensityEquivalence",
+          "ExternalO3Challenge.symbolicMassSummable",
+          "ExternalO3Challenge.valuationFoundation"
+        ],
+        "assurance_receipt": "verification/external_analysis/README.md",
+        "source_commit": "8524770758f66940b1112ad13daa408d594c19f5",
+        "assurance": "clean build, complete axiom audit, source-bound sandbox replay, frozen comparison, six checker modes and nine hostile fixtures passed"
+      }
     }
   ]
 }

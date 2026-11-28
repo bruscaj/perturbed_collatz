@@ -7,7 +7,7 @@ and work in progress. Corrections and counterexamples are welcome.
 **No solution of these four open problems is certified by this release.**
 The project has written proof candidates. The public material here first
 records their exact scope and provides reproducible finite foundations.
-The full four-problem claims below remain unproved in Lean. The h=1 O3′ subquestion has a [complete frozen-target proof package](../../lean/external_analysis/README.md), with full independent checker CI pending. There has been no human expert refereeing. Neither
+The full four-problem claims below remain unproved in Lean. The h=1 O3′ subquestion has a [complete frozen-target proof package](../../lean/external_analysis/README.md), with full independent checker CI passed at8524770. There has been no human expert refereeing. Neither
 ordinary Collatz convergence nor global forced capture follows.
 
 ## Original statements and interpretation
@@ -29,7 +29,7 @@ redistribute its chapters.
 | [M4, `prob:ch20:band`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10f_missed.tex), and [detailed `rrt:sec:m4`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex) | Rung entropy limit, variational characterization and computability | The short statement asks for an unrestricted length limit; the detailed discussion uses ladder rungs. These must be treated separately. A certified entropy table is still required. | Draft candidate; unresolved source interpretation and assurance gates |
 | [R8, `rrt:prob:r8`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex) | Pressure convergence and differentiability for every nonnegative tilt along rungs | Critical differentiability is part of the problem. Convergence and finite-depth computations do not settle it. | Draft candidate; full critical argument and formal assurance pending |
 | [R9, `rrt:prob:r9`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex) | Near-maximal entropy asymptotic, with proposed leading coefficient `3/(2 ln 2 ln 10)` | First take the length limit along rungs at fixed threshold, then let the threshold tend to one. Finite counts do not certify either limit. | Draft candidate; analytic proof and full formalization pending |
-| [O3′, `prob:ch11:o3p`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch11_open.tex) | Arbitrary-correction density, inverse-depth rate, depth-one infimum/nonattainment and convergent finite optimization | Corrections may be unbounded real functions of the current remaining block and the next `h−1` complete blocks. Rate, algorithmic determination and closed forms are distinct claims. | All 14 h=1 targets formalized; full checker CI pending. Arbitrary-depth and rate claims remain candidates |
+| [O3′, `prob:ch11:o3p`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch11_open.tex) | Arbitrary-correction density, inverse-depth rate, depth-one infimum/nonattainment and convergent finite optimization | Corrections may be unbounded real functions of the current remaining block and the next `h−1` complete blocks. Rate, algorithmic determination and closed forms are distinct claims. | All 14 h=1 targets formalized; full checker CI passed at8524770. Arbitrary-depth and rate claims remain candidates |
 
 ## The literal word model
 
@@ -85,8 +85,10 @@ along one fixed integer's infinite orbit.
 ## Evidence and remaining work
 
 The [depth-one Syracuse written draft](../finite_information_lyapunov/README.md)
-provides the proposed proof of density existence, the infimum formula and
-nonattainment. It remains a written candidate rather than a formal theorem.
+provides proofs of density existence, the infimum formula and nonattainment.
+All 14 frozen h=1 targets passed the dedicated full analytic assurance job at
+`8524770` ([exact receipts](../../verification/external_analysis/README.md)).
+The full arbitrary-depth target remains a candidate.
 The [near-extremal entropy written draft](../arithmetic_bridge_pressure/README.md)
 develops the rung/depth correspondence, large-tilt pressure, finite-block
 matching lower bound and proposed R9 expansion. It also remains unformalized.
@@ -97,7 +99,7 @@ It checks literal words, depth paths, small valuation cylinders, block
 transitions, the series tail and deliberate model mutations. These are
 finite certificates and model consistency tests.
 
-Required next gates are complete noncircular written proofs, separately
+For the remaining arbitrary-depth and bridge claims, required next gates are complete noncircular written proofs, separately
 frozen full formal statements, proof of every model conversion and premise,
 clean Lean builds and transitive axiom audits, fresh replay, trusted statement
 comparison and independent checker replay. Numerical entropy claims need

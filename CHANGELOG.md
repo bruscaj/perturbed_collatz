@@ -1,5 +1,11 @@
 # Release history
 
+## External-problem audit — 27 November 2026
+
+- Added source-matched M4/R8/R9/O3′ drafts with explicit unresolved scopes.
+- Formalized all14 frozen targets for the h=1 O3′ subquestion; full source-bound replay, frozen comparison, all six checker modes and nine hostile fixtures passed at8524770. The full arbitrary-depth problem remains open here.
+- Added TeX/PDF drafts, expanded related-work discussion and six contextual references per paper. All sources are tied to their actual role; no novelty or human expert review is asserted.
+
 ## Manuscript revision — 26 November 2026
 
 - Rewrote the abstract around the results, moved related work behind the proofs, and consolidated reproduction and formal coverage in the final section.

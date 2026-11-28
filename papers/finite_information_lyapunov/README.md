@@ -1,9 +1,15 @@
 # O3′ depth-one infimum: written proof candidate
 
 [Read the TeX/PDF manuscript](paper.pdf) · [TeX source](paper.tex). Rebuild both papers with `python3 papers/build.py` from the repository root; `--check` compares deterministic clean rebuilds on the recorded TeX toolchain.
-Jake S. Brusca, 27 November 2026. ChatGPT assisted with the ideas, proof, writing and review. **Status: written draft. An ordinary Lean implementation of the canonical depth-one targets has been prepared in the private audit work; final public statement-comparison and replay gates remain pending. No human expert refereeing is claimed.** Separate AI contexts reconstructed the argument and checked the source model; this is not external acceptance.
+Jake S. Brusca, 27 November 2026. ChatGPT assisted with the ideas, proof, writing and review. **Status: written draft. The public `lean/external_analysis/` package proves all14 frozen depth-one targets using pinned mathlib; at source commit `8524770`, its clean build, exhaustive axiom audit, sandbox replay, frozen comparison, all six bundled checker modes and nine hostile fixtures passed ([receipts](../../verification/external_analysis/README.md)). Later manuscript changes require final-tree regression CI. No human expert refereeing is claimed.** Separate AI contexts reconstructed the argument and checked the source model; this is not external acceptance.
 
 This studies the depth-one subquestion of Polson–Sokolov O3′, not the full arbitrary-depth problem. See the [source and status register](../external_problems/README.md). Finite arithmetic for the series is reproduced by `python3 certificates/external_problems/verify.py` from the repository root. No ordinary Collatz convergence follows.
+
+## Related work and attribution
+
+Finite parity coding and residue-class counts are classical: [Terras1976, §1](https://doi.org/10.4064/aa-30-3-241-252), and [Bernstein–Lagarias1996](https://doi.org/10.4153/CJM-1996-060-x) on the2-adic conjugacy. Our odd accelerated grouping, joint exit/block cylinders and relative odd-seed normalization are checked explicitly; they do not assert independence along one fixed integer trajectory.
+
+The cycle obstruction is related to [Karp's finite minimum-cycle-mean theory](https://doi.org/10.1016/0012-365X(78)90011-0). Our countably infinite weighted failure objective and arbitrary corrections require their own proof. The nonattainment argument uses [Dirichlet's approximation method](https://doi.org/10.1017/CBO9781139237338.037) with an explicit conversion to positive near-integer returns. The public formalization credits [mathlib](https://arxiv.org/abs/1910.09336); its actual version is pinned in the lockfile. These references identify prior methods without establishing novelty or human acceptance.
 
 ## Candidate mathematical statement
 

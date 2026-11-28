@@ -272,4 +272,4 @@ requires the separate mandatory CI `external-support` job in addition to the
 legacy verification above. Challenge holes are isolated specification inputs,
 never accepted proof imports. Local clean build alone is partial assurance.
 
-The separate [depth-one analysis](external_analysis/README.md) contains all 14 frozen h=1 targets. Its full replay/comparison/negative-control job is mandatory and currently pending. It has its own pinned mathlib lockfile and inventory; the legacy runner does not build it.
+The separate [depth-one analysis](external_analysis/README.md) contains all 14 frozen h=1 targets. Its full replay/comparison/negative-control job passed at8524770; source-pinned receipts are in `verification/external_analysis/`. Later final-head regression remains required. It has its own pinned mathlib lockfile and inventory; the legacy runner does not build it.

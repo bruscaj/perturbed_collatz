@@ -37,7 +37,32 @@ priority claim. No ordinary Collatz convergence or global forced capture follows
 
 The intended contribution is a rung entropy limit near maximal reward and its near-extremal expansion. It addresses the rung interpretation of M4 near one, the large-tilt convergence part of R8, and the proposed asymptotic in R9 of Polson and Sokolov. It does not prove the complete R8 question, compute the requested M4 entropy table, establish an unrestricted M4 limit, or imply anything about integer Collatz cycles or convergence.
 
-Primary source: Nicholas G. Polson and Vadim Sokolov, \emph{On the Collatz Conjecture: Martingales, Momentum and Continued Fractions}, edition 1 (2026), \href{https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex}{v1.4.0 ratchets chapter}, labels \texttt{rrt:sec:m4}, \texttt{rrt:prob:r8}, \texttt{rrt:prob:r9}; the tag resolves to commit \nolinkurl{5840497a23fc0d64127b850aea68862d7c93f2b7}. The \href{https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10f_missed.tex}{missed-problems chapter} uses unrestricted-limit wording for M4; the detailed ratchets discussion fixes the rung subsequence. These formulations must be distinguished. The \href{../external_problems/README.md}{status register} records the source mismatch and outstanding acceptance gates. The authors' \href{https://vsokolov.org/books/collatz/results.html}{results index} was checked on 2026-11-27; an open listing alone is not a novelty search.
+Primary source: Nicholas G. Polson and Vadim Sokolov~\cite{polson}, \emph{On the Collatz Conjecture: Martingales, Momentum and Continued Fractions}, edition 1 (2026), \href{https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex}{v1.4.0 ratchets chapter}, labels \texttt{rrt:sec:m4}, \texttt{rrt:prob:r8}, \texttt{rrt:prob:r9}; the tag resolves to commit \nolinkurl{5840497a23fc0d64127b850aea68862d7c93f2b7}. The \href{https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10f_missed.tex}{missed-problems chapter} uses unrestricted-limit wording for M4; the detailed ratchets discussion fixes the rung subsequence. These formulations must be distinguished. The \href{../external_problems/README.md}{status register} records the source mismatch and outstanding acceptance gates. The authors' \href{https://vsokolov.org/books/collatz/results.html}{results index} was checked on 2026-11-27; an open listing alone is not a novelty search.
+
+\section{Related work and the use of classical methods}
+Mechanical extremizers for rational Collatz cycles predate this draft.
+Halbeisen and Hungerb\"uhler~\cite{halbeisen-hungerbuhler}, Lemma~5 and
+Corollary~1, identify balanced binary words in a maximum-minimum cycle problem;
+their equation~(4) gives the affine concatenation identity. Their binary
+length/odd-count convention must be converted to our stride-length/halving-count
+convention. That extremal result does not count the near-maximal words studied
+here; no new priority for mechanical extremizers is claimed.
+
+The phase averages use classical irrational-rotation equidistribution
+\cite{weyl}. The pressure argument uses the familiar constrained-partition
+concatenation mechanism of renewal and pinning models; compare
+Giacomin~\cite{giacomin}, Sections~1.2 and~3.1, especially equation~(3.1).
+Here the environment is a deterministic irrational rotation. Independent
+random disorder, almost-sure pressure limits and critical regularity from
+that literature do not automatically transfer to this model.
+
+The concavity and duality language follows standard convex analysis
+\cite{rockafellar}. The matching microcanonical lower bound below still needs
+its explicit finite-block construction. The endpoint Laplace calculation is
+an instance of Watson's lemma~\cite{dlmf}, Section~2.3(ii); the polymer error
+bounds and resulting constants remain specific claims of this draft. These
+comparisons identify prior methods, without certifying the proposed entropy
+limit, critical differentiability or novelty.
 
 \section{Definitions and the proposed statement}
 
@@ -110,7 +135,7 @@ Thus the reward is $B_n-E$. Each profile has cost in $[0,n]$, the zero profile i
 B_n(x)/n\longrightarrow b=\int_0^1 2^{-u}\,du=1/(2\log2)
 \]
 
-uniformly in $x$.
+uniformly in $x$. For completeness, a nonconstant Fourier mode has an irrational-rotation average bounded uniformly in its starting phase by a constant divided by $n$. Trigonometric approximation proves uniform convergence for continuous functions; continuous upper and lower approximants extend it to the bounded functions with finitely many discontinuities used here. This is the uniform phase version of the equidistribution method~\cite{weyl}.
 
 \section{Positive runs and a bounded cutting cost}
 
@@ -197,7 +222,7 @@ Undoing the Gibbs weights bounds its number of profiles below by
  \exp[\lambda_L n(\eta'-d)].
 \]
 
-Its logarithm/n has lower limit at least $p_L(\lambda_L)+\lambda_L(\eta'-d)$. First let d decrease to zero. Then let L grow: the uniform bracket $|p-p_L|\le C_6/L$ implies convergence of the minimizing values to $f(\eta')$. Finally let $\eta'$ increase to $\eta$. The function f is finite, nonnegative and concave, so it is continuous at every $\eta>0$. This proves the claimed lower bound. No derivative of the infinite pressure was assumed.
+Its logarithm/n has lower limit at least $p_L(\lambda_L)+\lambda_L(\eta'-d)$. First let d decrease to zero. Then let L grow: the uniform bracket $|p-p_L|\le C_6/L$ implies convergence of the minimizing values to $f(\eta')$. Finally let $\eta'$ increase to $\eta$. The function f is finite, nonnegative and concave, so it is continuous at every $\eta>0$ in this open interval; compare the general continuity theory in~\cite{rockafellar}. This proves the claimed lower bound. No derivative of the infinite pressure was assumed.
 
 At source rungs, $E\le\epsilon B_r$ corresponds to $\eta_r=\epsilon B_r/r\to\epsilon b$. Therefore
 \[
@@ -352,5 +377,31 @@ The labels \texttt{rrt:sec:m4}, \texttt{rrt:prob:r8} and
 \href{https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex}{pinned ratchets chapter}.
 The unrestricted M4 wording appears in the
 \href{https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10f_missed.tex}{pinned missed-problems chapter}.
+\bibitem{halbeisen-hungerbuhler}
+L.~Halbeisen and N.~Hungerb\"uhler.
+Optimal bounds for the length of rational Collatz cycles.
+\emph{Acta Arithmetica} \textbf{78}(3) (1997), 227--239.
+\href{https://doi.org/10.4064/aa-78-3-227-239}{doi:10.4064/aa-78-3-227-239}.
+
+\bibitem{weyl}
+H.~Weyl. \"Uber die Gleichverteilung von Zahlen mod.~Eins.
+\emph{Mathematische Annalen} \textbf{77} (1916), 313--352.
+\href{https://doi.org/10.1007/BF01475864}{doi:10.1007/BF01475864}.
+
+\bibitem{giacomin}
+G.~Giacomin. Renewal sequences, disordered potentials, and pinning phenomena.
+Lecture notes (2008), Sections~1.2 and~3.1.
+\href{https://arxiv.org/abs/0807.4285}{arXiv:0807.4285}.
+
+\bibitem{rockafellar}
+R.~T.~Rockafellar. \emph{Convex Analysis}.
+Princeton University Press, 1970, Parts~II--III.
+\href{https://doi.org/10.1515/9781400873173}{doi:10.1515/9781400873173}.
+
+\bibitem{dlmf}
+NIST. \emph{Digital Library of Mathematical Functions}, Section~2.3(ii),
+Watson's lemma, equation~(2.3.8).
+\href{https://dlmf.nist.gov/2.3#ii}{dlmf.nist.gov/2.3(ii)}.
+Accessed 27 November 2026.
 \end{thebibliography}
 \end{document}

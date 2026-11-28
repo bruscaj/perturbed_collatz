@@ -16,13 +16,14 @@ Almost every B1 parameter in each fixed progression merges with its smaller neig
 
 The [external-problem research register](papers/external_problems/README.md)
 now includes candidate answers to Polson–Sokolov **M4, R8, R9 and O3′**.
-They remain draft candidates, with no complete headline Lean proofs or human
-expert refereeing. Exact finite source-model checks and five abstract integer
+The full four-problem claims remain draft candidates without complete headline
+Lean proofs or human expert refereeing. Exact finite source-model checks and five abstract integer
 supporting lemmas are included. M4's unrestricted and rung formulations are
 tracked separately; none is advertised here as a solved open problem.
-The [depth-one Syracuse proof draft](papers/finite_information_lyapunov/README.md)
-includes its density argument, exact infimum formula and nonattainment argument,
-with its incomplete formal coverage stated explicitly.
+The [depth-one Syracuse paper](papers/finite_information_lyapunov/README.md)
+has complete h=1 proofs of density, exact infimum and nonattainment in a separate
+Lean package with source-pinned full-checker receipts. The full arbitrary-depth
+O3′ problem remains unresolved here.
 The [near-extremal entropy draft](papers/arithmetic_bridge_pressure/README.md)
 gives the proposed rung pressure and entropy argument behind R9; it remains
 unformalized and covers only part of M4 and R8.
@@ -103,4 +104,4 @@ Integer samples are labeled by exact finite replay. Complex raster colors are fl
 
 The workflow in `.github/workflows/verify.yml` runs the all-mode command when this payload is placed at a GitHub repository root. Each result is traceable through [claims.json](claims.json), and material release changes belong in [CHANGELOG.md](CHANGELOG.md). The README and manuscript identify the author and describe ChatGPT’s assistance.
 
-The [depth-one O3′ analytic package](lean/external_analysis/README.md) has 14 frozen target proofs and an exhaustive 397-declaration audit. Its separate mandatory `external-analysis-h1` CI job performs source-bound replay, frozen comparison and hostile fixtures. Full checker results are pending; legacy `--mode all` covers the legacy projects and all manuscripts, while the two external jobs supply their own mandatory gates. This does not settle the full O3′ problem.
+The [depth-one O3′ analytic package](lean/external_analysis/README.md) has 14 frozen target proofs and an exhaustive 397-declaration audit. Its separate mandatory `external-analysis-h1` CI job performs source-bound replay, frozen comparison and hostile fixtures. Full checker results passed at `8524770` ([receipts](verification/external_analysis/README.md)); later final-head regression remains pending; legacy `--mode all` covers the legacy projects and all manuscripts, while the two external jobs supply their own mandatory gates. This does not settle the full O3′ problem.

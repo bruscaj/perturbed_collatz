@@ -48,13 +48,45 @@ version~1.4.0, label \texttt{prob:ch11:o3p}. Its exact source commit is
 \href{https://github.com/VadimSokolov/collatz/commit/5840497a23fc0d64127b850aea68862d7c93f2b7}{\nolinkurl{5840497a23fc0d64127b850aea68862d7c93f2b7}}.
 The block convention is in the same version's
 \href{https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch05c_mmcollatz.tex}{block-majorization chapter}.
-An ordinary Lean implementation of all fourteen canonical depth-one
-specification targets has been prepared in the private audit work. At this
-manuscript build, final public-package statement comparison, fresh replay and
-independent-checker receipts are still being integrated. Ordinary compilation
+The public \path{lean/external_analysis/} package contains proofs of all
+fourteen frozen depth-one targets, using the Lean mathematical library
+\cite{mathlib}. The historical mathlib paper describes the library; the
+release lockfile pins the actual contemporary dependency revision.
+At source commit \texttt{8524770}, the dedicated analytic CI job passed a
+clean build, exhaustive axiom audit, source-bound sandbox replay, frozen-target
+comparison, all six bundled checker modes and all nine hostile fixtures.
+Exact source hashes and receipts are in \path{verification/external_analysis/}.
+Later manuscript changes still require final-tree regression checks. Ordinary compilation
 is not independent kernel replay or human review. Consult the release's
 per-declaration coverage register; this paper does not claim those pending
 assurance gates have passed.
+
+\section{Related work and scope of attribution}
+Finite parity data for Collatz iteration have classical residue-class
+realizations. Terras~\cite{terras}, Section~1, develops finite parity-vector
+coding and its counting consequences. Bernstein and Lagarias~\cite{bernstein-lagarias}
+study the conjugacy between the half-step Collatz map and the binary shift
+on the $2$-adic integers. The accelerated odd map here is obtained by grouping
+steps; its joint exit/block cylinders and relative odd-seed normalization are
+proved explicitly below. These population laws do not make the successive
+symbols of one fixed integer trajectory independent.
+
+The potential-cycle argument is related to classical finite graph
+optimization: Karp~\cite{karp} characterizes the minimum cycle mean of a
+finite digraph. Adding a difference of vertex potentials leaves every cycle
+sum unchanged. Here the graph of run lengths is countable, the objective
+weights failed edges rather than minimizing mean cycle weight, and the
+correction may be unbounded. The infinite infimum, density transfer and
+nonattainment therefore require the separate arguments in this paper.
+
+The Diophantine step uses Dirichlet approximation~\cite{dirichlet}.
+A two-sided small fractional error alone is insufficient for our positive
+return indices: the nonattainment proof below explicitly converts a negative
+error into a positive near-integer return. The exact formula here is a
+candidate contribution to the depth-one question of Polson and Sokolov,
+not a claim that parity coding, cycle obstructions or irrational approximation
+are new. The references are a scoped comparison, not a completed novelty
+review.
 
 \section{The precise depth-one question}
 On positive odd integers define
@@ -316,5 +348,32 @@ Problem O3$'$, label \texttt{prob:ch11:o3p};
 \href{https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch11_open.tex}{pinned original source}.
 The authors' \href{https://vsokolov.org/books/collatz/results.html}{results index}
 was checked on 27 November 2026. An open listing is not a claim of novelty.
+\bibitem{mathlib}
+The mathlib Community. The Lean mathematical library.
+\emph{Proceedings of CPP 2020} (2020), 367--381.
+\href{https://doi.org/10.1145/3372885.3373824}{doi:10.1145/3372885.3373824};
+\href{https://arxiv.org/abs/1910.09336}{author manuscript}.
+\bibitem{terras}
+R.~Terras. A stopping time problem on the positive integers.
+\emph{Acta Arithmetica} \textbf{30}(3) (1976), 241--252.
+\href{https://doi.org/10.4064/aa-30-3-241-252}{doi:10.4064/aa-30-3-241-252}.
+
+\bibitem{bernstein-lagarias}
+D.~J.~Bernstein and J.~C.~Lagarias. The $3x+1$ conjugacy map.
+\emph{Canadian Journal of Mathematics} \textbf{48}(6) (1996), 1154--1169.
+\href{https://doi.org/10.4153/CJM-1996-060-x}{doi:10.4153/CJM-1996-060-x}.
+
+\bibitem{karp}
+R.~M.~Karp. A characterization of the minimum cycle mean in a digraph.
+\emph{Discrete Mathematics} \textbf{23}(3) (1978), 309--311.
+\href{https://doi.org/10.1016/0012-365X(78)90011-0}{doi:10.1016/0012-365X(78)90011-0}.
+
+\bibitem{dirichlet}
+P.~G.~Lejeune Dirichlet.
+Verallgemeinerung eines Satzes aus der Lehre von den Kettenbr\"uchen
+nebst einigen Anwendungen auf die Theorie der Zahlen (1842).
+In \emph{Werke}, vol.~I, chapter~XXXV, pp.~633--638.
+\href{https://doi.org/10.1017/CBO9781139237338.037}{doi:10.1017/CBO9781139237338.037}.
+
 \end{thebibliography}
 \end{document}

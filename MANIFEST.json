@@ -14,8 +14,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 7100,
-      "sha256": "3c6d66564a81aef83fdaa84a884294b65cd9fa7a4da3aea6ad5f5e83b0efca39"
+      "bytes": 7643,
+      "sha256": "94e0817b8137224c43a3db524be10b23edc51c03417caeb7c14f69791f6204cf"
     },
     {
       "path": "Makefile",
@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 13921,
-      "sha256": "d57c1554d8c595058208a2ab5371bc2296b1a82af6a5a13727892e377d3816ab"
+      "bytes": 14111,
+      "sha256": "5fc4d60eb14bae4b92f791cef7fb98db12836ab94f91f56da85d87a86ddf563f"
     },
     {
       "path": "certificates/exposition/examples.json",
@@ -59,8 +59,8 @@
     },
     {
       "path": "certificates/external_problems/verify.py",
-      "bytes": 2076,
-      "sha256": "510d2601dbeaf736a237cff097c1dda0632d7d2944b0b929dbe20c103f4ac72d"
+      "bytes": 2170,
+      "sha256": "656d8f540523564a47c4a56fce9be72cd78d2af595afcae2a2c4efa4fde7d51a"
     },
     {
       "path": "certificates/frontier/README.md",
@@ -664,8 +664,8 @@
     },
     {
       "path": "claims.json",
-      "bytes": 41385,
-      "sha256": "4b2d733124dcdea444bee1427de725b588a9fbe2464f75dafaabc41b56187f55"
+      "bytes": 41479,
+      "sha256": "370f4d4fdf60baa78d6b78bc1626c1a527608eea0e0235bde9753f1c9720df20"
     },
     {
       "path": "figures/README.md",
@@ -719,8 +719,8 @@
     },
     {
       "path": "lean/README.md",
-      "bytes": 18127,
-      "sha256": "9210f8d0689e6897b8ff27e04d9101f2fbe31962b0b0821c1d5dc8eccc197257"
+      "bytes": 18220,
+      "sha256": "2f59ae6f16bab36fee62627fcbb14ab5b65582c174ea1a4fe19e8002086bf6f8"
     },
     {
       "path": "lean/external_analysis/.gitignore",
@@ -1179,8 +1179,8 @@
     },
     {
       "path": "lean/inventory.json",
-      "bytes": 709564,
-      "sha256": "a2f8d215d4e5b4ef2234c90c8dfc8f4b38d5aff14fbb5fb5c4b74127cf958514"
+      "bytes": 709632,
+      "sha256": "5fdbcee3d50ece0f7f96e00328b979d99fa602cb2258438d5ac85a1dc82cade5"
     },
     {
       "path": "lean/inverse/Audit.lean",
@@ -1389,23 +1389,23 @@
     },
     {
       "path": "papers/README.md",
-      "bytes": 2363,
-      "sha256": "d7d13005fce626ea9cffd8d73d0a791e56e1a40ee20ab6f98956e0383f1779d7"
+      "bytes": 2457,
+      "sha256": "afb235f2ef28d0e738a030f29115cadc70f0fbe5e160d78f1d4f0409d979a27d"
     },
     {
       "path": "papers/arithmetic_bridge_pressure/README.md",
-      "bytes": 16482,
-      "sha256": "4c870dc3bb8c12ded6d1907f3cfdcef0c50e5ba93830db4b4b153967d9cdd7f9"
+      "bytes": 17772,
+      "sha256": "8602aa0c2a37f68f461b6d53024eb183291d5902d847c054afc0a755173c7bc3"
     },
     {
       "path": "papers/arithmetic_bridge_pressure/paper.pdf",
-      "bytes": 297520,
-      "sha256": "d87a71d44c80a0c8c60a37eaae50e40a11dda2a1b1b8766356e1ed0dae11e3b1"
+      "bytes": 303902,
+      "sha256": "8a05f1c00c4198ce937d785ba35230dfd313aeff0a306851fb6086a8e87df67f"
     },
     {
       "path": "papers/arithmetic_bridge_pressure/paper.tex",
-      "bytes": 21736,
-      "sha256": "0e453becbace8d5292cd63be2d6037a58886cac73aad43d5042ad87c12c001f7"
+      "bytes": 24886,
+      "sha256": "5f95abfe5329632d40f0f71dc54af604df34164e3b2fc9d37b8e50601caa214e"
     },
     {
       "path": "papers/build.py",
@@ -1414,28 +1414,28 @@
     },
     {
       "path": "papers/external_problems/README.md",
-      "bytes": 7417,
-      "sha256": "cd3d156a297940b8fd12549e881fbe59d5834a02cb59c4d79c4aec05399143f5"
+      "bytes": 7624,
+      "sha256": "8f8a42e510a06322dd28dde669d0b938d20b5615783e2212fa6d14ffdd9485da"
     },
     {
       "path": "papers/external_problems/status.json",
-      "bytes": 3903,
-      "sha256": "e79b9b223169a860f97b6a78106be349f5c33851fb59c92a0dd58339729ddf9b"
+      "bytes": 5344,
+      "sha256": "f2659bc099c635956e94299a76087ae183ad9d79baa9da857a3e283d97f7b332"
     },
     {
       "path": "papers/finite_information_lyapunov/README.md",
-      "bytes": 7190,
-      "sha256": "bd25f798f3a5dfd4688a79e987a2ed0c9cfcc9f2854b662ed28691b2d60ce892"
+      "bytes": 8455,
+      "sha256": "f3053e8b63fc2d62f2d2298ffa41b6150a29576e81a66495e4840a454c225751"
     },
     {
       "path": "papers/finite_information_lyapunov/paper.pdf",
-      "bytes": 307855,
-      "sha256": "d3b4fee17adf49310f414f2a45e01d72092f447df228b7bb48740b269fbcf99d"
+      "bytes": 315392,
+      "sha256": "a1b5ef2465b9054c368b8a031b37450cefeb1ba57eda35ff12af0ef0e855b994"
     },
     {
       "path": "papers/finite_information_lyapunov/paper.tex",
-      "bytes": 14510,
-      "sha256": "293853c4f3c4e9c86a67de403597c9721c1e5e50d1d9bb781a61f8a35065b2ae"
+      "bytes": 17821,
+      "sha256": "66db248e10b900dcd282336f238cd5eb614119757376d1256fbbaad8d3add672"
     },
     {
       "path": "requirements-figures.txt",
@@ -1521,6 +1521,26 @@
       "path": "tex/three_family_rows.tex",
       "bytes": 2739,
       "sha256": "b3d765597f34af621e1f1d13c86aae0ddbe6d705847a13e282b9e18cc1055a02"
+    },
+    {
+      "path": "verification/external_analysis/README.md",
+      "bytes": 1766,
+      "sha256": "afb6876df29e37b2899cd0bbd52835f23827aca8bad55866ca3bcc3f9dbac56a"
+    },
+    {
+      "path": "verification/external_analysis/external-analysis-mutations.json",
+      "bytes": 6714,
+      "sha256": "4a683b924425c0d22c82a941ebf400964d2084a6368a34f46e4eb90046841997"
+    },
+    {
+      "path": "verification/external_analysis/external-analysis-source-tree.txt",
+      "bytes": 82,
+      "sha256": "3dda0a66f95e123377a6877a532f460e4080491cca9ff64a7883cb246ceab8ab"
+    },
+    {
+      "path": "verification/external_analysis/external-analysis.json",
+      "bytes": 210911,
+      "sha256": "c9950ad89155122e60eb24b0cd6033312c4fb19c3347269b002f4e9bc6621cd9"
     },
     {
       "path": "verification/external_prefix/README.md",

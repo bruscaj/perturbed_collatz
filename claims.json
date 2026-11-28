@@ -814,11 +814,12 @@
     {
       "id": "REL-O3-H1",
       "title": "Literal arbitrary-correction depth-one density and infimum",
-      "evidence_status": "all 14 frozen targets proved in Lean; standalone clean build and exhaustive axiom audit passed; full checker CI pending",
+      "evidence_status": "all 14 frozen h=1 targets proved; clean build, complete closure audit/replay, frozen comparison, all six checker modes and nine hostile fixtures passed at8524770",
       "artifacts": [
         "lean/external_analysis/README.md",
         "lean/external_analysis/inventory.json",
-        "papers/finite_information_lyapunov/paper.pdf"
+        "papers/finite_information_lyapunov/paper.pdf",
+        "verification/external_analysis/README.md"
       ],
       "limitations": "Only h=1. Arbitrary-depth O3 prime, inverse-depth rate, novelty and human expert validation remain unresolved."
     }

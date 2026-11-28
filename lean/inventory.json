@@ -8643,7 +8643,7 @@
     "inventory": "lean/external_analysis/inventory.json",
     "frozen_targets": 14,
     "owned_theorem_closures": 397,
-    "assurance": "clean source build and exhaustive axiom audit passed; full dedicated CI pending",
+    "assurance": "full analytic job passed at8524770 in run46093375392; source-pinned receipts in verification/external_analysis; later final-head regression pending",
     "scope": "O3 prime h=1 only"
   }
 }

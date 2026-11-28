@@ -37,7 +37,7 @@ def main():
         if claim["headline_formal_declarations"] or claim["status"] != "draft candidate":
             raise ValueError("headline status changed; requires a fresh release audit")
     output["frozen_supporting_spec_hashes"] = "match"
-    output["limits"] = "No headline infinite theorem, novelty or human review certified."
+    output["limits"] = "This finite-checker report certifies no infinite theorem, novelty or human review; the separate analytic package has its own source-pinned assurance receipts."
     print(json.dumps(output, indent=2))
 
 

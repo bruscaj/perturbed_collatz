@@ -32,6 +32,12 @@ the rung subsequence. These formulations must be distinguished. The
 and outstanding acceptance gates. The authors' [results index](https://vsokolov.org/books/collatz/results.html)
 was checked on 2026-11-27; an open listing alone is not a novelty search.
 
+## Related work and methods
+
+Mechanical extremizers for rational Collatz cycles predate this draft: Halbeisen–Hungerbühler, *Optimal bounds for the length of rational Collatz cycles*, Acta Arith.78(3)(1997),227–239, [Lemma5, Corollary1 and equation4](https://math.ch/norbert.hungerbuehler/publications/Optimal_bounds_for_the_length_of_rational_Collatz_cycles.pdf). Their binary length/odd-count convention must be converted to the stride-length/halving-count convention here. Their extremal theorem does not count these near-maximal words.
+
+The methods have classical precedents: [Weyl's irrational-rotation equidistribution](https://doi.org/10.1007/BF01475864); [Giacomin's constrained renewal-partition concatenation](https://arxiv.org/html/0807.4285v1), §§1.2,3.1; [Rockafellar's convex continuity and duality](https://doi.org/10.1515/9781400873173), PartsII–III; and [Watson's endpoint Laplace expansion](https://dlmf.nist.gov/2.3#ii). The deterministic rotation here requires its own phase-uniform argument; random-disorder or critical-regularity theorems do not automatically transfer. The microcanonical matching, polymer sandwich and constants still require this draft's model-specific proofs. These references establish methodological context, not novelty or acceptance.
+
 ## 1. Definitions and the proposed statement
 
 All logarithms below are natural unless a base is displayed. Set
