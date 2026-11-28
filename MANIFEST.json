@@ -4,8 +4,8 @@
   "files": [
     {
       "path": ".github/workflows/verify.yml",
-      "bytes": 5444,
-      "sha256": "1d1596d00067fcb41d748a7960b3b1f3760c9479ece9eb88c6215a40d39d9c57"
+      "bytes": 7703,
+      "sha256": "6e2d51422900afcab7dd0ea3931beb8a72d51f4371499ca830c69f13a646420b"
     },
     {
       "path": ".gitignore",
@@ -14,8 +14,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 7643,
-      "sha256": "94e0817b8137224c43a3db524be10b23edc51c03417caeb7c14f69791f6204cf"
+      "bytes": 8087,
+      "sha256": "69059805eeeb74eb9fd4a9927e7603129f7050db2b0438829a5ba42931ac854b"
     },
     {
       "path": "Makefile",
@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 14111,
-      "sha256": "5fc4d60eb14bae4b92f791cef7fb98db12836ab94f91f56da85d87a86ddf563f"
+      "bytes": 14723,
+      "sha256": "0cd005dc4cbafa64e5a523564f648a3a9c88ec767230aece668ee93881b49816"
     },
     {
       "path": "certificates/exposition/examples.json",
@@ -664,8 +664,8 @@
     },
     {
       "path": "claims.json",
-      "bytes": 41479,
-      "sha256": "370f4d4fdf60baa78d6b78bc1626c1a527608eea0e0235bde9753f1c9720df20"
+      "bytes": 42209,
+      "sha256": "ac642c321f57c770601f546126f0030271957841ec0d91f0f69a14277ffde142"
     },
     {
       "path": "figures/README.md",
@@ -719,8 +719,8 @@
     },
     {
       "path": "lean/README.md",
-      "bytes": 18220,
-      "sha256": "2f59ae6f16bab36fee62627fcbb14ab5b65582c174ea1a4fe19e8002086bf6f8"
+      "bytes": 18621,
+      "sha256": "9339a9b10ed22e44fd5cdd70b93229633931e512ebf78ad0729eee0698d08829"
     },
     {
       "path": "lean/external_analysis/.gitignore",
@@ -911,6 +911,221 @@
       "path": "lean/external_analysis/verify.py",
       "bytes": 13547,
       "sha256": "9a71a88fe334b54d5b892c7f68bdeb6395ffa51f0710c99dc19db9247bef70d0"
+    },
+    {
+      "path": "lean/external_population/.gitignore",
+      "bytes": 45,
+      "sha256": "0a950f8a702248b8b0c3cf13fce98751aabaf0b8c42b13d097d32b47aefdd99d"
+    },
+    {
+      "path": "lean/external_population/Arithmetic.lean",
+      "bytes": 5377,
+      "sha256": "8ad07971f3dd9b211aa99c36f6ed9c645e9dbb158b7ba33e81b72d5ca2c6f76e"
+    },
+    {
+      "path": "lean/external_population/Audit.lean",
+      "bytes": 4867,
+      "sha256": "bb143145f08596ee228cc810dac3abdc4697ca2856b2f1275041392f5c55773d"
+    },
+    {
+      "path": "lean/external_population/CountablePartition.lean",
+      "bytes": 11129,
+      "sha256": "1d1d1f699b9abe0de3eb9c03bb3306359395629d3b33739a948915a3e09f9d7d"
+    },
+    {
+      "path": "lean/external_population/Cylinders.lean",
+      "bytes": 3334,
+      "sha256": "22ef4309c927190e4c004ce8fe2cd0761a59ef6ce81ef0a230b7d83515288a17"
+    },
+    {
+      "path": "lean/external_population/Definitions.lean",
+      "bytes": 3873,
+      "sha256": "cf29376721942a78328491cd910690497f95d381711f0d2e758998fbba9374bc"
+    },
+    {
+      "path": "lean/external_population/DensityBounds.lean",
+      "bytes": 1380,
+      "sha256": "1c0efec93aeb9f3024ef9b3cfcb7868504b6d819fdef578865903ce267a47e3d"
+    },
+    {
+      "path": "lean/external_population/ExitCylinders.lean",
+      "bytes": 7214,
+      "sha256": "178d20f9f84013d8c4e942542948c3acff31c8bac17efde06f22ec4e60afe611"
+    },
+    {
+      "path": "lean/external_population/ExpectedTypes.lean",
+      "bytes": 2611,
+      "sha256": "5ce898eb70690f6f77e26a95cbafb5ef268fa93617ab7418a0b25f6878c34968"
+    },
+    {
+      "path": "lean/external_population/GENERAL_DENSITY_PROOF.md",
+      "bytes": 19813,
+      "sha256": "6cdacd135af08a8711fee57f0672e149956053559222a2e87c23d029d7bcfd9e"
+    },
+    {
+      "path": "lean/external_population/Gains.lean",
+      "bytes": 5805,
+      "sha256": "1471ce4e6e2e5c3db4824616be2c1dd9f99d6c959ee8e809b109cfdd1ed54b03"
+    },
+    {
+      "path": "lean/external_population/GeneralArithmetic.lean",
+      "bytes": 5061,
+      "sha256": "06cbcb0af62e33e9f631750277b7e5e6d8044115b554ddaf323d3a112bddfe30"
+    },
+    {
+      "path": "lean/external_population/GeneralBlockWords.lean",
+      "bytes": 9204,
+      "sha256": "b3a8b53c5fe4fb1db185671a2f349f57e251d09b14d5ed76c04e17633f3ef4c0"
+    },
+    {
+      "path": "lean/external_population/GeneralChallenge.lean",
+      "bytes": 1585,
+      "sha256": "149002f98a102ad1a123204781d575ed2acbb6354f655ad66dfde79fa159c1ff"
+    },
+    {
+      "path": "lean/external_population/GeneralCompatibility.lean",
+      "bytes": 5468,
+      "sha256": "bde003b9d0e546dccc9a086637e86dc03ae031c8797a739091b04c309023b62f"
+    },
+    {
+      "path": "lean/external_population/GeneralCylinderDensity.lean",
+      "bytes": 1127,
+      "sha256": "43c77d1a8062a836f60f86d148175e8353488cc71cf605e5cf45a23b7973fdb7"
+    },
+    {
+      "path": "lean/external_population/GeneralDefinitions.lean",
+      "bytes": 7409,
+      "sha256": "9d3f21078449309feb93e42b2d2b5fc8c5f0c48c4ff42ac7b62fc5d911c2decc"
+    },
+    {
+      "path": "lean/external_population/GeneralDensity.lean",
+      "bytes": 2462,
+      "sha256": "2180aea59aded9c0fd910ec19e81c8ef073d8486cf01b62209d21add10776e59"
+    },
+    {
+      "path": "lean/external_population/GeneralExpectedTypes.lean",
+      "bytes": 6387,
+      "sha256": "65087d9a25b910c2875c128d9c477cab9b5e506629d446f5db193450dad3b8fa"
+    },
+    {
+      "path": "lean/external_population/GeneralGains.lean",
+      "bytes": 3163,
+      "sha256": "0c17a1a320f733f9aab1cad379a4101fbd382550ffa63330cd7dd166ad59cf82"
+    },
+    {
+      "path": "lean/external_population/GeneralMarginal.lean",
+      "bytes": 8590,
+      "sha256": "d69a06493a61fd43b5ab901aec79e289d30028d79338b6c025d8f7e996227bae"
+    },
+    {
+      "path": "lean/external_population/GeneralPreimage.lean",
+      "bytes": 5095,
+      "sha256": "42fdc76715211e50b1b79da036ed3b65a94be2226c90296021723886e8942c25"
+    },
+    {
+      "path": "lean/external_population/GeneralProjection.lean",
+      "bytes": 3239,
+      "sha256": "b45485e3a49d40ad02239541efbb6c1cb18f256a8877e7f53b4d56eeeed810e8"
+    },
+    {
+      "path": "lean/external_population/GeneralRefinementLabels.lean",
+      "bytes": 4676,
+      "sha256": "87a8dafc9256bdd1245b3662df2cda8cd98ca6fb3fd7b07ca90d8bee53b2f314"
+    },
+    {
+      "path": "lean/external_population/GeneralSolution.lean",
+      "bytes": 2450,
+      "sha256": "59dfb6be602190bcdafbb12a639b07a08ae26fa9eb5b953ed638cc5cab4fb523"
+    },
+    {
+      "path": "lean/external_population/GeneralSourceDensity.lean",
+      "bytes": 3459,
+      "sha256": "d21d8bdfb3181f59f1ca23b98696dd99d8a54d58ce674f061eccd739e1d11dd9"
+    },
+    {
+      "path": "lean/external_population/GeneralStrideWords.lean",
+      "bytes": 3650,
+      "sha256": "c513dd033ff334a4a40ba068ec60e8c715176e30f507247a680891269106a352"
+    },
+    {
+      "path": "lean/external_population/GeneralWeights.lean",
+      "bytes": 8778,
+      "sha256": "b0a23ff1e40cc0588f96bf0ebb8e9ea95c588fa539c79fe853d93c033a6520b6"
+    },
+    {
+      "path": "lean/external_population/PartitionGeneral.lean",
+      "bytes": 8644,
+      "sha256": "0e50e035d0456cb71b6d7238957f219133a4eaecfda96fb9ab74b5fcb723ed3b"
+    },
+    {
+      "path": "lean/external_population/PopulationWeights.lean",
+      "bytes": 6242,
+      "sha256": "8affb6d578e9891f306df4b54cc621c33d110227eaec7912d8dcf826f9697190"
+    },
+    {
+      "path": "lean/external_population/Progressions.lean",
+      "bytes": 7593,
+      "sha256": "69262afd5c9229bda3c0ffab6f53d78f3afef9ea6101b918232dce4f6b13fb18"
+    },
+    {
+      "path": "lean/external_population/README.md",
+      "bytes": 6561,
+      "sha256": "9aa4897c005b2ef111368291d23eb6c35abe8bca4b588b6b0d25634f4327aa85"
+    },
+    {
+      "path": "lean/external_population/SourceDensity.lean",
+      "bytes": 2557,
+      "sha256": "0a9b01fcef47bc2684c2688055feff86747b453abe15ca295bf6a7cbd44205f3"
+    },
+    {
+      "path": "lean/external_population/cache-imports.txt",
+      "bytes": 658,
+      "sha256": "fd345be04a66ab61a74a13ad6b995be83a54c7b7f9e9f6664fe8f9c9b5a2e972"
+    },
+    {
+      "path": "lean/external_population/comparator.json",
+      "bytes": 1448,
+      "sha256": "0688be1f3df7d215bee069c5a103812710e9e1dbf4b102c30ef3503405d09b02"
+    },
+    {
+      "path": "lean/external_population/inventory.json",
+      "bytes": 3316283,
+      "sha256": "dea05de4fda33726e3eaaf96519fd128bc19b6b1c912e02cc41f136791dc8437"
+    },
+    {
+      "path": "lean/external_population/lake-manifest.json",
+      "bytes": 3573,
+      "sha256": "08dff150c61091bd5c4761415824b422108c28927e00209693d5bb2ad5f13a0f"
+    },
+    {
+      "path": "lean/external_population/lakefile.toml",
+      "bytes": 2597,
+      "sha256": "9e9a010c5a26bc519822078dac35f215934a3233a6e3f3b1a6b89526f600942d"
+    },
+    {
+      "path": "lean/external_population/lean-toolchain",
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+    },
+    {
+      "path": "lean/external_population/owned_modules.json",
+      "bytes": 598,
+      "sha256": "5d871eb72f52520d42d3d36ccd2229945bd9d985b63d980ae5c7c9117ddad9e5"
+    },
+    {
+      "path": "lean/external_population/specification.json",
+      "bytes": 3081,
+      "sha256": "f89835e56af7f912babd103a391fa2e935b0a1d9df02d57ddc7705cd179a1469"
+    },
+    {
+      "path": "lean/external_population/test_mutations.py",
+      "bytes": 21902,
+      "sha256": "65ddaf9933286aa117edc5d605ba5fe6af5e5dd5b49f71ed9da5afba7f88017c"
+    },
+    {
+      "path": "lean/external_population/verify.py",
+      "bytes": 14855,
+      "sha256": "4e1d7b904380be9cdd6d4e372ceb963a934812c09e24e13c7d950853725e5827"
     },
     {
       "path": "lean/external_problems/Audit.lean",
@@ -1179,8 +1394,8 @@
     },
     {
       "path": "lean/inventory.json",
-      "bytes": 709632,
-      "sha256": "5fdbcee3d50ece0f7f96e00328b979d99fa602cb2258438d5ac85a1dc82cade5"
+      "bytes": 710093,
+      "sha256": "10271dcbeea97526b6b09949d7335882408fe1ce07cbae27c7ada22e5675f9b2"
     },
     {
       "path": "lean/inverse/Audit.lean",
@@ -1389,8 +1604,8 @@
     },
     {
       "path": "papers/README.md",
-      "bytes": 2457,
-      "sha256": "afb235f2ef28d0e738a030f29115cadc70f0fbe5e160d78f1d4f0409d979a27d"
+      "bytes": 2821,
+      "sha256": "38331eda008de1d873128a7e2d759127ea42c8d30c48d631880e69e676c7913a"
     },
     {
       "path": "papers/arithmetic_bridge_pressure/README.md",
@@ -1414,13 +1629,13 @@
     },
     {
       "path": "papers/external_problems/README.md",
-      "bytes": 7624,
-      "sha256": "8f8a42e510a06322dd28dde669d0b938d20b5615783e2212fa6d14ffdd9485da"
+      "bytes": 8143,
+      "sha256": "dd8595d411b5612223722813e2383d3a95a0ae589d0305a8d28916f05c2f1f81"
     },
     {
       "path": "papers/external_problems/status.json",
-      "bytes": 5344,
-      "sha256": "f2659bc099c635956e94299a76087ae183ad9d79baa9da857a3e283d97f7b332"
+      "bytes": 5800,
+      "sha256": "4a1b1766f71c7261f3de62bba5f3fc23b36f334d3e9c20053a779c54474d7487"
     },
     {
       "path": "papers/finite_information_lyapunov/README.md",

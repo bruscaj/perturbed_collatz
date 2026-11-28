@@ -79,6 +79,13 @@
         "assurance_receipt": "verification/external_analysis/README.md",
         "source_commit": "8524770758f66940b1112ad13daa408d594c19f5",
         "assurance": "clean build, complete axiom audit, source-bound sandbox replay, frozen comparison, six checker modes and nine hostile fixtures passed"
+      },
+      "proved_density_foundation": {
+        "scope": "every fixed finite positive depth, unrestricted real correction of the actual current/future run window",
+        "formal_project": "lean/external_population",
+        "target_count": 22,
+        "assurance": "ordinary source build and exhaustive axiom audit passed; full independent gates pending",
+        "remaining": "infimum rate and general optimization are separate unfinished claims"
       }
     }
   ]

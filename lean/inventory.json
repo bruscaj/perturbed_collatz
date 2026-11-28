@@ -8645,5 +8645,14 @@
     "owned_theorem_closures": 397,
     "assurance": "full analytic job passed at8524770 in run46093375392; source-pinned receipts in verification/external_analysis; later final-head regression pending",
     "scope": "O3 prime h=1 only"
+  },
+  "external_population_project": {
+    "path": "lean/external_population",
+    "inventory": "lean/external_population/inventory.json",
+    "frozen_targets": 22,
+    "owned_modules": 28,
+    "owned_theorem_closures": 517,
+    "assurance": "clean own-source build and exhaustive axiom audit passed; dedicated external-population full CI pending",
+    "scope": "literal density and symbolic representation at each fixed finite depth; no rate or optimization"
   }
 }

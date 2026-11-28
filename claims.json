@@ -822,6 +822,17 @@
         "verification/external_analysis/README.md"
       ],
       "limitations": "Only h=1. Arbitrary-depth O3 prime, inverse-depth rate, novelty and human expert validation remain unresolved."
+    },
+    {
+      "id": "REL-O3-DENSITY",
+      "title": "Literal arbitrary-finite-depth Syracuse failure densities",
+      "evidence_status": "all22 pre-proof frozen source/density targets proved; standalone source build and517closure axiom audit passed; full independent gates pending",
+      "artifacts": [
+        "lean/external_population/GeneralSolution.lean",
+        "lean/external_population/GENERAL_DENSITY_PROOF.md",
+        "lean/external_population/inventory.json"
+      ],
+      "limitations": "Each positive finite h is fixed before the population limit. All real corrections allowed; no rate or optimization theorem. Full independent replay/comparator/checker CI pending; no novelty or human refereeing claimed."
     }
   ],
   "literature_scope": "Citation keys resolve in tex/references.tex. Relationships identify attribution and limits, not a literature-wide priority certification."

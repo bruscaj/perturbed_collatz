@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "scope": "All22 frozen fixed positive finite-depth literal population-density and source-model targets; no general-depth infimum, h-limit or rate theorem",
+  "original_frozen_at_utc": "2026-11-28T01:50:25.915915+00:00",
+  "chronology": "independent source/semantic review and exact typecheck before any implementation of these22 targets",
+  "files": {
+    "Definitions.lean": {
+      "sha256": "cf29376721942a78328491cd910690497f95d381711f0d2e758998fbba9374bc",
+      "bytes": 3873
+    },
+    "ExpectedTypes.lean": {
+      "sha256": "5ce898eb70690f6f77e26a95cbafb5ef268fa93617ab7418a0b25f6878c34968",
+      "bytes": 2611
+    },
+    "GeneralDefinitions.lean": {
+      "sha256": "9d3f21078449309feb93e42b2d2b5fc8c5f0c48c4ff42ac7b62fc5d911c2decc",
+      "bytes": 7409
+    },
+    "GeneralExpectedTypes.lean": {
+      "sha256": "65087d9a25b910c2875c128d9c477cab9b5e506629d446f5db193450dad3b8fa",
+      "bytes": 6387
+    },
+    "GeneralChallenge.lean": {
+      "sha256": "149002f98a102ad1a123204781d575ed2acbb6354f655ad66dfde79fa159c1ff",
+      "bytes": 1585
+    }
+  },
+  "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "source_pin": {
+    "repository": "https://github.com/VadimSokolov/collatz",
+    "commit": "5840497a23fc0d64127b850aea68862d7c93f2b7",
+    "problem": "book/chapters/ch11_open.tex#prob:ch11:o3p",
+    "convention": "book/chapters/ch05c_mmcollatz.tex"
+  },
+  "review": {
+    "source_statement": "separate AI source/model review before freeze and implementation",
+    "human_expert_review": false
+  },
+  "challenge_holes": [
+    "ExternalO3GeneralChallenge.blocksWellDefined",
+    "ExternalO3GeneralChallenge.windowValidity",
+    "ExternalO3GeneralChallenge.windowTransport",
+    "ExternalO3GeneralChallenge.correctionRestriction",
+    "ExternalO3GeneralChallenge.fixedPointAndZero",
+    "ExternalO3GeneralChallenge.refinedCylinderClasses",
+    "ExternalO3GeneralChallenge.refinedCylinderDensities",
+    "ExternalO3GeneralChallenge.refinedLabelCell",
+    "ExternalO3GeneralChallenge.refinedWeightLaw",
+    "ExternalO3GeneralChallenge.refinementProjectionLaw",
+    "ExternalO3GeneralChallenge.coarseMarginalLaw",
+    "ExternalO3GeneralChallenge.weightLaw",
+    "ExternalO3GeneralChallenge.coordinateLaw",
+    "ExternalO3GeneralChallenge.labelRealizable",
+    "ExternalO3GeneralChallenge.literalGainIdentity",
+    "ExternalO3GeneralChallenge.cellStabilization",
+    "ExternalO3GeneralChallenge.selectedMassSummable",
+    "ExternalO3GeneralChallenge.densityExists",
+    "ExternalO3GeneralChallenge.densityEqualsSymbolic",
+    "ExternalO3GeneralChallenge.densityUnique",
+    "ExternalO3GeneralChallenge.sourceDensityEquivalence",
+    "ExternalO3GeneralChallenge.depthOneCompatibility"
+  ],
+  "solution_must_not_import": "GeneralChallenge",
+  "allowed_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "assurance": "Public project preparation; build-mode receipts are lower assurance. Full source-bound replay/comparator/independent-checker gates remain pending until actual Linux full-mode receipts pass."
+}

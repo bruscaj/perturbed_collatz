@@ -1,5 +1,10 @@
 # Release history
 
+## Finite-depth source density — 28 November 2026
+
+- Added a standalone public library and full written reconstruction for all22frozen finite-depth density/source-model statements, preserving unrestricted real corrections, literal future blocks and both finite-tail transfers.
+- Added the separate mandatory population replay/comparator/hostile-fixture CI job. Its full assurance remains pending; rate/optimization claims remain unfinished.
+
 ## External-problem audit — 27 November 2026
 
 - Added source-matched M4/R8/R9/O3′ drafts with explicit unresolved scopes.

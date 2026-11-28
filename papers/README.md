@@ -26,3 +26,5 @@ disclosed assistance, not human expert validation, author acknowledgment or a
 priority claim. The owner's final merge and release decisions remain pending.
 
 The separate [depth-one analytic package](../lean/external_analysis/README.md) proves the literal Syracuse model for h=1. Its dedicated `external-analysis-h1` CI job passed full replay, comparison and hostile fixtures at8524770; source-pinned receipts are in `verification/external_analysis/`. Later final-head regressions remain required.
+
+A [complete finite-depth density reconstruction](../lean/external_population/GENERAL_DENSITY_PROOF.md) now accompanies the depth-one paper. Its separate formal library proves all22frozen source/density targets with ordinary clean-build/axiom checks; independent full checker CI is pending. The rate and higher-depth optimization remain separate unfinished parts.
