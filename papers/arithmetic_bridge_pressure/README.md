@@ -1,5 +1,6 @@
 # A near-extremal entropy argument for admissible Collatz words
 
+[Read the TeX/PDF manuscript](paper.pdf) · [TeX source](paper.tex). Rebuild both papers with `python3 papers/build.py` from the repository root; `--check` compares deterministic clean rebuilds on the recorded TeX toolchain.
 Jake S. Brusca, with ChatGPT assistance in derivation, writing, code and review.
 Draft research contribution, 2026-11-27. This is a personal work in progress;
 corrections and counterexamples are welcome.

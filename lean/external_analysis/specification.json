@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "scope": "O3 prime h=1 subquestion only; not arbitrary-depth O3 prime or M4/R8/R9",
+  "original_frozen_at_utc": "2026-11-27 23:56:08 UTC",
+  "files": {
+    "Definitions.lean": {
+      "sha256": "cf29376721942a78328491cd910690497f95d381711f0d2e758998fbba9374bc",
+      "bytes": 3873
+    },
+    "ExpectedTypes.lean": {
+      "sha256": "5ce898eb70690f6f77e26a95cbafb5ef268fa93617ab7418a0b25f6878c34968",
+      "bytes": 2611
+    },
+    "Challenge.lean": {
+      "sha256": "636b251a8d0205d2b49559dfaa54298ea2ebc3408ca4c315ce7e2d99dae61514",
+      "bytes": 1100
+    }
+  },
+  "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "source_pin": {
+    "repository": "https://github.com/VadimSokolov/collatz",
+    "commit": "5840497a23fc0d64127b850aea68862d7c93f2b7",
+    "problem": "book/chapters/ch11_open.tex#prob:ch11:o3p",
+    "convention": "book/chapters/ch05c_mmcollatz.tex"
+  },
+  "review": {
+    "source_statement": "separate AI source/model context, before headline proofs",
+    "second_context": "separate implementation context semantic review before freeze",
+    "human_expert_review": false
+  },
+  "challenge_holes": [
+    "ExternalO3Challenge.valuationFoundation",
+    "ExternalO3Challenge.blockLengthLaw",
+    "ExternalO3Challenge.fixedPointConvention",
+    "ExternalO3Challenge.correctionZeroIrrelevant",
+    "ExternalO3Challenge.densityExists",
+    "ExternalO3Challenge.densityUnique",
+    "ExternalO3Challenge.sourceDensityEquivalence",
+    "ExternalO3Challenge.symbolicMassSummable",
+    "ExternalO3Challenge.densityEqualsSymbolic",
+    "ExternalO3Challenge.infimumWellPosed",
+    "ExternalO3Challenge.depthOneSeriesSummable",
+    "ExternalO3Challenge.depthOneFormula",
+    "ExternalO3Challenge.depthOneNotAttained",
+    "ExternalO3Challenge.depthOneTail"
+  ],
+  "solution_must_not_import": "Challenge",
+  "allowed_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "assurance": "All 14 wrappers clean-built in this standalone public package; ordinary kernel/axiom assurance only until full public replay/comparator/independent-checker receipts pass."
+}

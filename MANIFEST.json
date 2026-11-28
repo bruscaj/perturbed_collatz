@@ -723,6 +723,196 @@
       "sha256": "d6b38f292dbd193434dd5f11f64c208129d7983f7428c6e99f064fb986e527f5"
     },
     {
+      "path": "lean/external_analysis/.gitignore",
+      "bytes": 45,
+      "sha256": "0a950f8a702248b8b0c3cf13fce98751aabaf0b8c42b13d097d32b47aefdd99d"
+    },
+    {
+      "path": "lean/external_analysis/Arithmetic.lean",
+      "bytes": 5377,
+      "sha256": "8ad07971f3dd9b211aa99c36f6ed9c645e9dbb158b7ba33e81b72d5ca2c6f76e"
+    },
+    {
+      "path": "lean/external_analysis/Audit.lean",
+      "bytes": 3027,
+      "sha256": "723d86de7df0c1aec58d0e3f481d4aa1af3d8a614cca6329052b77c511b53996"
+    },
+    {
+      "path": "lean/external_analysis/Challenge.lean",
+      "bytes": 1100,
+      "sha256": "636b251a8d0205d2b49559dfaa54298ea2ebc3408ca4c315ce7e2d99dae61514"
+    },
+    {
+      "path": "lean/external_analysis/CountablePartition.lean",
+      "bytes": 11129,
+      "sha256": "1d1d1f699b9abe0de3eb9c03bb3306359395629d3b33739a948915a3e09f9d7d"
+    },
+    {
+      "path": "lean/external_analysis/Cylinders.lean",
+      "bytes": 3334,
+      "sha256": "22ef4309c927190e4c004ce8fe2cd0761a59ef6ce81ef0a230b7d83515288a17"
+    },
+    {
+      "path": "lean/external_analysis/Definitions.lean",
+      "bytes": 3873,
+      "sha256": "cf29376721942a78328491cd910690497f95d381711f0d2e758998fbba9374bc"
+    },
+    {
+      "path": "lean/external_analysis/DensityBounds.lean",
+      "bytes": 1380,
+      "sha256": "1c0efec93aeb9f3024ef9b3cfcb7868504b6d819fdef578865903ce267a47e3d"
+    },
+    {
+      "path": "lean/external_analysis/DensityTheorems.lean",
+      "bytes": 1695,
+      "sha256": "80f83ec143fa87ba7730d34e086cc3573277576a84e3c32d6e16ac7b9cf7a41a"
+    },
+    {
+      "path": "lean/external_analysis/DepthOneFormula.lean",
+      "bytes": 1247,
+      "sha256": "bd2ad356bb244d2f2acca36dd5d2bb25afb7a3d99d271ea2c8d530cfeef8ccab"
+    },
+    {
+      "path": "lean/external_analysis/DepthOneLower.lean",
+      "bytes": 6804,
+      "sha256": "3038e3225fc03045ec7b18221b176cb44b6bb404ea96db48b2ffc5e1d2f89217"
+    },
+    {
+      "path": "lean/external_analysis/DepthOneNonattainment.lean",
+      "bytes": 6406,
+      "sha256": "7eab1c626c5ae74727d9bbdf812f048831e7fa8479cd64d3c783c96f308db2d0"
+    },
+    {
+      "path": "lean/external_analysis/DepthOneNumerics.lean",
+      "bytes": 3835,
+      "sha256": "429eaf3c26339fae6b703602025ee5790580244f838d7d9246d60a4ff28d0baa"
+    },
+    {
+      "path": "lean/external_analysis/DepthOneSeries.lean",
+      "bytes": 9797,
+      "sha256": "b0852b07d1f7105c61464d1642c998ece3563cb81e658cfe4a995f0e6b7e2562"
+    },
+    {
+      "path": "lean/external_analysis/DepthOneUpper.lean",
+      "bytes": 7853,
+      "sha256": "10b95056a594a98097a381d22951f9f3b65125e4493f3a586065e48561eef038"
+    },
+    {
+      "path": "lean/external_analysis/ExitCylinders.lean",
+      "bytes": 7214,
+      "sha256": "178d20f9f84013d8c4e942542948c3acff31c8bac17efde06f22ec4e60afe611"
+    },
+    {
+      "path": "lean/external_analysis/ExpectedTypes.lean",
+      "bytes": 2611,
+      "sha256": "5ce898eb70690f6f77e26a95cbafb5ef268fa93617ab7418a0b25f6878c34968"
+    },
+    {
+      "path": "lean/external_analysis/Gains.lean",
+      "bytes": 5805,
+      "sha256": "1471ce4e6e2e5c3db4824616be2c1dd9f99d6c959ee8e809b109cfdd1ed54b03"
+    },
+    {
+      "path": "lean/external_analysis/LogRatioIrrational.lean",
+      "bytes": 1811,
+      "sha256": "2a2950ef39be685654ab7c3d3c4c734cf6103a74fa622d450ee0675e0240a89e"
+    },
+    {
+      "path": "lean/external_analysis/NumericInfimum.lean",
+      "bytes": 745,
+      "sha256": "a9cdb7d5c759ceb31baaad88dd8922b1b9fe1c52b05a950c6bedaa2c0379cdcc"
+    },
+    {
+      "path": "lean/external_analysis/PartitionGeneral.lean",
+      "bytes": 8644,
+      "sha256": "0e50e035d0456cb71b6d7238957f219133a4eaecfda96fb9ab74b5fcb723ed3b"
+    },
+    {
+      "path": "lean/external_analysis/PopulationLabels.lean",
+      "bytes": 5873,
+      "sha256": "485db0f127fe59a0d86ab34cd599fc63e67d763793a326a9b259bc743cd33568"
+    },
+    {
+      "path": "lean/external_analysis/PopulationWeights.lean",
+      "bytes": 6242,
+      "sha256": "8affb6d578e9891f306df4b54cc621c33d110227eaec7912d8dcf826f9697190"
+    },
+    {
+      "path": "lean/external_analysis/PositiveCeilReturns.lean",
+      "bytes": 4850,
+      "sha256": "98e1852aaa8baa5ecabcc70424b24d8871f7178fb7768b31c8278a579f0e8a37"
+    },
+    {
+      "path": "lean/external_analysis/Progressions.lean",
+      "bytes": 7593,
+      "sha256": "69262afd5c9229bda3c0ffab6f53d78f3afef9ea6101b918232dce4f6b13fb18"
+    },
+    {
+      "path": "lean/external_analysis/README.md",
+      "bytes": 6038,
+      "sha256": "1a99cee7f3e19ca1d330efc7e87504a05b270cc7568f3a91667474f72e3a3a36"
+    },
+    {
+      "path": "lean/external_analysis/Solution.lean",
+      "bytes": 1628,
+      "sha256": "2f32f71f4915194048743b85e8238f7b0af27098ce0ccf9836c310bde2be451c"
+    },
+    {
+      "path": "lean/external_analysis/SourceDensity.lean",
+      "bytes": 2557,
+      "sha256": "0a9b01fcef47bc2684c2688055feff86747b453abe15ca295bf6a7cbd44205f3"
+    },
+    {
+      "path": "lean/external_analysis/cache-imports.txt",
+      "bytes": 785,
+      "sha256": "f003ac1344bf5cc9567a6cfe79b9ad39f94f2030fd3bafb22906e22ba994a5c8"
+    },
+    {
+      "path": "lean/external_analysis/comparator.json",
+      "bytes": 921,
+      "sha256": "dc297ce3f14562efa0ccd430e0d670d919a28cfd8a7fc6e096eb0ff2c38e7eef"
+    },
+    {
+      "path": "lean/external_analysis/inventory.json",
+      "bytes": 87637,
+      "sha256": "934c74cda4d4146e60ba4601ef96c7ebdb2bde8a432f3043d70b3bc5e99c35d9"
+    },
+    {
+      "path": "lean/external_analysis/lake-manifest.json",
+      "bytes": 3188,
+      "sha256": "ef9ea47f5d428e2a45a47c257814706dd25b90ad8a37604c6dba054377346958"
+    },
+    {
+      "path": "lean/external_analysis/lakefile.toml",
+      "bytes": 2230,
+      "sha256": "bb5d2f27d3f112a30dccd4352c8a446a362832cdfbe62219663aa8aae22012af"
+    },
+    {
+      "path": "lean/external_analysis/lean-toolchain",
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+    },
+    {
+      "path": "lean/external_analysis/owned_modules.json",
+      "bytes": 479,
+      "sha256": "55f2762201f8e728a0bdd2481841fbddab242d16ba6033ba89da9add23b116d6"
+    },
+    {
+      "path": "lean/external_analysis/specification.json",
+      "bytes": 2124,
+      "sha256": "6fcf6c9deacdc3190c134ecbc6e01aca92231d8f397f11787157a63707f80cf6"
+    },
+    {
+      "path": "lean/external_analysis/test_mutations.py",
+      "bytes": 21194,
+      "sha256": "b57fbd40e68fa41cb1838a7866b44e9f268f98230ba8eda0909e1eb6af6084eb"
+    },
+    {
+      "path": "lean/external_analysis/verify.py",
+      "bytes": 13547,
+      "sha256": "9a71a88fe334b54d5b892c7f68bdeb6395ffa51f0710c99dc19db9247bef70d0"
+    },
+    {
       "path": "lean/external_problems/Audit.lean",
       "bytes": 1858,
       "sha256": "6a0e1986b49bed6aa94ba5b87dc557121093693e05fcbda1f01d6b07b6b1e0ad"
@@ -1204,8 +1394,23 @@
     },
     {
       "path": "papers/arithmetic_bridge_pressure/README.md",
-      "bytes": 16257,
-      "sha256": "d20270660982da2070b2b2608c735b42f9a9332e5a91fb360a94a06e40e4f59f"
+      "bytes": 16482,
+      "sha256": "4c870dc3bb8c12ded6d1907f3cfdcef0c50e5ba93830db4b4b153967d9cdd7f9"
+    },
+    {
+      "path": "papers/arithmetic_bridge_pressure/paper.pdf",
+      "bytes": 297520,
+      "sha256": "d87a71d44c80a0c8c60a37eaae50e40a11dda2a1b1b8766356e1ed0dae11e3b1"
+    },
+    {
+      "path": "papers/arithmetic_bridge_pressure/paper.tex",
+      "bytes": 21736,
+      "sha256": "0e453becbace8d5292cd63be2d6037a58886cac73aad43d5042ad87c12c001f7"
+    },
+    {
+      "path": "papers/build.py",
+      "bytes": 5026,
+      "sha256": "535188a0203e81185705b36ec60ac659b91d2fa83af419923c269e331e2bd881"
     },
     {
       "path": "papers/external_problems/README.md",
@@ -1219,8 +1424,18 @@
     },
     {
       "path": "papers/finite_information_lyapunov/README.md",
-      "bytes": 6794,
-      "sha256": "99ff064b3140a8896ca1436f4ee555b3696b610082ab495fedab9d6c8f5965d6"
+      "bytes": 7190,
+      "sha256": "bd25f798f3a5dfd4688a79e987a2ed0c9cfcc9f2854b662ed28691b2d60ce892"
+    },
+    {
+      "path": "papers/finite_information_lyapunov/paper.pdf",
+      "bytes": 307855,
+      "sha256": "d3b4fee17adf49310f414f2a45e01d72092f447df228b7bb48740b269fbcf99d"
+    },
+    {
+      "path": "papers/finite_information_lyapunov/paper.tex",
+      "bytes": 14510,
+      "sha256": "293853c4f3c4e9c86a67de403597c9721c1e5e50d1d9bb781a61f8a35065b2ae"
     },
     {
       "path": "requirements-figures.txt",

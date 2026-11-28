@@ -1,6 +1,7 @@
 # O3′ depth-one infimum: written proof candidate
 
-Jake S. Brusca, 27 November 2026. ChatGPT assisted with the ideas, proof, writing and review. **Status: written draft, no full Lean proof or human expert refereeing.** Separate AI contexts reconstructed the argument and checked the source model; this is not external acceptance.
+[Read the TeX/PDF manuscript](paper.pdf) · [TeX source](paper.tex). Rebuild both papers with `python3 papers/build.py` from the repository root; `--check` compares deterministic clean rebuilds on the recorded TeX toolchain.
+Jake S. Brusca, 27 November 2026. ChatGPT assisted with the ideas, proof, writing and review. **Status: written draft. An ordinary Lean implementation of the canonical depth-one targets has been prepared in the private audit work; final public statement-comparison and replay gates remain pending. No human expert refereeing is claimed.** Separate AI contexts reconstructed the argument and checked the source model; this is not external acceptance.
 
 This studies the depth-one subquestion of Polson–Sokolov O3′, not the full arbitrary-depth problem. See the [source and status register](../external_problems/README.md). Finite arithmetic for the series is reproduced by `python3 certificates/external_problems/verify.py` from the repository root. No ordinary Collatz convergence follows.
 

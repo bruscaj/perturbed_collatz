@@ -1,0 +1,3569 @@
+{
+  "scope": "All14 frozen O3 prime h=1 targets; not arbitrary-depth O3 prime/M4/R8/R9",
+  "owned_modules": [
+    "Definitions",
+    "ExpectedTypes",
+    "Arithmetic",
+    "DensityBounds",
+    "Progressions",
+    "Cylinders",
+    "ExitCylinders",
+    "Gains",
+    "PopulationWeights",
+    "CountablePartition",
+    "PartitionGeneral",
+    "PopulationLabels",
+    "SourceDensity",
+    "DensityTheorems",
+    "DepthOneSeries",
+    "DepthOneLower",
+    "DepthOneUpper",
+    "DepthOneFormula",
+    "DepthOneNumerics",
+    "NumericInfimum",
+    "LogRatioIrrational",
+    "PositiveCeilReturns",
+    "DepthOneNonattainment",
+    "Solution"
+  ],
+  "targets": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Challenge.blockLengthLaw",
+      "module": "Solution",
+      "raw_type": "Lean.Expr.const `ExternalO3Spec.BlockLengthLaw []",
+      "statement": "ExternalO3Spec.BlockLengthLaw"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Challenge.correctionZeroIrrelevant",
+      "module": "Solution",
+      "raw_type": "Lean.Expr.const `ExternalO3Spec.CorrectionZeroIrrelevant []",
+      "statement": "ExternalO3Spec.CorrectionZeroIrrelevant"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Challenge.densityEqualsSymbolic",
+      "module": "Solution",
+      "raw_type": "Lean.Expr.const `ExternalO3Spec.DensityEqualsSymbolic []",
+      "statement": "ExternalO3Spec.DensityEqualsSymbolic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Challenge.densityExists",
+      "module": "Solution",
+      "raw_type": "Lean.Expr.const `ExternalO3Spec.DensityExists []",
+      "statement": "ExternalO3Spec.DensityExists"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Challenge.densityUnique",
+      "module": "Solution",
+      "raw_type": "Lean.Expr.const `ExternalO3Spec.DensityUnique []",
+      "statement": "ExternalO3Spec.DensityUnique"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Challenge.depthOneFormula",
+      "module": "Solution",
+      "raw_type": "Lean.Expr.const `ExternalO3Spec.DepthOneFormula []",
+      "statement": "ExternalO3Spec.DepthOneFormula"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Challenge.depthOneNotAttained",
+      "module": "Solution",
+      "raw_type": "Lean.Expr.const `ExternalO3Spec.DepthOneNotAttained []",
+      "statement": "ExternalO3Spec.DepthOneNotAttained"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Challenge.depthOneSeriesSummable",
+      "module": "Solution",
+      "raw_type": "Lean.Expr.const `ExternalO3Spec.DepthOneSeriesSummable []",
+      "statement": "ExternalO3Spec.DepthOneSeriesSummable"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Challenge.depthOneTail",
+      "module": "Solution",
+      "raw_type": "Lean.Expr.const `ExternalO3Spec.DepthOneTail []",
+      "statement": "ExternalO3Spec.DepthOneTail"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Challenge.fixedPointConvention",
+      "module": "Solution",
+      "raw_type": "Lean.Expr.const `ExternalO3Spec.FixedPointConvention []",
+      "statement": "ExternalO3Spec.FixedPointConvention"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Challenge.infimumWellPosed",
+      "module": "Solution",
+      "raw_type": "Lean.Expr.const `ExternalO3Spec.InfimumWellPosed []",
+      "statement": "ExternalO3Spec.InfimumWellPosed"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Challenge.sourceDensityEquivalence",
+      "module": "Solution",
+      "raw_type": "Lean.Expr.const `ExternalO3Spec.SourceDensityEquivalence []",
+      "statement": "ExternalO3Spec.SourceDensityEquivalence"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Challenge.symbolicMassSummable",
+      "module": "Solution",
+      "raw_type": "Lean.Expr.const `ExternalO3Spec.SymbolicMassSummable []",
+      "statement": "ExternalO3Spec.SymbolicMassSummable"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Challenge.valuationFoundation",
+      "module": "Solution",
+      "raw_type": "Lean.Expr.const `ExternalO3Spec.ValuationFoundation []",
+      "statement": "ExternalO3Spec.ValuationFoundation"
+    }
+  ],
+  "helpers": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.block_after_steps",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.block_after_steps._proof_1_1",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.block_after_steps._proof_1_2",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.block_after_steps._proof_1_3",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.block_decrements",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.block_decrements._proof_1_2",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.block_decrements._proof_1_3",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.block_decrements._proof_1_4",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.block_length_law",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.block_length_law._proof_1_1",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.block_length_law._proof_1_2",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.block_length_law._proof_1_3",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.block_length_law._proof_1_4",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.block_length_positive",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.block_length_positive._proof_1_1",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.block_length_positive._proof_1_2",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.correction_zero_irrelevant",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.exit_valuation_of_short_block",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.exit_valuation_of_short_block._proof_1_1",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.exit_valuation_of_short_block._proof_1_2",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.exit_valuation_of_short_block._proof_1_3",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.fixed_point_convention",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.instFactPrimeOfNatNat_arithmetic",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.stride_output",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.stride_output._proof_1_1",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.stride_output._proof_1_3",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.stride_output._proof_1_4",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.stride_output._proof_1_5",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.valuation_foundation",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.valuation_foundation._proof_1_1",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.valuation_foundation._proof_1_2",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.valuation_one_of_long_block",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.valuation_one_of_long_block._proof_1_1",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.valuation_one_of_long_block._proof_1_2",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.valuation_one_of_long_block._proof_1_3",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.valuation_one_of_long_block._proof_1_4",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Arithmetic.valuation_one_of_long_block._proof_1_5",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3CountablePartition.average.eq_1",
+      "module": "CountablePartition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3CountablePartition.bit.eq_1",
+      "module": "CountablePartition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3CountablePartition.countable_partition_density",
+      "module": "CountablePartition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3CountablePartition.finite_partition_bounds",
+      "module": "CountablePartition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3CountablePartition.finite_tail_squeeze",
+      "module": "CountablePartition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3CountablePartition.frequency.eq_1",
+      "module": "CountablePartition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3CountablePartition.frequency_eq_average",
+      "module": "CountablePartition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3CountablePartition.frequency_of_eventually_iff",
+      "module": "CountablePartition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3CountablePartition.label_bits",
+      "module": "CountablePartition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3CountablePartition.selectedWeight.eq_1",
+      "module": "CountablePartition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3CountablePartition.selected_frequency_limit",
+      "module": "CountablePartition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3CountablePartition.selected_label_bits",
+      "module": "CountablePartition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3CountablePartition.sum_average",
+      "module": "CountablePartition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3CountablePartition.sum_average._simp_1_2",
+      "module": "CountablePartition"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.ascending_cylinder",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.ascending_cylinder._proof_1_1",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.ascending_cylinder._proof_1_2",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.ascending_cylinder._proof_1_3",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.ascending_cylinder._proof_1_4",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.ascending_cylinder._proof_1_5",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.ascending_cylinder._proof_1_6",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.ascending_cylinder._proof_1_7",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.ascending_cylinder._proof_1_8",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.ascending_density",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.ascending_density._simp_1_1",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.ascending_residue_lt",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.ascending_residue_lt._proof_1_1",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.ascending_residue_lt._proof_1_2",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.instFactPrimeOfNatNat_cylinders",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.valuation_odd_form",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.valuation_odd_form._proof_1_1",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.valuation_odd_form._proof_1_2",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.valuation_odd_form._proof_1_3",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.valuation_odd_form._proof_1_4",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Cylinders.valuation_odd_form._proof_1_5",
+      "module": "Cylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DensityBounds.achieved_bounded_below",
+      "module": "DensityBounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DensityBounds.density_bounds",
+      "module": "DensityBounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DensityBounds.density_unique",
+      "module": "DensityBounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DensityBounds.failure_count_le",
+      "module": "DensityBounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DensityBounds.frequency_le_one",
+      "module": "DensityBounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DensityBounds.frequency_nonneg",
+      "module": "DensityBounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DensityTheorems.density_equals_symbolic",
+      "module": "DensityTheorems"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DensityTheorems.density_exists",
+      "module": "DensityTheorems"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DensityTheorems.infimum_well_posed",
+      "module": "DensityTheorems"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneFormula.achieved_eq_symbolic",
+      "module": "DepthOneFormula"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneFormula.depth_one_formula",
+      "module": "DepthOneFormula"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.ascendingMass_nonneg",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.depthOneTerm_le_exit_row",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.depth_one_lower",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.depth_one_lower._proof_1_1",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.depth_one_strict_of_bad_ascending",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.depth_one_strict_of_bad_ascending._proof_1_1",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.exitMass_nonneg",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.exit_gain_ge_cycle",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.exit_pair_summable",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.exit_totals_comm",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.landing_exit_summable",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.landing_totals_summable",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.mandatoryMass_le_exitMass",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.partial_le_exit_total",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.partial_le_exit_total._proof_1_1",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.potential_increment_lower",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.potential_increment_lower._proof_1_1",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.potential_increment_lower._proof_1_2",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneLower.potential_increment_lower._proof_1_3",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNonattainment.all_good_strict",
+      "module": "DepthOneNonattainment"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNonattainment.depth_one_not_attained",
+      "module": "DepthOneNonattainment"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNonattainment.exit_gain_surplus",
+      "module": "DepthOneNonattainment"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNonattainment.initialSurplus.eq_1",
+      "module": "DepthOneNonattainment"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNonattainment.initialSurplus_pos",
+      "module": "DepthOneNonattainment"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNonattainment.persistent_surplus",
+      "module": "DepthOneNonattainment"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNonattainment.persistent_surplus._proof_1_2",
+      "module": "DepthOneNonattainment"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNonattainment.persistent_surplus_at_level",
+      "module": "DepthOneNonattainment"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNonattainment.strict_of_ceiling_return",
+      "module": "DepthOneNonattainment"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNonattainment.strict_of_ceiling_return._proof_1_1",
+      "module": "DepthOneNonattainment"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNonattainment.strict_of_ceiling_return._proof_1_2",
+      "module": "DepthOneNonattainment"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNonattainment.strict_of_ceiling_return._proof_1_3",
+      "module": "DepthOneNonattainment"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNonattainment.strict_of_ceiling_return._proof_1_4",
+      "module": "DepthOneNonattainment"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNonattainment.strict_of_extra_exit",
+      "module": "DepthOneNonattainment"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.alpha._proof_1",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.alpha_lower",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.alpha_upper",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.certificate_lower",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.certificate_upper",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.certifiedFloor.eq_1",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.certified_floor_correct",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.enclosure_width",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [],
+      "declaration": "ExternalO3DepthOneNumerics.floorValues.eq_1",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.partial_80_exact",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.partial_80_exact._proof_1_1",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.partial_80_exact._proof_1_2",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.seriesLower._proof_1",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.seriesLower._proof_2",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.seriesLower.eq_1",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.seriesUpper._proof_1",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.seriesUpper.eq_1",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.series_enclosure",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneNumerics.series_upper_strict",
+      "module": "DepthOneNumerics"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.ascending_weight_partial",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.ascending_weight_partial._proof_1_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.ascent._proof_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.ascent._proof_2",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.ascent_eq",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.ascent_pos",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.critical_exit_gain",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.cycleGain.eq_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.cycleGain_nonneg_iff",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.depth_one_series_nonneg",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.depth_one_series_summable",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.depth_one_tail",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.depth_one_tail._proof_1_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.depth_one_tail_strict",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.depth_one_term_lt_weight",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.depth_one_term_nonneg",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.half_power_eq_weight",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.half_power_eq_weight._proof_1_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.linearCorrection.eq_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.linear_exit_gain",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.log_two_pos",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.mandatoryMass.eq_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.mandatoryMass_eq_exitMass",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.mandatoryMass_nonneg",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.mandatory_cutoff",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.mandatory_cutoff._proof_1_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.mandatory_pair_summable",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.mandatory_pair_tsum",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.mandatory_row_summable",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.mandatory_row_tsum",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.mandatory_row_tsum._proof_1_2",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.mandatory_row_tsum._simp_1_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.mandatory_total_tsum",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.series_split",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.shifted_term_summable",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.shifted_weight_summable",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.shifted_weight_tsum",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.term_eq",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.thresholdNat_cast",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.thresholdNat_cast._proof_1_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.thresholdNat_pos",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.thresholdNat_pos._proof_1_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.threshold_ge_one",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.threshold_power_le_half",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneSeries.threshold_power_le_half._proof_1_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.approximating_ascending_mass_zero",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.approximating_ascending_negative",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.approximating_exit_gain",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.approximating_exit_summable",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.exitMass_eq_selector",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.exitMass_tendsto_mandatory",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.exit_total_tendsto",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.failureSelector.eq_1",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.linear_ascending_gain",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.linear_ascending_gain._proof_1_2",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.mandatoryMass_eq_selector",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.mandatory_exit_total_eq_rows",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.nonnegative_selector_limit",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.slopeExcess.eq_1",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.slopeExcess_pos",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.slopeExcess_tendsto_zero",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.symbolic_eq_exit_total",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.symbolic_tendsto_mandatory_rows",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.symbolic_tendsto_series",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3DepthOneUpper.symbolic_upper_approximation",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.affine_dyadic_unique",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.affine_mod_iff",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_current_block_one",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_current_block_one._proof_1_1",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_current_block_one._proof_1_2",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_current_block_one._proof_1_3",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_current_block_one._proof_1_4",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_cylinder",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_cylinder._proof_1_1",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_cylinder._proof_1_2",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_cylinder._proof_1_3",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_cylinder._proof_1_4",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_cylinder._proof_1_5",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_cylinder._proof_1_6",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_cylinder._proof_1_7",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_cylinder._proof_1_8",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_cylinder_density",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_cylinder_unique_class",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_residue_ge_two",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_residue_ge_two._proof_1_1",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_residue_ge_two._proof_1_2",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_residue_lt",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_residue_lt._proof_1_1",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.exit_residue_lt._proof_1_2",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3ExitCylinders.instFactPrimeOfNatNat_exitCylinders",
+      "module": "ExitCylinders"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.ascending_increment",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.ascending_increment._proof_1_1",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.ascending_stabilizes",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.ascending_stabilizes._proof_1_1",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.ascending_stabilizes._proof_1_2",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.ascending_stabilizes._proof_1_3",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.block_one_of_exit",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.block_one_of_exit._proof_1_1",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.block_one_of_exit._proof_1_2",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.exit_increment",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.exit_stabilizes",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.exit_stabilizes._proof_1_1",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.exit_stabilizes._proof_1_2",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.exit_stabilizes._proof_1_3",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.fails_iff_increment",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "declaration": "ExternalO3Gains.fails_iff_increment._simp_1_1",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.literal_log_increment",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "declaration": "ExternalO3Gains.logError._proof_1",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.logError_positive",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.logError_tendsto_zero",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.seed_logError_tendsto_zero",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.seed_logError_tendsto_zero._proof_1_1",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.stable_seed_error",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Gains.stable_seed_error._proof_1_1",
+      "module": "Gains"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3LogRatio.ascent_ratio_irrational",
+      "module": "LogRatioIrrational"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3LogRatio.ascent_ratio_irrational._proof_1_1",
+      "module": "LogRatioIrrational"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3LogRatio.instFactPrimeOfNatNat_logRatioIrrational",
+      "module": "LogRatioIrrational"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3NumericInfimum.certificate_width",
+      "module": "NumericInfimum"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3NumericInfimum.failure_infimum_enclosure",
+      "module": "NumericInfimum"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3NumericInfimum.failure_infimum_strict_upper",
+      "module": "NumericInfimum"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PartitionGeneral.countable_partition_density",
+      "module": "PartitionGeneral"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PartitionGeneral.finite_partition_bounds",
+      "module": "PartitionGeneral"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PartitionGeneral.finite_tail_squeeze",
+      "module": "PartitionGeneral"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PartitionGeneral.label_bits",
+      "module": "PartitionGeneral"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PartitionGeneral.selectedWeight.eq_1",
+      "module": "PartitionGeneral"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PartitionGeneral.selected_frequency_limit",
+      "module": "PartitionGeneral"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PartitionGeneral.selected_label_bits",
+      "module": "PartitionGeneral"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PartitionGeneral.sum_average",
+      "module": "PartitionGeneral"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PartitionGeneral.sum_average._simp_1_1",
+      "module": "PartitionGeneral"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.ascending_label_density",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.exit_fields_positive",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.exit_fields_positive._proof_1_1",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.exit_fields_positive._proof_1_2",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.exit_fields_positive._proof_1_3",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.exit_label_density",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.failure_frequency_eq",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.label.eq_1",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.label_density",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.label_inl_iff",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.label_inl_iff._proof_1_2",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.label_inl_iff._proof_1_4",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "declaration": "ExternalO3PopulationLabels.label_inl_iff._simp_1_3",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.label_inr_iff",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.label_inr_iff._proof_1_1",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.label_inr_iff._proof_1_2",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.label_inr_iff._proof_1_5",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.label_inr_iff._proof_1_6",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.label_inr_iff._proof_1_7",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "declaration": "ExternalO3PopulationLabels.label_inr_iff._simp_1_4",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.label_stabilizes",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.weight_inl_reciprocal",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.weight_inl_reciprocal._proof_1_1",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.weight_inr_reciprocal",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationLabels.weight_inr_reciprocal._proof_1_1",
+      "module": "PopulationLabels"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.ascending_weight_summable",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.ascending_weight_tsum",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.exit_row_summable",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.exit_row_tsum",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.exit_weight_summable",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.landingWeight.eq_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.landingWeight_geometric",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.landingWeight_geometric._proof_1_1",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.landingWeight_summable",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.landingWeight_tsum",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.neg_power_geometric",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.selectedWeight_inl",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.selectedWeight_inr",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.selectedWeight_le",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.selectedWeight_nonneg",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.selectedWeight_summable",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.selectedWeight_tsum_eq_symbolic",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.selected_ascending_summable",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.selected_exit_summable",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.symbolic_density_bounds",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.symbolic_mass_summable",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "declaration": "ExternalO3PopulationWeights.weight._proof_1",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.weight.eq_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.weight.eq_2",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.weight_inl_geometric",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.weight_inl_geometric._proof_1_1",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.weight_inr_mul",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.weight_nonneg",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.weight_summable",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PopulationWeights.weight_tsum_one",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PositiveCeilReturns.ceil_of_small_positive_gap",
+      "module": "PositiveCeilReturns"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PositiveCeilReturns.exists_positive_ceil_gap",
+      "module": "PositiveCeilReturns"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PositiveCeilReturns.exists_positive_ceil_gap._proof_1_1",
+      "module": "PositiveCeilReturns"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PositiveCeilReturns.signed_approximation_to_ceiling",
+      "module": "PositiveCeilReturns"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PositiveCeilReturns.signed_approximation_to_ceiling._proof_1_1",
+      "module": "PositiveCeilReturns"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3PositiveCeilReturns.signed_approximation_to_ceiling._proof_1_2",
+      "module": "PositiveCeilReturns"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.density_congr_after",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.density_congr_after._proof_1_1",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.density_congr_after._proof_1_2",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.density_congr_after._proof_1_3",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.density_congr_after._simp_1_4",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.dyadicClass_density",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.finiteSet_density",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.residueClass_density",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.residueClass_density._proof_1_1",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.residueCount.eq_1",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.residueCount_blocks",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.residueCount_exact",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.residueCount_scaled_error",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.residueCount_small",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.residueCount_small._simp_1_1",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.residueCount_small._simp_1_2",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.residueUnion_count",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Progressions.residueUnion_density",
+      "module": "Progressions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.failure_range_image",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.failure_range_image._proof_1_4",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.failure_range_image._proof_1_5",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.failure_range_image._proof_1_6",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.failure_range_image._simp_1_1",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.failure_range_image._simp_1_2",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.failure_range_image._simp_1_3",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.odd_range_image",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.odd_range_image._proof_1_5",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.odd_range_image._proof_1_6",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.odd_range_image._proof_1_7",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.odd_range_image._simp_1_1",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.odd_range_image._simp_1_2",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.odd_range_image._simp_1_3",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.source_density_equivalence",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.source_density_equivalence._proof_1_1",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.source_density_equivalence._proof_1_2",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.source_density_equivalence._proof_1_3",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.source_frequency_eq",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3SourceDensity.source_frequency_eq._proof_1_1",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "declaration": "ExternalO3Spec.DepthOneTail._proof_1",
+      "module": "ExpectedTypes"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Spec.FailsAt.eq_1",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [],
+      "declaration": "ExternalO3Spec.IsOddSeed.eq_1",
+      "module": "SourceDensity"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "declaration": "ExternalO3Spec.ascendingGain._proof_1",
+      "module": "Definitions"
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "declaration": "ExternalO3Spec.ascendingGain._proof_2",
+      "module": "Definitions"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Spec.ascendingGain.eq_1",
+      "module": "DepthOneUpper"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Spec.ascendingMass.eq_1",
+      "module": "DepthOneLower"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Spec.blockLength.eq_1",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Spec.depthOnePartial.eq_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Spec.depthOneSeries.eq_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Spec.exitGain.eq_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Spec.exitMass.eq_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Spec.failureCount.eq_1",
+      "module": "DensityBounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Spec.failureFrequency.eq_1",
+      "module": "DensityBounds"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Spec.rawPotential.eq_1",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Spec.stride.eq_1",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Spec.strideValuation.eq_1",
+      "module": "Arithmetic"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalO3Spec.symbolicFailureDensity.eq_1",
+      "module": "PopulationWeights"
+    },
+    {
+      "axioms": [],
+      "declaration": "_private.DepthOneSeries.0.ExternalO3PopulationWeights.weight.match_1.eq_1",
+      "module": "DepthOneSeries"
+    },
+    {
+      "axioms": [],
+      "declaration": "_private.DepthOneSeries.0.ExternalO3PopulationWeights.weight.match_1.eq_2",
+      "module": "DepthOneSeries"
+    }
+  ],
+  "sources_sha256": {
+    ".gitignore": "0a950f8a702248b8b0c3cf13fce98751aabaf0b8c42b13d097d32b47aefdd99d",
+    "Arithmetic.lean": "8ad07971f3dd9b211aa99c36f6ed9c645e9dbb158b7ba33e81b72d5ca2c6f76e",
+    "Audit.lean": "723d86de7df0c1aec58d0e3f481d4aa1af3d8a614cca6329052b77c511b53996",
+    "Challenge.lean": "636b251a8d0205d2b49559dfaa54298ea2ebc3408ca4c315ce7e2d99dae61514",
+    "CountablePartition.lean": "1d1d1f699b9abe0de3eb9c03bb3306359395629d3b33739a948915a3e09f9d7d",
+    "Cylinders.lean": "22ef4309c927190e4c004ce8fe2cd0761a59ef6ce81ef0a230b7d83515288a17",
+    "Definitions.lean": "cf29376721942a78328491cd910690497f95d381711f0d2e758998fbba9374bc",
+    "DensityBounds.lean": "1c0efec93aeb9f3024ef9b3cfcb7868504b6d819fdef578865903ce267a47e3d",
+    "DensityTheorems.lean": "80f83ec143fa87ba7730d34e086cc3573277576a84e3c32d6e16ac7b9cf7a41a",
+    "DepthOneFormula.lean": "bd2ad356bb244d2f2acca36dd5d2bb25afb7a3d99d271ea2c8d530cfeef8ccab",
+    "DepthOneLower.lean": "3038e3225fc03045ec7b18221b176cb44b6bb404ea96db48b2ffc5e1d2f89217",
+    "DepthOneNonattainment.lean": "7eab1c626c5ae74727d9bbdf812f048831e7fa8479cd64d3c783c96f308db2d0",
+    "DepthOneNumerics.lean": "429eaf3c26339fae6b703602025ee5790580244f838d7d9246d60a4ff28d0baa",
+    "DepthOneSeries.lean": "b0852b07d1f7105c61464d1642c998ece3563cb81e658cfe4a995f0e6b7e2562",
+    "DepthOneUpper.lean": "10b95056a594a98097a381d22951f9f3b65125e4493f3a586065e48561eef038",
+    "ExitCylinders.lean": "178d20f9f84013d8c4e942542948c3acff31c8bac17efde06f22ec4e60afe611",
+    "ExpectedTypes.lean": "5ce898eb70690f6f77e26a95cbafb5ef268fa93617ab7418a0b25f6878c34968",
+    "Gains.lean": "1471ce4e6e2e5c3db4824616be2c1dd9f99d6c959ee8e809b109cfdd1ed54b03",
+    "LogRatioIrrational.lean": "2a2950ef39be685654ab7c3d3c4c734cf6103a74fa622d450ee0675e0240a89e",
+    "NumericInfimum.lean": "a9cdb7d5c759ceb31baaad88dd8922b1b9fe1c52b05a950c6bedaa2c0379cdcc",
+    "PartitionGeneral.lean": "0e50e035d0456cb71b6d7238957f219133a4eaecfda96fb9ab74b5fcb723ed3b",
+    "PopulationLabels.lean": "485db0f127fe59a0d86ab34cd599fc63e67d763793a326a9b259bc743cd33568",
+    "PopulationWeights.lean": "8affb6d578e9891f306df4b54cc621c33d110227eaec7912d8dcf826f9697190",
+    "PositiveCeilReturns.lean": "98e1852aaa8baa5ecabcc70424b24d8871f7178fb7768b31c8278a579f0e8a37",
+    "Progressions.lean": "69262afd5c9229bda3c0ffab6f53d78f3afef9ea6101b918232dce4f6b13fb18",
+    "README.md": "1a99cee7f3e19ca1d330efc7e87504a05b270cc7568f3a91667474f72e3a3a36",
+    "Solution.lean": "2f32f71f4915194048743b85e8238f7b0af27098ce0ccf9836c310bde2be451c",
+    "SourceDensity.lean": "0a9b01fcef47bc2684c2688055feff86747b453abe15ca295bf6a7cbd44205f3",
+    "cache-imports.txt": "f003ac1344bf5cc9567a6cfe79b9ad39f94f2030fd3bafb22906e22ba994a5c8",
+    "comparator.json": "dc297ce3f14562efa0ccd430e0d670d919a28cfd8a7fc6e096eb0ff2c38e7eef",
+    "lake-manifest.json": "ef9ea47f5d428e2a45a47c257814706dd25b90ad8a37604c6dba054377346958",
+    "lakefile.toml": "bb5d2f27d3f112a30dccd4352c8a446a362832cdfbe62219663aa8aae22012af",
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+    "owned_modules.json": "55f2762201f8e728a0bdd2481841fbddab242d16ba6033ba89da9add23b116d6",
+    "specification.json": "6fcf6c9deacdc3190c134ecbc6e01aca92231d8f397f11787157a63707f80cf6",
+    "test_mutations.py": "b57fbd40e68fa41cb1838a7866b44e9f268f98230ba8eda0909e1eb6af6084eb",
+    "verify.py": "9a71a88fe334b54d5b892c7f68bdeb6395ffa51f0710c99dc19db9247bef70d0"
+  },
+  "assurance": "ordinary clean public-source build and exhaustive closure audit; full replay/comparator/independent checker requires actual full-mode receipt"
+}

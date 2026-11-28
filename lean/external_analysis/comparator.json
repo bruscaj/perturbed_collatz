@@ -1,0 +1,31 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "ExternalO3Challenge.valuationFoundation",
+    "ExternalO3Challenge.blockLengthLaw",
+    "ExternalO3Challenge.fixedPointConvention",
+    "ExternalO3Challenge.correctionZeroIrrelevant",
+    "ExternalO3Challenge.densityExists",
+    "ExternalO3Challenge.densityUnique",
+    "ExternalO3Challenge.sourceDensityEquivalence",
+    "ExternalO3Challenge.symbolicMassSummable",
+    "ExternalO3Challenge.densityEqualsSymbolic",
+    "ExternalO3Challenge.infimumWellPosed",
+    "ExternalO3Challenge.depthOneSeriesSummable",
+    "ExternalO3Challenge.depthOneFormula",
+    "ExternalO3Challenge.depthOneNotAttained",
+    "ExternalO3Challenge.depthOneTail"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "external_kernels": {
+    "nanoda": [
+      "nanoda_bin"
+    ]
+  }
+}
