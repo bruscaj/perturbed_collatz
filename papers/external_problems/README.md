@@ -88,7 +88,7 @@ The [depth-one Syracuse written draft](../finite_information_lyapunov/README.md)
 provides proofs of density existence, the infimum formula and nonattainment.
 All 14 frozen h=1 targets passed the dedicated full analytic assurance job at
 `8524770` ([exact receipts](../../verification/external_analysis/README.md)).
-The arbitrary finite-depth density foundation passed full independent gates. Required rate proofs passed full independent gates at1406f1a; finite-optimization claims remain pending.
+The arbitrary finite-depth density foundation passed full independent gates. Required rate proofs passed full independent gates at1406f1a; all15 finite-optimization source proofs are now included, with their separate independent assurance gates pending.
 The [near-extremal entropy written draft](../arithmetic_bridge_pressure/README.md)
 develops the rung/depth correspondence, large-tilt pressure, finite-block
 matching lower bound and proposed R9 expansion. It also remains unformalized.

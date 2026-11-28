@@ -1,0 +1,8 @@
+/tmp/bridge-negative-controls-0ijlgwu8/corrupted-source-slope/SlopeCorrupt.lean:28:35: error: unsolved goals
+⊢ False
+/tmp/bridge-negative-controls-0ijlgwu8/corrupted-source-slope/SlopeCorrupt.lean:29:2: error: Type mismatch: After simplification, term
+  h
+ has type
+  Real.log 3 < ↑1 * Real.log 2
+but is expected to have type
+  Real.log 3 < 2 * Real.log 2

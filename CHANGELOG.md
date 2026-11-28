@@ -1,5 +1,12 @@
 # Release history
 
+## Finite optimization source proofs — 28 November 2026
+
+- Added all15 required frozen optimization source proofs and952 theorem/helper audits, including a total computable exact finite numerator and dyadic bracket for the actual failure infimum. Added a seventh mandatory assurance job; its full results remain pending.
+- Preserved passing finite bridge receipts at5369dc97 (all six jobs,357 closures, six checker modes and13 hostile controls). These do not discharge any M4/R8/R9 analytic limit.
+- Added precise attribution to the source book's existing finite cycle criterion and primary difference-constraint context in the full written optimization proof. No novelty or human expert acceptance is claimed.
+
+
 ## Finite source-word bridge and rate receipts — 28 November 2026
 
 - Added all 25 frozen finite bridge source proofs, exact finite population and reward-preserving count bijections, actual unbounded rungs, and unique finite extremizer; ordinary audits cover357 theorem/helper closures. Added the sixth mandatory independent-assurance job; its results remain pending.

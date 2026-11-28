@@ -693,7 +693,7 @@
       "limitations": "Unrestricted versus rung interpretation unresolved; certified entropy table pending. No headline formal theorem, independent checker receipt, human expert refereeing or accepted external resolution.",
       "literature": {
         "citation_keys": [],
-        "relationship": "Candidate response to Polson\u2013Sokolov edition 1 v1.4.0; no priority assertion.",
+        "relationship": "Candidate response to Polson–Sokolov edition 1 v1.4.0; no priority assertion.",
         "source_commit": "5840497a23fc0d64127b850aea68862d7c93f2b7",
         "transfer_limit": "No implication to ordinary Collatz convergence or all-seed forced capture."
       },
@@ -733,7 +733,7 @@
       "limitations": "Full critical stationary Gibbs-law argument and all analytic prerequisites require full formalization. No headline formal theorem, independent checker receipt, human expert refereeing or accepted external resolution.",
       "literature": {
         "citation_keys": [],
-        "relationship": "Candidate response to Polson\u2013Sokolov edition 1 v1.4.0; no priority assertion.",
+        "relationship": "Candidate response to Polson–Sokolov edition 1 v1.4.0; no priority assertion.",
         "source_commit": "5840497a23fc0d64127b850aea68862d7c93f2b7",
         "transfer_limit": "No implication to ordinary Collatz convergence or all-seed forced capture."
       },
@@ -773,7 +773,7 @@
       "limitations": "Existence, matching microcanonical lower bound, uniform large-tilt estimates and ordered limits require full proof assurance. No headline formal theorem, independent checker receipt, human expert refereeing or accepted external resolution.",
       "literature": {
         "citation_keys": [],
-        "relationship": "Candidate response to Polson\u2013Sokolov edition 1 v1.4.0; no priority assertion.",
+        "relationship": "Candidate response to Polson–Sokolov edition 1 v1.4.0; no priority assertion.",
         "source_commit": "5840497a23fc0d64127b850aea68862d7c93f2b7",
         "transfer_limit": "No implication to ordinary Collatz convergence or all-seed forced capture."
       },
@@ -801,7 +801,7 @@
     },
     {
       "id": "REL-EXT-O3PRIME",
-      "title": "O3\u2032 external research candidate",
+      "title": "O3′ external research candidate",
       "evidence_status": "partial independent assurance; required rate source proofs complete",
       "artifacts": [
         "papers/external_problems/README.md",
@@ -813,12 +813,12 @@
       "limitations": "Finite optimization/truncation soundness and its computable algorithm remain pending. Exact higher-depth optima, sharp constant and optional stronger liminf remain unresolved; no novelty or human expert refereeing claimed.",
       "literature": {
         "citation_keys": [],
-        "relationship": "Candidate response to Polson\u2013Sokolov edition 1 v1.4.0; no priority assertion.",
+        "relationship": "Candidate response to Polson–Sokolov edition 1 v1.4.0; no priority assertion.",
         "source_commit": "5840497a23fc0d64127b850aea68862d7c93f2b7",
         "transfer_limit": "No implication to ordinary Collatz convergence or all-seed forced capture."
       },
       "status_fields": {
-        "problem": "O3\u2032",
+        "problem": "O3′",
         "id": "EXT-O3PRIME",
         "status": "draft candidate",
         "target": "arbitrary finite-window correction failure infimum and depth rate",
@@ -917,18 +917,19 @@
         "lean/external_rate/inventory.json",
         "verification/external_rate/README.md"
       ],
-      "claim": "For every positive finite h, 1/[4(h+33)] \u2264 p_h \u2264 5/(2h), hence the frozen weaker lower bound 127/(32768h) and p_h\u21920, for unrestricted run-window corrections and literal odd-seed failure densities.",
+      "claim": "For every positive finite h, 1/[4(h+33)] ≤ p_h ≤ 5/(2h), hence the frozen weaker lower bound 127/(32768h) and p_h→0, for unrestricted run-window corrections and literal odd-seed failure densities.",
       "limitations": "Exact source-pinned assurance at1406f1a; later documentation/metadata heads require their own CI. Higher-depth finite optimization, optional stronger liminf and sharp limiting constants remain unproved. No novelty, human refereeing, Collatz convergence or capture follows."
     },
     {
       "id": "REL-BRIDGE-FINITE",
       "title": "Literal finite source-word dictionary, rewards and unique maximum",
-      "evidence_status": "All25 frozen finite bridge targets and 357 theorem/helper closures passed ordinary isolated source/type/axiom builds; full project-specific replay/comparator/checker/mutation gates pending.",
+      "evidence_status": "All25 frozen statements and357 theorem/helper closures passed source-bound replay, frozen comparison, all six checker modes in both stages and13 hostile controls at5369dc97, run46105619785 (all six required jobs passed).",
       "artifacts": [
         "lean/external_bridge/BridgeSolution.lean",
         "lean/external_bridge/FINITE_BRIDGE_PROOF.md",
         "lean/external_bridge/README.md",
-        "lean/external_bridge/inventory.json"
+        "lean/external_bridge/inventory.json",
+        "verification/external_bridge/CI_ARTIFACTS.json"
       ],
       "lean_declarations": [
         "ExternalFiniteBridgeChallenge.finiteWordPrefixEncoding",
@@ -957,7 +958,37 @@
         "ExternalFiniteBridgeChallenge.zeroLengthConvention",
         "ExternalFiniteBridgeChallenge.lengthOneBoundary"
       ],
-      "limitations": "Finite source-word/rung/reward/count foundation only. No pressure or entropy limit, microcanonical equality, differentiability, M4/R8/R9 resolution, integer cycle realization, novelty or human expert refereeing. Independent Linux gates remain pending."
+      "limitations": "Finite source-word/rung/reward/count foundation only. No pressure or entropy limit, microcanonical equality, differentiability, M4/R8/R9 resolution, integer cycle realization, novelty or human expert refereeing. Later trees require their own regression."
+    },
+    {
+      "id": "REL-O3-OPTIMIZATION",
+      "title": "Exact finite cycle-deletion optimum and computable actual-infimum brackets",
+      "evidence_status": "All15 pre-proof-frozen required targets passed fresh source/type/axiom integration covering952 theorem/helper closures. Public project-specific source-bound replay, trusted comparator, six checker modes and hostile-control gates remain pending.",
+      "artifacts": [
+        "lean/external_optimization/OptimizationSolution.lean",
+        "lean/external_optimization/OptimizationJoin.lean",
+        "lean/external_optimization/OPTIMIZATION_PROOF.md",
+        "lean/external_optimization/README.md",
+        "lean/external_optimization/inventory.json"
+      ],
+      "lean_declarations": [
+        "ExternalO3OptimizationChallenge.genericStrictCycleCriterion",
+        "ExternalO3OptimizationChallenge.genericElementaryReduction",
+        "ExternalO3OptimizationChallenge.genericDeletionOptimum",
+        "ExternalO3OptimizationChallenge.vertexEncodingAndExtension",
+        "ExternalO3OptimizationChallenge.edgeEncodingAndWeights",
+        "ExternalO3OptimizationChallenge.naturalCycleSigns",
+        "ExternalO3OptimizationChallenge.commonDyadicDenominator",
+        "ExternalO3OptimizationChallenge.numeratorMinimumWellPosed",
+        "ExternalO3OptimizationChallenge.finiteOptimizationExact",
+        "ExternalO3OptimizationChallenge.truncationMassIdentity",
+        "ExternalO3OptimizationChallenge.discardedMassBound",
+        "ExternalO3OptimizationChallenge.literalInfimumSandwich",
+        "ExternalO3OptimizationChallenge.diagonalConvergence",
+        "ExternalO3OptimizationChallenge.computableExactOptimizer",
+        "ExternalO3OptimizationChallenge.computableDyadicApproximation"
+      ],
+      "limitations": "Literal fixed finite run-length-window correction class, equality failures and relative-odd natural density. Total computable exhaustive search has no claimed practical complexity bound. Optional monotonicity, sharp asymptotic constants and closed-form higher-depth optima remain outside the claim. The generic finite cycle criterion already appears in the source book and is not claimed novel. No M4/R8/R9 analytic limit, integer capture or human expert refereeing follows."
     }
   ],
   "literature_scope": "Citation keys resolve in tex/references.tex. Relationships identify attribution and limits, not a literature-wide priority certification."

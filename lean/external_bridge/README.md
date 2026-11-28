@@ -7,11 +7,7 @@ finite threshold counts, and the unique mechanical maximum. It is supporting
 finite mathematics for the bridge program. It proves no pressure or entropy
 limit, differentiability theorem, M4 solution, R8 solution or R9 asymptotic.
 
-**Gate pending:** ordinary compilation and axiom inspection have lower assurance
-than the full project gate. Source-bound proof replay, all frozen-statement
-comparisons, six bundled checker modes and hostile controls require successful
-project-specific Linux full-mode receipts. Results for the separate prefix,
-depth-one, population or rate packages do not substitute for this gate.
+**Source-pinned full assurance passed:** at commit `5369dc97e6b8d15d7b3ae437d320726f24f24aa7`, run `46105619785` passed all six mandatory jobs. This project's25 frozen targets and357 theorem/helper closures passed fresh proof export/replay, trusted statement comparison, all six checker modes at both stages and13 hostile controls. [Exact receipts](../../verification/external_bridge/README.md) identify the checked source/tree and36 project file digests. Later source or metadata changes require their own regression. No pressure or entropy limit follows from these finite results.
 
 The slope is the actual theta=log(3)/log(2). A word has r ordered positive
 integer letters and cumulative sums K_t. Its source endpoint is ceil(r*theta),

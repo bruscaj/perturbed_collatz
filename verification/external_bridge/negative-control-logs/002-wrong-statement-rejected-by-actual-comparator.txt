@@ -1,0 +1,34 @@
+Resolving dependencies
+Building BridgeChallenge
+⚠ [2195/2196] Built BridgeChallenge (1.9s)
+warning: BridgeChallenge.lean:7:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:10:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:13:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:16:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:19:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:22:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:25:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:28:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:31:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:34:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:37:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:40:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:43:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:46:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:49:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:52:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:55:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:58:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:61:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:64:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:67:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:70:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:73:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:76:8: declaration uses `sorry`
+warning: BridgeChallenge.lean:79:8: declaration uses `sorry`
+Build completed successfully (2196 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, ExternalFiniteBridgeChallenge.finiteWordPrefixEncoding, ExternalFiniteBridgeChallenge.abstractPrefixCompatibility, ExternalFiniteBridgeChallenge.defectBounds, ExternalFiniteBridgeChallenge.nonintegralEndpoint, ExternalFiniteBridgeChallenge.strictRungCaps, ExternalFiniteBridgeChallenge.unitFloorIncrements, ExternalFiniteBridgeChallenge.floorIncrementAlphabet, ExternalFiniteBridgeChallenge.sourceSlopeFacts, ExternalFiniteBridgeChallenge.sourceSlopeNonintegral, ExternalFiniteBridgeChallenge.sourceRungsUnbounded, ExternalFiniteBridgeChallenge.literalClosingDepth, ExternalFiniteBridgeChallenge.sourceLastLetterLowerable, ExternalFiniteBridgeChallenge.lowerRaiseTransport, ExternalFiniteBridgeChallenge.finitePopulations, ExternalFiniteBridgeChallenge.sourceFloorBijection, ExternalFiniteBridgeChallenge.sourceDepthBijection, ExternalFiniteBridgeChallenge.rewardEndpointInvariant, ExternalFiniteBridgeChallenge.rewardRealPower, ExternalFiniteBridgeChallenge.sourceDepthReward, ExternalFiniteBridgeChallenge.referenceAtRungs, ExternalFiniteBridgeChallenge.phaseZeroExtremizer, ExternalFiniteBridgeChallenge.uniqueExtremizer, ExternalFiniteBridgeChallenge.thresholdCountPreservation, ExternalFiniteBridgeChallenge.lengthOneBoundary, ExternalFiniteBridgeChallenge.zeroLengthConvention, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from BridgeChallenge
+Building BridgeSolution
+Build completed successfully (2217 jobs).
+error: Challenge and solution theorem statement do not match: 'ExternalFiniteBridgeChallenge.phaseZeroExtremizer'
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, ExternalFiniteBridgeChallenge.finiteWordPrefixEncoding, ExternalFiniteBridgeChallenge.abstractPrefixCompatibility, ExternalFiniteBridgeChallenge.defectBounds, ExternalFiniteBridgeChallenge.nonintegralEndpoint, ExternalFiniteBridgeChallenge.strictRungCaps, ExternalFiniteBridgeChallenge.unitFloorIncrements, ExternalFiniteBridgeChallenge.floorIncrementAlphabet, ExternalFiniteBridgeChallenge.sourceSlopeFacts, ExternalFiniteBridgeChallenge.sourceSlopeNonintegral, ExternalFiniteBridgeChallenge.sourceRungsUnbounded, ExternalFiniteBridgeChallenge.literalClosingDepth, ExternalFiniteBridgeChallenge.sourceLastLetterLowerable, ExternalFiniteBridgeChallenge.lowerRaiseTransport, ExternalFiniteBridgeChallenge.finitePopulations, ExternalFiniteBridgeChallenge.sourceFloorBijection, ExternalFiniteBridgeChallenge.sourceDepthBijection, ExternalFiniteBridgeChallenge.rewardEndpointInvariant, ExternalFiniteBridgeChallenge.rewardRealPower, ExternalFiniteBridgeChallenge.sourceDepthReward, ExternalFiniteBridgeChallenge.referenceAtRungs, ExternalFiniteBridgeChallenge.phaseZeroExtremizer, ExternalFiniteBridgeChallenge.uniqueExtremizer, ExternalFiniteBridgeChallenge.thresholdCountPreservation, ExternalFiniteBridgeChallenge.lengthOneBoundary, ExternalFiniteBridgeChallenge.zeroLengthConvention, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from BridgeSolution

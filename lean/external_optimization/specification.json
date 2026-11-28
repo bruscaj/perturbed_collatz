@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "scope": "15 required frozen finite strict-cycle/deletion optimization, literal-infimum truncation and genuine total computable approximation targets",
+  "original_frozen_at_utc": "2026-11-28T03:45:51.703696+00:00",
+  "chronology": "Earlier written PCF-105/Python finite work predates this freeze; no claim that all research attempts began after it. These exact accepted Lean targets and genuine computability obligations are now fixed before formal implementation.",
+  "files": {
+    "Definitions.lean": {
+      "sha256": "cf29376721942a78328491cd910690497f95d381711f0d2e758998fbba9374bc",
+      "bytes": 3873
+    },
+    "ExpectedTypes.lean": {
+      "sha256": "5ce898eb70690f6f77e26a95cbafb5ef268fa93617ab7418a0b25f6878c34968",
+      "bytes": 2611
+    },
+    "GeneralDefinitions.lean": {
+      "sha256": "9d3f21078449309feb93e42b2d2b5fc8c5f0c48c4ff42ac7b62fc5d911c2decc",
+      "bytes": 7409
+    },
+    "GeneralExpectedTypes.lean": {
+      "sha256": "65087d9a25b910c2875c128d9c477cab9b5e506629d446f5db193450dad3b8fa",
+      "bytes": 6387
+    },
+    "RateDefinitions.lean": {
+      "sha256": "c377f507d249658b9b53b04c6b2c0906ec95dbdeb1f37291d104b7c07f73eb8d",
+      "bytes": 3813
+    },
+    "RateExpectedTypes.lean": {
+      "sha256": "d0089dc07e0599ad8d128291c58518a3a704b20571f735924364ea1b9a3032cc",
+      "bytes": 3186
+    },
+    "OptimizationDefinitions.lean": {
+      "sha256": "92ebe27ca1f036295fe9b1135e81b50c59069fd928710373a6dce492c4905d98",
+      "bytes": 5775
+    },
+    "OptimizationExpectedTypes.lean": {
+      "sha256": "74a34cb349cbe43130e6644c919c9a8987930612b9f4b75fa6763763e384e020",
+      "bytes": 5604
+    },
+    "OptimizationAlgorithmTypes.lean": {
+      "sha256": "ad8c15d56c4847c12679df09c5b7594d057840fdd567615bfd60a805b3afa752",
+      "bytes": 1342
+    },
+    "OptimizationChallenge.lean": {
+      "sha256": "280d24ad070c2dcb929a0cdaa4176eae07242b4ecab652492c238f5f640553af",
+      "bytes": 1328
+    }
+  },
+  "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "source_pin": {
+    "repository": "https://github.com/VadimSokolov/collatz",
+    "commit": "5840497a23fc0d64127b850aea68862d7c93f2b7",
+    "problem": "book/chapters/ch11_open.tex#prob:ch11:o3p",
+    "convention": "book/chapters/ch05c_mmcollatz.tex"
+  },
+  "challenge_holes": [
+    "ExternalO3OptimizationChallenge.genericStrictCycleCriterion",
+    "ExternalO3OptimizationChallenge.genericElementaryReduction",
+    "ExternalO3OptimizationChallenge.genericDeletionOptimum",
+    "ExternalO3OptimizationChallenge.vertexEncodingAndExtension",
+    "ExternalO3OptimizationChallenge.edgeEncodingAndWeights",
+    "ExternalO3OptimizationChallenge.naturalCycleSigns",
+    "ExternalO3OptimizationChallenge.commonDyadicDenominator",
+    "ExternalO3OptimizationChallenge.numeratorMinimumWellPosed",
+    "ExternalO3OptimizationChallenge.finiteOptimizationExact",
+    "ExternalO3OptimizationChallenge.truncationMassIdentity",
+    "ExternalO3OptimizationChallenge.discardedMassBound",
+    "ExternalO3OptimizationChallenge.literalInfimumSandwich",
+    "ExternalO3OptimizationChallenge.diagonalConvergence",
+    "ExternalO3OptimizationChallenge.computableExactOptimizer",
+    "ExternalO3OptimizationChallenge.computableDyadicApproximation"
+  ],
+  "solution_must_not_import": [
+    "OptimizationChallenge",
+    "OptimizationOptionalChallenge",
+    "Challenge",
+    "GeneralChallenge",
+    "RateChallenge",
+    "RateOptionalChallenge"
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "frozen_propositions_sha256": "3919bf5adbbc70b07552f06d3479616bf828c8fa5c2a11f9135031de6fa86c8b",
+  "review": {
+    "human_expert_review": false,
+    "source_statement": "Separate AI exact-source/specification review before canonical freeze; subsequent source and join review"
+  },
+  "optional_target_status": "MonotonicFiniteOptimum is not implemented or claimed. Its definition and raw proposition remain in the preserved original register; the optional Challenge is not included.",
+  "assurance": "Preparation and ordinary build are lower assurance. Full project-specific Linux replay, frozen comparison, six checker modes and negative-control receipts are required before full assurance is claimed."
+}

@@ -32,7 +32,9 @@ $1/[4(h+33)]\le p_h\le5/(2h)$, so it tends to zero at order $1/h$.
 The upper bound uses an explicit first-maximum marker; the lower bound uses
 finite cyclic information contexts and exact geometric moments. The proof
 assumes neither Collatz convergence nor independence along an integer orbit.
-Exact higher-depth optima and optimal constants remain undetermined.
+A total computable exhaustive algorithm supplies certified dyadic brackets
+for each fixed-depth infimum. Closed-form higher-depth values and optimal
+constants remain undetermined.
 The manuscript is a research draft with separate assurance limits below.
 \end{abstract}
 
@@ -61,9 +63,10 @@ hashes are in \path{verification/external_analysis/} and
 \path{verification/external_population/}. These are specific recorded snapshots;
 later source changes require their own checks.
 The separate \path{lean/external_rate/} package records the eleven required
-rate targets. Its independent replay, frozen-statement comparator and
-six-checker gates are \textbf{pending at this manuscript snapshot}. The written
-proof below does not certify those pending gates. Ordinary compilation and
+rate targets. At source commit \texttt{1406f1a}, all eleven passed independent
+replay, frozen-statement comparison, six checker modes and ten hostile
+controls. Exact receipts are in \path{verification/external_rate/}.
+The new finite-optimization package has separate pending gates below. Ordinary compilation and
 independent kernel checking remain distinct from human review or acceptance.
 An expanded, source-linked derivation is supplied in the
 \href{../../lean/external_rate/RATE_PROOF.md}{rate proof companion}.
@@ -651,16 +654,184 @@ ordinary Collatz convergence.
 
 \paragraph{Reproduction and remaining assurance.}
 The release's \path{certificates/external_problems/verify.py} replays finite
-arithmetic. The three separate proof packages are
+arithmetic. The analytic proof packages are
 \path{lean/external_analysis/}, \path{lean/external_population/} and
 \path{lean/external_rate/}. Their exact source-bound receipts distinguish the
 depth-one optimum, general literal density representation and rate theorem.
-The eleven-target rate replay/comparator/six-checker gates remain pending at
-this draft's snapshot. Earlier successful depth-one or density receipts do
-not certify the new rate proof. Ordinary builds, axiom audits, trusted
+The rate gates passed at the source pin stated above. The new fifteen-target
+optimization package requires its own separate replay/comparator/six-checker
+and hostile-control receipts; those remain pending at this snapshot. Ordinary builds, axiom audits, trusted
 statement comparisons, fresh replay and independent checker coverage are
 different checks; exact final receipts govern their status. None supplies
 human expert refereeing, priority certification or external acceptance.
+
+\section{Finite strict constraints and the deletion optimum}\label{sec:finite-optimization}
+We now determine the same literal infimum $p_h$ algorithmically by rational
+brackets. No new restriction on the correction is imposed. The finite
+potential/cycle criterion is already in Polson--Sokolov~\cite{polson},
+Theorem~6.3, label \texttt{thm:ch5c:residue}. The relationship between
+constraint deletion and cycle deletion also appears in G\"oke, Mendoza Cadena
+and Mnich~\cite{goke}, Theorem~12, pp.~17:8--17:9. Their rational, nonstrict,
+cardinality-budget setting differs from the strict real inequalities and
+nonnegative deletion costs used here. No complexity theorem is transferred.
+
+Let $V,E$ be finite types, with labelled edges $e:u\to v$, real gains $b_e$
+and nonnegative costs $w_e$. Parallel edges remain distinct, and a cycle
+means a nonempty closed walk, including a loop. For a deletion set $D$, the
+following are equivalent: some $\psi:V\to\RR$ satisfies
+\[
+ b_e+\psi(v)-\psi(u)<0\quad(e\notin D);
+\]
+every surviving cycle has negative total gain; and $D$ meets every cycle of
+nonnegative total gain. Necessity follows by telescoping. For sufficiency,
+remove negative closed portions from any surviving path, increasing its gain
+until the path is simple. Define $\psi(u)$ as the maximum gain of a simple
+path starting at $u$, including the empty path. Finiteness gives this maximum,
+and prepending an edge shows $b_e+\psi(v)-\psi(u)\le0$.
+
+The edges on which equality holds have no nonempty closed walk, since such
+a walk would have total gain zero. Give these tight edges unit gain and let
+$\rho(u)$ be the maximum length of a tight path from $u$. Then
+$\rho(v)-\rho(u)\le-1$ on tight edges. On each remaining edge set
+$x_e=b_e+\psi(v)-\psi(u)<0$ and $y_e=\rho(v)-\rho(u)$. Every
+$0<\eta\le-x_e/(|y_e|+1)$ preserves negativity of $x_e+\eta y_e$.
+A common positive $\eta$ exists by finiteness, so $\psi+\eta\rho$ gives all
+strict constraints. This also treats an empty surviving edge set.
+
+It is enough to check elementary cycles, whose first $t$ vertices are
+pairwise distinct and hence $1\le t\le|V|$. A repeated vertex in a
+nonelementary closed walk splits it into two shorter nonempty closed walks;
+strong induction proves negativity from elementary negativity.
+
+Consequently the minimum potential failure cost equals the minimum safe
+deletion cost:
+\begin{equation}\label{eq:deletion-optimum}
+ \inf_\psi\sum_{e\in E}w_e
+ \ind_{\{b_e+\psi(v)-\psi(u)\ge0\}}
+ =\min_{D\,\mathrm{safe}}\sum_{e\in D}w_e.
+\end{equation}
+Indeed, the failure set of any potential is safe. Conversely a potential
+strictly feasible outside a minimizing safe set has failures only in that
+set; nonnegative weights give the reverse inequality. Safe sets exist by
+deleting all edges. Their finite minimum and the potential infimum are both
+attained. This finite attainment does not imply attainment of $p_h$.
+
+\section{Literal truncation, tails and the achieved-density infimum}
+Fix $M,J\ge2$. Finite vertices are the windows
+$s\in\{1,\ldots,M\}^h$. Retain exactly the following symbolic edges from
+Section~\ref{sec:general-density}: ascents with all source coordinates at most
+$M$, and exits with $2\le K\le J$ and all destination coordinates at most $M$.
+Their endpoints remain in the vertex box. In particular the newly revealed
+last destination coordinate on an exit is included in the truncation. Gains
+and weights are unchanged; every $K$ is still a separate parallel label.
+A finite potential extends to all windows by using zero outside this box.
+
+On a cycle of length $t>0$, put $L=\sum_e K_e$, with $K_e=1$ on ascents.
+Its gain is $t\log3-L\log2$, so
+\[
+ B(C)<0\ \Longleftrightarrow\ 3^t<2^L.
+\]
+Here $L\ge t\ge1$ and equality of these powers is impossible by parity.
+This cycle fact does not discard corrected-gain equality on individual edges.
+
+Put $B=J+hM$. The mass exponent $a_e$ is $\sum s_i$ on ascents and
+$K+\sum s_i$ on exits; thus $a_e\le B$ before natural subtraction is used.
+The cost of any deletion set is exactly
+\[
+ C(D)=\frac{U(D)}{2^B},\qquad U(D)=\sum_{e\in D}2^{B-a_e}\in\NN.
+\]
+Let $U_{h,M,J}$ be the minimum of $U(D)$ over safe sets and set
+$q_{h,M,J}=U_{h,M,J}/2^B$. Equation~\eqref{eq:deletion-optimum} identifies
+$q$ with the attained finite potential optimum, without rounding.
+
+Writing $t=2^{-M}$ and $u=2^{-J}$, the retained mass is exactly
+\[
+ T=(\tfrac12-t)(1-t)^{h-1}+(\tfrac12-u)(1-t)^h.
+\]
+This follows from the finite geometric sums over the head, remaining
+coordinates and exit labels separately. Since the full label mass is one,
+the discarded summable mass is $R=1-T$. Bernoulli's inequality gives
+\begin{align*}
+ R&=\tfrac12[1-(1-t)^{h-1}]+t(1-t)^{h-1}
+      +\tfrac12[1-(1-t)^h]+u(1-t)^h\\
+  &\le(h+1)2^{-M}+2^{-J}=:\tau_{h,M,J}.
+\end{align*}
+For any allowed global correction, restriction to the box gives a finite
+potential, so its literal density is at least $q$. Conversely extend an
+attaining finite potential to all windows. Its retained failure mass is
+exactly $q$, and its discarded failure mass is at most $R$. The literal
+density theorem of Section~\ref{sec:general-density} therefore proves
+\begin{equation}\label{eq:optimization-sandwich}
+ q_{h,M,J}\le p_h\le q_{h,M,J}+\tau_{h,M,J}.
+\end{equation}
+The nonempty achieved-density set justifies passing the first inequality to
+its infimum. The second uses an actual admissible correction, not a symbolic
+redefinition of $p_h$. With $M=J=n+2$, the error is
+$(h+2)2^{-(n+2)}\to0$ at fixed $h$, proving diagonal convergence. No
+monotonicity assumption or interchange of seed and depth limits is used.
+
+\section{A total computable numerator and dyadic brackets}
+We describe the actual exhaustive program whose correctness is formalized.
+Its input $(h_0,m_0,j_0)\in\NN^3$ gives
+$h=h_0+1$, $M=m_0+2$, $J=j_0+2$, $N=M^h$, and $E=JN$.
+Encode vertex offsets $v_i=s_i-1$ little-endian by
+$c(v)=\sum_{i<h}v_iM^i<N$. An ID $e<E$ has tag $e\mathbin{\mathrm{div}}N$
+and vertex code $e\bmod N$. Tag zero is valid only for a positive head
+offset and encodes an ascent. Tags $1,\ldots,J-1$ encode exit
+$K=\mathrm{tag}+1$ and its destination vertex. This is a bijection between
+canonical labelled edges and valid IDs. Invalid ascent slots are ignored.
+The ascending target code is $c-1$; the exit source code is
+$M(c\bmod M^{h-1})$, including $h=1$.
+
+A mask $m<2^E$ deletes the valid IDs where its corresponding binary digit is
+one. Every canonical deletion set has such a mask, and the program's integer
+cost is exactly $U(D)$. For each length $1\le n\le N$, enumerate all
+$q<E^n$ as radix-$E$ words of IDs. Test validity, undeleted status, closed
+incidence and the exact inequality $3^n<2^{\sum K}$. The bounded mask test
+accepts precisely the safe deletion sets: elementary cycles have length at
+most $N$, and every tested surviving closed word decodes to a genuine cycle.
+Both implications are proved, retaining loops and parallel exits.
+
+Initialize the best cost to deletion of all valid edges and scan every mask,
+taking the smaller cost whenever the mask passes. The all-deletion mask is
+$2^E-1$, so the fallback itself has a safe witness. Induction on the scan
+proves that the output is attained by an accepted mask and is no greater
+than any accepted cost. Mask surjectivity and the exact cost transport then
+give output $U_{h,M,J}$ in both directions.
+
+All bounds and operations use natural arithmetic, division/remainder,
+powers, Boolean tests and bounded folds. The implementation is proved
+primitive recursive and hence total \texttt{Computable} on the standard
+natural-product encoding. It does not evaluate real logarithms, choose a
+real minimizer, call an oracle or search for an unproved stopping condition.
+The search is enormous; no practical complexity bound is asserted.
+
+Given $h=h_0+1$ and accuracy $b\in\NN$, choose $M=J=h+b+2$ and invoke the
+numerator program at $(h_0,h_0+b+1,h_0+b+1)$. This input map is itself
+primitive recursive. Since $h+2\le2^{h+2}$,
+\[
+ \tau_{h,M,M}=(h+2)2^{-(h+b+2)}\le2^{-b}.
+\]
+Compute the nonzero denominator $2^{M+hM}$ exactly. Equation~
+\eqref{eq:optimization-sandwich} yields the total computable rational bracket
+\[
+ \frac{U_{h,M,M}}{2^{M+hM}}\le p_h
+ \le\frac{U_{h,M,M}}{2^{M+hM}}+2^{-b}.
+\]
+This is algorithmic determination by certified brackets; it is neither a
+closed formula at each depth nor a reported numerical table.
+
+\paragraph{Optimization assurance boundary.}
+The separate \path{lean/external_optimization/} package implements all fifteen
+required frozen optimization targets. Its fresh ordinary source build,
+frozen raw-statement checks and exhaustive axiom audit passed all 952 owned
+or reused theorem/helper declarations. Its source-bound replay, trusted
+comparator, all six checker modes and hostile controls remain
+\textbf{pending at this manuscript snapshot}. The full
+\href{../../lean/external_optimization/OPTIMIZATION_PROOF.md}{optimization companion}
+maps the proofs and executable correctness to those exact targets.
+The optional monotonicity target remains separate and unproved. No result
+here settles M4, R8 or R9, proves capture or supplies human expert refereeing.
 
 \clearpage
 \begin{thebibliography}{9}
@@ -692,6 +863,13 @@ D.~J.~Bernstein and J.~C.~Lagarias. The $3x+1$ conjugacy map.
 R.~M.~Karp. A characterization of the minimum cycle mean in a digraph.
 \emph{Discrete Mathematics} \textbf{23}(3) (1978), 309--311.
 \href{https://doi.org/10.1016/0012-365X(78)90011-0}{doi:10.1016/0012-365X(78)90011-0}.
+
+\bibitem{goke}
+A.~G\"oke, L.~M.~Mendoza Cadena and M.~Mnich.
+Resolving Infeasibility of Linear Systems: A Parameterized Approach.
+In \emph{IPEC 2019}, LIPIcs \textbf{148} (2019), 17:1--17:15.
+Theorem~12, pp.~17:8--17:9.
+\href{https://doi.org/10.4230/LIPIcs.IPEC.2019.17}{doi:10.4230/LIPIcs.IPEC.2019.17}.
 
 \bibitem{dirichlet}
 P.~G.~Lejeune Dirichlet.
