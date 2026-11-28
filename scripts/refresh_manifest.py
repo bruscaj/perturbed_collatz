@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ALLOWED = {".github", ".gitignore", "CHANGELOG.md", "Makefile", "README.md",
            "certificates", "claims.json", "figures", "lean", "paper.pdf",
-           "paper.tex", "requirements-figures.txt", "scripts", "tex", "papers"}
+           "paper.tex", "requirements-figures.txt", "scripts", "tex", "papers", "verification"}
 IGNORED = {".git", ".lake", "__pycache__", "build"}
 GENERATED = {".pyc", ".olean", ".ilean", ".trace", ".aux", ".log", ".out",
              ".toc", ".fls", ".fdb_latexmk"}

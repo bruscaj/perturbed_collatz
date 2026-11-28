@@ -1,0 +1,101 @@
+{
+  "scope": "supporting prefix theorems only",
+  "mode": "full",
+  "status": "passed supporting negative controls and positive full prerequisites",
+  "controls": [
+    {
+      "name": "changed trusted definitions",
+      "gate": "frozen source digest",
+      "result": "rejected",
+      "reason": "frozen source digest mismatch: Definitions.lean"
+    },
+    {
+      "name": "missing required module",
+      "gate": "source module coverage",
+      "result": "rejected",
+      "reason": "missing required module/config: Definitions.lean"
+    },
+    {
+      "name": "weakened theorem to True",
+      "gate": "elaborated comparator",
+      "result": "rejected"
+    },
+    {
+      "name": "hidden imported custom axiom",
+      "gate": "transitive axiom audit",
+      "result": "rejected"
+    }
+  ],
+  "commands": [
+    {
+      "label": "pinned version",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "env",
+        "lean",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)\n",
+      "stderr": ""
+    },
+    {
+      "label": "positive complete source-bound proof verification",
+      "command": [
+        "/usr/bin/python3",
+        "/tmp/external-negative-controls-b9qr53no/positive/verify.py",
+        "--mode",
+        "full"
+      ],
+      "exit_code": 0,
+      "stdout": "RUN version\nPASS version (0.08s)\nRUN clean build\nPASS clean build (1.143s)\nRUN all supporting theorem closures and raw types\nPASS all supporting theorem closures and raw types (3.758s)\nRUN fresh export of all audited theorem closures\nRUN fresh complete proof-closure replay and all bundled checkers\nPASS fresh complete proof-closure replay and all bundled checkers (3.556s)\nRUN frozen statement comparison and independent checker\nPASS frozen statement comparison and independent checker (6.264s)\npassed supporting full assurance gates\n",
+      "stderr": ""
+    },
+    {
+      "label": "wrong-statement builds",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "stdout": "\u2714 [2/5] Built Definitions (308ms)\n\u2714 [3/5] Built ExpectedTypes (292ms)\n\u2714 [4/5] Built Solution (395ms)\nBuild completed successfully (5 jobs).\n",
+      "stderr": ""
+    },
+    {
+      "label": "wrong statement rejected by comparator",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "comparator",
+        "--config",
+        "comparator.json",
+        "--paranoid"
+      ],
+      "exit_code": 1,
+      "stdout": "Resolving dependencies\nBuilding Challenge\n\u26a0 [4/5] Built Challenge (318ms)\nwarning: Challenge.lean:11:8: declaration uses `sorry`\nwarning: Challenge.lean:14:8: declaration uses `sorry`\nwarning: Challenge.lean:17:8: declaration uses `sorry`\nwarning: Challenge.lean:20:8: declaration uses `sorry`\nwarning: Challenge.lean:23:8: declaration uses `sorry`\nBuild completed successfully (5 jobs).\nExporting #[Quot, Quot.mk, Quot.lift, Quot.ind, ExternalPrefixChallenge.floorDepthEquivalence, ExternalPrefixChallenge.depthInvolution, ExternalPrefixChallenge.closingFloorEquivalence, ExternalPrefixChallenge.floorRaiseSoundness, ExternalPrefixChallenge.endpointInverses, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge\nBuilding Solution\nBuild completed successfully (5 jobs).\nExporting #[Quot, Quot.mk, Quot.lift, Quot.ind, ExternalPrefixChallenge.floorDepthEquivalence, ExternalPrefixChallenge.depthInvolution, ExternalPrefixChallenge.closingFloorEquivalence, ExternalPrefixChallenge.floorRaiseSoundness, ExternalPrefixChallenge.endpointInverses, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution\n",
+      "stderr": "error: Challenge and solution theorem statement do not match: 'ExternalPrefixChallenge.floorDepthEquivalence'\n"
+    },
+    {
+      "label": "hidden-axiom builds",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "stdout": "\u2714 [2/6] Built Definitions (307ms)\n\u2714 [3/6] Built ExpectedTypes (302ms)\n\u2714 [4/6] Built BadPremise (288ms)\n\u2714 [5/6] Built Solution (397ms)\nBuild completed successfully (6 jobs).\n",
+      "stderr": ""
+    },
+    {
+      "label": "hidden imported axiom rejected by closure audit",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Audit.lean"
+      ],
+      "exit_code": 1,
+      "stdout": "EXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.closingFloorEquivalence._proof_1_5\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.closingFloorEquivalence._proof_1_6\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.floorRaiseSoundness._proof_1_4\"}\nAudit.lean:6:0: error: ExternalPrefixChallenge.floorDepthEquivalence has forbidden axiom BadPremise.hiddenFloor\n",
+      "stderr": ""
+    }
+  ]
+}

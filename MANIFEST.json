@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 13178,
-      "sha256": "2c659aff95ed5aba8f1981e362c219db76f34ad69300302eacbe203752cbbf21"
+      "bytes": 13446,
+      "sha256": "082ae9f3eeeb84b96e6d0a30c360e2d1926a62da6f4fcf99714c9b6f595f0396"
     },
     {
       "path": "certificates/exposition/examples.json",
@@ -1234,8 +1234,8 @@
     },
     {
       "path": "scripts/refresh_manifest.py",
-      "bytes": 1670,
-      "sha256": "a0e3b00e7c7d5b5c3b64c2b9f93dc28915a3697b75da4b37058345e138c021b7"
+      "bytes": 1686,
+      "sha256": "0249a567f5539278dcb3d52d122febea0cb7b6a510fd868e4040c308310c09fa"
     },
     {
       "path": "scripts/render_figures.py",
@@ -1306,6 +1306,31 @@
       "path": "tex/three_family_rows.tex",
       "bytes": 2739,
       "sha256": "b3d765597f34af621e1f1d13c86aae0ddbe6d705847a13e282b9e18cc1055a02"
+    },
+    {
+      "path": "verification/external_prefix/README.md",
+      "bytes": 1971,
+      "sha256": "271ed14d537c48a32a10f470e7b3cf5a7aa48ddf4199201b551ef20f574ccd65"
+    },
+    {
+      "path": "verification/external_prefix/external-finite.json",
+      "bytes": 4859,
+      "sha256": "5cab6037f564d236a54174ddeceffe6768d6607c0fc76e416cf5de4a909334f5"
+    },
+    {
+      "path": "verification/external_prefix/external-mutations.json",
+      "bytes": 5712,
+      "sha256": "fa42a7cde051fe5585fd3193f34e7baa1625ad9160ce49efe40e26ed78b9475e"
+    },
+    {
+      "path": "verification/external_prefix/external-source-tree.txt",
+      "bytes": 82,
+      "sha256": "5af53e9629adcf103ff43e908ddf120e3f84c06b1f4a6bde56f5e60b2b98b33e"
+    },
+    {
+      "path": "verification/external_prefix/external-support.json",
+      "bytes": 16117,
+      "sha256": "d37c4f78414bb72d62b6f531094411668afe72d4462962427b0d50b554706003"
     }
   ]
 }
