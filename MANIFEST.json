@@ -14,8 +14,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 12487,
-      "sha256": "19b8dc9349f905ec9b2636aae53086bada129f4d7e04e519600e208c83530468"
+      "bytes": 12938,
+      "sha256": "c865d1350e96afee90dadd186cd4514dae71aeaa6b0bd320b2c85c1bd5d7b7b5"
     },
     {
       "path": "Makefile",
@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 19706,
-      "sha256": "b39740574af8362d7f669696d2ec72208612fda63686c8e0752d1039b84f30b4"
+      "bytes": 19886,
+      "sha256": "ea79af494390c797bb1079cb250108df598c40e839aeb15fc54fe8d430539293"
     },
     {
       "path": "certificates/exposition/examples.json",
@@ -674,8 +674,8 @@
     },
     {
       "path": "claims.json",
-      "bytes": 64084,
-      "sha256": "f8f19c16ebdb361815d81f2d6f7e46d4adb7471a3da681eef30af3ee4b9c3aea"
+      "bytes": 64201,
+      "sha256": "5902d7443f365f2b9b1c9c4b1e42870134c89fb964eb28f1043ce8c9bc5dcfcc"
     },
     {
       "path": "figures/README.md",
@@ -1189,8 +1189,8 @@
     },
     {
       "path": "lean/external_critical/README.md",
-      "bytes": 2363,
-      "sha256": "9cb4369fd21a9059779b795d6a3f4a2ff2730ae0c3f770dc263b55e0745c9d8d"
+      "bytes": 2521,
+      "sha256": "24aeebccab63d853b7c8f75f98a987ae66f42cc306c6d41c4c03b85cb270eb38"
     },
     {
       "path": "lean/external_critical/RootedLaw.lean",
@@ -1255,7 +1255,7 @@
     {
       "path": "lean/external_critical/inventory.json",
       "bytes": 1431751,
-      "sha256": "2e6736ef4be97310ab8118eb44a62668b201ae947d8123a600f2d0addc223382"
+      "sha256": "73d11a6acbcc1b4567f8ae8e97a6e0eb11fce80553ae2868277274bfa077b40c"
     },
     {
       "path": "lean/external_critical/lake-manifest.json",
@@ -3076,6 +3076,66 @@
       "path": "verification/external_bridge/negative-control-logs/positive-full.json",
       "bytes": 3873496,
       "sha256": "595ef6a92510e42a0444717dd6ea6228f984be3466be35d396155de54978aba6"
+    },
+    {
+      "path": "verification/external_critical/CI_ARTIFACTS.json",
+      "bytes": 18316,
+      "sha256": "b59ef73d366e4fd312b70344f936c79aad0fb2b086adcaacb4a76e773c0e4881"
+    },
+    {
+      "path": "verification/external_critical/GITHUB_API.json",
+      "bytes": 55784,
+      "sha256": "542e64418d658c4509551631a2679abe5ab3049844c45618527e94ef8b40a51f"
+    },
+    {
+      "path": "verification/external_critical/README.md",
+      "bytes": 1726,
+      "sha256": "03605f71278bc28bfc76c0355f7b2a17605a0534954cfa82647782bc3d8bf2db"
+    },
+    {
+      "path": "verification/external_critical/external-analysis-h1.zip",
+      "bytes": 40645,
+      "sha256": "208ff9821da45f4adf6fe6076708a660d0fcde6731cab85f66a9fbb71cccfa08"
+    },
+    {
+      "path": "verification/external_critical/external-bridge.zip",
+      "bytes": 497520,
+      "sha256": "b7019e411c6bb436f748b731cb4fd2fadd92e4083b8f4ca2836d6954daa971ec"
+    },
+    {
+      "path": "verification/external_critical/external-critical.zip",
+      "bytes": 419318,
+      "sha256": "208279296404c4791260921590d20a3d237edcbdcfe40cfb9846f4a657c97673"
+    },
+    {
+      "path": "verification/external_critical/external-optimization.zip",
+      "bytes": 1441131,
+      "sha256": "a4a3fa4d254921adcd093f5b6e87b97482a1820daad1724fc4e588aef2fc6ea7"
+    },
+    {
+      "path": "verification/external_critical/external-population.zip",
+      "bytes": 840333,
+      "sha256": "747b54a6e12504f3d5922742e205f27801c8d53727d4eac850c85bd6ad506503"
+    },
+    {
+      "path": "verification/external_critical/external-rate.zip",
+      "bytes": 1437142,
+      "sha256": "40d97909715fae7153453c47a0dfff1e05656a16f4c2b7d55320371d45b59d2d"
+    },
+    {
+      "path": "verification/external_critical/external-support.zip",
+      "bytes": 5615,
+      "sha256": "927af75014129ed940d8f29ab1f6ed81d0cd7a751385a5cdc0dc1f1f37906aa0"
+    },
+    {
+      "path": "verification/external_critical/external-unrestricted.zip",
+      "bytes": 620041,
+      "sha256": "8bb31370dc011162469f84814e1bae36437a1b23131e735be5fe07b87b67254a"
+    },
+    {
+      "path": "verification/external_critical/release-verification.zip",
+      "bytes": 1452,
+      "sha256": "4baa1e473b74fb9609098f0796e82720582e5f5a031e4f16d40723989b1c4091"
     },
     {
       "path": "verification/external_optimization/CI_ARTIFACTS.json",

@@ -115,3 +115,8 @@
 ### Critical-space support candidate
 
 Added the self-contained12-target critical-space supporting package and a ninth mandatory assurance job. The current addition is awaiting full independent CI; ordinary compilation and local hostile preflight are explicitly lower assurance. Full critical-law and M4/R8/R9 conclusions remain incomplete. Generated complete proof exports remain temporary build artifacts.
+
+
+### Pinned critical-support assurance
+
+Archived the nine original digest-verified CI artifacts from exact sourcef6311a6/run46133133418. All nine jobs,45regressions and the critical12target/391declaration replay/comparison/six-mode/18control gates passed. The initial39b1ee3 dependency-preparation failure was corrected by passing module names to the cache CLI; no mathematical source changed. Later documentation heads require their own regression.

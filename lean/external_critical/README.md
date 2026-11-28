@@ -1,6 +1,6 @@
 # Critical-space support
 
-Twelve exact supporting theorems for the compact rooted-law argument, with local mathematical definitions and public pinned dependencies. See [the model and derivations](ARGUMENT.md). This release candidate has not yet passed its independent assurance gates. Full M4/R8/R9 and the critical Gibbs-law argument remain incomplete.
+Twelve exact supporting theorems for the compact rooted-law argument, with local mathematical definitions and public pinned dependencies. See [the model and derivations](ARGUMENT.md). At source `f6311a6`, all nine mandatory jobs passed full independent CI assurance ([exact receipts](../../verification/external_critical/README.md)). This is a source-pinned historical pass; later heads require their own regression. Full M4/R8/R9 and the critical Gibbs-law argument remain incomplete.
 
 The physical phase is `AddCircle 1`; heights use the genuine `OnePoint Nat` topology. The finite law samples Haar phase before normalized quenched Gibbs paths and a uniform root. Infinite-height mass and the phase seam remain explicit.
 
