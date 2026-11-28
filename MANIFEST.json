@@ -754,8 +754,8 @@
     },
     {
       "path": "lean/external_problems/VERIFICATION.md",
-      "bytes": 1764,
-      "sha256": "79d72e2a09314aaec58ad7b40d6ca59ca38794ac9c0097f2799eb8556f089586"
+      "bytes": 2613,
+      "sha256": "4c13024fa3a6838c77c3755ed6d223721c50d4f49e43e013ce38462f95eae562"
     },
     {
       "path": "lean/external_problems/comparator.json",
@@ -794,8 +794,8 @@
     },
     {
       "path": "lean/external_problems/verify.py",
-      "bytes": 4921,
-      "sha256": "e4e3f76f66d1a7521610579b283cd4bec0b9ef3cb44858d5f66b8f8928aa7f85"
+      "bytes": 6407,
+      "sha256": "06d0ef47ad6d4655ddcacef0f2ec4e2b00846d4552256d55dba840c48d73bb7b"
     },
     {
       "path": "lean/frontier/A3SharedComponent.lean",

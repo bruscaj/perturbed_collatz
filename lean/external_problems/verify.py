@@ -74,7 +74,27 @@ def main():
                 if hashlib.sha256((HERE/name).read_bytes()).hexdigest() != digest:
                     raise ValueError(f"supporting source inventory mismatch: {name}")
             if args.mode == "full":
-                run("fresh export and all bundled checkers", [lake, "check", "--paranoid"])
+                # Export every theorem in the audited own module, including
+                # generated helpers, and every transitive premise. Importing
+                # unrelated Std tactics is not an additional proof obligation.
+                roots = sorted(row["declaration"] for row in rows+helpers)
+                export = root/"supporting-proof-closure.ndjson"
+                command = [lake, "env", "leanexport", "Solution", "--", *roots]
+                print("RUN fresh export of all audited theorem closures", flush=True)
+                with export.open("wb") as stream:
+                    result = subprocess.run(command, cwd=root, env=env, stdout=stream,
+                                            stderr=subprocess.PIPE, text=True)
+                report["steps"].append({"label": "fresh source-bound proof closure export",
+                    "command": command, "exit_code": result.returncode, "stderr": result.stderr,
+                    "roots": roots, "bytes": export.stat().st_size,
+                    "sha256": hashlib.sha256(export.read_bytes()).hexdigest(),
+                    "source_sha256": recorded["sources_sha256"]})
+                if args.report:
+                    args.report.write_text(json.dumps(report, indent=2)+"\n")
+                if result.returncode or not export.stat().st_size:
+                    raise RuntimeError("fresh source-bound proof export failed")
+                run("fresh complete proof-closure replay and all bundled checkers",
+                    [lake, "check", "--from-export", str(export), "--paranoid"])
                 run("frozen statement comparison and independent checker",
                     [lake, "comparator", "--config", "comparator.json", "--paranoid"])
                 report["status"] = "passed supporting full assurance gates"

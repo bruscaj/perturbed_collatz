@@ -17,9 +17,22 @@ python3 lean/external_problems/test_mutations.py --mode full
 Full mode requires Linux, bubblewrap, working user namespaces and the checkers
 bundled with the pinned toolchain. It performs a clean build, inventories every
 supporting theorem/helper, checks frozen statements and source hashes, then
-runs `lake check --paranoid` and `lake comparator --paranoid` with the frozen
-challenge and the nanoda checker enabled. A missing sandbox or rejected checker
-is a failure. The challenge is built separately by the comparator.
+exports every audited theorem and generated helper with all transitive premises,
+then runs `lake check --from-export <fresh-export> --paranoid` and
+`lake comparator --paranoid` with the frozen challenge and nanoda enabled.
+A missing sandbox or rejected checker is a failure. The challenge is built
+separately by the comparator.
+
+The export is generated inside that fresh build immediately before replay;
+its roots, source digests, byte count and SHA-256 are recorded in the receipt.
+No caller-supplied export is accepted. This binding matters: `--from-export`
+by itself does not establish correspondence to project sources. All 34 own
+theorem constants are roots, so this is a replay of the complete supporting
+proof closures, not the hundreds of megabytes of unrelated imported Std
+implementation declarations. The full-environment attempts were interrupted
+by runner shutdowns and are not recorded as successful checks. An import-only
+experiment found identical trusted definitions and proof closures with Init,
+but the original frozen Std imports are retained unchanged.
 
 On a host without Linux namespaces, `--mode build` explicitly reports partial
 assurance; it cannot replace the mandatory CI `external-support` job. The
