@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 import shutil
 import subprocess
+import sys
 import tempfile
 
 HERE = Path(__file__).resolve().parent
@@ -127,11 +128,8 @@ def main():
                 positive = fixture("positive")
                 version = run(positive, "pinned version", [lake, "env", "lean", "--version"])
                 require("version 4.35.0," in version.stdout, "wrong supporting toolchain")
-                run(positive, "positive build", [lake, "build"])
-                run(positive, "positive axiom audit", [lake, "env", "lean", "-DwarningAsError=true", "Audit.lean"])
-                run(positive, "positive fresh replay", [lake, "check", "--paranoid"])
-                run(positive, "positive comparator and independent checker",
-                    [lake, "comparator", "--config", "comparator.json", "--paranoid"])
+                run(positive, "positive complete source-bound proof verification",
+                    [sys.executable, str(positive/"verify.py"), "--mode", "full"])
 
                 wrong = fixture("wrong-statement")
                 replace_target(wrong, "True", "trivial")

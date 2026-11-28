@@ -789,8 +789,8 @@
     },
     {
       "path": "lean/external_problems/test_mutations.py",
-      "bytes": 9128,
-      "sha256": "2f5031d734a10bd5dae2858bddeb733bbcf98c613706298c4a2725463e5c88d9"
+      "bytes": 8874,
+      "sha256": "8e1507520eb0924520cc96be2b745014cdd7ce78f207d6715b39d4f235685c66"
     },
     {
       "path": "lean/external_problems/verify.py",
