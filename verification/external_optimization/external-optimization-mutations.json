@@ -1,0 +1,408 @@
+{
+  "scope": "all15 required finite optimization and total computable approximation targets",
+  "mode": "full",
+  "status": "passed optimization negative controls and positive full fifteen-target pipeline",
+  "controls": [
+    {
+      "name": "equality failures excluded",
+      "gate": "original immutable source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen source digest mismatch: GeneralDefinitions.lean"
+    },
+    {
+      "name": "strict feasibility weakened",
+      "gate": "original immutable source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen source digest mismatch: OptimizationDefinitions.lean"
+    },
+    {
+      "name": "zero-length walks admitted as cycles",
+      "gate": "original immutable source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen source digest mismatch: OptimizationDefinitions.lean"
+    },
+    {
+      "name": "parallel exit K labels collapsed",
+      "gate": "original immutable source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen source digest mismatch: OptimizationDefinitions.lean"
+    },
+    {
+      "name": "dyadic weights doubled",
+      "gate": "original immutable source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen source digest mismatch: OptimizationDefinitions.lean"
+    },
+    {
+      "name": "last exit destination omitted from truncation",
+      "gate": "original immutable source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen source digest mismatch: OptimizationDefinitions.lean"
+    },
+    {
+      "name": "A01 base offset changed",
+      "gate": "original immutable source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen source digest mismatch: OptimizationAlgorithmTypes.lean"
+    },
+    {
+      "name": "A02 accuracy cap offset changed",
+      "gate": "original immutable source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen source digest mismatch: OptimizationAlgorithmTypes.lean"
+    },
+    {
+      "name": "executable cycle base three changed to two",
+      "gate": "original immutable source/hash/coverage",
+      "result": "rejected",
+      "reason": "original source inventory digest mismatch: OptimizationCode.lean"
+    },
+    {
+      "name": "required cycle transport module dropped",
+      "gate": "original immutable source/hash/coverage",
+      "result": "rejected",
+      "reason": "missing required module/config: OptimizationCycleCode.lean"
+    },
+    {
+      "name": "configured A02 target skipped",
+      "gate": "original immutable source/hash/coverage",
+      "result": "rejected",
+      "reason": "configured target coverage mismatch"
+    },
+    {
+      "name": "inventory target skipped",
+      "gate": "original immutable source/hash/coverage",
+      "result": "rejected",
+      "reason": "inventory target coverage mismatch"
+    },
+    {
+      "name": "inventory helper skipped",
+      "gate": "original immutable source/hash/coverage",
+      "result": "rejected",
+      "reason": "inventory helper coverage changed"
+    },
+    {
+      "name": "frozen proposition skipped",
+      "gate": "original immutable source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen proposition digest mismatch"
+    },
+    {
+      "name": "owned module register skipped",
+      "gate": "original immutable source/hash/coverage",
+      "result": "rejected",
+      "reason": "owned module coverage mismatch"
+    },
+    {
+      "name": "A01 wrapper weakened to True",
+      "gate": "actual trusted elaborated statement comparator",
+      "result": "rejected",
+      "mutated_solution_sha256": "6481b6bf6781645ce18be5d3a615856824ecee5e7d32a05fd631e619b88c8c55"
+    },
+    {
+      "name": "hidden imported custom axiom",
+      "gate": "actual all-origin transitive closure audit",
+      "result": "rejected",
+      "mutated_solution_sha256": "4ec09e30bc0b29889fd481c6a811f2cbd4eef41f20cede9cd0009240ec86a455",
+      "hidden_premise_sha256": "33141b410c94b9af292988f0ecf62bd8f16c23273c2832d00791f973ff2cf33a"
+    },
+    {
+      "name": "production executable cycle base three changed to two",
+      "gate": "actual Lean decidable evaluation of production optimizer",
+      "result": "rejected",
+      "positive_source_sha256": "e29fb3149ba79a8cf471c91b49bc3b3488625716ba276aede2f83b002a34ba89",
+      "corrupt_source_sha256": "22598194621f80603db3d902e1171f7375ae198d0f2d863d640dd84faa8ff298",
+      "exact_witness": "original optimizer(0,0,0)=1; corrupt=0; positive two-cycle9>8"
+    }
+  ],
+  "commands": [
+    {
+      "label": "positive full fifteen-target pipeline",
+      "command": [
+        "/usr/bin/python3",
+        "/tmp/optimization-negative-controls-lut2tad_/positive-full/verify.py",
+        "--mode",
+        "full",
+        "--report",
+        "/tmp/external-optimization-mutations-logs/positive-full.json",
+        "--dependency-cache",
+        "/home/runner/work/perturbed_collatz/perturbed_collatz/lean/external_optimization/.lake/packages"
+      ],
+      "exit_code": 0,
+      "log_gzip": "/tmp/external-optimization-mutations-logs/000-positive-full-fifteen-target-pipeline.log.gz",
+      "log_sha256": "27732f7daa9954532c03cadd13114e0d7f8585621cab4fbf578ca6f1eac78336",
+      "compressed_sha256": "0fd53515e5637a87ddebf29dbc35c9adb9313e21bd9285028b46dfc3ecde4d08",
+      "expected_failure": false
+    },
+    {
+      "label": "wrong-statement positive compilation",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "log_gzip": "/tmp/external-optimization-mutations-logs/001-wrong-statement-positive-compilation.log.gz",
+      "log_sha256": "4c22a4948f88cd126451d4e80e04c4edef7017229f50446ad57e1d3d014eb53b",
+      "compressed_sha256": "1cd98f58743f573e68604697d47abe65be06eb3b8418b6eef630bfa111fb8b13",
+      "expected_failure": false
+    },
+    {
+      "label": "wrong statement rejected by actual comparator",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "comparator",
+        "--config",
+        "comparator.json",
+        "--paranoid"
+      ],
+      "exit_code": 1,
+      "log_gzip": "/tmp/external-optimization-mutations-logs/002-wrong-statement-rejected-by-actual-comparator.log.gz",
+      "log_sha256": "444c11056438acd52e69089b639a1ca9da49e35d40a4ee47469b03234871e9b7",
+      "compressed_sha256": "7a5593be25b51e0b137970eb54a67c6a73b970e7dae2003cd6b258f9638178d7",
+      "expected_failure": true,
+      "rejection_reason_confirmed": true
+    },
+    {
+      "label": "custom-axiom positive compilation",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "log_gzip": "/tmp/external-optimization-mutations-logs/003-custom-axiom-positive-compilation.log.gz",
+      "log_sha256": "77d3d17a78ba8c8f04f0232a11012eb8d6dad1e4c08d370192195add61d6929e",
+      "compressed_sha256": "4f36c95f7742c49a3c2f36a6a74bf478eeced5d83ae1644ecb772e24c2f75832",
+      "expected_failure": false
+    },
+    {
+      "label": "hidden imported axiom rejected by complete audit",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Audit.lean"
+      ],
+      "exit_code": 1,
+      "log_gzip": "/tmp/external-optimization-mutations-logs/004-hidden-imported-axiom-rejected-by-complete-audit.log.gz",
+      "log_sha256": "c663648d421455a180d5e8152d158d8c2b3d9d82c890bee3254fcd98b9b0ff97",
+      "compressed_sha256": "cd93062a49b2796c91542b3c73537c900c4011bbc1fc71e3e2cfa95ec97e6178",
+      "expected_failure": true,
+      "rejection_reason_confirmed": true
+    },
+    {
+      "label": "production program prerequisite imports",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "build",
+        "OptimizationAlgorithmTypes"
+      ],
+      "exit_code": 0,
+      "log_gzip": "/tmp/external-optimization-mutations-logs/005-production-program-prerequisite-imports.log.gz",
+      "log_sha256": "34d0c8d43ed83905a41d664c114562ba69240dc08cccf0fd85059fa7b2e23bbd",
+      "compressed_sha256": "3f8d7c45035e5551d3f5f239f204f202753c1898502ddff96a7d7114c8a6335f",
+      "expected_failure": false
+    },
+    {
+      "label": "positive literal production optimizer proof",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "-R",
+        "/tmp/optimization-negative-controls-lut2tad_/corrupt-executable-cycle-base",
+        "/tmp/optimization-negative-controls-lut2tad_/corrupt-executable-cycle-base/ProgramPositive.lean"
+      ],
+      "exit_code": 0,
+      "log_gzip": "/tmp/external-optimization-mutations-logs/006-positive-literal-production-optimizer-proof.log.gz",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compressed_sha256": "74091d698ba80972b7a85a2d8078b9ac1bb49a5ffb85af7a0aaa5fbbd8e167d8",
+      "expected_failure": false
+    },
+    {
+      "label": "corrupt executable cycle base rejected by Lean kernel proof",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "-R",
+        "/tmp/optimization-negative-controls-lut2tad_/corrupt-executable-cycle-base",
+        "/tmp/optimization-negative-controls-lut2tad_/corrupt-executable-cycle-base/ProgramCorrupt.lean"
+      ],
+      "exit_code": 1,
+      "log_gzip": "/tmp/external-optimization-mutations-logs/007-corrupt-executable-cycle-base-rejected-by-lean-kernel-proof.log.gz",
+      "log_sha256": "3d190d59c5eed43e784b4168503f4fe151b8b1317b25a25be91586e0b239340d",
+      "compressed_sha256": "d8daea58d09cc5055ab8fa26df37a010e618e493c135ac1d12018b68a5bb54b8",
+      "expected_failure": true,
+      "rejection_reason_confirmed": true
+    }
+  ],
+  "source_inventory_sha256": "affe608e1808f7509f83959d8bfbe05844059fdfa73b9bdb3c50f7c84b9cbae2",
+  "original_source_sha256": {
+    "Arithmetic.lean": "8ad07971f3dd9b211aa99c36f6ed9c645e9dbb158b7ba33e81b72d5ca2c6f76e",
+    "Audit.lean": "07da906129926ad8765d801f157d3ae0578cc160e54e0a46d19cf207f4f4f05d",
+    "CountablePartition.lean": "1d1d1f699b9abe0de3eb9c03bb3306359395629d3b33739a948915a3e09f9d7d",
+    "Cylinders.lean": "22ef4309c927190e4c004ce8fe2cd0761a59ef6ce81ef0a230b7d83515288a17",
+    "Definitions.lean": "cf29376721942a78328491cd910690497f95d381711f0d2e758998fbba9374bc",
+    "DensityBounds.lean": "1c0efec93aeb9f3024ef9b3cfcb7868504b6d819fdef578865903ce267a47e3d",
+    "ExitCylinders.lean": "178d20f9f84013d8c4e942542948c3acff31c8bac17efde06f22ec4e60afe611",
+    "ExpectedTypes.lean": "5ce898eb70690f6f77e26a95cbafb5ef268fa93617ab7418a0b25f6878c34968",
+    "Gains.lean": "1471ce4e6e2e5c3db4824616be2c1dd9f99d6c959ee8e809b109cfdd1ed54b03",
+    "GeneralArithmetic.lean": "06cbcb0af62e33e9f631750277b7e5e6d8044115b554ddaf323d3a112bddfe30",
+    "GeneralBlockWords.lean": "b3a8b53c5fe4fb1db185671a2f349f57e251d09b14d5ed76c04e17633f3ef4c0",
+    "GeneralCompatibility.lean": "bde003b9d0e546dccc9a086637e86dc03ae031c8797a739091b04c309023b62f",
+    "GeneralCylinderDensity.lean": "43c77d1a8062a836f60f86d148175e8353488cc71cf605e5cf45a23b7973fdb7",
+    "GeneralDefinitions.lean": "9d3f21078449309feb93e42b2d2b5fc8c5f0c48c4ff42ac7b62fc5d911c2decc",
+    "GeneralDensity.lean": "2180aea59aded9c0fd910ec19e81c8ef073d8486cf01b62209d21add10776e59",
+    "GeneralExpectedTypes.lean": "65087d9a25b910c2875c128d9c477cab9b5e506629d446f5db193450dad3b8fa",
+    "GeneralGains.lean": "0c17a1a320f733f9aab1cad379a4101fbd382550ffa63330cd7dd166ad59cf82",
+    "GeneralMarginal.lean": "d69a06493a61fd43b5ab901aec79e289d30028d79338b6c025d8f7e996227bae",
+    "GeneralPreimage.lean": "42fdc76715211e50b1b79da036ed3b65a94be2226c90296021723886e8942c25",
+    "GeneralProjection.lean": "b45485e3a49d40ad02239541efbb6c1cb18f256a8877e7f53b4d56eeeed810e8",
+    "GeneralRefinementLabels.lean": "87a8dafc9256bdd1245b3662df2cda8cd98ca6fb3fd7b07ca90d8bee53b2f314",
+    "GeneralSolution.lean": "59dfb6be602190bcdafbb12a639b07a08ae26fa9eb5b953ed638cc5cab4fb523",
+    "GeneralSourceDensity.lean": "d21d8bdfb3181f59f1ca23b98696dd99d8a54d58ce674f061eccd739e1d11dd9",
+    "GeneralStrideWords.lean": "c513dd033ff334a4a40ba068ec60e8c715176e30f507247a680891269106a352",
+    "GeneralWeights.lean": "b0a23ff1e40cc0588f96bf0ebb8e9ea95c588fa539c79fe853d93c033a6520b6",
+    "OPTIMIZATION_PROOF.md": "9bf1344287301a2ff25c4ababf725bee261c6195690205b269b6cfd910f90033",
+    "OptimizationAccuracy.lean": "f3893e7ac660be5af3b6c8d58a3f947b2b475966aa584dcffd645fb35a06b658",
+    "OptimizationAlgorithm.lean": "a5e799169d02fde236d25fa2f222cf25e61870cb856378f34cd76b6cf7ed7d38",
+    "OptimizationAlgorithmTypes.lean": "ad8c15d56c4847c12679df09c5b7594d057840fdd567615bfd60a805b3afa752",
+    "OptimizationArithmetic.lean": "01287e5b485ce8bee4aba42c9a7ab0239b34a9c20724682a914a5f95deec900b",
+    "OptimizationChallenge.lean": "280d24ad070c2dcb929a0cdaa4176eae07242b4ecab652492c238f5f640553af",
+    "OptimizationCode.lean": "8db0fbf6651997b9b39ad07dccf30315aa355beb98f95f5ea592b51809aced70",
+    "OptimizationCycleCode.lean": "f8526ef1646ed3b13c0e23d84d536fc5be8dc4f546675976b2e53e13a6cc95bd",
+    "OptimizationCycles.lean": "7bd7735dc83c9d50ead8b1b808b7f91c97163c8ec0605801356e2d73b9649430",
+    "OptimizationDefinitions.lean": "92ebe27ca1f036295fe9b1135e81b50c59069fd928710373a6dce492c4905d98",
+    "OptimizationDeletion.lean": "093421bec9c977ff23c8c0e16181026afb83e5670bc3c12a601d3d6e1a8d3ebb",
+    "OptimizationDensity.lean": "4d611ccad8746cff8ea6f6b5cbb9cc28ed1953d7821ea792f1c12e72cb388009",
+    "OptimizationEdgeCode.lean": "e72a65c4f3206a7c6990e85d48170ab1ddf8e96edc694eff71cfecb36ac6fc09",
+    "OptimizationEncoding.lean": "bec64189eb45d6da6ba892ea329e714f6ea19ed82ea25bcbf8f6fdc638bdb195",
+    "OptimizationExpectedTypes.lean": "74a34cb349cbe43130e6644c919c9a8987930612b9f4b75fa6763763e384e020",
+    "OptimizationJoin.lean": "61d7de215f87a85f2fc1c305948d56307cab4aafd91f95d1a21bd4184fa3598a",
+    "OptimizationMass.lean": "5419547b162efa432f9f64c5ceab3f5b72407f650b25f042d696d158568a7dad",
+    "OptimizationPaths.lean": "a8d6f051f825456c9cf05db039b858cf4c203f08e17d39435ecc68597ec5f27b",
+    "OptimizationSolution.lean": "6c6c40ababa237644927ebb3b97d6f3191dd34673bbdcdbf204138bcb4f08d27",
+    "OptimizationVertexCode.lean": "fcfac4549ca9250b3886b1d5906bfd537a40e883a2a19136ef7ead32ed5a69fb",
+    "PartitionGeneral.lean": "0e50e035d0456cb71b6d7238957f219133a4eaecfda96fb9ab74b5fcb723ed3b",
+    "PopulationWeights.lean": "8affb6d578e9891f306df4b54cc621c33d110227eaec7912d8dcf826f9697190",
+    "Progressions.lean": "69262afd5c9229bda3c0ffab6f53d78f3afef9ea6101b918232dce4f6b13fb18",
+    "README.md": "e1de361600daa5bdcd180baf70e306ac67b762a798b9a38d50435a88bc80bd06",
+    "RateDefinitions.lean": "c377f507d249658b9b53b04c6b2c0906ec95dbdeb1f37291d104b7c07f73eb8d",
+    "RateExpectedTypes.lean": "d0089dc07e0599ad8d128291c58518a3a704b20571f735924364ea1b9a3032cc",
+    "RateInfimum.lean": "e3f25c44065d0b49bc7ac37bc8c80eb7adc18e036c87b77dc838bd261bac871b",
+    "SourceDensity.lean": "0a9b01fcef47bc2684c2688055feff86747b453abe15ca295bf6a7cbd44205f3",
+    "cache-imports.txt": "472ca978c2c6b7c6d2775f49738962170716a7fbbb3a6c932b771a53aeb41a13",
+    "comparator.json": "7d84786d71d9a038165b2e4b592426bcb53023b292e3119363de0333d069e557",
+    "frozen_propositions.json": "3919bf5adbbc70b07552f06d3479616bf828c8fa5c2a11f9135031de6fa86c8b",
+    "lake-manifest.json": "3c008413bc7624bf190649eca3d6d55bc03ffc8cbbb06ac94fa8ff42b91735f5",
+    "lakefile.toml": "1fd0c83f6e759657531ddf67d8631a865e2d9153af7e308004d1e64d1c39a1e0",
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+    "owned_modules.json": "1220d509d8f7cef350ae7771a0442d038bb37261e44241d34d5509d6213dd316",
+    "specification.json": "dc2f5e617c78961a13e8c0d84c8ad171c109fdc8b6ab345a281759dfd49f2849",
+    "test_mutations.py": "22a6043f750dbb72ba0828e9eeca54f6676226e50e73ccd32f6a6f6436d2f65b",
+    "verify.py": "343af49ea94cbbc1043811eaf3f11a730070212a2c6a06f38168b345ed13afe7"
+  },
+  "original_frozen_pins": {
+    "Definitions.lean": "cf29376721942a78328491cd910690497f95d381711f0d2e758998fbba9374bc",
+    "ExpectedTypes.lean": "5ce898eb70690f6f77e26a95cbafb5ef268fa93617ab7418a0b25f6878c34968",
+    "GeneralDefinitions.lean": "9d3f21078449309feb93e42b2d2b5fc8c5f0c48c4ff42ac7b62fc5d911c2decc",
+    "GeneralExpectedTypes.lean": "65087d9a25b910c2875c128d9c477cab9b5e506629d446f5db193450dad3b8fa",
+    "RateDefinitions.lean": "c377f507d249658b9b53b04c6b2c0906ec95dbdeb1f37291d104b7c07f73eb8d",
+    "RateExpectedTypes.lean": "d0089dc07e0599ad8d128291c58518a3a704b20571f735924364ea1b9a3032cc",
+    "OptimizationDefinitions.lean": "92ebe27ca1f036295fe9b1135e81b50c59069fd928710373a6dce492c4905d98",
+    "OptimizationExpectedTypes.lean": "74a34cb349cbe43130e6644c919c9a8987930612b9f4b75fa6763763e384e020",
+    "OptimizationAlgorithmTypes.lean": "ad8c15d56c4847c12679df09c5b7594d057840fdd567615bfd60a805b3afa752",
+    "OptimizationChallenge.lean": "280d24ad070c2dcb929a0cdaa4176eae07242b4ecab652492c238f5f640553af"
+  },
+  "required_targets": [
+    "ExternalO3OptimizationChallenge.genericStrictCycleCriterion",
+    "ExternalO3OptimizationChallenge.genericElementaryReduction",
+    "ExternalO3OptimizationChallenge.genericDeletionOptimum",
+    "ExternalO3OptimizationChallenge.vertexEncodingAndExtension",
+    "ExternalO3OptimizationChallenge.edgeEncodingAndWeights",
+    "ExternalO3OptimizationChallenge.naturalCycleSigns",
+    "ExternalO3OptimizationChallenge.commonDyadicDenominator",
+    "ExternalO3OptimizationChallenge.numeratorMinimumWellPosed",
+    "ExternalO3OptimizationChallenge.finiteOptimizationExact",
+    "ExternalO3OptimizationChallenge.truncationMassIdentity",
+    "ExternalO3OptimizationChallenge.discardedMassBound",
+    "ExternalO3OptimizationChallenge.literalInfimumSandwich",
+    "ExternalO3OptimizationChallenge.diagonalConvergence",
+    "ExternalO3OptimizationChallenge.computableExactOptimizer",
+    "ExternalO3OptimizationChallenge.computableDyadicApproximation"
+  ],
+  "finite_model_witnesses": {
+    "h1_M2_J2": {
+      "optimum_units": 1,
+      "denominator": 16,
+      "q": "1/16",
+      "corrupt_base_two_units": 0,
+      "positive_cycle_ids": [
+        1,
+        3
+      ],
+      "cycle_comparison": "9 > 8",
+      "negative_loop_id": 2,
+      "loop_comparison": "3 < 4"
+    },
+    "generic_zero_gain_loop": {
+      "strict_failure_cost": "0",
+      "literal_nonstrict_failure_cost": "1",
+      "safe_without_deletion": false,
+      "empty_walk_is_cycle": false
+    },
+    "parallel_exit_labels_h1_M2_J3": [
+      {
+        "id": 2,
+        "source": 0,
+        "target": 0,
+        "K": 2,
+        "weight": "1/8"
+      },
+      {
+        "id": 4,
+        "source": 0,
+        "target": 0,
+        "K": 3,
+        "weight": "1/16"
+      }
+    ],
+    "omitted_exit_destination": {
+      "h": 1,
+      "M": 2,
+      "K": 2,
+      "destination": [
+        3
+      ],
+      "retained": false,
+      "dropping_last_destination_check_retains_it": true
+    },
+    "offsets": {
+      "input": [
+        0,
+        0,
+        0
+      ],
+      "h_M_J": [
+        1,
+        2,
+        2
+      ],
+      "accuracy_h0_b": [
+        0,
+        0
+      ],
+      "accuracy_M_J": [
+        3,
+        3
+      ]
+    },
+    "scope": "exact finite witnesses only; no universal proof or comparator acceptance"
+  },
+  "logs_directory": "/tmp/external-optimization-mutations-logs",
+  "positive_full_report_gzip": "/tmp/external-optimization-mutations-logs/positive-full.json.gz",
+  "positive_full_report_sha256": "df9b404f772d75dabc6f8dae457b4a42de5d0bb08b78d51005dcbca589e1df40"
+}

@@ -1,8 +1,16 @@
 # Release history
 
+## All-length endpoint distinction and O3 source conclusions — 28 November 2026
+
+- Added all 23 frozen formal statements for the all-length fixed-B_r count at c=1, including explicit exponential swap families, actual count bounds, real liminf/limsup and nonconvergence. The intended rung-only M4 and phase-adapted N* remain separate. The eighth assurance job is new and pending.
+- Preserved exact complete seven-job artifacts at b5dcda3: all 15 optimization statements/952 closures, six checker modes in both stages and 18 hostile controls, plus 43 legacy checks.
+- Corrected O3 scope language: uniform computable infimum brackets, vanishing and Theta(1/h) answer its three stated asks for the run-length-only class. Closed formulas, sharp constants and practical tables remain additional questions.
+- Extended the bridge manuscript with a separate all-length endpoint proof, keeping the main pressure/R9 claims explicitly provisional.
+
+
 ## Finite optimization source proofs — 28 November 2026
 
-- Added all15 required frozen optimization source proofs and952 theorem/helper audits, including a total computable exact finite numerator and dyadic bracket for the actual failure infimum. Added a seventh mandatory assurance job; its full results remain pending.
+- Added all 15 required frozen optimization source proofs and952 theorem/helper audits, including a total computable exact finite numerator and dyadic bracket for the actual failure infimum. Added a seventh mandatory assurance job; its full results remain pending.
 - Preserved passing finite bridge receipts at5369dc97 (all six jobs,357 closures, six checker modes and13 hostile controls). These do not discharge any M4/R8/R9 analytic limit.
 - Added precise attribution to the source book's existing finite cycle criterion and primary difference-constraint context in the full written optimization proof. No novelty or human expert acceptance is claimed.
 

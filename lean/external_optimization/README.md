@@ -7,10 +7,7 @@ returning the exact finite graph's integer deletion numerator. No efficiency
 claim, exact higher-depth closed form, sharp asymptotic constant, global Collatz
 convergence, or bridge-pressure limit is asserted.
 
-**Gate pending:** ordinary compilation and transitive axiom inspection are lower
-assurance. Full source-bound proof replay, frozen-statement comparison, six
-checker modes and hostile controls require successful project-specific Linux
-receipts. Receipts for other standalone projects do not substitute for this gate.
+**Full source-pinned assurance passed:** at `b5dcda3404b14b43e1985c2e31219ce811e46881`, run 46111672437 passed all seven mandatory jobs. This project covered all 15 required frozen statements and 952 own/reused theorem/helper closures: fresh source-bound replay, trusted comparison, all six checker modes in both stages, and 18 rejected controls following a second positive full pipeline. [Exact receipts and complete archives](../../verification/external_optimization/README.md) preserve the checked source/tree and 63 project digests. Later source or documentation changes require their own regression.
 
 For positive depth h and M,J≥2, vertices encode h run lengths in {1,…,M}.
 Ascending edges decrease the first run length; exit edges retain their halving

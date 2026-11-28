@@ -1,14 +1,14 @@
-# External problem candidates: M4, R8, R9 and O3′
+# External problems: M4/R8/R9 candidates and the run-length-only O3′ answer
 
-Jake S. Brusca, 27 November 2026. ChatGPT assisted with the research,
+Jake S. Brusca, 28 November 2026. ChatGPT assisted with the research,
 proof drafts, code, writing and audit. This is a personal research project
 and work in progress. Corrections and counterexamples are welcome.
 
-**No solution of these four open problems is certified by this release.**
-The project has written proof candidates. The public material here first
-records their exact scope and provides reproducible finite foundations.
-The full four-problem claims below remain unproved in Lean. The h=1 O3′ subquestion has a [complete frozen-target proof package](../../lean/external_analysis/README.md), with full independent checker CI passed at8524770. There has been no human expert refereeing. Neither
-ordinary Collatz convergence nor global forced capture follows.
+The run-length-only O3′ package now determines each finite-depth infimum by a total computable scheme of certified rational brackets, proves convergence to zero, and proves decay order 1/h. At depth one it additionally gives an exact series and nonattainment. These results address all three stated O3′ requests in the algorithmic sense, with source-pinned full independent machine-checker receipts. Closed formulas at every depth, sharp constants, practical numerical tables, novelty and independent human expert refereeing remain separate.
+
+M4/R8/R9 pressure, entropy, computation and critical-regularity claims remain draft candidates. Neither ordinary Collatz convergence nor global forced capture follows. The finite supporting libraries do not discharge those analytic gaps.
+
+The [O3′ source-to-result map](O3_SOURCE_MAP.md) records the exact class, the three source requests and the scope of algorithmic determination.
 
 ## Original statements and interpretation
 
@@ -24,12 +24,14 @@ verified resolution; this is not an exhaustive prior-art review or a
 claim of priority or external acceptance. We link the source rather than
 redistribute its chapters.
 
-| Problem and primary source | Candidate contribution | Exact boundary | Release status |
+| Problem and primary source | Contribution | Exact boundary | Release status |
 | --- | --- | --- | --- |
-| [M4, `prob:ch20:band`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10f_missed.tex), and [detailed `rrt:sec:m4`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex) | Rung entropy limit, variational characterization and computability | The short statement asks for an unrestricted length limit; the detailed discussion uses ladder rungs. These must be treated separately. A certified entropy table is still required. | Draft candidate; unresolved source interpretation and assurance gates |
+| [M4, `prob:ch20:band`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10f_missed.tex), and [detailed `rrt:sec:m4`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex) | Rung entropy limit, variational characterization and computability | The isolated wording does not specify a rung restriction; the continuation explicitly fixes rungs and asks for the limit along rungs. The all-length fixed-B_r c=1 extension is a separate question, not a refutation of intended rung-only M4 or phase-adapted N*. A certified rung entropy table is still required. | Draft candidate for the intended rung question; analytic proof and assurance remain pending |
 | [R8, `rrt:prob:r8`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex) | Pressure convergence and differentiability for every nonnegative tilt along rungs | Critical differentiability is part of the problem. Convergence and finite-depth computations do not settle it. | Draft candidate; full critical argument and formal assurance pending |
 | [R9, `rrt:prob:r9`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex) | Near-maximal entropy asymptotic, with proposed leading coefficient `3/(2 ln 2 ln 10)` | First take the length limit along rungs at fixed threshold, then let the threshold tend to one. Finite counts do not certify either limit. | Draft candidate; analytic proof and full formalization pending |
-| [O3′, `prob:ch11:o3p`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch11_open.tex) | Arbitrary-correction density, inverse-depth rate, depth-one infimum/nonattainment and convergent finite optimization | Corrections may be unbounded real functions of the current remaining block and the next `h−1` complete blocks. Rate, algorithmic determination and closed forms are distinct claims. | All 14 h=1 targets formalized; full checker CI passed at8524770. All22 arbitrary finite-depth density targets passed full gates at8746e08; all 11 required rate targets passed full replay/comparison/six-checker and hostile controls at1406f1a |
+| [O3′, `prob:ch11:o3p`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch11_open.tex) | Arbitrary-correction density, inverse-depth rate, depth-one infimum/nonattainment and convergent finite optimization | Corrections may be unbounded real functions of the current remaining block and the next `h−1` complete blocks. Rate, algorithmic determination and closed forms are distinct claims. | Depth-one, general density, rate and optimization packages passed full source-pinned gates. At b5dcda3, all 15 optimization targets/952 closures, six checker modes in both stages and 18 controls passed; all seven mandatory jobs passed. See [receipts](../../verification/external_optimization/README.md) |
+
+The source distinction is specific: `ch10f_missed.tex:219` defines general admissibility and line246 counts general lengths, while its M4 status at line458 points to rung tables and R8. The continuation at `ch10h_ratchets.tex:441,510` explicitly restricts the M4 limit question to rungs; its line461 defines off-rung N* using a different phase-adapted threshold. These passages support treating the all-length fixed-reference result separately, without claiming that the authors intended an unrestricted limit or that their intended M4 problem is refuted.
 
 ## The literal word model
 
@@ -58,10 +60,11 @@ For general lengths the caps can be computed without logarithms:
 enumerator; its second implementation independently enumerates depth paths.
 
 At r=2 there are two words `(1,3)` and `(2,2)`, with rewards `5/3` and
-`7/3`, while B₂=5/3. Thus both qualify at c=1. This refutes an unrestricted
-length extension of c=1 uniqueness, **not** the existence of an asymptotic
-limit. At rung lengths the maximal word is unique. The off-rung asymptotic
-claim requires an additional proof and remains a candidate here.
+`7/3`, while B₂=5/3. Thus both qualify at c=1. This finite example by itself refutes only all-length c=1 uniqueness. The
+separate [all-length package](../../lean/external_unrestricted/README.md) now
+provides 23 formal source proofs of liminf 0 and limsup≥log10(2)/8 for the
+fixed-B_r extension at c=1. Its full independent assurance remains pending.
+This distinction does not refute intended rung-only M4 or phase-adapted N*.
 
 ## Syracuse finite-information model
 
@@ -72,7 +75,7 @@ stride. Its remaining length is v₂(x+1). A depth-h potential is
 Failure means nondecrease, including equality. At x=1 the map is fixed;
 this singleton has zero odd-seed density.
 
-The proposed depth-one infimum is the series
+The depth-one infimum, proved separately in the analytic package, is the series
 
 `A = Σ_(r≥1) 2^(−r) [1/2 − 2^(−floor(1+r log₂(3/2)))]`.
 
@@ -88,7 +91,7 @@ The [depth-one Syracuse written draft](../finite_information_lyapunov/README.md)
 provides proofs of density existence, the infimum formula and nonattainment.
 All 14 frozen h=1 targets passed the dedicated full analytic assurance job at
 `8524770` ([exact receipts](../../verification/external_analysis/README.md)).
-The arbitrary finite-depth density foundation passed full independent gates. Required rate proofs passed full independent gates at1406f1a; all15 finite-optimization source proofs are now included, with their separate independent assurance gates pending.
+The arbitrary finite-depth density foundation passed full independent gates. Required rate proofs passed full independent gates at1406f1a; all 15 finite-optimization targets passed their own full independent gates at b5dcda3.
 The [near-extremal entropy written draft](../arithmetic_bridge_pressure/README.md)
 develops the rung/depth correspondence, large-tilt pressure, finite-block
 matching lower bound and proposed R9 expansion. It also remains unformalized.
@@ -99,7 +102,7 @@ It checks literal words, depth paths, small valuation cylinders, block
 transitions, the series tail and deliberate model mutations. These are
 finite certificates and model consistency tests.
 
-For the remaining arbitrary-depth and bridge claims, required next gates are complete noncircular written proofs, separately
+For the remaining M4/R8/R9 analytic claims, required next gates are complete noncircular written proofs, separately
 frozen full formal statements, proof of every model conversion and premise,
 clean Lean builds and transitive axiom audits, fresh replay, trusted statement
 comparison and independent checker replay. Numerical entropy claims need
@@ -109,4 +112,4 @@ is claimed. The [status register](status.json) keeps these fields separate.
 
 The [population-density foundation](../../lean/external_population/README.md) now has complete source proofs for every fixed positive finite h and arbitrary real window corrections, including exact source binding and both finite-tail transfers. This22target package passed source build, all517closure audits, full source-bound replay/comparison, six checker modes and nine hostile controls at8746e08 ([receipts](../../verification/external_population/README.md)). Its companion written proof is self-contained in the public tree. No rate, optimum or full O3′ resolution follows from this foundation alone.
 
-The [rate companion](../../lean/external_rate/RATE_PROOF.md) proves the explicit inverse-depth bounds and vanishing infimum, with all eleven required frozen statements implemented. All 765 theorem/helper closures, full replay/comparison, six checker modes and ten hostile controls passed at1406f1a ([receipts](../../verification/external_rate/README.md)). The optional stronger liminf and exact higher-depth optima are not claimed.
+The [rate companion](../../lean/external_rate/RATE_PROOF.md) proves the explicit inverse-depth bounds and vanishing infimum, with all eleven required frozen statements implemented. All 765 theorem/helper closures, full replay/comparison, six checker modes and ten hostile controls passed at1406f1a ([receipts](../../verification/external_rate/README.md)). The optional stronger liminf and closed-form higher-depth values are not claimed by the rate theorem. Uniform algorithmic determination of the actual higher-depth infima is supplied by the separate [optimization package](../../lean/external_optimization/README.md).

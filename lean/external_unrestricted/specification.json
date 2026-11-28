@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "scope": "23 required actual-slope all-length ordered source-word fixed phase-zero B_r,c=1 targets; not intended rung-M4/N*/other thresholds",
+  "original_frozen_at_utc": "2026-11-28T05:38:06.868234+00:00",
+  "original_private_freeze_commit": "c36d1fc",
+  "chronology": "Exploratory written argument and finite checks preceded this freeze. These exact formal meanings were frozen before accepted Lean implementation; no clean-room proof-search claim.",
+  "files": {
+    "Definitions.lean": {
+      "sha256": "cf29376721942a78328491cd910690497f95d381711f0d2e758998fbba9374bc",
+      "bytes": 3873
+    },
+    "ExpectedTypes.lean": {
+      "sha256": "5ce898eb70690f6f77e26a95cbafb5ef268fa93617ab7418a0b25f6878c34968",
+      "bytes": 2611
+    },
+    "PrefixDefinitions.lean": {
+      "sha256": "d7b5cd8b624dae007e3c3dc7f3620260dbfcf2169d0211b0859e18ed58180069",
+      "bytes": 1373
+    },
+    "BridgeDefinitions.lean": {
+      "sha256": "7a36ebc1e9ff89fcec7ad1fdae1c2d5ae9ee011b06ae110fd4f34999e7df19a7",
+      "bytes": 4708
+    },
+    "BridgeExpectedTypes.lean": {
+      "sha256": "850dcdd0d75479edaeab1c8d6d336b9099f56511e0b6f5a5125bedfca05838aa",
+      "bytes": 4767
+    },
+    "UnrestrictedDefinitions.lean": {
+      "sha256": "b22796b599134a98ebcf10002bac7e46d9a463d0e983099353ad524312ac5307",
+      "bytes": 2424
+    },
+    "UnrestrictedExpectedTypes.lean": {
+      "sha256": "4ce322ba8fcd87a5bdf18244c55df92b27b05a293eab201aa15ee8fa24146670",
+      "bytes": 4502
+    },
+    "UnrestrictedChallenge.lean": {
+      "sha256": "639af946ad44a5696e625e41276144cc2267cc370fd62c98291af04cbbb99a4e",
+      "bytes": 1680
+    }
+  },
+  "frozen_propositions_sha256": "35d68ca025ccd4e4ac5488e3d0fff432b86c9814be375d7950ab06587f036bca",
+  "frozen_model_definitions_sha256": "2289d1102f9780189687d7cc0e1f31a100c60a3baccfc9e6daa74f440b603541",
+  "frozen_model_count": 13,
+  "challenge_holes": [
+    "ExternalM4UnrestrictedChallenge.slopeBounds",
+    "ExternalM4UnrestrictedChallenge.tripleRotationHighLow",
+    "ExternalM4UnrestrictedChallenge.highPhaseCountLower",
+    "ExternalM4UnrestrictedChallenge.largeDefectsUnbounded",
+    "ExternalM4UnrestrictedChallenge.canonicalPrefixLaw",
+    "ExternalM4UnrestrictedChallenge.canonicalAllLengthWord",
+    "ExternalM4UnrestrictedChallenge.canonicalAlphabetAndSites",
+    "ExternalM4UnrestrictedChallenge.manyDisjointCanonicalSites",
+    "ExternalM4UnrestrictedChallenge.swapPrefixLaw",
+    "ExternalM4UnrestrictedChallenge.swapPreservesSource",
+    "ExternalM4UnrestrictedChallenge.swapFamilyInjective",
+    "ExternalM4UnrestrictedChallenge.swapCubeCard",
+    "ExternalM4UnrestrictedChallenge.swapRewardIdentity",
+    "ExternalM4UnrestrictedChallenge.canonicalRewardBudget",
+    "ExternalM4UnrestrictedChallenge.canonicalSwapLossBound",
+    "ExternalM4UnrestrictedChallenge.largeDefectWitnessInjection",
+    "ExternalM4UnrestrictedChallenge.exponentialCountLower",
+    "ExternalM4UnrestrictedChallenge.rungCountOne",
+    "ExternalM4UnrestrictedChallenge.allLengthCountBounds",
+    "ExternalM4UnrestrictedChallenge.normalizedLogBounds",
+    "ExternalM4UnrestrictedChallenge.normalizedLogLiminf",
+    "ExternalM4UnrestrictedChallenge.normalizedLogLimsup",
+    "ExternalM4UnrestrictedChallenge.noAllLengthLimit"
+  ],
+  "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "assurance": "Ordinary preparation only; full source-bound replay/comparator/six-checker and hostile controls pending",
+  "source": "Polson-Sokolov edition1,v1.4.0,5840497a23fc0d64127b850aea68862d7c93f2b7; general admissibility ch10f:219,246; unqualified M4:454-458 vs explicit rung continuation ch10h:441,510"
+}

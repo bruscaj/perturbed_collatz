@@ -5,7 +5,7 @@
 \usepackage{amsmath,amssymb,amsthm,mathtools,microtype}
 \usepackage{booktabs,array,enumitem,xurl,xcolor}
 \usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
-\hypersetup{pdftitle={Finite-information Lyapunov potentials: exact depth-one and inverse-depth bounds},pdfauthor={Jake S. Brusca}}
+\hypersetup{pdftitle={Finite-information Lyapunov potentials: computable infima and inverse-depth bounds},pdfauthor={Jake S. Brusca}}
 \pdfinfoomitdate=1
 \pdftrailerid{}
 \pdfsuppressptexinfo=15
@@ -16,7 +16,7 @@
 \newcommand{\ind}{\mathbf{1}}
 \newcommand{\NN}{\mathbb{N}}
 \newcommand{\RR}{\mathbb{R}}
-\title{Finite-information Lyapunov potentials for the Syracuse map\\[0.3em]\large Exact depth-one infimum and inverse-depth failure bounds}
+\title{Finite-information Lyapunov potentials for the Syracuse map\\[0.3em]\large Computable infima and inverse-depth failure bounds}
 \author{Jake S. Brusca}
 \date{28 November 2026}
 \begin{document}
@@ -66,7 +66,10 @@ The separate \path{lean/external_rate/} package records the eleven required
 rate targets. At source commit \texttt{1406f1a}, all eleven passed independent
 replay, frozen-statement comparison, six checker modes and ten hostile
 controls. Exact receipts are in \path{verification/external_rate/}.
-The new finite-optimization package has separate pending gates below. Ordinary compilation and
+At source commit \texttt{b5dcda3}, all fifteen finite-optimization targets
+also passed source-bound replay, trusted comparison, all six checker modes
+in both stages, and eighteen hostile controls. The exact reports and complete
+archives are in \path{verification/external_optimization/}. Ordinary compilation and
 independent kernel checking remain distinct from human review or acceptance.
 An expanded, source-linked derivation is supplied in the
 \href{../../lean/external_rate/RATE_PROOF.md}{rate proof companion}.
@@ -136,9 +139,9 @@ No correction attains $p_1$. For every integer $M\ge0$,
 \end{equation}
 \end{theorem}
 
-Theorem~\ref{thm:depth-one} gives the exact depth-one value. The later
-finite-depth sections prove universal rate bounds, while exact higher-depth
-values remain undetermined.
+Theorem~\ref{thm:depth-one} gives the exact depth-one value. Later sections
+give inverse-depth bounds and computable brackets. No closed-form
+general-depth formula or evaluated higher-depth table is supplied.
 
 \section{An exact partition of initial populations}
 If $r(x)=r\ge2$, write $x=2^ru-1$ with $u$ positive odd. Then
@@ -649,8 +652,10 @@ well-posedness, first-tie selector, achieved marker upper bound, history
 normalization, cyclic normalization and telescoping, forcing, literal density
 lower bound, positive-cycle mass, explicit rate and limit. The separate
 optional stronger liminf constant remains unproved. Neither these rate bounds
-nor the exact depth-one result determines all higher-depth values or proves
-ordinary Collatz convergence.
+nor the exact depth-one result alone determines all higher-depth values.
+The subsequent finite optimization supplies certified brackets at every
+depth; closed formulas and sharp constants remain separate questions.
+Nothing here proves ordinary Collatz convergence.
 
 \paragraph{Reproduction and remaining assurance.}
 The release's \path{certificates/external_problems/verify.py} replays finite
@@ -658,9 +663,9 @@ arithmetic. The analytic proof packages are
 \path{lean/external_analysis/}, \path{lean/external_population/} and
 \path{lean/external_rate/}. Their exact source-bound receipts distinguish the
 depth-one optimum, general literal density representation and rate theorem.
-The rate gates passed at the source pin stated above. The new fifteen-target
-optimization package requires its own separate replay/comparator/six-checker
-and hostile-control receipts; those remain pending at this snapshot. Ordinary builds, axiom audits, trusted
+The rate gates passed at the source pin stated above. The fifteen-target
+optimization package passed its own replay/comparator/six-checker and
+hostile-control gates at \texttt{b5dcda3}. Ordinary builds, axiom audits, trusted
 statement comparisons, fresh replay and independent checker coverage are
 different checks; exact final receipts govern their status. None supplies
 human expert refereeing, priority certification or external acceptance.
@@ -825,9 +830,10 @@ closed formula at each depth nor a reported numerical table.
 The separate \path{lean/external_optimization/} package implements all fifteen
 required frozen optimization targets. Its fresh ordinary source build,
 frozen raw-statement checks and exhaustive axiom audit passed all 952 owned
-or reused theorem/helper declarations. Its source-bound replay, trusted
-comparator, all six checker modes and hostile controls remain
-\textbf{pending at this manuscript snapshot}. The full
+or reused theorem/helper declarations. At \texttt{b5dcda3}, its source-bound replay, trusted comparator,
+all six checker modes in both stages and eighteen hostile controls passed.
+The source-pinned receipts are in \path{verification/external_optimization/};
+later manuscript revisions require their own regression. The full
 \href{../../lean/external_optimization/OPTIMIZATION_PROOF.md}{optimization companion}
 maps the proofs and executable correctness to those exact targets.
 The optional monotonicity target remains separate and unproved. No result

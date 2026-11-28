@@ -11,9 +11,10 @@
 \pdfsuppressptexinfo=15
 \setlength{\emergencystretch}{1.5em}
 \setlength{\parskip}{0.25em}
+\newtheorem{theorem}{Theorem}
 \title{Near-extremal entropy for admissible Collatz words\\[0.3em]\large A written rung-limit and large-tilt research argument}
 \author{Jake S. Brusca}
-\date{27 November 2026}
+\date{28 November 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -24,7 +25,9 @@ candidate near-one rung entropy limit. A large-tilt sandwich yields the
 proposed leading and second-order R9 expansion. The argument supplies only a
 near-one interpretation of M4 and convergence for large tilt in R8, not the
 full problems. No end-to-end formal proof, independent kernel replay or human
-expert refereeing of these infinite claims is certified here.
+expert refereeing of these infinite rung claims is certified here. A separate
+appendix proves nonconvergence for the fixed-reference all-length extension
+at c=1; it does not replace the intended rung-only M4 question.
 \end{abstract}
 \begin{quote}\small
 \textbf{Personal project; work in progress.} I am not an expert in this field.
@@ -33,11 +36,11 @@ and suggestions are welcome. ChatGPT assisted with ideas, proofs, code,
 writing and review. AI review is not human expert refereeing, acceptance or a
 priority claim. No ordinary Collatz convergence or global forced capture follows.
 \end{quote}
-\textbf{Evidence status.} The argument below is a written proof candidate, reviewed in a separate AI context. It has not been refereed by a human expert, formalized end to end, or independently kernel checked. The repository's abstract integer Lean lemmas support only the finite prefix/depth and endpoint transformations. They do not prove the pressure, entropy, asymptotic or source-equivalence claims below. Finite exact tests check model translations; they do not establish limits. No claim of priority or external acceptance is made.
+\textbf{Evidence status.} The argument below is a written proof candidate, reviewed in a separate AI context. It has not been refereed by a human expert, formalized end to end, or independently kernel checked. The public finite bridge library proves the literal finite dictionary, unbounded rungs and unique maximum. The separate all-length appendix has its own 23 frozen formal statements and pending independent assurance. Neither package proves the main rung-pressure, entropy, critical regularity or R9 claims below. Finite exact tests check model translations; they do not establish limits. No claim of priority or external acceptance is made.
 
 The intended contribution is a rung entropy limit near maximal reward and its near-extremal expansion. It addresses the rung interpretation of M4 near one, the large-tilt convergence part of R8, and the proposed asymptotic in R9 of Polson and Sokolov. It does not prove the complete R8 question, compute the requested M4 entropy table, establish an unrestricted M4 limit, or imply anything about integer Collatz cycles or convergence.
 
-Primary source: Nicholas G. Polson and Vadim Sokolov~\cite{polson}, \emph{On the Collatz Conjecture: Martingales, Momentum and Continued Fractions}, edition 1 (2026), \href{https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex}{v1.4.0 ratchets chapter}, labels \texttt{rrt:sec:m4}, \texttt{rrt:prob:r8}, \texttt{rrt:prob:r9}; the tag resolves to commit \nolinkurl{5840497a23fc0d64127b850aea68862d7c93f2b7}. The \href{https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10f_missed.tex}{missed-problems chapter} uses unrestricted-limit wording for M4; the detailed ratchets discussion fixes the rung subsequence. These formulations must be distinguished. The \href{../external_problems/README.md}{status register} records the source mismatch and outstanding acceptance gates. The authors' \href{https://vsokolov.org/books/collatz/results.html}{results index} was checked on 2026-11-27; an open listing alone is not a novelty search.
+Primary source: Nicholas G. Polson and Vadim Sokolov~\cite{polson}, \emph{On the Collatz Conjecture: Martingales, Momentum and Continued Fractions}, edition 1 (2026), \href{https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex}{v1.4.0 ratchets chapter}, labels \texttt{rrt:sec:m4}, \texttt{rrt:prob:r8}, \texttt{rrt:prob:r9}; the tag resolves to commit \nolinkurl{5840497a23fc0d64127b850aea68862d7c93f2b7}. The \href{https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10f_missed.tex}{missed-problems chapter} uses unrestricted-limit wording for M4; the detailed ratchets discussion fixes the rung subsequence. These formulations must be distinguished. The \href{../external_problems/README.md}{status register} distinguishes the exact source populations and records the outstanding assurance gates.
 
 \section{Related work and the use of classical methods}
 Mechanical extremizers for rational Collatz cycles predate this draft.
@@ -315,7 +318,7 @@ R9 & Written leading and second-order expansion & Full formal analytic bounds an
 
 R8 & Written convergence for $\lambda\ge6$ & All-tilt convergence and differentiability, including critical tilt, independently scrutinized and fully formalized\\[0.6em]
 
-Literal unrestricted M4 & Explicit source distinction and finite normalization witness & A proved all-length normalization theorem or a fully proved refutation under the literal convention\\[0.6em]
+Fixed-reference all-length endpoint & Appendix~\ref{app:all-length}: explicit nonconvergence construction at c=1, with 23 formal source proofs & Full independent assurance for that separate package; no intended rung M4 or phase-adapted conclusion\\[0.6em]
 
 \bottomrule\end{tabular}\end{center}
 
@@ -366,6 +369,113 @@ concave function on an open interval is bounded between its neighboring secant
 slopes on every compact subinterval, and is therefore continuous there. Thus
 no differentiability of the infinite-volume pressure is used.
 
+\section{The fixed-reference all-length extension at c=1}\label{app:all-length}
+This appendix concerns a separate endpoint distinction. Define $N_{\rm all}(1,r)$
+using the positive ordered source words at every positive length $r$, closing sum
+$s=\lceil r\theta\rceil$, shifted interior caps
+$K_t\le\lfloor t\theta+\delta(r)\rfloor$, and the fixed phase-zero threshold
+$\Phi\ge B_r$. Do not replace that threshold by a phase-adapted maximum.
+The isolated M4 wording admits this all-length reading, but its status paragraph
+and detailed continuation point to rungs. The following is not a refutation of
+the intended rung-only question, the source's phase-adapted $N^*$, or a theorem
+at $c<1$. No extra integer-cycle or rotation-quotient condition is imposed.
+
+\begin{theorem}[All-length endpoint distinction]\label{thm:all-length}
+For the actual slope $\theta=\log3/\log2$, put
+$a_r=r^{-1}\log_{10}N_{\rm all}(1,r)$ for $r\ge1$ and $a_0=0$. Then
+\[
+ \liminf_{r\to\infty}a_r=0,\qquad
+ \limsup_{r\to\infty}a_r\ge\frac{\log_{10}2}{8}>0.
+\]
+In particular the all-length limit does not exist. More explicitly,
+\[
+ N_{\rm all}(1,r)\ge2^{\lfloor r/8\rfloor}
+ \quad\hbox{if }r\ge8\hbox{ and }\delta(r)\ge\tfrac12,
+\]
+whereas $N_{\rm all}(1,r)=1$ at every positive strict rung.
+\end{theorem}
+\begin{proof}
+The exact comparisons $2^3<3^2$ and $3^3<2^5$ give
+$3/2<\theta<5/3$, hence $1/2<\beta=\theta-1<2/3$.
+For every phase $y\in[0,1)$ the three phases
+$y,\{y+\beta\},\{y+2\beta\}$ include one in each half-circle.
+For the high half, if $y<1/2$ and its successor wraps, that successor is
+$z<\beta-1/2<1/6$, so $z+\beta\in(1/2,5/6)$ without wrapping; if it does
+not wrap it is already above $1/2$. For the low half, start at $y\ge1/2$.
+Its successor is $z<\beta$; if $z\ge1/2$, the next phase wraps and is
+$z+\beta-1<2\beta-1<1/3$. Thus among indices $0\le t<r$ at least
+$\lfloor r/3\rfloor$ phases $\{t\theta\}$ are high. The low-half fact in
+arbitrarily late triples, together with irrationality excluding phase zero
+at positive indices, also gives unbounded $r$ with $\delta(r)\ge1/2$.
+
+Use the canonical prefixes $C_t=\lfloor t\theta+\delta(r)\rfloor$ for
+$0\le t\le r$. They start at zero, end at $s$, and their successive letters
+are 1 or 2. Two consecutive letters cannot both be 1, since their sum is at
+least $\lfloor2\theta\rfloor\ge3$. The number of 1 letters is
+\[
+ 2r-s\ge2r-\lceil5r/3\rceil=\lfloor r/3\rfloor.
+\]
+Except possibly for the first letter, each 1 is preceded by 2. These 21 pairs
+are disjoint. For $r\ge8$, write $m=\lfloor r/8\rfloor\ge1$; then
+$\lfloor r/3\rfloor\ge2m$ and there are at least $m$ such pairs.
+
+Select $m$ pairs. Toggling any subset 21 to 12 preserves positivity and the
+closing sum, and lowers only each pair's intervening interior prefix by one.
+All source caps remain satisfied. Distinct subsets give distinct prefixes,
+hence $2^m$ distinct ordered words.
+When $\delta(r)\ge1/2$, every high phase has
+$C_t=\lfloor t\theta\rfloor+1$, so the canonical excess obeys
+\[
+ \Phi(C)-B_r\ge
+ \sum_{\substack{t<r\\\{t\theta\}\ge1/2}}2^{-\{t\theta\}}
+ \ge\tfrac12\lfloor r/3\rfloor\ge m.
+\]
+A toggle at the prefix $t$ loses exactly
+$2^{C_t-1}/3^t=2^{C_t-t\theta-1}<1$, because
+$C_t-t\theta\le\delta(r)<1$. Disjoint toggles affect different reward
+terms. Every selected subset therefore loses less than $m$, proving the
+exponential lower bound at the same fixed reference. The identity
+$3^t=2^{t\theta}$ uses the actual slope; interval bounds on a generic slope
+alone would not justify this reward calculation.
+
+For completeness the counts are finite and positive at every positive length.
+The canonical word is admissible and has reward at least $B_r$.
+A selected word is an ordered positive composition of $s$; the complete list
+of its letters determines it. There are $2^{s-1}$ such compositions, and
+$s\le2r$, giving
+$1\le N_{\rm all}(1,r)\le2^{2r}$ and
+$0\le a_r\le2\log_{10}2$. At length zero we use the formal convention of an empty source population, and
+$a_0=0$ is only a harmless sequence convention. Thus the real
+liminf and limsup are finite and well posed.
+
+At a strict rung the shifted caps equal $\lfloor t\theta\rfloor$ for every
+interior index. Every reward term is bounded by its phase-zero reference
+term, and equality of the sum forces equality of every interior prefix.
+The closing sum determines the last letter, giving exactly one qualifying
+word. Actual positive strict rungs are unbounded, so nonnegativity and this
+subsequence give $\liminf a_r=0$. On the unbounded high-defect lengths,
+\[
+ a_r\ge\frac{\lfloor r/8\rfloor}{r}\log_{10}2,
+ \qquad \frac{\lfloor r/8\rfloor}{r}\longrightarrow\frac18.
+\]
+This proves the positive lower bound on the limsup and excludes a real limit.
+\end{proof}
+
+\paragraph{Separate formal scope.}
+The public \path{lean/external_unrestricted/} package implements 23 frozen
+statements for this exact distinction. A fresh ordinary build matched all 23
+proposition bodies and 13 model definitions and audited 504 theorem/helper
+closures using only the standard three axioms. Its complete source-bound
+replay, trusted comparator, six checker modes and hostile-control gates are
+\textbf{pending at this manuscript snapshot}. The
+\href{../../lean/external_unrestricted/ARGUMENT.md}{full companion}
+includes every finite-population, swap and limit argument and its formal map.
+The underlying finite bridge package has separate successful source-pinned
+receipts. These formalizations use mathlib~\cite{mathlib}, at the exact
+revision fixed in each public lockfile. They do not formalize the main
+rung-pressure, microcanonical or R9 claims of this research draft, and do
+not supply novelty certification or independent human expert refereeing.
+
 \begin{thebibliography}{9}
 \bibitem{polson}
 N.~Polson and V.~Sokolov.
@@ -377,6 +487,12 @@ The labels \texttt{rrt:sec:m4}, \texttt{rrt:prob:r8} and
 \href{https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex}{pinned ratchets chapter}.
 The unrestricted M4 wording appears in the
 \href{https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10f_missed.tex}{pinned missed-problems chapter}.
+\bibitem{mathlib}
+The mathlib Community. The Lean mathematical library.
+\emph{Proceedings of CPP 2020} (2020), 367--381.
+\href{https://doi.org/10.1145/3372885.3373824}{doi:10.1145/3372885.3373824};
+\href{https://arxiv.org/abs/1910.09336}{author manuscript}.
+
 \bibitem{halbeisen-hungerbuhler}
 L.~Halbeisen and N.~Hungerb\"uhler.
 Optimal bounds for the length of rational Collatz cycles.

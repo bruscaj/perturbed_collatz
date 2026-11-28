@@ -1,0 +1,40 @@
+{
+  "challenge_module": "UnrestrictedChallenge",
+  "solution_module": "UnrestrictedSolution",
+  "theorem_names": [
+    "ExternalM4UnrestrictedChallenge.slopeBounds",
+    "ExternalM4UnrestrictedChallenge.tripleRotationHighLow",
+    "ExternalM4UnrestrictedChallenge.highPhaseCountLower",
+    "ExternalM4UnrestrictedChallenge.largeDefectsUnbounded",
+    "ExternalM4UnrestrictedChallenge.canonicalPrefixLaw",
+    "ExternalM4UnrestrictedChallenge.canonicalAllLengthWord",
+    "ExternalM4UnrestrictedChallenge.canonicalAlphabetAndSites",
+    "ExternalM4UnrestrictedChallenge.manyDisjointCanonicalSites",
+    "ExternalM4UnrestrictedChallenge.swapPrefixLaw",
+    "ExternalM4UnrestrictedChallenge.swapPreservesSource",
+    "ExternalM4UnrestrictedChallenge.swapFamilyInjective",
+    "ExternalM4UnrestrictedChallenge.swapCubeCard",
+    "ExternalM4UnrestrictedChallenge.swapRewardIdentity",
+    "ExternalM4UnrestrictedChallenge.canonicalRewardBudget",
+    "ExternalM4UnrestrictedChallenge.canonicalSwapLossBound",
+    "ExternalM4UnrestrictedChallenge.largeDefectWitnessInjection",
+    "ExternalM4UnrestrictedChallenge.exponentialCountLower",
+    "ExternalM4UnrestrictedChallenge.rungCountOne",
+    "ExternalM4UnrestrictedChallenge.allLengthCountBounds",
+    "ExternalM4UnrestrictedChallenge.normalizedLogBounds",
+    "ExternalM4UnrestrictedChallenge.normalizedLogLiminf",
+    "ExternalM4UnrestrictedChallenge.normalizedLogLimsup",
+    "ExternalM4UnrestrictedChallenge.noAllLengthLimit"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "external_kernels": {
+    "nanoda": [
+      "nanoda_bin"
+    ]
+  }
+}

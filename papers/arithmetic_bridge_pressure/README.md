@@ -2,16 +2,10 @@
 
 [Read the TeX/PDF manuscript](paper.pdf) · [TeX source](paper.tex). Rebuild both papers with `python3 papers/build.py` from the repository root; `--check` compares deterministic clean rebuilds on the recorded TeX toolchain.
 Jake S. Brusca, with ChatGPT assistance in derivation, writing, code and review.
-Draft research contribution, 2026-11-27. This is a personal work in progress;
+Draft research contribution, 2026-11-28. This is a personal work in progress;
 corrections and counterexamples are welcome.
 
-**Evidence status.** The argument below is a written proof candidate, reviewed
-in a separate AI context. It has not been refereed by a human expert, formalized
-end to end, or independently kernel checked. The repository's abstract integer
-Lean lemmas support only the finite prefix/depth and endpoint transformations.
-They do not prove the pressure, entropy, asymptotic or source-equivalence claims
-below. Finite exact tests check model translations; they do not establish limits.
-No claim of priority or external acceptance is made.
+**Evidence status.** The main rung-pressure and R9 argument remains a written candidate without end-to-end formalization or independent human expert refereeing. The finite bridge library separately proves the exact source dictionary, unbounded actual rungs and unique maximum. A new appendix proves a distinct all-length fixed-reference nonconvergence result at c=1; its 23 frozen source statements and 504 theorem/helper audits pass ordinary fresh verification, while the separate full replay/comparator/checker/21-control gate remains pending. These supporting results do not discharge the main analytic claims.
 
 The intended contribution is a rung entropy limit near maximal reward and its
 near-extremal expansion. It addresses the rung interpretation of M4 near one,
@@ -405,7 +399,7 @@ asymptotic limit. The scope of each executed check is recorded separately.
 | Near-one rung M4 | Written entropy-existence and variational argument | Frozen full formal statement, end-to-end proof, certified entropy table, complete assurance |
 | R9 | Written leading and second-order expansion | Full formal analytic bounds and limits, statement matching, fresh and independent checker replay |
 | R8 | Written convergence for lambda>=6 | All-tilt convergence and differentiability, including critical tilt, independently scrutinized and fully formalized |
-| Literal unrestricted M4 | Explicit source distinction and finite normalization witness | A proved all-length normalization theorem or a fully proved refutation under the literal convention |
+| Separate fixed-reference all-length endpoint | Full c=1 nonconvergence proof and23 ordinary source-checked formal targets | Independent assurance for that separate package; intended rung M4 remains open |
 
 Broader all-phase, all-tilt and critical Gibbs-law arguments are research
 candidates. They are not premises of the near-extremal derivation above and
@@ -420,4 +414,6 @@ axiom audit, fresh proof replay and independently implemented checker coverage
 of these actual headline claims. Supporting-theorem checks must remain labeled
 as such. Closed review gates for supporting arithmetic do not close these gaps.
 
-The PDF retains its earlier evidence snapshot. The new [finite source bridge](../../lean/external_bridge/README.md) proves all 25 finite word/rung/reward/count targets with a fresh 357-closure source/type/axiom audit; its [complete companion](../../lean/external_bridge/FINITE_BRIDGE_PROOF.md) explains the exact literal model. Project-specific independent bridge gates remain pending. This adds no pressure limit, entropy theorem or critical differentiability proof to the analytic candidate.
+The current PDF includes the separate all-length appendix. The [finite source bridge](../../lean/external_bridge/README.md) proves all 25 finite word/rung/reward/count targets with357 theorem/helper closures; its full replay, frozen comparison and six checker modes passed at the historical b5 snapshot ([receipts](../../verification/external_optimization/README.md)). Its [complete companion](../../lean/external_bridge/FINITE_BRIDGE_PROOF.md) explains the exact literal model. These finite foundations add no pressure limit, entropy theorem or critical differentiability proof to the analytic candidate.
+
+The new [all-length package](../../lean/external_unrestricted/README.md) and [full proof](../../lean/external_unrestricted/ARGUMENT.md) retain the exact ordered source-word population and fixed phase-zero reference. They show why that extension differs from the intended rung-only formulation and phase-adapted N*. The paper's new appendix gives the full elementary construction, finite-count bound and real liminf/limsup proof.

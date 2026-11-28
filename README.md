@@ -16,14 +16,18 @@ Almost every B1 parameter in each fixed progression merges with its smaller neig
 
 The [external-problem research register](papers/external_problems/README.md)
 now includes candidate answers to Polson–Sokolov **M4, R8, R9 and O3′**.
-The full four-problem claims remain draft candidates without complete headline
-Lean proofs or human expert refereeing. Exact finite source-model checks and five abstract integer
+The M4/R8/R9 analytic claims remain draft candidates without complete headline
+Lean proofs or human expert refereeing. The O3′ results below have source-pinned
+independent machine-checker assurance. Exact finite source-model checks and five abstract integer
 supporting lemmas are included. M4's unrestricted and rung formulations are
 tracked separately; none is advertised here as a solved open problem.
 The [depth-one Syracuse paper](papers/finite_information_lyapunov/README.md)
 has complete h=1 proofs of density, exact infimum and nonattainment in a separate
-Lean package with source-pinned full-checker receipts. The full arbitrary-depth
-O3′ problem remains unresolved here.
+Lean package with source-pinned full-checker receipts. At every finite depth, a total computable scheme determines the infimum by
+certified rational brackets, and the infima tend to zero at order 1/h. These
+answer the three stated O3′ requests in this algorithmic sense for the exact
+run-length-only class; general-depth closed formulas and sharp constants are
+separate questions.
 The [near-extremal entropy draft](papers/arithmetic_bridge_pressure/README.md)
 gives the proposed rung pressure and entropy argument behind R9; it remains
 unformalized and covers only part of M4 and R8.
@@ -104,18 +108,20 @@ Integer samples are labeled by exact finite replay. Complex raster colors are fl
 
 The workflow in `.github/workflows/verify.yml` runs the all-mode command when this payload is placed at a GitHub repository root. Each result is traceable through [claims.json](claims.json), and material release changes belong in [CHANGELOG.md](CHANGELOG.md). The README and manuscript identify the author and describe ChatGPT’s assistance.
 
-The [depth-one O3′ analytic package](lean/external_analysis/README.md) has 14 frozen target proofs and an exhaustive 397-declaration audit. Its separate mandatory `external-analysis-h1` CI job performs source-bound replay, frozen comparison and hostile fixtures. Full checker results passed at `8524770` ([receipts](verification/external_analysis/README.md)); later documentation/metadata heads require their own regression; legacy `--mode all` covers the legacy projects and all manuscripts, while the external proof jobs supply their own mandatory gates. This does not settle the full O3′ problem.
+The [depth-one O3′ analytic package](lean/external_analysis/README.md) has 14 frozen target proofs and an exhaustive 397-declaration audit. Its separate mandatory `external-analysis-h1` CI job performs source-bound replay, frozen comparison and hostile fixtures. Full checker results passed at `8524770` ([receipts](verification/external_analysis/README.md)); later documentation/metadata heads require their own regression; legacy `--mode all` covers the legacy projects and all manuscripts, while the external proof jobs supply their own mandatory gates. The separate general-depth packages supply the literal density theorem, rate and computable infimum brackets.
 
 The [finite-depth population library](lean/external_population/README.md) supplies all22 frozen density/source-model proofs for arbitrary fixed positive depth and unrestricted real corrections. Its [written reconstruction](lean/external_population/GENERAL_DENSITY_PROOF.md) explains the exact cylinders and both finite-tail transfers. The separate mandatory `external-population` job must pass full replay/comparison and hostile fixtures; local source build/axiom checks alone are lower assurance. This establishes the density foundation, with rate assurance and higher-depth optimization handled separately.
 
 The population package passed full source-bound replay, frozen comparison, all six bundled checker modes and nine hostile controls at `8746e08` ([exact receipts](verification/external_population/README.md)). All four required jobs passed there. New documentation/metadata heads remain subject to their own CI.
 
-The [inverse-depth rate package](lean/external_rate/README.md) proves all eleven required frozen statements, with a [self-contained reconstruction](lean/external_rate/RATE_PROOF.md). At `1406f1a`, its fifth mandatory CI job passed all 765 theorem/helper closures, fresh source-bound replay, frozen comparison, six checker modes and ten hostile controls ([exact receipts](verification/external_rate/README.md)). Finite optimization source proofs are now included separately, with their independent assurance gate still pending. The optional stronger liminf remains unproved.
+The [inverse-depth rate package](lean/external_rate/README.md) proves all eleven required frozen statements, with a [self-contained reconstruction](lean/external_rate/RATE_PROOF.md). At `1406f1a`, its fifth mandatory CI job passed all 765 theorem/helper closures, fresh source-bound replay, frozen comparison, six checker modes and ten hostile controls ([exact receipts](verification/external_rate/README.md)). Finite optimization source proofs are now included separately, with their source-pinned full assurance at b5dcda3. The optional stronger liminf remains unproved.
 
 All four pre-rate mandatory jobs also passed at `5775d77` (run `46100033792`), including all 43 legacy checks. This historical pass excludes the newly added rate package and subsequent manuscript changes.
 
-The rate package passed its full independent gates at `1406f1a` in run `46101939355`: all 11 frozen statements, 765 theorem/helper closures, six checker modes in replay and comparison, and ten hostile controls. [Exact receipts and logs](verification/external_rate/README.md) preserve this source pin. All five mandatory jobs passed there, including all 43 legacy checks. The paper retains its explicitly dated pre-CI assurance snapshot. Later metadata heads require their own regression.
+The rate package passed its full independent gates at `1406f1a` in run `46101939355`: all 11 frozen statements, 765 theorem/helper closures, six checker modes in replay and comparison, and ten hostile controls. [Exact receipts and logs](verification/external_rate/README.md) preserve this source pin. All five mandatory jobs passed there, including all 43 legacy checks. The paper records the successful rate and optimization snapshots separately. Later metadata heads require their own regression.
 
-The [finite source bridge](lean/external_bridge/README.md) now supplies all 25 frozen finite word/rung/reward/count proofs and a [self-contained reconstruction](lean/external_bridge/FINITE_BRIDGE_PROOF.md). At5369dc97, all25 statements and357 theorem/helper closures passed full replay/comparison, six checker modes at both stages and13 hostile controls (run46105619785, all six mandatory jobs passed). [Exact receipts](verification/external_bridge/README.md) preserve that source pin. This foundation establishes no M4/R8/R9 pressure, entropy or differentiability result.
+The [finite source bridge](lean/external_bridge/README.md) now supplies all 25 frozen finite word/rung/reward/count proofs and a [self-contained reconstruction](lean/external_bridge/FINITE_BRIDGE_PROOF.md). At5369dc97, all25 statements and357 theorem/helper closures passed full replay/comparison, six checker modes at both stages and13 hostile controls (run 46105619785, all six mandatory jobs passed). [Exact receipts](verification/external_bridge/README.md) preserve that source pin. This foundation establishes no M4/R8/R9 pressure, entropy or differentiability result.
 
-The [finite optimization package](lean/external_optimization/README.md) adds all15 required source proofs for the literal truncated graph, weighted cycle deletion, explicit actual-infimum sandwich and total computable dyadic approximation. Its [written reconstruction](lean/external_optimization/OPTIMIZATION_PROOF.md) includes the executable program's correctness argument and precise prior attribution. The seventh mandatory job, `external-optimization`, must still pass its own full replay/comparator/checker and hostile-control gates. Source compilation alone does not discharge those gates.
+The [finite optimization package](lean/external_optimization/README.md) adds all 15 required source proofs for the literal truncated graph, weighted cycle deletion, explicit actual-infimum sandwich and total computable dyadic approximation. Its [written reconstruction](lean/external_optimization/OPTIMIZATION_PROOF.md) includes the executable program's correctness argument and precise prior attribution. At b5dcda3, the seventh mandatory job passed full replay/comparator/checker gates and 18 hostile controls, including three actual semantic rejections. [Complete source-pinned receipts](verification/external_optimization/README.md) distinguish those results from ordinary compilation.
+
+The [all-length fixed-reference distinction](lean/external_unrestricted/README.md) is separate from intended rung-only M4. At c=1 its normalized count has liminf zero and limsup at least log10(2)/8, so the all-length fixed-B_r limit fails. All 23 frozen source proofs and 504 theorem/helper audits are included with a [self-contained argument](lean/external_unrestricted/ARGUMENT.md). The eighth mandatory assurance job still requires full replay/comparison, six checker modes and 21 controls. This does not settle the rung entropy, pressure or R9 questions.
