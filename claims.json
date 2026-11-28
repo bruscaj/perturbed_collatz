@@ -1122,7 +1122,7 @@
     {
       "id": "REL-PRESSURE-HELPERS",
       "title": "Finite word dictionaries and actual phase pressure helpers",
-      "evidence_status": "At introduction ordinary parent and public-layout source/type/axiom checks passed64exact targets,77model-origin entries and1357owned declarations. Local19source controls normal/-O,7command ordinary semantic preflight and separate AI guard/scope review passed. Full independent tenth-job assurance remains a required separate gate; exact CI receipts determine subsequent acceptance.",
+      "evidence_status": "Full source-pinned independent assurance passed d1d641c/run46158942911:64 exact targets,77model-origin entries/17opaque nulls,1357owned declarations/64modules, complete source-bound replay/trusted comparison in all6modes each, exact positive full rerun and22controls. All10original artifacts API-digest/size matched and inspected;45regressions passed. Later heads require their own regression; no full headline M4/R8/R9 acceptance.",
       "artifacts": [
         "lean/external_pressure/PressureSolution.lean",
         "lean/external_pressure/ARGUMENT.md",
@@ -1130,7 +1130,10 @@
         "lean/external_pressure/inventory.json",
         "lean/external_pressure/provenance.json",
         "lean/external_pressure/target_map.json",
-        "lean/external_pressure/word_legacy_model_metadata.json"
+        "lean/external_pressure/word_legacy_model_metadata.json",
+        "verification/external_pressure/README.md",
+        "verification/external_pressure/CI_ARTIFACTS.json",
+        "verification/external_pressure/GITHUB_API.json"
       ],
       "lean_declarations": [
         "ExternalBridgePressureSupportChallenge.analytic_auxiliaryBoundednessAndEquicontinuity",

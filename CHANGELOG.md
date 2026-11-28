@@ -1,5 +1,11 @@
 # Release history
 
+## Word and pressure helper assurance — 28 November 2026
+
+- All ten mandatory jobs and45 regressions passed d1d641c/run46158942911. The64-target pressure package passed1357 owned declaration checks,77 model origins, source-bound replay and trusted comparison in all six modes, a full positive rerun and22 controls.
+- Preserved all ten complete original API-digest/size-matched ZIP artifacts and the exact inspection. The267061347-byte generated proof export remains outside Git with its hash and source/root binding recorded.
+- Updated helper assurance status only. Full M4/R8/R9, entropy/Legendre, critical regularity, effectivity and the certified table remain incomplete; this documentation/archive head requires its own complete regression.
+
 ## All-length assurance completed — 28 November 2026
 
 - All eight mandatory jobs passed at source739a4f5/run46119220218, including all23 all-length targets,13 model bodies,504 theorem/helper closures, six modes in both replay/comparison and21 controls after a full positive rerun.

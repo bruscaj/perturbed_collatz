@@ -14,8 +14,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 13373,
-      "sha256": "2f4745321e2a0889d17186fabdc0518ffd26e1008631f06319b5081c8f43b7de"
+      "bytes": 14121,
+      "sha256": "37e28c61500b225e059f99bfef5d4b1c79ec5887fa48c9783a6c6f9deb4d6b6e"
     },
     {
       "path": "Makefile",
@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 20897,
-      "sha256": "a631b23649e2b7227dfaaab3bc6bde5034d326bc81687a6eb0bdd161c367a29b"
+      "bytes": 20964,
+      "sha256": "c14a60a83369d5639b3a2dd57b4f14597ed1bc7aa60f1f85e97f76f3c6f6591b"
     },
     {
       "path": "certificates/exposition/examples.json",
@@ -674,8 +674,8 @@
     },
     {
       "path": "claims.json",
-      "bytes": 70779,
-      "sha256": "260961d5b593e72e3ba0c8734036d3c49e98ab25cd55541347960c7afa7de219"
+      "bytes": 70999,
+      "sha256": "50c09408482bb92e25e6ca11406e4ae1288e00e4f400758c4ceab4061c5f3cd4"
     },
     {
       "path": "figures/README.md",
@@ -2074,8 +2074,8 @@
     },
     {
       "path": "lean/external_pressure/README.md",
-      "bytes": 2482,
-      "sha256": "846de4f688df6249cb4a704cd0bde2fdba1e60ee52f8fa0054b9c271e88ac2ec"
+      "bytes": 2818,
+      "sha256": "eab36ba0e8ca016c5c0719b15990c4738c400e05a2ec7bad0d6c968ca4b9e150"
     },
     {
       "path": "lean/external_pressure/RungDefinitions.lean",
@@ -2195,7 +2195,7 @@
     {
       "path": "lean/external_pressure/inventory.json",
       "bytes": 5581573,
-      "sha256": "82e182b171d257ad6686a8a97ce0ce981cdf9f59c3bf17acfaf1c562ddc37b30"
+      "sha256": "752990c7dd66848e1fa193c66775da726e6ebbd0688455d601f1e7041b27bd59"
     },
     {
       "path": "lean/external_pressure/lake-manifest.json",
@@ -3646,6 +3646,71 @@
       "path": "verification/external_prefix/external-support.json",
       "bytes": 16117,
       "sha256": "d37c4f78414bb72d62b6f531094411668afe72d4462962427b0d50b554706003"
+    },
+    {
+      "path": "verification/external_pressure/CI_ARTIFACTS.json",
+      "bytes": 29621,
+      "sha256": "de1459881167ef45b23c71bb7ff0a60600bf343eac259a42c8ca2123aa419fa8"
+    },
+    {
+      "path": "verification/external_pressure/GITHUB_API.json",
+      "bytes": 60341,
+      "sha256": "5f25d2d5a8af6d4bd81a7956b06bba2c085a61065d8acb90353ab5281ed9e1b0"
+    },
+    {
+      "path": "verification/external_pressure/README.md",
+      "bytes": 2950,
+      "sha256": "e365daa73f9709589afe3ada57bced5e74ecd393343d02fc323d5b27d013d6dd"
+    },
+    {
+      "path": "verification/external_pressure/external-analysis-h1.zip",
+      "bytes": 40636,
+      "sha256": "62a08e848ad2770d03227f4b9ef295a6d6f2fbe267ffcc9e08dab663834a4929"
+    },
+    {
+      "path": "verification/external_pressure/external-bridge.zip",
+      "bytes": 497578,
+      "sha256": "c1e3615679ff4eb6c1bb394fe15012c96d3e5c6f329f9d4fd2294964a3c69d40"
+    },
+    {
+      "path": "verification/external_pressure/external-critical.zip",
+      "bytes": 419269,
+      "sha256": "887047fbf558675cc1631ca44428779b55764fda13b575cb1232a43b5a43b0bc"
+    },
+    {
+      "path": "verification/external_pressure/external-optimization.zip",
+      "bytes": 1441259,
+      "sha256": "c532f4e51da969bdc70694464253868efd6b05a2cce6fc22bc80e7b5f9439dec"
+    },
+    {
+      "path": "verification/external_pressure/external-population.zip",
+      "bytes": 840355,
+      "sha256": "00b3857cbe7a3b3b01ce45921413ba3e37a55683b3df9433e23ab311a80dd97a"
+    },
+    {
+      "path": "verification/external_pressure/external-pressure.zip",
+      "bytes": 1469502,
+      "sha256": "1a060842988832604e81d402efdd2d11741a8d77f06d3bc03143413bea38ffe6"
+    },
+    {
+      "path": "verification/external_pressure/external-rate.zip",
+      "bytes": 1437077,
+      "sha256": "9d4593e20738623dc41a6ab347de5235659bcdf83417eae48b4985c67b33f2af"
+    },
+    {
+      "path": "verification/external_pressure/external-support.zip",
+      "bytes": 5606,
+      "sha256": "e5d05bc73c4801dd444a68e0fd703a30dcfec6f69fd61ceed812b0cf06655daa"
+    },
+    {
+      "path": "verification/external_pressure/external-unrestricted.zip",
+      "bytes": 619920,
+      "sha256": "25856f098771b414d3ac690984c5a2019a6db2415ddc30bc371ec502ca37050f"
+    },
+    {
+      "path": "verification/external_pressure/release-verification.zip",
+      "bytes": 1458,
+      "sha256": "81c48d5930b8ac67ca6f23e61fef0986038c3e2d6765a524106f3de83e619caf"
     },
     {
       "path": "verification/external_rate/CI_ARTIFACTS.json",
