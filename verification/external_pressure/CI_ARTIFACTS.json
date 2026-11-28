@@ -1,0 +1,856 @@
+{
+  "status": "verified private inspection of all10 source-pinned original CI artifacts",
+  "run_id": 46158942911,
+  "source_commit": "d1d641c0de43242bab80105727bc2213ec4b54ee",
+  "source_tree": "0b9c6f26804e100e482e548b2129667e0f8c23aa",
+  "jobs": 10,
+  "archives": [
+    {
+      "artifact_id": 15269490638,
+      "name": "release-verification.zip",
+      "sha256": "81c48d5930b8ac67ca6f23e61fef0986038c3e2d6765a524106f3de83e619caf",
+      "bytes": 1458
+    },
+    {
+      "artifact_id": 15269426948,
+      "name": "external-critical.zip",
+      "sha256": "887047fbf558675cc1631ca44428779b55764fda13b575cb1232a43b5a43b0bc",
+      "bytes": 419269
+    },
+    {
+      "artifact_id": 15268839289,
+      "name": "external-bridge.zip",
+      "sha256": "c1e3615679ff4eb6c1bb394fe15012c96d3e5c6f329f9d4fd2294964a3c69d40",
+      "bytes": 497578
+    },
+    {
+      "artifact_id": 15268784741,
+      "name": "external-optimization.zip",
+      "sha256": "c532f4e51da969bdc70694464253868efd6b05a2cce6fc22bc80e7b5f9439dec",
+      "bytes": 1441259
+    },
+    {
+      "artifact_id": 15268677239,
+      "name": "external-support.zip",
+      "sha256": "e5d05bc73c4801dd444a68e0fd703a30dcfec6f69fd61ceed812b0cf06655daa",
+      "bytes": 5606
+    },
+    {
+      "artifact_id": 15268533574,
+      "name": "external-analysis-h1.zip",
+      "sha256": "62a08e848ad2770d03227f4b9ef295a6d6f2fbe267ffcc9e08dab663834a4929",
+      "bytes": 40636
+    },
+    {
+      "artifact_id": 15268499085,
+      "name": "external-unrestricted.zip",
+      "sha256": "25856f098771b414d3ac690984c5a2019a6db2415ddc30bc371ec502ca37050f",
+      "bytes": 619920
+    },
+    {
+      "artifact_id": 15268403865,
+      "name": "external-population.zip",
+      "sha256": "00b3857cbe7a3b3b01ce45921413ba3e37a55683b3df9433e23ab311a80dd97a",
+      "bytes": 840355
+    },
+    {
+      "artifact_id": 15268229316,
+      "name": "external-rate.zip",
+      "sha256": "9d4593e20738623dc41a6ab347de5235659bcdf83417eae48b4985c67b33f2af",
+      "bytes": 1437077
+    },
+    {
+      "artifact_id": 15269576620,
+      "name": "external-pressure.zip",
+      "sha256": "1a060842988832604e81d402efdd2d11741a8d77f06d3bc03143413bea38ffe6",
+      "bytes": 1469502
+    }
+  ],
+  "regression_checks": 45,
+  "manifest_files": 753,
+  "reports": {
+    "external-support": {
+      "status": "passed supporting full assurance gates",
+      "targets": null,
+      "closures": null,
+      "modules": null,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 1755,
+          "con-leche": 1758,
+          "con-ron": 1758
+        },
+        "comparison": {
+          "lean4lean": 1758,
+          "con-leche": 1761,
+          "con-ron": 1761
+        }
+      },
+      "export_bytes": 5666125,
+      "export_sha256": "3981a1e3d12b39369e44ab9b0a049ecc1e07aa0e3bbe291de409ef2f64f1166c",
+      "source_files": 9
+    },
+    "external-analysis-h1": {
+      "status": "passed h1 full assurance gates",
+      "targets": 14,
+      "closures": 397,
+      "modules": 24,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 18711,
+          "con-leche": 18714,
+          "con-ron": 18714
+        },
+        "comparison": {
+          "lean4lean": 18601,
+          "con-leche": 18604,
+          "con-ron": 18604
+        }
+      },
+      "export_bytes": 92266265,
+      "export_sha256": "665fbfa13ce5b261d8e510995e23370aa1381d14802a397d56ac91e976cf72e6",
+      "source_files": 37
+    },
+    "external-population": {
+      "status": "passed population full assurance gates",
+      "targets": 22,
+      "closures": 517,
+      "modules": 28,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 18872,
+          "con-leche": 18875,
+          "con-ron": 18875
+        },
+        "comparison": {
+          "lean4lean": 18665,
+          "con-leche": 18668,
+          "con-ron": 18668
+        }
+      },
+      "export_bytes": 87933275,
+      "export_sha256": "e2c0bffeb744af576ef4d7a5fa6a94bf7946e58c68f749e78b41b8d521d67261",
+      "source_files": 42
+    },
+    "external-rate": {
+      "status": "passed rate full assurance gates",
+      "targets": 11,
+      "closures": 765,
+      "modules": 45,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 20213,
+          "con-leche": 20216,
+          "con-ron": 20216
+        },
+        "comparison": {
+          "lean4lean": 19841,
+          "con-leche": 19844,
+          "con-ron": 19844
+        }
+      },
+      "export_bytes": 97940365,
+      "export_sha256": "2a3f8fb539863d1afe9593cbb08764ec64efbd6cb75cc43aa6a598783b9e9d27",
+      "source_files": 58
+    },
+    "external-bridge": {
+      "status": "passed bridge full assurance gates",
+      "targets": 25,
+      "closures": 357,
+      "modules": 22,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 19502,
+          "con-leche": 19505,
+          "con-ron": 19505
+        },
+        "comparison": {
+          "lean4lean": 18144,
+          "con-leche": 18147,
+          "con-ron": 18147
+        }
+      },
+      "export_bytes": 90298852,
+      "export_sha256": "aad6205b2878bca92643c50d84a8e03a4a99d2f244954e970f8e74aac50f56f3",
+      "source_files": 36
+    },
+    "external-optimization": {
+      "status": "passed optimization full assurance gates",
+      "targets": 15,
+      "closures": 952,
+      "modules": 49,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 20912,
+          "con-leche": 20915,
+          "con-ron": 20915
+        },
+        "comparison": {
+          "lean4lean": 20447,
+          "con-leche": 20450,
+          "con-ron": 20450
+        }
+      },
+      "export_bytes": 103158206,
+      "export_sha256": "1bb90a10488f0a22e713b19b2a2d2e2fd728ce33f6101fd950b54901aa9ea01c",
+      "source_files": 63
+    },
+    "external-unrestricted": {
+      "status": "passed unrestricted full assurance gates",
+      "targets": 23,
+      "closures": 504,
+      "modules": 32,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 21030,
+          "con-leche": 21033,
+          "con-ron": 21033
+        },
+        "comparison": {
+          "lean4lean": 19585,
+          "con-leche": 19588,
+          "con-ron": 19588
+        }
+      },
+      "export_bytes": 100676623,
+      "export_sha256": "c97c4eb4b09f8f313e1c019e488076791aa4d013cb332ce1b83877f895c64331",
+      "source_files": 48
+    },
+    "external-critical": {
+      "status": "passed critical full assurance gates",
+      "targets": 12,
+      "closures": 391,
+      "modules": 21,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 39224,
+          "con-leche": 39227,
+          "con-ron": 39227
+        },
+        "comparison": {
+          "lean4lean": 39057,
+          "con-leche": 39060,
+          "con-ron": 39060
+        }
+      },
+      "export_bytes": 224287018,
+      "export_sha256": "b3e345753794d51caa6a80d7d4543110628d789ec62c61630d94204f9a87bd43",
+      "source_files": 37
+    },
+    "external-pressure": {
+      "status": "passed pressure full assurance gates",
+      "targets": 64,
+      "closures": 1357,
+      "modules": 64,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 42989,
+          "con-leche": 42992,
+          "con-ron": 42992
+        },
+        "comparison": {
+          "lean4lean": 42292,
+          "con-leche": 42295,
+          "con-ron": 42295
+        }
+      },
+      "export_bytes": 267061347,
+      "export_sha256": "a6c95522a12fff4cd5f3f6be8b567a2a96e9fa481c6fe71dff5af08d75815001",
+      "source_files": 82
+    }
+  },
+  "controls": {
+    "external-support": 4,
+    "external-analysis-h1": 9,
+    "external-population": 9,
+    "external-rate": 10,
+    "external-bridge": 13,
+    "external-optimization": 18,
+    "external-unrestricted": 21,
+    "external-critical": 18,
+    "external-pressure": 22
+  },
+  "details": {
+    "external-unrestricted": {
+      "targets": 23,
+      "model_bodies": 13,
+      "theorem_helper_closures": 504,
+      "owned_modules": 32,
+      "source_files": 48,
+      "all48_current_and_gitc52_pins_match": true,
+      "all32_owned_canonical_sources_match_private_clean_baseline": true,
+      "canonical_raw_props_models_exact": true,
+      "all504_export_roots_match_raw_audit": true,
+      "standard_axioms_only": true,
+      "positive_full_pipeline_rerun": {
+        "status": "passed unrestricted full assurance gates",
+        "targets": 23,
+        "closures": 504,
+        "modules": 32,
+        "checker_coverage": {
+          "replay": [
+            "Lean default",
+            "Lean paranoid",
+            "lean4lean",
+            "nanoda",
+            "con-leche",
+            "con-ron"
+          ],
+          "comparison": [
+            "Lean default",
+            "Lean paranoid",
+            "lean4lean",
+            "nanoda",
+            "con-leche",
+            "con-ron"
+          ]
+        },
+        "checker_declarations": {
+          "replay": {
+            "lean4lean": 21030,
+            "con-leche": 21033,
+            "con-ron": 21033
+          },
+          "comparison": {
+            "lean4lean": 19585,
+            "con-leche": 19588,
+            "con-ron": 19588
+          }
+        },
+        "export_bytes": 100676623,
+        "export_sha256": "c97c4eb4b09f8f313e1c019e488076791aa4d013cb332ce1b83877f895c64331",
+        "source_files": 48
+      },
+      "positive_report_sha256": "62f133ebdc8166693e879335843dec0da6acfb58c09a35b8d58414171c507de3",
+      "hostile_controls": 21,
+      "hash_coverage_controls": 18,
+      "actual_semantic_rejections": [
+        {
+          "label": "wrong statement rejected by actual comparator",
+          "exit_code": 1,
+          "actual_reason_present": true,
+          "reason": [
+            "do not match"
+          ],
+          "log_sha256": "9c953e613e16b2a6a2d9ac3b8d028715708bf133d64ade2a6f532748cf4ab04f"
+        },
+        {
+          "label": "hidden imported axiom rejected by complete audit",
+          "exit_code": 1,
+          "actual_reason_present": true,
+          "reason": [
+            "Forbidden axiom BadPremise.hiddenPopulation",
+            "ExternalM4UnrestrictedChallenge.exponentialCountLower"
+          ],
+          "log_sha256": "ef9e0d448100990fd45e972455cce76d91faa14084968d2682b08b13865d7f1b"
+        },
+        {
+          "label": "corrupt production swap rejected by Lean kernel proof",
+          "exit_code": 1,
+          "actual_reason_present": true,
+          "reason": [
+            "unsolved goals",
+            "\u22a2 False"
+          ],
+          "log_sha256": "be3e75318552c19037131a2abcf736bd2f92f83c91148802f724f31f4f24fe41"
+        }
+      ],
+      "mutation_fixture_files_checked": 9,
+      "fixture_digests": [
+        {
+          "command": "wrong statement rejected by actual comparator",
+          "name": "UnrestrictedSolution.lean",
+          "source_sha256": "3c916d9fb230b167f3010963e724f3eb5fb36efa1712eb9921c78e5baf11a48c"
+        },
+        {
+          "command": "wrong statement rejected by actual comparator",
+          "name": "UnrestrictedDefinitions.lean",
+          "source_sha256": "b22796b599134a98ebcf10002bac7e46d9a463d0e983099353ad524312ac5307"
+        },
+        {
+          "command": "hidden imported axiom rejected by complete audit",
+          "name": "UnrestrictedSolution.lean",
+          "source_sha256": "67296c3a5a5d129aa24ba7e992b4905f6daacfe6f0065a97d72339b3a324218e"
+        },
+        {
+          "command": "hidden imported axiom rejected by complete audit",
+          "name": "BadPremise.lean",
+          "source_sha256": "02e0b04410d38f4c9900a8fc287d4d15646e6b03e996573792d3dcffd6921ffc"
+        },
+        {
+          "command": "hidden imported axiom rejected by complete audit",
+          "name": "UnrestrictedDefinitions.lean",
+          "source_sha256": "b22796b599134a98ebcf10002bac7e46d9a463d0e983099353ad524312ac5307"
+        },
+        {
+          "command": "corrupt production swap rejected by Lean kernel proof",
+          "name": "UnrestrictedSolution.lean",
+          "source_sha256": "b4e5631e915d286390f846331f05b99f78e1f0a6caf10395ead8edcdf0aa070f"
+        },
+        {
+          "command": "corrupt production swap rejected by Lean kernel proof",
+          "name": "UnrestrictedDefinitions.lean",
+          "source_sha256": "b22796b599134a98ebcf10002bac7e46d9a463d0e983099353ad524312ac5307"
+        },
+        {
+          "command": "corrupt production swap rejected by Lean kernel proof",
+          "name": "SwapPositive.lean",
+          "source_sha256": "c6435427eda84815bfdbabf94c82d23cfec61561797600a4127ddcc3b47ee925"
+        },
+        {
+          "command": "corrupt production swap rejected by Lean kernel proof",
+          "name": "SwapCorrupt.lean",
+          "source_sha256": "9db49d3fbdb04357f2d19975c8977e5220ea85bef06867958e2b35e16a18d42a"
+        }
+      ],
+      "production_witness": "positive literal applySwaps21/{0}=12 proof passes; exact selected-start1to2 corruption outputs22 and same proposition fails",
+      "source_inventory_sha256": "5b5b4dee7583be7692bce0cb2a793af41fbb52a3b92ca743eb31cd1cc64ffa57",
+      "source_pins": {
+        "ARGUMENT.md": "a28288c0524978a16c4cb65bfc5f29927250024221ab8b4cfb6ab8377029918d",
+        "Arithmetic.lean": "8ad07971f3dd9b211aa99c36f6ed9c645e9dbb158b7ba33e81b72d5ca2c6f76e",
+        "Audit.lean": "03d5c547a0b975bc896ca14d9adf06d670e242ea7426409be0ab1b2f812aeb4a",
+        "BridgeArithmetic.lean": "645d446755a140470ee402fdd0596e9fd8c55496d1de6515ff1e756538546f57",
+        "BridgeBoundary.lean": "983d077ab6edb13c99adb6d2fcb9000c4b633a672e807bdc30c5e4dd7daf4a8d",
+        "BridgeDefinitions.lean": "7a36ebc1e9ff89fcec7ad1fdae1c2d5ae9ee011b06ae110fd4f34999e7df19a7",
+        "BridgeEncoding.lean": "f7f6f59daca369a1347219540cfbc15312af9592b65f123c041418939c480816",
+        "BridgeExpectedTypes.lean": "850dcdd0d75479edaeab1c8d6d336b9099f56511e0b6f5a5125bedfca05838aa",
+        "BridgeExtremal.lean": "f3119551454044ae27651938be9449891ece860b37fd4d781d4129048d17c04c",
+        "BridgeFinite.lean": "c761ec629811aeaeaf51bf7dad4e3f612cbdb20c77a3fcc1cca3d8fa8f5a548e",
+        "BridgeRewards.lean": "53da32ac28f519ad0e63bfad402139c91f6856e43d13134bcfa6430807c3e673",
+        "BridgeRungs.lean": "df4d32953097dd24a6479aae99fbd93a5dd9ece47eb98d59347055db2209872d",
+        "BridgeSolution.lean": "9fd6a08b8a3c302f44afbe44f940fdee45ae566780bbebd69c2f9ee725f24ccf",
+        "BridgeTransport.lean": "35a0565a222c677fd59249de39599d526d982dc97453c60ed1a1261b321612cb",
+        "Definitions.lean": "cf29376721942a78328491cd910690497f95d381711f0d2e758998fbba9374bc",
+        "DepthOneSeries.lean": "b0852b07d1f7105c61464d1642c998ece3563cb81e658cfe4a995f0e6b7e2562",
+        "ExpectedTypes.lean": "5ce898eb70690f6f77e26a95cbafb5ef268fa93617ab7418a0b25f6878c34968",
+        "LogRatioIrrational.lean": "2a2950ef39be685654ab7c3d3c4c734cf6103a74fa622d450ee0675e0240a89e",
+        "PopulationWeights.lean": "8affb6d578e9891f306df4b54cc621c33d110227eaec7912d8dcf826f9697190",
+        "PositiveCeilReturns.lean": "98e1852aaa8baa5ecabcc70424b24d8871f7178fb7768b31c8278a579f0e8a37",
+        "PrefixDefinitions.lean": "d7b5cd8b624dae007e3c3dc7f3620260dbfcf2169d0211b0859e18ed58180069",
+        "README.md": "24f7b79fab11f8feac6b9ec05978566c4b7e3f203c8d1aacc943c3c75ca59c7e",
+        "RungDefinitions.lean": "8c1996d5e2a11f726324f8f0fd282c061ed1b3819ccb734ecbccf49a8ccb17b5",
+        "RungTransfer.lean": "e61650b3d2f90f3431c2bd861c57448aa86d54be769d554ab437808d7d612dde",
+        "SyracuseSlope.lean": "7909ad410f4b2e1ac7cf13d6f476679aa1d608c92f95ca2c3514a696a3cd5395",
+        "UnrestrictedCanonical.lean": "fd173e588e296545a80c8113da0ee6d28dda1c7e582f0069714998dc4ffbe8d3",
+        "UnrestrictedChallenge.lean": "639af946ad44a5696e625e41276144cc2267cc370fd62c98291af04cbbb99a4e",
+        "UnrestrictedCountBound.lean": "0844e41e5b5c5dffbe1a48a1709e0363edaf59e4e07eea1f93cf432fc730f158",
+        "UnrestrictedCounts.lean": "bc9d80bc2213da80ab694e8f548450a95231cf7233525d00eba4275f7768cfed",
+        "UnrestrictedDefinitions.lean": "b22796b599134a98ebcf10002bac7e46d9a463d0e983099353ad524312ac5307",
+        "UnrestrictedExpectedTypes.lean": "4ce322ba8fcd87a5bdf18244c55df92b27b05a293eab201aa15ee8fa24146670",
+        "UnrestrictedInjection.lean": "591d00fef93c3604858d30dd719bdf55aae0b8d758fd12aad19eee4ea7886b3e",
+        "UnrestrictedLimits.lean": "cf140847fb7df878b1c8696a5d80bb5bb4260f54ff9a1906346effb3eb5d746b",
+        "UnrestrictedRotation.lean": "6a527ea60100fa2e5b959cca7982d69d8f788c8e7ecc017d564e0d68bbb0eb6f",
+        "UnrestrictedSolution.lean": "b4e5631e915d286390f846331f05b99f78e1f0a6caf10395ead8edcdf0aa070f",
+        "UnrestrictedSwaps.lean": "71beca377a37f68aa1f84505847f38e684f1e2183fbaeba3c47c40375b6a04ac",
+        "cache-imports.txt": "d05b81aef5739a57188e7cb5ea2b3940a8843e191cdaa154cd58bc15d90f29b6",
+        "comparator.json": "b31ebe4ae96afb75d03720252dcd3f7368e3eeb3afcfb6b9a7e5f58c7e6af0df",
+        "frozen_models.json": "2289d1102f9780189687d7cc0e1f31a100c60a3baccfc9e6daa74f440b603541",
+        "frozen_propositions.json": "35d68ca025ccd4e4ac5488e3d0fff432b86c9814be375d7950ab06587f036bca",
+        "lake-manifest.json": "ff1fc7ede1acf800f6a224b8bd14e7a2bf8db534c89892cfb4a1584b117c0bea",
+        "lakefile.toml": "1165f75dfef6e459b445c08ed18e43684ab120ecd57d9492e4bdcf7f1ce2bc86",
+        "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+        "owned_modules.json": "abfaa1f6d482afab0464f215bdcc99a7d31350018d906334c42d64c6cc45417a",
+        "provenance.json": "b74c6ccee578b0f290a0588052f61edebd64dbabfceccb5ac739fb2072c76ca5",
+        "specification.json": "4aee1d6e3da66086785074e38ce2f815d3aefda98752daf48ffef53435aace98",
+        "test_mutations.py": "cf6ecef03d0108331a6f6be5ff4860a592664c83e0c89668de74f49a6ffadf9e",
+        "verify.py": "60a09aa308cc019d63f1dd5e0963b0edbb248005b70e8f17b4a6d7720fa12ae9"
+      }
+    },
+    "external-critical": {
+      "targets": 12,
+      "model_origin_entries": 32,
+      "opaque_null_model_entries": 8,
+      "owned_declarations": 391,
+      "owned_modules": 21,
+      "source_files": 37,
+      "canonical_math_sources_exact": 20,
+      "canonical_raw_meanings_exact": true,
+      "full_raw_audit_and_export_roots_exact": true,
+      "standard_axioms_only": true,
+      "positive_full_pipeline": {
+        "status": "passed critical full assurance gates",
+        "targets": 12,
+        "closures": 391,
+        "modules": 21,
+        "checker_coverage": {
+          "replay": [
+            "Lean default",
+            "Lean paranoid",
+            "lean4lean",
+            "nanoda",
+            "con-leche",
+            "con-ron"
+          ],
+          "comparison": [
+            "Lean default",
+            "Lean paranoid",
+            "lean4lean",
+            "nanoda",
+            "con-leche",
+            "con-ron"
+          ]
+        },
+        "checker_declarations": {
+          "replay": {
+            "lean4lean": 39224,
+            "con-leche": 39227,
+            "con-ron": 39227
+          },
+          "comparison": {
+            "lean4lean": 39057,
+            "con-leche": 39060,
+            "con-ron": 39060
+          }
+        },
+        "export_bytes": 224287018,
+        "export_sha256": "b3e345753794d51caa6a80d7d4543110628d789ec62c61630d94204f9a87bd43",
+        "source_files": 37
+      },
+      "positive_report_sha256": "45db8fb530d82141c52a86dab6dc56ea29c6b9ea1e16ec3d3ac00cf4e5f84e03",
+      "hostile_controls": 18,
+      "source_coverage_controls": 15,
+      "actual_semantic_rejections": [
+        {
+          "label": "wrong-wrapper-comparator",
+          "reason": [
+            "do not match"
+          ],
+          "log_sha256": "e44aacd82f14a21f8b40516d14f4941184086cb258a659810d434d848f4d9d2f"
+        },
+        {
+          "label": "hidden-axiom-audit",
+          "reason": [
+            "Forbidden axiom BadPremise.hiddenTopology",
+            "ExternalCriticalSupportChallenge.space_topology"
+          ],
+          "log_sha256": "7dc95b90e8eb3d355b761b23c883f6a89a901471a0d75e26dfb3f5981bdc52ec"
+        },
+        {
+          "label": "literal-shift-corrupt",
+          "reason": [
+            "unsolved goals"
+          ],
+          "log_sha256": "e8ee6e8ee49993ea658367b4f89ef7c61bff3ac4db84f3dd209a0c5d73083c6a"
+        }
+      ],
+      "fixture_files_checked": 6,
+      "fixture_digests": [
+        {
+          "command": "wrong-wrapper-comparator",
+          "name": "CriticalSolution.lean",
+          "source_sha256": "1cd16c7ed26eaecd14cb510b37235577ce274f3686160f199b39882287067e4c"
+        },
+        {
+          "command": "wrong-wrapper-comparator",
+          "name": "CriticalChallenge.lean",
+          "source_sha256": "c05082f91b7b98b292331482ab0cc2f109b4fb674a46bbc0981c658ce2b977fd"
+        },
+        {
+          "command": "hidden-axiom-audit",
+          "name": "CriticalSolution.lean",
+          "source_sha256": "b47f3b71bf1031baac4174f2315b88961c787aeafe199d3abe3f889be85d9eac"
+        },
+        {
+          "command": "hidden-axiom-audit",
+          "name": "BadPremise.lean",
+          "source_sha256": "c1367e552fa20b0aae7186a92c0f28680373c7ba9b3ede3e34c074bd99d3c8c8"
+        },
+        {
+          "command": "literal-shift-positive",
+          "name": "ShiftPositive.lean",
+          "source_sha256": "7f2b54de02b2516fd6a4f7074966b850cc4fce4d289b489cf3166970205eb5e5"
+        },
+        {
+          "command": "literal-shift-corrupt",
+          "name": "ShiftCorrupt.lean",
+          "source_sha256": "279d9dd10912715548df00098cf509fa0714343c021c6051ec6f6d29e59ea3bc"
+        }
+      ],
+      "source_inventory_sha256": "73d11a6acbcc1b4567f8ae8e97a6e0eb11fce80553ae2868277274bfa077b40c",
+      "limits": [
+        "Twelve support meanings only; no actual limiting Gibbs law, critical C01-C08 or M4/R8/R9 completion.",
+        "Complete224287018byte NDJSON is not archived; its digest/source-root binding and actual CI acceptance are checked."
+      ]
+    },
+    "external-pressure": {
+      "targets": 64,
+      "owned_declarations": 1357,
+      "owned_modules": 64,
+      "model_origins": 77,
+      "opaque_nulls": 17,
+      "canonical_math_sources": 63,
+      "source_files": 82,
+      "canonical_meanings_exact": true,
+      "full_raw_audit_exact": true,
+      "positive_full_pipeline": {
+        "status": "passed pressure full assurance gates",
+        "targets": 64,
+        "closures": 1357,
+        "modules": 64,
+        "checker_coverage": {
+          "replay": [
+            "Lean default",
+            "Lean paranoid",
+            "lean4lean",
+            "nanoda",
+            "con-leche",
+            "con-ron"
+          ],
+          "comparison": [
+            "Lean default",
+            "Lean paranoid",
+            "lean4lean",
+            "nanoda",
+            "con-leche",
+            "con-ron"
+          ]
+        },
+        "checker_declarations": {
+          "replay": {
+            "lean4lean": 42989,
+            "con-leche": 42992,
+            "con-ron": 42992
+          },
+          "comparison": {
+            "lean4lean": 42292,
+            "con-leche": 42295,
+            "con-ron": 42295
+          }
+        },
+        "export_bytes": 267061347,
+        "export_sha256": "a6c95522a12fff4cd5f3f6be8b567a2a96e9fa481c6fe71dff5af08d75815001",
+        "source_files": 82
+      },
+      "hostile_controls": 22,
+      "source_controls": 19,
+      "semantic_rejections": [
+        {
+          "label": "wrong-wrapper-comparator",
+          "reason": [
+            "do not match"
+          ],
+          "log_sha256": "a2abcf22a04d8026aa0ba2a3c1885bc3c22f806931ca80e8b2ffc0867bd15e03"
+        },
+        {
+          "label": "hidden-axiom-audit",
+          "reason": [
+            "Forbidden axiom BadPremise.hiddenWord",
+            "ExternalBridgePressureSupportChallenge.word_zeroVolumeConvention"
+          ],
+          "log_sha256": "bcdc71a9b11089cef0246a078ff6fde75b7dd04dc42c65a9166c6b3df52943f4"
+        },
+        {
+          "label": "literal-concat-corrupt",
+          "reason": [
+            "unsolved goals"
+          ],
+          "log_sha256": "17b1468f06092e1b826c5f52c234e8b9f83836adbe852d34f7c731b0083857cf"
+        }
+      ],
+      "fixture_digests": [
+        {
+          "command": "wrong-wrapper-comparator",
+          "name": "PressureSolution.lean",
+          "source_sha256": "d93da968da5a1272235e37a736bd302afedf2fbf3834437a1f5c5a2dea012250"
+        },
+        {
+          "command": "wrong-wrapper-comparator",
+          "name": "PressureChallenge.lean",
+          "source_sha256": "05470364b4d2daec53364e2b897aeef30f0385dad723a9ff6c9414ba7a2e37bc"
+        },
+        {
+          "command": "hidden-axiom-audit",
+          "name": "PressureSolution.lean",
+          "source_sha256": "67ba49b7d9001a16a2528977285ef9e8af6a71f8bd4cb5478410a0cff1811909"
+        },
+        {
+          "command": "hidden-axiom-audit",
+          "name": "BadPremise.lean",
+          "source_sha256": "dae456e2e1964f2d39783ca42dbba7e9d1af50c3ceddb39558f392e8431d58a5"
+        },
+        {
+          "command": "literal-concat-positive",
+          "name": "ConcatPositive.lean",
+          "source_sha256": "f97b9b91dddacc195dc583f6a5858df10fa789cddd0f45866f53d9ae4bbd71e7"
+        },
+        {
+          "command": "literal-concat-corrupt",
+          "name": "ConcatCorrupt.lean",
+          "source_sha256": "5f6f691e3a47a82366b59a365a9000edebff0e96f38e2e55dfbe607f66627da2"
+        }
+      ]
+    }
+  },
+  "api_sha256": "5f25d2d5a8af6d4bd81a7956b06bba2c085a61065d8acb90353ab5281ed9e1b0",
+  "downloads_sha256": "044318bef90b3ae10f18cd2dac8349976d6576f1af2b1059b3ed6e86b765dafc",
+  "auditor_sha256": "2cc49cd5f8f997058fe1642ff2ea055191584d6e0c4c7ebeaec4d48f496f109d",
+  "reused_inspector_sha256": "37f6d704be9b2cb24c092610dc94e74159efe7292de252e71c302f5f266e100f",
+  "audited_utc": "2026-11-28T15:47:08.176646+00:00",
+  "limits": [
+    "Inspection of CI evidence, not a local kernel rerun. Complete NDJSON exports remain generated outside Git; their source/root/digest bindings and actual CI acceptance logs are checked.",
+    "Pressure helpers do not complete canonical48, entropy/Legendre/effectivity/table, critical C02-C08 or full M4/R8/R9.",
+    "AI roles overlap; no human expert review, novelty certification or author endorsement."
+  ]
+}

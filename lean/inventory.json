@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "scope": "all released Lean projects",
+  "scope": "four legacy Lean projects; supporting external project has separate inventory and mandatory checker job",
   "independent_kernel": "not run",
   "projects": {
     "inverse": {
@@ -8630,5 +8630,29 @@
         }
       ]
     }
+  },
+  "external_supporting_project": {
+    "path": "lean/external_problems",
+    "inventory": "lean/external_problems/inventory.json",
+    "scope": "five abstract integer supporting statements only; no headline external theorem",
+    "toolchain": "4.35.0",
+    "verification": "python3 lean/external_problems/verify.py --mode full"
+  },
+  "external_analysis_project": {
+    "path": "lean/external_analysis",
+    "inventory": "lean/external_analysis/inventory.json",
+    "frozen_targets": 14,
+    "owned_theorem_closures": 397,
+    "assurance": "full analytic job passed at8524770 in run46093375392; source-pinned receipts in verification/external_analysis; later final-head regression pending",
+    "scope": "O3 prime h=1 only"
+  },
+  "external_population_project": {
+    "path": "lean/external_population",
+    "inventory": "lean/external_population/inventory.json",
+    "frozen_targets": 22,
+    "owned_modules": 28,
+    "owned_theorem_closures": 517,
+    "assurance": "full dedicated population job passed at8746e08 in run46098606212; source-pinned receipts verification/external_population; later-head regression required",
+    "scope": "literal density and symbolic representation at each fixed finite depth; no rate or optimization"
   }
 }

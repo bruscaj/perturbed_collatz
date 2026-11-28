@@ -1,0 +1,184 @@
+{
+  "run_id": 46111672437,
+  "source_commit": "b5dcda3404b14b43e1985c2e31219ce811e46881",
+  "source_tree": "76ee312e9f756a0dceba6ea3d900dd81b7858168",
+  "all_seven_jobs": "passed",
+  "optimization_targets": 15,
+  "optimization_own_reused_theorem_closures": 952,
+  "optimization_owned_modules": 49,
+  "optimization_source_files": 63,
+  "checker_coverage": {
+    "complete proof closure": [
+      "Lean default",
+      "Lean paranoid",
+      "lean4lean",
+      "nanoda",
+      "con-leche",
+      "con-ron"
+    ],
+    "frozen statement comparison": [
+      "Lean default",
+      "Lean paranoid",
+      "lean4lean",
+      "nanoda",
+      "con-leche",
+      "con-ron"
+    ]
+  },
+  "checker_declarations": {
+    "replay": {
+      "lean4lean": 20912,
+      "con-leche": 20915,
+      "con-ron": 20915
+    },
+    "comparison": {
+      "lean4lean": 20447,
+      "con-leche": 20450,
+      "con-ron": 20450
+    }
+  },
+  "hostile_controls": 18,
+  "actual_semantic_rejections": [
+    {
+      "label": "wrong statement rejected by actual comparator",
+      "exit_code": 1,
+      "actual_reason_present": true,
+      "log_sha256": "444c11056438acd52e69089b639a1ca9da49e35d40a4ee47469b03234871e9b7"
+    },
+    {
+      "label": "hidden imported axiom rejected by complete audit",
+      "exit_code": 1,
+      "actual_reason_present": true,
+      "log_sha256": "c663648d421455a180d5e8152d158d8c2b3d9d82c890bee3254fcd98b9b0ff97"
+    },
+    {
+      "label": "corrupt executable cycle base rejected by Lean kernel proof",
+      "exit_code": 1,
+      "actual_reason_present": true,
+      "log_sha256": "3d190d59c5eed43e784b4168503f4fe151b8b1317b25a25be91586e0b239340d"
+    }
+  ],
+  "positive_full_pipeline_rerun": "passed with all15/952/six modes in both stages",
+  "export_bytes": 103158206,
+  "export_sha256": "1bb90a10488f0a22e713b19b2a2d2e2fd728ce33f6101fd950b54901aa9ea01c",
+  "source_pins": {
+    "Arithmetic.lean": "8ad07971f3dd9b211aa99c36f6ed9c645e9dbb158b7ba33e81b72d5ca2c6f76e",
+    "Audit.lean": "07da906129926ad8765d801f157d3ae0578cc160e54e0a46d19cf207f4f4f05d",
+    "CountablePartition.lean": "1d1d1f699b9abe0de3eb9c03bb3306359395629d3b33739a948915a3e09f9d7d",
+    "Cylinders.lean": "22ef4309c927190e4c004ce8fe2cd0761a59ef6ce81ef0a230b7d83515288a17",
+    "Definitions.lean": "cf29376721942a78328491cd910690497f95d381711f0d2e758998fbba9374bc",
+    "DensityBounds.lean": "1c0efec93aeb9f3024ef9b3cfcb7868504b6d819fdef578865903ce267a47e3d",
+    "ExitCylinders.lean": "178d20f9f84013d8c4e942542948c3acff31c8bac17efde06f22ec4e60afe611",
+    "ExpectedTypes.lean": "5ce898eb70690f6f77e26a95cbafb5ef268fa93617ab7418a0b25f6878c34968",
+    "Gains.lean": "1471ce4e6e2e5c3db4824616be2c1dd9f99d6c959ee8e809b109cfdd1ed54b03",
+    "GeneralArithmetic.lean": "06cbcb0af62e33e9f631750277b7e5e6d8044115b554ddaf323d3a112bddfe30",
+    "GeneralBlockWords.lean": "b3a8b53c5fe4fb1db185671a2f349f57e251d09b14d5ed76c04e17633f3ef4c0",
+    "GeneralCompatibility.lean": "bde003b9d0e546dccc9a086637e86dc03ae031c8797a739091b04c309023b62f",
+    "GeneralCylinderDensity.lean": "43c77d1a8062a836f60f86d148175e8353488cc71cf605e5cf45a23b7973fdb7",
+    "GeneralDefinitions.lean": "9d3f21078449309feb93e42b2d2b5fc8c5f0c48c4ff42ac7b62fc5d911c2decc",
+    "GeneralDensity.lean": "2180aea59aded9c0fd910ec19e81c8ef073d8486cf01b62209d21add10776e59",
+    "GeneralExpectedTypes.lean": "65087d9a25b910c2875c128d9c477cab9b5e506629d446f5db193450dad3b8fa",
+    "GeneralGains.lean": "0c17a1a320f733f9aab1cad379a4101fbd382550ffa63330cd7dd166ad59cf82",
+    "GeneralMarginal.lean": "d69a06493a61fd43b5ab901aec79e289d30028d79338b6c025d8f7e996227bae",
+    "GeneralPreimage.lean": "42fdc76715211e50b1b79da036ed3b65a94be2226c90296021723886e8942c25",
+    "GeneralProjection.lean": "b45485e3a49d40ad02239541efbb6c1cb18f256a8877e7f53b4d56eeeed810e8",
+    "GeneralRefinementLabels.lean": "87a8dafc9256bdd1245b3662df2cda8cd98ca6fb3fd7b07ca90d8bee53b2f314",
+    "GeneralSolution.lean": "59dfb6be602190bcdafbb12a639b07a08ae26fa9eb5b953ed638cc5cab4fb523",
+    "GeneralSourceDensity.lean": "d21d8bdfb3181f59f1ca23b98696dd99d8a54d58ce674f061eccd739e1d11dd9",
+    "GeneralStrideWords.lean": "c513dd033ff334a4a40ba068ec60e8c715176e30f507247a680891269106a352",
+    "GeneralWeights.lean": "b0a23ff1e40cc0588f96bf0ebb8e9ea95c588fa539c79fe853d93c033a6520b6",
+    "OPTIMIZATION_PROOF.md": "9bf1344287301a2ff25c4ababf725bee261c6195690205b269b6cfd910f90033",
+    "OptimizationAccuracy.lean": "f3893e7ac660be5af3b6c8d58a3f947b2b475966aa584dcffd645fb35a06b658",
+    "OptimizationAlgorithm.lean": "a5e799169d02fde236d25fa2f222cf25e61870cb856378f34cd76b6cf7ed7d38",
+    "OptimizationAlgorithmTypes.lean": "ad8c15d56c4847c12679df09c5b7594d057840fdd567615bfd60a805b3afa752",
+    "OptimizationArithmetic.lean": "01287e5b485ce8bee4aba42c9a7ab0239b34a9c20724682a914a5f95deec900b",
+    "OptimizationChallenge.lean": "280d24ad070c2dcb929a0cdaa4176eae07242b4ecab652492c238f5f640553af",
+    "OptimizationCode.lean": "8db0fbf6651997b9b39ad07dccf30315aa355beb98f95f5ea592b51809aced70",
+    "OptimizationCycleCode.lean": "f8526ef1646ed3b13c0e23d84d536fc5be8dc4f546675976b2e53e13a6cc95bd",
+    "OptimizationCycles.lean": "7bd7735dc83c9d50ead8b1b808b7f91c97163c8ec0605801356e2d73b9649430",
+    "OptimizationDefinitions.lean": "92ebe27ca1f036295fe9b1135e81b50c59069fd928710373a6dce492c4905d98",
+    "OptimizationDeletion.lean": "093421bec9c977ff23c8c0e16181026afb83e5670bc3c12a601d3d6e1a8d3ebb",
+    "OptimizationDensity.lean": "4d611ccad8746cff8ea6f6b5cbb9cc28ed1953d7821ea792f1c12e72cb388009",
+    "OptimizationEdgeCode.lean": "e72a65c4f3206a7c6990e85d48170ab1ddf8e96edc694eff71cfecb36ac6fc09",
+    "OptimizationEncoding.lean": "bec64189eb45d6da6ba892ea329e714f6ea19ed82ea25bcbf8f6fdc638bdb195",
+    "OptimizationExpectedTypes.lean": "74a34cb349cbe43130e6644c919c9a8987930612b9f4b75fa6763763e384e020",
+    "OptimizationJoin.lean": "61d7de215f87a85f2fc1c305948d56307cab4aafd91f95d1a21bd4184fa3598a",
+    "OptimizationMass.lean": "5419547b162efa432f9f64c5ceab3f5b72407f650b25f042d696d158568a7dad",
+    "OptimizationPaths.lean": "a8d6f051f825456c9cf05db039b858cf4c203f08e17d39435ecc68597ec5f27b",
+    "OptimizationSolution.lean": "6c6c40ababa237644927ebb3b97d6f3191dd34673bbdcdbf204138bcb4f08d27",
+    "OptimizationVertexCode.lean": "fcfac4549ca9250b3886b1d5906bfd537a40e883a2a19136ef7ead32ed5a69fb",
+    "PartitionGeneral.lean": "0e50e035d0456cb71b6d7238957f219133a4eaecfda96fb9ab74b5fcb723ed3b",
+    "PopulationWeights.lean": "8affb6d578e9891f306df4b54cc621c33d110227eaec7912d8dcf826f9697190",
+    "Progressions.lean": "69262afd5c9229bda3c0ffab6f53d78f3afef9ea6101b918232dce4f6b13fb18",
+    "README.md": "e1de361600daa5bdcd180baf70e306ac67b762a798b9a38d50435a88bc80bd06",
+    "RateDefinitions.lean": "c377f507d249658b9b53b04c6b2c0906ec95dbdeb1f37291d104b7c07f73eb8d",
+    "RateExpectedTypes.lean": "d0089dc07e0599ad8d128291c58518a3a704b20571f735924364ea1b9a3032cc",
+    "RateInfimum.lean": "e3f25c44065d0b49bc7ac37bc8c80eb7adc18e036c87b77dc838bd261bac871b",
+    "SourceDensity.lean": "0a9b01fcef47bc2684c2688055feff86747b453abe15ca295bf6a7cbd44205f3",
+    "cache-imports.txt": "472ca978c2c6b7c6d2775f49738962170716a7fbbb3a6c932b771a53aeb41a13",
+    "comparator.json": "7d84786d71d9a038165b2e4b592426bcb53023b292e3119363de0333d069e557",
+    "frozen_propositions.json": "3919bf5adbbc70b07552f06d3479616bf828c8fa5c2a11f9135031de6fa86c8b",
+    "lake-manifest.json": "3c008413bc7624bf190649eca3d6d55bc03ffc8cbbb06ac94fa8ff42b91735f5",
+    "lakefile.toml": "1fd0c83f6e759657531ddf67d8631a865e2d9153af7e308004d1e64d1c39a1e0",
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+    "owned_modules.json": "1220d509d8f7cef350ae7771a0442d038bb37261e44241d34d5509d6213dd316",
+    "specification.json": "dc2f5e617c78961a13e8c0d84c8ad171c109fdc8b6ab345a281759dfd49f2849",
+    "test_mutations.py": "22a6043f750dbb72ba0828e9eeca54f6676226e50e73ccd32f6a6f6436d2f65b",
+    "verify.py": "343af49ea94cbbc1043811eaf3f11a730070212a2c6a06f38168b345ed13afe7"
+  },
+  "legacy_checks": 43,
+  "archives": [
+    {
+      "artifact_id": 15250785551,
+      "original_name": "external-analysis-h1-26a81d2100235d87ddcc8fd56685510fdce8e9ed",
+      "local_archive": "external-analysis-h1.zip",
+      "zip_sha256": "facd682835e493f274f557382a12bd6bf07a68e850eb983cf2fea85e9cc8b540",
+      "bytes": 40657
+    },
+    {
+      "artifact_id": 15250545761,
+      "original_name": "release-verification-26a81d2100235d87ddcc8fd56685510fdce8e9ed",
+      "local_archive": "release-verification.zip",
+      "zip_sha256": "0c0ef89dab44812ee33b82d2e64f2f43122937269143fbb3ead60e04e88ac4c0",
+      "bytes": 1403
+    },
+    {
+      "artifact_id": 15250356069,
+      "original_name": "external-population-26a81d2100235d87ddcc8fd56685510fdce8e9ed",
+      "local_archive": "external-population.zip",
+      "zip_sha256": "7e1efd1e4a60bec98afd12146981617c3ff01ca3e71a70cd6975d66bf067a1a6",
+      "bytes": 840338
+    },
+    {
+      "artifact_id": 15250256722,
+      "original_name": "external-optimization-26a81d2100235d87ddcc8fd56685510fdce8e9ed",
+      "local_archive": "external-optimization.zip",
+      "zip_sha256": "e2ad31fb54b6dc574e3b49e183e6b116f89e90337f8c4386b1a659500c28da29",
+      "bytes": 1441139
+    },
+    {
+      "artifact_id": 15250057317,
+      "original_name": "external-rate-26a81d2100235d87ddcc8fd56685510fdce8e9ed",
+      "local_archive": "external-rate.zip",
+      "zip_sha256": "7790d978b076fced622317c21d3ace9eecfe62ab1e7aef6eff3158fa8b0b64cf",
+      "bytes": 1437076
+    },
+    {
+      "artifact_id": 15249858121,
+      "original_name": "external-bridge-26a81d2100235d87ddcc8fd56685510fdce8e9ed",
+      "local_archive": "external-bridge.zip",
+      "zip_sha256": "9bd6b3183f4e130497a070368a955658ba165216c187ca319cb3db970e0eaf99",
+      "bytes": 497519
+    },
+    {
+      "artifact_id": 15249549480,
+      "original_name": "external-support-26a81d2100235d87ddcc8fd56685510fdce8e9ed",
+      "local_archive": "external-support.zip",
+      "zip_sha256": "747aeb2a1dd6ed0ac0cb616750f24835bb2fc886dd76fce4bde073d1cb6c9d96",
+      "bytes": 5610
+    }
+  ],
+  "artifact_name_note": "26a81d210 is the synthetic GitHub PR event SHA; actual checked source/tree are recorded separately above and in each project source-tree receipt.",
+  "scope_limit": "Literal run-length-only Syracuse model; no sharp constant, closed-form general-depth optimum, M4/R8/R9 analytic theorem, novelty certification or human expert refereeing.",
+  "all63_files_matched_checked_snapshot_before_documentation_update": true
+}

@@ -14,6 +14,23 @@ Almost every B1 parameter in each fixed progression merges with its smaller neig
 
 ## Results and limits
 
+The [external-problem research register](papers/external_problems/README.md)
+now includes candidate answers to Polson–Sokolov **M4, R8, R9 and O3′**.
+The M4/R8/R9 analytic claims remain draft candidates without complete headline
+Lean proofs or human expert refereeing. The O3′ results below have source-pinned
+independent machine-checker assurance. Exact finite source-model checks and five abstract integer
+supporting lemmas are included. M4's unrestricted and rung formulations are
+tracked separately; none is advertised here as a solved open problem.
+The [depth-one Syracuse paper](papers/finite_information_lyapunov/README.md)
+has complete h=1 proofs of density, exact infimum and nonattainment in a separate
+Lean package with source-pinned full-checker receipts. At every finite depth, a total computable scheme determines the infimum by
+certified rational brackets, and the infima tend to zero at order 1/h. These
+answer the three stated O3′ requests in this algorithmic sense for the exact
+run-length-only class; general-depth closed formulas and sharp constants are
+separate questions.
+The [near-extremal entropy draft](papers/arithmetic_bridge_pressure/README.md)
+gives the proposed rung entropy argument behind R9; its main asymptotic argument remains without end-to-end formalization. The separate pressure helper package supplies the finite dictionaries and actual uniform-pressure foundations, subject to its own assurance gates; full M4/R8/R9 remain incomplete.
+
 | Result | Evidence here | What remains outside the claim |
 | --- | --- | --- |
 | Classification of admissible conservative impulse words and binary-height coordinates | Complete analytical proof and direct Lean support for the conservative classification, height/safety, and conjugacy | Does not prove capture for every admissible word; primitive-period comparisons remain written arguments |
@@ -36,9 +53,9 @@ Every entry in [claims.json](claims.json) includes its literature relationship a
 
 ## Lean coverage
 
-Four Lean projects contain 51 mathematical modules. Their clean builds compare 825 named public theorem declarations and the module-wide axiom audits against the committed inventory. The frontier project includes the single-B1 equivalence, guarded exits, repayment, and a counterexample to coverage by the five guards. [Lean coverage](lean/README.md) · [Exact theorem inventory](lean/inventory.json)
+The four legacy Lean projects contain 51 mathematical modules. Their clean builds compare 825 named public theorem declarations and the module-wide axiom audits against the committed inventory. The frontier project includes the single-B1 equivalence, guarded exits, repayment, and a counterexample to coverage by the five guards. A separate Lean 4.35.0 project proves five abstract integer prefix/depth supporting statements; it proves none of the external headline claims. [Lean coverage](lean/README.md) · [Exact theorem inventory](lean/inventory.json)
 
-The pinned versions are Lean **4.24.0** for `frontier`, `inverse`, and `sprint`, and **4.19.0** for `perturbed`. No mathlib dependency is needed. The audited theorem dependencies use only `propext`, `Quot.sound`, and `Classical.choice`; no `sorryAx` or custom axiom occurs. An external independent Lean kernel checker has not been run.
+The pinned versions are Lean **4.24.0** for `frontier`, `inverse`, and `sprint`, and **4.19.0** for `perturbed`. No mathlib dependency is needed. The audited theorem dependencies use only `propext`, `Quot.sound`, and `Classical.choice`; no `sorryAx` or custom axiom occurs. The four legacy projects have not had independent kernel replay. The five newer abstract prefix/depth supporting statements passed sandboxed proof-closure replay, frozen-statement comparison and independent checkers; [exact scoped receipts](verification/external_prefix/README.md) state the checked source commit and limitations.
 
 The new signed physical modules prove the conservative classification, height/safety identities, arithmetic cycle gain, and conditional three-family capture implication. [ReleaseBridge.lean](lean/inverse/Collatz/ReleaseBridge.lean) proves the matching equivalence for every positive physical seed at every phase. **Its three universal family hypotheses remain open.** The original four-family theorem, complete inverse-growth/progression theorem, synchronization, support censuses, and analytic geometry are not thereby formalized.
 
@@ -88,4 +105,28 @@ Integer samples are labeled by exact finite replay. Complex raster colors are fl
 
 `paper.tex` and `tex/` form the complete manuscript. `paper.pdf` is compiled from those sources. `lean/` contains pinned projects and the theorem inventory. `certificates/` contains exact data, checkers, and independent replays. `scripts/` supplies the unified entry points. `MANIFEST.json` lists every released file except itself with its size and SHA-256 hash. Hashes detect mismatches; they do not establish mathematical correctness.
 
-The workflow in `.github/workflows/verify.yml` runs the all-mode command when this payload is placed at a GitHub repository root. Each result is traceable through [claims.json](claims.json), and material release changes belong in [CHANGELOG.md](CHANGELOG.md). The README and manuscript identify the author and describe ChatGPT’s assistance.
+The workflow in `.github/workflows/verify.yml` runs the all-mode command when this payload is placed at a GitHub repository root. The quick/all gates also run85 assurance metadata/hash/coverage mutations in normal and optimized Python, preserving the earlier regression checks; these are separate from the Lean proof hostile controls. Each result is traceable through [claims.json](claims.json), and material release changes belong in [CHANGELOG.md](CHANGELOG.md). The README and manuscript identify the author and describe ChatGPT’s assistance.
+
+The [depth-one O3′ analytic package](lean/external_analysis/README.md) has 14 frozen target proofs and an exhaustive 397-declaration audit. Its separate mandatory `external-analysis-h1` CI job performs source-bound replay, frozen comparison and hostile fixtures. Full checker results passed at `8524770` ([receipts](verification/external_analysis/README.md)); later documentation/metadata heads require their own regression; legacy `--mode all` covers the legacy projects and all manuscripts, while the external proof jobs supply their own mandatory gates. The separate general-depth packages supply the literal density theorem, rate and computable infimum brackets.
+
+The [finite-depth population library](lean/external_population/README.md) supplies all22 frozen density/source-model proofs for arbitrary fixed positive depth and unrestricted real corrections. Its [written reconstruction](lean/external_population/GENERAL_DENSITY_PROOF.md) explains the exact cylinders and both finite-tail transfers. The separate mandatory `external-population` job must pass full replay/comparison and hostile fixtures; local source build/axiom checks alone are lower assurance. This establishes the density foundation, with rate assurance and higher-depth optimization handled separately.
+
+The population package passed full source-bound replay, frozen comparison, all six bundled checker modes and nine hostile controls at `8746e08` ([exact receipts](verification/external_population/README.md)). All four required jobs passed there. New documentation/metadata heads remain subject to their own CI.
+
+The [inverse-depth rate package](lean/external_rate/README.md) proves all eleven required frozen statements, with a [self-contained reconstruction](lean/external_rate/RATE_PROOF.md). At `1406f1a`, its fifth mandatory CI job passed all 765 theorem/helper closures, fresh source-bound replay, frozen comparison, six checker modes and ten hostile controls ([exact receipts](verification/external_rate/README.md)). Finite optimization source proofs are now included separately, with their source-pinned full assurance at b5dcda3. The optional stronger liminf remains unproved.
+
+All four pre-rate mandatory jobs also passed at `5775d77` (run `46100033792`), including all 43 legacy checks. This historical pass excludes the newly added rate package and subsequent manuscript changes.
+
+The rate package passed its full independent gates at `1406f1a` in run `46101939355`: all 11 frozen statements, 765 theorem/helper closures, six checker modes in replay and comparison, and ten hostile controls. [Exact receipts and logs](verification/external_rate/README.md) preserve this source pin. All five mandatory jobs passed there, including all 43 legacy checks. The paper records the successful rate and optimization snapshots separately. Later metadata heads require their own regression.
+
+The [finite source bridge](lean/external_bridge/README.md) now supplies all 25 frozen finite word/rung/reward/count proofs and a [self-contained reconstruction](lean/external_bridge/FINITE_BRIDGE_PROOF.md). At5369dc97, all25 statements and357 theorem/helper closures passed full replay/comparison, six checker modes at both stages and13 hostile controls (run 46105619785, all six mandatory jobs passed). [Exact receipts](verification/external_bridge/README.md) preserve that source pin. This foundation establishes no M4/R8/R9 pressure, entropy or differentiability result.
+
+The [finite optimization package](lean/external_optimization/README.md) adds all 15 required source proofs for the literal truncated graph, weighted cycle deletion, explicit actual-infimum sandwich and total computable dyadic approximation. Its [written reconstruction](lean/external_optimization/OPTIMIZATION_PROOF.md) includes the executable program's correctness argument and precise prior attribution. At b5dcda3, the seventh mandatory job passed full replay/comparator/checker gates and 18 hostile controls, including three actual semantic rejections. [Complete source-pinned receipts](verification/external_optimization/README.md) distinguish those results from ordinary compilation.
+
+The [all-length fixed-reference distinction](lean/external_unrestricted/README.md) is separate from intended rung-only M4. At c=1 its normalized count has liminf zero and limsup at least log10(2)/8, so the all-length fixed-B_r limit fails. All 23 frozen source proofs and 504 theorem/helper audits are included with a [self-contained argument](lean/external_unrestricted/ARGUMENT.md). At source739a4f5, the eighth mandatory assurance job passed full replay/comparison, six checker modes in both stages, the positive full rerun and21 controls; all eight jobs passed ([exact receipts](verification/external_unrestricted/README.md)). Later heads require their own regression. This does not settle the rung entropy, pressure or R9 questions.
+
+
+The [critical-space support package](lean/external_critical/README.md) adds12 exact supporting statements on the compactified configuration space and finite rooted laws, with a [self-contained argument](lean/external_critical/ARGUMENT.md). Its21owned modules contain391declarations (12targets and379helpers), with32canonical model-origin entries including8opaque null values. At source `f6311a6`, all nine mandatory jobs and45regressions passed. The critical package passed full replay, trusted comparison, all six checker modes in both stages, its positive full rerun and18controls ([exact original archives](verification/external_critical/README.md)). That historical pass is pinned to its exact source/tree; later heads require their own regression. This supplies no critical Gibbs law, full C01–C08, R8 regularity, M4/R9 resolution or numerical certificate. Earlier eight-job receipts certify their exact historical heads.
+
+
+The [word and analytic pressure helper package](lean/external_pressure/README.md) provides30finite WORD and34analytic targets with a [self-contained derivation](lean/external_pressure/ARGUMENT.md). Its64owned modules contain1357declarations and77model-origin entries, including17opaque null values whose historical metadata is retained separately. All ten jobs passed at d1d641c/run46158942911. The pressure package passed complete source-bound replay, trusted comparison, six checker modes in both stages, a positive full rerun and22controls. [All ten original artifacts and the inspection](verification/external_pressure/README.md) are preserved with API digests and exact source/tree binding. Later heads require their own regression. This does not complete canonical48, baseline/infinite-tilt bounds, entropy/Legendre, critical regularity, effective programs, the certified table or M4/R8/R9.

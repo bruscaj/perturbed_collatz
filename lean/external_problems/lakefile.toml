@@ -1,0 +1,15 @@
+name = "external_prefix_foundations"
+version = "0.1.0"
+defaultTargets = ["Solution"]
+
+[[lean_lib]]
+name = "Definitions"
+
+[[lean_lib]]
+name = "ExpectedTypes"
+
+[[lean_lib]]
+name = "Solution"
+
+[[lean_lib]]
+name = "Challenge"

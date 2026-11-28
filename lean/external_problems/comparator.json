@@ -1,0 +1,14 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "ExternalPrefixChallenge.floorDepthEquivalence",
+    "ExternalPrefixChallenge.depthInvolution",
+    "ExternalPrefixChallenge.closingFloorEquivalence",
+    "ExternalPrefixChallenge.floorRaiseSoundness",
+    "ExternalPrefixChallenge.endpointInverses"
+  ],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "external_kernels": {"nanoda": ["nanoda_bin"]}
+}

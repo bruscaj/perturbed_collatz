@@ -1,5 +1,58 @@
 # Release history
 
+## Word and pressure helper assurance — 28 November 2026
+
+- All ten mandatory jobs and45 regressions passed d1d641c/run46158942911. The64-target pressure package passed1357 owned declaration checks,77 model origins, source-bound replay and trusted comparison in all six modes, a full positive rerun and22 controls.
+- Preserved all ten complete original API-digest/size-matched ZIP artifacts and the exact inspection. The267061347-byte generated proof export remains outside Git with its hash and source/root binding recorded.
+- Updated helper assurance status only. Full M4/R8/R9, entropy/Legendre, critical regularity, effectivity and the certified table remain incomplete; this documentation/archive head requires its own complete regression.
+
+## All-length assurance completed — 28 November 2026
+
+- All eight mandatory jobs passed at source739a4f5/run46119220218, including all23 all-length targets,13 model bodies,504 theorem/helper closures, six modes in both replay/comparison and21 controls after a full positive rerun.
+- Preserved all eight complete, original digest-verified CI artifact archives. Updated only the separate c1 support status; intended M4/R8/R9 analytic claims remain draft candidates.
+- Added85 portable metadata controls, run normally and under optimized Python in the existing quick/all regression gate. Preserved all prior checks; this adds two checks to the all-mode count.
+- Historical pre-CI argument/PDF snapshots and the earlier O3 assurance receipts remain unchanged. Later heads require their own regression.
+
+## All-length endpoint distinction and O3 source conclusions — 28 November 2026
+
+- Added all 23 frozen formal statements for the all-length fixed-B_r count at c=1, including explicit exponential swap families, actual count bounds, real liminf/limsup and nonconvergence. The intended rung-only M4 and phase-adapted N* remain separate. The eighth assurance job is new and pending.
+- Preserved exact complete seven-job artifacts at b5dcda3: all 15 optimization statements/952 closures, six checker modes in both stages and 18 hostile controls, plus 43 legacy checks.
+- Corrected O3 scope language: uniform computable infimum brackets, vanishing and Theta(1/h) answer its three stated asks for the run-length-only class. Closed formulas, sharp constants and practical tables remain additional questions.
+- Extended the bridge manuscript with a separate all-length endpoint proof, keeping the main pressure/R9 claims explicitly provisional.
+
+
+## Finite optimization source proofs — 28 November 2026
+
+- Added all 15 required frozen optimization source proofs and952 theorem/helper audits, including a total computable exact finite numerator and dyadic bracket for the actual failure infimum. Added a seventh mandatory assurance job; its full results remain pending.
+- Preserved passing finite bridge receipts at5369dc97 (all six jobs,357 closures, six checker modes and13 hostile controls). These do not discharge any M4/R8/R9 analytic limit.
+- Added precise attribution to the source book's existing finite cycle criterion and primary difference-constraint context in the full written optimization proof. No novelty or human expert acceptance is claimed.
+
+
+## Finite source-word bridge and rate receipts — 28 November 2026
+
+- Added all 25 frozen finite bridge source proofs, exact finite population and reward-preserving count bijections, actual unbounded rungs, and unique finite extremizer; ordinary audits cover357 theorem/helper closures. Added the sixth mandatory independent-assurance job; its results remain pending.
+- Preserved exact five-job passing receipts for1406f1a, including all11 rate targets, all765 closures, six checker modes and ten hostile controls. These do not prove M4/R8/R9 limits or finite optimization.
+
+
+## Inverse-depth rate source proofs — 28 November 2026
+
+- Added all eleven pre-proof-frozen required rate implementations for the literal finite-run-window infimum, with explicit inverse-depth bounds and a vanishing limit. The fresh source/type/axiom audit covers 765 theorem/helper closures.
+- Added a standalone public rate project, full written reconstruction, and fifth mandatory CI job requiring fresh proof replay, frozen comparison, six checker modes and positive/negative fixtures. Independent rate assurance remains pending until its own receipts pass.
+- Expanded the Syracuse manuscript while preserving the exact depth-one formula and nonattainment theorem. Higher-depth optimization, the optional stronger liminf, sharp constants and the M4/R8/R9 candidates remain unfinished.
+- Preserved the passing four-job regression at5775d77/run46100033792 separately from this new source tree.
+
+
+## Finite-depth source density — 28 November 2026
+
+- Added a standalone public library and full written reconstruction for all22frozen finite-depth density/source-model statements, preserving unrestricted real corrections, literal future blocks and both finite-tail transfers.
+- Added the separate mandatory population replay/comparator/hostile-fixture CI job. Its full source-bound replay/comparator/six-checker/nine-control assurance passed at8746e08; rate/optimization claims remain unfinished.
+
+## External-problem audit — 27 November 2026
+
+- Added source-matched M4/R8/R9/O3′ drafts with explicit unresolved scopes.
+- Formalized all14 frozen targets for the h=1 O3′ subquestion; full source-bound replay, frozen comparison, all six checker modes and nine hostile fixtures passed at8524770. The full arbitrary-depth problem remains open here.
+- Added TeX/PDF drafts, expanded related-work discussion and six contextual references per paper. All sources are tied to their actual role; no novelty or human expert review is asserted.
+
 ## Manuscript revision — 26 November 2026
 
 - Rewrote the abstract around the results, moved related work behind the proofs, and consolidated reproduction and formal coverage in the final section.
@@ -50,3 +103,31 @@
 - Incorporated repaired validation of every local eight-impulse shard and witness; saved mathematical census data are unchanged.
 - Kept the current four-family conclusion separate from newer unmerged and uncommitted formalization reports.
 - Made remaining mathematical obligations and formalization gaps explicit. Authorship and licensing remain pending for public release.
+# External research audit foundation — 27 November 2026
+
+- Added source-matched candidate records for M4, R8, R9 and O3′, including the
+  M4 rung/unrestricted interpretation split. No solved-problem claim is made.
+- Added the written depth-one Syracuse proof candidate, exact finite word/depth
+  and valuation oracles, and a rational series enclosure with explicit scope.
+- Proved five abstract integer prefix/depth supporting statements in a separate
+  pinned Lean 4.35.0 project, with frozen specs and all 29 generated theorem
+  helpers included in the axiom audit. No external headline is formalized.
+- Added mandatory separate Linux checker/comparator and hostile-fixture CI,
+  preserving every legacy release check. Local build-only mode is partial.
+- Extended public manifest coverage checks in both directions.
+
+
+
+### Critical-space support candidate
+
+Added the self-contained12-target critical-space supporting package and a ninth mandatory assurance job. The current addition is awaiting full independent CI; ordinary compilation and local hostile preflight are explicitly lower assurance. Full critical-law and M4/R8/R9 conclusions remain incomplete. Generated complete proof exports remain temporary build artifacts.
+
+
+### Pinned critical-support assurance
+
+Archived the nine original digest-verified CI artifacts from exact sourcef6311a6/run46133133418. All nine jobs,45regressions and the critical12target/391declaration replay/comparison/six-mode/18control gates passed. The initial39b1ee3 dependency-preparation failure was corrected by passing module names to the cache CLI; no mathematical source changed. Later documentation heads require their own regression.
+
+
+### Actual pressure helper candidate
+
+Added the exact30WORD/34analytic helper package, original mathematical source copies, self-contained derivations and a tenth mandatory independent assurance job. Ordinary and local fixture gates passed; introduction requires full current-source replay/comparison/six-mode/22control CI before independent acceptance. Main M4/R8/R9 and canonical48/effectivity/table obligations remain incomplete.

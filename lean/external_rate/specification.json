@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "scope": "All11 required frozen run-length-only O3 prime literal-infimum, inverse-depth rate and vanishing targets; optional stronger liminf excluded",
+  "original_frozen_at_utc": "2026-11-28T02:22:10.370534+00:00",
+  "chronology": "Canonical required-rate freeze before implementation; separate-context AI statement/source review, not human expert review",
+  "files": {
+    "Definitions.lean": {
+      "sha256": "cf29376721942a78328491cd910690497f95d381711f0d2e758998fbba9374bc",
+      "bytes": 3873
+    },
+    "ExpectedTypes.lean": {
+      "sha256": "5ce898eb70690f6f77e26a95cbafb5ef268fa93617ab7418a0b25f6878c34968",
+      "bytes": 2611
+    },
+    "GeneralDefinitions.lean": {
+      "sha256": "9d3f21078449309feb93e42b2d2b5fc8c5f0c48c4ff42ac7b62fc5d911c2decc",
+      "bytes": 7409
+    },
+    "GeneralExpectedTypes.lean": {
+      "sha256": "65087d9a25b910c2875c128d9c477cab9b5e506629d446f5db193450dad3b8fa",
+      "bytes": 6387
+    },
+    "RateDefinitions.lean": {
+      "sha256": "c377f507d249658b9b53b04c6b2c0906ec95dbdeb1f37291d104b7c07f73eb8d",
+      "bytes": 3813
+    },
+    "RateExpectedTypes.lean": {
+      "sha256": "d0089dc07e0599ad8d128291c58518a3a704b20571f735924364ea1b9a3032cc",
+      "bytes": 3186
+    },
+    "RateChallenge.lean": {
+      "sha256": "acc8333501a8086658785e4ebe478a33745d19558f4ecb7d47df46e1df38993e",
+      "bytes": 873
+    }
+  },
+  "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "source_pin": {
+    "repository": "https://github.com/VadimSokolov/collatz",
+    "commit": "5840497a23fc0d64127b850aea68862d7c93f2b7",
+    "problem": "book/chapters/ch11_open.tex#prob:ch11:o3p",
+    "convention": "book/chapters/ch05c_mmcollatz.tex"
+  },
+  "review": {
+    "human_expert_review": false,
+    "source_statement": "separate AI source/model review before canonical freeze"
+  },
+  "challenge_holes": [
+    "ExternalO3RateChallenge.infimumWellPosed",
+    "ExternalO3RateChallenge.markerSelectorLaw",
+    "ExternalO3RateChallenge.markerUpperBound",
+    "ExternalO3RateChallenge.historyWeightLaw",
+    "ExternalO3RateChallenge.cyclicNormalization",
+    "ExternalO3RateChallenge.cyclicTelescoping",
+    "ExternalO3RateChallenge.cyclicForcing",
+    "ExternalO3RateChallenge.cyclicDensityLowerBound",
+    "ExternalO3RateChallenge.positiveCycleMassLowerBound",
+    "ExternalO3RateChallenge.explicitInverseDepthRate",
+    "ExternalO3RateChallenge.infimumTendsToZero"
+  ],
+  "solution_must_not_import": [
+    "RateChallenge",
+    "RateOptionalChallenge",
+    "GeneralChallenge"
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "optional_target_status": "StrongAsymptoticLowerBound is not implemented or claimed; RateOptionalChallenge is excluded",
+  "assurance": "Gate pending: preparation and build mode are lower assurance; no full rate assurance claimed without successful project-specific Linux full-mode and mutation receipts."
+}

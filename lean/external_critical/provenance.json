@@ -1,0 +1,90 @@
+{
+  "canonical_specification_sha256": "81663d1d0f8bfed9e7475ee72139ff14cb68388f0f2df241345d5aa7a39a5f38",
+  "source_files": {
+    "PrefixDefinitions.lean": {
+      "sha256": "d7b5cd8b624dae007e3c3dc7f3620260dbfcf2169d0211b0859e18ed58180069",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "BridgeDefinitions.lean": {
+      "sha256": "7a36ebc1e9ff89fcec7ad1fdae1c2d5ae9ee011b06ae110fd4f34999e7df19a7",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "BridgeExpectedTypes.lean": {
+      "sha256": "850dcdd0d75479edaeab1c8d6d336b9099f56511e0b6f5a5125bedfca05838aa",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "PressureDefinitions.lean": {
+      "sha256": "07d60f44e7aaa3107518678bb1780b4867a37f07c3db9b49e89f9402c8b45cd4",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "PressureExpectedTypes.lean": {
+      "sha256": "9aa83c42cf2ccb23490ce84da1b21b9d6de0fb26dbf435d21b4d27bcc215f015",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "CriticalSpaceDefinitions.lean": {
+      "sha256": "f9316997df40811d6ce24d9aec17a8315ad5db8dce318c8373803e62a7fec1a5",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "CriticalSpaceExpectedTypes.lean": {
+      "sha256": "a5c9be218477466352bd567e073702529e40d00e0b28b17811ea1b1a99a86df0",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "SpaceTopology.lean": {
+      "sha256": "c6d0f4ae3c69b357e927bd26f512c5dd0b7235b508b33e171acb4af83ef8556e",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "SpaceArithmetic.lean": {
+      "sha256": "dcef4506c54eb22c64332d965f1a09b2a1b231f7cf765b0dbbe4dd5c1c80e948",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "SpaceReward.lean": {
+      "sha256": "4ff19af4a9131758a919f2e4348adae2685f3d07a492d822c475e12336710382",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "PhaseCocycle.lean": {
+      "sha256": "432d64a737ba454eeff5b1d7f24d73b45e68d44bb34d88c238ce751aafb8cafe",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "RootedLaw.lean": {
+      "sha256": "47b6e577821fed1ed9347c2f93274bf543149346e462ad58a479ba08c47ef18b",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "WeakReward.lean": {
+      "sha256": "b456d94af7a713efc07bd84050622bd059d01a477a1962c113cef23c290c0b36",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "RootedShift.lean": {
+      "sha256": "a39bba8d66a72336f4455ecb3d142b09996fbc08f67c8c16cbbbacc688e0134d",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "RootedStationary.lean": {
+      "sha256": "ad262338a9be8300a85a9c45668bc67571809e8866f44443ad663f10b1da50cd",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "StationaryEvents.lean": {
+      "sha256": "d6b9e138a01204d23a88240b0f48cf3bf44c41f66102892dca84f54fc4d78be3",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "FiniteInfinity.lean": {
+      "sha256": "f2ed734397bc5e467155362aaa96198353e43701e898a5928b00255d4d53f153",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "GapPacking.lean": {
+      "sha256": "354eb1c6dfe3079e027cae18edca0e3b0c74ef42ef9013ec005103f6c4b5ed51",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "ExcursionMoment.lean": {
+      "sha256": "707b9004b33122274fe3ac802a414276da57d5c05df3e47cbb8608199810355b",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "PolynomialContradiction.lean": {
+      "sha256": "32e03263e67f25cddd193b00b8a87c3815100af26eef2534851a562c2dfe5401",
+      "transformation": "exact mathematical source byte copy"
+    }
+  },
+  "public_wrapper": "New aliases only, no changed mathematical body",
+  "model_rows": "All32 original raw types/values preserved; axiom lists sorted only",
+  "ordinary_target_count": 12,
+  "independent_assurance_status": "not run for this public preparation",
+  "authorship": "Jake S. Brusca; ChatGPT-assisted research staging; no human expert or novelty certification"
+}

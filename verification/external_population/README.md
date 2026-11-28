@@ -1,0 +1,9 @@
+# Finite-depth density assurance receipts
+
+All FOUR mandatory jobs passed at checked source `8746e0896aba16933b6108dbc46aebbab03bd088`, tree `e6a33a52d5b18fe03541c83855c75dab72a85556`, [run46098606212](https://github.com/bruscaj/perturbed_collatz/actions/runs/46098606212). This directory preserves the population job's exact reports and checked source-tree IDs. The queued duplicate PR-event run at the identical head was canceled; that canceled run is not counted as a pass.
+
+The population project passed all22 frozen target comparisons, fresh builds of28ownedmodules, all517own target/helper axiom closures, source-bound export, sandboxed replay and the separate trusted comparator. Lean default/paranoid,lean4lean,nanoda,con-leche,con-ron all accepted. lean4lean checked18872 replay declarations and18665 comparator declarations; con-leche/con-ron checked18875 and18668 respectively. Only propext,Quot.sound,Classical.choice occur.
+
+All9 hostile controls were rejected, after a fresh positive full22target pipeline: failure equality altered, odd-seed normalization altered, correction restriction, omitted compiler module, omitted configured target, omitted inventory target, density wrapper weakened toTrue, hidden imported custom axiom, and wrong completed-block exponent. Read the JSON for exact gates and diagnostic reasons; structural/hash controls are distinct from actual Lean/comparator rejections.
+
+All42source/config/docs hashes in the successful report match the standalone package at this checkpoint. The exact meaning is density existence and symbolic representation for each fixed positive finite depth and unrestricted real corrections of the actual run window. No rate, higher-depth optimizer, full O3′ resolution, novelty, human refereeing or Collatz convergence is certified. Later documentation/metadata changes still require final-head regression; these historical source-pinned receipts do not claim every later tree passed.

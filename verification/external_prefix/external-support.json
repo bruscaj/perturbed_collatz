@@ -1,0 +1,173 @@
+{
+  "scope": "five abstract integer supporting theorems; no headline theorem",
+  "status": "passed supporting full assurance gates",
+  "mode": "full",
+  "steps": [
+    {
+      "label": "version",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "env",
+        "lean",
+        "--version"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.08,
+      "stdout": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)\n",
+      "stderr": ""
+    },
+    {
+      "label": "clean build",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "build"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 1.247,
+      "stdout": "\u2714 [2/5] Built Definitions (314ms)\n\u2714 [3/5] Built ExpectedTypes (301ms)\n\u2714 [4/5] Built Solution (494ms)\nBuild completed successfully (5 jobs).\n",
+      "stderr": ""
+    },
+    {
+      "label": "all supporting theorem closures and raw types",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Audit.lean"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 3.842,
+      "stdout": "All 34 module theorem closures checked, including helpers; no headline theorem audited.\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.closingFloorEquivalence._proof_1_5\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.floorDepthEquivalence._proof_1_5\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.closingFloorEquivalence._proof_1_6\"}\nEXTERNAL_HELPER {\"axioms\":[],\"declaration\":\"ExternalPrefixSpec.DepthBridge.eq_1\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.floorRaiseSoundness._proof_1_4\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.floorDepthEquivalence._proof_1_7\"}\nEXTERNAL_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.floorDepthEquivalence\",\"raw_type\":\"Lean.Expr.const `ExternalPrefixSpec.FloorDepthEquivalence []\",\"statement\":\"ExternalPrefixSpec.FloorDepthEquivalence\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.floorDepthEquivalence._proof_1_6\"}\nEXTERNAL_HELPER {\"axioms\":[],\"declaration\":\"ExternalPrefixSpec.RaiseEndpoint.eq_1\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.closingFloorEquivalence._proof_1_10\"}\nEXTERNAL_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.endpointInverses\",\"raw_type\":\"Lean.Expr.const `ExternalPrefixSpec.EndpointInverses []\",\"statement\":\"ExternalPrefixSpec.EndpointInverses\"}\nEXTERNAL_HELPER {\"axioms\":[],\"declaration\":\"ExternalPrefixSpec.FloorAdmissible.eq_1\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.floorRaiseSoundness._proof_1_2\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.endpointInverses._proof_1_3\"}\nEXTERNAL_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.depthInvolution\",\"raw_type\":\"Lean.Expr.const `ExternalPrefixSpec.DepthInvolution []\",\"statement\":\"ExternalPrefixSpec.DepthInvolution\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.closingFloorEquivalence._proof_1_4\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.floorDepthEquivalence._proof_1_4\"}\nEXTERNAL_HELPER {\"axioms\":[],\"declaration\":\"ExternalPrefixSpec.ClosingAdmissible.eq_1\"}\nEXTERNAL_HELPER {\"axioms\":[],\"declaration\":\"ExternalPrefixSpec.DepthOf.eq_1\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.floorDepthEquivalence._proof_1_9\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.depthInvolution._proof_1_2\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.closingFloorEquivalence._proof_1_7\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.floorRaiseSoundness._proof_1_3\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.endpointInverses._proof_1_5\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.floorDepthEquivalence._proof_1_11\"}\nEXTERNAL_HELPER {\"axioms\":[],\"declaration\":\"ExternalPrefixSpec.LowerEndpoint.eq_1\"}\nEXTERNAL_THEOREM {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.closingFloorEquivalence\",\"raw_type\":\"Lean.Expr.const `ExternalPrefixSpec.ClosingFloorEquivalence []\",\"statement\":\"ExternalPrefixSpec.ClosingFloorEquivalence\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.closingFloorEquivalence._proof_1_8\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.closingFloorEquivalence._proof_1_9\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.endpointInverses._proof_1_4\"}\nEXTERNAL_THEOREM {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.floorRaiseSoundness\",\"raw_type\":\"Lean.Expr.const `ExternalPrefixSpec.FloorRaiseSoundness []\",\"statement\":\"ExternalPrefixSpec.FloorRaiseSoundness\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.floorRaiseSoundness._proof_1_5\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.floorDepthEquivalence._proof_1_10\"}\nEXTERNAL_HELPER {\"axioms\":[\"propext\",\"Quot.sound\"],\"declaration\":\"ExternalPrefixChallenge.floorDepthEquivalence._proof_1_8\"}\n",
+      "stderr": ""
+    },
+    {
+      "label": "fresh source-bound proof closure export",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "env",
+        "leanexport",
+        "Solution",
+        "--",
+        "ExternalPrefixChallenge.closingFloorEquivalence",
+        "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_10",
+        "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_4",
+        "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_5",
+        "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_6",
+        "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_7",
+        "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_8",
+        "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_9",
+        "ExternalPrefixChallenge.depthInvolution",
+        "ExternalPrefixChallenge.depthInvolution._proof_1_2",
+        "ExternalPrefixChallenge.endpointInverses",
+        "ExternalPrefixChallenge.endpointInverses._proof_1_3",
+        "ExternalPrefixChallenge.endpointInverses._proof_1_4",
+        "ExternalPrefixChallenge.endpointInverses._proof_1_5",
+        "ExternalPrefixChallenge.floorDepthEquivalence",
+        "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_10",
+        "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_11",
+        "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_4",
+        "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_5",
+        "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_6",
+        "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_7",
+        "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_8",
+        "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_9",
+        "ExternalPrefixChallenge.floorRaiseSoundness",
+        "ExternalPrefixChallenge.floorRaiseSoundness._proof_1_2",
+        "ExternalPrefixChallenge.floorRaiseSoundness._proof_1_3",
+        "ExternalPrefixChallenge.floorRaiseSoundness._proof_1_4",
+        "ExternalPrefixChallenge.floorRaiseSoundness._proof_1_5",
+        "ExternalPrefixSpec.ClosingAdmissible.eq_1",
+        "ExternalPrefixSpec.DepthBridge.eq_1",
+        "ExternalPrefixSpec.DepthOf.eq_1",
+        "ExternalPrefixSpec.FloorAdmissible.eq_1",
+        "ExternalPrefixSpec.LowerEndpoint.eq_1",
+        "ExternalPrefixSpec.RaiseEndpoint.eq_1"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "roots": [
+        "ExternalPrefixChallenge.closingFloorEquivalence",
+        "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_10",
+        "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_4",
+        "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_5",
+        "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_6",
+        "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_7",
+        "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_8",
+        "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_9",
+        "ExternalPrefixChallenge.depthInvolution",
+        "ExternalPrefixChallenge.depthInvolution._proof_1_2",
+        "ExternalPrefixChallenge.endpointInverses",
+        "ExternalPrefixChallenge.endpointInverses._proof_1_3",
+        "ExternalPrefixChallenge.endpointInverses._proof_1_4",
+        "ExternalPrefixChallenge.endpointInverses._proof_1_5",
+        "ExternalPrefixChallenge.floorDepthEquivalence",
+        "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_10",
+        "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_11",
+        "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_4",
+        "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_5",
+        "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_6",
+        "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_7",
+        "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_8",
+        "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_9",
+        "ExternalPrefixChallenge.floorRaiseSoundness",
+        "ExternalPrefixChallenge.floorRaiseSoundness._proof_1_2",
+        "ExternalPrefixChallenge.floorRaiseSoundness._proof_1_3",
+        "ExternalPrefixChallenge.floorRaiseSoundness._proof_1_4",
+        "ExternalPrefixChallenge.floorRaiseSoundness._proof_1_5",
+        "ExternalPrefixSpec.ClosingAdmissible.eq_1",
+        "ExternalPrefixSpec.DepthBridge.eq_1",
+        "ExternalPrefixSpec.DepthOf.eq_1",
+        "ExternalPrefixSpec.FloorAdmissible.eq_1",
+        "ExternalPrefixSpec.LowerEndpoint.eq_1",
+        "ExternalPrefixSpec.RaiseEndpoint.eq_1"
+      ],
+      "bytes": 5666125,
+      "sha256": "3981a1e3d12b39369e44ab9b0a049ecc1e07aa0e3bbe291de409ef2f64f1166c",
+      "source_sha256": {
+        "Definitions.lean": "d7b5cd8b624dae007e3c3dc7f3620260dbfcf2169d0211b0859e18ed58180069",
+        "ExpectedTypes.lean": "d55c3e037f48506e2dd1d978ce09ae54862b0b5d89d78db8a454d10864631467",
+        "Solution.lean": "43270a9ae4ae6506ca90660b0d778ea2d11747fd81b941637a09e2bb6432ee8b",
+        "Challenge.lean": "94cb38f55761a0a2dfc753ce488d34d193bf516b87bdc40a4f12ca9cbd4f9722",
+        "comparator.json": "3923da70349b01aa1566e2dfadb675c29d3f3a241d831a85c5e43bbd25c16c68",
+        "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+        "lakefile.toml": "11aae22a3d667cb7dce2186d911fcafe003c722169a514dfbf8774ffee326ede",
+        "lake-manifest.json": "0b6b6c749b822c33fbe5448c36878252e931193fad5a92c71fe31b990959c5f9",
+        "Audit.lean": "6a0e1986b49bed6aa94ba5b87dc557121093693e05fcbda1f01d6b07b6b1e0ad"
+      }
+    },
+    {
+      "label": "fresh complete proof-closure replay and all bundled checkers",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "check",
+        "--from-export",
+        "/tmp/external-prefix-f0x5ntvq/project/supporting-proof-closure.ndjson",
+        "--paranoid"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 3.528,
+      "stdout": "Running Lean paranoid kernel on solution\nLean paranoid kernel accepts the solution\nRunning lean4lean kernel on solution\nchecked 1755 declarations\nlean4lean kernel accepts the solution\nRunning nanoda kernel on solution\nnanoda kernel accepts the solution\nRunning con-leche kernel on solution\ncon-leche: accepted 1758 declarations (--verified)\ncon-leche kernel accepts the solution\nRunning con-ron kernel on solution\ncon-ron: accepted 1758 declarations (--verified)\ncon-ron kernel accepts the solution\nRunning Lean default kernel on solution\nLean default kernel accepts the solution\nUses axioms: propext, Quot.sound, Classical.choice\n",
+      "stderr": "con-leche: 2 declarations hoisted ahead of the pinned Nat operations they ground: Nat.mul._f, Nat.mul\ncon-ron: 2 declarations hoisted ahead of the pinned Nat operations they ground: Nat.mul._f, Nat.mul\n"
+    },
+    {
+      "label": "frozen statement comparison and independent checker",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "comparator",
+        "--config",
+        "comparator.json",
+        "--paranoid"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 6.217,
+      "stdout": "Resolving dependencies\nBuilding Challenge\n\u26a0 [4/5] Built Challenge (286ms)\nwarning: Challenge.lean:11:8: declaration uses `sorry`\nwarning: Challenge.lean:14:8: declaration uses `sorry`\nwarning: Challenge.lean:17:8: declaration uses `sorry`\nwarning: Challenge.lean:20:8: declaration uses `sorry`\nwarning: Challenge.lean:23:8: declaration uses `sorry`\nBuild completed successfully (5 jobs).\nExporting #[Quot, Quot.mk, Quot.lift, Quot.ind, ExternalPrefixChallenge.floorDepthEquivalence, ExternalPrefixChallenge.depthInvolution, ExternalPrefixChallenge.closingFloorEquivalence, ExternalPrefixChallenge.floorRaiseSoundness, ExternalPrefixChallenge.endpointInverses, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge\nBuilding Solution\nBuild completed successfully (5 jobs).\nExporting #[Quot, Quot.mk, Quot.lift, Quot.ind, ExternalPrefixChallenge.floorDepthEquivalence, ExternalPrefixChallenge.depthInvolution, ExternalPrefixChallenge.closingFloorEquivalence, ExternalPrefixChallenge.floorRaiseSoundness, ExternalPrefixChallenge.endpointInverses, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution\nRunning nanoda kernel on solution\nnanoda kernel accepts the solution\nRunning Lean paranoid kernel on solution\nLean paranoid kernel accepts the solution\nRunning lean4lean kernel on solution\nchecked 1758 declarations\nlean4lean kernel accepts the solution\nRunning nanoda kernel on solution\nnanoda kernel accepts the solution\nRunning con-leche kernel on solution\ncon-leche: accepted 1761 declarations (--verified)\ncon-leche kernel accepts the solution\nRunning con-ron kernel on solution\ncon-ron: accepted 1761 declarations (--verified)\ncon-ron kernel accepts the solution\nRunning Lean default kernel on solution\nLean default kernel accepts the solution\nYour solution is okay!\n",
+      "stderr": "con-leche: 2 declarations hoisted ahead of the pinned Nat operations they ground: Nat.mul._f, Nat.mul\ncon-ron: 2 declarations hoisted ahead of the pinned Nat operations they ground: Nat.mul._f, Nat.mul\n"
+    }
+  ]
+}

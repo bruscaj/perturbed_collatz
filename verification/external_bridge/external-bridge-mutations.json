@@ -1,0 +1,253 @@
+{
+  "scope": "twenty-five frozen finite-word bridge, reward, bijection, maximum and count targets; no pressure or asymptotic claim",
+  "mode": "full",
+  "status": "passed bridge negative controls and positive full twenty-five-target pipeline",
+  "controls": [
+    {
+      "name": "positive letters weakened to allow zero",
+      "gate": "original source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen source digest mismatch: BridgeDefinitions.lean"
+    },
+    {
+      "name": "source ceiling endpoint replaced by floor",
+      "gate": "original source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen source digest mismatch: BridgeDefinitions.lean"
+    },
+    {
+      "name": "zero index inserted into strict rung records",
+      "gate": "original source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen source digest mismatch: BridgeDefinitions.lean"
+    },
+    {
+      "name": "source depth omits required last-letter lowering",
+      "gate": "original source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen source digest mismatch: BridgeDefinitions.lean"
+    },
+    {
+      "name": "literal reward rescaled by factor two",
+      "gate": "original source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen source digest mismatch: BridgeDefinitions.lean"
+    },
+    {
+      "name": "generic last-letter domain bound dropped",
+      "gate": "original source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen source digest mismatch: BridgeExpectedTypes.lean"
+    },
+    {
+      "name": "required finite population module dropped",
+      "gate": "original source/hash/coverage",
+      "result": "rejected",
+      "reason": "missing required module/config: BridgeFinite.lean"
+    },
+    {
+      "name": "configured target silently skipped",
+      "gate": "original source/hash/coverage",
+      "result": "rejected",
+      "reason": "configured target coverage mismatch: all twenty-five frozen targets are required"
+    },
+    {
+      "name": "inventory target silently skipped",
+      "gate": "original source/hash/coverage",
+      "result": "rejected",
+      "reason": "inventory target coverage mismatch: all twenty-five frozen targets are required"
+    },
+    {
+      "name": "frozen proposition silently skipped",
+      "gate": "original source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen proposition digest mismatch"
+    },
+    {
+      "name": "finite extremizer wrapper weakened to True",
+      "gate": "actual trusted elaborated statement comparator",
+      "result": "rejected",
+      "mutated_solution_sha256": "485bcb3a8b4465600e317981d13674a10943789fc7310f0abae87e2082ab8953"
+    },
+    {
+      "name": "hidden imported custom axiom",
+      "gate": "actual all-origin transitive axiom closure audit",
+      "result": "rejected",
+      "mutated_solution_sha256": "cb01ea978fb0fc10fc58ce87c7520f3c3404ca2633604b1eb100474229df4646",
+      "hidden_premise_sha256": "02d03eb45a90644abde9e14cf865cb9e15f9f093f831ce00d63ecfe608edae51"
+    },
+    {
+      "name": "production slope exponent two changed to one",
+      "gate": "actual Lean production theta_lt_two proof slice",
+      "result": "rejected",
+      "positive_source_sha256": "df4086a6cb9f9ea0ec3d05441fc967d11050ec4a5941a3dd26976f9a9c6cef5c",
+      "corrupt_source_sha256": "c7957bc0e68e11931ad6bf8ea504cee6246949dc989e4f6b8d49fb4d0f54d32e",
+      "exact_inequalities": "2^1 < 3 < 2^2"
+    }
+  ],
+  "commands": [
+    {
+      "label": "positive full twenty-five-target pipeline",
+      "command": [
+        "/usr/bin/python3",
+        "/tmp/bridge-negative-controls-0ijlgwu8/positive-full/verify.py",
+        "--mode",
+        "full",
+        "--report",
+        "/tmp/external-bridge-mutations-logs/positive-full.json",
+        "--dependency-cache",
+        "/home/runner/work/perturbed_collatz/perturbed_collatz/lean/external_bridge/.lake/packages"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/external-bridge-mutations-logs/000-positive-full-twenty-five-target-pipeline.log",
+      "expected_failure": false
+    },
+    {
+      "label": "wrong-statement positive compilation",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/external-bridge-mutations-logs/001-wrong-statement-positive-compilation.log",
+      "expected_failure": false
+    },
+    {
+      "label": "wrong statement rejected by actual comparator",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "comparator",
+        "--config",
+        "comparator.json",
+        "--paranoid"
+      ],
+      "exit_code": 1,
+      "log": "/tmp/external-bridge-mutations-logs/002-wrong-statement-rejected-by-actual-comparator.log",
+      "expected_failure": true,
+      "expected_exit_code": 1,
+      "rejection_reason_confirmed": true
+    },
+    {
+      "label": "custom-axiom positive compilation",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/external-bridge-mutations-logs/003-custom-axiom-positive-compilation.log",
+      "expected_failure": false
+    },
+    {
+      "label": "hidden imported custom axiom rejected by all-closure audit",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Audit.lean"
+      ],
+      "exit_code": 1,
+      "log": "/tmp/external-bridge-mutations-logs/004-hidden-imported-custom-axiom-rejected-by-all-closure-audit.log",
+      "expected_failure": true,
+      "expected_exit_code": 1,
+      "rejection_reason_confirmed": true
+    },
+    {
+      "label": "numeric source-slope prerequisites",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "build",
+        "RungTransfer",
+        "LogRatioIrrational"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/external-bridge-mutations-logs/005-numeric-source-slope-prerequisites.log",
+      "expected_failure": false
+    },
+    {
+      "label": "positive production source-slope proof",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "-R",
+        "/tmp/bridge-negative-controls-0ijlgwu8/corrupted-source-slope",
+        "/tmp/bridge-negative-controls-0ijlgwu8/corrupted-source-slope/SlopePositive.lean"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/external-bridge-mutations-logs/006-positive-production-source-slope-proof.log",
+      "expected_failure": false
+    },
+    {
+      "label": "corrupt slope bound rejected by actual production Lean proof",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "-R",
+        "/tmp/bridge-negative-controls-0ijlgwu8/corrupted-source-slope",
+        "/tmp/bridge-negative-controls-0ijlgwu8/corrupted-source-slope/SlopeCorrupt.lean"
+      ],
+      "exit_code": 1,
+      "log": "/tmp/external-bridge-mutations-logs/007-corrupt-slope-bound-rejected-by-actual-production-lean-proof.log",
+      "expected_failure": true,
+      "expected_exit_code": 1,
+      "rejection_reason_confirmed": true
+    }
+  ],
+  "finite_model_witnesses": {
+    "length_one": {
+      "source": [
+        2
+      ],
+      "floor": [
+        1
+      ],
+      "reward": "1",
+      "literal_closing_depth": -1,
+      "lowered_closing_depth": 0
+    },
+    "rung_one": {
+      "positive_earlier_indices": true,
+      "including_zero": false
+    },
+    "zero_length": {
+      "source_admissible": false,
+      "reward": "0"
+    },
+    "off_rung_two": {
+      "words": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "rewards": [
+        "5/3",
+        "7/3"
+      ],
+      "phase_zero_reference": "5/3",
+      "rung": false
+    },
+    "generic_half_slope": {
+      "theta": "1/2",
+      "length": 1,
+      "source_word": [
+        1
+      ],
+      "lowered_word": [
+        0
+      ],
+      "positive_after_lowering": false
+    },
+    "scope": "exact finite semantic witnesses, not infinite proofs or comparator controls"
+  },
+  "logs_directory": "/tmp/external-bridge-mutations-logs",
+  "positive_full_report": "/tmp/external-bridge-mutations-logs/positive-full.json"
+}

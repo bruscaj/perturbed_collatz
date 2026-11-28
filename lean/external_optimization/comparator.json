@@ -1,0 +1,32 @@
+{
+  "challenge_module": "OptimizationChallenge",
+  "solution_module": "OptimizationSolution",
+  "theorem_names": [
+    "ExternalO3OptimizationChallenge.genericStrictCycleCriterion",
+    "ExternalO3OptimizationChallenge.genericElementaryReduction",
+    "ExternalO3OptimizationChallenge.genericDeletionOptimum",
+    "ExternalO3OptimizationChallenge.vertexEncodingAndExtension",
+    "ExternalO3OptimizationChallenge.edgeEncodingAndWeights",
+    "ExternalO3OptimizationChallenge.naturalCycleSigns",
+    "ExternalO3OptimizationChallenge.commonDyadicDenominator",
+    "ExternalO3OptimizationChallenge.numeratorMinimumWellPosed",
+    "ExternalO3OptimizationChallenge.finiteOptimizationExact",
+    "ExternalO3OptimizationChallenge.truncationMassIdentity",
+    "ExternalO3OptimizationChallenge.discardedMassBound",
+    "ExternalO3OptimizationChallenge.literalInfimumSandwich",
+    "ExternalO3OptimizationChallenge.diagonalConvergence",
+    "ExternalO3OptimizationChallenge.computableExactOptimizer",
+    "ExternalO3OptimizationChallenge.computableDyadicApproximation"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "external_kernels": {
+    "nanoda": [
+      "nanoda_bin"
+    ]
+  }
+}

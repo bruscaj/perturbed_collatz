@@ -1,0 +1,42 @@
+{
+  "challenge_module": "BridgeChallenge",
+  "solution_module": "BridgeSolution",
+  "theorem_names": [
+    "ExternalFiniteBridgeChallenge.finiteWordPrefixEncoding",
+    "ExternalFiniteBridgeChallenge.abstractPrefixCompatibility",
+    "ExternalFiniteBridgeChallenge.defectBounds",
+    "ExternalFiniteBridgeChallenge.nonintegralEndpoint",
+    "ExternalFiniteBridgeChallenge.strictRungCaps",
+    "ExternalFiniteBridgeChallenge.unitFloorIncrements",
+    "ExternalFiniteBridgeChallenge.floorIncrementAlphabet",
+    "ExternalFiniteBridgeChallenge.sourceSlopeFacts",
+    "ExternalFiniteBridgeChallenge.sourceSlopeNonintegral",
+    "ExternalFiniteBridgeChallenge.sourceRungsUnbounded",
+    "ExternalFiniteBridgeChallenge.literalClosingDepth",
+    "ExternalFiniteBridgeChallenge.sourceLastLetterLowerable",
+    "ExternalFiniteBridgeChallenge.lowerRaiseTransport",
+    "ExternalFiniteBridgeChallenge.finitePopulations",
+    "ExternalFiniteBridgeChallenge.sourceFloorBijection",
+    "ExternalFiniteBridgeChallenge.sourceDepthBijection",
+    "ExternalFiniteBridgeChallenge.rewardEndpointInvariant",
+    "ExternalFiniteBridgeChallenge.rewardRealPower",
+    "ExternalFiniteBridgeChallenge.sourceDepthReward",
+    "ExternalFiniteBridgeChallenge.referenceAtRungs",
+    "ExternalFiniteBridgeChallenge.phaseZeroExtremizer",
+    "ExternalFiniteBridgeChallenge.uniqueExtremizer",
+    "ExternalFiniteBridgeChallenge.thresholdCountPreservation",
+    "ExternalFiniteBridgeChallenge.lengthOneBoundary",
+    "ExternalFiniteBridgeChallenge.zeroLengthConvention"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "external_kernels": {
+    "nanoda": [
+      "nanoda_bin"
+    ]
+  }
+}

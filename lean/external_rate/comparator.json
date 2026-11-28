@@ -1,0 +1,28 @@
+{
+  "challenge_module": "RateChallenge",
+  "solution_module": "RateSolution",
+  "theorem_names": [
+    "ExternalO3RateChallenge.infimumWellPosed",
+    "ExternalO3RateChallenge.markerSelectorLaw",
+    "ExternalO3RateChallenge.markerUpperBound",
+    "ExternalO3RateChallenge.historyWeightLaw",
+    "ExternalO3RateChallenge.cyclicNormalization",
+    "ExternalO3RateChallenge.cyclicTelescoping",
+    "ExternalO3RateChallenge.cyclicForcing",
+    "ExternalO3RateChallenge.cyclicDensityLowerBound",
+    "ExternalO3RateChallenge.positiveCycleMassLowerBound",
+    "ExternalO3RateChallenge.explicitInverseDepthRate",
+    "ExternalO3RateChallenge.infimumTendsToZero"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "external_kernels": {
+    "nanoda": [
+      "nanoda_bin"
+    ]
+  }
+}

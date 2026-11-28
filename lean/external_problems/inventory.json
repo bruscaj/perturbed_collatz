@@ -1,0 +1,250 @@
+{
+  "scope": "abstract integer supporting theorems only; no external headline proved",
+  "lean_version": "4.35.0",
+  "sources_sha256": {
+    "Definitions.lean": "d7b5cd8b624dae007e3c3dc7f3620260dbfcf2169d0211b0859e18ed58180069",
+    "ExpectedTypes.lean": "d55c3e037f48506e2dd1d978ce09ae54862b0b5d89d78db8a454d10864631467",
+    "Solution.lean": "43270a9ae4ae6506ca90660b0d778ea2d11747fd81b941637a09e2bb6432ee8b",
+    "Challenge.lean": "94cb38f55761a0a2dfc753ce488d34d193bf516b87bdc40a4f12ca9cbd4f9722",
+    "comparator.json": "3923da70349b01aa1566e2dfadb675c29d3f3a241d831a85c5e43bbd25c16c68",
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+    "lakefile.toml": "11aae22a3d667cb7dce2186d911fcafe003c722169a514dfbf8774ffee326ede",
+    "lake-manifest.json": "0b6b6c749b822c33fbe5448c36878252e931193fad5a92c71fe31b990959c5f9",
+    "Audit.lean": "6a0e1986b49bed6aa94ba5b87dc557121093693e05fcbda1f01d6b07b6b1e0ad"
+  },
+  "declarations": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.closingFloorEquivalence",
+      "raw_type": "Lean.Expr.const `ExternalPrefixSpec.ClosingFloorEquivalence []",
+      "statement": "ExternalPrefixSpec.ClosingFloorEquivalence"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.depthInvolution",
+      "raw_type": "Lean.Expr.const `ExternalPrefixSpec.DepthInvolution []",
+      "statement": "ExternalPrefixSpec.DepthInvolution"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.endpointInverses",
+      "raw_type": "Lean.Expr.const `ExternalPrefixSpec.EndpointInverses []",
+      "statement": "ExternalPrefixSpec.EndpointInverses"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.floorDepthEquivalence",
+      "raw_type": "Lean.Expr.const `ExternalPrefixSpec.FloorDepthEquivalence []",
+      "statement": "ExternalPrefixSpec.FloorDepthEquivalence"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.floorRaiseSoundness",
+      "raw_type": "Lean.Expr.const `ExternalPrefixSpec.FloorRaiseSoundness []",
+      "statement": "ExternalPrefixSpec.FloorRaiseSoundness"
+    }
+  ],
+  "generated_helpers": [
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_10"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_8"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.closingFloorEquivalence._proof_1_9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.depthInvolution._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.endpointInverses._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.endpointInverses._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.endpointInverses._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_10"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_11"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_5"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_6"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_7"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_8"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.floorDepthEquivalence._proof_1_9"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.floorRaiseSoundness._proof_1_2"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.floorRaiseSoundness._proof_1_3"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.floorRaiseSoundness._proof_1_4"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "ExternalPrefixChallenge.floorRaiseSoundness._proof_1_5"
+    },
+    {
+      "axioms": [],
+      "declaration": "ExternalPrefixSpec.ClosingAdmissible.eq_1"
+    },
+    {
+      "axioms": [],
+      "declaration": "ExternalPrefixSpec.DepthBridge.eq_1"
+    },
+    {
+      "axioms": [],
+      "declaration": "ExternalPrefixSpec.DepthOf.eq_1"
+    },
+    {
+      "axioms": [],
+      "declaration": "ExternalPrefixSpec.FloorAdmissible.eq_1"
+    },
+    {
+      "axioms": [],
+      "declaration": "ExternalPrefixSpec.LowerEndpoint.eq_1"
+    },
+    {
+      "axioms": [],
+      "declaration": "ExternalPrefixSpec.RaiseEndpoint.eq_1"
+    }
+  ]
+}

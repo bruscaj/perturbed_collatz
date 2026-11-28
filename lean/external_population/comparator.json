@@ -1,0 +1,39 @@
+{
+  "challenge_module": "GeneralChallenge",
+  "solution_module": "GeneralSolution",
+  "theorem_names": [
+    "ExternalO3GeneralChallenge.blocksWellDefined",
+    "ExternalO3GeneralChallenge.windowValidity",
+    "ExternalO3GeneralChallenge.windowTransport",
+    "ExternalO3GeneralChallenge.correctionRestriction",
+    "ExternalO3GeneralChallenge.fixedPointAndZero",
+    "ExternalO3GeneralChallenge.refinedCylinderClasses",
+    "ExternalO3GeneralChallenge.refinedCylinderDensities",
+    "ExternalO3GeneralChallenge.refinedLabelCell",
+    "ExternalO3GeneralChallenge.refinedWeightLaw",
+    "ExternalO3GeneralChallenge.refinementProjectionLaw",
+    "ExternalO3GeneralChallenge.coarseMarginalLaw",
+    "ExternalO3GeneralChallenge.weightLaw",
+    "ExternalO3GeneralChallenge.coordinateLaw",
+    "ExternalO3GeneralChallenge.labelRealizable",
+    "ExternalO3GeneralChallenge.literalGainIdentity",
+    "ExternalO3GeneralChallenge.cellStabilization",
+    "ExternalO3GeneralChallenge.selectedMassSummable",
+    "ExternalO3GeneralChallenge.densityExists",
+    "ExternalO3GeneralChallenge.densityEqualsSymbolic",
+    "ExternalO3GeneralChallenge.densityUnique",
+    "ExternalO3GeneralChallenge.sourceDensityEquivalence",
+    "ExternalO3GeneralChallenge.depthOneCompatibility"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "external_kernels": {
+    "nanoda": [
+      "nanoda_bin"
+    ]
+  }
+}

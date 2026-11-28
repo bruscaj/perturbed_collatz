@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-27",
+  "statement_review": "separate AI source/model reviewer; no human review",
+  "stage": "frozen before proof implementation",
+  "lean_target": "4.35.0",
+  "claims": "abstract integer supporting equivalences only",
+  "files": {
+    "Definitions.lean": {
+      "sha256": "d7b5cd8b624dae007e3c3dc7f3620260dbfcf2169d0211b0859e18ed58180069",
+      "bytes": 1373
+    },
+    "ExpectedTypes.lean": {
+      "sha256": "d55c3e037f48506e2dd1d978ce09ae54862b0b5d89d78db8a454d10864631467",
+      "bytes": 1183
+    },
+    "Challenge.lean": {
+      "sha256": "94cb38f55761a0a2dfc753ce488d34d193bf516b87bdc40a4f12ca9cbd4f9722",
+      "bytes": 675
+    },
+    "README.md": {
+      "sha256": "2c30c46998a161b2604033a3b7a1c19e4f995617535706c0a78b2c8c29d75eb3",
+      "bytes": 2880
+    }
+  },
+  "build_executed_by_reviewer": false,
+  "challenge_holes": [
+    "ExternalPrefixChallenge.floorDepthEquivalence",
+    "ExternalPrefixChallenge.depthInvolution",
+    "ExternalPrefixChallenge.closingFloorEquivalence",
+    "ExternalPrefixChallenge.floorRaiseSoundness",
+    "ExternalPrefixChallenge.endpointInverses"
+  ],
+  "accepted_proofs_must_not_import": "Challenge"
+}

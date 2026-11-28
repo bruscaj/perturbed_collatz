@@ -1,0 +1,183 @@
+{
+  "scope": "fourteen frozen O3 prime h=1 targets; not arbitrary-depth O3 prime",
+  "mode": "full",
+  "status": "passed h1 negative controls and positive full fourteen-target pipeline",
+  "controls": [
+    {
+      "name": "failure equality changed to strict",
+      "gate": "original source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen source digest mismatch: Definitions.lean"
+    },
+    {
+      "name": "odd-seed normalization factor changed",
+      "gate": "original source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen source digest mismatch: Definitions.lean"
+    },
+    {
+      "name": "corrections restricted to bounded functions",
+      "gate": "original source/hash/coverage",
+      "result": "rejected",
+      "reason": "original frozen source digest mismatch: Definitions.lean"
+    },
+    {
+      "name": "required nonattainment module dropped",
+      "gate": "original source/hash/coverage",
+      "result": "rejected",
+      "reason": "missing required module/config: DepthOneNonattainment.lean"
+    },
+    {
+      "name": "configured target silently skipped",
+      "gate": "original source/hash/coverage",
+      "result": "rejected",
+      "reason": "configured target coverage mismatch: all fourteen frozen targets are required"
+    },
+    {
+      "name": "inventory target silently skipped",
+      "gate": "original source/hash/coverage",
+      "result": "rejected",
+      "reason": "inventory target coverage mismatch: all fourteen frozen targets are required"
+    },
+    {
+      "name": "formula wrapper weakened to True",
+      "gate": "actual trusted elaborated statement comparator",
+      "result": "rejected",
+      "mutated_solution_sha256": "03c723cd684ecc7778178b2157eeeb6c1cc15dfa004548b9551f070b75de0e31"
+    },
+    {
+      "name": "hidden imported custom axiom",
+      "gate": "actual all-origin transitive axiom closure audit",
+      "result": "rejected",
+      "mutated_solution_sha256": "f2bfe8138b011f328c30a3bf19bfb059cd766b174475ceeb1de5ff8fef391914",
+      "hidden_premise_sha256": "c74b0b410eb2196dc3eb6569fdbc64918d0057c087f2b05a5ccf5b2255193020"
+    },
+    {
+      "name": "r1 floor certificate entry changed from 1 to 2",
+      "gate": "actual Lean production arithmetic checker",
+      "result": "rejected",
+      "positive_slice_sha256": "fba90e7ccc4e755769f80a9659d7d8edc0e3d0bb16c74379694df1f552567e54",
+      "corrupt_slice_sha256": "660a96ba501b591678147d67805bae591f0ce9a880179db2caccf5d5dbb02775"
+    }
+  ],
+  "commands": [
+    {
+      "label": "positive full fourteen-target pipeline",
+      "command": [
+        "/usr/bin/python3",
+        "/tmp/o3-h1-negative-controls-n1s2ag4b/positive-full/verify.py",
+        "--mode",
+        "full",
+        "--report",
+        "/tmp/external-analysis-mutations-logs/positive-full.json",
+        "--dependency-cache",
+        "/home/runner/work/perturbed_collatz/perturbed_collatz/lean/external_analysis/.lake/packages"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/external-analysis-mutations-logs/000-positive-full-fourteen-target-pipeline.log",
+      "expected_failure": false
+    },
+    {
+      "label": "wrong-statement positive compilation",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/external-analysis-mutations-logs/001-wrong-statement-positive-compilation.log",
+      "expected_failure": false
+    },
+    {
+      "label": "wrong statement rejected by actual comparator",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "comparator",
+        "--config",
+        "comparator.json",
+        "--paranoid"
+      ],
+      "exit_code": 1,
+      "log": "/tmp/external-analysis-mutations-logs/002-wrong-statement-rejected-by-actual-comparator.log",
+      "expected_failure": true,
+      "expected_exit_code": 1,
+      "rejection_reason_confirmed": true
+    },
+    {
+      "label": "custom-axiom positive compilation",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/external-analysis-mutations-logs/003-custom-axiom-positive-compilation.log",
+      "expected_failure": false
+    },
+    {
+      "label": "hidden imported custom axiom rejected by all-closure audit",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "Audit.lean"
+      ],
+      "exit_code": 1,
+      "log": "/tmp/external-analysis-mutations-logs/004-hidden-imported-custom-axiom-rejected-by-all-closure-audit.log",
+      "expected_failure": true,
+      "expected_exit_code": 1,
+      "rejection_reason_confirmed": true
+    },
+    {
+      "label": "numeric prerequisite series compilation",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "build",
+        "DepthOneSeries"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/external-analysis-mutations-logs/005-numeric-prerequisite-series-compilation.log",
+      "expected_failure": false
+    },
+    {
+      "label": "positive production numeric certificate slice",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "-R",
+        "/tmp/o3-h1-negative-controls-n1s2ag4b/corrupted-floor-certificate",
+        "/tmp/o3-h1-negative-controls-n1s2ag4b/corrupted-floor-certificate/FloorCertificatePositive.lean"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/external-analysis-mutations-logs/006-positive-production-numeric-certificate-slice.log",
+      "expected_failure": false
+    },
+    {
+      "label": "corrupted r1 floor rejected by actual Lean arithmetic proof",
+      "command": [
+        "/home/runner/work/_temp/lean-4.35.0-linux/bin/lake",
+        "env",
+        "lean",
+        "-DwarningAsError=true",
+        "-R",
+        "/tmp/o3-h1-negative-controls-n1s2ag4b/corrupted-floor-certificate",
+        "/tmp/o3-h1-negative-controls-n1s2ag4b/corrupted-floor-certificate/CorruptedFloor.lean"
+      ],
+      "exit_code": 1,
+      "log": "/tmp/external-analysis-mutations-logs/007-corrupted-r1-floor-rejected-by-actual-lean-arithmetic-proof.log",
+      "expected_failure": true,
+      "expected_exit_code": 1,
+      "rejection_reason_confirmed": true
+    }
+  ],
+  "symbolic_equality_fixture": {
+    "seed": 3,
+    "next_seed": 5,
+    "symbolic_ratio": "1",
+    "actual_ratio": "10/9",
+    "failure": true,
+    "scope": "one exact finite semantic witness"
+  },
+  "positive_full_report": "/tmp/external-analysis-mutations-logs/positive-full.json"
+}

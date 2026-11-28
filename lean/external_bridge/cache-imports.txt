@@ -1,0 +1,15 @@
+Mathlib.Algebra.Order.Archimedean.Real.Basic
+Mathlib.Analysis.SpecialFunctions.Log.Basic
+Mathlib.Analysis.SpecialFunctions.Pow.Real
+Mathlib.Analysis.SpecificLimits.Basic
+Mathlib.Data.Fintype.Card
+Mathlib.Data.Nat.PadicValNat
+Mathlib.Logic.Function.Iterate
+Mathlib.NumberTheory.DiophantineApproximation.Basic
+Mathlib.NumberTheory.Padics.PadicVal.Basic
+Mathlib.NumberTheory.Real.Irrational
+Mathlib.SetTheory.Cardinal.Finite
+Mathlib.Tactic.Linarith
+Mathlib.Topology.Algebra.InfiniteSum.Constructions
+Mathlib.Topology.Algebra.InfiniteSum.Real
+Mathlib.Topology.Algebra.InfiniteSum.Ring

@@ -1,0 +1,607 @@
+{
+  "status": "verified private audit of all9 successful source-pinned CI artifacts",
+  "run_id": 46133133418,
+  "source_commit": "f6311a62f0cbbca2980b01993d1549fca7ad89e0",
+  "source_tree": "3f5f87fc2a98455bfb3d416ac9bef00aeee47a8e",
+  "all_nine_jobs": "passed (API and full report evidence checked)",
+  "job_count": 9,
+  "legacy_checks": 45,
+  "source_tree_receipts": [
+    {
+      "archive": "external-support.zip",
+      "member": "external-source-tree.txt",
+      "sha256": "680a5fdaee96789ab6471f916d4670cbd1d5e8a4c8e7476d8f06bf67210cb1cf"
+    },
+    {
+      "archive": "external-analysis-h1.zip",
+      "member": "external-analysis-source-tree.txt",
+      "sha256": "680a5fdaee96789ab6471f916d4670cbd1d5e8a4c8e7476d8f06bf67210cb1cf"
+    },
+    {
+      "archive": "external-population.zip",
+      "member": "external-population-source-tree.txt",
+      "sha256": "680a5fdaee96789ab6471f916d4670cbd1d5e8a4c8e7476d8f06bf67210cb1cf"
+    },
+    {
+      "archive": "external-rate.zip",
+      "member": "external-rate-source-tree.txt",
+      "sha256": "680a5fdaee96789ab6471f916d4670cbd1d5e8a4c8e7476d8f06bf67210cb1cf"
+    },
+    {
+      "archive": "external-bridge.zip",
+      "member": "external-bridge-source-tree.txt",
+      "sha256": "680a5fdaee96789ab6471f916d4670cbd1d5e8a4c8e7476d8f06bf67210cb1cf"
+    },
+    {
+      "archive": "external-optimization.zip",
+      "member": "external-optimization-source-tree.txt",
+      "sha256": "680a5fdaee96789ab6471f916d4670cbd1d5e8a4c8e7476d8f06bf67210cb1cf"
+    },
+    {
+      "archive": "external-unrestricted.zip",
+      "member": "external-unrestricted-source-tree.txt",
+      "sha256": "680a5fdaee96789ab6471f916d4670cbd1d5e8a4c8e7476d8f06bf67210cb1cf"
+    },
+    {
+      "archive": "external-critical.zip",
+      "member": "external-critical-source-tree.txt",
+      "sha256": "680a5fdaee96789ab6471f916d4670cbd1d5e8a4c8e7476d8f06bf67210cb1cf"
+    }
+  ],
+  "archive_count": 9,
+  "archives": [
+    {
+      "artifact_id": 15259930398,
+      "original_name": "external-unrestricted-0722a63b6b2260f69487d1612f798b1ba23665b4",
+      "local_archive": "external-unrestricted.zip",
+      "zip_sha256": "8bb31370dc011162469f84814e1bae36437a1b23131e735be5fe07b87b67254a",
+      "bytes": 620041
+    },
+    {
+      "artifact_id": 15259726008,
+      "original_name": "release-verification-0722a63b6b2260f69487d1612f798b1ba23665b4",
+      "local_archive": "release-verification.zip",
+      "zip_sha256": "4baa1e473b74fb9609098f0796e82720582e5f5a031e4f16d40723989b1c4091",
+      "bytes": 1452
+    },
+    {
+      "artifact_id": 15259725385,
+      "original_name": "external-population-0722a63b6b2260f69487d1612f798b1ba23665b4",
+      "local_archive": "external-population.zip",
+      "zip_sha256": "747b54a6e12504f3d5922742e205f27801c8d53727d4eac850c85bd6ad506503",
+      "bytes": 840333
+    },
+    {
+      "artifact_id": 15259421820,
+      "original_name": "external-bridge-0722a63b6b2260f69487d1612f798b1ba23665b4",
+      "local_archive": "external-bridge.zip",
+      "zip_sha256": "b7019e411c6bb436f748b731cb4fd2fadd92e4083b8f4ca2836d6954daa971ec",
+      "bytes": 497520
+    },
+    {
+      "artifact_id": 15259412052,
+      "original_name": "external-critical-0722a63b6b2260f69487d1612f798b1ba23665b4",
+      "local_archive": "external-critical.zip",
+      "zip_sha256": "208279296404c4791260921590d20a3d237edcbdcfe40cfb9846f4a657c97673",
+      "bytes": 419318
+    },
+    {
+      "artifact_id": 15259286889,
+      "original_name": "external-analysis-h1-0722a63b6b2260f69487d1612f798b1ba23665b4",
+      "local_archive": "external-analysis-h1.zip",
+      "zip_sha256": "208ff9821da45f4adf6fe6076708a660d0fcde6731cab85f66a9fbb71cccfa08",
+      "bytes": 40645
+    },
+    {
+      "artifact_id": 15258948880,
+      "original_name": "external-rate-0722a63b6b2260f69487d1612f798b1ba23665b4",
+      "local_archive": "external-rate.zip",
+      "zip_sha256": "40d97909715fae7153453c47a0dfff1e05656a16f4c2b7d55320371d45b59d2d",
+      "bytes": 1437142
+    },
+    {
+      "artifact_id": 15258762679,
+      "original_name": "external-optimization-0722a63b6b2260f69487d1612f798b1ba23665b4",
+      "local_archive": "external-optimization.zip",
+      "zip_sha256": "a4a3fa4d254921adcd093f5b6e87b97482a1820daad1724fc4e588aef2fc6ea7",
+      "bytes": 1441131
+    },
+    {
+      "artifact_id": 15258538770,
+      "original_name": "external-support-0722a63b6b2260f69487d1612f798b1ba23665b4",
+      "local_archive": "external-support.zip",
+      "zip_sha256": "927af75014129ed940d8f29ab1f6ed81d0cd7a751385a5cdc0dc1f1f37906aa0",
+      "bytes": 5615
+    }
+  ],
+  "reports": {
+    "external-support.zip": {
+      "status": "passed supporting full assurance gates",
+      "targets": null,
+      "closures": null,
+      "modules": null,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 1755,
+          "con-leche": 1758,
+          "con-ron": 1758
+        },
+        "comparison": {
+          "lean4lean": 1758,
+          "con-leche": 1761,
+          "con-ron": 1761
+        }
+      },
+      "export_bytes": 5666125,
+      "export_sha256": "3981a1e3d12b39369e44ab9b0a049ecc1e07aa0e3bbe291de409ef2f64f1166c",
+      "source_files": 9
+    },
+    "external-analysis-h1.zip": {
+      "status": "passed h1 full assurance gates",
+      "targets": 14,
+      "closures": 397,
+      "modules": 24,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 18711,
+          "con-leche": 18714,
+          "con-ron": 18714
+        },
+        "comparison": {
+          "lean4lean": 18601,
+          "con-leche": 18604,
+          "con-ron": 18604
+        }
+      },
+      "export_bytes": 92266265,
+      "export_sha256": "665fbfa13ce5b261d8e510995e23370aa1381d14802a397d56ac91e976cf72e6",
+      "source_files": 37
+    },
+    "external-population.zip": {
+      "status": "passed population full assurance gates",
+      "targets": 22,
+      "closures": 517,
+      "modules": 28,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 18872,
+          "con-leche": 18875,
+          "con-ron": 18875
+        },
+        "comparison": {
+          "lean4lean": 18665,
+          "con-leche": 18668,
+          "con-ron": 18668
+        }
+      },
+      "export_bytes": 87933275,
+      "export_sha256": "e2c0bffeb744af576ef4d7a5fa6a94bf7946e58c68f749e78b41b8d521d67261",
+      "source_files": 42
+    },
+    "external-rate.zip": {
+      "status": "passed rate full assurance gates",
+      "targets": 11,
+      "closures": 765,
+      "modules": 45,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 20213,
+          "con-leche": 20216,
+          "con-ron": 20216
+        },
+        "comparison": {
+          "lean4lean": 19841,
+          "con-leche": 19844,
+          "con-ron": 19844
+        }
+      },
+      "export_bytes": 97940365,
+      "export_sha256": "2a3f8fb539863d1afe9593cbb08764ec64efbd6cb75cc43aa6a598783b9e9d27",
+      "source_files": 58
+    },
+    "external-bridge.zip": {
+      "status": "passed bridge full assurance gates",
+      "targets": 25,
+      "closures": 357,
+      "modules": 22,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 19502,
+          "con-leche": 19505,
+          "con-ron": 19505
+        },
+        "comparison": {
+          "lean4lean": 18144,
+          "con-leche": 18147,
+          "con-ron": 18147
+        }
+      },
+      "export_bytes": 90298852,
+      "export_sha256": "aad6205b2878bca92643c50d84a8e03a4a99d2f244954e970f8e74aac50f56f3",
+      "source_files": 36
+    },
+    "external-optimization.zip": {
+      "status": "passed optimization full assurance gates",
+      "targets": 15,
+      "closures": 952,
+      "modules": 49,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 20912,
+          "con-leche": 20915,
+          "con-ron": 20915
+        },
+        "comparison": {
+          "lean4lean": 20447,
+          "con-leche": 20450,
+          "con-ron": 20450
+        }
+      },
+      "export_bytes": 103158206,
+      "export_sha256": "1bb90a10488f0a22e713b19b2a2d2e2fd728ce33f6101fd950b54901aa9ea01c",
+      "source_files": 63
+    },
+    "external-unrestricted.zip": {
+      "status": "passed unrestricted full assurance gates",
+      "targets": 23,
+      "closures": 504,
+      "modules": 32,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 21030,
+          "con-leche": 21033,
+          "con-ron": 21033
+        },
+        "comparison": {
+          "lean4lean": 19585,
+          "con-leche": 19588,
+          "con-ron": 19588
+        }
+      },
+      "export_bytes": 100676623,
+      "export_sha256": "c97c4eb4b09f8f313e1c019e488076791aa4d013cb332ce1b83877f895c64331",
+      "source_files": 48
+    },
+    "external-critical.zip": {
+      "status": "passed critical full assurance gates",
+      "targets": 12,
+      "closures": 391,
+      "modules": 21,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 39224,
+          "con-leche": 39227,
+          "con-ron": 39227
+        },
+        "comparison": {
+          "lean4lean": 39057,
+          "con-leche": 39060,
+          "con-ron": 39060
+        }
+      },
+      "export_bytes": 224287018,
+      "export_sha256": "b3e345753794d51caa6a80d7d4543110628d789ec62c61630d94204f9a87bd43",
+      "source_files": 37
+    }
+  },
+  "control_counts": {
+    "external-support.zip": 4,
+    "external-analysis-h1.zip": 9,
+    "external-population.zip": 9,
+    "external-rate.zip": 10,
+    "external-bridge.zip": 13,
+    "external-optimization.zip": 18,
+    "external-unrestricted.zip": 21,
+    "external-critical.zip": 18
+  },
+  "source_pin_checks": [
+    {
+      "project": "external_problems",
+      "files": 9,
+      "all_worktree_and_gitf631_bytes_match": true
+    },
+    {
+      "project": "external_analysis",
+      "files": 37,
+      "all_worktree_and_gitf631_bytes_match": true
+    },
+    {
+      "project": "external_population",
+      "files": 42,
+      "all_worktree_and_gitf631_bytes_match": true
+    },
+    {
+      "project": "external_rate",
+      "files": 58,
+      "all_worktree_and_gitf631_bytes_match": true
+    },
+    {
+      "project": "external_bridge",
+      "files": 36,
+      "all_worktree_and_gitf631_bytes_match": true
+    },
+    {
+      "project": "external_optimization",
+      "files": 63,
+      "all_worktree_and_gitf631_bytes_match": true
+    },
+    {
+      "project": "external_unrestricted",
+      "files": 48,
+      "all_worktree_and_gitf631_bytes_match": true
+    },
+    {
+      "project": "external_critical",
+      "files": 37,
+      "all_worktree_and_gitf631_bytes_match": true
+    }
+  ],
+  "critical": {
+    "targets": 12,
+    "model_origin_entries": 32,
+    "opaque_null_model_entries": 8,
+    "owned_declarations": 391,
+    "owned_modules": 21,
+    "source_files": 37,
+    "canonical_math_sources_exact": 20,
+    "canonical_raw_meanings_exact": true,
+    "full_raw_audit_and_export_roots_exact": true,
+    "standard_axioms_only": true,
+    "positive_full_pipeline": {
+      "status": "passed critical full assurance gates",
+      "targets": 12,
+      "closures": 391,
+      "modules": 21,
+      "checker_coverage": {
+        "replay": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ],
+        "comparison": [
+          "Lean default",
+          "Lean paranoid",
+          "lean4lean",
+          "nanoda",
+          "con-leche",
+          "con-ron"
+        ]
+      },
+      "checker_declarations": {
+        "replay": {
+          "lean4lean": 39224,
+          "con-leche": 39227,
+          "con-ron": 39227
+        },
+        "comparison": {
+          "lean4lean": 39057,
+          "con-leche": 39060,
+          "con-ron": 39060
+        }
+      },
+      "export_bytes": 224287018,
+      "export_sha256": "b3e345753794d51caa6a80d7d4543110628d789ec62c61630d94204f9a87bd43",
+      "source_files": 37
+    },
+    "positive_report_sha256": "c2aa6d38e1b6e9692ee2b27a52624dbf7f5c4ab1e8a72675df6dbc2dd53780ed",
+    "hostile_controls": 18,
+    "source_coverage_controls": 15,
+    "actual_semantic_rejections": [
+      {
+        "label": "wrong-wrapper-comparator",
+        "reason": [
+          "do not match"
+        ],
+        "log_sha256": "ae4a0a36b61373a47d62c049e7285eced8ada37b0a53e695fb78fd9dde4747a7"
+      },
+      {
+        "label": "hidden-axiom-audit",
+        "reason": [
+          "Forbidden axiom BadPremise.hiddenTopology",
+          "ExternalCriticalSupportChallenge.space_topology"
+        ],
+        "log_sha256": "7dc95b90e8eb3d355b761b23c883f6a89a901471a0d75e26dfb3f5981bdc52ec"
+      },
+      {
+        "label": "literal-shift-corrupt",
+        "reason": [
+          "unsolved goals"
+        ],
+        "log_sha256": "e8ee6e8ee49993ea658367b4f89ef7c61bff3ac4db84f3dd209a0c5d73083c6a"
+      }
+    ],
+    "fixture_files_checked": 6,
+    "fixture_digests": [
+      {
+        "command": "wrong-wrapper-comparator",
+        "name": "CriticalSolution.lean",
+        "source_sha256": "1cd16c7ed26eaecd14cb510b37235577ce274f3686160f199b39882287067e4c"
+      },
+      {
+        "command": "wrong-wrapper-comparator",
+        "name": "CriticalChallenge.lean",
+        "source_sha256": "c05082f91b7b98b292331482ab0cc2f109b4fb674a46bbc0981c658ce2b977fd"
+      },
+      {
+        "command": "hidden-axiom-audit",
+        "name": "CriticalSolution.lean",
+        "source_sha256": "b47f3b71bf1031baac4174f2315b88961c787aeafe199d3abe3f889be85d9eac"
+      },
+      {
+        "command": "hidden-axiom-audit",
+        "name": "BadPremise.lean",
+        "source_sha256": "c1367e552fa20b0aae7186a92c0f28680373c7ba9b3ede3e34c074bd99d3c8c8"
+      },
+      {
+        "command": "literal-shift-positive",
+        "name": "ShiftPositive.lean",
+        "source_sha256": "7f2b54de02b2516fd6a4f7074966b850cc4fce4d289b489cf3166970205eb5e5"
+      },
+      {
+        "command": "literal-shift-corrupt",
+        "name": "ShiftCorrupt.lean",
+        "source_sha256": "279d9dd10912715548df00098cf509fa0714343c021c6051ec6f6d29e59ea3bc"
+      }
+    ],
+    "source_inventory_sha256": "2e6736ef4be97310ab8118eb44a62668b201ae947d8123a600f2d0addc223382",
+    "limits": [
+      "Twelve support meanings only; no actual limiting Gibbs law, critical C01-C08 or M4/R8/R9 completion.",
+      "Complete224287018byte NDJSON is not archived; its digest/source-root binding and actual CI acceptance are checked."
+    ]
+  },
+  "api_metadata_sha256": "542e64418d658c4509551631a2679abe5ab3049844c45618527e94ef8b40a51f",
+  "downloads_manifest_sha256": "2876b73c03cbf94c88d928a7b001e43a5118525514fd101b13e19969c9415be3",
+  "artifact_name_note": "0722a63b6b2260f69487d1612f798b1ba23665b4 is the synthetic event suffix; sourcef631 and its tree are independently recorded in eight tree receipts and all9 API artifacts.",
+  "scope": "Source-pinned independent CI artifact evidence. Full critical C01-C08, M4/R8/R9 analytic conclusions remain incomplete. Later heads require their own regression.",
+  "review_limits": [
+    "AI source/packaging/review roles overlap; no human expert, novelty or source-author endorsement.",
+    "Original complete proof export is reproducible but not archived; actual complete replay/comparison acceptance and its source-root/hash binding are preserved in the original ZIP reports."
+  ]
+}

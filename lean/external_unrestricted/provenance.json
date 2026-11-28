@@ -1,0 +1,13 @@
+{
+  "written_predecessor": "private written predecessor, curated for the owner-authorized public release",
+  "written_predecessor_sha256": "ab3fa2d65f83dc88c61766aecc213094b57b4a178e5669cbad4a97a68cf01ea7",
+  "public_companion_sha256": "a28288c0524978a16c4cb65bfc5f29927250024221ab8b4cfb6ab8377029918d",
+  "substitutions": [
+    "Candidate-era status updated to distinguish private ordinary23pass from pending publicfullgates",
+    "Pinned primary chapter links replace plain private source locators",
+    "Added selected-subtype finiteness,r0,positivecomposition injection,2^(2r) bound and real liminf/limsup proof",
+    "Added23exacttarget roots across7modules and explicit final conditional-helper discharges",
+    "Added public-local specification/module/verifier links and source-model/assurance limitations"
+  ],
+  "proof_search_chronology": "Written argument and exact finite diagnostics preceded freeze; formal targets frozen before accepted implementation; no independent human/priority claim"
+}

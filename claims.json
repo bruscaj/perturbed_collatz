@@ -678,6 +678,530 @@
         "relationship": "Development for this fixed periodic word.",
         "transfer_limit": "Other forcing words require their own entry or phase certificates."
       }
+    },
+    {
+      "id": "REL-EXT-M4",
+      "title": "M4 external research candidate",
+      "evidence_status": "draft analytic candidate; finite foundations passed full historical machine gates",
+      "artifacts": [
+        "papers/external_problems/README.md",
+        "papers/external_problems/status.json",
+        "certificates/external_problems/verify.py"
+      ],
+      "lean_coverage": "Five abstract prefix/depth lemmas and all25 finite bridge targets/357 closures passed full independent machine gates at the historical b5 snapshot. The analytic headline remains unformalized.",
+      "lean_declarations": [],
+      "limitations": "The intended rung-only entropy limit and certified entropy table remain unresolved. The separate all-length c=1 fixed-B_r extension is not an unqualified refutation of intended M4.",
+      "literature": {
+        "citation_keys": [],
+        "relationship": "Candidate response to Polson\u2013Sokolov edition 1 v1.4.0; no priority assertion.",
+        "source_commit": "5840497a23fc0d64127b850aea68862d7c93f2b7",
+        "transfer_limit": "No implication to ordinary Collatz convergence or all-seed forced capture."
+      },
+      "status_fields": {
+        "problem": "M4",
+        "id": "EXT-M4",
+        "status": "draft candidate",
+        "target": "rung entropy limit and computable characterization",
+        "written_proof": "reconstructed in internal AI audit; no headline acceptance gate passed",
+        "finite_computation": "fresh exact finite model checks only; see certificates/external_problems",
+        "headline_formal_declarations": [],
+        "formal_support": "Five abstract prefix/depth lemmas and all25 finite bridge targets/357 closures passed full independent machine gates at the historical b5 snapshot. The analytic headline remains unformalized.",
+        "headline_checker_coverage": "none",
+        "review": "separate AI reconstruction, source and adversarial contexts; no human expert refereeing",
+        "literature_priority": "source matched with M4 interpretation split; targeted search only; no novelty or acceptance assertion",
+        "limitations": "The intended rung-only entropy limit and certified entropy table remain unresolved. The separate all-length c=1 fixed-B_r extension is not an unqualified refutation of intended M4.",
+        "finite_bridge_foundation": {
+          "project": "lean/external_bridge",
+          "targets": 25,
+          "closures": 357,
+          "scope": "finite source words, actual rungs, exact bijections/reward/finite counts and unique extremizer; no analytic limit",
+          "assurance": "full machine gates passed at the historical b5 snapshot; no analytic headline theorem",
+          "source_commit": "b5dcda3404b14b43e1985c2e31219ce811e46881",
+          "source_tree": "76ee312e9f756a0dceba6ea3d900dd81b7858168",
+          "assurance_receipt": "verification/external_optimization/CI_ARTIFACTS.json",
+          "analytic_headline_proved": false
+        },
+        "unrestricted_fixed_reference_c1_extension": {
+          "project": "lean/external_unrestricted",
+          "targets": 23,
+          "closures": 504,
+          "status": "full independent machine gates passed at the historical739 snapshot",
+          "scope": "all-length c=1 ordered source count at fixed B_r: liminf0, limsup at least log10(2)/8 and no all-length limit; separate from intended rung-only M4 and phase-adapted N*",
+          "intended_m4_solved": false,
+          "assurance": {
+            "source_commit": "739a4f508f77c95d874fb44ef9785088dc2b852f",
+            "source_tree": "4dd0dfbc8e8c440453cc80167969c1f7c5134f10",
+            "run_id": 46119220218,
+            "receipt": "verification/external_unrestricted/CI_ARTIFACTS.json",
+            "scope": "23 frozen targets,13 model bodies,504 closures, six modes in replay/comparison, positive full rerun and21 controls; distinct c1 extension only"
+          }
+        }
+      }
+    },
+    {
+      "id": "REL-EXT-R8",
+      "title": "R8 external research candidate",
+      "evidence_status": "draft analytic candidate; finite foundations passed full historical machine gates",
+      "artifacts": [
+        "papers/external_problems/README.md",
+        "papers/external_problems/status.json",
+        "certificates/external_problems/verify.py"
+      ],
+      "lean_coverage": "Five abstract prefix/depth lemmas and all25 finite bridge targets/357 closures passed full independent machine gates at the historical b5 snapshot. The analytic headline remains unformalized.",
+      "lean_declarations": [],
+      "limitations": "Full critical stationary Gibbs-law argument and all analytic prerequisites require full formalization.",
+      "literature": {
+        "citation_keys": [],
+        "relationship": "Candidate response to Polson\u2013Sokolov edition 1 v1.4.0; no priority assertion.",
+        "source_commit": "5840497a23fc0d64127b850aea68862d7c93f2b7",
+        "transfer_limit": "No implication to ordinary Collatz convergence or all-seed forced capture."
+      },
+      "status_fields": {
+        "problem": "R8",
+        "id": "EXT-R8",
+        "status": "draft candidate",
+        "target": "rung pressure convergence and differentiability for every nonnegative tilt",
+        "written_proof": "reconstructed in internal AI audit; no headline acceptance gate passed",
+        "finite_computation": "fresh exact finite model checks only; see certificates/external_problems",
+        "headline_formal_declarations": [],
+        "formal_support": "Five abstract prefix/depth lemmas and all25 finite bridge targets/357 closures passed full independent machine gates at the historical b5 snapshot. The analytic headline remains unformalized.",
+        "headline_checker_coverage": "none",
+        "review": "separate AI reconstruction, source and adversarial contexts; no human expert refereeing",
+        "literature_priority": "source matched with M4 interpretation split; targeted search only; no novelty or acceptance assertion",
+        "limitations": "Full critical stationary Gibbs-law argument and all analytic prerequisites require full formalization.",
+        "finite_bridge_foundation": {
+          "project": "lean/external_bridge",
+          "targets": 25,
+          "closures": 357,
+          "scope": "finite source words, actual rungs, exact bijections/reward/finite counts and unique extremizer; no analytic limit",
+          "assurance": "full machine gates passed at the historical b5 snapshot; no analytic headline theorem",
+          "source_commit": "b5dcda3404b14b43e1985c2e31219ce811e46881",
+          "source_tree": "76ee312e9f756a0dceba6ea3d900dd81b7858168",
+          "assurance_receipt": "verification/external_optimization/CI_ARTIFACTS.json",
+          "analytic_headline_proved": false
+        }
+      }
+    },
+    {
+      "id": "REL-EXT-R9",
+      "title": "R9 external research candidate",
+      "evidence_status": "draft analytic candidate; finite foundations passed full historical machine gates",
+      "artifacts": [
+        "papers/external_problems/README.md",
+        "papers/external_problems/status.json",
+        "certificates/external_problems/verify.py"
+      ],
+      "lean_coverage": "Five abstract prefix/depth lemmas and all25 finite bridge targets/357 closures passed full independent machine gates at the historical b5 snapshot. The analytic headline remains unformalized.",
+      "lean_declarations": [],
+      "limitations": "Existence, matching microcanonical lower bound, uniform large-tilt estimates and ordered limits require full proof assurance.",
+      "literature": {
+        "citation_keys": [],
+        "relationship": "Candidate response to Polson\u2013Sokolov edition 1 v1.4.0; no priority assertion.",
+        "source_commit": "5840497a23fc0d64127b850aea68862d7c93f2b7",
+        "transfer_limit": "No implication to ordinary Collatz convergence or all-seed forced capture."
+      },
+      "status_fields": {
+        "problem": "R9",
+        "id": "EXT-R9",
+        "status": "draft candidate",
+        "target": "near-maximal rung entropy asymptotic",
+        "written_proof": "reconstructed in internal AI audit; no headline acceptance gate passed",
+        "finite_computation": "fresh exact finite model checks only; see certificates/external_problems",
+        "headline_formal_declarations": [],
+        "formal_support": "Five abstract prefix/depth lemmas and all25 finite bridge targets/357 closures passed full independent machine gates at the historical b5 snapshot. The analytic headline remains unformalized.",
+        "headline_checker_coverage": "none",
+        "review": "separate AI reconstruction, source and adversarial contexts; no human expert refereeing",
+        "literature_priority": "source matched with M4 interpretation split; targeted search only; no novelty or acceptance assertion",
+        "limitations": "Existence, matching microcanonical lower bound, uniform large-tilt estimates and ordered limits require full proof assurance.",
+        "finite_bridge_foundation": {
+          "project": "lean/external_bridge",
+          "targets": 25,
+          "closures": 357,
+          "scope": "finite source words, actual rungs, exact bijections/reward/finite counts and unique extremizer; no analytic limit",
+          "assurance": "full machine gates passed at the historical b5 snapshot; no analytic headline theorem",
+          "source_commit": "b5dcda3404b14b43e1985c2e31219ce811e46881",
+          "source_tree": "76ee312e9f756a0dceba6ea3d900dd81b7858168",
+          "assurance_receipt": "verification/external_optimization/CI_ARTIFACTS.json",
+          "analytic_headline_proved": false
+        }
+      }
+    },
+    {
+      "id": "REL-EXT-O3PRIME",
+      "title": "Run-length-only O3\u2032: computable infima, vanishing and inverse-depth rate",
+      "evidence_status": "machine-checked algorithmic answer for the stated run-length-only class",
+      "artifacts": [
+        "papers/external_problems/README.md",
+        "papers/external_problems/status.json",
+        "certificates/external_problems/verify.py"
+      ],
+      "lean_coverage": "At historical b5 snapshot: h1 all14/397 closures, arbitrary-depth density all22/517, required rate all11/765, finite optimization and genuine computable approximation all15/952; all seven mandatory CI jobs passed.",
+      "lean_declarations": [
+        "ExternalO3OptimizationChallenge.computableDyadicApproximation",
+        "ExternalO3RateChallenge.infimumTendsToZero",
+        "ExternalO3RateChallenge.explicitInverseDepthRate"
+      ],
+      "limitations": "No closed-form general-depth values, practical evaluated higher-depth table, efficient runtime, general-depth attainment, sharp leading constant or optional stronger liminf is established. Exit-valuation/full-pair, arbitrary-digit, launch-integer and infinite-window information classes, M4/R8/R9 analytic limits and all-seed Collatz capture are excluded.",
+      "literature": {
+        "citation_keys": [],
+        "relationship": "Algorithmic answer to the three stated requests for the pinned run-length-only O3\u2032 class; no novelty, priority or external acceptance assertion.",
+        "source_commit": "5840497a23fc0d64127b850aea68862d7c93f2b7",
+        "transfer_limit": "No implication to ordinary Collatz convergence or all-seed forced capture."
+      },
+      "status_fields": {
+        "problem": "O3\u2032",
+        "id": "EXT-O3PRIME",
+        "status": "machine-checked algorithmic answer for the stated run-length-only class",
+        "target": "Uniform certified determination of every finite-depth literal failure-density infimum, vanishing limit and Theta(1/h) decay order",
+        "written_proof": "Self-contained public density, depth-one, rate and optimization companions; source-to-result AI review matches the three explicit requests for this exact information class.",
+        "finite_computation": "fresh exact finite model checks only; see certificates/external_problems",
+        "headline_formal_declarations": [
+          "ExternalO3OptimizationChallenge.computableDyadicApproximation",
+          "ExternalO3RateChallenge.infimumTendsToZero",
+          "ExternalO3RateChallenge.explicitInverseDepthRate"
+        ],
+        "formal_support": "At historical b5 snapshot: h1 all14/397 closures, arbitrary-depth density all22/517, required rate all11/765, finite optimization and genuine computable approximation all15/952; all seven mandatory CI jobs passed.",
+        "headline_checker_coverage": "Both complete proof-closure replay and frozen-statement comparison passed Lean default, Lean paranoid, lean4lean, nanoda, con-leche and con-ron; optimization18 hostile controls passed after a fresh full positive pipeline.",
+        "review": "Source/conclusion and adversarial reviews used separate AI roles with substantial implementation overlap; no independent human expert refereeing, source-author endorsement or novelty certification.",
+        "literature_priority": "Exact source class and three explicit requests matched; classical finite potential/cycle criterion attributed to the source book; no novelty, priority or external acceptance assertion.",
+        "limitations": "No closed-form general-depth values, practical evaluated higher-depth table, efficient runtime, general-depth attainment, sharp leading constant or optional stronger liminf is established. Exit-valuation/full-pair, arbitrary-digit, launch-integer and infinite-window information classes, M4/R8/R9 analytic limits and all-seed Collatz capture are excluded.",
+        "proved_subquestion": {
+          "scope": "h=1 only, every arbitrary real correction of current remaining block length",
+          "declarations": [
+            "ExternalO3Challenge.blockLengthLaw",
+            "ExternalO3Challenge.correctionZeroIrrelevant",
+            "ExternalO3Challenge.densityEqualsSymbolic",
+            "ExternalO3Challenge.densityExists",
+            "ExternalO3Challenge.densityUnique",
+            "ExternalO3Challenge.depthOneFormula",
+            "ExternalO3Challenge.depthOneNotAttained",
+            "ExternalO3Challenge.depthOneSeriesSummable",
+            "ExternalO3Challenge.depthOneTail",
+            "ExternalO3Challenge.fixedPointConvention",
+            "ExternalO3Challenge.infimumWellPosed",
+            "ExternalO3Challenge.sourceDensityEquivalence",
+            "ExternalO3Challenge.symbolicMassSummable",
+            "ExternalO3Challenge.valuationFoundation"
+          ],
+          "assurance_receipt": "verification/external_analysis/README.md",
+          "source_commit": "8524770758f66940b1112ad13daa408d594c19f5",
+          "assurance": "clean build, complete axiom audit, source-bound sandbox replay, frozen comparison, six checker modes and nine hostile fixtures passed"
+        },
+        "proved_density_foundation": {
+          "scope": "every fixed finite positive depth, unrestricted real correction of the actual current/future run window",
+          "formal_project": "lean/external_population",
+          "target_count": 22,
+          "assurance": "full source-bound replay/comparator/six checker modes/nine hostile controls passed at8746e08; verification/external_population/README.md",
+          "remaining": "The finite optimization/truncation and computable approximation are now proved in their separate package. General-depth attainment, closed forms and sharp leading constant remain separate questions."
+        },
+        "rate_source_proofs": {
+          "scope": "all eleven required pre-proof-frozen rate targets, actual literal infimum and unconditional vanishing limit",
+          "formal_project": "lean/external_rate",
+          "declarations": [
+            "ExternalO3RateChallenge.infimumWellPosed",
+            "ExternalO3RateChallenge.markerSelectorLaw",
+            "ExternalO3RateChallenge.markerUpperBound",
+            "ExternalO3RateChallenge.historyWeightLaw",
+            "ExternalO3RateChallenge.cyclicNormalization",
+            "ExternalO3RateChallenge.cyclicTelescoping",
+            "ExternalO3RateChallenge.cyclicForcing",
+            "ExternalO3RateChallenge.cyclicDensityLowerBound",
+            "ExternalO3RateChallenge.positiveCycleMassLowerBound",
+            "ExternalO3RateChallenge.explicitInverseDepthRate",
+            "ExternalO3RateChallenge.infimumTendsToZero"
+          ],
+          "assurance": "All11 required targets/765 closures, full replay/comparator/six checker modes and ten hostile controls passed at1406f1a/run46101939355; verification/external_rate/README.md",
+          "optional_stronger_liminf": "unproved and excluded from required eleven-target claim",
+          "source_commit": "1406f1a5afe211d69f03238e1444bc6a14b9b407",
+          "assurance_receipt": "verification/external_rate/README.md"
+        },
+        "status_note": "For the stated run-length-only class, uniform certified rational brackets determine the infimum algorithmically, and its literal odd-seed values tend to zero at order1/h. This source-to-result conclusion is distinct from novelty or human acceptance.",
+        "source_class": {
+          "information": "current remaining block length and next h-1 full block lengths after actual successive block exits",
+          "correction": "arbitrary real function on positive h-tuples; no boundedness, regularity, computability or integrability restriction",
+          "failure": "comparison at the next Syracuse stride; equality is failure",
+          "population": "relative natural density among positive odd initial seeds, for each fixed depth and correction before taking the depth limit",
+          "conventions": "fixed point1 retained; zero outside source domain; exit valuations integrated out and not correction inputs"
+        },
+        "algorithmic_answer": {
+          "brackets": "For every h>=1,b>=0, a total computable program returns A; M=J=h+b+2 and q=A/2^(J+h*M) satisfy q<=p_h<=q+2^(-b).",
+          "limit": "p_h tends to0 as h tends to infinity",
+          "rate": "127/(32768*h)<=p_h<=5/(2*h), hence Theta(1/h)",
+          "scope": "The infimum is over actual achieved seed densities for all arbitrary real run-window corrections, not an assumed symbolic surrogate."
+        },
+        "headline_assurance": {
+          "receipt": "verification/external_optimization/CI_ARTIFACTS.json",
+          "source_commit": "b5dcda3404b14b43e1985c2e31219ce811e46881",
+          "source_tree": "76ee312e9f756a0dceba6ea3d900dd81b7858168",
+          "run_id": 46111672437,
+          "assurance": "historical source-pinned machine verification; current proof-source bytes must still match the checked snapshot",
+          "finite_checker_alone_proves_infinite_theorem": false
+        },
+        "review_qualifications": {
+          "independent_human_review": false,
+          "novelty_certified": false,
+          "source_author_endorsement": false,
+          "ai_role_implementation_overlap": true
+        }
+      }
+    },
+    {
+      "id": "REL-O3-H1",
+      "title": "Literal arbitrary-correction depth-one density and infimum",
+      "evidence_status": "all 14 frozen h=1 targets proved; clean build, complete closure audit/replay, frozen comparison, all six checker modes and nine hostile fixtures passed at8524770",
+      "artifacts": [
+        "lean/external_analysis/README.md",
+        "lean/external_analysis/inventory.json",
+        "papers/finite_information_lyapunov/paper.pdf",
+        "verification/external_analysis/README.md"
+      ],
+      "limitations": "This package supplies an exact series and nonattainment at h=1. Arbitrary-depth density, inverse-depth rates and uniform computable infimum brackets are established in separate packages; no general-depth closed formula or general-depth attainment follows from the h=1 result. No novelty or human expert validation is claimed."
+    },
+    {
+      "id": "REL-O3-DENSITY",
+      "title": "Literal arbitrary-finite-depth Syracuse failure densities",
+      "evidence_status": "all22 frozen targets,517closure audits, full source-bound sandbox replay, trusted comparator, all six checker modes and nine hostile controls passed at8746e08/run46098606212",
+      "artifacts": [
+        "lean/external_population/GeneralSolution.lean",
+        "lean/external_population/GENERAL_DENSITY_PROOF.md",
+        "lean/external_population/inventory.json",
+        "verification/external_population/README.md"
+      ],
+      "limitations": "This package establishes the density/source representation for each fixed positive finite h. Rate bounds and exact finite optimization with computable literal-infimum brackets are supplied by separate proved packages. Closed-form higher-depth values, novelty and human expert refereeing are not claims of this density foundation. Later heads require their own regression."
+    },
+    {
+      "id": "REL-O3-RATE",
+      "title": "Literal inverse-depth rate and vanishing optimized failure density",
+      "evidence_status": "All 11 frozen targets, 765 theorem/helper closures, full source-bound replay, trusted comparator, all six checker modes in both stages and all ten hostile controls passed at1406f1a/run46101939355.",
+      "artifacts": [
+        "lean/external_rate/RateSolution.lean",
+        "lean/external_rate/RATE_PROOF.md",
+        "lean/external_rate/inventory.json",
+        "verification/external_rate/README.md"
+      ],
+      "claim": "For every positive finite h, 1/[4(h+33)] \u2264 p_h \u2264 5/(2h), hence the frozen weaker lower bound 127/(32768h) and p_h\u21920, for unrestricted run-window corrections and literal odd-seed failure densities.",
+      "limitations": "This rate package has exact source-pinned assurance at1406f1a; later heads require their own regression. Finite optimization/truncation and uniform computable infimum brackets are proved separately by REL-O3-OPTIMIZATION atb5dcda3. The optional stronger liminf, closed-form higher-depth values and sharp leading constant remain outside this rate claim. No novelty, human refereeing, Collatz convergence or capture follows."
+    },
+    {
+      "id": "REL-BRIDGE-FINITE",
+      "title": "Literal finite source-word dictionary, rewards and unique maximum",
+      "evidence_status": "All25 frozen statements and357 theorem/helper closures passed source-bound replay, frozen comparison, all six checker modes in both stages and13 hostile controls at5369dc97, run46105619785 (all six required jobs passed).",
+      "artifacts": [
+        "lean/external_bridge/BridgeSolution.lean",
+        "lean/external_bridge/FINITE_BRIDGE_PROOF.md",
+        "lean/external_bridge/README.md",
+        "lean/external_bridge/inventory.json",
+        "verification/external_bridge/CI_ARTIFACTS.json"
+      ],
+      "lean_declarations": [
+        "ExternalFiniteBridgeChallenge.finiteWordPrefixEncoding",
+        "ExternalFiniteBridgeChallenge.abstractPrefixCompatibility",
+        "ExternalFiniteBridgeChallenge.defectBounds",
+        "ExternalFiniteBridgeChallenge.nonintegralEndpoint",
+        "ExternalFiniteBridgeChallenge.strictRungCaps",
+        "ExternalFiniteBridgeChallenge.unitFloorIncrements",
+        "ExternalFiniteBridgeChallenge.floorIncrementAlphabet",
+        "ExternalFiniteBridgeChallenge.sourceSlopeFacts",
+        "ExternalFiniteBridgeChallenge.sourceSlopeNonintegral",
+        "ExternalFiniteBridgeChallenge.sourceRungsUnbounded",
+        "ExternalFiniteBridgeChallenge.literalClosingDepth",
+        "ExternalFiniteBridgeChallenge.rewardEndpointInvariant",
+        "ExternalFiniteBridgeChallenge.rewardRealPower",
+        "ExternalFiniteBridgeChallenge.sourceDepthReward",
+        "ExternalFiniteBridgeChallenge.referenceAtRungs",
+        "ExternalFiniteBridgeChallenge.sourceLastLetterLowerable",
+        "ExternalFiniteBridgeChallenge.lowerRaiseTransport",
+        "ExternalFiniteBridgeChallenge.sourceFloorBijection",
+        "ExternalFiniteBridgeChallenge.finitePopulations",
+        "ExternalFiniteBridgeChallenge.sourceDepthBijection",
+        "ExternalFiniteBridgeChallenge.thresholdCountPreservation",
+        "ExternalFiniteBridgeChallenge.phaseZeroExtremizer",
+        "ExternalFiniteBridgeChallenge.uniqueExtremizer",
+        "ExternalFiniteBridgeChallenge.zeroLengthConvention",
+        "ExternalFiniteBridgeChallenge.lengthOneBoundary"
+      ],
+      "limitations": "Finite source-word/rung/reward/count foundation only. No pressure or entropy limit, microcanonical equality, differentiability, M4/R8/R9 resolution, integer cycle realization, novelty or human expert refereeing. Later trees require their own regression."
+    },
+    {
+      "id": "REL-O3-OPTIMIZATION",
+      "title": "Exact finite cycle-deletion optimum and computable actual-infimum brackets",
+      "evidence_status": "All15 pre-proof-frozen required targets and952 own/reused theorem/helper closures passed full source-bound export/replay, trusted frozen comparison, all six checker modes in both stages and18 hostile controls atb5dcda3/run46111672437; all seven mandatory jobs passed.",
+      "artifacts": [
+        "lean/external_optimization/OptimizationSolution.lean",
+        "lean/external_optimization/OptimizationJoin.lean",
+        "lean/external_optimization/OPTIMIZATION_PROOF.md",
+        "lean/external_optimization/README.md",
+        "lean/external_optimization/inventory.json",
+        "verification/external_optimization/CI_ARTIFACTS.json"
+      ],
+      "lean_declarations": [
+        "ExternalO3OptimizationChallenge.genericStrictCycleCriterion",
+        "ExternalO3OptimizationChallenge.genericElementaryReduction",
+        "ExternalO3OptimizationChallenge.genericDeletionOptimum",
+        "ExternalO3OptimizationChallenge.vertexEncodingAndExtension",
+        "ExternalO3OptimizationChallenge.edgeEncodingAndWeights",
+        "ExternalO3OptimizationChallenge.naturalCycleSigns",
+        "ExternalO3OptimizationChallenge.commonDyadicDenominator",
+        "ExternalO3OptimizationChallenge.numeratorMinimumWellPosed",
+        "ExternalO3OptimizationChallenge.finiteOptimizationExact",
+        "ExternalO3OptimizationChallenge.truncationMassIdentity",
+        "ExternalO3OptimizationChallenge.discardedMassBound",
+        "ExternalO3OptimizationChallenge.literalInfimumSandwich",
+        "ExternalO3OptimizationChallenge.diagonalConvergence",
+        "ExternalO3OptimizationChallenge.computableExactOptimizer",
+        "ExternalO3OptimizationChallenge.computableDyadicApproximation"
+      ],
+      "limitations": "Literal fixed finite run-length-window correction class, equality failures and relative-odd natural density. Total computable exhaustive search has no claimed practical complexity bound. Optional monotonicity, sharp asymptotic constants and closed-form higher-depth optima remain outside the claim. The generic finite cycle criterion already appears in the source book and is not claimed novel. No M4/R8/R9 analytic limit, integer capture or human expert refereeing follows."
+    },
+    {
+      "id": "REL-M4-ALL-LENGTH",
+      "title": "All-length fixed-reference endpoint nonconvergence",
+      "evidence_status": "At historical739a4f5/run46119220218, all23 frozen required statements,13 exact model bodies and504 theorem/helper closures passed complete source-bound replay, frozen comparison and all six checker modes in both stages. The full positive pipeline and21 hostile controls passed; all eight mandatory jobs passed.",
+      "artifacts": [
+        "lean/external_unrestricted/UnrestrictedSolution.lean",
+        "lean/external_unrestricted/ARGUMENT.md",
+        "lean/external_unrestricted/README.md",
+        "lean/external_unrestricted/inventory.json",
+        "verification/external_unrestricted/CI_ARTIFACTS.json"
+      ],
+      "lean_declarations": [
+        "ExternalM4UnrestrictedChallenge.slopeBounds",
+        "ExternalM4UnrestrictedChallenge.tripleRotationHighLow",
+        "ExternalM4UnrestrictedChallenge.highPhaseCountLower",
+        "ExternalM4UnrestrictedChallenge.largeDefectsUnbounded",
+        "ExternalM4UnrestrictedChallenge.canonicalPrefixLaw",
+        "ExternalM4UnrestrictedChallenge.canonicalAllLengthWord",
+        "ExternalM4UnrestrictedChallenge.canonicalAlphabetAndSites",
+        "ExternalM4UnrestrictedChallenge.manyDisjointCanonicalSites",
+        "ExternalM4UnrestrictedChallenge.swapPrefixLaw",
+        "ExternalM4UnrestrictedChallenge.swapPreservesSource",
+        "ExternalM4UnrestrictedChallenge.swapFamilyInjective",
+        "ExternalM4UnrestrictedChallenge.swapCubeCard",
+        "ExternalM4UnrestrictedChallenge.swapRewardIdentity",
+        "ExternalM4UnrestrictedChallenge.canonicalRewardBudget",
+        "ExternalM4UnrestrictedChallenge.canonicalSwapLossBound",
+        "ExternalM4UnrestrictedChallenge.largeDefectWitnessInjection",
+        "ExternalM4UnrestrictedChallenge.exponentialCountLower",
+        "ExternalM4UnrestrictedChallenge.rungCountOne",
+        "ExternalM4UnrestrictedChallenge.allLengthCountBounds",
+        "ExternalM4UnrestrictedChallenge.normalizedLogBounds",
+        "ExternalM4UnrestrictedChallenge.normalizedLogLiminf",
+        "ExternalM4UnrestrictedChallenge.normalizedLogLimsup",
+        "ExternalM4UnrestrictedChallenge.noAllLengthLimit"
+      ],
+      "limitations": "Actual theta=log(3)/log(2), ordered positive source words at every length, fixed phase-zero B_r, c=1 only. This is a distinct extension, not a refutation of intended rung-only M4, phase-adapted N*, or a theorem for c<1. No pressure/R8/R9 analytic limit, actual integer-cycle realization, capture, novelty or human expert refereeing follows. Assurance is pinned to source739a4f5; later heads require their own regression."
+    },
+    {
+      "id": "REL-CRITICAL-SUPPORT",
+      "title": "Compact critical configuration and rooted-law supporting theorems",
+      "evidence_status": "At exact sourcef6311a6/tree3f5f87f/run46133133418, all9mandatoryjobs and45regressions passed. All12targets/391owned declarations/32model-origin entries passed complete source-bound replay, isolated frozen comparison, six checker modes in each stage, positive full rerun and18controls. Original9digest-verified artifacts are archived. Later heads require their own regression.",
+      "artifacts": [
+        "lean/external_critical/CriticalSolution.lean",
+        "lean/external_critical/ARGUMENT.md",
+        "lean/external_critical/README.md",
+        "lean/external_critical/inventory.json",
+        "lean/external_critical/provenance.json",
+        "verification/external_critical/CI_ARTIFACTS.json"
+      ],
+      "lean_declarations": [
+        "ExternalCriticalSupportChallenge.excursion_first_moment",
+        "ExternalCriticalSupportChallenge.finite_infinity_exclusion",
+        "ExternalCriticalSupportChallenge.gap_packing",
+        "ExternalCriticalSupportChallenge.phase_representative_law",
+        "ExternalCriticalSupportChallenge.polynomial_excursion_contradiction",
+        "ExternalCriticalSupportChallenge.reward_roof_and_regularity",
+        "ExternalCriticalSupportChallenge.root_shift_error",
+        "ExternalCriticalSupportChallenge.rooted_normalization",
+        "ExternalCriticalSupportChallenge.rooted_stationary_subsequence",
+        "ExternalCriticalSupportChallenge.shift_group_and_continuity",
+        "ExternalCriticalSupportChallenge.space_topology",
+        "ExternalCriticalSupportChallenge.weak_reward_passage"
+      ],
+      "limitations": "Twelve supporting statements only. Finite/infinite separation assumes actual null cylinders; infinite-height mass remains possible. Polynomial contradiction is conditional on an excursion lower bound, which is not supplied. No critical Gibbs law, full C01-C08, M4/R8/R9, numerical certificate, capture, novelty or human expert acceptance."
+    },
+    {
+      "id": "REL-PRESSURE-HELPERS",
+      "title": "Finite word dictionaries and actual phase pressure helpers",
+      "evidence_status": "Full source-pinned independent assurance passed d1d641c/run46158942911:64 exact targets,77model-origin entries/17opaque nulls,1357owned declarations/64modules, complete source-bound replay/trusted comparison in all6modes each, exact positive full rerun and22controls. All10original artifacts API-digest/size matched and inspected;45regressions passed. Later heads require their own regression; no full headline M4/R8/R9 acceptance.",
+      "artifacts": [
+        "lean/external_pressure/PressureSolution.lean",
+        "lean/external_pressure/ARGUMENT.md",
+        "lean/external_pressure/README.md",
+        "lean/external_pressure/inventory.json",
+        "lean/external_pressure/provenance.json",
+        "lean/external_pressure/target_map.json",
+        "lean/external_pressure/word_legacy_model_metadata.json",
+        "verification/external_pressure/README.md",
+        "verification/external_pressure/CI_ARTIFACTS.json",
+        "verification/external_pressure/GITHUB_API.json"
+      ],
+      "lean_declarations": [
+        "ExternalBridgePressureSupportChallenge.analytic_auxiliaryBoundednessAndEquicontinuity",
+        "ExternalBridgePressureSupportChallenge.analytic_auxiliaryOscillationEstimate",
+        "ExternalBridgePressureSupportChallenge.analytic_auxiliarySubsequenceCompactness",
+        "ExternalBridgePressureSupportChallenge.analytic_auxiliarySubsequenceConstant",
+        "ExternalBridgePressureSupportChallenge.analytic_candidateCorePressureComponents",
+        "ExternalBridgePressureSupportChallenge.analytic_candidatePressureWellPosed",
+        "ExternalBridgePressureSupportChallenge.analytic_candidateQualitativePressure",
+        "ExternalBridgePressureSupportChallenge.analytic_candidateTiltLipschitz",
+        "ExternalBridgePressureSupportChallenge.analytic_capDifferenceDiscrepancy",
+        "ExternalBridgePressureSupportChallenge.analytic_compactAuxiliaryTiltPressure",
+        "ExternalBridgePressureSupportChallenge.analytic_costPressureComposition",
+        "ExternalBridgePressureSupportChallenge.analytic_denseGridSubsequence",
+        "ExternalBridgePressureSupportChallenge.analytic_discontinuousSequenceCompactness",
+        "ExternalBridgePressureSupportChallenge.analytic_feketeCandidateLimit",
+        "ExternalBridgePressureSupportChallenge.analytic_finitePhaseLogIntegrability",
+        "ExternalBridgePressureSupportChallenge.analytic_fixedShiftNormalizedCompletion",
+        "ExternalBridgePressureSupportChallenge.analytic_fullAuxiliaryUniformPressure",
+        "ExternalBridgePressureSupportChallenge.analytic_gridMeshCover",
+        "ExternalBridgePressureSupportChallenge.analytic_gridToUniformCauchy",
+        "ExternalBridgePressureSupportChallenge.analytic_integratedLowerBracketCofinality",
+        "ExternalBridgePressureSupportChallenge.analytic_integratedLowerBracketValidity",
+        "ExternalBridgePressureSupportChallenge.analytic_phaseInfimumSuperadditivity",
+        "ExternalBridgePressureSupportChallenge.analytic_phaseInfimumWellPosed",
+        "ExternalBridgePressureSupportChallenge.analytic_physicalRewardPressureComposition",
+        "ExternalBridgePressureSupportChallenge.analytic_positiveRotationOrbitDense",
+        "ExternalBridgePressureSupportChallenge.analytic_rotationDominationImpliesConstant",
+        "ExternalBridgePressureSupportChallenge.analytic_sourceRungPressureComposition",
+        "ExternalBridgePressureSupportChallenge.analytic_subsequenceConstantIdentification",
+        "ExternalBridgePressureSupportChallenge.analytic_subsequenceRotationDomination",
+        "ExternalBridgePressureSupportChallenge.analytic_uniformCauchyContinuousLimit",
+        "ExternalBridgePressureSupportChallenge.analytic_uniformIntervalDiscrepancy",
+        "ExternalBridgePressureSupportChallenge.analytic_uniformReferenceComposition",
+        "ExternalBridgePressureSupportChallenge.analytic_uniformShiftedIntervalDiscrepancy",
+        "ExternalBridgePressureSupportChallenge.analytic_variableTiltSourceAsymptotic",
+        "ExternalBridgePressureSupportChallenge.word_auxPartitionFiniteSum",
+        "ExternalBridgePressureSupportChallenge.word_auxiliaryEndpointWitness",
+        "ExternalBridgePressureSupportChallenge.word_boundedWordEnumeration",
+        "ExternalBridgePressureSupportChallenge.word_canonicalWordLaw",
+        "ExternalBridgePressureSupportChallenge.word_capDifferenceGeometry",
+        "ExternalBridgePressureSupportChallenge.word_capIncrementBounds",
+        "ExternalBridgePressureSupportChallenge.word_clampFiberCount",
+        "ExternalBridgePressureSupportChallenge.word_clampFiberEncoding",
+        "ExternalBridgePressureSupportChallenge.word_clampRewardBound",
+        "ExternalBridgePressureSupportChallenge.word_clampWordTransport",
+        "ExternalBridgePressureSupportChallenge.word_closingPhaseTransport",
+        "ExternalBridgePressureSupportChallenge.word_completionTransport",
+        "ExternalBridgePressureSupportChallenge.word_concatenationTransport",
+        "ExternalBridgePressureSupportChallenge.word_finitePartitionBounds",
+        "ExternalBridgePressureSupportChallenge.word_finiteTiltLipschitz",
+        "ExternalBridgePressureSupportChallenge.word_finiteWordPopulation",
+        "ExternalBridgePressureSupportChallenge.word_fixedShiftComparison",
+        "ExternalBridgePressureSupportChallenge.word_naturalDepthCompleteness",
+        "ExternalBridgePressureSupportChallenge.word_normalizedRewardLaw",
+        "ExternalBridgePressureSupportChallenge.word_partitionCocycle",
+        "ExternalBridgePressureSupportChallenge.word_phaseLogComparison",
+        "ExternalBridgePressureSupportChallenge.word_phaseUpInjectionReward",
+        "ExternalBridgePressureSupportChallenge.word_phaseUpTransport",
+        "ExternalBridgePressureSupportChallenge.word_rungWordTransport",
+        "ExternalBridgePressureSupportChallenge.word_truncationFiberCount",
+        "ExternalBridgePressureSupportChallenge.word_truncationFiberEncoding",
+        "ExternalBridgePressureSupportChallenge.word_truncationTransport",
+        "ExternalBridgePressureSupportChallenge.word_wordDepthDictionary",
+        "ExternalBridgePressureSupportChallenge.word_wordPathPartitionEquality",
+        "ExternalBridgePressureSupportChallenge.word_zeroVolumeConvention"
+      ],
+      "limitations": "30WORD+34analytic helper meanings only. Auxiliary x1 differs from physical phase0. Arbitrary source closing tracks variable tilt. No full canonical48 model/entropy/critical/effectivity/table or M4/R8/R9 acceptance. Raw77model entries preserve17null current values; historical legacy metadata is separate. No capture, novelty or human expert refereeing."
     }
   ],
   "literature_scope": "Citation keys resolve in tex/references.tex. Relationships identify attribution and limits, not a literature-wide priority certification."

@@ -1,0 +1,9 @@
+# Exact inverse-depth rate assurance receipts
+
+All five mandatory jobs passed in [run 46101939355](https://github.com/bruscaj/perturbed_collatz/actions/runs/46101939355), checking source commit `1406f1a5afe211d69f03238e1444bc6a14b9b407`, tree `bdc83507ad610043a097716e4077c88a4dd48c12`. Artifact names use the separate GitHub PR event SHA; the checked source/tree are explicitly recorded here and in the source-tree receipt.
+
+The rate job freshly compiled 45 owned modules, all 11 frozen required targets and all 765 theorem/helper axiom closures. It exported all 765 roots (97,940,365 bytes), replayed their complete source-bound proof closure, and compared all 11 frozen statements. Both stages accepted all six modes: Lean default/paranoid, lean4lean, nanoda, con-leche and con-ron. Only propext, Quot.sound, Classical.choice are permitted.
+
+All 10 hostile controls rejected their defect. The full positive pipeline passed again before actual wrong-True statement comparison, hidden imported custom-axiom rejection and corrupted production integer-gap rejection. `external-rate-mutations.json` gives commands/reasons; `negative_logs/` retains actual logs. Original `.log` files are copied byte-identically as `.txt` so they belong to the release payload; `CI_ARTIFACTS.json` maps names and SHA-256 digests. The accompanying positive-full report is preserved.
+
+All 58 project source/config/documentation hashes matched the successful report before publishing these receipts. Later documentation/metadata heads remain subject to their own CI; source-pinned receipts do not certify arbitrary changes. The manuscript's pre-CI pending note is explicitly a historical snapshot. Required rate assurance is complete at the source pin above; higher-depth optimization, optional stronger liminf, sharp constants and M4/R8/R9 remain separate incomplete work. No novelty, human refereeing, Collatz convergence or capture is inferred.

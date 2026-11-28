@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "scope": "25 frozen finite source-word, rung, endpoint, reward, bijection, maximum and threshold-count targets only; no pressure/entropy/differentiability/asymptotic theorem",
+  "original_frozen_at_utc": "2026-11-28T03:30:07.118769+00:00",
+  "chronology": "Canonical finite bridge freeze before implementation; V3 module renames preserve V2 proposition bodies up to two generated binder hygiene names",
+  "files": {
+    "Definitions.lean": {
+      "sha256": "cf29376721942a78328491cd910690497f95d381711f0d2e758998fbba9374bc",
+      "bytes": 3873
+    },
+    "ExpectedTypes.lean": {
+      "sha256": "5ce898eb70690f6f77e26a95cbafb5ef268fa93617ab7418a0b25f6878c34968",
+      "bytes": 2611
+    },
+    "PrefixDefinitions.lean": {
+      "sha256": "d7b5cd8b624dae007e3c3dc7f3620260dbfcf2169d0211b0859e18ed58180069",
+      "bytes": 1373
+    },
+    "BridgeDefinitions.lean": {
+      "sha256": "7a36ebc1e9ff89fcec7ad1fdae1c2d5ae9ee011b06ae110fd4f34999e7df19a7",
+      "bytes": 4708
+    },
+    "BridgeExpectedTypes.lean": {
+      "sha256": "850dcdd0d75479edaeab1c8d6d336b9099f56511e0b6f5a5125bedfca05838aa",
+      "bytes": 4767
+    },
+    "BridgeChallenge.lean": {
+      "sha256": "844ac679b7b645ee05e8f4d094abb8ae345373f901799e733a4164d51d75b164",
+      "bytes": 1853
+    }
+  },
+  "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "source_pin": {
+    "repository": "https://github.com/VadimSokolov/collatz",
+    "commit": "5840497a23fc0d64127b850aea68862d7c93f2b7",
+    "problem": "book/chapters/ch10h_ratchets.tex#rrt:sec:m4",
+    "convention": "book/chapters/ch10h_ratchets.tex#rrt:sec:exact"
+  },
+  "challenge_holes": [
+    "ExternalFiniteBridgeChallenge.finiteWordPrefixEncoding",
+    "ExternalFiniteBridgeChallenge.abstractPrefixCompatibility",
+    "ExternalFiniteBridgeChallenge.defectBounds",
+    "ExternalFiniteBridgeChallenge.nonintegralEndpoint",
+    "ExternalFiniteBridgeChallenge.strictRungCaps",
+    "ExternalFiniteBridgeChallenge.unitFloorIncrements",
+    "ExternalFiniteBridgeChallenge.floorIncrementAlphabet",
+    "ExternalFiniteBridgeChallenge.sourceSlopeFacts",
+    "ExternalFiniteBridgeChallenge.sourceSlopeNonintegral",
+    "ExternalFiniteBridgeChallenge.sourceRungsUnbounded",
+    "ExternalFiniteBridgeChallenge.literalClosingDepth",
+    "ExternalFiniteBridgeChallenge.sourceLastLetterLowerable",
+    "ExternalFiniteBridgeChallenge.lowerRaiseTransport",
+    "ExternalFiniteBridgeChallenge.finitePopulations",
+    "ExternalFiniteBridgeChallenge.sourceFloorBijection",
+    "ExternalFiniteBridgeChallenge.sourceDepthBijection",
+    "ExternalFiniteBridgeChallenge.rewardEndpointInvariant",
+    "ExternalFiniteBridgeChallenge.rewardRealPower",
+    "ExternalFiniteBridgeChallenge.sourceDepthReward",
+    "ExternalFiniteBridgeChallenge.referenceAtRungs",
+    "ExternalFiniteBridgeChallenge.phaseZeroExtremizer",
+    "ExternalFiniteBridgeChallenge.uniqueExtremizer",
+    "ExternalFiniteBridgeChallenge.thresholdCountPreservation",
+    "ExternalFiniteBridgeChallenge.lengthOneBoundary",
+    "ExternalFiniteBridgeChallenge.zeroLengthConvention"
+  ],
+  "solution_must_not_import": [
+    "BridgeChallenge",
+    "Challenge",
+    "GeneralChallenge",
+    "RateChallenge",
+    "RateOptionalChallenge"
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "frozen_propositions_sha256": "3ebd38414d2c39b56178874742869df8768d0495b848341d1cdf3f587de7dd59",
+  "review": {
+    "human_expert_review": false,
+    "source_statement": "Separate AI exact-file semantic review before canonical freeze"
+  },
+  "assurance": "Preparation only until clean public build and project-specific Linux full verification/negative-control receipts pass; no M4/R8/R9 solved claim"
+}

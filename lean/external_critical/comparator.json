@@ -1,0 +1,29 @@
+{
+  "challenge_module": "CriticalChallenge",
+  "solution_module": "CriticalSolution",
+  "theorem_names": [
+    "ExternalCriticalSupportChallenge.space_topology",
+    "ExternalCriticalSupportChallenge.phase_representative_law",
+    "ExternalCriticalSupportChallenge.shift_group_and_continuity",
+    "ExternalCriticalSupportChallenge.reward_roof_and_regularity",
+    "ExternalCriticalSupportChallenge.weak_reward_passage",
+    "ExternalCriticalSupportChallenge.rooted_normalization",
+    "ExternalCriticalSupportChallenge.root_shift_error",
+    "ExternalCriticalSupportChallenge.rooted_stationary_subsequence",
+    "ExternalCriticalSupportChallenge.finite_infinity_exclusion",
+    "ExternalCriticalSupportChallenge.gap_packing",
+    "ExternalCriticalSupportChallenge.excursion_first_moment",
+    "ExternalCriticalSupportChallenge.polynomial_excursion_contradiction"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "external_kernels": {
+    "nanoda": [
+      "nanoda_bin"
+    ]
+  }
+}
