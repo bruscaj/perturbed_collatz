@@ -31,9 +31,16 @@
         "project": "lean/external_unrestricted",
         "targets": 23,
         "closures": 504,
-        "status": "source/type/axiom checked; independent gates pending",
+        "status": "full independent machine gates passed at the historical739 snapshot",
         "scope": "all-length c=1 ordered source count at fixed B_r: liminf0, limsup at least log10(2)/8 and no all-length limit; separate from intended rung-only M4 and phase-adapted N*",
-        "intended_m4_solved": false
+        "intended_m4_solved": false,
+        "assurance": {
+          "source_commit": "739a4f508f77c95d874fb44ef9785088dc2b852f",
+          "source_tree": "4dd0dfbc8e8c440453cc80167969c1f7c5134f10",
+          "run_id": 46119220218,
+          "receipt": "verification/external_unrestricted/CI_ARTIFACTS.json",
+          "scope": "23 frozen targets,13 model bodies,504 closures, six modes in replay/comparison, positive full rerun and21 controls; distinct c1 extension only"
+        }
       }
     },
     {

@@ -5,7 +5,7 @@ Jake S. Brusca, with ChatGPT assistance in derivation, writing, code and review.
 Draft research contribution, 2026-11-28. This is a personal work in progress;
 corrections and counterexamples are welcome.
 
-**Evidence status.** The main rung-pressure and R9 argument remains a written candidate without end-to-end formalization or independent human expert refereeing. The finite bridge library separately proves the exact source dictionary, unbounded actual rungs and unique maximum. A new appendix proves a distinct all-length fixed-reference nonconvergence result at c=1; its 23 frozen source statements and 504 theorem/helper audits pass ordinary fresh verification, while the separate full replay/comparator/checker/21-control gate remains pending. These supporting results do not discharge the main analytic claims.
+**Evidence status.** The main rung-pressure and R9 argument remains a written candidate without end-to-end formalization or independent human expert refereeing. The finite bridge library separately proves the exact source dictionary, unbounded actual rungs and unique maximum. A new appendix proves a distinct all-length fixed-reference nonconvergence result at c=1; its23 frozen statements,13 model bodies and504 closures passed full replay/comparison, six checker modes and21 controls at source739a4f5 ([receipts](../../verification/external_unrestricted/README.md)). The PDF retains its pre-CI snapshot. These supporting results do not discharge the main analytic claims.
 
 The intended contribution is a rung entropy limit near maximal reward and its
 near-extremal expansion. It addresses the rung interpretation of M4 near one,
@@ -399,7 +399,7 @@ asymptotic limit. The scope of each executed check is recorded separately.
 | Near-one rung M4 | Written entropy-existence and variational argument | Frozen full formal statement, end-to-end proof, certified entropy table, complete assurance |
 | R9 | Written leading and second-order expansion | Full formal analytic bounds and limits, statement matching, fresh and independent checker replay |
 | R8 | Written convergence for lambda>=6 | All-tilt convergence and differentiability, including critical tilt, independently scrutinized and fully formalized |
-| Separate fixed-reference all-length endpoint | Full c=1 nonconvergence proof and23 ordinary source-checked formal targets | Independent assurance for that separate package; intended rung M4 remains open |
+| Separate fixed-reference all-length endpoint | Full c=1 nonconvergence proof and23 ordinary source-checked formal targets | Full independent assurance passed at source739a4f5; intended rung M4 remains open |
 
 Broader all-phase, all-tilt and critical Gibbs-law arguments are research
 candidates. They are not premises of the near-extremal derivation above and

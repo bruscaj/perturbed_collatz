@@ -1,5 +1,12 @@
 # Release history
 
+## All-length assurance completed — 28 November 2026
+
+- All eight mandatory jobs passed at source739a4f5/run46119220218, including all23 all-length targets,13 model bodies,504 theorem/helper closures, six modes in both replay/comparison and21 controls after a full positive rerun.
+- Preserved all eight complete, original digest-verified CI artifact archives. Updated only the separate c1 support status; intended M4/R8/R9 analytic claims remain draft candidates.
+- Added85 portable metadata controls, run normally and under optimized Python in the existing quick/all regression gate. Preserved all prior checks; this adds two checks to the all-mode count.
+- Historical pre-CI argument/PDF snapshots and the earlier O3 assurance receipts remain unchanged. Later heads require their own regression.
+
 ## All-length endpoint distinction and O3 source conclusions — 28 November 2026
 
 - Added all 23 frozen formal statements for the all-length fixed-B_r count at c=1, including explicit exponential swap families, actual count bounds, real liminf/limsup and nonconvergence. The intended rung-only M4 and phase-adapted N* remain separate. The eighth assurance job is new and pending.

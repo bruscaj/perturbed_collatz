@@ -4,7 +4,7 @@ This standalone project concerns the explicit **all-length extension** of the so
 
 The proved statements give count>=2^floor(r/8) at large-defect lengths, count1 on unbounded actual strict rungs, bounded nonnegative normalized logarithmic counts, liminf0 and limsup>=(log2/log10)/8>0. Thus that exact all-length sequence has no real limit. See the self-contained [argument and23-target proof map](ARGUMENT.md).
 
-The32 owned modules preserve canonical proof/spec bytes. Eight frozen files,23 proposition bodies and13 model bodies are pinned separately. The private fresh ordinary source integration passed504 theorem/helper closures with only propext, Quot.sound and Classical.choice. The public standalone build, source-bound replay, exact statement comparator, six checker modes and hostile controls have distinct reports: **full public assurance remains pending until actual source-pinned Linux receipts pass**. Successful compilation or this README is not independent kernel assurance or human expert refereeing.
+The32 owned modules preserve canonical proof/spec bytes. Eight frozen files,23 proposition bodies and13 model bodies are pinned separately. At source `739a4f5`, all23 targets and504 theorem/helper closures passed full source-bound replay, frozen comparison and all six checker modes in both stages, with only propext, Quot.sound and Classical.choice. The positive full pipeline and21 hostile controls also passed; all eight mandatory jobs passed ([exact receipts](../../verification/external_unrestricted/README.md)). The argument and PDF retain their explicitly identified pre-CI snapshot; these receipts update its assurance status. Later heads require their own regression. No human expert refereeing or novelty certification is claimed.
 
 ## Reproduce
 

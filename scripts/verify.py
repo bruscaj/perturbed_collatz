@@ -91,6 +91,10 @@ def main():
             print(f"PASS manifest ({report['manifest_files']} files)", flush=True)
             run("external candidate register and exact finite foundations",
                 [py, "certificates/external_problems/verify.py"])
+            run("external assurance metadata hostile controls",
+                [py, "certificates/external_problems/test_status.py"])
+            run("external assurance metadata hostile controls under optimized Python",
+                [py, "-O", "certificates/external_problems/test_status.py"])
             run("one/two-pair exhaustive census", [py, imp / "small.py"], imp / "small.json")
             run("eight signed layers and endpoint populations",
                 [py, imp / "six_impulses/eight_frontier.py"], imp / "six_impulses/eight_frontier.json")

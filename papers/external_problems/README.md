@@ -63,7 +63,7 @@ At r=2 there are two words `(1,3)` and `(2,2)`, with rewards `5/3` and
 `7/3`, while B₂=5/3. Thus both qualify at c=1. This finite example by itself refutes only all-length c=1 uniqueness. The
 separate [all-length package](../../lean/external_unrestricted/README.md) now
 provides 23 formal source proofs of liminf 0 and limsup≥log10(2)/8 for the
-fixed-B_r extension at c=1. Its full independent assurance remains pending.
+fixed-B_r extension at c=1. Its full independent assurance passed at source739a4f5:23 targets,13 models,504 closures, six modes in both stages and21 controls ([receipts](../../verification/external_unrestricted/README.md)). The intended rung-only M4 remains open.
 This distinction does not refute intended rung-only M4 or phase-adapted N*.
 
 ## Syracuse finite-information model

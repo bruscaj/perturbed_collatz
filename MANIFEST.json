@@ -14,8 +14,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 11277,
-      "sha256": "412a181cde6531719147dd9f3bcd52df9ee6bda4f91f46e762887c1ce94d2e6f"
+      "bytes": 12078,
+      "sha256": "173ec61df1add468212ef2bf6dab883a63c65d7d187033a67c288556758b76d4"
     },
     {
       "path": "Makefile",
@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 18571,
-      "sha256": "724954fa1fa44b78aef31865c7eaf7f03b5264a2e127e2e6791f719189f15ea1"
+      "bytes": 18955,
+      "sha256": "10af1706c7f6e54ae91cc13af9ddb0d133eafd5d3ae2c40693991c277269a1ed"
     },
     {
       "path": "certificates/exposition/examples.json",
@@ -58,9 +58,19 @@
       "sha256": "ef36aa34eff3e70649c207210ab95bd97e324266d39bc68b1fbedd8dbfc8f5d4"
     },
     {
+      "path": "certificates/external_problems/status_legacy_controls.py",
+      "bytes": 10176,
+      "sha256": "5f3f7bdb07a9f5d33d5913bdf635b0a75c0f2bf84ac9e571c0cf920883c665e5"
+    },
+    {
+      "path": "certificates/external_problems/test_status.py",
+      "bytes": 18616,
+      "sha256": "d5b07ac726097d05599135fa75ad33051796142991ec310e1ee385f9f0dd5148"
+    },
+    {
       "path": "certificates/external_problems/verify.py",
-      "bytes": 16232,
-      "sha256": "ecf4bab7f6d966707d1343988744a33657444ffd71ff222e31dcd47e410d53fe"
+      "bytes": 26299,
+      "sha256": "a9e65e972be30b86c3eeeac2dc5f66ac62def56e9e268f044196ca1242612561"
     },
     {
       "path": "certificates/frontier/README.md",
@@ -664,8 +674,8 @@
     },
     {
       "path": "claims.json",
-      "bytes": 61525,
-      "sha256": "c74948c206536397d5693954eb41181ad8f4877ed519e60e5deb8bf8ffc53e1d"
+      "bytes": 62125,
+      "sha256": "3ad38becf1266a6813958e9999c5fee17763b0ab205fc56fcde48040f9890d9d"
     },
     {
       "path": "figures/README.md",
@@ -2109,8 +2119,8 @@
     },
     {
       "path": "lean/external_unrestricted/README.md",
-      "bytes": 3459,
-      "sha256": "e97049354f2193a40c65f2759d25acd8ca39f91e31b9ebab4d0762d04ab13253"
+      "bytes": 3596,
+      "sha256": "24f7b79fab11f8feac6b9ec05978566c4b7e3f203c8d1aacc943c3c75ca59c7e"
     },
     {
       "path": "lean/external_unrestricted/RungDefinitions.lean",
@@ -2205,7 +2215,7 @@
     {
       "path": "lean/external_unrestricted/inventory.json",
       "bytes": 2636646,
-      "sha256": "80b48f09c0a75589318f8ba0285075a1cb2bd2efa52099bde6be33d91a41c054"
+      "sha256": "5b5b4dee7583be7692bce0cb2a793af41fbb52a3b92ca743eb31cd1cc64ffa57"
     },
     {
       "path": "lean/external_unrestricted/lake-manifest.json",
@@ -2654,8 +2664,8 @@
     },
     {
       "path": "papers/arithmetic_bridge_pressure/README.md",
-      "bytes": 18903,
-      "sha256": "2ced7361e17b996d9d7f95401872c72aff535bd38cf190a24e5b4d0f06f6c7eb"
+      "bytes": 18967,
+      "sha256": "19fa828514f65fced0a464f024c34902d5b2e6a1952ea5052efa99a5775e9a8c"
     },
     {
       "path": "papers/arithmetic_bridge_pressure/paper.pdf",
@@ -2679,13 +2689,13 @@
     },
     {
       "path": "papers/external_problems/README.md",
-      "bytes": 10479,
-      "sha256": "82355c1debe44e42eb79970a966dddfe9c9749351564c9e9961cd072d624e2d1"
+      "bytes": 10667,
+      "sha256": "db696e5ab259d9cc6ac36322e5c734b9dbfd0f4fc3009012cba24be77c457627"
     },
     {
       "path": "papers/external_problems/status.json",
-      "bytes": 13102,
-      "sha256": "d1d435d482f22c08cbfdfa10d15185e8dc9c17788af2763d50926dbe71adde0d"
+      "bytes": 13565,
+      "sha256": "294e15ff1be0fd9a1abbb914a2026b5eb5c0ffd294700cdd81026482441e5005"
     },
     {
       "path": "papers/finite_information_lyapunov/README.md",
@@ -2724,8 +2734,8 @@
     },
     {
       "path": "scripts/verify.py",
-      "bytes": 12924,
-      "sha256": "6e1ed2c386f559914c1df9ed986c6e554802b28f24883ba4c39eac69af0d14e8"
+      "bytes": 13223,
+      "sha256": "5c7856bb86fde0016912f791812b2b63d31be1866eb8ae3de345949fdb397989"
     },
     {
       "path": "tex/foundations.tex",
@@ -3041,6 +3051,56 @@
       "path": "verification/external_rate/negative_logs/positive-full.json",
       "bytes": 14733075,
       "sha256": "61410e829a2c0aa3f0b7beaadc25364e025ae4b94e41b54d0130ecea4b01b358"
+    },
+    {
+      "path": "verification/external_unrestricted/CI_ARTIFACTS.json",
+      "bytes": 22966,
+      "sha256": "6d0626003e0630644bc7f5c7c21e157674b1a9acce8d9b14215d04fe2d287520"
+    },
+    {
+      "path": "verification/external_unrestricted/README.md",
+      "bytes": 3257,
+      "sha256": "21b99cdfe7198ea22c519cfb53084a1b05e7ee5b49b29087ec2eb7c84a6fb9b0"
+    },
+    {
+      "path": "verification/external_unrestricted/ci_artifacts/external-analysis-h1.zip",
+      "bytes": 40646,
+      "sha256": "ee462da95627e0543e8e6172447e51261fe4e34527215abb885413c4ba92250d"
+    },
+    {
+      "path": "verification/external_unrestricted/ci_artifacts/external-bridge.zip",
+      "bytes": 497566,
+      "sha256": "0da652e3445ada869eebd23677e1ee86446f319d1da2f3ab180060068bd0f572"
+    },
+    {
+      "path": "verification/external_unrestricted/ci_artifacts/external-optimization.zip",
+      "bytes": 1441189,
+      "sha256": "60adac158e354cb468f6c9077a4cdd300c3a0919786ec3e4fb1f6e44ee128ee5"
+    },
+    {
+      "path": "verification/external_unrestricted/ci_artifacts/external-population.zip",
+      "bytes": 840366,
+      "sha256": "3a162e490b7df46d760e891c9559805c5ac28f1e1c50b0565925da7c5deb9bb1"
+    },
+    {
+      "path": "verification/external_unrestricted/ci_artifacts/external-rate.zip",
+      "bytes": 1437111,
+      "sha256": "dde6f540491a2b5708fd214724163fbbf4186dfc3511213a06f97446cb362767"
+    },
+    {
+      "path": "verification/external_unrestricted/ci_artifacts/external-support.zip",
+      "bytes": 5614,
+      "sha256": "88257b48911fd5f982084e9c672d7be388b644b1d65a1f00c6a571237827ce77"
+    },
+    {
+      "path": "verification/external_unrestricted/ci_artifacts/external-unrestricted.zip",
+      "bytes": 619881,
+      "sha256": "fbe5c9bf2c3178624bdc4a1af5a0f703fb77d45487cb1f061ec49db4b0cbbab5"
+    },
+    {
+      "path": "verification/external_unrestricted/ci_artifacts/release-verification.zip",
+      "bytes": 1412,
+      "sha256": "517a1fd1baef4e6cff8e71c0dff1dfc7fb7278196c7abe80ffed668e0e187177"
     }
   ]
 }

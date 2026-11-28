@@ -33,6 +33,11 @@ SOURCE_CLASS = {
 ALGORITHMIC_ANSWER = {'brackets': 'For every h>=1,b>=0, a total computable program returns A; M=J=h+b+2 and q=A/2^(J+h*M) satisfy q<=p_h<=q+2^(-b).', 'limit': 'p_h tends to0 as h tends to infinity', 'rate': '127/(32768*h)<=p_h<=5/(2*h), hence Theta(1/h)', 'scope': 'The infimum is over actual achieved seed densities for all arbitrary real run-window corrections, not an assumed symbolic surrogate.'}
 REVIEW_QUALIFICATIONS = {'independent_human_review': False, 'novelty_certified': False, 'source_author_endorsement': False, 'ai_role_implementation_overlap': True}
 O3_CHECKER_DESCRIPTION = 'Both complete proof-closure replay and frozen-statement comparison passed Lean default, Lean paranoid, lean4lean, nanoda, con-leche and con-ron; optimization18 hostile controls passed after a fresh full positive pipeline.'
+UNRESTRICTED_COMMIT = '739a4f508f77c95d874fb44ef9785088dc2b852f'
+UNRESTRICTED_TREE = '4dd0dfbc8e8c440453cc80167969c1f7c5134f10'
+UNRESTRICTED_RECEIPT_SHA256 = '6d0626003e0630644bc7f5c7c21e157674b1a9acce8d9b14215d04fe2d287520'
+UNRESTRICTED_STATUS = 'full independent machine gates passed at the historical739 snapshot'
+UNRESTRICTED_SCOPE = 'all-length c=1 ordered source count at fixed B_r: liminf0, limsup at least log10(2)/8 and no all-length limit; separate from intended rung-only M4 and phase-adapted N*'
 
 
 def require(ok, message):
@@ -67,12 +72,13 @@ def validate_ci_metadata(ci):
         'O3 semantic rejection evidence missing')
 
 
-def validate_full_report(report, status, targets=None, closures=None, modules=None):
+def validate_full_report(report, status, targets=None, closures=None, modules=None, *, stdout_texts=None):
     require(report['mode'] == 'full' and report['status'] == status, 'O3 full report did not pass')
     require(report['steps'] and all(s['exit_code'] == 0 for s in report['steps']), 'O3 positive gate failure')
     stages = [s for s in report['steps'] if 'replay' in s['label'] or
               ('frozen' in s['label'] and ('comparison' in s['label'] or 'statements' in s['label']))]
-    require(len(stages) == 2 and all(all(f'{c} kernel accepts the solution' in s.get('stdout', '')
+    require(len(stages) == 2 and all(all(f'{c} kernel accepts the solution' in
+            (stdout_texts[s['label']] if stdout_texts is not None else s.get('stdout', ''))
             for c in CHECKERS) for s in stages), 'O3 actual six-mode replay/comparator acceptance missing')
     if 'checker_coverage' in report:
         require(report['checker_coverage'] == {k: CHECKERS for k in
@@ -161,6 +167,123 @@ def validate_o3_assurance(root):
                         'O3 checked proof/model source drift: '+project+'/'+filename)
 
 
+def validate_unrestricted_assurance(root):
+    """Validate the new, separate c1 support without upgrading intended M4."""
+    directory = root/'verification/external_unrestricted'
+    data = (directory/'CI_ARTIFACTS.json').read_bytes()
+    require(sha256(data) == UNRESTRICTED_RECEIPT_SHA256,
+            'all-length historical receipt digest mismatch; fresh release audit required')
+    ci = json.loads(data)
+    require((ci['source_commit'], ci['source_tree'], ci['run_id']) ==
+            (UNRESTRICTED_COMMIT, UNRESTRICTED_TREE, 46119220218) and
+            ci['job_count'] == ci['archive_count'] == 8 and ci['legacy_checks'] == 43 and
+            ci['all_eight_jobs'] == 'passed (API and full report evidence checked)',
+            'all-length historical eight-job source/coverage mismatch')
+    specifications = {
+        'external-analysis-h1.zip': ('external-analysis.json', 'passed h1 full assurance gates', 14, 397, 24, 'external-analysis-source-tree.txt'),
+        'external-population.zip': ('external-population.json', 'passed population full assurance gates', 22, 517, 28, 'external-population-source-tree.txt'),
+        'external-rate.zip': ('external-rate.json', 'passed rate full assurance gates', 11, 765, 45, 'external-rate-source-tree.txt'),
+        'external-bridge.zip': ('external-bridge.json', 'passed bridge full assurance gates', 25, 357, 22, 'external-bridge-source-tree.txt'),
+        'external-optimization.zip': ('external-optimization.json', 'passed optimization full assurance gates', 15, 952, 49, 'external-optimization-source-tree.txt'),
+        'external-unrestricted.zip': ('external-unrestricted.json', 'passed unrestricted full assurance gates', 23, 504, 32, 'external-unrestricted-source-tree.txt'),
+        'external-support.zip': ('external-support.json', 'passed supporting full assurance gates', None, None, None, 'external-source-tree.txt')}
+    require(len(ci['archives']) == 8 and {x['local_archive'] for x in ci['archives']} ==
+            set(specifications) | {'release-verification.zip'}, 'all-length archive coverage mismatch')
+    project = root/'lean/external_unrestricted'
+    def complete_stdout(z, report):
+        outputs = {}
+        for step in report['steps']:
+            if 'stdout_gzip' in step:
+                parts = Path(step['stdout_gzip']).parts
+                names = ['/'.join(parts[i:]) for i in range(len(parts))]
+                member = next((n for n in names if n in z.namelist()), None)
+                require(member is not None, 'all-length complete stdout attachment missing')
+                compressed = z.read(member)
+                raw = gzip.decompress(compressed)
+                if 'stdout_gzip_sha256' in step:
+                    require(sha256(compressed) == step['stdout_gzip_sha256'],
+                            'all-length compressed stdout digest mismatch')
+            else:
+                raw = step.get('stdout', '').encode()
+            if 'stdout_bytes' in step:
+                require(len(raw) == step['stdout_bytes'], 'all-length full stdout length mismatch')
+            if 'stdout_sha256' in step:
+                require(sha256(raw) == step['stdout_sha256'], 'all-length full stdout digest mismatch')
+            outputs[step['label']] = raw.decode()
+        return outputs
+    for item in ci['archives']:
+        name = item['local_archive']
+        blob = (directory/'ci_artifacts'/name).read_bytes()
+        require(len(blob) == item['bytes'] and sha256(blob) == item['zip_sha256'],
+                'all-length historical archive digest mismatch: '+name)
+        with zipfile.ZipFile(io.BytesIO(blob)) as z:
+            if name == 'release-verification.zip':
+                legacy = json.loads(z.read('verification.json'))
+                require(legacy['status'] == 'passed' and legacy['mode'] == 'all' and
+                        len(legacy['checks']) == 43 and all(s['exit_code'] == 0 for s in legacy['checks']),
+                        'all-length legacy43 evidence missing')
+                continue
+            report_name, status, nt, nc, nm, tree_name = specifications[name]
+            require(z.read(tree_name).decode().splitlines() == [UNRESTRICTED_COMMIT, UNRESTRICTED_TREE],
+                    'all-length archive source/tree mismatch: '+name)
+            report = json.loads(z.read(report_name))
+            validate_full_report(report, status, nt, nc, nm, stdout_texts=complete_stdout(z, report))
+            if name != 'external-unrestricted.zip':
+                continue
+            export = next(s for s in report['steps'] if 'export' in s['label'])
+            pins = ci['unrestricted']['source_pins']
+            require(len(pins) == 48 and export['source_sha256'] == pins and
+                    (export['bytes'], export['sha256']) == (100676623,
+                    'c97c4eb4b09f8f313e1c019e488076791aa4d013cb332ce1b83877f895c64331'),
+                    'all-length source-bound export mismatch')
+            # Only the explanatory README may change under this historical
+            # assurance. Proof/model/configuration/verifier bytes stay pinned.
+            for filename, pin in pins.items():
+                if filename != 'README.md':
+                    require(sha256((project/filename).read_bytes()) == pin,
+                            'all-length checked source/configuration drift: '+filename)
+            inventory = json.loads((project/'inventory.json').read_text())
+            owned = json.loads((project/'owned_modules.json').read_text())
+            require(len(owned) == len(set(owned)) == 32 and inventory['owned_modules'] == owned,
+                    'all-length current owned32 module coverage mismatch')
+            expected_pins = dict(pins, **{'README.md': sha256((project/'README.md').read_bytes())})
+            require(inventory['sources_sha256'] == expected_pins and
+                    inventory['targets'] == report['targets'] and inventory['helpers'] == report['helpers'],
+                    'all-length current inventory/source closure mismatch')
+            models = {r['declaration']: r for r in json.loads((project/'frozen_models.json').read_text())}
+            require(len(models) == len(report['models']) == len(inventory['models']) == 13 and
+                    {r['declaration']: r for r in report['models']} == models ==
+                    {r['declaration']: r for r in inventory['models']}, 'all-length exact13 model mismatch')
+            props = {r['declaration']: r['raw_proposition'] for r in
+                     json.loads((project/'frozen_propositions.json').read_text())}
+            require(len(props) == 23 and all(r['raw_expected_proposition'] == props[r['expected']]
+                    for r in report['targets']), 'all-length frozen23 proposition mismatch')
+            mutations = json.loads(z.read('external-unrestricted-mutations.json'))
+            require(mutations['mode'] == 'full' and mutations['status'] ==
+                    'passed unrestricted negative controls and positive full twenty-three-target pipeline' and
+                    len(mutations['controls']) == 21 and all(c['result'] == 'rejected' for c in mutations['controls']) and
+                    mutations['original_source_sha256'] == pins, 'all-length actual21 controls missing')
+            positive_data = gzip.decompress(z.read('external-unrestricted-mutations-logs/positive-full.json.gz'))
+            require(sha256(positive_data) == mutations['positive_full_report_sha256'],
+                    'all-length full positive rerun hash mismatch')
+            positive = json.loads(positive_data)
+            validate_full_report(positive, status, 23, 504, 32, stdout_texts=complete_stdout(z, positive))
+            require(positive['targets'] == report['targets'] and positive['helpers'] == report['helpers'] and
+                    positive['models'] == report['models'] and
+                    next(s for s in positive['steps'] if 'export' in s['label'])['source_sha256'] == pins,
+                    'all-length full positive rerun source/type mismatch')
+            rejections = ci['unrestricted']['actual_semantic_rejections']
+            require(len(rejections) == 3, 'all-length three semantic rejection records missing')
+            for rejection in rejections:
+                command = next(c for c in mutations['commands'] if c['label'] == rejection['label'])
+                log = gzip.decompress(z.read('external-unrestricted-mutations-logs/'+Path(command['log_gzip']).name))
+                require(command['exit_code'] == 1 and command['expected_failure'] is True and
+                        command['rejection_reason_confirmed'] is True and
+                        sha256(log) == command['log_sha256'] == rejection['log_sha256'] and
+                        all(reason in log.decode() for reason in rejection['reason']),
+                        'all-length actual semantic rejection evidence mismatch')
+
+
 def validate_status(register, root=ROOT):
     require(len(register['claims']) == 4 and {c['problem'] for c in register['claims']} ==
             {'M4', 'R8', 'R9', 'O3′'}, 'incomplete four-problem register')
@@ -178,8 +301,15 @@ def validate_status(register, root=ROOT):
             if claim['problem'] == 'M4':
                 extension = claim['unrestricted_fixed_reference_c1_extension']
                 require((extension['targets'], extension['closures']) == (23, 504) and
-                        extension['status'] == 'source/type/axiom checked; independent gates pending' and
+                        extension['project'] == 'lean/external_unrestricted' and
+                        extension['scope'] == UNRESTRICTED_SCOPE and
+                        extension['status'] == UNRESTRICTED_STATUS and
                         extension['intended_m4_solved'] is False, 'separate c1 extension scope/assurance mismatch')
+                assurance = extension['assurance']
+                require((assurance['source_commit'], assurance['source_tree'], assurance['run_id']) ==
+                        (UNRESTRICTED_COMMIT, UNRESTRICTED_TREE, 46119220218) and
+                        assurance['receipt'] == 'verification/external_unrestricted/CI_ARTIFACTS.json',
+                        'separate c1 extension source/receipt mismatch')
             continue
         require(claim['status'] == O3_STATUS and claim['headline_formal_declarations'] == O3_HEADLINES,
                 'O3 headline status/declaration mismatch; fresh release audit required')
@@ -193,6 +323,7 @@ def validate_status(register, root=ROOT):
                 assurance['finite_checker_alone_proves_infinite_theorem'] is False,
                 'O3 assurance source or finite/infinite distinction changed')
     validate_o3_assurance(root)
+    validate_unrestricted_assurance(root)
 
 
 def main():
