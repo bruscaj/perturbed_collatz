@@ -1234,8 +1234,8 @@
     },
     {
       "path": "lean/external_critical/cache-imports.txt",
-      "bytes": 713,
-      "sha256": "7c4a4937b454ab77c585802d370bc2a505946342dba671d4b24e963ae340d9b6"
+      "bytes": 623,
+      "sha256": "acc97af8b23ed68ff7b8de79e78b24cd68a0bb78667a76ab1844a4c3111e0163"
     },
     {
       "path": "lean/external_critical/comparator.json",
@@ -1255,7 +1255,7 @@
     {
       "path": "lean/external_critical/inventory.json",
       "bytes": 1431751,
-      "sha256": "c86d6bdafcb4788d817c6b6c94c6e26478158255497f96d5d0388a957116ddc2"
+      "sha256": "2e6736ef4be97310ab8118eb44a62668b201ae947d8123a600f2d0addc223382"
     },
     {
       "path": "lean/external_critical/lake-manifest.json",
