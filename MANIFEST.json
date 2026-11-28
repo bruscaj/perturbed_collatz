@@ -4,8 +4,8 @@
   "files": [
     {
       "path": ".github/workflows/verify.yml",
-      "bytes": 17088,
-      "sha256": "6ef5a1751022211d7c6c37316ac63872df304a05c621a3c37fd7c6ab3def104c"
+      "bytes": 19425,
+      "sha256": "f82b5443cf10ce38a090999939f19cf7e07ca830253c4afecf85ad9e1728cb30"
     },
     {
       "path": ".gitignore",
@@ -14,8 +14,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 12078,
-      "sha256": "173ec61df1add468212ef2bf6dab883a63c65d7d187033a67c288556758b76d4"
+      "bytes": 12487,
+      "sha256": "19b8dc9349f905ec9b2636aae53086bada129f4d7e04e519600e208c83530468"
     },
     {
       "path": "Makefile",
@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 18955,
-      "sha256": "10af1706c7f6e54ae91cc13af9ddb0d133eafd5d3ae2c40693991c277269a1ed"
+      "bytes": 19706,
+      "sha256": "b39740574af8362d7f669696d2ec72208612fda63686c8e0752d1039b84f30b4"
     },
     {
       "path": "certificates/exposition/examples.json",
@@ -674,8 +674,8 @@
     },
     {
       "path": "claims.json",
-      "bytes": 62125,
-      "sha256": "3ad38becf1266a6813958e9999c5fee17763b0ab205fc56fcde48040f9890d9d"
+      "bytes": 64084,
+      "sha256": "f8f19c16ebdb361815d81f2d6f7e46d4adb7471a3da681eef30af3ee4b9c3aea"
     },
     {
       "path": "figures/README.md",
@@ -1106,6 +1106,196 @@
       "path": "lean/external_bridge/verify.py",
       "bytes": 16273,
       "sha256": "843980e975a42fe88fb58c6dfa89b5c1267a40fc2576d65e6561c42ee31ba22a"
+    },
+    {
+      "path": "lean/external_critical/ARGUMENT.md",
+      "bytes": 7907,
+      "sha256": "f4dfb20d5faa1a048520a3071f71c798cc34abb8acb2034e75b23c845cd7468b"
+    },
+    {
+      "path": "lean/external_critical/Audit.lean",
+      "bytes": 5938,
+      "sha256": "3a3fc65d74ddc3c6659422481da0c33115d23ba411251ff06adde078bb44a4c1"
+    },
+    {
+      "path": "lean/external_critical/BridgeDefinitions.lean",
+      "bytes": 4708,
+      "sha256": "7a36ebc1e9ff89fcec7ad1fdae1c2d5ae9ee011b06ae110fd4f34999e7df19a7"
+    },
+    {
+      "path": "lean/external_critical/BridgeExpectedTypes.lean",
+      "bytes": 4767,
+      "sha256": "850dcdd0d75479edaeab1c8d6d336b9099f56511e0b6f5a5125bedfca05838aa"
+    },
+    {
+      "path": "lean/external_critical/CriticalChallenge.lean",
+      "bytes": 1249,
+      "sha256": "c05082f91b7b98b292331482ab0cc2f109b4fb674a46bbc0981c658ce2b977fd"
+    },
+    {
+      "path": "lean/external_critical/CriticalSolution.lean",
+      "bytes": 2054,
+      "sha256": "f551ff4bba16965ae04cd6ef98fa12a02a14cd378fac2f131ee243c44ce8d133"
+    },
+    {
+      "path": "lean/external_critical/CriticalSpaceDefinitions.lean",
+      "bytes": 3793,
+      "sha256": "f9316997df40811d6ce24d9aec17a8315ad5db8dce318c8373803e62a7fec1a5"
+    },
+    {
+      "path": "lean/external_critical/CriticalSpaceExpectedTypes.lean",
+      "bytes": 3688,
+      "sha256": "a5c9be218477466352bd567e073702529e40d00e0b28b17811ea1b1a99a86df0"
+    },
+    {
+      "path": "lean/external_critical/ExcursionMoment.lean",
+      "bytes": 4832,
+      "sha256": "707b9004b33122274fe3ac802a414276da57d5c05df3e47cbb8608199810355b"
+    },
+    {
+      "path": "lean/external_critical/FiniteInfinity.lean",
+      "bytes": 3674,
+      "sha256": "f2ed734397bc5e467155362aaa96198353e43701e898a5928b00255d4d53f153"
+    },
+    {
+      "path": "lean/external_critical/GapPacking.lean",
+      "bytes": 4926,
+      "sha256": "354eb1c6dfe3079e027cae18edca0e3b0c74ef42ef9013ec005103f6c4b5ed51"
+    },
+    {
+      "path": "lean/external_critical/PhaseCocycle.lean",
+      "bytes": 2523,
+      "sha256": "432d64a737ba454eeff5b1d7f24d73b45e68d44bb34d88c238ce751aafb8cafe"
+    },
+    {
+      "path": "lean/external_critical/PolynomialContradiction.lean",
+      "bytes": 1841,
+      "sha256": "32e03263e67f25cddd193b00b8a87c3815100af26eef2534851a562c2dfe5401"
+    },
+    {
+      "path": "lean/external_critical/PrefixDefinitions.lean",
+      "bytes": 1373,
+      "sha256": "d7b5cd8b624dae007e3c3dc7f3620260dbfcf2169d0211b0859e18ed58180069"
+    },
+    {
+      "path": "lean/external_critical/PressureDefinitions.lean",
+      "bytes": 5528,
+      "sha256": "07d60f44e7aaa3107518678bb1780b4867a37f07c3db9b49e89f9402c8b45cd4"
+    },
+    {
+      "path": "lean/external_critical/PressureExpectedTypes.lean",
+      "bytes": 5083,
+      "sha256": "9aa83c42cf2ccb23490ce84da1b21b9d6de0fb26dbf435d21b4d27bcc215f015"
+    },
+    {
+      "path": "lean/external_critical/README.md",
+      "bytes": 2363,
+      "sha256": "9cb4369fd21a9059779b795d6a3f4a2ff2730ae0c3f770dc263b55e0745c9d8d"
+    },
+    {
+      "path": "lean/external_critical/RootedLaw.lean",
+      "bytes": 9548,
+      "sha256": "47b6e577821fed1ed9347c2f93274bf543149346e462ad58a479ba08c47ef18b"
+    },
+    {
+      "path": "lean/external_critical/RootedShift.lean",
+      "bytes": 9841,
+      "sha256": "a39bba8d66a72336f4455ecb3d142b09996fbc08f67c8c16cbbbacc688e0134d"
+    },
+    {
+      "path": "lean/external_critical/RootedStationary.lean",
+      "bytes": 3403,
+      "sha256": "ad262338a9be8300a85a9c45668bc67571809e8866f44443ad663f10b1da50cd"
+    },
+    {
+      "path": "lean/external_critical/SpaceArithmetic.lean",
+      "bytes": 1939,
+      "sha256": "dcef4506c54eb22c64332d965f1a09b2a1b231f7cf765b0dbbe4dd5c1c80e948"
+    },
+    {
+      "path": "lean/external_critical/SpaceReward.lean",
+      "bytes": 3368,
+      "sha256": "4ff19af4a9131758a919f2e4348adae2685f3d07a492d822c475e12336710382"
+    },
+    {
+      "path": "lean/external_critical/SpaceTopology.lean",
+      "bytes": 2133,
+      "sha256": "c6d0f4ae3c69b357e927bd26f512c5dd0b7235b508b33e171acb4af83ef8556e"
+    },
+    {
+      "path": "lean/external_critical/StationaryEvents.lean",
+      "bytes": 4771,
+      "sha256": "d6b9e138a01204d23a88240b0f48cf3bf44c41f66102892dca84f54fc4d78be3"
+    },
+    {
+      "path": "lean/external_critical/WeakReward.lean",
+      "bytes": 8787,
+      "sha256": "b456d94af7a713efc07bd84050622bd059d01a477a1962c113cef23c290c0b36"
+    },
+    {
+      "path": "lean/external_critical/cache-imports.txt",
+      "bytes": 713,
+      "sha256": "7c4a4937b454ab77c585802d370bc2a505946342dba671d4b24e963ae340d9b6"
+    },
+    {
+      "path": "lean/external_critical/comparator.json",
+      "bytes": 1051,
+      "sha256": "b806876059756327433fe0433fcb895cac540556ec51e223c4133628432d3cc1"
+    },
+    {
+      "path": "lean/external_critical/frozen_models.json",
+      "bytes": 191610,
+      "sha256": "83384e950c217fe0f6ffd1f3e4b736f82ff371160453c4665003fe143a7626da"
+    },
+    {
+      "path": "lean/external_critical/frozen_propositions.json",
+      "bytes": 151637,
+      "sha256": "1abfed9de8a7ddd7db4024042da50c1d7f2197bd5fdf9895daed7f0b4220926d"
+    },
+    {
+      "path": "lean/external_critical/inventory.json",
+      "bytes": 1431751,
+      "sha256": "c86d6bdafcb4788d817c6b6c94c6e26478158255497f96d5d0388a957116ddc2"
+    },
+    {
+      "path": "lean/external_critical/lake-manifest.json",
+      "bytes": 3571,
+      "sha256": "41cc972919eaeb896f060db539aed344e699b10aed3f75229a090f7e38d62d84"
+    },
+    {
+      "path": "lean/external_critical/lakefile.toml",
+      "bytes": 1996,
+      "sha256": "911a66fdbe798b25c0185582aa966fc9d4ea2aa026124185e09303a61a02e141"
+    },
+    {
+      "path": "lean/external_critical/lean-toolchain",
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+    },
+    {
+      "path": "lean/external_critical/owned_modules.json",
+      "bytes": 463,
+      "sha256": "3aa9a7592440d4c2fd4ccc8268c28781ffe501fc0ef70ba838d9fdd626f7e6a8"
+    },
+    {
+      "path": "lean/external_critical/provenance.json",
+      "bytes": 4180,
+      "sha256": "73ff78b3784fcb98d93837b304a7fc5dda8132b96113b7d4b5a82f3f71702910"
+    },
+    {
+      "path": "lean/external_critical/specification.json",
+      "bytes": 1545,
+      "sha256": "cf2de92f887c279215a357c5f13c49f05f20b68208fb15064b4bad6b8713e1cc"
+    },
+    {
+      "path": "lean/external_critical/test_mutations.py",
+      "bytes": 14041,
+      "sha256": "6e369d8377fb75b6885c6ed0896d2e6e61cb8d4d91ce231ea623ecd13961334e"
+    },
+    {
+      "path": "lean/external_critical/verify.py",
+      "bytes": 20960,
+      "sha256": "c98b4cdbae42ca966300343c39270339d40bd66a3b5e3d8cd1b5520b4b6f06b3"
     },
     {
       "path": "lean/external_optimization/Arithmetic.lean",

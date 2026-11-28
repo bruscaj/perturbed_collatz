@@ -1090,6 +1090,33 @@
         "ExternalM4UnrestrictedChallenge.noAllLengthLimit"
       ],
       "limitations": "Actual theta=log(3)/log(2), ordered positive source words at every length, fixed phase-zero B_r, c=1 only. This is a distinct extension, not a refutation of intended rung-only M4, phase-adapted N*, or a theorem for c<1. No pressure/R8/R9 analytic limit, actual integer-cycle realization, capture, novelty or human expert refereeing follows. Assurance is pinned to source739a4f5; later heads require their own regression."
+    },
+    {
+      "id": "REL-CRITICAL-SUPPORT",
+      "title": "Compact critical configuration and rooted-law supporting theorems",
+      "evidence_status": "Fresh ordinary build and full owned-origin axiom audits passed. Independent implementation/guard review and local semantic controls passed. Full Linux source-bound replay, trusted statement comparison, six checker modes in both stages, positive full rerun and18 hostile controls are PENDING for this exact public tree.",
+      "artifacts": [
+        "lean/external_critical/CriticalSolution.lean",
+        "lean/external_critical/ARGUMENT.md",
+        "lean/external_critical/README.md",
+        "lean/external_critical/inventory.json",
+        "lean/external_critical/provenance.json"
+      ],
+      "lean_declarations": [
+        "ExternalCriticalSupportChallenge.excursion_first_moment",
+        "ExternalCriticalSupportChallenge.finite_infinity_exclusion",
+        "ExternalCriticalSupportChallenge.gap_packing",
+        "ExternalCriticalSupportChallenge.phase_representative_law",
+        "ExternalCriticalSupportChallenge.polynomial_excursion_contradiction",
+        "ExternalCriticalSupportChallenge.reward_roof_and_regularity",
+        "ExternalCriticalSupportChallenge.root_shift_error",
+        "ExternalCriticalSupportChallenge.rooted_normalization",
+        "ExternalCriticalSupportChallenge.rooted_stationary_subsequence",
+        "ExternalCriticalSupportChallenge.shift_group_and_continuity",
+        "ExternalCriticalSupportChallenge.space_topology",
+        "ExternalCriticalSupportChallenge.weak_reward_passage"
+      ],
+      "limitations": "Twelve supporting statements only. Finite/infinite separation assumes actual null cylinders; infinite-height mass remains possible. Polynomial contradiction is conditional on an excursion lower bound, which is not supplied. No critical Gibbs law, full C01-C08, M4/R8/R9, numerical certificate, capture, novelty or human expert acceptance."
     }
   ],
   "literature_scope": "Citation keys resolve in tex/references.tex. Relationships identify attribution and limits, not a literature-wide priority certification."

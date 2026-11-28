@@ -1,0 +1,53 @@
+import SpaceTopology
+import SpaceArithmetic
+import SpaceReward
+import PhaseCocycle
+import RootedLaw
+import WeakReward
+import RootedShift
+import RootedStationary
+import StationaryEvents
+import FiniteInfinity
+import GapPacking
+import ExcursionMoment
+import PolynomialContradiction
+
+namespace ExternalCriticalSupportChallenge
+
+theorem space_topology : ExternalCriticalSpaceDraft.SpaceTopology :=
+  ExternalCriticalSpaceTopology.space_topology
+
+theorem phase_representative_law : ExternalCriticalSpaceDraft.PhaseRepresentativeLaw :=
+  ExternalCriticalSpaceArithmetic.phase_representative_law
+
+theorem shift_group_and_continuity : ExternalCriticalSpaceDraft.ShiftGroupAndContinuity :=
+  ExternalCriticalSpaceArithmetic.shift_group_and_continuity
+
+theorem reward_roof_and_regularity : ExternalCriticalSpaceDraft.RewardRoofAndRegularity :=
+  ExternalCriticalSpaceReward.reward_roof_and_regularity
+
+theorem weak_reward_passage : ExternalCriticalSpaceDraft.WeakRewardPassage :=
+  ExternalCriticalWeakReward.weak_reward_passage
+
+theorem rooted_normalization : ExternalCriticalSpaceDraft.RootedNormalization :=
+  ExternalCriticalRootedLaw.rooted_normalization
+
+theorem root_shift_error : ExternalCriticalSpaceDraft.RootShiftError :=
+  ExternalCriticalRootedShift.root_shift_error
+
+theorem rooted_stationary_subsequence : ExternalCriticalSpaceDraft.RootedStationarySubsequence :=
+  ExternalCriticalRootedStationary.rooted_stationary_subsequence
+
+theorem finite_infinity_exclusion : ExternalCriticalSpaceDraft.FiniteInfinityExclusion :=
+  ExternalCriticalFiniteInfinity.finite_infinity_exclusion
+
+theorem gap_packing : ExternalCriticalSpaceDraft.GapPacking :=
+  ExternalCriticalGapPacking.gap_packing
+
+theorem excursion_first_moment : ExternalCriticalSpaceDraft.ExcursionFirstMoment :=
+  ExternalCriticalExcursionMoment.excursion_first_moment
+
+theorem polynomial_excursion_contradiction : ExternalCriticalSpaceDraft.PolynomialExcursionContradiction :=
+  ExternalCriticalPolynomialContradiction.polynomial_excursion_contradiction
+
+end ExternalCriticalSupportChallenge

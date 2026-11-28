@@ -110,3 +110,8 @@
   preserving every legacy release check. Local build-only mode is partial.
 - Extended public manifest coverage checks in both directions.
 
+
+
+### Critical-space support candidate
+
+Added the self-contained12-target critical-space supporting package and a ninth mandatory assurance job. The current addition is awaiting full independent CI; ordinary compilation and local hostile preflight are explicitly lower assurance. Full critical-law and M4/R8/R9 conclusions remain incomplete. Generated complete proof exports remain temporary build artifacts.
