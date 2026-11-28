@@ -188,6 +188,7 @@ def main():
                         cmd.extend((option,value.resolve()))
                 run("all pinned Lean projects and full theorem axiom inventory", cmd)
                 run("clean manuscript compilation", [py, "scripts/build_paper.py", "--output", tmp / "paper.pdf"])
+                run("clean external draft compilations", [py, "papers/build.py", "--output-dir", tmp / "external-papers"])
             report["status"] = "passed"
         except Exception as error:
             report["status"] = "failed"

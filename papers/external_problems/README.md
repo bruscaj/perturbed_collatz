@@ -7,8 +7,7 @@ and work in progress. Corrections and counterexamples are welcome.
 **No solution of these four open problems is certified by this release.**
 The project has written proof candidates. The public material here first
 records their exact scope and provides reproducible finite foundations.
-The infinite statements below have no complete Lean proof in this release,
-no independent checker receipt, and no human expert refereeing. Neither
+The full four-problem claims below remain unproved in Lean. The h=1 O3′ subquestion has a [complete frozen-target proof package](../../lean/external_analysis/README.md), with full independent checker CI pending. There has been no human expert refereeing. Neither
 ordinary Collatz convergence nor global forced capture follows.
 
 ## Original statements and interpretation
@@ -30,7 +29,7 @@ redistribute its chapters.
 | [M4, `prob:ch20:band`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10f_missed.tex), and [detailed `rrt:sec:m4`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex) | Rung entropy limit, variational characterization and computability | The short statement asks for an unrestricted length limit; the detailed discussion uses ladder rungs. These must be treated separately. A certified entropy table is still required. | Draft candidate; unresolved source interpretation and assurance gates |
 | [R8, `rrt:prob:r8`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex) | Pressure convergence and differentiability for every nonnegative tilt along rungs | Critical differentiability is part of the problem. Convergence and finite-depth computations do not settle it. | Draft candidate; full critical argument and formal assurance pending |
 | [R9, `rrt:prob:r9`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch10h_ratchets.tex) | Near-maximal entropy asymptotic, with proposed leading coefficient `3/(2 ln 2 ln 10)` | First take the length limit along rungs at fixed threshold, then let the threshold tend to one. Finite counts do not certify either limit. | Draft candidate; analytic proof and full formalization pending |
-| [O3′, `prob:ch11:o3p`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch11_open.tex) | Arbitrary-correction density, inverse-depth rate, depth-one infimum/nonattainment and convergent finite optimization | Corrections may be unbounded real functions of the current remaining block and the next `h−1` complete blocks. Rate, algorithmic determination and closed forms are distinct claims. | Draft candidate; complete source-to-density formalization pending |
+| [O3′, `prob:ch11:o3p`](https://github.com/VadimSokolov/collatz/blob/5840497a23fc0d64127b850aea68862d7c93f2b7/book/chapters/ch11_open.tex) | Arbitrary-correction density, inverse-depth rate, depth-one infimum/nonattainment and convergent finite optimization | Corrections may be unbounded real functions of the current remaining block and the next `h−1` complete blocks. Rate, algorithmic determination and closed forms are distinct claims. | All 14 h=1 targets formalized; full checker CI pending. Arbitrary-depth and rate claims remain candidates |
 
 ## The literal word model
 

@@ -8637,5 +8637,13 @@
     "scope": "five abstract integer supporting statements only; no headline external theorem",
     "toolchain": "4.35.0",
     "verification": "python3 lean/external_problems/verify.py --mode full"
+  },
+  "external_analysis_project": {
+    "path": "lean/external_analysis",
+    "inventory": "lean/external_analysis/inventory.json",
+    "frozen_targets": 14,
+    "owned_theorem_closures": 397,
+    "assurance": "clean source build and exhaustive axiom audit passed; full dedicated CI pending",
+    "scope": "O3 prime h=1 only"
   }
 }
