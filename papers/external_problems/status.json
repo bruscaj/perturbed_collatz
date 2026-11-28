@@ -84,7 +84,7 @@
         "scope": "every fixed finite positive depth, unrestricted real correction of the actual current/future run window",
         "formal_project": "lean/external_population",
         "target_count": 22,
-        "assurance": "ordinary source build and exhaustive axiom audit passed; full independent gates pending",
+        "assurance": "full source-bound replay/comparator/six checker modes/nine hostile controls passed at8746e08; verification/external_population/README.md",
         "remaining": "infimum rate and general optimization are separate unfinished claims"
       }
     }

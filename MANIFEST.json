@@ -4,8 +4,8 @@
   "files": [
     {
       "path": ".github/workflows/verify.yml",
-      "bytes": 7703,
-      "sha256": "6e2d51422900afcab7dd0ea3931beb8a72d51f4371499ca830c69f13a646420b"
+      "bytes": 7724,
+      "sha256": "16bdd11faae608eeefcb9fe97ca4ecb247fe115b1a5b23b65857ade159639b86"
     },
     {
       "path": ".gitignore",
@@ -14,8 +14,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 8087,
-      "sha256": "69059805eeeb74eb9fd4a9927e7603129f7050db2b0438829a5ba42931ac854b"
+      "bytes": 8144,
+      "sha256": "64d5547cfd4fe3bd0b2fb7622ce1df775231836d63ccd3b8d49921014d3e2b01"
     },
     {
       "path": "Makefile",
@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 14723,
-      "sha256": "0cd005dc4cbafa64e5a523564f648a3a9c88ec767230aece668ee93881b49816"
+      "bytes": 15054,
+      "sha256": "b28b6629f6312d6bd8a62cec907c0f7ea5253bb5507a7c8622fc0da7d6a67c1f"
     },
     {
       "path": "certificates/exposition/examples.json",
@@ -664,8 +664,8 @@
     },
     {
       "path": "claims.json",
-      "bytes": 42209,
-      "sha256": "ac642c321f57c770601f546126f0030271957841ec0d91f0f69a14277ffde142"
+      "bytes": 42267,
+      "sha256": "6dd53d57e88c21a60187627addc7fc1bbad193063092f212dcc778c3399cc247"
     },
     {
       "path": "figures/README.md",
@@ -719,8 +719,8 @@
     },
     {
       "path": "lean/README.md",
-      "bytes": 18621,
-      "sha256": "9339a9b10ed22e44fd5cdd70b93229633931e512ebf78ad0729eee0698d08829"
+      "bytes": 18695,
+      "sha256": "506a57a6c11fac0dcc6603d958fcc15cbe78760edd5ce0f4da4762cebb1d0f56"
     },
     {
       "path": "lean/external_analysis/.gitignore",
@@ -1394,8 +1394,8 @@
     },
     {
       "path": "lean/inventory.json",
-      "bytes": 710093,
-      "sha256": "10271dcbeea97526b6b09949d7335882408fe1ce07cbae27c7ada22e5675f9b2"
+      "bytes": 710143,
+      "sha256": "626eed79c45a8d6464fa1c64515a70170c8fa882d938ac7138ac8f9f6096715f"
     },
     {
       "path": "lean/inverse/Audit.lean",
@@ -1604,8 +1604,8 @@
     },
     {
       "path": "papers/README.md",
-      "bytes": 2821,
-      "sha256": "38331eda008de1d873128a7e2d759127ea42c8d30c48d631880e69e676c7913a"
+      "bytes": 2887,
+      "sha256": "1d2fc53402f5adb381d8ada7dfda889f972be1c57f3205220c09ac8d10423356"
     },
     {
       "path": "papers/arithmetic_bridge_pressure/README.md",
@@ -1629,13 +1629,13 @@
     },
     {
       "path": "papers/external_problems/README.md",
-      "bytes": 8143,
-      "sha256": "dd8595d411b5612223722813e2383d3a95a0ae589d0305a8d28916f05c2f1f81"
+      "bytes": 8233,
+      "sha256": "b528603d227e8301fd8b94e429f73c2f956973bdbf296125ef3bea8446bb5958"
     },
     {
       "path": "papers/external_problems/status.json",
-      "bytes": 5800,
-      "sha256": "4a1b1766f71c7261f3de62bba5f3fc23b36f334d3e9c20053a779c54474d7487"
+      "bytes": 5849,
+      "sha256": "628e2a8a25f5589ae280c68046f4ce9dce248c241aaaedda4ee4b2f4e410cb86"
     },
     {
       "path": "papers/finite_information_lyapunov/README.md",
@@ -1756,6 +1756,26 @@
       "path": "verification/external_analysis/external-analysis.json",
       "bytes": 210911,
       "sha256": "c9950ad89155122e60eb24b0cd6033312c4fb19c3347269b002f4e9bc6621cd9"
+    },
+    {
+      "path": "verification/external_population/README.md",
+      "bytes": 1953,
+      "sha256": "20e347a534a81c7ba96556204e1f37e359d0b3f96cb6b28053329b18f4fc7ff5"
+    },
+    {
+      "path": "verification/external_population/external-population-mutations.json",
+      "bytes": 6785,
+      "sha256": "db7fbc9887fa07dafaa198995edda9bc5fd90631e742d2feabdf6f30831a8c41"
+    },
+    {
+      "path": "verification/external_population/external-population-source-tree.txt",
+      "bytes": 82,
+      "sha256": "b355b05ae80d2465f6cad64195fb13bc3347b668ab5d47691d2c1fae4e340713"
+    },
+    {
+      "path": "verification/external_population/external-population.json",
+      "bytes": 6742449,
+      "sha256": "d5af68c0ecddc3080454898afbc1b78adf0d21721daf26af3367f3d7f8439664"
     },
     {
       "path": "verification/external_prefix/README.md",

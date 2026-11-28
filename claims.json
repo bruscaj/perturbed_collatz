@@ -826,13 +826,14 @@
     {
       "id": "REL-O3-DENSITY",
       "title": "Literal arbitrary-finite-depth Syracuse failure densities",
-      "evidence_status": "all22 pre-proof frozen source/density targets proved; standalone source build and517closure axiom audit passed; full independent gates pending",
+      "evidence_status": "all22 frozen targets,517closure audits, full source-bound sandbox replay, trusted comparator, all six checker modes and nine hostile controls passed at8746e08/run46098606212",
       "artifacts": [
         "lean/external_population/GeneralSolution.lean",
         "lean/external_population/GENERAL_DENSITY_PROOF.md",
-        "lean/external_population/inventory.json"
+        "lean/external_population/inventory.json",
+        "verification/external_population/README.md"
       ],
-      "limitations": "Each positive finite h is fixed before the population limit. All real corrections allowed; no rate or optimization theorem. Full independent replay/comparator/checker CI pending; no novelty or human refereeing claimed."
+      "limitations": "Each fixed positive finite h; arbitrary real window corrections. No rate or optimization theorem, novelty or human refereeing. Later documentation/metadata heads require their own regression."
     }
   ],
   "literature_scope": "Citation keys resolve in tex/references.tex. Relationships identify attribution and limits, not a literature-wide priority certification."

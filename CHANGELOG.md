@@ -3,7 +3,7 @@
 ## Finite-depth source density — 28 November 2026
 
 - Added a standalone public library and full written reconstruction for all22frozen finite-depth density/source-model statements, preserving unrestricted real corrections, literal future blocks and both finite-tail transfers.
-- Added the separate mandatory population replay/comparator/hostile-fixture CI job. Its full assurance remains pending; rate/optimization claims remain unfinished.
+- Added the separate mandatory population replay/comparator/hostile-fixture CI job. Its full source-bound replay/comparator/six-checker/nine-control assurance passed at8746e08; rate/optimization claims remain unfinished.
 
 ## External-problem audit — 27 November 2026
 
