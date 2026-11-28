@@ -7,7 +7,8 @@ permissions:
   contents: read
 concurrency:
   group: verify-${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
-  cancel-in-progress: true
+  # Preserve running evidence jobs when a reviewed checkpoint is pushed.
+  cancel-in-progress: false
 jobs:
   external-support:
     runs-on: ubuntu-22.04
