@@ -120,3 +120,8 @@ Added the self-contained12-target critical-space supporting package and a ninth 
 ### Pinned critical-support assurance
 
 Archived the nine original digest-verified CI artifacts from exact sourcef6311a6/run46133133418. All nine jobs,45regressions and the critical12target/391declaration replay/comparison/six-mode/18control gates passed. The initial39b1ee3 dependency-preparation failure was corrected by passing module names to the cache CLI; no mathematical source changed. Later documentation heads require their own regression.
+
+
+### Actual pressure helper candidate
+
+Added the exact30WORD/34analytic helper package, original mathematical source copies, self-contained derivations and a tenth mandatory independent assurance job. Ordinary and local fixture gates passed; introduction requires full current-source replay/comparison/six-mode/22control CI before independent acceptance. Main M4/R8/R9 and canonical48/effectivity/table obligations remain incomplete.

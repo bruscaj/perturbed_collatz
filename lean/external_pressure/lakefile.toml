@@ -1,0 +1,269 @@
+name = "external_pressure"
+version = "0.1.0"
+defaultTargets = ["PressureSolution"]
+allowNonModules = true
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "56a005855ea17e0b0958f73ec801ae140b0a1679"
+
+[[lean_lib]]
+name = "Definitions"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "ExpectedTypes"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "Arithmetic"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "PopulationWeights"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "DepthOneSeries"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "LogRatioIrrational"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "PositiveCeilReturns"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "PrefixDefinitions"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "RungDefinitions"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "RungTransfer"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "SyracuseSlope"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "BridgeDefinitions"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "BridgeExpectedTypes"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "BridgeEncoding"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "BridgeArithmetic"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "BridgeRewards"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "BridgeTransport"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "PressureDefinitions"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "PressureExpectedTypes"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "PressureWordDefinitions"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "PressureWordExpectedTypes"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "PhaseCocycle"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "PhasePaths"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "WordArithmetic"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "WordReward"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "WordPopulation"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "WordPhysical"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "WordPartitions"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "WordRung"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "WordPhaseUp"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "WordClamp"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "WordClampCount"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "WordCompletion"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "WordTruncation"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "WordTruncationFiber"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "WordFiniteComparison"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "WordPartitionTransport"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "WordEndpoint"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "WordConcatenation"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "CompletePressureDefinitions"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "CompletePressureExpectedTypes"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "PressureAnalyticDefinitions"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "PressureAnalyticExpectedTypes"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticFekete"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticPhaseInfimum"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticRotation"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticConstant"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticSubsequence"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticCompactness"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticCompactnessCompletion"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticRotationGrid"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticCircleGrid"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticAveraging"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticDiscrepancy"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticCapDiscrepancy"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticOscillation"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "BridgeRungs"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticUniformPressure"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticReference"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticCost"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticQualitative"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticCore"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "AnalyticIntegrals"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "PressureSolution"
+leanOptions = { warningAsError = true }
+
+[[lean_lib]]
+name = "PressureChallenge"

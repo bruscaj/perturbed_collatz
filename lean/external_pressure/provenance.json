@@ -1,0 +1,263 @@
+{
+  "canonical_freezes_sha256": {
+    "bridge_pressure_word_spec/freeze.json": "3135c707e65d1c0600e54659884ce290c76a8fd599ab9bd9343e5d7aeb8439a0",
+    "bridge_pressure_analytic_spec/freeze.json": "d6f08548e11ae672b1cd5434070d52384d4fa5c2ee6c779804cef98a46b2ca8e"
+  },
+  "source_files": {
+    "Definitions.lean": {
+      "sha256": "cf29376721942a78328491cd910690497f95d381711f0d2e758998fbba9374bc",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "ExpectedTypes.lean": {
+      "sha256": "5ce898eb70690f6f77e26a95cbafb5ef268fa93617ab7418a0b25f6878c34968",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "Arithmetic.lean": {
+      "sha256": "8ad07971f3dd9b211aa99c36f6ed9c645e9dbb158b7ba33e81b72d5ca2c6f76e",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "PopulationWeights.lean": {
+      "sha256": "8affb6d578e9891f306df4b54cc621c33d110227eaec7912d8dcf826f9697190",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "DepthOneSeries.lean": {
+      "sha256": "b0852b07d1f7105c61464d1642c998ece3563cb81e658cfe4a995f0e6b7e2562",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "LogRatioIrrational.lean": {
+      "sha256": "2a2950ef39be685654ab7c3d3c4c734cf6103a74fa622d450ee0675e0240a89e",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "PositiveCeilReturns.lean": {
+      "sha256": "98e1852aaa8baa5ecabcc70424b24d8871f7178fb7768b31c8278a579f0e8a37",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "PrefixDefinitions.lean": {
+      "sha256": "d7b5cd8b624dae007e3c3dc7f3620260dbfcf2169d0211b0859e18ed58180069",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "RungDefinitions.lean": {
+      "sha256": "8c1996d5e2a11f726324f8f0fd282c061ed1b3819ccb734ecbccf49a8ccb17b5",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "RungTransfer.lean": {
+      "sha256": "e61650b3d2f90f3431c2bd861c57448aa86d54be769d554ab437808d7d612dde",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "SyracuseSlope.lean": {
+      "sha256": "7909ad410f4b2e1ac7cf13d6f476679aa1d608c92f95ca2c3514a696a3cd5395",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "BridgeDefinitions.lean": {
+      "sha256": "7a36ebc1e9ff89fcec7ad1fdae1c2d5ae9ee011b06ae110fd4f34999e7df19a7",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "BridgeExpectedTypes.lean": {
+      "sha256": "850dcdd0d75479edaeab1c8d6d336b9099f56511e0b6f5a5125bedfca05838aa",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "BridgeEncoding.lean": {
+      "sha256": "f7f6f59daca369a1347219540cfbc15312af9592b65f123c041418939c480816",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "BridgeArithmetic.lean": {
+      "sha256": "645d446755a140470ee402fdd0596e9fd8c55496d1de6515ff1e756538546f57",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "BridgeRewards.lean": {
+      "sha256": "53da32ac28f519ad0e63bfad402139c91f6856e43d13134bcfa6430807c3e673",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "BridgeTransport.lean": {
+      "sha256": "35a0565a222c677fd59249de39599d526d982dc97453c60ed1a1261b321612cb",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "PressureDefinitions.lean": {
+      "sha256": "07d60f44e7aaa3107518678bb1780b4867a37f07c3db9b49e89f9402c8b45cd4",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "PressureExpectedTypes.lean": {
+      "sha256": "9aa83c42cf2ccb23490ce84da1b21b9d6de0fb26dbf435d21b4d27bcc215f015",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "PressureWordDefinitions.lean": {
+      "sha256": "3dd0db7a7ac1bf2adf2a048c51080cef65f6dd769a5ca95f58ae443a8110fe03",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "PressureWordExpectedTypes.lean": {
+      "sha256": "010c0e9dd204fd5d6ec2173bbe39eb270d67f971bb59093c1a24804dd8d0f5f4",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "PhaseCocycle.lean": {
+      "sha256": "432d64a737ba454eeff5b1d7f24d73b45e68d44bb34d88c238ce751aafb8cafe",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "PhasePaths.lean": {
+      "sha256": "0bf85081aab115ce706cb9989b0c88728ec065f15cb501090fa1fd1da43bf55e",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "WordArithmetic.lean": {
+      "sha256": "a2e2f919a1b103ca36e0b431d217d03c176019963f4bea046ed193e7af82912c",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "WordReward.lean": {
+      "sha256": "79b6024c8a59a24a0c941efc6eeebb4178844743fdfaa6a480e244666d8ad473",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "WordPopulation.lean": {
+      "sha256": "a5dd789e89af123be788e229679b0364a9575befa5b68b10d49864753bbc77d3",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "WordPhysical.lean": {
+      "sha256": "54dd2303e109040a6d7937e99329047c8c630483c9b595fb4c85f8a10ac5eead",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "WordPartitions.lean": {
+      "sha256": "de397966da98ec7c93d8a57b757552ebcf6a415c186d10e3ea2e5be35fb4cb32",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "WordRung.lean": {
+      "sha256": "fad8ddd5cda899e869fd09a9d62c862692bb52ac1efd175fc0a2c9d759f00a25",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "WordPhaseUp.lean": {
+      "sha256": "f3802b8951b522c37c145117e737278c787c8265ba73856f4bf11b3cdc966d3b",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "WordClamp.lean": {
+      "sha256": "5840853632287a4852d4be06347e7280b5bbb7362dcb464cdd2f9c9189a53b6a",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "WordClampCount.lean": {
+      "sha256": "882432a4d8cd42ca1ca011a9228d9a7a22332558f5ebf2d4c333a952d1207544",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "WordCompletion.lean": {
+      "sha256": "c0fad3648101fca2cbec3e067531ee264e44b2e55f82b904bc39080941c91866",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "WordTruncation.lean": {
+      "sha256": "5d101961cce6b0619295fe261f9f125b5e91256fc8678dbc275216dc249e4525",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "WordTruncationFiber.lean": {
+      "sha256": "38da641eb858ac38abfaaa4e1fed3bccf954cd7957a9fbb7db188e2cdf5ffa4b",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "WordFiniteComparison.lean": {
+      "sha256": "b68eb074c13d0012b4ce76ad83d12d1be3a66dbb17f78e9807487feed2e8e6b9",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "WordPartitionTransport.lean": {
+      "sha256": "1627f9610121b60178da707f4f34f38d0cd7cc0496271476702b3f8bb1a20990",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "WordEndpoint.lean": {
+      "sha256": "8dac2b32a0f4871fd7ddac286dcbab732176667d68fb1d43d61dcd5de8e7e688",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "WordConcatenation.lean": {
+      "sha256": "005db4a8714832d582018aecd890db29dd7ae83ff250bb3874c92d0235a6d88a",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "CompletePressureDefinitions.lean": {
+      "sha256": "fbc125a7aeb568b2e47f314956bed9038e12d0044111a9f7a10c4f8df0eba91e",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "CompletePressureExpectedTypes.lean": {
+      "sha256": "e21ef1fec4dfab47a945590d9b8179002d4c6505f669355710e450e09163412d",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "PressureAnalyticDefinitions.lean": {
+      "sha256": "948dae752ed3f7209f7a1e067e44e35bc6f8ac0875b54d830858d2ea19c748fd",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "PressureAnalyticExpectedTypes.lean": {
+      "sha256": "a6264a5beef9e5a5ffa936f9c20ff9a54310bfc7b8fd3cc20b2c1942615854d0",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticFekete.lean": {
+      "sha256": "8228a52855902ad33f8303683fdf250716f856be3656886b216d7bf7ffa317e2",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticPhaseInfimum.lean": {
+      "sha256": "02486b99ca63ebce5d7d86ee3b0d8366e0ef042eba0583326124fee94930d6bc",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticRotation.lean": {
+      "sha256": "36bf12f658ce3bd4ef5a8ae2453b2f2224509cc5281fb42eb102dbd5bcf3fe8d",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticConstant.lean": {
+      "sha256": "cc443171ede66bc0e3c40dc917d789d469f0be51152d771cbb9ddda7c0098d6f",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticSubsequence.lean": {
+      "sha256": "533e7033700746f6db52ba0a356f93c7dddf4a7ee9b9ec11a49f5f67fcf06692",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticCompactness.lean": {
+      "sha256": "d40de57dfce793c90ba2633194235641c9f8389806c90d6f60ec6e64c70a4260",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticCompactnessCompletion.lean": {
+      "sha256": "bc9717e9fcc8cc993d1db552a5b7b49353d071f4081ee0c33e677bc270a9248d",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticRotationGrid.lean": {
+      "sha256": "6ba5ad348624333185b247d3bdff26428a6d8e2f43f3d5e7b5db3c858cef55e3",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticCircleGrid.lean": {
+      "sha256": "1d5f8906978c65406f8ae315699764455a79389eb06ccb6b07b3a40341d4f437",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticAveraging.lean": {
+      "sha256": "a6801aa66171973b6c53e25929ca6a53af771b4bce7804e1df31a06521dff003",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticDiscrepancy.lean": {
+      "sha256": "9aebb930ce32ad27ffdc90238b5c044e682b4f7edf4889dfca31be1461859175",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticCapDiscrepancy.lean": {
+      "sha256": "230af917dd7520e56eecdcbc7bb15726942ac748feb3f75c5d4bb4a532603a64",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticOscillation.lean": {
+      "sha256": "023478a47bf7ab07376d0ad032c2e94addb08a0981fcff6334d292e84cbbd8d8",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "BridgeRungs.lean": {
+      "sha256": "df4d32953097dd24a6479aae99fbd93a5dd9ece47eb98d59347055db2209872d",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticUniformPressure.lean": {
+      "sha256": "b81ce58e21ffdca9fb2f787cacb53d621de8a0ffc08c120f6b0dabe3d98faf8c",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticReference.lean": {
+      "sha256": "0be327f137039c838342136072a834e06042c61c504356dc00dd78647771b132",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticCost.lean": {
+      "sha256": "0504d749813424d806c5e124f2a0c8b957c85d24e127e94f20bfb7e836dd33d8",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticQualitative.lean": {
+      "sha256": "7f9b0c811ebc8789167c9c112d1760b5b5f2987230a906e8e7e85c9f09049031",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticCore.lean": {
+      "sha256": "78e0c61963d0be8f20d4134f16ef1dd5d1dafb70946cc3894360d01ea6d23609",
+      "transformation": "exact mathematical source byte copy"
+    },
+    "AnalyticIntegrals.lean": {
+      "sha256": "e4d2a8aa56fba92c749ee0dc68bbbd9a6cbb30339803ca0527cd1f9165b2d5f4",
+      "transformation": "exact mathematical source byte copy"
+    }
+  },
+  "public_wrapper": "New aliases only; no changed mathematical source body",
+  "model_scope": "All57 WORD and20 analytic primary type/value/origin/axiom rows, including17canonical opaque null bodies. Historical legacy fields preserved separately.",
+  "authorship": "Jake S. Brusca; ChatGPT-assisted personal research, overlapping AI roles; no human expert or novelty acceptance."
+}

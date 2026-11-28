@@ -29,8 +29,7 @@ answer the three stated O3′ requests in this algorithmic sense for the exact
 run-length-only class; general-depth closed formulas and sharp constants are
 separate questions.
 The [near-extremal entropy draft](papers/arithmetic_bridge_pressure/README.md)
-gives the proposed rung pressure and entropy argument behind R9; it remains
-unformalized and covers only part of M4 and R8.
+gives the proposed rung entropy argument behind R9; its main asymptotic argument remains without end-to-end formalization. The separate pressure helper package supplies the finite dictionaries and actual uniform-pressure foundations, subject to its own assurance gates; full M4/R8/R9 remain incomplete.
 
 | Result | Evidence here | What remains outside the claim |
 | --- | --- | --- |
@@ -128,3 +127,6 @@ The [all-length fixed-reference distinction](lean/external_unrestricted/README.m
 
 
 The [critical-space support package](lean/external_critical/README.md) adds12 exact supporting statements on the compactified configuration space and finite rooted laws, with a [self-contained argument](lean/external_critical/ARGUMENT.md). Its21owned modules contain391declarations (12targets and379helpers), with32canonical model-origin entries including8opaque null values. At source `f6311a6`, all nine mandatory jobs and45regressions passed. The critical package passed full replay, trusted comparison, all six checker modes in both stages, its positive full rerun and18controls ([exact original archives](verification/external_critical/README.md)). That historical pass is pinned to its exact source/tree; later heads require their own regression. This supplies no critical Gibbs law, full C01–C08, R8 regularity, M4/R9 resolution or numerical certificate. Earlier eight-job receipts certify their exact historical heads.
+
+
+The [word and analytic pressure helper package](lean/external_pressure/README.md) provides30finite WORD and34analytic targets with a [self-contained derivation](lean/external_pressure/ARGUMENT.md). Its64owned modules contain1357declarations and77model-origin entries, including17opaque null values whose historical metadata is retained separately. Ordinary source/type/axiom checks and local semantic preflight passed, with a separate AI guard/scope review. At introduction full independent assurance was pending: the tenth mandatory CI job requires complete source-bound replay, trusted comparison, six checker modes in both stages, a positive full rerun and22controls. This does not complete canonical48, baseline/infinite-tilt bounds, entropy/Legendre, critical regularity, effective programs, the certified table or M4/R8/R9.

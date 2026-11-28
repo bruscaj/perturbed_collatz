@@ -1,0 +1,386 @@
+[
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_zeroVolumeConvention",
+    "proof_root": "ExternalBridgePressureWordArithmetic.zero_volume_convention",
+    "goal": "ExternalBridgePressureWordDraft.ZeroVolumeConvention",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_auxiliaryEndpointWitness",
+    "proof_root": "ExternalBridgePressureWordEndpoint.auxiliary_endpoint_witness",
+    "goal": "ExternalBridgePressureWordDraft.AuxiliaryEndpointWitness",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_capIncrementBounds",
+    "proof_root": "ExternalBridgePressureWordArithmetic.cap_increment_bounds",
+    "goal": "ExternalBridgePressureWordDraft.CapIncrementBounds",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_canonicalWordLaw",
+    "proof_root": "ExternalBridgePressureWordArithmetic.canonical_word_law",
+    "goal": "ExternalBridgePressureWordDraft.CanonicalWordLaw",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_finiteWordPopulation",
+    "proof_root": "ExternalBridgePressureWordPopulation.finite_word_population",
+    "goal": "ExternalBridgePressureWordDraft.FiniteWordPopulation",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_boundedWordEnumeration",
+    "proof_root": "ExternalBridgePressureWordPopulation.bounded_word_enumeration",
+    "goal": "ExternalBridgePressureWordDraft.BoundedWordEnumeration",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_normalizedRewardLaw",
+    "proof_root": "ExternalBridgePressureWordReward.normalized_reward_law",
+    "goal": "ExternalBridgePressureWordDraft.NormalizedRewardLaw",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_auxPartitionFiniteSum",
+    "proof_root": "ExternalBridgePressureWordPartitions.aux_partition_finite_sum",
+    "goal": "ExternalBridgePressureWordDraft.AuxPartitionFiniteSum",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_finitePartitionBounds",
+    "proof_root": "ExternalBridgePressureWordFiniteComparison.finite_partition_bounds",
+    "goal": "ExternalBridgePressureWordDraft.FinitePartitionBounds",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_capDifferenceGeometry",
+    "proof_root": "ExternalBridgePressureWordPhaseUp.cap_difference_geometry",
+    "goal": "ExternalBridgePressureWordDraft.CapDifferenceGeometry",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_phaseUpTransport",
+    "proof_root": "ExternalBridgePressureWordPhaseUp.phase_up_transport",
+    "goal": "ExternalBridgePressureWordDraft.PhaseUpTransport",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_phaseUpInjectionReward",
+    "proof_root": "ExternalBridgePressureWordPhaseUp.phase_up_injection_reward",
+    "goal": "ExternalBridgePressureWordDraft.PhaseUpInjectionReward",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_clampWordTransport",
+    "proof_root": "ExternalBridgePressureWordClamp.clamp_word_transport",
+    "goal": "ExternalBridgePressureWordDraft.ClampWordTransport",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_clampFiberEncoding",
+    "proof_root": "ExternalBridgePressureWordClamp.clamp_fiber_encoding",
+    "goal": "ExternalBridgePressureWordDraft.ClampFiberEncoding",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_clampFiberCount",
+    "proof_root": "ExternalBridgePressureWordClampCount.clamp_fiber_count",
+    "goal": "ExternalBridgePressureWordDraft.ClampFiberCount",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_clampRewardBound",
+    "proof_root": "ExternalBridgePressureWordClampCount.clamp_reward_bound",
+    "goal": "ExternalBridgePressureWordDraft.ClampRewardBound",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_phaseLogComparison",
+    "proof_root": "ExternalBridgePressureWordPartitionTransport.phase_log_comparison",
+    "goal": "ExternalBridgePressureWordDraft.PhaseLogComparison",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_completionTransport",
+    "proof_root": "ExternalBridgePressureWordCompletion.completion_transport",
+    "goal": "ExternalBridgePressureWordDraft.CompletionTransport",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_truncationTransport",
+    "proof_root": "ExternalBridgePressureWordTruncation.truncation_transport",
+    "goal": "ExternalBridgePressureWordDraft.TruncationTransport",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_truncationFiberEncoding",
+    "proof_root": "ExternalBridgePressureWordTruncationFiber.truncation_fiber_encoding",
+    "goal": "ExternalBridgePressureWordDraft.TruncationFiberEncoding",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_truncationFiberCount",
+    "proof_root": "ExternalBridgePressureWordTruncationFiber.truncation_fiber_count",
+    "goal": "ExternalBridgePressureWordDraft.TruncationFiberCount",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_fixedShiftComparison",
+    "proof_root": "ExternalBridgePressureWordPartitionTransport.fixed_shift_comparison",
+    "goal": "ExternalBridgePressureWordDraft.FixedShiftComparison",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_naturalDepthCompleteness",
+    "proof_root": "ExternalBridgePressureWordPhysical.natural_depth_completeness",
+    "goal": "ExternalBridgePressureWordDraft.NaturalDepthCompleteness",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_wordDepthDictionary",
+    "proof_root": "ExternalBridgePressureWordPhysical.word_depth_dictionary",
+    "goal": "ExternalBridgePressureWordDraft.WordDepthDictionary",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_wordPathPartitionEquality",
+    "proof_root": "ExternalBridgePressureWordPartitions.word_path_partition_equality",
+    "goal": "ExternalBridgePressureWordDraft.WordPathPartitionEquality",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_concatenationTransport",
+    "proof_root": "ExternalBridgePressureWordConcatenation.concatenation_transport",
+    "goal": "ExternalBridgePressureWordDraft.ConcatenationTransport",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_partitionCocycle",
+    "proof_root": "ExternalBridgePressureWordConcatenation.partition_cocycle",
+    "goal": "ExternalBridgePressureWordDraft.PartitionCocycle",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_finiteTiltLipschitz",
+    "proof_root": "ExternalBridgePressureWordFiniteComparison.finite_tilt_lipschitz",
+    "goal": "ExternalBridgePressureWordDraft.FiniteTiltLipschitz",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_closingPhaseTransport",
+    "proof_root": "ExternalBridgePressureWordPartitions.closing_phase_transport",
+    "goal": "ExternalBridgePressureWordDraft.ClosingPhaseTransport",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.word_rungWordTransport",
+    "proof_root": "ExternalBridgePressureWordRung.rung_word_transport",
+    "goal": "ExternalBridgePressureWordDraft.RungWordTransport",
+    "group": "WORD"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_uniformIntervalDiscrepancy",
+    "proof_root": "ExternalBridgePressureAnalyticDiscrepancy.uniform_interval_discrepancy",
+    "goal": "ExternalBridgePressureAnalyticDraft.UniformIntervalDiscrepancy",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_uniformShiftedIntervalDiscrepancy",
+    "proof_root": "ExternalBridgePressureAnalyticDiscrepancy.uniform_shifted_interval_discrepancy",
+    "goal": "ExternalBridgePressureAnalyticDraft.UniformShiftedIntervalDiscrepancy",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_capDifferenceDiscrepancy",
+    "proof_root": "ExternalBridgePressureAnalyticCapDiscrepancy.cap_difference_discrepancy",
+    "goal": "ExternalBridgePressureAnalyticDraft.CapDifferenceDiscrepancy",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_auxiliaryOscillationEstimate",
+    "proof_root": "ExternalBridgePressureAnalyticOscillation.auxiliary_oscillation_estimate",
+    "goal": "ExternalBridgePressureAnalyticDraft.AuxiliaryOscillationEstimate",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_auxiliaryBoundednessAndEquicontinuity",
+    "proof_root": "ExternalBridgePressureAnalyticOscillation.auxiliary_boundedness_and_equicontinuity",
+    "goal": "ExternalBridgePressureAnalyticDraft.AuxiliaryBoundednessAndEquicontinuity",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_gridMeshCover",
+    "proof_root": "ExternalBridgePressureAnalyticCompactness.grid_mesh_cover",
+    "goal": "ExternalBridgePressureAnalyticDraft.GridMeshCover",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_denseGridSubsequence",
+    "proof_root": "ExternalBridgePressureAnalyticCompactness.dense_grid_subsequence",
+    "goal": "ExternalBridgePressureAnalyticDraft.DenseGridSubsequence",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_gridToUniformCauchy",
+    "proof_root": "ExternalBridgePressureAnalyticCompactness.grid_to_uniform_cauchy",
+    "goal": "ExternalBridgePressureAnalyticDraft.GridToUniformCauchy",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_uniformCauchyContinuousLimit",
+    "proof_root": "ExternalBridgePressureAnalyticCompactness.uniform_cauchy_continuous_limit",
+    "goal": "ExternalBridgePressureAnalyticDraft.UniformCauchyContinuousLimit",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_discontinuousSequenceCompactness",
+    "proof_root": "ExternalBridgePressureAnalyticCompactness.discontinuous_sequence_compactness",
+    "goal": "ExternalBridgePressureAnalyticDraft.DiscontinuousSequenceCompactness",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_auxiliarySubsequenceCompactness",
+    "proof_root": "ExternalBridgePressureAnalyticOscillation.auxiliary_subsequence_compactness",
+    "goal": "ExternalBridgePressureAnalyticDraft.AuxiliarySubsequenceCompactness",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_fixedShiftNormalizedCompletion",
+    "proof_root": "ExternalBridgePressureAnalyticSubsequence.fixed_shift_normalized_completion",
+    "goal": "ExternalBridgePressureAnalyticDraft.FixedShiftNormalizedCompletion",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_subsequenceRotationDomination",
+    "proof_root": "ExternalBridgePressureAnalyticSubsequence.subsequence_rotation_domination",
+    "goal": "ExternalBridgePressureAnalyticDraft.SubsequenceRotationDomination",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_positiveRotationOrbitDense",
+    "proof_root": "ExternalBridgePressureAnalyticRotation.positive_rotation_orbit_dense",
+    "goal": "ExternalBridgePressureAnalyticDraft.PositiveRotationOrbitDense",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_rotationDominationImpliesConstant",
+    "proof_root": "ExternalBridgePressureAnalyticConstant.rotation_domination_implies_constant",
+    "goal": "ExternalBridgePressureAnalyticDraft.RotationDominationImpliesConstant",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_auxiliarySubsequenceConstant",
+    "proof_root": "ExternalBridgePressureAnalyticSubsequence.auxiliary_subsequence_constant",
+    "goal": "ExternalBridgePressureAnalyticDraft.AuxiliarySubsequenceConstant",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_phaseInfimumWellPosed",
+    "proof_root": "ExternalBridgePressureAnalyticPhaseInfimum.phase_infimum_well_posed",
+    "goal": "ExternalBridgePressureAnalyticDraft.PhaseInfimumWellPosed",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_phaseInfimumSuperadditivity",
+    "proof_root": "ExternalBridgePressureAnalyticPhaseInfimum.phase_infimum_superadditivity",
+    "goal": "ExternalBridgePressureAnalyticDraft.PhaseInfimumSuperadditivity",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_candidatePressureWellPosed",
+    "proof_root": "ExternalBridgePressureAnalyticPhaseInfimum.candidate_pressure_well_posed",
+    "goal": "ExternalBridgePressureAnalyticDraft.CandidatePressureWellPosed",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_feketeCandidateLimit",
+    "proof_root": "ExternalBridgePressureAnalyticPhaseInfimum.fekete_candidate_limit",
+    "goal": "ExternalBridgePressureAnalyticDraft.FeketeCandidateLimit",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_subsequenceConstantIdentification",
+    "proof_root": "ExternalBridgePressureAnalyticSubsequence.subsequence_constant_identification",
+    "goal": "ExternalBridgePressureAnalyticDraft.SubsequenceConstantIdentification",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_fullAuxiliaryUniformPressure",
+    "proof_root": "ExternalBridgePressureAnalyticUniformPressure.full_auxiliary_uniform_pressure",
+    "goal": "ExternalBridgePressureAnalyticDraft.FullAuxiliaryUniformPressure",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_candidateTiltLipschitz",
+    "proof_root": "ExternalBridgePressureAnalyticUniformPressure.candidate_tilt_lipschitz",
+    "goal": "ExternalBridgePressureAnalyticDraft.CandidateTiltLipschitz",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_compactAuxiliaryTiltPressure",
+    "proof_root": "ExternalBridgePressureAnalyticUniformPressure.compact_auxiliary_tilt_pressure",
+    "goal": "ExternalBridgePressureAnalyticDraft.CompactAuxiliaryTiltPressure",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_physicalRewardPressureComposition",
+    "proof_root": "ExternalBridgePressureAnalyticUniformPressure.physical_reward_pressure_composition",
+    "goal": "ExternalBridgePressureAnalyticDraft.PhysicalRewardPressureComposition",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_uniformReferenceComposition",
+    "proof_root": "ExternalBridgePressureAnalyticReference.uniform_reference_composition",
+    "goal": "ExternalBridgePressureAnalyticDraft.UniformReferenceComposition",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_costPressureComposition",
+    "proof_root": "ExternalBridgePressureAnalyticCost.cost_pressure_composition",
+    "goal": "ExternalBridgePressureAnalyticDraft.CostPressureComposition",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_sourceRungPressureComposition",
+    "proof_root": "ExternalBridgePressureAnalyticUniformPressure.source_rung_pressure_composition",
+    "goal": "ExternalBridgePressureAnalyticDraft.SourceRungPressureComposition",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_variableTiltSourceAsymptotic",
+    "proof_root": "ExternalBridgePressureAnalyticUniformPressure.variable_tilt_source_asymptotic",
+    "goal": "ExternalBridgePressureAnalyticDraft.VariableTiltSourceAsymptotic",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_candidateQualitativePressure",
+    "proof_root": "ExternalBridgePressureAnalyticQualitative.candidate_qualitative_pressure",
+    "goal": "ExternalBridgePressureAnalyticDraft.CandidateQualitativePressure",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_candidateCorePressureComponents",
+    "proof_root": "ExternalBridgePressureAnalyticCore.candidate_core_pressure_components",
+    "goal": "ExternalBridgePressureAnalyticDraft.CandidateCorePressureComponents",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_finitePhaseLogIntegrability",
+    "proof_root": "ExternalBridgePressureAnalyticIntegrals.finite_phase_log_integrability",
+    "goal": "ExternalBridgePressureAnalyticDraft.FinitePhaseLogIntegrability",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_integratedLowerBracketValidity",
+    "proof_root": "ExternalBridgePressureAnalyticIntegrals.integrated_lower_bracket_validity",
+    "goal": "ExternalBridgePressureAnalyticDraft.IntegratedLowerBracketValidity",
+    "group": "ANALYTIC"
+  },
+  {
+    "alias": "ExternalBridgePressureSupportChallenge.analytic_integratedLowerBracketCofinality",
+    "proof_root": "ExternalBridgePressureAnalyticIntegrals.integrated_lower_bracket_cofinality",
+    "goal": "ExternalBridgePressureAnalyticDraft.IntegratedLowerBracketCofinality",
+    "group": "ANALYTIC"
+  }
+]

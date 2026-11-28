@@ -4,8 +4,8 @@
   "files": [
     {
       "path": ".github/workflows/verify.yml",
-      "bytes": 19425,
-      "sha256": "f82b5443cf10ce38a090999939f19cf7e07ca830253c4afecf85ad9e1728cb30"
+      "bytes": 21787,
+      "sha256": "36b4539dace58dfba44d5bdc0556147b57c62c6649c2d9633ec8b5918cffd5df"
     },
     {
       "path": ".gitignore",
@@ -14,8 +14,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 12938,
-      "sha256": "c865d1350e96afee90dadd186cd4514dae71aeaa6b0bd320b2c85c1bd5d7b7b5"
+      "bytes": 13373,
+      "sha256": "2f4745321e2a0889d17186fabdc0518ffd26e1008631f06319b5081c8f43b7de"
     },
     {
       "path": "Makefile",
@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 19886,
-      "sha256": "ea79af494390c797bb1079cb250108df598c40e839aeb15fc54fe8d430539293"
+      "bytes": 20897,
+      "sha256": "a631b23649e2b7227dfaaab3bc6bde5034d326bc81687a6eb0bdd161c367a29b"
     },
     {
       "path": "certificates/exposition/examples.json",
@@ -674,8 +674,8 @@
     },
     {
       "path": "claims.json",
-      "bytes": 64201,
-      "sha256": "5902d7443f365f2b9b1c9c4b1e42870134c89fb964eb28f1043ce8c9bc5dcfcc"
+      "bytes": 70779,
+      "sha256": "260961d5b593e72e3ba0c8734036d3c49e98ab25cd55541347960c7afa7de219"
     },
     {
       "path": "figures/README.md",
@@ -1831,6 +1831,421 @@
       "path": "lean/external_population/verify.py",
       "bytes": 14855,
       "sha256": "4e1d7b904380be9cdd6d4e372ceb963a934812c09e24e13c7d950853725e5827"
+    },
+    {
+      "path": "lean/external_pressure/ARGUMENT.md",
+      "bytes": 11472,
+      "sha256": "b89025348d161e77c71769d592b35cef4bca679b0315c444c76c3c4cb686a4d7"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticAveraging.lean",
+      "bytes": 3855,
+      "sha256": "a6801aa66171973b6c53e25929ca6a53af771b4bce7804e1df31a06521dff003"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticCapDiscrepancy.lean",
+      "bytes": 1950,
+      "sha256": "230af917dd7520e56eecdcbc7bb15726942ac748feb3f75c5d4bb4a532603a64"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticCircleGrid.lean",
+      "bytes": 5643,
+      "sha256": "1d5f8906978c65406f8ae315699764455a79389eb06ccb6b07b3a40341d4f437"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticCompactness.lean",
+      "bytes": 2275,
+      "sha256": "d40de57dfce793c90ba2633194235641c9f8389806c90d6f60ec6e64c70a4260"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticCompactnessCompletion.lean",
+      "bytes": 4873,
+      "sha256": "bc9717e9fcc8cc993d1db552a5b7b49353d071f4081ee0c33e677bc270a9248d"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticConstant.lean",
+      "bytes": 3149,
+      "sha256": "cc443171ede66bc0e3c40dc917d789d469f0be51152d771cbb9ddda7c0098d6f"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticCore.lean",
+      "bytes": 575,
+      "sha256": "78e0c61963d0be8f20d4134f16ef1dd5d1dafb70946cc3894360d01ea6d23609"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticCost.lean",
+      "bytes": 4264,
+      "sha256": "0504d749813424d806c5e124f2a0c8b957c85d24e127e94f20bfb7e836dd33d8"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticDiscrepancy.lean",
+      "bytes": 5114,
+      "sha256": "9aebb930ce32ad27ffdc90238b5c044e682b4f7edf4889dfca31be1461859175"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticFekete.lean",
+      "bytes": 2453,
+      "sha256": "8228a52855902ad33f8303683fdf250716f856be3656886b216d7bf7ffa317e2"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticIntegrals.lean",
+      "bytes": 13936,
+      "sha256": "e4d2a8aa56fba92c749ee0dc68bbbd9a6cbb30339803ca0527cd1f9165b2d5f4"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticOscillation.lean",
+      "bytes": 4993,
+      "sha256": "023478a47bf7ab07376d0ad032c2e94addb08a0981fcff6334d292e84cbbd8d8"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticPhaseInfimum.lean",
+      "bytes": 5230,
+      "sha256": "02486b99ca63ebce5d7d86ee3b0d8366e0ef042eba0583326124fee94930d6bc"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticQualitative.lean",
+      "bytes": 11613,
+      "sha256": "7f9b0c811ebc8789167c9c112d1760b5b5f2987230a906e8e7e85c9f09049031"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticReference.lean",
+      "bytes": 10477,
+      "sha256": "0be327f137039c838342136072a834e06042c61c504356dc00dd78647771b132"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticRotation.lean",
+      "bytes": 3473,
+      "sha256": "36bf12f658ce3bd4ef5a8ae2453b2f2224509cc5281fb42eb102dbd5bcf3fe8d"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticRotationGrid.lean",
+      "bytes": 3647,
+      "sha256": "6ba5ad348624333185b247d3bdff26428a6d8e2f43f3d5e7b5db3c858cef55e3"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticSubsequence.lean",
+      "bytes": 7025,
+      "sha256": "533e7033700746f6db52ba0a356f93c7dddf4a7ee9b9ec11a49f5f67fcf06692"
+    },
+    {
+      "path": "lean/external_pressure/AnalyticUniformPressure.lean",
+      "bytes": 8696,
+      "sha256": "b81ce58e21ffdca9fb2f787cacb53d621de8a0ffc08c120f6b0dabe3d98faf8c"
+    },
+    {
+      "path": "lean/external_pressure/Arithmetic.lean",
+      "bytes": 5377,
+      "sha256": "8ad07971f3dd9b211aa99c36f6ed9c645e9dbb158b7ba33e81b72d5ca2c6f76e"
+    },
+    {
+      "path": "lean/external_pressure/Audit.lean",
+      "bytes": 17640,
+      "sha256": "f6c6b536e4a5b7a1ca006e95d7628e57e6e09ba62f0aa75ea7cedecfb2896f44"
+    },
+    {
+      "path": "lean/external_pressure/BridgeArithmetic.lean",
+      "bytes": 1780,
+      "sha256": "645d446755a140470ee402fdd0596e9fd8c55496d1de6515ff1e756538546f57"
+    },
+    {
+      "path": "lean/external_pressure/BridgeDefinitions.lean",
+      "bytes": 4708,
+      "sha256": "7a36ebc1e9ff89fcec7ad1fdae1c2d5ae9ee011b06ae110fd4f34999e7df19a7"
+    },
+    {
+      "path": "lean/external_pressure/BridgeEncoding.lean",
+      "bytes": 5895,
+      "sha256": "f7f6f59daca369a1347219540cfbc15312af9592b65f123c041418939c480816"
+    },
+    {
+      "path": "lean/external_pressure/BridgeExpectedTypes.lean",
+      "bytes": 4767,
+      "sha256": "850dcdd0d75479edaeab1c8d6d336b9099f56511e0b6f5a5125bedfca05838aa"
+    },
+    {
+      "path": "lean/external_pressure/BridgeRewards.lean",
+      "bytes": 3425,
+      "sha256": "53da32ac28f519ad0e63bfad402139c91f6856e43d13134bcfa6430807c3e673"
+    },
+    {
+      "path": "lean/external_pressure/BridgeRungs.lean",
+      "bytes": 2461,
+      "sha256": "df4d32953097dd24a6479aae99fbd93a5dd9ece47eb98d59347055db2209872d"
+    },
+    {
+      "path": "lean/external_pressure/BridgeTransport.lean",
+      "bytes": 6410,
+      "sha256": "35a0565a222c677fd59249de39599d526d982dc97453c60ed1a1261b321612cb"
+    },
+    {
+      "path": "lean/external_pressure/CompletePressureDefinitions.lean",
+      "bytes": 11636,
+      "sha256": "fbc125a7aeb568b2e47f314956bed9038e12d0044111a9f7a10c4f8df0eba91e"
+    },
+    {
+      "path": "lean/external_pressure/CompletePressureExpectedTypes.lean",
+      "bytes": 7620,
+      "sha256": "e21ef1fec4dfab47a945590d9b8179002d4c6505f669355710e450e09163412d"
+    },
+    {
+      "path": "lean/external_pressure/Definitions.lean",
+      "bytes": 3873,
+      "sha256": "cf29376721942a78328491cd910690497f95d381711f0d2e758998fbba9374bc"
+    },
+    {
+      "path": "lean/external_pressure/DepthOneSeries.lean",
+      "bytes": 9797,
+      "sha256": "b0852b07d1f7105c61464d1642c998ece3563cb81e658cfe4a995f0e6b7e2562"
+    },
+    {
+      "path": "lean/external_pressure/ExpectedTypes.lean",
+      "bytes": 2611,
+      "sha256": "5ce898eb70690f6f77e26a95cbafb5ef268fa93617ab7418a0b25f6878c34968"
+    },
+    {
+      "path": "lean/external_pressure/LogRatioIrrational.lean",
+      "bytes": 1811,
+      "sha256": "2a2950ef39be685654ab7c3d3c4c734cf6103a74fa622d450ee0675e0240a89e"
+    },
+    {
+      "path": "lean/external_pressure/PhaseCocycle.lean",
+      "bytes": 2523,
+      "sha256": "432d64a737ba454eeff5b1d7f24d73b45e68d44bb34d88c238ce751aafb8cafe"
+    },
+    {
+      "path": "lean/external_pressure/PhasePaths.lean",
+      "bytes": 1560,
+      "sha256": "0bf85081aab115ce706cb9989b0c88728ec065f15cb501090fa1fd1da43bf55e"
+    },
+    {
+      "path": "lean/external_pressure/PopulationWeights.lean",
+      "bytes": 6242,
+      "sha256": "8affb6d578e9891f306df4b54cc621c33d110227eaec7912d8dcf826f9697190"
+    },
+    {
+      "path": "lean/external_pressure/PositiveCeilReturns.lean",
+      "bytes": 4850,
+      "sha256": "98e1852aaa8baa5ecabcc70424b24d8871f7178fb7768b31c8278a579f0e8a37"
+    },
+    {
+      "path": "lean/external_pressure/PrefixDefinitions.lean",
+      "bytes": 1373,
+      "sha256": "d7b5cd8b624dae007e3c3dc7f3620260dbfcf2169d0211b0859e18ed58180069"
+    },
+    {
+      "path": "lean/external_pressure/PressureAnalyticDefinitions.lean",
+      "bytes": 3773,
+      "sha256": "948dae752ed3f7209f7a1e067e44e35bc6f8ac0875b54d830858d2ea19c748fd"
+    },
+    {
+      "path": "lean/external_pressure/PressureAnalyticExpectedTypes.lean",
+      "bytes": 8575,
+      "sha256": "a6264a5beef9e5a5ffa936f9c20ff9a54310bfc7b8fd3cc20b2c1942615854d0"
+    },
+    {
+      "path": "lean/external_pressure/PressureChallenge.lean",
+      "bytes": 7442,
+      "sha256": "05470364b4d2daec53364e2b897aeef30f0385dad723a9ff6c9414ba7a2e37bc"
+    },
+    {
+      "path": "lean/external_pressure/PressureDefinitions.lean",
+      "bytes": 5528,
+      "sha256": "07d60f44e7aaa3107518678bb1780b4867a37f07c3db9b49e89f9402c8b45cd4"
+    },
+    {
+      "path": "lean/external_pressure/PressureExpectedTypes.lean",
+      "bytes": 5083,
+      "sha256": "9aa83c42cf2ccb23490ce84da1b21b9d6de0fb26dbf435d21b4d27bcc215f015"
+    },
+    {
+      "path": "lean/external_pressure/PressureSolution.lean",
+      "bytes": 12764,
+      "sha256": "d9b3da66ac4042ffdf17d87933a9ad02648a3b5ad745af18a633f497bf8a017b"
+    },
+    {
+      "path": "lean/external_pressure/PressureWordDefinitions.lean",
+      "bytes": 5902,
+      "sha256": "3dd0db7a7ac1bf2adf2a048c51080cef65f6dd769a5ca95f58ae443a8110fe03"
+    },
+    {
+      "path": "lean/external_pressure/PressureWordExpectedTypes.lean",
+      "bytes": 9825,
+      "sha256": "010c0e9dd204fd5d6ec2173bbe39eb270d67f971bb59093c1a24804dd8d0f5f4"
+    },
+    {
+      "path": "lean/external_pressure/README.md",
+      "bytes": 2482,
+      "sha256": "846de4f688df6249cb4a704cd0bde2fdba1e60ee52f8fa0054b9c271e88ac2ec"
+    },
+    {
+      "path": "lean/external_pressure/RungDefinitions.lean",
+      "bytes": 756,
+      "sha256": "8c1996d5e2a11f726324f8f0fd282c061ed1b3819ccb734ecbccf49a8ccb17b5"
+    },
+    {
+      "path": "lean/external_pressure/RungTransfer.lean",
+      "bytes": 2093,
+      "sha256": "e61650b3d2f90f3431c2bd861c57448aa86d54be769d554ab437808d7d612dde"
+    },
+    {
+      "path": "lean/external_pressure/SyracuseSlope.lean",
+      "bytes": 1170,
+      "sha256": "7909ad410f4b2e1ac7cf13d6f476679aa1d608c92f95ca2c3514a696a3cd5395"
+    },
+    {
+      "path": "lean/external_pressure/WordArithmetic.lean",
+      "bytes": 2704,
+      "sha256": "a2e2f919a1b103ca36e0b431d217d03c176019963f4bea046ed193e7af82912c"
+    },
+    {
+      "path": "lean/external_pressure/WordClamp.lean",
+      "bytes": 4041,
+      "sha256": "5840853632287a4852d4be06347e7280b5bbb7362dcb464cdd2f9c9189a53b6a"
+    },
+    {
+      "path": "lean/external_pressure/WordClampCount.lean",
+      "bytes": 3579,
+      "sha256": "882432a4d8cd42ca1ca011a9228d9a7a22332558f5ebf2d4c333a952d1207544"
+    },
+    {
+      "path": "lean/external_pressure/WordCompletion.lean",
+      "bytes": 5475,
+      "sha256": "c0fad3648101fca2cbec3e067531ee264e44b2e55f82b904bc39080941c91866"
+    },
+    {
+      "path": "lean/external_pressure/WordConcatenation.lean",
+      "bytes": 9424,
+      "sha256": "005db4a8714832d582018aecd890db29dd7ae83ff250bb3874c92d0235a6d88a"
+    },
+    {
+      "path": "lean/external_pressure/WordEndpoint.lean",
+      "bytes": 3092,
+      "sha256": "8dac2b32a0f4871fd7ddac286dcbab732176667d68fb1d43d61dcd5de8e7e688"
+    },
+    {
+      "path": "lean/external_pressure/WordFiniteComparison.lean",
+      "bytes": 4851,
+      "sha256": "b68eb074c13d0012b4ce76ad83d12d1be3a66dbb17f78e9807487feed2e8e6b9"
+    },
+    {
+      "path": "lean/external_pressure/WordPartitionTransport.lean",
+      "bytes": 10733,
+      "sha256": "1627f9610121b60178da707f4f34f38d0cd7cc0496271476702b3f8bb1a20990"
+    },
+    {
+      "path": "lean/external_pressure/WordPartitions.lean",
+      "bytes": 4983,
+      "sha256": "de397966da98ec7c93d8a57b757552ebcf6a415c186d10e3ea2e5be35fb4cb32"
+    },
+    {
+      "path": "lean/external_pressure/WordPhaseUp.lean",
+      "bytes": 4610,
+      "sha256": "f3802b8951b522c37c145117e737278c787c8265ba73856f4bf11b3cdc966d3b"
+    },
+    {
+      "path": "lean/external_pressure/WordPhysical.lean",
+      "bytes": 6290,
+      "sha256": "54dd2303e109040a6d7937e99329047c8c630483c9b595fb4c85f8a10ac5eead"
+    },
+    {
+      "path": "lean/external_pressure/WordPopulation.lean",
+      "bytes": 3831,
+      "sha256": "a5dd789e89af123be788e229679b0364a9575befa5b68b10d49864753bbc77d3"
+    },
+    {
+      "path": "lean/external_pressure/WordReward.lean",
+      "bytes": 2386,
+      "sha256": "79b6024c8a59a24a0c941efc6eeebb4178844743fdfaa6a480e244666d8ad473"
+    },
+    {
+      "path": "lean/external_pressure/WordRung.lean",
+      "bytes": 1995,
+      "sha256": "fad8ddd5cda899e869fd09a9d62c862692bb52ac1efd175fc0a2c9d759f00a25"
+    },
+    {
+      "path": "lean/external_pressure/WordTruncation.lean",
+      "bytes": 4047,
+      "sha256": "5d101961cce6b0619295fe261f9f125b5e91256fc8678dbc275216dc249e4525"
+    },
+    {
+      "path": "lean/external_pressure/WordTruncationFiber.lean",
+      "bytes": 4441,
+      "sha256": "38da641eb858ac38abfaaa4e1fed3bccf954cd7957a9fbb7db188e2cdf5ffa4b"
+    },
+    {
+      "path": "lean/external_pressure/cache-imports.txt",
+      "bytes": 1152,
+      "sha256": "d1859b9ce77b7c447dd4d3fe848b467a936e66fcbf51c6dc6a8525c6d3eaa36d"
+    },
+    {
+      "path": "lean/external_pressure/comparator.json",
+      "bytes": 5276,
+      "sha256": "442242ad46308f16622450e2bc1917b52a9041ebee0ca2e905eb548da5d7b9aa"
+    },
+    {
+      "path": "lean/external_pressure/frozen_models.json",
+      "bytes": 441503,
+      "sha256": "669605092d4da153af55d9e366abaf0f5a99558dc44384f34fec11b7d26f0e44"
+    },
+    {
+      "path": "lean/external_pressure/frozen_propositions.json",
+      "bytes": 621072,
+      "sha256": "0f10513a5beb18a0b50ff65d1c26a048617d800283ed22c9c55abc29ea036cdb"
+    },
+    {
+      "path": "lean/external_pressure/inventory.json",
+      "bytes": 5581573,
+      "sha256": "82e182b171d257ad6686a8a97ce0ce981cdf9f59c3bf17acfaf1c562ddc37b30"
+    },
+    {
+      "path": "lean/external_pressure/lake-manifest.json",
+      "bytes": 3571,
+      "sha256": "d0ccf4f4930f7d2f26aca3aedfec6195ddf97b3e2920cf255fe03d4e57430f39"
+    },
+    {
+      "path": "lean/external_pressure/lakefile.toml",
+      "bytes": 5488,
+      "sha256": "5d8ce60332ea24ba8b7e7191a6d51bf86fea770fb7c49fd468928390b6d4484c"
+    },
+    {
+      "path": "lean/external_pressure/lean-toolchain",
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+    },
+    {
+      "path": "lean/external_pressure/owned_modules.json",
+      "bytes": 1461,
+      "sha256": "5d937bd5b28934bc6f026140935b80b67e5ecf4c39676c19179bd7ebaf7246a0"
+    },
+    {
+      "path": "lean/external_pressure/provenance.json",
+      "bytes": 12316,
+      "sha256": "093ddecaa7d83ca3e36f40515dbc43c3691db932f8af73735668dd9218bec172"
+    },
+    {
+      "path": "lean/external_pressure/specification.json",
+      "bytes": 8762,
+      "sha256": "475f22b84153bd4ea333825b02ee4d220c4ad2a31cf798978e7834139bd79ba2"
+    },
+    {
+      "path": "lean/external_pressure/target_map.json",
+      "bytes": 17903,
+      "sha256": "1d89085fc125dd39d29acd66a9c475e6938fe1da2e5d7425507b354c227f1ea5"
+    },
+    {
+      "path": "lean/external_pressure/test_mutations.py",
+      "bytes": 14776,
+      "sha256": "a6b3d424709c3506a342113ce083169b63e35c3dca6cd4450055aa70201d5ded"
+    },
+    {
+      "path": "lean/external_pressure/verify.py",
+      "bytes": 34114,
+      "sha256": "faf47254444ef065e3fc17b2b919b56ab753c45a4e67c489e60c6033ac987433"
+    },
+    {
+      "path": "lean/external_pressure/word_legacy_model_metadata.json",
+      "bytes": 318204,
+      "sha256": "80bb462b37eae3d1a286d965d9abad844b72f777359c9c839d52e29693cf5fbc"
     },
     {
       "path": "lean/external_problems/Audit.lean",
