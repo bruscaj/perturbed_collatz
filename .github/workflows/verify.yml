@@ -48,7 +48,7 @@ jobs:
     timeout-minutes: 60
     env:
       MATHLIB_NO_CACHE_ON_UPDATE: '1'
-      MATHLIB_CACHE_DIR: ${{ runner.temp }}/mathlib-cache
+      MATHLIB_CACHE_DIR: /tmp/external-analysis-mathlib-cache
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
